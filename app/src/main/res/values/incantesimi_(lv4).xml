@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="compulsione">
+        COMPULSIONE
+        lvl 4 - Ammaliamento
+    </string>
+
+    <string name="confusione">
+        CONFUSIONE
+        lvl 4 - Ammaliamento
+    </string>
+
+    <string name="invisibilità_superiore">
+        INVISIBILITÀ SUPERIORE
+        lvl 4 - Illusione
+    </string>
+
+    <string name="libertà_di_movimento">
+        LIBERTÀ DI MOVIMENTO
+        lvl 4 - Abiurazione
+    </string>
+</resources>
