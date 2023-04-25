@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="linguaggi">Linguaggi</string>
+    <string-array name="linguaggi_spinner">
+        <item>Comune</item>
+        <item>Elfico</item>
+        <item>Gigante</item>
+        <item>Gnomesco</item>
+        <item>Goblin</item>
+        <item>Halfling</item>
+        <item>Nanico</item>
+        <item>Orchesco</item>
+        <item>Abissale</item>
+        <item>Celestiale</item>
+        <item>Draconico</item>
+        <item>Gergo delle profondità</item>
+        <item>Infernale</item>
+        <item>Primordiale</item>
+        <item>Silvano</item>
+        <item>Sottocomune</item>
+    </string-array>
+
+    <string name="allineamenti">Allineamento</string>
+    <string-array name="allineamento_spinner">
+        <item>Legale buono</item>
+        <item>Neutrale buono</item>
+        <item>Caotico buono</item>
+        <item>Legale neutrale</item>
+        <item>Neutrale puro</item>
+        <item>Caotico neutrale</item>
+        <item>Legale malvagio</item>
+        <item>Neutrale malvagio</item>
+        <item>Caotico malvagio</item>
+    </string-array>
+
+    <string name="armi_mischia_semplici">Armi da mischia semplici</string>
+    <string-array name="armi_mischia_semplici_spinner">
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+    </string-array>
+
+    <string name="armi_distanza_semplici">Armi da distanza semplici</string>
+    <string-array name="armi_distanza_semplici_spinner">
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string name="armi_mischia_guerra">Armi da mischia da guerra</string>
+    <string-array name="armi_mischia_guerra_spinner">
+        <item>Alabarda</item>
+        <item>Ascia bipenne</item>
+        <item>Ascia da battaglia</item>
+        <item>Falcione</item>
+        <item>Frusta</item>
+        <item>Lancia da cavaliere</item>
+        <item>Maglio</item>
+        <item>Martello da guerra</item>
+        <item>Mazzafusto</item>
+        <item>Morning star</item>
+        <item>Picca</item>
+        <item>Piccone da guerra</item>
+        <item>Scimitarra</item>
+        <item>Spada corta</item>
+        <item>Spada lunga</item>
+        <item>Spadone</item>
+        <item>Stocco</item>
+        <item>Tridente</item>
+    </string-array>
+
+    <string name="armi_distanza_guerra">Armi da distanza guerra</string>
+    <string-array name="armi_distanza_guerra_spinner">
+        <item>Arco lungo</item>
+        <item>Balestra a mano</item>
+        <item>Balestra Pesante</item>
+        <item>Cerbottana</item>
+        <item>Rete</item>
+    </string-array>
+
+    <string name="stile_da_combattimento_guerriero">Stile da combattimento (guerriero)</string>
+    <string-array name="stile_da_combattimento_guerriero_spinner">
+        <item>Combattere con armi possenti</item>
+        <item>Combattere con 2 armi</item>
+        <item>Difesa</item>
+        <item>Duellare</item>
+        <item>Protezione</item>
+        <item>Tiro</item>
+    </string-array>
+
+    <string name="stile_da_combattimento_paladino">Stile da combattimento (paladino)</string>
+    <string-array name="stile_da_combattimento_paladino_spinner">
+        <item>Combattere con armi possenti</item>
+        <item>Difesa</item>
+        <item>Duellare</item>
+        <item>Protezione</item>
+    </string-array>
+
+    <string name="dominio_divino">Dominio divino (chierico)</string>
+    <string-array name="dominio_divino">
+        <item>Conoscenza</item>
+        <item>Guerra</item>
+        <item>Inganno</item>
+        <item>Luce</item>
+        <item>Natura</item>
+        <item>Tempesta</item>
+        <item>Vita</item>
+    </string-array>
+
+    <string name="competenza_negli_strumenti">Competenza negli strumenti (nano)</string>
+    <string-array name="competenza_negli_strumenti">
+        <item>Strumenti da fabbro</item>
+        <item>Strumenti da mescitore</item>
+        <item>Strumenti da costruttore</item>
+    </string-array>
+
+    <string name="strumenti">Strumenti</string>
+    <string-array name="strumenti">
+        <item>Arnesi da falsario</item>
+        <item>Arnesi da scasso</item>
+        <item>Borsa da erborista</item>
+        <item>Dadi</item>
+        <item>Mazzo di carte</item>
+        <item>Scacchi dei draghi</item>
+        <item>Tre draghi al buio</item>
+        <item>Sostanze da avvelenatore</item>
+        <item>Scorte da alchimista</item>
+        <item>Scorte da calligrafo</item>
+        <item>Scorte da mescitore</item>
+        <item>Strumenti da calzolaio</item>
+        <item>Strumenti da cartografo</item>
+        <item>Strumenti da conciatore</item>
+        <item>Strumenti da fabbro</item>
+        <item>Strumenti da falegname</item>
+        <item>Strumenti da gioielliere</item>
+        <item>Strumenti da intagliatore</item>
+        <item>Strumenti da inventore</item>
+        <item>Strumenti da pittore</item>
+        <item>Strumenti da soffiatore</item>
+        <item>Strumenti da tessitore</item>
+        <item>Strumenti da vasaio</item>
+        <item>Utensili da cuoso</item>
+        <item>Strumenti da navigatore</item>
+        <item>Ciaramella</item>
+        <item>Cornamusa</item>
+        <item>Corno</item>
+        <item>Dulcimer</item>
+        <item>Flauto</item>
+        <item>Flauto di Pan</item>
+        <item>Lira</item>
+        <item>Liuto</item>
+        <item>Tamburo</item>
+        <item>Viola</item>
+        <item>Trucchi per il camuffamento</item>
+    </string-array>
+
+    <string name="qualsiasi_strumento_musicale">Un qualsiasi strumento musicale</string>
+    <string-array name="qualsiasi_strumento_musicale">
+        <item>Ciaramella</item>
+        <item>Cornamusa</item>
+        <item>Corno</item>
+        <item>Dulcimer</item>
+        <item>Flauto</item>
+        <item>Flauto di Pan</item>
+        <item>Lira</item>
+        <item>Liuto</item>
+        <item>Tamburo</item>
+        <item>Viola</item>
+    </string-array>
+
+    <string name="arma_semplice">Una qualsiasi arma semplice</string>
+    <string-array name="arma_semplice">
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string name="arma_guerra">Un\'arma da guerra</string>
+    <string name="arma_guerra_2">2 armi da guerra</string>
+    <string-array name="arma_guerra">
+        <item>Alabarda</item>
+        <item>Ascia bipenne</item>
+        <item>Ascia da battaglia</item>
+        <item>Falcione</item>
+        <item>Frusta</item>
+        <item>Lancia da cavaliere</item>
+        <item>Maglio</item>
+        <item>Martello da guerra</item>
+        <item>Mazzafusto</item>
+        <item>Morning star</item>
+        <item>Picca</item>
+        <item>Piccone da guerra</item>
+        <item>Scimitarra</item>
+        <item>Spada corta</item>
+        <item>Spada lunga</item>
+        <item>Spadone</item>
+        <item>Stocco</item>
+        <item>Tridente</item>
+        <item>Arco lungo</item>
+        <item>Balestra a mano</item>
+        <item>Balestra Pesante</item>
+        <item>Cerbottana</item>
+        <item>Rete</item>
+    </string-array>
+</resources>

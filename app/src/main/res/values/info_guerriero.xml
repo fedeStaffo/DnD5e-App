@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="info_guerriero">
+        Guerriero
+        Come guerriero, ottieni i seguenti privilegi di classe.
+
+        PUNTI FERITA
+        Dado Vita: 1d10 per livello da guerriero
+        Punti Ferita al 1° livello: 10 + il tuo modificatore di Costituzione
+        Punti Ferita ai Livelli Più Alti: 1d10 (o 6) + il tuo modificatore di Costituzione per livello da guerriero oltre il 1°
+
+        COMPETENZE
+        Armature: Tutte le armature, scudi
+        Armi: Armi semplici, armi da guerra
+        Attrezzi: Nessuno
+        Tiri Salvezza: Forza, Costituzione
+        Abilità: Scegli due abilità tra Acrobazia, Addestrare Animali, Atletica, Intimidire, Intuizione, Percezione, Sopravvivenza e Storia
+
+        EQUIPAGGIAMENTO
+        Inizi con il seguente equipaggiamento, oltre all’equipaggiamento fornito dalla tuo background:
+        (a) cotta di maglia o (b) armatura di cuoio, arco lungo e 20 frecce
+        (a) un’arma da guerra e uno scudo o (b) due armi da guerra
+        (a) una balestra leggera e 20 quadrelli o (b) due asce
+        (a) uno zaino da speleologo o (b) uno zaino da esploratore
+
+        STILE DI COMBATTIMENTO
+        Come tua specializzazione adotti un particolare stile di combattimento.
+        Scegli una delle seguenti opzioni. Non puoi acquisire più di una volta lo stesso Stile di Combattimento,
+        anche se in seguito ottieni una nuova scelta.
+
+        COMBATTERE CON ARMI POSSENTI
+        Quando tiri 1 o 2 per il dado di danno di un attacco effettuato con un’arma da mischia
+        che stai impugnando con due mani, puoi ritirare il dado e devi usare il nuovo risultato,
+        anche se questo tiro fosse nuovamente 1 o 2.
+        L’arma deve avere la proprietà due mani o versatile per farti ottenere questo beneficio.
+
+        COMBATTERE CON DUE ARMI
+        Quando ti impegni nel combattimento con due armi,
+        puoi sommare il tuo modificatore di caratteristica al danno del secondo attacco.
+
+        DIFESA
+        Quando indossi un’armatura, ottieni un bonus di +1 alla CA.
+
+        DUELLARE
+        Quando impugni un’arma da mischia in una mano e nessun’altra arma,
+        ottieni un bonus di +2 ai tiri dei danni con quell’arma.
+
+        PROTEZIONE
+        Quando una creatura che puoi vedere attacca un bersaglio diverso da te e che si trova entro 1,5 metri da te,
+        puoi usare la tua reazione per imporre svantaggio al suo tiro per colpire. Devi impugnare uno scudo.
+
+        TIRO
+        Ottieni un bonus di +2 ai tiri per colpire effettuati con le armi a distanza.
+
+        RECUPERARE ENERGIE
+        Hai una fonte limitata di energia a cui puoi attingere per rimetterti dalle ferite.
+        Durante il tuo turno, puoi usare un’azione bonus per recuperare punti ferita
+        pari a 1d10 + il tuo livello da guerriero.
+        Una volta impiegato questo privilegio, devi terminare un riposo breve o lungo prima di riutilizzarlo.
+
+        AZIONE IMPETUOSA
+        A partire dal 2° livello, puoi spingerti oltre i tuoi normali limiti per brevi periodi di tempo.
+        Durante il tuo turno, puoi eseguire un’azione aggiuntiva oltre alla tua normale azione e una possibile azione bonus.
+        Una volta impiegato questo privilegio, devi terminare un riposo breve o lungo prima di riutilizzarlo.
+        A partire dal 17° livello, puoi utilizzarlo due volte prima di riposare, ma solo una volta durante lo stesso turno.
+
+        ARCHETIPO MARZIALE
+        Al 3° livello, puoi scegliere un archetipo da emulare con il tuo stile e le tue tecniche di combattimento, come quello del Campione.
+        Il tuo archetipo ti conferisce privilegi al 3° livello e ancora al 7°, 10°, 15° e 18° livello.
+
+        INCREMENTO DEI PUNTEGGI CARATTERISTICA
+        Quando raggiungi il 4° livello, e poi ancora al 6°, 8°, 12°, 14°, 16° e 19° livello,
+        puoi incrementare un tuo punteggio di caratteristica di 2, o incrementare due punteggi di caratteristica di 1.
+        Di norma, utilizzando questo privilegio non puoi accrescere un punteggio di caratteristica oltre il 20.
+
+        ATTACCO EXTRA
+        A partire dal 5° livello, puoi attaccare due volte, invece che una volta,
+        ogni volta che effettui l’azione Attaccare durante il tuo turno.
+        Il numero di attacchi incrementa a tre quando raggiungi l’11° livello in questa classe
+        e a quattro quando raggiungi il 20° livello in questa classe.
+
+        INDOMITO
+        A partire dal 9° livello, puoi ritirare un tiro salvezza che hai fallito.
+        Se lo fai, devi usare il nuovo tiro, e non puoi più usare questo privilegio
+        fino a quando non terminerai un riposo lungo.
+        Puoi usare questo privilegio due volte tra ogni riposo lungo a partire dal 13° livello
+        e tre volte tra ogni riposo lungo a partire dal 17° livello.
+    </string>
+
+    <string name="scegli_stile">
+        STILE DI COMBATTIMENTO
+        Come tua specializzazione adotti un particolare stile di combattimento.
+        Scegli una delle seguenti opzioni. Non puoi acquisire più di una volta lo stesso Stile di Combattimento,
+        anche se in seguito ottieni una nuova scelta.
+    </string>
+
+    <string name="combattere_con_armi_possenti">
+        COMBATTERE CON ARMI POSSENTI
+        Quando tiri 1 o 2 per il dado di danno di un attacco effettuato con un’arma da mischia
+        che stai impugnando con due mani, puoi ritirare il dado e devi usare il nuovo risultato,
+        anche se questo tiro fosse nuovamente 1 o 2.
+        L’arma deve avere la proprietà due mani o versatile per farti ottenere questo beneficio.
+    </string>
+
+    <string name="combattere_con_2_armi">
+        COMBATTERE CON DUE ARMI
+        Quando ti impegni nel combattimento con due armi,
+        puoi sommare il tuo modificatore di caratteristica al danno del secondo attacco.
+    </string>
+
+    <string name="difesa">
+        DIFESA
+        Quando indossi un’armatura, ottieni un bonus di +1 alla CA.
+    </string>
+
+    <string name="duellare">
+        DUELLARE
+        Quando impugni un’arma da mischia in una mano e nessun’altra arma,
+        ottieni un bonus di +2 ai tiri dei danni con quell’arma.
+    </string>
+
+    <string name="protezione">
+        PROTEZIONE
+        Quando una creatura che puoi vedere attacca un bersaglio diverso da te e che si trova entro 1,5 metri da te,
+        puoi usare la tua reazione per imporre svantaggio al suo tiro per colpire. Devi impugnare uno scudo.
+    </string>
+
+    <string name="tiro">
+        TIRO
+        Ottieni un bonus di +2 ai tiri per colpire effettuati con le armi a distanza.
+    </string>
+
+    <string name="recuperare_energie">
+        RECUPERARE ENERGIE
+        Hai una fonte limitata di energia a cui puoi attingere per rimetterti dalle ferite.
+        Durante il tuo turno, puoi usare un’azione bonus per recuperare punti ferita
+        pari a 1d10 + il tuo livello da guerriero.
+        Una volta impiegato questo privilegio, devi terminare un riposo breve o lungo prima di riutilizzarlo.
+    </string>
+
+    <string name="campione">
+        CAMPIONE
+
+        CRITICO MIGLIORATO
+        A partire da quando il guerriero sceglie questo archetipo al 3° livello,
+        i suoi attacchi con un\'arma mettono a segno un colpo critico con un risultato di 19-20 al tiro.
+
+        ATLETA STRAORDINARIO
+        A partire dal 7° livello, il guerriero può aggiungere metà del suo bonus di competenza (arrotondalo per eccesso)
+        a qualsiasi prova di Forza, Destrezza o Coatituzione che effettua e che non utilizzi già il suo bonus di competenza.
+        Inoltre, quando il guerriero effettua un salto in lungo con rincorsa,
+        la distanza che copre aumenta di 30 cm per ogni punto del suo modificatore di Forza.
+
+        STILE DI COMBATTIMENTO AGGIUNTIVO
+        Al 10° livello, il guerriero può scegliere una seconda opzione dal privilegio di classe Stile di Combattimento.
+
+        CRITICO SUPERIORE
+        A partire dal 15° livello, gli attacchi con un'arma del guerriero
+        mettono a segno un colpo critico con un risultato di 18-20 al tiro.
+
+        SOPRAVVISSUTO
+        Al 18° livetlo, il guerriero giunge all'apice della sua resilienza in battaglia.
+        All'inizio di ogni suo turno, recupera un ammontare di punti ferita pari a 5 + il suo modificatore di Costituzione,
+        se non gli rimane più della metà dei suoi punti ferita.
+        Non ottiene questo beneficio se ha O punti ferita.
+    </string>
+
+    <string name="maestro_di_battaglia">
+        MAESTRO DI BATTAGLIA
+
+        SUPERIORITÀ IN COMBATTIMENTO
+        Quando il guerriero sceglie questo archetipo al 3° livello, apprende alcune manovre alimentate
+        da dadi speciali chiamati dadi di superiorità.
+        MANOVRE: Il guerriero apprende tre manovre a sua scelta, descritte nella sezione "Manovre" seguente.
+        Molte manovre potenziano un attacco in qualche modo. Il guerriero può usare soltanto una manovra per attacco.
+        Un guerriero apprende due manovre aggiuntive a sua scelta al 7°, 10° e 15° livello.
+        Ogni volta che apprende nuove manovre, può anche sostituire una manovra che conosce con una manovra diversa.
+        DADI DI SUPERIORITà: Il guerriero possiede quattro dadi di superiorità, rappresentati da d8.
+        Quando il guerriero usa un dado di superiorità, lo spende.
+        Recupera tutti i dadi di superiorità quando completa un riposo breve o lungo.
+        Ottiene un altro dado di superiorità al 7° livello e un altro ancora al 15° livello.
+        TIRI SALVEZZA: Alcune manovre del guerriero richiedono che il bersaglio effettui un tiro salvezza
+        per resistere agli effetti della manovra.
+        La CD del tiro salvezza va calcolata come segue:
+        CD del tiro salvezza della manovra = 8 + A bonus di competenza del guerriero + il modificatore di Forza o di Destrezza del guerriero (a scelta del guerriero)
+
+        STUDIOSO DI GUERRA
+        Al 3° livello, il guerriero ottiene competenza in un tipo di strumenti da artigiano a sua scelta.
+
+        CONOSCI IL TUO NEMICO
+        A partire dal 7° livello, se il guerriero spende almeno 1 minuto a osservare un\'altra creatura al di fuori del
+        combattimento o a interagire con essa, può apprendere alcune informazioni
+        relative alle capacità di quella Creatura, confrontandole con le proprie.
+        Il DM rivela al guerriero se la creatura gli è pari, superiore o inferiore relativamente a due
+        dei seguenti tratti a scelta del guerriero:
+        • Punteggio di Forza
+        • Punteggio di Destrezza
+        • Punteggio di Costituzione
+        • Classe Armatura
+        • Punti ferita attuali
+        • Livelli di classe totali (se ne possiede)
+        • Livelli di classe da guerriero (se ne possiede)
+
+        SUPERIORITÀ IN COMBATTIMENTO MIGLIORATA
+        Al 10° livello, i dadi di superiorità del guerriero diventano d1O. Al 18° livello, diventano d12.
+
+        IMPLACABILE
+        A partire dal 15° livello, quando il guerriero tira per l\'iniziativa e non gli rimane
+        alcun dado di superiorità, recupera un dado di superiorità.
+
+        MANOVRE
+        Le manovre sono presentate in ordine alfabetico:
+
+        ATTACCO ADDESCANTE: Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+        può spendere un dado di superiorità per indurre il bersaglio ad attaccarlo.
+        Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco,
+        e il bersaglio deve effettuare un tiro salvezza su Saggezza.
+        Se lo fallisce, il bersaglio subisce svantaggio a tutti i tiri per colpire contro bersagli diversi dal guerriero
+        fino alla fine del turno successivo del guerriero.
+
+        ATTACCO CON AFFONDO: Quando il guerriero effettua un attacco con un\'arma da mischia nel suo turno,
+        può spendere un dado di superiorità per aumentare di 1,5 metri la propria portata per quell\'attacco.
+        Se colpisce, aggiunge il dado di superiorità al tiro per i danni dell\'attacco.
+
+        ATTACCO CON FINTA: Il guerriero può spendere un dado di superiorità e usare un\'azione bonus nel suo turno
+        per fintare, scegliendo una creatura entro 1,5 metri da sé come bersaglio.
+        Il guerriero dispone di vantaggio al suo prossimo tiro per colpire contro quella creatura in questo turno.
+        Se quell\'attacco colpisce, il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco.
+
+        ATTACCO CON MANOVRA: Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+        può spendere un dado di superiorità per spostare uno dei suoi compagni in una posizione più vantaggiosa.
+        Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco e sceglie
+        una creatura amica che sia in grado di vederlo o di sentirlo.
+        Quella creatura può usare la sua reazione per muoversi fino alla metà della sua velocità senza provocare attacchi
+        di opportunità da parte del bersaglio dell\'attacco del guerriero.
+
+        ATTACCO CON SPAZZATA: Quando il guerriero colpisce una creatura con un attacco con un\'arma da mischia,
+        può spendere un dado di superiorità per tentare di infliggere danni a un\'altra creatura con lo stesso attacco.
+        II guerriero sceglie un\'altra creatura entro 1,5 metri dal bersaglio originale ed entro la propria portata.
+        Se il tiro per colpire originale colpirebbe anche la seconda creatura,
+        quest'ultima subisce danni pari al risultato del tiro ottenuto con il dado di superiorità del guerriero.
+        I danni sono dello stesso tipo dell'attacco originale.
+
+        ATTACCO CON SPINTA: Quando il guerriero colpisce una creatura con un attacco con un'arma,
+        può spendere un dado di superiorità per tentare di spingere il bersaglio rigettandolo indietro.
+        Il guerriero aggiunge il dado di superiorità al tiro per i danni dell'attacco.
+        Se il bersaglio è di taglia Grande o inferiore, deve effettuare un tiro salvezza su Forza.
+        Se lo fallisce, il guerriero spinge il bersaglio fino a un massimo di 4,5 metri allontanandolo da sé.
+
+        ATTACCO DISARMANTE: Quando il guerriero colpisce una creatura con un attacco con un'arma può spendere un
+        dado di superiorità per tentare di disarmare il bersaglio, costringendolo a lasciare cadere un oggetto che sta
+        impugnando a scelta del guerriero.
+        Il guerriero aggiunge il dado di superiorità al tiro per i danni dell'attacco,
+        e il bersaglio deve effettuare un tiro salvezza su Forza.
+        Se lo fallisce, lascia cadere l'oggetto scelto dal guerriero.
+        L'oggetto cade ai piedi della creatura.
+
+        ATTACCO MINACCIOSO: Quando il guerriero colpisce una creatura con un attacco con un'arma,
+        può spendere un dado di superiorità per tentare di spaventare il bersaglio.
+        Il guerriero aggiunge il dado di superiorità al tiro per i danni dell'attacco,
+        e il bersaglio deve effettuare un tiro salvezza su Saggezza.
+        Se lo fallisce, il bersaglio è spaventato dal guerriero fino aLLa fine del turno successivo di quest'ultimo.
+
+        ATTACCO PRECISO: Quando il guerriero effettua un tiro per colpire con un'arma contro una creatura,
+        può spendere un dado di superiorità per aggiungerlo al tiro.
+        Può usare questa manovra prima o dopo avere effettuato il tiro per colpire,
+        ma prima di applicare qualsiasi effetto dell'attacco.
+
+        ATTACCO SBILANCIANTE: Quando il guerriero colpisce una creatura con un attacco con un'arma,
+        può spendere un dado di superiorità per tentare di buttare a terra il bersaglio.
+        Il guerriero aggiunge il dado di superiorità al tiro per i danni dell'attacco.
+        Se il bersaglio è di taglia Grande o inferiore, deve effettuare u n tiro salvezza su Forza.
+        Se lo fallisce, cade a terra prono.
+
+        COLPO DEL COMANDANTE: Quando il guerriero effettua l'azione di Attacco nel suo turno,
+        può rinunciare a uno dei suoi attacchi e usare un'azione bonus per ordinare a uno dei suoi compagni di colpire.
+        Quando lo fa, sceglie una creatura amica che sia in grado di vederlo o di sentirlo
+        e spende un dado di superiorità.
+        Quella creatura può immediatamente usare la sua reazione per effettuare un attacco con un'arma,
+        aggiungendo il dado di superiorità al tiro per i danni dell'attacco.
+
+        COLPO DISTRAENTE: Quando il guerriero colpisce una creatura con un attacco con un'arma,
+        può spendere un dado di superiorità per distrarre la creatura e procurare ai suoi alleati un'apertura.
+        Il guerriero aggiunge il dado di superiorità al tiro per i danni dell'attacco.
+        Il prossimo tiro per colpire effettuato contro il bersaglio da un attaccante che non sia il guerriero
+        dispone di vantaggio, purché sia effettuato prima dell'inizio del turno successivo del guerriero.
+
+        INCORAGGIAMENTO: Nel proprio turno, il guerriero può usare un'azione bonus
+        e spendere un dado di superiorità per incitare uno dei suoi compagni.
+        Quando lo fa, sceglie una creatura amica che sia in grado di vederlo o di sentirlo.
+        Quella creatura ottiene un ammontare di punti ferita temporanei pari al risultato del tiro del dado
+        di superiorità + il modificatore di Carisma del guerriero.
+
+        PARATA: Quando un'altra creatura infligge danni al guerriero con un attacco in mischia,
+        il guerriero può usare la sua reazione e spendere un dado di superiorità per ridurre i danni
+        del numero ottenuto con il tiro del suo dado di superiorità + il suo modificatore di Destrezza.
+
+        REPLICA: Quando una creatura manca il guerriero con un attacco in mischia,
+        il guerriero può usare la sua reazione e spendere un dado di superiorità per effettuare un attacco
+        con un'arma da mischia contro la creatura.
+        Se la colpisce, aggiunge il dado di superiorità al tiro per i danni dell'attacco.
+
+        SCARTO ELUSIVO: Quando il guerriero si muove, può spendere un dado di superiorità,
+        tirarlo e aggiungere il risultato ottenuto alla sua CA finché non smette di muoversi.
+    </string>
+
+    <string name="cavaliere_mistico">
+        CAVALIERE MISTICO
+
+        INCANTESIMI
+        Quando arriva al 3° livello, il guerriero potenzia le sue doti marziali grazie alla capacità di lanciare incantesimi.
+
+        TRUCCHETTI
+        Un guerriero conosce due trucchetti a sua scelta tratti dalla lista degli incantesimi da mago.
+        Apprende un trucchetto da mago aggiuntivo a sua scelta al 10° livello.
+
+        SLOT INCANTESIMO
+        La tabella "Incantesimi del Cavalliere Mistico" indica quanti slot incantesimo possiede un guerriero
+        per lanciare i suoi incantesimi
+        Per lanciare uno di questi incantesmi, un guerriero deve spendere uno slot incantesimo di livello
+        pari o superiore al livello dell\'incantesimo.
+        Il guerriero recupera tutti gli slot incantesimo spesi quando completa un riposo lungo.
+        Per esempio, se un guerriero conosce l\'incantesimo di 1° livello scudo e possiede uno slot
+        incantesimo di 1° livello e uno slot incantesimo di 2° livello,
+        può lanciare scudo usando uno qualsiasi dei due slot.
+
+        INCANTESIMI CONOSCIUTI DI 1° LIVELLO E DI LIVELLO SUPERIORE.
+        Un guerriero conosce tre incantesimi da mago di 1° livello a sua scelta, due dei quali devono essere scelti
+        tra gli incantesimi di abiurazione e invotazione sulla lista degli incantesimi da mago.
+        La colonna "Incantesimi Conosciuti" nella tabella "Incantesimi del Cavaliere Mistico" indica quando un
+        guerriero impara altri incantesimi da mago di 1° livello o di livello superiore.
+        Ognuno di questi incantesimi deve essere un incantesimo di abiurazione o di invocazione a
+        scelta del guerriero e deve appartenere a un livello di cui il guerriero possiede degli slot incantesimo.
+        Per esempio, quando un guerriero arriva al 7° livello in questa classe,
+        può apprendere un nuovo incantesimo di 1° o 2° livello.
+        Gli incantesimi che apprende all\'8°, 14° e 20° livello possono appartenere a qualsiasi scuola di magia.
+        Ogni volta che il guerriero acquisisce un livello, può sostituire uno degli incantesimi da mago che conosce
+        con un altro incantesimo a sua scelta della lista degli incantesimi da mago.
+        Il nuovo incantesimo deve essere di un livello di cui il guerriero possiede almeno uno slot
+        incantesimo e deve essere un incantesimo di abiurazione o di invocazione, a meno che non stia sostituendo
+        l\'incantesimo ottenuto al 3°, 8°, 14° o 20° livello di una qualsiasi scuola di magia.
+
+        CARATTERISTICA DA INCANTATORE
+        Intelligenza è la caratteristica da incantatore per gli incantesimi da mago del guerriero,
+        dal momento che egli apprende i suoi incantesimi tramite lo studio costante e la memorizzazione.
+        Un guerriero usa Intelligenza ogni volta che un incantesimo fa riferimento alla sua caratteristica da incantatore.
+        Usa inoltre il suo modificatore di Intelligenza per definire la CD del tiro salvezza
+        di un incantesimo da mago da lui lanciato e quando effettua un tiro per colpire con un incantesimo.
+
+        CD der tiro salvezza dell'incantesimo = 8 + il bonus di competenza del guerriero + il modificatore di Intelligenza del guerriero
+        Modificatore di attacco dell'incantestmo = Il bonus di competenza del guerriero + il modificatore di Intelligenza del guerriero
+
+        ARMA VINCOLATA
+        Al 3° livello, il guerriero apprende un rituale che stabilisce un vincolo magico tra lui e un'arma.
+        Il guerriero celebra il rituale nell\'arco di 1 ora, e può farlo durante un riposo breve.
+        L'arma deve trovarsi a sua portata di mano nel corso di tutto il rituale;
+        alla conclusione del rituale, il guerriero tocca t'arma e stabilisce il vincolo.
+        Una volta vincolata l'arma a sé, il guerriero non può essere disarmato di quell'arma
+        a meno che non sia incapacitato. Se il guerriero e l'arma si trovano sullo stesso
+        piano di esistenza, il guerriero può evocare quell\'arma come azione bonus nel proprio turno,
+        facendo in modo che si teletrasporti istantaneamente netta sua mano.
+        Un guerriero può avere al massimo due armi vincolate, ma può evocarne solo una alta volta con la sua azione bonus.
+        Se tenta di vincolare una terza arma, dovrà spezzare il vincolo con una delle altre due.
+
+        MAGIA DA GUERRA
+        A partire dal 7• livello, quando il guerriero usa la sua azione per lanciare un trucchetto,
+        può effettuare un attacco con un'arma come azione bonus.
+
+        COLPO MISTICO
+        Al 10° livello, il guerriero impara a demolire la resistenza agli incantesimi delle creature che colpisce con la sua arma.
+        Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+        quella creatura subisce svantaggio al tiro salvezza successivo che effettua contro un incantesimo
+        lanciato dal guerriero entro la fine del turno successivo di quest\'ultimo.
+
+        CARICA ARCANA
+        Al 15 livello, il guerriero ottiene la capacità di teletrasportarsi di un massimo di 9 metri
+        ino a uno spazio libero cho egli sia in grado di vedere quando utilizza la sua Azione Impetuosa.
+        Il guerriero pub teletrasportarsi prima o dopo l'azione aggiuntiva.
+
+        MAGIA DA GUERRA MIGLIORATA
+        A partire dal 18° lìvello, quando il guerriero usa la sua azione per lanciare un incantesimo,
+        può effettuare un attacco con un'arma come azione bonus.
+    </string>
+
+
+</resources>

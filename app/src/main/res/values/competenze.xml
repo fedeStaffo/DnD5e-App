@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="competenze">Competenze</string>
+    <string name="otterrai_le_competenze">Otterrai le seguenti competenze:</string>
+    <string name="selezione_2">Scegli 2 competenze nella lista qua sotto</string>
+    <string name="selezione_3">Scegli 3 competenze nella lista qua sotto</string>
+    <string name="selezione_4">Scegli 4 competenze nella lista qua sotto</string>
+    
+    <string name="atletica">Atletica(For)</string>
+    <string name="acrobazia">Acrobazia(Des)</string>
+    <string name="furtività">Furtività(Des)</string>
+    <string name="rapidità_di_mano">Rapidità di mano(Des)</string>
+    <string name="arcano">Arcano(Int)</string>
+    <string name="indagare">Indagare(Int)</string>
+    <string name="natura">Natura(Int)</string>
+    <string name="religione">Religione(Int)</string>
+    <string name="storia">Storia(Int)</string>
+    <string name="addestrare_animali">Addestrare Animali(Sag)</string>
+    <string name="intuizione">Intuizione(Sag)</string>
+    <string name="medicina">Medicina(Sag)</string>
+    <string name="percepire">Percepire(Sag)</string>
+    <string name="sopravvivenza">Sopravvivenza(Sag)</string>
+    <string name="intimidire">Intimidire(Car)</string>
+    <string name="inganno">Inganno(Car)</string>
+    <string name="intrattenere">Intrattenere(Car)</string>
+    <string name="persuasione">Persuasione(Car)</string>
+
+    <string name="strumenti_musicali">Strumenti musicali</string>
+    <string name="ciaramella">Ciaramella</string>
+    <string name="cornamusa">Cornamusa</string>
+    <string name="corno">Corno</string>
+    <string name="dulcimer">Dulcimer</string>
+    <string name="flauto">Flauto</string>
+    <string name="flauto_di_pan">Flauto di Pan</string>
+    <string name="lira">Lira</string>
+    <string name="liuto">Liuto</string>
+    <string name="tamburo">Tamburo</string>
+    <string name="viola">Viola</string>
+    <string name="strumenti_da_scasso">Strumenti da scasso</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="equipaggiamento">Equipaggiamento</string>
+    <string name="seleziona_un_metodo">Seleziona un metodo:</string>
+    <string name="equipaggiamento_di_partenza">Equipaggiamento di partenza</string>
+
+    <string name="stocco">Stocco</string>
+    <string name="spada_lunga">Spada lunga</string>
+    <string name="qualsiasi_arma_semplice">Una qualsiasi arma semplice</string>
+    <string name="qualsiasi_arma_semplice_mischia">Una qualsiasi arma semplice da mischia</string>
+    <string name="spada_corta">Una spada corta</string>
+    <string name="arco_corto">Un arco corto con una faretra con 20 frecce</string>
+    <string name="cotta_di_maglia">Una cotta di maglia</string>
+    <string name="armatura_di_cuoio_guerriero">Un\'armatura di cuoio, arco lungo e 20 frecce</string>
+    <string name="arma_da_guerra_e_scudo">Un\'arma da guerra e uno scudo</string>
+    <string name="armi_da_guerra_2">2 armi da guerra</string>
+    <string name="balestra_leggera">Una balestra leggera e 20 quadrelli</string>
+    <string name="asce_2">2 asce</string>
+    <string name="mazza">Una mazza</string>
+    <string name="martello_da_guerra">Un martello da guerra</string>
+    <string name="corazza_scaglie">Una corazza di scaglie</string>
+    <string name="armatura_di_cuoio">Un\'armatura di cuoio</string>
+    <string name="bastone_ferrato">Un bastone ferrato</string>
+    <string name="pugnale">Un pugnale</string>
+    <string name="borsa_componenti">Una borsa per componenti</string>
+    <string name="focus">Un focus arcano</string>
+    <string name="giavellotti">5 giavellotti</string>
+
+    <string name="dotazione_diplomatico">Una dotazione da diplomatico</string>
+    <string name="dotazione_intrattenitore">Una dotazione da intrattenitore</string>
+    <string name="dotazione_rapinatore">Una dotazione da rapinatore</string>
+    <string name="dotazione_speleologo">Una dotazione da speleologo</string>
+    <string name="dotazione_esploratore">Una dotazione da esploratore</string>
+    <string name="dotazione_sacerdote">Una dotazione da sacerdote</string>
+    <string name="dotazione_studioso">Una dotazione da studioso</string>
+
+    <string name="liuto">Un liuto</string>
+    <string name="altro_strumento">Un qualsiasi altro strumento musicale</string>
+
+    <string name="bardo_obbligatorio">Un\'armatura di cuoio e un pugnale</string>
+    <string name="ladro_obbligatorio">Un\'armatura di cuoio, due pugnali, e attrezzi da ladro</string>
+    <string name="chierico_obbligatorio">Uno scudo e un simbolo sacro</string>
+    <string name="mago_obbligatorio">Un libro degli incantesimi</string>
+    <string name="paladino_obbligatorio">Una cotta di maglia e un simbolo sacro</string>
+
+    <string name="soldi">Dammi i soldi</string>
+    <string name="partirai_com">Comincerai con…</string>
+    <string name="x10">10 X</string>
+    <string name="oro">Monete d\'oro</string>
+
+    <string name="tiro_bardo_guerriero_chierico_paladino">Tira 5D4</string>
+    <string name="tiro_ladro_mago">Tira 4D4</string>
+
+</resources>

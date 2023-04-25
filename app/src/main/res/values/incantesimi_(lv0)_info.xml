@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="amicizia_info">
+        AMICIZIA
+        Trucchetto di Ammaliamento
+
+        Tempo di Lancio: 1 azione
+        Gittata: Incantatore
+        Componenti: S,M (una piccola quantità di trucco da applicare al volto mentre si lancia l\'incantesimo)
+        Durata: Concentrazione, fino a 1 minuto
+
+        Per la durata dell\'incantesimo, l\'incantatore dispone di vantaggio a tutte le prove di Carisma
+        rivolte a una creatura a sua scelta che non sia ostile nei suoi confronti.
+        Quando l'incantesimo termina, la creatura capisce che l'incantatore ha usato la magia
+        per influenzare il suo umore e potrebbe diventare ostile nei suoi confronti.
+        Se la creatura è tendente alla violenza, potrebbe attaccarlo.
+        Un'altra creatura potrebbe cercare vendetta in altri modi (a discrezione del DM),
+        in base alla natura delle sue interazioni con l'incantatore.
+    </string>
+
+    <string name="beffa_crudele_info">
+        BEFFA CRUDELE
+        Trucchetto di Ammaliamento
+
+        Tempo di lancio: 1 azione
+        Gittata: 18 metri
+        Componenti: V
+        Durata: Istantanea
+
+        L\'incantatore pronuncia una sequenza di insulti mescolati a sottili ammaliamenti
+        contro una creatura entro gittata e che egli sia in grado di vedere.
+        Se il bersaglio è in grado di sentirlo (non è necessario che lo capisca),
+        deve superare un tiro salvezza su Saggezza, altrimenti subisce 1d4 danni psichici e svantaggio al tiro per colpire successivo
+        che effettua prima della fine del suo turno successivo.
+        I danni di questo incantesimo aumentano di 1d4 quando l'incantatore arriva al 5° livello (2d4),
+        11° livello (3d4) e 17° livello (4d4).
+    </string>
+
+    <string name="colpo_accurato_info">
+        COLPO ACCURATO
+        Trucchetto di Divinazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: 9 metri
+        Componenti: S
+        Durata: Concentrazione, fino a 1 round
+
+        L\'incantatore punta un dito contro un bersaglio entro gittata.
+        La sua magia gli conferisce una fugace e accurata percezione delle difese del bersaglio.
+        Nel suo turno successivo, l'incantatore dispone di vantaggio al suo tiro per colpire contro quel bersaglio,
+        purché l'incantesimo non sia terminato.
+    </string>
+
+    <string name="dardo_di_fuoco_info">
+        DARDO DI FUOCO
+        Trucchetto di Invocazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: 36 metri
+        Componenti: V, S
+        Durata: istantanea
+
+        L\'incantatore scaglia una scintilla di fuoco verso una creatura o un oggetto situato entro gittata,
+        effettuando un attacco a distanza con questo incantesimo contro il bersaglio.
+        Se colpisce, il bersaglio subisce 1d10 danni da fuoco.
+        Un oggetto infiammabile colpito da questo incantesimo si incendia se non è indossato o trasportato.
+        I danni di questo incantesimo aumentano di 1d10 quando l'incantatore arriva al 5° livello (2d10),
+        11° livello (3d10) e 17° livello (4d10).
+    </string>
+
+    <string name="fiamma_sacra_info">
+        FIAMMA SACRA
+        Trucchetto di Invocazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: 18 metri
+        Componenti: V, S
+        Durata: Istantanea
+
+        Un bagliore simile a una fiamma scende fino a una creatura entro gittata e che l\'incantatore sia in grado di vedere.
+        Il bersaglio deve superare un tiro salvezza su Destrezza, altrimenti subisce 1d8 danni radiosi.
+        Il bersaglio non trae beneficio dalla copertura per questo tiro salvezza.
+        I danni di questo incantesimo aumentano di 1d8 quando l'incantatore arriva al 5° livello (2d8),
+        11° livello (3d8) e 17° livello (4d8).
+    </string>
+
+    <string name="fiotto_acido_info">
+        FIOTTO ACIDO
+        Trucchetto di Evocazione
+
+        Tempo di lancio: 1 azione
+        Gittata: 18 metri
+        Componenti: V, S
+        Durata: Istantanea
+
+        L\'incantatore scaglia una bolla di acido, scegliendo una creatura entro gittata e che egli sia in grado di vedere
+        oppure due creature entro gittata e che egli sia in grado di vedere, situate a non più di 1,5 metri l’una dall’altra.
+        Un bersaglio deve superare un tiro salvezza su Destrezza, altrimenti subisce 1d6 danni da acido.
+        I danni di questo incantesimo aumentano di 1d6 quando l'incantatore arriva al 5° livello (2d6),
+        11° livello (3d6) e 17° livello (4d6).
+    </string>
+
+    <string name="guida_info">
+        GUIDA
+        Trucchetto di Divinazione
+
+        Tempo di lancio: 1 azione
+        Gittata: Contatto
+        Componenti: V, S
+        Durata: Concentrazione, fino a 1 minuto
+
+        L\'incantatore tocca una creatura consenziente.
+        Una volta prima che l\'incantesimo termini il bersaglio può tirare un d4
+        e aggiungere il risultato a una prova di caratteristica a sua scelta.
+        Può tirare il dado prima o dopo avere effettuato la prova di caratteristica.
+        Dopodiché l'incantesimo termina.
+    </string>
+
+    <string name="illusione_minore_info">
+        ILLUSIONE MINORE
+        Trucchetto di Illusione
+
+        Tempo di lancio: 1 azione
+        Gittata: 9 metri
+        Componenti: S, M (un ciuffo di lana)
+        Durata: 1 minuto
+
+        L\'incantatore crea un suono o un\'immagine di un oggetto entro gittata che permane per la durata dell\'incantesimo.
+        L\'illusione termina anche se l\'incantatore la interrompe con un\'azione o se lancia questo incantesimo di nuovo.
+        Se l\'incantatore crea un suono, il suo volume può variare da un sussurro a un urlo.
+        Può trattarsi della voce dell\'incantatore, della voce di qualcun altro, del ruggito di un leone,
+        di un rullo di tamburi o di un qualsiasi altro suono a sua scelta.
+        Il suono può echeggiare ininterrottamente per tutta la durata, oppure l\'incantatore può emettere suoni più discreti
+        in momenti diversi prima che l'incantesimo termini.
+        Se l'incantatore crea l'immagine di un oggetto (come per esempio una sedia, una serie di impronte nel fango o uno scrigno),
+        quell'oggetto non deve essere più grande di un cubo con spigolo di 1,5 metri.
+        L'immagine non può emettere suoni, luci, odori o qualsiasi altro effetto sensoriale. ù
+        Un'interazione fisica con l'immagine rivela che si tratta di un'illusione,
+        in quanto gli oggetti la attraversano.
+        Se una creatura usa la sua azione per esaminare il suono o l'immagine,
+        può determinare che si tratta di un'illusione se effettua con successo una prova di Intelligenza (Indagare)
+        contro la CD del tiro salvezza dell'incantesimo.
+        Se una creatura discerne l'illusione per ciò che è, l'illusione si attenua per quella creatura.
+    </string>
+
+    <string name="interdizione_alle_lame_info">
+        INTERDIZIONE ALLE LAME
+        Trucchetto di Abiurazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: Incantatore
+        Componenti: V, S
+        Durata: 1 round
+
+        L\'incantatore protende la mano in avanti e traccia un simbolo di interdizione nell'aria.
+        Fino alla fine del suo turno successivo, l'incantatore dispone di resistenza ai danni
+        contundenti, perforanti e taglienti inferti dagli attacchi con le armi.
+    </string>
+
+    <string name="luce_info">
+        LUCE
+        Trucchetto di Invocazione
+
+        Tempo di lancio: 1 azione
+        Gittata: Contatto
+        Componenti: V, M (una lucciola o del muschio fosforescente)
+        Durata: 1 ora
+
+        L\'incantatore tocca un oggetto non più grande di 3 metri in ogni dimensione.
+        Finché l\'incantesimo non termina, l\'oggetto proietta luce intensa entro un raggio di 6 metri
+        e luce fioca per altri 6 metri.
+        La luce può essere del colore desiderato dall'incantatore.
+        Coprire completamente l'oggetto con qualcosa di opaco blocca la luce.
+        L'incantesimo termina se l'incantatore lo lancia di nuovo o lo interrompe con un'azione.
+        Se l'incantatore bersaglia un oggetto impugnato o posseduto da una creatura ostile,
+        quella creatura deve superare un tiro salvezza su Destrezza per evitare l'incantesimo.
+    </string>
+
+    <string name="luci_danzanti_info">
+        LUCI DANZANTI
+        Trucchetto di Invocazione
+
+        Tempo di lancio: 1 azione
+        Gittata: 36 metri
+        Componenti: V, S, M (un frammento di fosforo, di legno di faggio o una lucciola)
+        Durata: Concentrazione, fino a 1 minuto
+
+        L\'incantatore crea fino a quattro luci delle dimensioni di una torcia,
+        facendole apparire come lanterne, torce o globi luminosi che fluttuano nell\'aria per la durata dell\'incantesimo.
+        L\'incantatore può anche fondere le quattro luci in un'unica forma luminosa vagamente umanoide di taglia Media.
+        Qualunque sia la forma scelta, ogni luce proietta luce fioca entro un raggio di 3 metri.
+        Come azione bonus nel suo turno, l'incantatore può muovere le luci di un massimo di 18 metri
+        fino a un nuovo punto entro gittata.
+        Ogni luce deve trovarsi entro 6 metri da un'altra luce creata da questo incantesimo;
+        una luce si spegne se esce dalla gittata dell'incantesimo.
+    </string>
+
+    <string name="mano_magica_info">
+        MANO MAGICA
+        Trucchetto di Evocazione
+
+        Tempo di lancio: 1 azione
+        Gittata: 9 metri
+        Componenti: V, S
+        Durata: 1 minuto
+
+        Una mano spettrale fluttuante appare in un punto a scelta dell\'incantatore situato entro gittata.
+        La mano permane per la durata dell\'incantesimo o finché l\'incantatore non la congeda con un\'azione.
+        La mano svanisce se si trova a più di 9 metri dall\'incantatore
+        o se quest\'ultimo lancia di nuovo questo incantesimo.
+        L'incantatore può usare la sua azione per controllare la mano.
+        Può usarla per maneggiare un oggetto, aprire una porta o un contenitore che non sia chiuso a chiave,
+        estrarre o riporre un oggetto da un contenitore aperto o versare il contenuto di una fiala.
+        Può muovere la mano di un massimo di 9 metri ogni volta che la usa.
+        La mano non può attaccare, attivare oggetti magici o trasportare più di 5 kg.
+    </string>
+
+    <string name="messaggio_info">
+        MESSAGGIO
+        Trucchetto di Trasmutazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: 36 metri
+        Componenti: V, S, M (un frammento di un filo di rame)
+        Durata: 1 round
+
+        L\'incantatore punta l\'indice verso una creatura entro gittata e sussurra un messaggio,
+        il bersaglio (e soltanto il bersaglio) sente il messaggio e può rispondere con un sussurro
+        che soltanto l\'incantatore può udire.
+        L\'incantatore può lanciare questo incantesimo attraverso gli oggetti solidi,
+        se ha familiarità con il bersaglio e sa che si trova oltre la barriera.
+        Il silenzio magico, 30 cm di pietra, 2,5 cm di metallo comune, una sottile lamina di piombo
+        o 90 cm di legno bloccano l'incantesimo.
+        l'incantesimo non deve necessariamente seguire una linea retta e può svilupparsi liberamente
+        oltre gli angoli e attraverso le aperture.
+    </string>
+
+    <string name="prestidigitazione_info">
+        PRESTIDIGITAZIONE
+        Trucchetto di Trasmutazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: 3 metri
+        Componenti: V, S
+        Durata: Fino a 1 ora
+
+        Questo incantesimo è un trucco magico che gli incantatori novizi usano per fare pratica.
+        L\'incantatore crea uno degli effetti magici seguenti entro gittata:
+        - Crea un effetto sensoriale innocuo e istantaneo, come una pioggia di scintille,
+         una folata di vento, una tenue melodia musicale o uno strano odore.
+        - Accende o spegne istantaneamente una candela, una torcia o un piccolo fuoco da campo.
+        - Pulisce o sporca istantaneamente un oggetto non più grande di un cubo con spigolo di 30 cm.
+        - Riscalda, raffredda o condisce materiale non vivente del volume massimo di un cubo di spigolo di 30 cm per 1 ora.
+        - Fa comparire un colore, un piccolo segno o un simbolo su un oggetto o una superficie per 1 ora.
+        - Crea un ninnolo non magico o un'immagine illusoria che può stare nella sua mano
+          e che permane fino alla fine del suo turno.
+        Se l\'incantatore lancia questo incantesimo più volte può tenere attivi fino a tre dei suoi effetti
+        non istantanei contemporaneamente, e può congedare ognuno di questi effetti con un'azione.
+    </string>
+
+    <string name="raggio_di_gelo_info">
+        RAGGIO DI GELO
+        Trucchetto di Invocazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: 18 metri
+        Componenti: V, S
+        Durata: Istantanea
+
+        Un raggio gelido di luce azzurra e biancastra sfreccia verso una creatura entro gittata.
+        L\'incantatore effettua un attacco a distanza con questo incantesimo contro il bersaglio.
+        Se lo colpisce, il bersaglio subisce 1d8 danni da freddo e la sua velocità è ridotta di 3 metri
+        fino all'inizio del turno successivo dell'incantatore.
+        I danni di questo incantesimo aumentano di 1d8 quando l'incantatore arriva al 5° livello (2d8),
+        11° livello (3d8) e 17° livello (4d8).
+    </string>
+
+    <string name="resistenza_info">
+        RESISTENZA
+        Trucchetto di Abiurazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: Contatto
+        Componenti: V, S, M (un mantello in miniatura)
+        Durata: Concentrazione, fino a 1 minuto
+
+        L\'incantatore tocca una creatura consenziente.
+        Per una volta prima che l'incantesimo termini, il bersaglio può tirare un d4
+        e aggiungere il risultato ottenuto ad un tiro salvezza a sua scelta.
+        Può tirare il dado prima o dopo avere effettuato il tiro salvezza.
+        Dopodiché l'incantesimo termina.
+    </string>
+
+    <string name="riparare_info">
+        RIPARARE
+        Trucchetto di Trasmutazione
+
+        Tempo di Lancio: 1 minuto
+        Gittata: Contatto
+        Componenti: V, S, M (due calamite)
+        Durata: Istantanea
+
+        Questo incantesimo ripara una singola crepa o uno squarcio in un oggetto toccato dall\'incantatore,
+        come l\'anello spezzato di una catena, due metà di una chiave spezzata, un mantello strappato o un otre forato.
+        Fintanto che la crepa o lo squarcio non è più grande di 30 cm in ogni dimensione,
+        l'incantatore lo ripara senza lasciare traccia del danno precedente.
+        Questo incantesimo può fisicamente riparare un oggetto magico o un costrutto,
+        ma non può ripristinare la magia in un oggetto del genere.
+    </string>
+
+    <string name="salvare_i_morenti_info">
+        SALVARE I MORENTI
+        Trucchetto di Necromanzia
+
+        Tempo di Lancio: 1 azione
+        Gittata: Contatto
+        Componenti: V, S
+        Durata: Istantanea
+
+        L'incantatore tocca una creatura vivente a 0 punti ferita.
+        Quella creatura diventa stabile.
+        Questo incantesimo non ha effetto sui costrutti o sui non morti.
+    </string>
+
+    <string name="spruzzo_velenoso_info">
+        SPRUZZO VELENOSO
+        Trucchetto di Evocazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: 3 metri
+        Componenti: V, S
+        Durata: Istantanea
+
+        L\'incantatore allunga la mano verso una creatura entro gittata e che egli sia in grado di vedere
+        e proietta uno sbuffo di gas velenoso dal suo palmo.
+        La creatura deve superare un tiro salvezza su Costituzione, altrimenti subisce 1d12 danni da veleno.
+        I danni di questo incantesimo aumentano di 1d12 quando l'incantatore arriva al 5° livello (2d12),
+        11° livello (3d12) e 17° livello (4d12).
+    </string>
+
+    <string name="stretta_folgorante_info">
+        STRETTA FOLGORANTE
+        Trucchetto di Invocazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: Contatto
+        Componenti: V, S
+        Durata: Istantanea
+
+        Un fulmine si sprigiona dalla mano dell\'incantatore per trasmettere una scarica folgorante
+        a una creatura da lui toccata.
+        L\'incantatore effettua un attacco in mischia con questo incantesimo contro il bersaglio.
+        Se il bersaglio indossa un'armatura fatta di metallo l'incantatore dispone di vantaggio.
+        Se colpisce, il bersaglio subisce 1d8 danni da fulmine e non può effettuare reazioni
+        fino all'inizio del suo turno successivo.
+        I danni di questo incantesimo aumentano di 1d8 quando l'incantatore arriva al 5° livello (2d8),
+        11° livello (3d8) e 17° livello (4d8).
+    </string>
+
+    <string name="taumaturgia_info">
+        TAUMATURGIA
+        Trucchetto di Trasmutazione
+
+        Tempo di Lancio: 1 azione
+        Gittata: 9 metri
+        Componenti: V
+        Durata: Fino a 1 minuto
+
+        L\'incantatore genera una meraviglia minore, una manifestazione di potere soprannaturale.
+        Può creare uno degli effetti magici seguenti entro gittata:
+        - La sua voce rimbomba con potenza tre volte superiore rispetto al normale per 1 minuto.
+        - L\'incantatore fa in modo che una fiamma tremi, si intensifichi,
+          si affievolisca o cambi colore per 1 minuto.
+        - L\'incantatore genera un tremito innocuo sul terreno per 1 minuto.
+        - L'incantatore crea un suono istantaneo che abbia origine da un punto entro gittata a sua scelta,
+          come un rombo di tuono, il verso di un corvo o un sinistro sussurro.
+        - L'incantatore fa in modo che una porta o una finestra non chiusa a chiave si spalanchi
+          o si chiuda di colpo da sola.
+        - L'incantatore altera l'aspetto dei suoi occhi per 1 minuto.
+        Se l'incantatore lancia questo incantesimo più volte, può mantenere attivi
+        fino a tre dei suoi effetti da 1 minuto simultaneamente e può congedare uno di quegli effetti con un'azione.
+    </string>
+
+    <string name="tocco_gelido_info">
+        TOCCO GELIDO
+        Trucchetto di Necromanzia
+
+        Tempo di Lancio: 1 azione
+        Gittata: 36 metri
+        Componenti: V, S
+        Durata: 1 round
+
+        L\'incantatore crea una mano scheletrica e spettrale nello spazio di una creatura entro gittata,
+        effettuando un attacco a distanza con questo incantesimo contro quella creatura per colpirla
+        con un flusso di gelo sepolcrale.
+        Se viene colpito, il bersaglio subisce 1d8 danni necrotici e non può recuperare punti ferita
+        fino all'inizio del turno successivo dell'incantatore.
+        Fino ad allora, la mano si avvinghia al bersaglio.
+        Se l'incantatore colpisce un bersaglio non morto, quel bersaglio subisce anche svantaggio
+        ai suoi tiri per colpire contro l'incantatore fino alla fine del turno successivo di quest'ultimo.
+        I danni di questo incantesimo aumentano di 1d8 quando l'incantatore arriva al 5° livello (2d8),
+        11° livello (3d8) e 17° livello (4d8).
+    </string>
+
+</resources>

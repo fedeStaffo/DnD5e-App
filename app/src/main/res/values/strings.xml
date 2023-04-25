@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Progetto_D&amp;D</string>
+    <string name="nome_personaggio">Come si chiama il tuo personaggio</string>
+    <string name="indietro">INDIETRO</string>
+    <string name="avanti">AVANTI</string>
+    <string name="scegli">Scegli</string>
+    <string name="otterai">Otterai le seguenti competenze:</string>
+
+</resources>
