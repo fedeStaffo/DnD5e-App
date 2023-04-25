@@ -8,4 +8,9 @@
     <string name="registrati">Registrati</string>
     <string name="username">Username</string>
     <string name="conferma_passw">Conferma password</string>
+    <string name="nome">Nome</string>
+    <string name="cognome">Cognome</string>
+    <string name="pass_dimenticata">Password dimenticata?</string>
+    <string name="reset">Inserisci la mail per effettuare il reset</string>
+    <string name="reset_button">Reset Password</string>
 </resources>
