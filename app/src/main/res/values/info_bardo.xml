@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="info_bardo" tools:ignore="TypographyOther">
+    <string name="inform_bardo" tools:ignore="TypographyOther">
         Bardo
         Un bardo ottiene i seguenti privilegi di classe.
 
@@ -134,7 +134,7 @@
         Al 20° livello, quando il bardo tira per l'iniziativa e non gli rimane alcun utilizzo di Ispirazione Bardica, ne recupera un utilizzo.
     </string>
 
-    <string name="incantesimi">
+    <string name="incantesimi_bardo_lv1">
         INCANTESIMI
         Un bardo ha imparato a districare e rimodellare la trama della realtà in armonia con i suoi desideri tramite la musica.
         I suoi incantesimi fanno parte del suo vasto repertorio come magie che il bardo può mettere in sintonia con le situazioni più disparate.
