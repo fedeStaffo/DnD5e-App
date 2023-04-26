@@ -10,13 +10,27 @@
     <string name="accedi">Accedi</string>
     <string name="app_name">Progetto_D&amp;D</string>
     <string name="avanti">AVANTI</string>
+    <string name="campagne">Campagne</string>
+    <string name="cognome">Cognome</string>
     <string name="conferma_passw">Conferma password</string>
+    <string name="default_web_client_id" translatable="false">839056180853-7uilmg6sr7mqtic63835jk0apquructj.apps.googleusercontent.com</string>
     <string name="email">Email</string>
+    <string name="gcm_defaultSenderId" translatable="false">839056180853</string>
+    <string name="google_api_key" translatable="false">AIzaSyDcgPq3DEG1caZNXFNvE5pwZC79LNrW9EA</string>
+    <string name="google_app_id" translatable="false">1:839056180853:android:60706d92b4d30d2d941a3c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDcgPq3DEG1caZNXFNvE5pwZC79LNrW9EA</string>
+    <string name="google_storage_bucket" translatable="false">appdnd-ee88b.appspot.com</string>
     <string name="indietro">INDIETRO</string>
+    <string name="nome">Nome</string>
     <string name="nome_personaggio">Come si chiama il tuo personaggio</string>
     <string name="otterai">Otterai le seguenti competenze:</string>
+    <string name="pass_dimenticata">Password dimenticata?</string>
     <string name="password">Password</string>
+    <string name="personaggi">Personaggi</string>
+    <string name="project_id" translatable="false">appdnd-ee88b</string>
     <string name="registrati">Registrati</string>
+    <string name="reset">Inserisci la mail per effettuare il reset</string>
+    <string name="reset_button">Reset Password</string>
     <string name="scegli">Scegli</string>
     <string name="titolo">Campagne D&amp;D 5e</string>
     <string name="username">Username</string>
