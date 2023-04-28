@@ -1366,6 +1366,7 @@ color browser_actions_bg_grey
 color browser_actions_divider_color
 color browser_actions_text_color
 color browser_actions_title_color
+color brune_red
 color button_material_dark
 color button_material_light
 color call_notification_answer_color
@@ -1768,6 +1769,7 @@ color m3_timepicker_display_text_color
 color m3_timepicker_secondary_text_button_ripple_color
 color m3_timepicker_secondary_text_button_text_color
 color m3_tonal_button_ripple_color_selector
+color macaroon
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1955,6 +1957,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color orange
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1972,6 +1975,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color shortbread
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -1983,6 +1987,7 @@ color teal_700
 color tooltip_background_dark
 color tooltip_background_light
 color white
+color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -2807,9 +2812,11 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dragon
+drawable drawer_image
 drawable forget_password_icon
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable home
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -2833,6 +2840,7 @@ drawable ic_search_black_24
 drawable icon
 drawable knight
 drawable left
+drawable logout
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3092,6 +3100,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3140,9 +3149,11 @@ id group_divider
 id grouping
 id groups
 id header_title
+id helpFragment
 id hideable
 id home
 id homeAsUp
+id homeFragment
 id honorRequest
 id horizontal_only
 id icon
@@ -3152,8 +3163,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
-id imageView2
 id immediateStop
 id included
 id indeterminate
@@ -3176,8 +3185,10 @@ id linear
 id listMode
 id list_item
 id locale
+id logoutFragment
 id ltr
 id m3_side_sheet
+id main_graph
 id marquee
 id masked
 id match_constraint
@@ -3238,7 +3249,9 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id nav_controller_view_tag
+id nav_host_fragment
 id nav_host_fragment_container
+id nav_view
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3395,8 +3408,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
-id textView2
 id textView3
 id textView7
 id text_input_end_icon
@@ -3413,6 +3424,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3578,6 +3590,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_help
+layout fragment_home
+layout fragment_logout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3629,6 +3644,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout mtrl_search_bar
 layout mtrl_search_view
+layout nav_header
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -3639,8 +3655,11 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu menu_drawer
+menu menu_toolbar
 mipmap ic_launcher
 mipmap ic_launcher_round
+navigation main_graph
 plurals mtrl_badge_content_description
 raw firebase_common_keep
 string abc_action_bar_home_description
@@ -3672,6 +3691,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string accedi
 string accedi_o_registrati
+string aiuto
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3733,10 +3753,12 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string home
 string icon_content_description
 string indietro
 string info
 string item_view_role_description
+string logout
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate
 string m3_sys_motion_easing_emphasized_decelerate
@@ -3861,6 +3883,7 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string supporto
 string titolo
 string username
 style AlertDialog_AppCompat

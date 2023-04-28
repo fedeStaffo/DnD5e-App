@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="brune_red">#841922</color>
+    <color name="macaroon">#F9E076</color>
+    <color name="orange">#FFA52C</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="shortbread">#FBE790</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFFF00</color>
     <string name="accedi">Accedi</string>
     <string name="accedi_o_registrati">Accedi o registrati per procedere</string>
+    <string name="aiuto">Aiuto</string>
     <string name="app_name">Progetto_D&amp;D</string>
     <string name="avanti">AVANTI</string>
     <string name="benvenuto">Benvenuto in Campagne D&amp;D 5e!</string>
@@ -23,8 +29,10 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDcgPq3DEG1caZNXFNvE5pwZC79LNrW9EA</string>
     <string name="google_storage_bucket" translatable="false">appdnd-ee88b.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
     <string name="indietro">INDIETRO</string>
     <string name="info">Info</string>
+    <string name="logout">Logout</string>
     <string name="messaggio_registrati">Benvenuto! Registrati per procedere</string>
     <string name="nome">Nome</string>
     <string name="nome_personaggio">Come si chiama il tuo personaggio</string>
@@ -40,6 +48,7 @@
     <string name="reset">Inserisci la mail per effettuare il reset</string>
     <string name="reset_button">Reset Password</string>
     <string name="scegli">Scegli</string>
+    <string name="supporto">Supporto</string>
     <string name="titolo">Campagne D&amp;D 5e</string>
     <string name="username">Username</string>
     <style name="Theme.Progetto_DD" parent="Theme.MaterialComponents.DayNight.NoActionBar">

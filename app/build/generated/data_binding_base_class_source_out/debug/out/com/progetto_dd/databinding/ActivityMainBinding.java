@@ -4,13 +4,14 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
 import com.progetto_dd.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -18,32 +19,33 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final DrawerLayout rootView;
 
   @NonNull
-  public final ImageView imageView;
+  public final DrawerLayout drawerLayout;
 
   @NonNull
-  public final ImageView imageView2;
+  public final FragmentContainerView navHostFragment;
 
   @NonNull
-  public final TextView textView;
+  public final NavigationView navView;
 
   @NonNull
-  public final TextView textView2;
+  public final MaterialToolbar toolbar;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView imageView,
-      @NonNull ImageView imageView2, @NonNull TextView textView, @NonNull TextView textView2) {
+  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
+      @NonNull FragmentContainerView navHostFragment, @NonNull NavigationView navView,
+      @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
-    this.imageView = imageView;
-    this.imageView2 = imageView2;
-    this.textView = textView;
-    this.textView2 = textView2;
+    this.drawerLayout = drawerLayout;
+    this.navHostFragment = navHostFragment;
+    this.navView = navView;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -68,32 +70,28 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
+      DrawerLayout drawerLayout = (DrawerLayout) rootView;
+
+      id = R.id.nav_host_fragment;
+      FragmentContainerView navHostFragment = ViewBindings.findChildViewById(rootView, id);
+      if (navHostFragment == null) {
         break missingId;
       }
 
-      id = R.id.imageView2;
-      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView2 == null) {
+      id = R.id.nav_view;
+      NavigationView navView = ViewBindings.findChildViewById(rootView, id);
+      if (navView == null) {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
         break missingId;
       }
 
-      id = R.id.textView2;
-      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
-      if (textView2 == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((ConstraintLayout) rootView, imageView, imageView2, textView,
-          textView2);
+      return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, navHostFragment,
+          navView, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

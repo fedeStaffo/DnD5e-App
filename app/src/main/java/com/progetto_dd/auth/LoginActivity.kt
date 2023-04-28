@@ -55,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-/*
+
     override fun onStart() {
         super.onStart()
 
@@ -64,5 +64,5 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-    }*/
+    }
 }

@@ -1365,6 +1365,7 @@ int color browser_actions_bg_grey 0x7f050028
 int color browser_actions_divider_color 0x7f050029
 int color browser_actions_text_color 0x7f05002a
 int color browser_actions_title_color 0x7f05002b
+int color brune_red 0x7f050299
 int color button_material_dark 0x7f05002c
 int color button_material_light 0x7f05002d
 int color call_notification_answer_color 0x7f05002e
@@ -1767,6 +1768,7 @@ int color m3_timepicker_display_text_color 0x7f0501ba
 int color m3_timepicker_secondary_text_button_ripple_color 0x7f0501bb
 int color m3_timepicker_secondary_text_button_text_color 0x7f0501bc
 int color m3_tonal_button_ripple_color_selector 0x7f0501bd
+int color macaroon 0x7f050295
 int color material_blue_grey_800 0x7f0501be
 int color material_blue_grey_900 0x7f0501bf
 int color material_blue_grey_950 0x7f0501c0
@@ -1954,6 +1956,7 @@ int color mtrl_textinput_focused_box_stroke_color 0x7f050275
 int color mtrl_textinput_hovered_box_stroke_color 0x7f050276
 int color notification_action_color_filter 0x7f050277
 int color notification_icon_bg_color 0x7f050278
+int color orange 0x7f050296
 int color primary_dark_material_dark 0x7f050279
 int color primary_dark_material_light 0x7f05027a
 int color primary_material_dark 0x7f05027b
@@ -1971,6 +1974,7 @@ int color secondary_text_default_material_dark 0x7f050286
 int color secondary_text_default_material_light 0x7f050287
 int color secondary_text_disabled_material_dark 0x7f050288
 int color secondary_text_disabled_material_light 0x7f050289
+int color shortbread 0x7f050297
 int color switch_thumb_disabled_material_dark 0x7f05028a
 int color switch_thumb_disabled_material_light 0x7f05028b
 int color switch_thumb_material_dark 0x7f05028c
@@ -1982,6 +1986,7 @@ int color teal_700 0x7f050291
 int color tooltip_background_dark 0x7f050292
 int color tooltip_background_light 0x7f050293
 int color white 0x7f050294
+int color yellow 0x7f050298
 int dimen abc_action_bar_content_inset_material 0x7f060000
 int dimen abc_action_bar_content_inset_with_nav 0x7f060001
 int dimen abc_action_bar_default_height_material 0x7f060002
@@ -2806,9 +2811,11 @@ int drawable design_ic_visibility_off 0x7f070098
 int drawable design_password_eye 0x7f070099
 int drawable design_snackbar_background 0x7f07009a
 int drawable dragon 0x7f07009b
+int drawable drawer_image 0x7f070107
 int drawable forget_password_icon 0x7f07009c
 int drawable googleg_disabled_color_18 0x7f07009d
 int drawable googleg_standard_color_18 0x7f07009e
+int drawable home 0x7f070109
 int drawable ic_arrow_back_black_24 0x7f07009f
 int drawable ic_call_answer 0x7f0700a0
 int drawable ic_call_answer_low 0x7f0700a1
@@ -2832,6 +2839,7 @@ int drawable ic_search_black_24 0x7f0700b2
 int drawable icon 0x7f0700b3
 int drawable knight 0x7f0700b4
 int drawable left 0x7f0700b5
+int drawable logout 0x7f070108
 int drawable m3_appbar_background 0x7f0700b6
 int drawable m3_avd_hide_password 0x7f0700b7
 int drawable m3_avd_show_password 0x7f0700b8
@@ -3091,6 +3099,7 @@ int id dragLeft 0x7f0800ae
 int id dragRight 0x7f0800af
 int id dragStart 0x7f0800b0
 int id dragUp 0x7f0800b1
+int id drawer_layout 0x7f08021e
 int id dropdown_menu 0x7f0800b2
 int id easeIn 0x7f0800b3
 int id easeInOut 0x7f0800b4
@@ -3139,9 +3148,11 @@ int id group_divider 0x7f0800dd
 int id grouping 0x7f0800de
 int id groups 0x7f0800df
 int id header_title 0x7f0800e0
+int id helpFragment 0x7f080217
 int id hideable 0x7f0800e1
 int id home 0x7f0800e2
 int id homeAsUp 0x7f0800e3
+int id homeFragment 0x7f080218
 int id honorRequest 0x7f0800e4
 int id horizontal_only 0x7f0800e5
 int id icon 0x7f0800e6
@@ -3151,8 +3162,6 @@ int id ifRoom 0x7f0800e9
 int id ignore 0x7f0800ea
 int id ignoreRequest 0x7f0800eb
 int id image 0x7f0800ec
-int id imageView 0x7f0800ed
-int id imageView2 0x7f0800ee
 int id immediateStop 0x7f0800ef
 int id included 0x7f0800f0
 int id indeterminate 0x7f0800f1
@@ -3175,8 +3184,10 @@ int id linear 0x7f080101
 int id listMode 0x7f080102
 int id list_item 0x7f080103
 int id locale 0x7f080104
+int id logoutFragment 0x7f08021d
 int id ltr 0x7f080105
 int id m3_side_sheet 0x7f080106
+int id main_graph 0x7f080219
 int id marquee 0x7f080107
 int id masked 0x7f080108
 int id match_constraint 0x7f080109
@@ -3237,7 +3248,9 @@ int id mtrl_picker_title_text 0x7f08013f
 int id mtrl_view_tag_bottom_padding 0x7f080140
 int id multiply 0x7f080141
 int id nav_controller_view_tag 0x7f080142
+int id nav_host_fragment 0x7f08021a
 int id nav_host_fragment_container 0x7f080143
+int id nav_view 0x7f08021f
 int id navigation_bar_item_active_indicator_view 0x7f080144
 int id navigation_bar_item_icon_container 0x7f080145
 int id navigation_bar_item_icon_view 0x7f080146
@@ -3394,8 +3407,6 @@ int id textSpacerNoButtons 0x7f0801db
 int id textSpacerNoTitle 0x7f0801dc
 int id textStart 0x7f0801dd
 int id textTop 0x7f0801de
-int id textView 0x7f0801df
-int id textView2 0x7f0801e0
 int id textView3 0x7f080215
 int id textView7 0x7f0801e1
 int id text_input_end_icon 0x7f0801e2
@@ -3412,6 +3423,7 @@ int id title 0x7f0801ec
 int id titleDividerNoCustom 0x7f0801ed
 int id title_template 0x7f0801ee
 int id toggle 0x7f0801ef
+int id toolbar 0x7f08021b
 int id top 0x7f0801f0
 int id topPanel 0x7f0801f1
 int id touch_outside 0x7f0801f2
@@ -3577,6 +3589,9 @@ int layout design_navigation_menu 0x7f0b002e
 int layout design_navigation_menu_item 0x7f0b002f
 int layout design_text_input_end_icon 0x7f0b0030
 int layout design_text_input_start_icon 0x7f0b0031
+int layout fragment_help 0x7f0b006f
+int layout fragment_home 0x7f0b0070
+int layout fragment_logout 0x7f0b0071
 int layout m3_alert_dialog 0x7f0b0032
 int layout m3_alert_dialog_actions 0x7f0b0033
 int layout m3_alert_dialog_title 0x7f0b0034
@@ -3628,6 +3643,7 @@ int layout mtrl_picker_text_input_date 0x7f0b0061
 int layout mtrl_picker_text_input_date_range 0x7f0b0062
 int layout mtrl_search_bar 0x7f0b0063
 int layout mtrl_search_view 0x7f0b0064
+int layout nav_header 0x7f0b0072
 int layout notification_action 0x7f0b0065
 int layout notification_action_tombstone 0x7f0b0066
 int layout notification_template_custom_big 0x7f0b0067
@@ -3638,8 +3654,11 @@ int layout select_dialog_item_material 0x7f0b006b
 int layout select_dialog_multichoice_material 0x7f0b006c
 int layout select_dialog_singlechoice_material 0x7f0b006d
 int layout support_simple_spinner_dropdown_item 0x7f0b006e
+int menu menu_drawer 0x7f140001
+int menu menu_toolbar 0x7f140000
 int mipmap ic_launcher 0x7f0d0000
 int mipmap ic_launcher_round 0x7f0d0001
+int navigation main_graph 0x7f150000
 int plurals mtrl_badge_content_description 0x7f0e0000
 int raw firebase_common_keep 0x7f0f0000
 int string abc_action_bar_home_description 0x7f100000
@@ -3671,6 +3690,7 @@ int string abc_shareactionprovider_share_with_application 0x7f100019
 int string abc_toolbar_collapse_description 0x7f10001a
 int string accedi 0x7f10001b
 int string accedi_o_registrati 0x7f1000db
+int string aiuto 0x7f1000dc
 int string androidx_startup 0x7f10001c
 int string app_name 0x7f10001d
 int string appbar_scrolling_view_behavior 0x7f10001e
@@ -3732,10 +3752,12 @@ int string google_crash_reporting_api_key 0x7f100055
 int string google_storage_bucket 0x7f100056
 int string hello_blank_fragment 0x7f100057
 int string hide_bottom_view_on_scroll_behavior 0x7f100058
+int string home 0x7f1000dd
 int string icon_content_description 0x7f100059
 int string indietro 0x7f10005a
 int string info 0x7f10005b
 int string item_view_role_description 0x7f10005c
+int string logout 0x7f1000de
 int string m3_sys_motion_easing_emphasized 0x7f10005d
 int string m3_sys_motion_easing_emphasized_accelerate 0x7f10005e
 int string m3_sys_motion_easing_emphasized_decelerate 0x7f10005f
@@ -3860,6 +3882,7 @@ int string searchview_navigation_content_description 0x7f1000d5
 int string side_sheet_accessibility_pane_title 0x7f1000d6
 int string side_sheet_behavior 0x7f1000d7
 int string status_bar_notification_info_overflow 0x7f1000d8
+int string supporto 0x7f1000df
 int string titolo 0x7f1000d9
 int string username 0x7f1000da
 int style AlertDialog_AppCompat 0x7f110000
