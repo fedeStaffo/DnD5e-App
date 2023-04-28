@@ -7,4 +7,23 @@
     <string name="otterai">Otterai le seguenti competenze:</string>
     <string name="personaggi">Personaggi</string>
     <string name="campagne">Campagne</string>
+    <string name="titolo">Campagne D&amp;D 5e</string>
+    <string name="accedi">Accedi</string>
+    <string name="benvenuto">Benvenuto! Accedi o registrati per procedere.</string>
+    <string name="non_registrato">Non sei registrato? Clicca qui</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="registrati">Registrati</string>
+    <string name="messaggio_registrati">Benvenuto! Registrati per procedere</string>
+    <string name="registrato">Già registrato? Accedi</string>
+    <string name="username">Username</string>
+    <string name="conferma_passw">Conferma password</string>
+    <string name="nome">Nome</string>
+    <string name="cognome">Cognome</string>
+    <string name="pass_dimenticata">Password dimenticata?</string>
+    <string name="reset">Inserisci la mail per effettuare il reset</string>
+    <string name="reset_button">Reset Password</string>
+    <string name="info">Info</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

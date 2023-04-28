@@ -10,6 +10,7 @@
     <string name="accedi">Accedi</string>
     <string name="app_name">Progetto_D&amp;D</string>
     <string name="avanti">AVANTI</string>
+    <string name="benvenuto">Benvenuto! Accedi o registrati per procedere.</string>
     <string name="campagne">Campagne</string>
     <string name="cognome">Cognome</string>
     <string name="conferma_passw">Conferma password</string>
@@ -20,22 +21,26 @@
     <string name="google_app_id" translatable="false">1:839056180853:android:60706d92b4d30d2d941a3c</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDcgPq3DEG1caZNXFNvE5pwZC79LNrW9EA</string>
     <string name="google_storage_bucket" translatable="false">appdnd-ee88b.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="indietro">INDIETRO</string>
+    <string name="info">Info</string>
+    <string name="messaggio_registrati">Benvenuto! Registrati per procedere</string>
     <string name="nome">Nome</string>
     <string name="nome_personaggio">Come si chiama il tuo personaggio</string>
+    <string name="non_registrato">Non sei registrato? Clicca qui</string>
     <string name="otterai">Otterai le seguenti competenze:</string>
     <string name="pass_dimenticata">Password dimenticata?</string>
     <string name="password">Password</string>
     <string name="personaggi">Personaggi</string>
     <string name="project_id" translatable="false">appdnd-ee88b</string>
     <string name="registrati">Registrati</string>
+    <string name="registrato">Già registrato? Accedi</string>
     <string name="reset">Inserisci la mail per effettuare il reset</string>
     <string name="reset_button">Reset Password</string>
     <string name="scegli">Scegli</string>
     <string name="titolo">Campagne D&amp;D 5e</string>
     <string name="username">Username</string>
-    <string name="welcome">Benvenuto! Accedi o registrati per procedere.</string>
-    <style name="Theme.Progetto_DD" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Progetto_DD" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
