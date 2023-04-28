@@ -26,6 +26,12 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Definisce il comportamento del bottone "Password dimenticata"
+        binding.passDimenticata.setOnClickListener {
+            val intent = Intent(this, ResetPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
         // Definisce il comportamento del bottone Accedi
         binding.button.setOnClickListener {
             val email = binding.emailEt.text.toString()
@@ -49,13 +55,14 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-
+/*
     override fun onStart() {
         super.onStart()
 
+        // Evita di chiedere ogni volta le credenziali all'utente
         if(firebaseAuth.currentUser != null){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-    }
+    }*/
 }

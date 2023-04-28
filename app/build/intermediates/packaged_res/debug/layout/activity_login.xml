@@ -11,11 +11,11 @@
         android:id="@+id/benvenuto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="15dp"
         android:padding="24dp"
         android:text="@string/benvenuto"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,5 +100,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/no_reg"
         app:layout_constraintVertical_bias="0.344" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accedi_o_registrati"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/benvenuto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,7 @@
 [
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\activity_registrazione.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\activity_registrazione.xml"
+        "merged": "com.progetto_dd.app-mergeDebugResources-49:/layout/activity_login.xml",
+        "source": "com.progetto_dd.app-main-52:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\activity_main.xml",
@@ -12,19 +12,15 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\activity_reset_password.xml"
     },
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-49:/layout/activity_main.xml",
-        "source": "com.progetto_dd.app-main-52:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\activity_register.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\activity_login.xml"
+        "merged": "com.progetto_dd.app-mergeDebugResources-49:/layout/activity_reset_password.xml",
+        "source": "com.progetto_dd.app-main-52:/layout/activity_reset_password.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\fragment_info.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\fragment_info.xml"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\activity_login.xml"
     }
 ]

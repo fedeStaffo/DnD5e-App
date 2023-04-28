@@ -5,14 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ProgressBar;
+import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.textfield.TextInputEditText;
 import com.progetto_dd.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -20,46 +20,42 @@ import java.lang.String;
 
 public final class ActivityResetPasswordBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
-  public final Button buttonReset;
+  public final TextInputEditText emailPerReset;
 
   @NonNull
-  public final EditText emailReset;
+  public final ImageView forgetPasswordBackBtn;
 
   @NonNull
-  public final ProgressBar progressBar;
+  public final TextView forgetPasswordDescription;
 
   @NonNull
-  public final ConstraintLayout reset;
+  public final ImageView forgetPasswordIcon;
 
   @NonNull
-  public final TextView textView8;
+  public final TextView forgetPasswordTitle;
 
   @NonNull
-  public final TextView textView9;
+  public final Button resetButton;
 
-  @NonNull
-  public final TextView titolo;
-
-  private ActivityResetPasswordBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button buttonReset, @NonNull EditText emailReset, @NonNull ProgressBar progressBar,
-      @NonNull ConstraintLayout reset, @NonNull TextView textView8, @NonNull TextView textView9,
-      @NonNull TextView titolo) {
+  private ActivityResetPasswordBinding(@NonNull ScrollView rootView,
+      @NonNull TextInputEditText emailPerReset, @NonNull ImageView forgetPasswordBackBtn,
+      @NonNull TextView forgetPasswordDescription, @NonNull ImageView forgetPasswordIcon,
+      @NonNull TextView forgetPasswordTitle, @NonNull Button resetButton) {
     this.rootView = rootView;
-    this.buttonReset = buttonReset;
-    this.emailReset = emailReset;
-    this.progressBar = progressBar;
-    this.reset = reset;
-    this.textView8 = textView8;
-    this.textView9 = textView9;
-    this.titolo = titolo;
+    this.emailPerReset = emailPerReset;
+    this.forgetPasswordBackBtn = forgetPasswordBackBtn;
+    this.forgetPasswordDescription = forgetPasswordDescription;
+    this.forgetPasswordIcon = forgetPasswordIcon;
+    this.forgetPasswordTitle = forgetPasswordTitle;
+    this.resetButton = resetButton;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -84,46 +80,45 @@ public final class ActivityResetPasswordBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.buttonReset;
-      Button buttonReset = ViewBindings.findChildViewById(rootView, id);
-      if (buttonReset == null) {
+      id = R.id.email_per_reset;
+      TextInputEditText emailPerReset = ViewBindings.findChildViewById(rootView, id);
+      if (emailPerReset == null) {
         break missingId;
       }
 
-      id = R.id.email_reset;
-      EditText emailReset = ViewBindings.findChildViewById(rootView, id);
-      if (emailReset == null) {
+      id = R.id.forget_password_back_btn;
+      ImageView forgetPasswordBackBtn = ViewBindings.findChildViewById(rootView, id);
+      if (forgetPasswordBackBtn == null) {
         break missingId;
       }
 
-      id = R.id.progress_bar;
-      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
-      if (progressBar == null) {
+      id = R.id.forget_password_description;
+      TextView forgetPasswordDescription = ViewBindings.findChildViewById(rootView, id);
+      if (forgetPasswordDescription == null) {
         break missingId;
       }
 
-      ConstraintLayout reset = (ConstraintLayout) rootView;
-
-      id = R.id.textView8;
-      TextView textView8 = ViewBindings.findChildViewById(rootView, id);
-      if (textView8 == null) {
+      id = R.id.forget_password_icon;
+      ImageView forgetPasswordIcon = ViewBindings.findChildViewById(rootView, id);
+      if (forgetPasswordIcon == null) {
         break missingId;
       }
 
-      id = R.id.textView9;
-      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
-      if (textView9 == null) {
+      id = R.id.forget_password_title;
+      TextView forgetPasswordTitle = ViewBindings.findChildViewById(rootView, id);
+      if (forgetPasswordTitle == null) {
         break missingId;
       }
 
-      id = R.id.titolo;
-      TextView titolo = ViewBindings.findChildViewById(rootView, id);
-      if (titolo == null) {
+      id = R.id.reset_button;
+      Button resetButton = ViewBindings.findChildViewById(rootView, id);
+      if (resetButton == null) {
         break missingId;
       }
 
-      return new ActivityResetPasswordBinding((ConstraintLayout) rootView, buttonReset, emailReset,
-          progressBar, reset, textView8, textView9, titolo);
+      return new ActivityResetPasswordBinding((ScrollView) rootView, emailPerReset,
+          forgetPasswordBackBtn, forgetPasswordDescription, forgetPasswordIcon, forgetPasswordTitle,
+          resetButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

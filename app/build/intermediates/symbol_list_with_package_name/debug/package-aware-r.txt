@@ -2807,6 +2807,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dragon
+drawable forget_password_icon
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
@@ -2831,6 +2832,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable icon
 drawable knight
+drawable left
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -2842,6 +2844,7 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable mail
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2903,12 +2906,14 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable open_book
+drawable password_updated_icon
 drawable sfondo_fumetto
 drawable sfondo_rotondo
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable treasure_map
+drawable update_new_password_icon
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3018,7 +3023,6 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id button
 id buttonPanel
-id buttonReset
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3097,7 +3101,7 @@ id edit_query
 id elastic
 id emailEt
 id emailLayout
-id email_reset
+id email_per_reset
 id embed
 id end
 id endToStart
@@ -3120,6 +3124,10 @@ id fixed
 id flip
 id floating
 id forever
+id forget_password_back_btn
+id forget_password_description
+id forget_password_icon
+id forget_password_title
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3274,14 +3282,13 @@ id pin
 id position
 id postLayout
 id pressed
-id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
 id rectangles
 id registrato
-id reset
+id reset_button
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3390,9 +3397,8 @@ id textStart
 id textTop
 id textView
 id textView2
+id textView3
 id textView7
-id textView8
-id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3406,7 +3412,6 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
-id titolo
 id toggle
 id top
 id topPanel
@@ -3666,6 +3671,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string accedi
+string accedi_o_registrati
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3834,6 +3840,7 @@ string nome_personaggio
 string non_registrato
 string otterai
 string pass_dimenticata
+string pass_dimenticata_caps
 string password
 string password_toggle_content_description
 string path_password_eye
