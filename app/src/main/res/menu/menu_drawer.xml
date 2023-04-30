@@ -7,6 +7,10 @@
             android:icon="@drawable/home"
             android:title="@string/home"/>
         <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/user"
+            android:title="@string/profilo"/>
+        <item
             android:id="@+id/logoutFragment"
             android:icon="@drawable/logout"
             android:title="@string/logout"/>
@@ -22,7 +26,7 @@
                 <item
                     android:id="@+id/infoFragment"
                     android:icon="@android:drawable/ic_dialog_info"
-                    android:title="@string/info" />
+                    android:title="@string/info_contatti" />
             </group>
         </menu>
     </item>

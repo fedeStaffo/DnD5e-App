@@ -23,6 +23,11 @@
     <fragment
         android:id="@+id/infoFragment"
         android:name="com.progetto_dd.view.InfoFragment"
-        android:label="Info"
+        android:label="Info e Contatti"
         tools:layout="@layout/fragment_info"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.progetto_dd.view.ProfileFragment"
+        android:label="Profilo Personale"
+        tools:layout="@layout/fragment_profile"/>
 </navigation>
