@@ -4,6 +4,10 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\left.png"
     },
     {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\layout_fragment_info.xml.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\fragment_info.xml"
+    },
+    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\layout_fragment_logout.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\fragment_logout.xml"
     },
@@ -20,16 +24,16 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\activity_reset_password.xml"
     },
     {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_drawer_image.jpg.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\drawer_image.jpg"
+    },
+    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_password_updated_icon.png.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\password_updated_icon.png"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_drawer_image.jpg.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\drawer_image.jpg"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_logout.png.flat",
@@ -48,12 +52,12 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\icon.png"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_knight.png.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\knight.png"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_knight.png.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\knight.png"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -100,12 +104,12 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_mail.png.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\mail.png"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_mail.png.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\drawable\\mail.png"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-50:\\drawable_treasure_map.png.flat",

@@ -46,6 +46,7 @@ id forget_password_title
 id helpFragment
 id homeFragment
 id imageView
+id infoFragment
 id logoutFragment
 id logout_btn
 id main_graph
@@ -66,6 +67,7 @@ layout activity_register
 layout activity_reset_password
 layout fragment_help
 layout fragment_home
+layout fragment_info
 layout fragment_logout
 layout nav_header
 menu menu_drawer

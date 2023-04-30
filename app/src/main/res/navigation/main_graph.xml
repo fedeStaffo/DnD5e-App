@@ -20,4 +20,9 @@
         android:name="com.progetto_dd.auth.LogoutFragment"
         android:label="Logout"
         tools:layout="@layout/fragment_logout"/>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.progetto_dd.view.InfoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_info"/>
 </navigation>

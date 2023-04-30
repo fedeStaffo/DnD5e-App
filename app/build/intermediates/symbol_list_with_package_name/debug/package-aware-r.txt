@@ -3169,6 +3169,7 @@ id immediateStop
 id included
 id indeterminate
 id info
+id infoFragment
 id invisible
 id inward
 id italic
@@ -3595,6 +3596,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_help
 layout fragment_home
+layout fragment_info
 layout fragment_logout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

@@ -6,6 +6,12 @@
         android:id="@+id/helpFragment"
         android:icon="@android:drawable/ic_menu_help"
         android:title="@string/aiuto"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/infoFragment"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="@string/info"
         app:showAsAction="always"/>
 
 
