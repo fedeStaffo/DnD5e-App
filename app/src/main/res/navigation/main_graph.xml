@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_help" />
     <fragment
         android:id="@+id/logoutFragment"
-        android:name="com.progetto_dd.view.LogoutFragment"
+        android:name="com.progetto_dd.auth.LogoutFragment"
         android:label="Logout"
         tools:layout="@layout/fragment_logout"/>
 </navigation>

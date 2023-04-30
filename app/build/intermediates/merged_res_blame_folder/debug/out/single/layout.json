@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-49:/layout/nav_header.xml",
-        "source": "com.progetto_dd.app-main-52:/layout/nav_header.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\fragment_home.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\fragment_home.xml"
     },
@@ -20,12 +16,16 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\fragment_logout.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\activity_reset_password.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\activity_reset_password.xml"
+        "merged": "com.progetto_dd.app-mergeDebugResources-49:/layout/fragment_logout.xml",
+        "source": "com.progetto_dd.app-main-52:/layout/fragment_logout.xml"
     },
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-49:/layout/activity_main.xml",
-        "source": "com.progetto_dd.app-main-52:/layout/activity_main.xml"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\nav_header.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\activity_reset_password.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-52:\\layout\\activity_reset_password.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-49:\\layout\\activity_register.xml",

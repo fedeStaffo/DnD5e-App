@@ -30,6 +30,7 @@
     <string name="home">Home</string>
     <string name="supporto">Supporto</string>
     <string name="pass_dimenticata_caps">PASSWORD \nDIMENTICATA</string>
+    <string name="logout_msg">Sei sicuro di voler effettuare il logout? Dovrai reinserire le tue credenziali per utilizzare di nuovo l'app</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

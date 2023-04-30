@@ -23,6 +23,7 @@ drawable icon
 drawable knight
 drawable left
 drawable logout
+drawable logout_cloud
 drawable mail
 drawable open_book
 drawable password_updated_icon
@@ -44,7 +45,9 @@ id forget_password_icon
 id forget_password_title
 id helpFragment
 id homeFragment
+id imageView
 id logoutFragment
+id logout_btn
 id main_graph
 id nav_host_fragment
 id nav_view
@@ -91,6 +94,7 @@ string home
 string indietro
 string info
 string logout
+string logout_msg
 string messaggio_registrati
 string nome
 string nome_personaggio

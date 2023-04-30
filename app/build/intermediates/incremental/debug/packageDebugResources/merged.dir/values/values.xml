@@ -33,6 +33,7 @@
     <string name="indietro">INDIETRO</string>
     <string name="info">Info</string>
     <string name="logout">Logout</string>
+    <string name="logout_msg">Clicca qui per effettuare il logout</string>
     <string name="messaggio_registrati">Benvenuto! Registrati per procedere</string>
     <string name="nome">Nome</string>
     <string name="nome_personaggio">Come si chiama il tuo personaggio</string>
