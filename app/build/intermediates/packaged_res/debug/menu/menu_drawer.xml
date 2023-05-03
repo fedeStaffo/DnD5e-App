@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/home"
+            android:title="@string/home"/>
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/user"
+            android:title="@string/profilo"/>
+        <item
+            android:id="@+id/logoutFragment"
+            android:icon="@drawable/logout"
+            android:title="@string/logout"/>
+    </group>
+
+    <item android:title="@string/supporto">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/helpFragment"
+                    android:icon="@android:drawable/ic_menu_help"
+                    android:title="@string/aiuto" />
+                <item
+                    android:id="@+id/infoFragment"
+                    android:icon="@android:drawable/ic_dialog_info"
+                    android:title="@string/info_contatti" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

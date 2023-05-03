@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/char_graph"
+    app:startDestination="@id/homeCharacterFragment">
+
+    <fragment
+        android:id="@+id/homeCharacterFragment"
+        android:name="com.progetto_dd.view.characters.HomeCharacterFragment"
+        android:label="@string/personaggi"
+        tools:layout="@layout/fragment_home_character" />
+
+</navigation>
