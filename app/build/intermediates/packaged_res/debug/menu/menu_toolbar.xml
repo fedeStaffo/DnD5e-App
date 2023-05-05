@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/helpFragment"
-        android:icon="@drawable/help"
+        android:icon="@android:drawable/ic_menu_help"
         android:title="@string/aiuto"
         app:showAsAction="ifRoom"/>
 
