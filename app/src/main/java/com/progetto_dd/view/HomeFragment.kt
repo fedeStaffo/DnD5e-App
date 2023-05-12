@@ -29,21 +29,21 @@ class HomeFragment : Fragment() {
             // Crea un Intent per avviare la LoginActivity
             val intent = Intent(activity, CharacterActivity::class.java)
 
-            // Chiama il metodo startActivity() per avviare la LoginActivity
+            // Chiama il metodo startActivity() per avviare la CharacterActivity
             startActivity(intent)
 
             // Chiude il Fragment
             activity?.finish()
         }
 
-        // Definisce il comportamento dell'immagine del cavaliere che
+        // Definisce il comportamento dell'immagine della mappa che
         // porta alla sezione dei personaggi
         binding.imageMap.setOnClickListener {
 
             // Crea un Intent per avviare la LoginActivity
             val intent = Intent(activity, CampaignsActivity::class.java)
 
-            // Chiama il metodo startActivity() per avviare la LoginActivity
+            // Chiama il metodo startActivity() per avviare la CampaignsActivity
             startActivity(intent)
 
             // Chiude il Fragment
