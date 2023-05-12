@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Cose in comune -->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/visualizzaCampagnaFragment"
+            android:icon="@drawable/casetta"
+            android:title="Campagna" />
+
+
+        <item
+            android:id="@+id/dadoFragment"
+            android:icon="@drawable/dado"
+            android:title="Dado" />
+
+        <item
+            android:id="@+id/visualizzaNpcFragment"
+            android:icon="@drawable/npc_goblin"
+            android:title="Npc" />
+
+        <item
+            android:id="@+id/visualizzasessioniFragment"
+            android:icon="@drawable/libro_aperto"
+            android:title="Sessioni" />
+
+    </group>
+
+    <item android:title="Master">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/inventarioFragment"
+                    android:icon="@drawable/zaino_scolastico"
+                    android:title="Inventario" />
+
+                <item
+                    android:id="@+id/effettiFragment"
+                    android:icon="@drawable/effetti"
+                    android:title="Effetti" />
+
+                <item
+                    android:id="@+id/dannicuraFragment"
+                    android:icon="@drawable/borsa_di_cura"
+                    android:title="Cura e danni" />
+
+                <item
+                    android:id="@+id/creaNpcFragment"
+                    android:icon="@drawable/fabbro"
+                    android:title="Crea Npc" />
+
+                <item
+                    android:id="@+id/creaSessioniFragment"
+                    android:icon="@drawable/penna_antica"
+                    android:title="Crea sessioni" />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Gestione campagna">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/resetPasswordFragment"
+                    android:icon="@drawable/password"
+                    android:title="Reset password" />
+
+                <item
+                    android:id="@+id/eliminaGiocatoriFragment"
+                    android:icon="@drawable/john_wick"
+                    android:title="Elimina giocatori" />
+
+                <item
+                    android:id="@+id/eliminaCampagnaFragment"
+                    android:icon="@drawable/bombetta"
+                    android:title="Elimina campagna" />
+
+
+            </group>
+        </menu>
+    </item>
+
+
+
+</menu>

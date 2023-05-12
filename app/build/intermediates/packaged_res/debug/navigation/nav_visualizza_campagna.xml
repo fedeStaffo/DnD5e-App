@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_visualizza_campagna"
+    app:startDestination="@id/visualizzaCampagnaFragment">
+
+    <fragment
+        android:id="@+id/visualizzaCampagnaFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.visualizzaCampagnaFragment"
+        android:label="Campagna"
+        tools:layout="@layout/fragment_visualizza_campagna" />
+    <fragment
+        android:id="@+id/visualizzaNpcFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.visualizzaNpcFragment"
+        android:label="Npc"
+        tools:layout="@layout/fragment_visualizza_npc" />
+    <fragment
+        android:id="@+id/inventarioFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.inventarioFragment"
+        android:label="Inventario"
+        tools:layout="@layout/fragment_inventario" />
+    <fragment
+        android:id="@+id/effettiFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.effettiFragment"
+        android:label="fragment_effetti"
+        tools:layout="@layout/fragment_effetti" />
+    <fragment
+        android:id="@+id/dannicuraFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.dannicuraFragment"
+        android:label="fragment_danni_cura"
+        tools:layout="@layout/fragment_dannicura" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.resetPasswordFragment"
+        android:label="fragment_resetpassword"
+        tools:layout="@layout/fragment_reset_password" />
+    <fragment
+        android:id="@+id/eliminaGiocatoriFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.eliminaGiocatoriFragment"
+        android:label="fragment_eliminagiocatori"
+        tools:layout="@layout/fragment_elimina_giocatori" />
+    <fragment
+        android:id="@+id/eliminaCampagnaFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.eliminaCampagnaFragment"
+        android:label="fragment_eliminacampagna"
+        tools:layout="@layout/fragment_elimina_campagna" />
+    <fragment
+        android:id="@+id/dadoFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.DadoFragment"
+        android:label="fragment_dado"
+        tools:layout="@layout/fragment_dado" />
+    <fragment
+        android:id="@+id/visualizzasessioniFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.visualizzaSessioniFragment"
+        android:label="fragment_visualizzasessioni"
+        tools:layout="@layout/fragment_visualizza_sessioni" />
+    <fragment
+        android:id="@+id/creaNpcFragment"
+        android:name="com.progetto_dd.view.drawer_campaigns.creaNpcFragment"
+        android:label="fragment_crea_npc"
+        tools:layout="@layout/fragment_crea_npc" />
+    <fragment
+        android:id="@+id/creaSessioniFragment"
+        android:name="com.progetto_dd.view.drawer_campaigns.creaSessioniFragment"
+        android:label="fragment_crea_sessioni"
+        tools:layout="@layout/fragment_crea_sessioni" />
+
+</navigation>

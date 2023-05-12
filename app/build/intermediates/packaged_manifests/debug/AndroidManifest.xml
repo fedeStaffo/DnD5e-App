@@ -33,6 +33,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Progetto_DD" >
         <activity
+            android:name="com.progetto_dd.MainDrawerCampagnaActivity"
+            android:exported="false" />
+        <activity
             android:name="com.progetto_dd.view.campaigns.CampaignsActivity"
             android:exported="false" />
         <activity

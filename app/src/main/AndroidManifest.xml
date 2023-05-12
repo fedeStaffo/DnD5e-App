@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Progetto_DD"
         tools:targetApi="31">
         <activity
+            android:name=".MainDrawerCampagnaActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.campaigns.CampaignsActivity"
             android:exported="false" />
         <activity
