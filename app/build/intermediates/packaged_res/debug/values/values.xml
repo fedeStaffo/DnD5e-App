@@ -42,6 +42,7 @@ disinvoltura in certi tipi di prove di Carisma.
     </string>
     <string name="carisma_title">CARISMA</string>
     <string name="chierico">Chierico</string>
+    <string name="classe_personaggio_lista">Classe: </string>
     <string name="cognome">Cognome</string>
     <string name="competenze">Competenze</string>
     <string name="conferma_passw">Conferma password</string>
@@ -115,6 +116,7 @@ superiore in certi tipi di prove di intelligenza.
     <string name="nome">Nome</string>
     <string name="nome_campagna">Nome Campagna</string>
     <string name="nome_personaggio">Come si chiama il tuo personaggio?</string>
+    <string name="nome_personaggio_lista">Nome: </string>
     <string name="non_registrato">Non sei registrato? Clicca qui</string>
     <string name="otterai">Otterai le seguenti competenze:</string>
     <string name="paladino">Paladino</string>
@@ -126,6 +128,7 @@ superiore in certi tipi di prove di intelligenza.
     <string name="profilo">Profilo</string>
     <string name="project_id" translatable="false">appdnd-ee88b</string>
     <string name="razza">Razza</string>
+    <string name="razza_personaggio_lista">Razza: </string>
     <string name="registrati">Registrati</string>
     <string name="registrato">Già registrato? Accedi</string>
     <string name="reset">Inserisci la mail per effettuare il reset</string>

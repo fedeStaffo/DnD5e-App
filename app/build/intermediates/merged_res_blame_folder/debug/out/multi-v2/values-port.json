@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.progetto_dd.app-mergeDebugResources-49:/values-port/values-port.xml",
+            "outputFile": "com.progetto_dd.app-mergeDebugResources-53:/values-port/values-port.xml",
             "map": [
                 {
                     "source": "C:\\Users\\fede0\\.gradle\\caches\\transforms-3\\ed3819af41362406a8a7ff1e1744c148\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",

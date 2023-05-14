@@ -52,9 +52,9 @@ drawable tower
 drawable treasure_map
 drawable update_new_password_icon
 drawable user
+drawable xbutton
 drawable zaino_scolastico
 id addCampaignFragment
-id add_character
 id backgroundEt
 id benvenuto
 id btn_avanti
@@ -76,6 +76,7 @@ id buttonCrea
 id buttonPartecipa
 id camp_bottombar
 id camp_graph
+id cancel_button
 id char_graph
 id confirmPassEt
 id confirmPasswordLayout
@@ -95,6 +96,7 @@ id eliminaGiocatoriFragment
 id emailEt
 id emailLayout
 id email_per_reset
+id fab
 id forget_password_back_btn
 id forget_password_description
 id forget_password_icon
@@ -120,6 +122,9 @@ id instructionTextView
 id inventarioFragment
 id joinCampaignFragment
 id legamiEt
+id listap_classe
+id listap_nome
+id listap_razza
 id logoutFragment
 id logout_btn
 id mail_profilo
@@ -155,6 +160,7 @@ id razza_saggezza
 id registrato
 id resetPasswordFragment
 id reset_button
+id reyclerViewPers
 id scegli_bardo
 id scegli_chierico
 id scegli_elfo
@@ -265,6 +271,7 @@ layout fragment_roll
 layout fragment_visualizza_campagna
 layout fragment_visualizza_npc
 layout fragment_visualizza_sessioni
+layout item_personaggio
 layout nav_header
 layout nav_immagine_campagna
 menu campaigns_bottombar
@@ -294,6 +301,7 @@ string campagne
 string carisma
 string carisma_title
 string chierico
+string classe_personaggio_lista
 string cognome
 string competenze
 string conferma_passw
@@ -343,6 +351,7 @@ string nano_delle_montagne
 string nome
 string nome_campagna
 string nome_personaggio
+string nome_personaggio_lista
 string non_registrato
 string otterai
 string paladino
@@ -354,6 +363,7 @@ string personaggi
 string profilo
 string project_id
 string razza
+string razza_personaggio_lista
 string registrati
 string registrato
 string reset

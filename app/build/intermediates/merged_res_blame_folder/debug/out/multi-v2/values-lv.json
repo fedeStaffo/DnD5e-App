@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.progetto_dd.app-mergeDebugResources-49:/values-lv/values-lv.xml",
+            "outputFile": "com.progetto_dd.app-mergeDebugResources-53:/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "C:\\Users\\fede0\\.gradle\\caches\\transforms-3\\4382424505f2137232b88131aa1a266f\\transformed\\core-1.10.0\\res\\values-lv\\values-lv.xml",

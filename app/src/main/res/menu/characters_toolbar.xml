@@ -12,10 +12,4 @@
         android:title="@string/aiuto"
         app:showAsAction="ifRoom"
         />
-    <item
-        android:id="@+id/add_character"
-        android:icon="@drawable/add_user"
-        android:title="@string/aggiungi_personaggio"
-        app:showAsAction="always"
-        />
 </menu>
