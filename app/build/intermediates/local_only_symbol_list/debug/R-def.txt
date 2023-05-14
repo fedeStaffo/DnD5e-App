@@ -12,6 +12,7 @@ color teal_200
 color teal_700
 color white
 color yellow
+dimen text_margin
 drawable add_user
 drawable bombetta
 drawable borsa_di_cura
@@ -54,10 +55,15 @@ drawable update_new_password_icon
 drawable user
 drawable xbutton
 drawable zaino_scolastico
+id action_homeCharacterFragment_to_nameCharacterFragment
+id action_nameCharacterFragment_to_raceFragment
+id action_raceFragment_to_raceInfoFragment
+id action_raceFragment_to_subRaceFragment
 id addCampaignFragment
 id backgroundEt
 id benvenuto
 id btn_avanti
+id btn_avanti_crea_pers
 id btn_indietro
 id btn_meno_carisma
 id btn_meno_costituzione
@@ -129,6 +135,7 @@ id logoutFragment
 id logout_btn
 id mail_profilo
 id main_graph
+id nameCharacterFragment
 id nameEt
 id nameLayout
 id nav_host_fragment
@@ -151,6 +158,9 @@ id pass_dimenticata
 id passwordLayout
 id profileFragment
 id profile_image
+id raceFragment
+id raceInfoFragment
+id race_info_text
 id razza
 id razza_carisma
 id razza_costituzione
@@ -170,6 +180,7 @@ id scegli_mago
 id scegli_nano
 id scegli_paladino
 id scegli_umano
+id subRaceFragment
 id textView
 id textView10
 id textView11
@@ -266,8 +277,10 @@ layout fragment_main_activity_drawer
 layout fragment_name_character
 layout fragment_profile
 layout fragment_race
+layout fragment_race_info
 layout fragment_reset_password
 layout fragment_roll
+layout fragment_sub_race
 layout fragment_visualizza_campagna
 layout fragment_visualizza_npc
 layout fragment_visualizza_sessioni
@@ -308,6 +321,7 @@ string conferma_passw
 string costituzione
 string costituzione_title
 string crea
+string crea_personaggio
 string dado
 string default_web_client_id
 string descrizione
@@ -339,6 +353,7 @@ string inserisci_nome_e_password
 string intelligenza
 string intelligenza_title
 string ladro
+string large_text
 string legami
 string linguaggi_2
 string logout

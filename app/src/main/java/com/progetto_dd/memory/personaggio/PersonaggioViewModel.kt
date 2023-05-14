@@ -9,10 +9,35 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class PersonaggioViewModel : ViewModel() {
 
+    // Riferimenti alle collezioni nel database
     private val personaggiRef = FirebaseFirestore.getInstance().collection("personaggi")
+    private val razzeRef = FirebaseFirestore.getInstance().collection("razze")
+
+    // Riferimento all'utente loggato
     private val currentUser = FirebaseAuth.getInstance().currentUser
 
+    // Variabile per la stringa inserita nella TextInputEditText del NameCharacterFragment
+    private val _nomePersonaggio = MutableLiveData<String>()
+    val nomePersonaggio: LiveData<String>
+        get() = _nomePersonaggio
+
+    // Funzione per salvare la stringa inserita nella TextInputEditText
+    fun setNomePersonaggio(nome: String) {
+        _nomePersonaggio.value = nome
+    }
+
+    // Variabile per la razza
+    private val _razzaPersonaggio = MutableLiveData<String>()
+    val razzaPersonaggio: LiveData<String>
+        get() = _razzaPersonaggio
+
+    // Funzione per salvare la razza
+    fun setRazzaPersonaggio(razza: String) {
+        _razzaPersonaggio.value = razza
+    }
+
     // Funzione che restituisce un oggetto LiveData contenente una lista di Personaggi
+    // da usare per la recycler view dove vengono visualizzati tutti i personaggi di un utente
     fun getPersonaggi(): LiveData<List<Personaggio>> {
 
         // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
@@ -44,7 +69,38 @@ class PersonaggioViewModel : ViewModel() {
         return mutableLiveData
     }
 
+    fun getInfoRazza(razza: String): MutableLiveData<String?> {
+
+        // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
+        val mutableLiveData = MutableLiveData<String?>()
+
+        // Query per leggere la razza dalla collezione "razze" di Firestore
+        val razzaQuery = razzeRef.document(razza)
+
+        razzaQuery.addSnapshotListener { snapshot, e ->
+            // Se si verifica un errore, lo stampa nel log e ritorna
+            if (e != null) {
+                Log.w(TAG_RACE, "Listen failed.", e)
+                return@addSnapshotListener
+            }
+
+            // Se lo snapshot non è nullo, estrae il campo "info" e lo aggiorna nell'oggetto MutableLiveData
+            if (snapshot != null && snapshot.exists()) {
+                val info = snapshot.getString("info")
+                mutableLiveData.postValue(info)
+            } else {
+                // Se lo snapshot è nullo o non esiste, lo stampa nel log
+                Log.d(TAG_RACE, "Current data: null")
+            }
+        }
+
+        // Restituisce l'oggetto MutableLiveData come oggetto LiveData
+        return mutableLiveData
+    }
+
+
     companion object {
         private const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"
+        private const val TAG_RACE = "com.progetto_dd.view.characters.RaceFragment"
     }
 }

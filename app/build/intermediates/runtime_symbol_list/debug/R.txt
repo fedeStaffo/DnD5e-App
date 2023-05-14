@@ -2692,6 +2692,7 @@ int dimen notification_subtext_size 0x7f0602b9
 int dimen notification_top_pad 0x7f0602ba
 int dimen notification_top_pad_large_text 0x7f0602bb
 int dimen sliding_pane_detail_pane_width 0x7f0602bc
+int dimen text_margin 0x7f0602c5
 int dimen tooltip_corner_radius 0x7f0602bd
 int dimen tooltip_horizontal_padding 0x7f0602be
 int dimen tooltip_margin 0x7f0602bf
@@ -3010,12 +3011,16 @@ int id action_bar_title 0x7f080039
 int id action_container 0x7f08003a
 int id action_context_bar 0x7f08003b
 int id action_divider 0x7f08003c
+int id action_homeCharacterFragment_to_nameCharacterFragment 0x7f0802b9
 int id action_image 0x7f08003d
 int id action_menu_divider 0x7f08003e
 int id action_menu_presenter 0x7f08003f
 int id action_mode_bar 0x7f080040
 int id action_mode_bar_stub 0x7f080041
 int id action_mode_close_button 0x7f080042
+int id action_nameCharacterFragment_to_raceFragment 0x7f0802bb
+int id action_raceFragment_to_raceInfoFragment 0x7f0802bf
+int id action_raceFragment_to_subRaceFragment 0x7f0802c2
 int id action_text 0x7f080043
 int id actions 0x7f080044
 int id activity_chooser_view_content 0x7f080045
@@ -3059,6 +3064,7 @@ int id browser_actions_menu_item_text 0x7f08006b
 int id browser_actions_menu_items 0x7f08006c
 int id browser_actions_menu_view 0x7f08006d
 int id btn_avanti 0x7f08006e
+int id btn_avanti_crea_pers 0x7f0802bc
 int id btn_indietro 0x7f08006f
 int id btn_meno_carisma 0x7f080070
 int id btn_meno_costituzione 0x7f080071
@@ -3334,6 +3340,7 @@ int id mtrl_picker_text_input_range_start 0x7f08017d
 int id mtrl_picker_title_text 0x7f08017e
 int id mtrl_view_tag_bottom_padding 0x7f08017f
 int id multiply 0x7f080180
+int id nameCharacterFragment 0x7f0802ba
 int id nameEt 0x7f080181
 int id nameLayout 0x7f080182
 int id nav_controller_view_tag 0x7f080183
@@ -3400,6 +3407,9 @@ int id profileFragment 0x7f0801bf
 int id profile_image 0x7f0801c0
 int id progress_circular 0x7f0801c1
 int id progress_horizontal 0x7f0801c2
+int id raceFragment 0x7f0802bd
+int id raceInfoFragment 0x7f0802c0
+int id race_info_text 0x7f0802c1
 int id radio 0x7f0801c3
 int id ratio 0x7f0801c4
 int id razza 0x7f0801c5
@@ -3504,6 +3514,7 @@ int id staticLayout 0x7f080227
 int id staticPostLayout 0x7f080228
 int id stop 0x7f080229
 int id stretch 0x7f08022a
+int id subRaceFragment 0x7f0802c3
 int id submenuarrow 0x7f08022b
 int id submit_area 0x7f08022c
 int id supportScrollUp 0x7f08022d
@@ -3799,8 +3810,10 @@ int layout fragment_main_activity_drawer 0x7f0b0047
 int layout fragment_name_character 0x7f0b0048
 int layout fragment_profile 0x7f0b0049
 int layout fragment_race 0x7f0b004a
+int layout fragment_race_info 0x7f0b0090
 int layout fragment_reset_password 0x7f0b004b
 int layout fragment_roll 0x7f0b004c
+int layout fragment_sub_race 0x7f0b0091
 int layout fragment_visualizza_campagna 0x7f0b004d
 int layout fragment_visualizza_npc 0x7f0b004e
 int layout fragment_visualizza_sessioni 0x7f0b004f
@@ -3969,6 +3982,7 @@ int string copy_toast_msg 0x7f120053
 int string costituzione 0x7f120054
 int string costituzione_title 0x7f120055
 int string crea 0x7f120056
+int string crea_personaggio 0x7f12011f
 int string dado 0x7f120057
 int string default_web_client_id 0x7f120058
 int string descrizione 0x7f120059
@@ -4011,6 +4025,7 @@ int string intelligenza 0x7f12007d
 int string intelligenza_title 0x7f12007e
 int string item_view_role_description 0x7f12007f
 int string ladro 0x7f120080
+int string large_text 0x7f120120
 int string legami 0x7f120081
 int string linguaggi_2 0x7f120082
 int string logout 0x7f120083

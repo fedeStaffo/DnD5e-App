@@ -32,12 +32,16 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\drawable\\password.png"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\drawable_xbutton.png.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\drawable\\xbutton.png"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_fragment_race_info.xml.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\fragment_race_info.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\drawable_xbutton.png.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\drawable\\xbutton.png"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\drawable_drawer_image.jpg.flat",
@@ -52,20 +56,16 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\menu_characters_toolbar.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\menu\\characters_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\navigation_nav_visualizza_campagna.xml.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\navigation\\nav_visualizza_campagna.xml"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.progetto_dd.app-merged_res-55:/layout_fragment_home_character.xml.flat",
-        "source": "com.progetto_dd.app-main-57:/layout/fragment_home_character.xml"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\navigation_nav_visualizza_campagna.xml.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\navigation\\nav_visualizza_campagna.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_activity_main_drawer_campagna.xml.flat",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_fragment_background.xml.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\fragment_background.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_fragment_home_campaigns.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\fragment_home_campaigns.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_fragment_background.xml.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\fragment_background.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_activity_campaigns.xml.flat",
@@ -312,12 +312,12 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\fragment_visualizza_sessioni.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\menu_menu_drawer.xml.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\menu\\menu_drawer.xml"
+        "merged": "com.progetto_dd.app-merged_res-55:/layout_fragment_sub_race.xml.flat",
+        "source": "com.progetto_dd.app-main-57:/layout/fragment_sub_race.xml"
     },
     {
-        "merged": "com.progetto_dd.app-merged_res-55:/menu_characters_toolbar.xml.flat",
-        "source": "com.progetto_dd.app-main-57:/menu/characters_toolbar.xml"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\menu_menu_drawer.xml.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\menu\\menu_drawer.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\drawable_dado.png.flat",
@@ -354,6 +354,10 @@
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_fragment_logout.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\fragment_logout.xml"
+    },
+    {
+        "merged": "com.progetto_dd.app-merged_res-55:/navigation_char_graph.xml.flat",
+        "source": "com.progetto_dd.app-main-57:/navigation/char_graph.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\xml_backup_rules.xml.flat",

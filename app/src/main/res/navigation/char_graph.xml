@@ -9,6 +9,41 @@
         android:id="@+id/homeCharacterFragment"
         android:name="com.progetto_dd.view.characters.HomeCharacterFragment"
         android:label="@string/personaggi"
-        tools:layout="@layout/fragment_home_character" />
+        tools:layout="@layout/fragment_home_character" >
+        <action
+            android:id="@+id/action_homeCharacterFragment_to_nameCharacterFragment"
+            app:destination="@id/nameCharacterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nameCharacterFragment"
+        android:name="com.progetto_dd.view.characters.NameCharacterFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_name_character" >
+        <action
+            android:id="@+id/action_nameCharacterFragment_to_raceFragment"
+            app:destination="@id/raceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raceFragment"
+        android:name="com.progetto_dd.view.characters.RaceFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_race" >
+        <action
+            android:id="@+id/action_raceFragment_to_raceInfoFragment"
+            app:destination="@id/raceInfoFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_subRaceFragment"
+            app:destination="@id/subRaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raceInfoFragment"
+        android:name="com.progetto_dd.view.characters.RaceInfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_race_info" />
+    <fragment
+        android:id="@+id/subRaceFragment"
+        android:name="com.progetto_dd.view.characters.SubRaceFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_sub_race" />
 
 </navigation>

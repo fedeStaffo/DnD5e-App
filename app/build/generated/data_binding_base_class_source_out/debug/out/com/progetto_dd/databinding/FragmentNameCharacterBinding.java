@@ -22,10 +22,7 @@ public final class FragmentNameCharacterBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnAvanti;
-
-  @NonNull
-  public final Button btnIndietro;
+  public final Button btnAvantiCreaPers;
 
   @NonNull
   public final TextInputEditText nameEt;
@@ -34,11 +31,10 @@ public final class FragmentNameCharacterBinding implements ViewBinding {
   public final TextView textView;
 
   private FragmentNameCharacterBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btnAvanti, @NonNull Button btnIndietro, @NonNull TextInputEditText nameEt,
+      @NonNull Button btnAvantiCreaPers, @NonNull TextInputEditText nameEt,
       @NonNull TextView textView) {
     this.rootView = rootView;
-    this.btnAvanti = btnAvanti;
-    this.btnIndietro = btnIndietro;
+    this.btnAvantiCreaPers = btnAvantiCreaPers;
     this.nameEt = nameEt;
     this.textView = textView;
   }
@@ -70,15 +66,9 @@ public final class FragmentNameCharacterBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_avanti;
-      Button btnAvanti = ViewBindings.findChildViewById(rootView, id);
-      if (btnAvanti == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_indietro;
-      Button btnIndietro = ViewBindings.findChildViewById(rootView, id);
-      if (btnIndietro == null) {
+      id = R.id.btn_avanti_crea_pers;
+      Button btnAvantiCreaPers = ViewBindings.findChildViewById(rootView, id);
+      if (btnAvantiCreaPers == null) {
         break missingId;
       }
 
@@ -94,7 +84,7 @@ public final class FragmentNameCharacterBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentNameCharacterBinding((ConstraintLayout) rootView, btnAvanti, btnIndietro,
+      return new FragmentNameCharacterBinding((ConstraintLayout) rootView, btnAvantiCreaPers,
           nameEt, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);

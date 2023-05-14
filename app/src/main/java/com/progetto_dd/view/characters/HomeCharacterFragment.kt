@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.progetto_dd.R
 import com.progetto_dd.memory.personaggio.PersonaggioAdapter
 import com.progetto_dd.memory.personaggio.PersonaggioViewModel
@@ -22,11 +24,6 @@ class HomeCharacterFragment : Fragment() {
     // ViewModel per ottenere i dati
     private lateinit var viewModel: PersonaggioViewModel
 
-    /**
-     * Infla la vista del fragment, inizializza la RecyclerView e ottiene i dati dei personaggi
-     * tramite il [PersonaggioViewModel].
-     * Inoltre imposta l'adapter alla RecyclerView.
-     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,6 +42,11 @@ class HomeCharacterFragment : Fragment() {
             // Imposta l'adapter alla RecyclerView
             adapter = PersonaggioAdapter(personaggi)
             recyclerView.adapter = adapter
+        }
+
+        // Aggiunge il listener al FAB per la navigazione alla destinazione NameCharacterFragment
+        view.findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
+            findNavController().navigate(R.id.action_homeCharacterFragment_to_nameCharacterFragment)
         }
 
         return view

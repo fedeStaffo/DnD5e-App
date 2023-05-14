@@ -1,60 +1,145 @@
 package com.progetto_dd.view.characters
 
+import android.content.res.ColorStateList
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.progetto_dd.R
+import com.progetto_dd.databinding.FragmentRaceBinding
+import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [RaceFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RaceFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentRaceBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var viewModel: PersonaggioViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_race, container, false)
+        _binding = FragmentRaceBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RaceFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RaceFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Inizializza il view model
+        val viewModel = ViewModelProvider(requireActivity()).get(PersonaggioViewModel::class.java)
+
+        // Listener che definiscono il comportamento dei bottoni di selezione
+        binding.scegliElfo.setOnClickListener {
+
+            binding.scegliElfo.apply {
+                text = getString(R.string.scelto).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.black))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.orange))
             }
+
+            binding.scegliUmano.apply {
+                text = getString(R.string.scegli).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.white))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.black))
+            }
+
+            binding.scegliNano.apply {
+                text = getString(R.string.scegli).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.white))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.black))
+            }
+        }
+
+        binding.scegliUmano.setOnClickListener {
+
+            binding.scegliUmano.apply {
+                text = getString(R.string.scelto).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.black))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.orange))
+            }
+
+            binding.scegliElfo.apply {
+                text = getString(R.string.scegli).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.white))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.black))
+            }
+
+            binding.scegliNano.apply {
+                text = getString(R.string.scegli).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.white))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.black))
+            }
+
+        }
+
+        binding.scegliNano.setOnClickListener {
+
+            binding.scegliNano.apply {
+                text = getString(R.string.scelto).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.black))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.orange))
+            }
+
+            binding.scegliUmano.apply {
+                text = getString(R.string.scegli).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.white))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.black))
+            }
+
+            binding.scegliElfo.apply {
+                text = getString(R.string.scegli).uppercase()
+                setTextColor(ContextCompat.getColor(context, R.color.white))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.black))
+            }
+        }
+
+        // Listener che definiscono il comportamento dei bottoni di info
+        binding.infoElfo.setOnClickListener {
+            viewModel.setRazzaPersonaggio("elfo")
+            findNavController().navigate(R.id.action_raceFragment_to_raceInfoFragment)
+        }
+
+        binding.infoUmano.setOnClickListener {
+            viewModel.setRazzaPersonaggio("umano")
+            findNavController().navigate(R.id.action_raceFragment_to_raceInfoFragment)
+        }
+
+        binding.infoNano.setOnClickListener {
+            viewModel.setRazzaPersonaggio("nano")
+            findNavController().navigate(R.id.action_raceFragment_to_raceInfoFragment)
+        }
+
+
+        // Definisce il comportamento del tasto avanti
+        binding.btnAvanti.setOnClickListener {
+            val razzaSelezionata = when {
+                binding.scegliElfo.text.toString().contains("scegli").not() -> "Elfo"
+                binding.scegliUmano.text.toString().contains("scegli").not() -> "Umano"
+                binding.scegliNano.text.toString().contains("scegli").not() -> "Nano"
+                else -> null
+            }
+
+            if (razzaSelezionata == null) {
+                Toast.makeText(requireContext(), "Selezionare una razza!", Toast.LENGTH_SHORT).show()
+            } else {
+                // Avvia la nuova fragment salvando la razza selezionata
+                viewModel.setRazzaPersonaggio(razzaSelezionata)
+                findNavController().navigate(R.id.action_raceFragment_to_subRaceFragment)
+            }
+        }
+
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }

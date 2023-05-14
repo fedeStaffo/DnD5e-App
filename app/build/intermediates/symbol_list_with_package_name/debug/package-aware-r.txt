@@ -2693,6 +2693,7 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 dimen sliding_pane_detail_pane_width
+dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -3011,12 +3012,16 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_homeCharacterFragment_to_nameCharacterFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_nameCharacterFragment_to_raceFragment
+id action_raceFragment_to_raceInfoFragment
+id action_raceFragment_to_subRaceFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3060,6 +3065,7 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_avanti
+id btn_avanti_crea_pers
 id btn_indietro
 id btn_meno_carisma
 id btn_meno_costituzione
@@ -3335,6 +3341,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nameCharacterFragment
 id nameEt
 id nameLayout
 id nav_controller_view_tag
@@ -3401,6 +3408,9 @@ id profileFragment
 id profile_image
 id progress_circular
 id progress_horizontal
+id raceFragment
+id raceInfoFragment
+id race_info_text
 id radio
 id ratio
 id razza
@@ -3505,6 +3515,7 @@ id staticLayout
 id staticPostLayout
 id stop
 id stretch
+id subRaceFragment
 id submenuarrow
 id submit_area
 id supportScrollUp
@@ -3800,8 +3811,10 @@ layout fragment_main_activity_drawer
 layout fragment_name_character
 layout fragment_profile
 layout fragment_race
+layout fragment_race_info
 layout fragment_reset_password
 layout fragment_roll
+layout fragment_sub_race
 layout fragment_visualizza_campagna
 layout fragment_visualizza_npc
 layout fragment_visualizza_sessioni
@@ -3970,6 +3983,7 @@ string copy_toast_msg
 string costituzione
 string costituzione_title
 string crea
+string crea_personaggio
 string dado
 string default_web_client_id
 string descrizione
@@ -4012,6 +4026,7 @@ string intelligenza
 string intelligenza_title
 string item_view_role_description
 string ladro
+string large_text
 string legami
 string linguaggi_2
 string logout
