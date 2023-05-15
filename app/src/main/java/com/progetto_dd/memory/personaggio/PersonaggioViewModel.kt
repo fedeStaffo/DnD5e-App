@@ -1,6 +1,7 @@
 package com.progetto_dd.memory.personaggio
 
 import android.util.Log
+import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,6 +13,7 @@ class PersonaggioViewModel : ViewModel() {
     // Riferimenti alle collezioni nel database
     private val personaggiRef = FirebaseFirestore.getInstance().collection("personaggi")
     private val razzeRef = FirebaseFirestore.getInstance().collection("razze")
+    private val classiRef = FirebaseFirestore.getInstance().collection("classi")
 
     // Riferimento all'utente loggato
     private val currentUser = FirebaseAuth.getInstance().currentUser
@@ -34,6 +36,16 @@ class PersonaggioViewModel : ViewModel() {
     // Funzione per salvare la razza
     fun setRazzaPersonaggio(razza: String) {
         _razzaPersonaggio.value = razza
+    }
+
+    // Variabile per la classe
+    private val _classePersonaggio = MutableLiveData<String>()
+    val classePersonaggio: LiveData<String>
+        get() = _classePersonaggio
+
+    // Funzione per salvare la classe
+    fun setClassePersonaggio(sottorazza: String) {
+        _classePersonaggio.value = sottorazza
     }
 
     // Funzione che restituisce un oggetto LiveData contenente una lista di Personaggi
@@ -69,6 +81,7 @@ class PersonaggioViewModel : ViewModel() {
         return mutableLiveData
     }
 
+    // Metodo per ottenere informazioni sulla razza prendendole da Firestore
     fun getInfoRazza(razza: String): MutableLiveData<String?> {
 
         // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
@@ -98,9 +111,43 @@ class PersonaggioViewModel : ViewModel() {
         return mutableLiveData
     }
 
+    // Funzione per leggere dal database le info della classe
+    fun getInfoClasse(classe: String): MutableLiveData<String?> {
+
+        // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
+        val mutableLiveData = MutableLiveData<String?>()
+
+        // Query per leggere la classe dalla collezione "classi" di Firestore
+        val classeQuery = classiRef.document(classe)
+
+        classeQuery.addSnapshotListener { snapshot, e ->
+            // Se si verifica un errore, lo stampa nel log e ritorna
+            if (e != null) {
+                Log.w(TAG_CLASS, "Listen failed.", e)
+                return@addSnapshotListener
+            }
+
+            // Se lo snapshot non è nullo, estrae il campo "info" e lo aggiorna nell'oggetto MutableLiveData
+            if (snapshot != null && snapshot.exists()) {
+                val info = snapshot.getString("info")
+                mutableLiveData.postValue(info)
+            } else {
+                // Se lo snapshot è nullo o non esiste, lo stampa nel log
+                Log.d(TAG_CLASS, "Current data: null")
+            }
+        }
+
+        // Restituisce l'oggetto MutableLiveData come oggetto LiveData
+        return mutableLiveData
+    }
+
+
+
+
 
     companion object {
         private const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"
         private const val TAG_RACE = "com.progetto_dd.view.characters.RaceFragment"
+        private const val TAG_CLASS = "com.progetto_dd.view.characters.ClassFragment"
     }
 }

@@ -32,8 +32,8 @@
             android:id="@+id/action_raceFragment_to_raceInfoFragment"
             app:destination="@id/raceInfoFragment" />
         <action
-            android:id="@+id/action_raceFragment_to_subRaceFragment"
-            app:destination="@id/subRaceFragment" />
+            android:id="@+id/action_raceFragment_to_classFragment"
+            app:destination="@id/classFragment" />
     </fragment>
     <fragment
         android:id="@+id/raceInfoFragment"
@@ -41,9 +41,26 @@
         android:label="@string/info"
         tools:layout="@layout/fragment_race_info" />
     <fragment
-        android:id="@+id/subRaceFragment"
-        android:name="com.progetto_dd.view.characters.SubRaceFragment"
+        android:id="@+id/classFragment"
+        android:name="com.progetto_dd.view.characters.ClassFragment"
         android:label="@string/crea_personaggio"
-        tools:layout="@layout/fragment_sub_race" />
+        tools:layout="@layout/fragment_class" >
+        <action
+            android:id="@+id/action_classFragment_to_classInfoFragment"
+            app:destination="@id/classInfoFragment" />
+        <action
+            android:id="@+id/action_classFragment_to_competenzeFragment"
+            app:destination="@id/competenzeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classInfoFragment"
+        android:name="com.progetto_dd.view.characters.ClassInfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_class_info" />
+    <fragment
+        android:id="@+id/competenzeFragment"
+        android:name="com.progetto_dd.view.characters.CompetenzeFragment"
+        android:label="fragment_competenze"
+        tools:layout="@layout/fragment_competenze" />
 
 </navigation>

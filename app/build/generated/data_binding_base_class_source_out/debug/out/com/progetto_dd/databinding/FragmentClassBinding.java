@@ -23,13 +23,7 @@ public final class FragmentClassBinding implements ViewBinding {
   public final Button btnAvanti;
 
   @NonNull
-  public final Button btnIndietro;
-
-  @NonNull
   public final Button infoBardo;
-
-  @NonNull
-  public final Button infoChierico;
 
   @NonNull
   public final Button infoGuerriero;
@@ -41,13 +35,7 @@ public final class FragmentClassBinding implements ViewBinding {
   public final Button infoMago;
 
   @NonNull
-  public final Button infoPaladino;
-
-  @NonNull
   public final Button scegliBardo;
-
-  @NonNull
-  public final Button scegliChierico;
 
   @NonNull
   public final Button scegliGuerriero;
@@ -58,30 +46,20 @@ public final class FragmentClassBinding implements ViewBinding {
   @NonNull
   public final Button scegliMago;
 
-  @NonNull
-  public final Button scegliPaladino;
-
   private FragmentClassBinding(@NonNull LinearLayout rootView, @NonNull Button btnAvanti,
-      @NonNull Button btnIndietro, @NonNull Button infoBardo, @NonNull Button infoChierico,
-      @NonNull Button infoGuerriero, @NonNull Button infoLadro, @NonNull Button infoMago,
-      @NonNull Button infoPaladino, @NonNull Button scegliBardo, @NonNull Button scegliChierico,
-      @NonNull Button scegliGuerriero, @NonNull Button scegliLadro, @NonNull Button scegliMago,
-      @NonNull Button scegliPaladino) {
+      @NonNull Button infoBardo, @NonNull Button infoGuerriero, @NonNull Button infoLadro,
+      @NonNull Button infoMago, @NonNull Button scegliBardo, @NonNull Button scegliGuerriero,
+      @NonNull Button scegliLadro, @NonNull Button scegliMago) {
     this.rootView = rootView;
     this.btnAvanti = btnAvanti;
-    this.btnIndietro = btnIndietro;
     this.infoBardo = infoBardo;
-    this.infoChierico = infoChierico;
     this.infoGuerriero = infoGuerriero;
     this.infoLadro = infoLadro;
     this.infoMago = infoMago;
-    this.infoPaladino = infoPaladino;
     this.scegliBardo = scegliBardo;
-    this.scegliChierico = scegliChierico;
     this.scegliGuerriero = scegliGuerriero;
     this.scegliLadro = scegliLadro;
     this.scegliMago = scegliMago;
-    this.scegliPaladino = scegliPaladino;
   }
 
   @Override
@@ -117,21 +95,9 @@ public final class FragmentClassBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btn_indietro;
-      Button btnIndietro = ViewBindings.findChildViewById(rootView, id);
-      if (btnIndietro == null) {
-        break missingId;
-      }
-
       id = R.id.info_bardo;
       Button infoBardo = ViewBindings.findChildViewById(rootView, id);
       if (infoBardo == null) {
-        break missingId;
-      }
-
-      id = R.id.info_chierico;
-      Button infoChierico = ViewBindings.findChildViewById(rootView, id);
-      if (infoChierico == null) {
         break missingId;
       }
 
@@ -153,21 +119,9 @@ public final class FragmentClassBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.info_paladino;
-      Button infoPaladino = ViewBindings.findChildViewById(rootView, id);
-      if (infoPaladino == null) {
-        break missingId;
-      }
-
       id = R.id.scegli_bardo;
       Button scegliBardo = ViewBindings.findChildViewById(rootView, id);
       if (scegliBardo == null) {
-        break missingId;
-      }
-
-      id = R.id.scegli_chierico;
-      Button scegliChierico = ViewBindings.findChildViewById(rootView, id);
-      if (scegliChierico == null) {
         break missingId;
       }
 
@@ -189,15 +143,8 @@ public final class FragmentClassBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.scegli_paladino;
-      Button scegliPaladino = ViewBindings.findChildViewById(rootView, id);
-      if (scegliPaladino == null) {
-        break missingId;
-      }
-
-      return new FragmentClassBinding((LinearLayout) rootView, btnAvanti, btnIndietro, infoBardo,
-          infoChierico, infoGuerriero, infoLadro, infoMago, infoPaladino, scegliBardo,
-          scegliChierico, scegliGuerriero, scegliLadro, scegliMago, scegliPaladino);
+      return new FragmentClassBinding((LinearLayout) rootView, btnAvanti, infoBardo, infoGuerriero,
+          infoLadro, infoMago, scegliBardo, scegliGuerriero, scegliLadro, scegliMago);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
