@@ -19,6 +19,11 @@ class RaceFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var viewModel: PersonaggioViewModel
 
+    // Dichiarazione dei campi booleani per i pulsanti di razza
+    private var elfoSelected = false
+    private var umanoSelected = false
+    private var nanoSelected = false
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,16 +46,25 @@ class RaceFragment : Fragment() {
         binding.scegliNano.setOnClickListener {
             val unclickedButtons = listOf(binding.scegliUmano, binding.scegliElfo)
             buttonUtils.updateButtonState(binding.scegliNano, unclickedButtons)
+            nanoSelected = true
+            umanoSelected = false
+            elfoSelected = false
         }
 
         binding.scegliElfo.setOnClickListener {
             val unclickedButtons = listOf(binding.scegliUmano, binding.scegliNano)
             buttonUtils.updateButtonState(binding.scegliElfo, unclickedButtons)
+            nanoSelected = false
+            umanoSelected = false
+            elfoSelected = true
         }
 
         binding.scegliUmano.setOnClickListener {
             val unclickedButtons = listOf(binding.scegliNano, binding.scegliElfo)
             buttonUtils.updateButtonState(binding.scegliUmano, unclickedButtons)
+            nanoSelected = false
+            umanoSelected = true
+            elfoSelected = false
         }
 
         // Listener che definiscono il comportamento dei bottoni di info
@@ -73,9 +87,9 @@ class RaceFragment : Fragment() {
         // Definisce il comportamento del tasto avanti
         binding.btnAvanti.setOnClickListener {
             val razzaSelezionata = when {
-                binding.scegliElfo.text.toString().contains("SCEGLI").not() -> "Elfo"
-                binding.scegliUmano.text.toString().contains("SCEGLI").not() -> "Umano"
-                binding.scegliNano.text.toString().contains("SCEGLI").not() -> "Nano"
+                elfoSelected -> "Elfo"
+                umanoSelected -> "Umano"
+                nanoSelected -> "Nano"
                 else -> null
             }
 
@@ -86,6 +100,14 @@ class RaceFragment : Fragment() {
                 findNavController().navigate(R.id.action_raceFragment_to_classFragment)
             }
         }
+    }
+
+    // Resetta i booleani se si torna indietro
+    override fun onResume() {
+        super.onResume()
+        elfoSelected = false
+        umanoSelected = false
+        nanoSelected = false
     }
 
     override fun onDestroyView() {

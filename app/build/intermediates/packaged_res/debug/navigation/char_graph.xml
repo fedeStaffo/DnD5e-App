@@ -55,7 +55,7 @@
     <fragment
         android:id="@+id/classInfoFragment"
         android:name="com.progetto_dd.view.characters.ClassInfoFragment"
-        android:label="fragment_class_info"
+        android:label="@string/info"
         tools:layout="@layout/fragment_class_info" />
     <fragment
         android:id="@+id/competenzeFragment"
