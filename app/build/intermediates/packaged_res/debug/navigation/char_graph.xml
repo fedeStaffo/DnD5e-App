@@ -60,7 +60,7 @@
     <fragment
         android:id="@+id/competenzeFragment"
         android:name="com.progetto_dd.view.characters.CompetenzeFragment"
-        android:label="fragment_competenze"
+        android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_competenze" />
 
 </navigation>

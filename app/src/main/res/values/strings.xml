@@ -247,6 +247,7 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="nome_npc">Nome NPC</string>
     <string name="aggiungi">Aggiungi</string>
     <string name="eliminazione_campagna">ATTENZIONE!!!\n \n Stai per eliminare dei dati che potrebbero non essere più recuperabili\n Vuoi continuare?</string>
+    <string name="scegli_competenze">Scegli una o più competenze</string>
 
 </resources>
 

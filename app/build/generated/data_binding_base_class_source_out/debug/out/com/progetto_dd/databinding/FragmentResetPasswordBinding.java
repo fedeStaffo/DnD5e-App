@@ -4,25 +4,67 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.progetto_dd.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentResetPasswordBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ConstraintLayout rootView;
 
-  private FragmentResetPasswordBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final ConstraintLayout addCampaignFragment;
+
+  @NonNull
+  public final Button buttonCrea;
+
+  @NonNull
+  public final TextInputEditText confirmPassEt;
+
+  @NonNull
+  public final TextInputLayout confirmPasswordLayout;
+
+  @NonNull
+  public final TextView instructionTextView;
+
+  @NonNull
+  public final TextView oldPasswordTextView;
+
+  @NonNull
+  public final TextInputEditText passET;
+
+  @NonNull
+  public final TextInputLayout passwordLayout;
+
+  private FragmentResetPasswordBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout addCampaignFragment, @NonNull Button buttonCrea,
+      @NonNull TextInputEditText confirmPassEt, @NonNull TextInputLayout confirmPasswordLayout,
+      @NonNull TextView instructionTextView, @NonNull TextView oldPasswordTextView,
+      @NonNull TextInputEditText passET, @NonNull TextInputLayout passwordLayout) {
     this.rootView = rootView;
+    this.addCampaignFragment = addCampaignFragment;
+    this.buttonCrea = buttonCrea;
+    this.confirmPassEt = confirmPassEt;
+    this.confirmPasswordLayout = confirmPasswordLayout;
+    this.instructionTextView = instructionTextView;
+    this.oldPasswordTextView = oldPasswordTextView;
+    this.passET = passET;
+    this.passwordLayout = passwordLayout;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +85,59 @@ public final class FragmentResetPasswordBinding implements ViewBinding {
 
   @NonNull
   public static FragmentResetPasswordBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      ConstraintLayout addCampaignFragment = (ConstraintLayout) rootView;
 
-    return new FragmentResetPasswordBinding((FrameLayout) rootView);
+      id = R.id.buttonCrea;
+      Button buttonCrea = ViewBindings.findChildViewById(rootView, id);
+      if (buttonCrea == null) {
+        break missingId;
+      }
+
+      id = R.id.confirmPassEt;
+      TextInputEditText confirmPassEt = ViewBindings.findChildViewById(rootView, id);
+      if (confirmPassEt == null) {
+        break missingId;
+      }
+
+      id = R.id.confirmPasswordLayout;
+      TextInputLayout confirmPasswordLayout = ViewBindings.findChildViewById(rootView, id);
+      if (confirmPasswordLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.instructionTextView;
+      TextView instructionTextView = ViewBindings.findChildViewById(rootView, id);
+      if (instructionTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.oldPasswordTextView;
+      TextView oldPasswordTextView = ViewBindings.findChildViewById(rootView, id);
+      if (oldPasswordTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.passET;
+      TextInputEditText passET = ViewBindings.findChildViewById(rootView, id);
+      if (passET == null) {
+        break missingId;
+      }
+
+      id = R.id.passwordLayout;
+      TextInputLayout passwordLayout = ViewBindings.findChildViewById(rootView, id);
+      if (passwordLayout == null) {
+        break missingId;
+      }
+
+      return new FragmentResetPasswordBinding((ConstraintLayout) rootView, addCampaignFragment,
+          buttonCrea, confirmPassEt, confirmPasswordLayout, instructionTextView,
+          oldPasswordTextView, passET, passwordLayout);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

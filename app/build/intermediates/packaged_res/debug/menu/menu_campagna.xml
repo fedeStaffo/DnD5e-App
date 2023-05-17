@@ -33,19 +33,14 @@
             <group android:checkableBehavior="single">
 
                 <item
-                    android:id="@+id/inventarioFragment"
+                    android:id="@+id/nuovoOggettoFragment"
                     android:icon="@drawable/zaino_scolastico"
-                    android:title="Inventario" />
+                    android:title="Nuovo oggetto" />
 
                 <item
                     android:id="@+id/effettiFragment"
                     android:icon="@drawable/effetti"
                     android:title="Effetti" />
-
-                <item
-                    android:id="@+id/dannicuraFragment"
-                    android:icon="@drawable/borsa_di_cura"
-                    android:title="Cura e danni" />
 
                 <item
                     android:id="@+id/creaNpcFragment"

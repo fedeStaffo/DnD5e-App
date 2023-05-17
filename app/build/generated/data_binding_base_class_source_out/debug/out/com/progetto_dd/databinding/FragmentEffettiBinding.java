@@ -4,25 +4,57 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.progetto_dd.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentEffettiBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final LinearLayout rootView;
 
-  private FragmentEffettiBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final Button buttonAggiungi;
+
+  @NonNull
+  public final TextView effetti;
+
+  @NonNull
+  public final TextView scegliEffetto;
+
+  @NonNull
+  public final TextView scegliPersonaggio;
+
+  @NonNull
+  public final Spinner spinnerEffetti;
+
+  @NonNull
+  public final Spinner spinnerGiocatori;
+
+  private FragmentEffettiBinding(@NonNull LinearLayout rootView, @NonNull Button buttonAggiungi,
+      @NonNull TextView effetti, @NonNull TextView scegliEffetto,
+      @NonNull TextView scegliPersonaggio, @NonNull Spinner spinnerEffetti,
+      @NonNull Spinner spinnerGiocatori) {
     this.rootView = rootView;
+    this.buttonAggiungi = buttonAggiungi;
+    this.effetti = effetti;
+    this.scegliEffetto = scegliEffetto;
+    this.scegliPersonaggio = scegliPersonaggio;
+    this.spinnerEffetti = spinnerEffetti;
+    this.spinnerGiocatori = spinnerGiocatori;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +75,50 @@ public final class FragmentEffettiBinding implements ViewBinding {
 
   @NonNull
   public static FragmentEffettiBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.button_aggiungi;
+      Button buttonAggiungi = ViewBindings.findChildViewById(rootView, id);
+      if (buttonAggiungi == null) {
+        break missingId;
+      }
 
-    return new FragmentEffettiBinding((FrameLayout) rootView);
+      id = R.id.effetti;
+      TextView effetti = ViewBindings.findChildViewById(rootView, id);
+      if (effetti == null) {
+        break missingId;
+      }
+
+      id = R.id.scegli_effetto;
+      TextView scegliEffetto = ViewBindings.findChildViewById(rootView, id);
+      if (scegliEffetto == null) {
+        break missingId;
+      }
+
+      id = R.id.scegli_personaggio;
+      TextView scegliPersonaggio = ViewBindings.findChildViewById(rootView, id);
+      if (scegliPersonaggio == null) {
+        break missingId;
+      }
+
+      id = R.id.spinner_effetti;
+      Spinner spinnerEffetti = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerEffetti == null) {
+        break missingId;
+      }
+
+      id = R.id.spinner_giocatori;
+      Spinner spinnerGiocatori = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerGiocatori == null) {
+        break missingId;
+      }
+
+      return new FragmentEffettiBinding((LinearLayout) rootView, buttonAggiungi, effetti,
+          scegliEffetto, scegliPersonaggio, spinnerEffetti, spinnerGiocatori);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

@@ -333,43 +333,52 @@
 178            android:required="false" />
 178-->[androidx.window:window:1.0.0] C:\Users\fede0\.gradle\caches\transforms-3\af5cca21a406468ff907591198362b0e\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 179
-180        <receiver
-180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-181            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-181-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-182            android:directBootAware="false"
-182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-183            android:enabled="true"
-183-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-184            android:exported="true"
-184-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-185            android:permission="android.permission.DUMP" >
-185-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-186            <intent-filter>
-186-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-187                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-187-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-187-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-188            </intent-filter>
-189            <intent-filter>
-189-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-190                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-190-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-190-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-191            </intent-filter>
-192            <intent-filter>
-192-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-193                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-193-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-193-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-194            </intent-filter>
-195            <intent-filter>
-195-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-196                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-196-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-196-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-197            </intent-filter>
-198        </receiver>
-199    </application>
-200
-201</manifest>
+180        <service
+180-->[androidx.room:room-runtime:2.5.1] C:\Users\fede0\.gradle\caches\transforms-3\5e3439497275763a845e8be5ce4540bf\transformed\room-runtime-2.5.1\AndroidManifest.xml:24:9-28:63
+181            android:name="androidx.room.MultiInstanceInvalidationService"
+181-->[androidx.room:room-runtime:2.5.1] C:\Users\fede0\.gradle\caches\transforms-3\5e3439497275763a845e8be5ce4540bf\transformed\room-runtime-2.5.1\AndroidManifest.xml:25:13-74
+182            android:directBootAware="true"
+182-->[androidx.room:room-runtime:2.5.1] C:\Users\fede0\.gradle\caches\transforms-3\5e3439497275763a845e8be5ce4540bf\transformed\room-runtime-2.5.1\AndroidManifest.xml:26:13-43
+183            android:exported="false" />
+183-->[androidx.room:room-runtime:2.5.1] C:\Users\fede0\.gradle\caches\transforms-3\5e3439497275763a845e8be5ce4540bf\transformed\room-runtime-2.5.1\AndroidManifest.xml:27:13-37
+184
+185        <receiver
+185-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+186            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+187            android:directBootAware="false"
+187-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+188            android:enabled="true"
+188-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+189            android:exported="true"
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+190            android:permission="android.permission.DUMP" >
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+191            <intent-filter>
+191-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+192                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+193            </intent-filter>
+194            <intent-filter>
+194-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+195                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+196            </intent-filter>
+197            <intent-filter>
+197-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+198                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+198-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+198-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+199            </intent-filter>
+200            <intent-filter>
+200-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+201                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\fede0\.gradle\caches\transforms-3\e4a25525a63d1e94936be693cf2f0c40\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+202            </intent-filter>
+203        </receiver>
+204    </application>
+205
+206</manifest>

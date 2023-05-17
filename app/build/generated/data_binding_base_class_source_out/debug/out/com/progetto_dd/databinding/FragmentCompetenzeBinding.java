@@ -4,7 +4,7 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,12 +17,12 @@ import java.lang.String;
 
 public final class FragmentCompetenzeBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final RecyclerView recyclerViewCompetenze;
 
-  private FragmentCompetenzeBinding(@NonNull LinearLayout rootView,
+  private FragmentCompetenzeBinding(@NonNull ScrollView rootView,
       @NonNull RecyclerView recyclerViewCompetenze) {
     this.rootView = rootView;
     this.recyclerViewCompetenze = recyclerViewCompetenze;
@@ -30,7 +30,7 @@ public final class FragmentCompetenzeBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -61,7 +61,7 @@ public final class FragmentCompetenzeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentCompetenzeBinding((LinearLayout) rootView, recyclerViewCompetenze);
+      return new FragmentCompetenzeBinding((ScrollView) rootView, recyclerViewCompetenze);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

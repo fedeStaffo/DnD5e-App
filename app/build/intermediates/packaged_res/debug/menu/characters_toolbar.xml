@@ -7,9 +7,4 @@
         android:title="@string/home"
         app:showAsAction="ifRoom"
         />
-    <item
-        android:icon="@drawable/help"
-        android:title="@string/aiuto"
-        app:showAsAction="ifRoom"
-        />
 </menu>
