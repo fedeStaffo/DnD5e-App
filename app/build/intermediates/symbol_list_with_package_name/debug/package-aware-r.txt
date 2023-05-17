@@ -3113,6 +3113,8 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id competenzaName
+id competenzaRadioButton
 id competenzeFragment
 id compress
 id confirmPassEt
@@ -3424,6 +3426,7 @@ id razza_destrezza
 id razza_intelligenza
 id razza_saggezza
 id rectangles
+id recyclerViewCompetenze
 id registrato
 id resetPasswordFragment
 id reset_button
@@ -3820,6 +3823,7 @@ layout fragment_roll
 layout fragment_visualizza_campagna
 layout fragment_visualizza_npc
 layout fragment_visualizza_sessioni
+layout item_competenza
 layout item_personaggio
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

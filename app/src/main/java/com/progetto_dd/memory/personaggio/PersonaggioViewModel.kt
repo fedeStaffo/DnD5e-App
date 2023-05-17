@@ -43,8 +43,18 @@ class PersonaggioViewModel : ViewModel() {
         get() = _classePersonaggio
 
     // Funzione per salvare la classe
-    fun setClassePersonaggio(sottorazza: String) {
-        _classePersonaggio.value = sottorazza
+    fun setClassePersonaggio(classe: String) {
+        _classePersonaggio.value = classe
+    }
+
+    // Variabile per le competenze
+    private val _competenzePersonaggio = MutableLiveData<ArrayList<String>>()
+    val competenzePersonaggio: LiveData<ArrayList<String>>
+        get() = _competenzePersonaggio
+
+    // Funzione per salvare le competenze
+    fun setCompetenzePersonaggio(competenze: ArrayList<String>) {
+        _competenzePersonaggio.value = competenze
     }
 
     // Funzione che restituisce un oggetto LiveData contenente una lista di Personaggi
@@ -139,10 +149,6 @@ class PersonaggioViewModel : ViewModel() {
         // Restituisce l'oggetto MutableLiveData come oggetto LiveData
         return mutableLiveData
     }
-
-
-
-
 
     companion object {
         private const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"

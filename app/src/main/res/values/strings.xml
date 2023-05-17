@@ -244,6 +244,9 @@ disinvoltura in certi tipi di prove di Carisma.
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="nome_npc">Nome NPC</string>
+    <string name="aggiungi">Aggiungi</string>
+    <string name="eliminazione_campagna">ATTENZIONE!!!\n \n Stai per eliminare dei dati che potrebbero non essere più recuperabili\n Vuoi continuare?</string>
 
 </resources>
 

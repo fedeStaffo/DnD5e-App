@@ -89,6 +89,8 @@ id char_graph
 id classFragment
 id classInfoFragment
 id class_info_text
+id competenzaName
+id competenzaRadioButton
 id competenzeFragment
 id confirmPassEt
 id confirmPasswordLayout
@@ -171,6 +173,7 @@ id razza_costituzione
 id razza_destrezza
 id razza_intelligenza
 id razza_saggezza
+id recyclerViewCompetenze
 id registrato
 id resetPasswordFragment
 id reset_button
@@ -286,6 +289,7 @@ layout fragment_roll
 layout fragment_visualizza_campagna
 layout fragment_visualizza_npc
 layout fragment_visualizza_sessioni
+layout item_competenza
 layout item_personaggio
 layout nav_header
 layout nav_immagine_campagna

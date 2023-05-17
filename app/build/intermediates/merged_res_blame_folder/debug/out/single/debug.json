@@ -44,6 +44,10 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\drawable\\xbutton.png"
     },
     {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_item_competenza.xml.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\item_competenza.xml"
+    },
+    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\drawable_drawer_image.jpg.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\drawable\\drawer_image.jpg"
     },
@@ -276,6 +280,10 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\fragment_effetti.xml"
     },
     {
+        "merged": "com.progetto_dd.app-merged_res-55:/layout_fragment_roll.xml.flat",
+        "source": "com.progetto_dd.app-main-57:/layout/fragment_roll.xml"
+    },
+    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_item_personaggio.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\item_personaggio.xml"
     },
@@ -358,10 +366,6 @@
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\layout_fragment_logout.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-57:\\layout\\fragment_logout.xml"
-    },
-    {
-        "merged": "com.progetto_dd.app-merged_res-55:/navigation_char_graph.xml.flat",
-        "source": "com.progetto_dd.app-main-57:/navigation/char_graph.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-55:\\xml_backup_rules.xml.flat",

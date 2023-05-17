@@ -16,20 +16,15 @@
         android:label="Npc"
         tools:layout="@layout/fragment_visualizza_npc" />
     <fragment
-        android:id="@+id/inventarioFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.inventarioFragment"
+        android:id="@+id/nuovoOggettoFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.NuovoOggettoFragment"
         android:label="Inventario"
-        tools:layout="@layout/fragment_inventario" />
+        tools:layout="@layout/fragment_nuovo_oggetto" />
     <fragment
         android:id="@+id/effettiFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.effettiFragment"
         android:label="fragment_effetti"
         tools:layout="@layout/fragment_effetti" />
-    <fragment
-        android:id="@+id/dannicuraFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.dannicuraFragment"
-        android:label="fragment_danni_cura"
-        tools:layout="@layout/fragment_dannicura" />
     <fragment
         android:id="@+id/resetPasswordFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.resetPasswordFragment"
@@ -57,13 +52,18 @@
         tools:layout="@layout/fragment_visualizza_sessioni" />
     <fragment
         android:id="@+id/creaNpcFragment"
-        android:name="com.progetto_dd.view.drawer_campaigns.creaNpcFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.CreaNpcFragment"
         android:label="fragment_crea_npc"
         tools:layout="@layout/fragment_crea_npc" />
     <fragment
         android:id="@+id/creaSessioniFragment"
-        android:name="com.progetto_dd.view.drawer_campaigns.creaSessioniFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.CreaSessioniFragment"
         android:label="fragment_crea_sessioni"
         tools:layout="@layout/fragment_crea_sessioni" />
+    <fragment
+        android:id="@+id/confermaEliminazioneFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.ConfermaEliminazioneFragment"
+        android:label="ConfermaEliminazioneFragment" />
+
 
 </navigation>
