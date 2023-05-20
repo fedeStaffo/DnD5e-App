@@ -6,8 +6,8 @@
     android:orientation="horizontal"
     android:padding="16dp">
 
-    <RadioButton
-        android:id="@+id/competenzaRadioButton"
+    <CheckBox
+        android:id="@+id/competenzaCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

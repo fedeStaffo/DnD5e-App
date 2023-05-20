@@ -59,6 +59,7 @@ drawable xbutton
 drawable zaino_scolastico
 id action_classFragment_to_classInfoFragment
 id action_classFragment_to_competenzeFragment
+id action_competenzeFragment_to_backgroundFragment
 id action_homeCharacterFragment_to_nameCharacterFragment
 id action_nameCharacterFragment_to_raceFragment
 id action_raceFragment_to_classFragment
@@ -67,6 +68,7 @@ id addCampaignFragment
 id aggiungi_npc
 id aggiungi_oggetto
 id backgroundEt
+id backgroundFragment
 id benvenuto
 id bottone0
 id bottone1
@@ -106,8 +108,8 @@ id char_graph
 id classFragment
 id classInfoFragment
 id class_info_text
+id competenzaCheckBox
 id competenzaName
-id competenzaRadioButton
 id competenzeFragment
 id confermaEliminazioneFragment
 id confirmPassEt
@@ -184,6 +186,7 @@ id no_reg
 id nome_npc
 id nome_oggetto
 id nomecampagnaEt
+id numCompetenzeText
 id num_carisma
 id num_costituzione
 id num_destrezza
@@ -272,15 +275,11 @@ id textView46
 id textView47
 id textView48
 id textView49
-id textView5
 id textView50
 id textView51
 id textView52
 id textView53
-id textView6
 id textView7
-id textView8
-id textView9
 id textViewPassword
 id textnome
 id toolbar
@@ -422,6 +421,7 @@ string nome_npc
 string nome_personaggio
 string nome_personaggio_lista
 string non_registrato
+string numeroCompetenze
 string otterai
 string paladino
 string partecipa
@@ -441,7 +441,6 @@ string saggezza
 string saggezza_title
 string scegli
 string scegli_classe
-string scegli_competenze
 string scegli_la_razza
 string scegli_la_sottorazza
 string scegli_le_abilità

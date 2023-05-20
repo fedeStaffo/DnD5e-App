@@ -1,6 +1,7 @@
 package com.progetto_dd.memory.personaggio;
 
 import android.database.Cursor;
+import android.os.CancellationSignal;
 import androidx.room.CoroutinesRoom;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
@@ -8,8 +9,10 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.progetto_dd.utils.Converters;
+import java.lang.Boolean;
 import java.lang.Class;
 import java.lang.Exception;
+import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -108,6 +111,37 @@ public final class CompetenzaDao_Impl implements CompetenzaDao {
           return Unit.INSTANCE;
         } finally {
           __db.endTransaction();
+        }
+      }
+    }, continuation);
+  }
+
+  @Override
+  public Object isCompetenzeTableEmpty(final Continuation<? super Boolean> continuation) {
+    final String _sql = "SELECT COUNT(*) FROM tabella_competenze";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<Boolean>() {
+      @Override
+      public Boolean call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final Boolean _result;
+          if(_cursor.moveToFirst()) {
+            final Integer _tmp;
+            if (_cursor.isNull(0)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getInt(0);
+            }
+            _result = _tmp == null ? null : _tmp != 0;
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
         }
       }
     }, continuation);

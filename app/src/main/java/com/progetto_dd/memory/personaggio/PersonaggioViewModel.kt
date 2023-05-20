@@ -48,12 +48,11 @@ class PersonaggioViewModel : ViewModel() {
     }
 
     // Variabile per le competenze
-    private val _competenzePersonaggio = MutableLiveData<ArrayList<String>>()
-    val competenzePersonaggio: LiveData<ArrayList<String>>
-        get() = _competenzePersonaggio
+    private val _competenzePersonaggio = MutableLiveData<Set<String>>()
+    val competenzePersonaggio: LiveData<Set<String>> get() = _competenzePersonaggio
 
     // Funzione per salvare le competenze
-    fun setCompetenzePersonaggio(competenze: ArrayList<String>) {
+    fun setCompetenzePersonaggio(competenze: Set<String>) {
         _competenzePersonaggio.value = competenze
     }
 

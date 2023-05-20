@@ -6,6 +6,8 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
+import com.progetto_dd.databinding.FragmentCompetenzeBindingImpl;
+import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
@@ -16,7 +18,13 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(0);
+  private static final int LAYOUT_FRAGMENTCOMPETENZE = 1;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(1);
+
+  static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.progetto_dd.R.layout.fragment_competenze, LAYOUT_FRAGMENTCOMPETENZE);
+  }
 
   @Override
   public ViewDataBinding getDataBinder(DataBindingComponent component, View view, int layoutId) {
@@ -25,6 +33,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       final Object tag = view.getTag();
       if(tag == null) {
         throw new RuntimeException("view must have a tag");
+      }
+      switch(localizedLayoutId) {
+        case  LAYOUT_FRAGMENTCOMPETENZE: {
+          if ("layout/fragment_competenze_0".equals(tag)) {
+            return new FragmentCompetenzeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_competenze is invalid. Received: " + tag);
+        }
       }
     }
     return null;
@@ -70,14 +86,19 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(1);
+    static final SparseArray<String> sKeys = new SparseArray<String>(2);
 
     static {
       sKeys.put(0, "_all");
+      sKeys.put(1, "numCompetenze");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(0);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(1);
+
+    static {
+      sKeys.put("layout/fragment_competenze_0", com.progetto_dd.R.layout.fragment_competenze);
+    }
   }
 }

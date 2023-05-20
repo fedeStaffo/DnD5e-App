@@ -71,8 +71,7 @@
     <string name="background_title">BACKGROUND</string>
     <string name="background">
 Ogni storia ha un inizio.
-La storia del tuo personaggio rivela da dove provieni, come sei
-diventato un avventuriero, e il tuo posto nel mondo.
+La storia del tuo personaggio rivela da dove provieni, come sei diventato un avventuriero, e il tuo posto nel mondo.
 Il tuo guerriero può essere stato un coraggioso cavaliere o un vecchio soldato.
 Il tuo mago può essere stato un saggio o un artigiano.
 Il tuo ladro potrebbe essersi guadagnato da vivere lavorando per una gilda o intrattenendo il pubblico come un giullare.
@@ -247,7 +246,6 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="nome_npc">Nome NPC</string>
     <string name="aggiungi">Aggiungi</string>
     <string name="eliminazione_campagna">ATTENZIONE!!!\n \n Stai per eliminare dei dati che potrebbero non essere più recuperabili\n Vuoi continuare?</string>
-    <string name="scegli_competenze">Scegli una o più competenze</string>
-
+    <string name="numeroCompetenze">Scegli %d tra le seguenti competenze:</string>
 </resources>
 

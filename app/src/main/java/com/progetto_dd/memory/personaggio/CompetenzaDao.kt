@@ -8,11 +8,17 @@ import androidx.room.Query
 @Dao
 interface CompetenzaDao {
 
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrReplace(competenza: Competenza)
 
     @Insert
     suspend fun insertAll(competenze: List<Competenza>)
+
+    // Controlla se il database è vuoto
+    @Query("SELECT COUNT(*) FROM tabella_competenze")
+    suspend fun isCompetenzeTableEmpty(): Boolean
+
 
     /*
      La query con LIKE '%' || :classe || '%' cerca tutti i record in cui il valore della colonna

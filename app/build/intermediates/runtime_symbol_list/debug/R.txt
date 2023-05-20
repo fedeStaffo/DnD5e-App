@@ -3012,6 +3012,7 @@ int id action_bar_subtitle 0x7f080038
 int id action_bar_title 0x7f080039
 int id action_classFragment_to_classInfoFragment 0x7f08003a
 int id action_classFragment_to_competenzeFragment 0x7f08003b
+int id action_competenzeFragment_to_backgroundFragment 0x7f0802f5
 int id action_container 0x7f08003c
 int id action_context_bar 0x7f08003d
 int id action_divider 0x7f08003e
@@ -3052,6 +3053,7 @@ int id autoComplete 0x7f080060
 int id autoCompleteToEnd 0x7f080061
 int id autoCompleteToStart 0x7f080062
 int id backgroundEt 0x7f080063
+int id backgroundFragment 0x7f0802f6
 int id barrier 0x7f080064
 int id baseline 0x7f080065
 int id beginOnFirstDraw 0x7f080066
@@ -3129,8 +3131,8 @@ int id clip_vertical 0x7f0800ad
 int id clockwise 0x7f0800ae
 int id closest 0x7f0800af
 int id collapseActionView 0x7f0800b0
+int id competenzaCheckBox 0x7f0802f3
 int id competenzaName 0x7f0800b1
-int id competenzaRadioButton 0x7f0800b2
 int id competenzeFragment 0x7f0800b3
 int id compress 0x7f0800b4
 int id confermaEliminazioneFragment 0x7f0800b5
@@ -3410,6 +3412,7 @@ int id north 0x7f0801c6
 int id notification_background 0x7f0801c7
 int id notification_main_column 0x7f0801c8
 int id notification_main_column_container 0x7f0801c9
+int id numCompetenzeText 0x7f0802f4
 int id num_carisma 0x7f0801ca
 int id num_costituzione 0x7f0801cb
 int id num_destrezza 0x7f0801cc
@@ -3632,15 +3635,11 @@ int id textView46 0x7f0802a4
 int id textView47 0x7f0802a5
 int id textView48 0x7f0802a6
 int id textView49 0x7f0802a7
-int id textView5 0x7f0802a8
 int id textView50 0x7f0802a9
 int id textView51 0x7f0802aa
 int id textView52 0x7f0802ab
 int id textView53 0x7f0802ac
-int id textView6 0x7f0802ad
 int id textView7 0x7f0802ae
-int id textView8 0x7f0802af
-int id textView9 0x7f0802b0
 int id textViewPassword 0x7f0802b1
 int id textWatcher 0x7f0802b2
 int id text_input_end_icon 0x7f0802b3
@@ -4194,6 +4193,7 @@ int string nome_npc 0x7f1200f1
 int string nome_personaggio 0x7f1200f2
 int string nome_personaggio_lista 0x7f1200f3
 int string non_registrato 0x7f1200f4
+int string numeroCompetenze 0x7f120126
 int string otterai 0x7f1200f5
 int string paladino 0x7f1200f6
 int string partecipa 0x7f1200f7
@@ -4218,7 +4218,6 @@ int string saggezza 0x7f120109
 int string saggezza_title 0x7f12010a
 int string scegli 0x7f12010b
 int string scegli_classe 0x7f12010c
-int string scegli_competenze 0x7f120124
 int string scegli_la_razza 0x7f12010d
 int string scegli_la_sottorazza 0x7f12010e
 int string scegli_le_abilità 0x7f12010f

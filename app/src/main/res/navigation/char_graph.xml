@@ -61,6 +61,15 @@
         android:id="@+id/competenzeFragment"
         android:name="com.progetto_dd.view.characters.CompetenzeFragment"
         android:label="@string/crea_personaggio"
-        tools:layout="@layout/fragment_competenze" />
+        tools:layout="@layout/fragment_competenze" >
+        <action
+            android:id="@+id/action_competenzeFragment_to_backgroundFragment"
+            app:destination="@id/backgroundFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/backgroundFragment"
+        android:name="com.progetto_dd.view.characters.BackgroundFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_background" />
 
 </navigation>

@@ -5,10 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.textfield.TextInputEditText;
@@ -19,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentBackgroundBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final TextInputEditText backgroundEt;
@@ -40,36 +39,13 @@ public final class FragmentBackgroundBinding implements ViewBinding {
   public final TextInputEditText legamiEt;
 
   @NonNull
-  public final TextView textView2;
-
-  @NonNull
-  public final TextView textView4;
-
-  @NonNull
-  public final TextView textView5;
-
-  @NonNull
-  public final TextView textView6;
-
-  @NonNull
-  public final TextView textView7;
-
-  @NonNull
-  public final TextView textView8;
-
-  @NonNull
-  public final TextView textView9;
-
-  @NonNull
   public final TextInputEditText trattiEt;
 
-  private FragmentBackgroundBinding(@NonNull ConstraintLayout rootView,
+  private FragmentBackgroundBinding(@NonNull LinearLayout rootView,
       @NonNull TextInputEditText backgroundEt, @NonNull Button btnAvanti,
       @NonNull Button btnIndietro, @NonNull TextInputEditText difettiEt,
       @NonNull TextInputEditText idealiEt, @NonNull TextInputEditText legamiEt,
-      @NonNull TextView textView2, @NonNull TextView textView4, @NonNull TextView textView5,
-      @NonNull TextView textView6, @NonNull TextView textView7, @NonNull TextView textView8,
-      @NonNull TextView textView9, @NonNull TextInputEditText trattiEt) {
+      @NonNull TextInputEditText trattiEt) {
     this.rootView = rootView;
     this.backgroundEt = backgroundEt;
     this.btnAvanti = btnAvanti;
@@ -77,19 +53,12 @@ public final class FragmentBackgroundBinding implements ViewBinding {
     this.difettiEt = difettiEt;
     this.idealiEt = idealiEt;
     this.legamiEt = legamiEt;
-    this.textView2 = textView2;
-    this.textView4 = textView4;
-    this.textView5 = textView5;
-    this.textView6 = textView6;
-    this.textView7 = textView7;
-    this.textView8 = textView8;
-    this.textView9 = textView9;
     this.trattiEt = trattiEt;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -150,57 +119,14 @@ public final class FragmentBackgroundBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView2;
-      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
-      if (textView2 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView4;
-      TextView textView4 = ViewBindings.findChildViewById(rootView, id);
-      if (textView4 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView5;
-      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
-      if (textView5 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView6;
-      TextView textView6 = ViewBindings.findChildViewById(rootView, id);
-      if (textView6 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView7;
-      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
-      if (textView7 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView8;
-      TextView textView8 = ViewBindings.findChildViewById(rootView, id);
-      if (textView8 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView9;
-      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
-      if (textView9 == null) {
-        break missingId;
-      }
-
       id = R.id.trattiEt;
       TextInputEditText trattiEt = ViewBindings.findChildViewById(rootView, id);
       if (trattiEt == null) {
         break missingId;
       }
 
-      return new FragmentBackgroundBinding((ConstraintLayout) rootView, backgroundEt, btnAvanti,
-          btnIndietro, difettiEt, idealiEt, legamiEt, textView2, textView4, textView5, textView6,
-          textView7, textView8, textView9, trattiEt);
+      return new FragmentBackgroundBinding((LinearLayout) rootView, backgroundEt, btnAvanti,
+          btnIndietro, difettiEt, idealiEt, legamiEt, trattiEt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

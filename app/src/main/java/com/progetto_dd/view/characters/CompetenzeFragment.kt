@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentCompetenzeBinding
 import com.progetto_dd.memory.personaggio.*
 
@@ -43,7 +45,7 @@ class CompetenzeFragment : Fragment() {
         recyclerView.layoutManager = layoutManager
 
         // Inizializza l'adapter
-        adapter = CompetenzeAdapter(emptyList()) // Passa una lista vuota inizialmente
+        adapter = CompetenzeAdapter(emptyList(),0) // Passa una lista vuota inizialmente
         recyclerView.adapter = adapter
 
         // Inizializza il ViewModel delle competenze
@@ -63,6 +65,20 @@ class CompetenzeFragment : Fragment() {
         val classe = viewModelPersonaggio.classePersonaggio.value
         if (classe != null) {
             viewModel.getCompetenzeNomiByClasse(classe)
+            val numCompetenze = viewModel.getNumCompetenzeByClasse(classe)
+            binding.numCompetenze = numCompetenze
+            adapter.updateNumCompetenze(numCompetenze)
+
+            val selectedCompetenze = adapter.getSelectedCompetenze()
+
+
+            binding.btnAvanti.setOnClickListener {
+
+                // Salva le competenze selezionate nel ViewModel del personaggio
+                viewModelPersonaggio.setCompetenzePersonaggio(selectedCompetenze)
+
+                findNavController().navigate(R.id.action_competenzeFragment_to_backgroundFragment)
+            }
         }
     }
 

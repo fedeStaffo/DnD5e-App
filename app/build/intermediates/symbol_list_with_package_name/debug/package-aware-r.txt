@@ -3013,6 +3013,7 @@ id action_bar_subtitle
 id action_bar_title
 id action_classFragment_to_classInfoFragment
 id action_classFragment_to_competenzeFragment
+id action_competenzeFragment_to_backgroundFragment
 id action_container
 id action_context_bar
 id action_divider
@@ -3053,6 +3054,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id backgroundEt
+id backgroundFragment
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3130,8 +3132,8 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id competenzaCheckBox
 id competenzaName
-id competenzaRadioButton
 id competenzeFragment
 id compress
 id confermaEliminazioneFragment
@@ -3411,6 +3413,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numCompetenzeText
 id num_carisma
 id num_costituzione
 id num_destrezza
@@ -3633,15 +3636,11 @@ id textView46
 id textView47
 id textView48
 id textView49
-id textView5
 id textView50
 id textView51
 id textView52
 id textView53
-id textView6
 id textView7
-id textView8
-id textView9
 id textViewPassword
 id textWatcher
 id text_input_end_icon
@@ -4195,6 +4194,7 @@ string nome_npc
 string nome_personaggio
 string nome_personaggio_lista
 string non_registrato
+string numeroCompetenze
 string otterai
 string paladino
 string partecipa
@@ -4219,7 +4219,6 @@ string saggezza
 string saggezza_title
 string scegli
 string scegli_classe
-string scegli_competenze
 string scegli_la_razza
 string scegli_la_sottorazza
 string scegli_le_abilità

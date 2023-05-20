@@ -24,8 +24,7 @@
     <string name="avanti">AVANTI</string>
     <string name="background">
 Ogni storia ha un inizio.
-La storia del tuo personaggio rivela da dove provieni, come sei
-diventato un avventuriero, e il tuo posto nel mondo.
+La storia del tuo personaggio rivela da dove provieni, come sei diventato un avventuriero, e il tuo posto nel mondo.
 Il tuo guerriero può essere stato un coraggioso cavaliere o un vecchio soldato.
 Il tuo mago può essere stato un saggio o un artigiano.
 Il tuo ladro potrebbe essersi guadagnato da vivere lavorando per una gilda o intrattenendo il pubblico come un giullare.
@@ -213,6 +212,7 @@ superiore in certi tipi di prove di intelligenza.
     <string name="nome_personaggio">Come si chiama il tuo personaggio?</string>
     <string name="nome_personaggio_lista">Nome: </string>
     <string name="non_registrato">Non sei registrato? Clicca qui</string>
+    <string name="numeroCompetenze">Scegli %d tra le seguenti competenze:</string>
     <string name="otterai">Otterai le seguenti competenze:</string>
     <string name="paladino">Paladino</string>
     <string name="partecipa">Partecipa</string>
@@ -238,7 +238,6 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="saggezza_title">SAGGEZZA</string>
     <string name="scegli">Scegli</string>
     <string name="scegli_classe">Scegli una classe</string>
-    <string name="scegli_competenze">Scegli una o più competenze</string>
     <string name="scegli_la_razza">Scegli la razza</string>
     <string name="scegli_la_sottorazza">Scegli una sottorazza</string>
     <string name="scegli_le_abilità">Abilità scelte:</string>

@@ -54,6 +54,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="backgroundFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1550" />
+                            <option name="y" value="16" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="classFragment">
                     <value>
                       <LayoutPositions>
