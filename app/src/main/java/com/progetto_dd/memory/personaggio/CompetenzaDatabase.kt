@@ -17,6 +17,11 @@ abstract class CompetenzaDatabase: RoomDatabase() {
         @Volatile
         private var INSTANCE: CompetenzaDatabase?=null
 
+        /*
+         * Restituisce un'istanza del database delle competenze.
+         * @param context il contesto dell'applicazione
+         * @return un'istanza del database delle competenze
+         */
         fun getInstance(context: Context): CompetenzaDatabase{
             synchronized(this){
                 var instance = INSTANCE

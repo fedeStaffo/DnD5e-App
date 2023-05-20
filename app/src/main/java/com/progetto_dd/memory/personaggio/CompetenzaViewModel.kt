@@ -35,11 +35,13 @@ class CompetenzaViewModel(private val dao: CompetenzaDao) : ViewModel() {
             "Mago" -> 2
             else -> {0}
         }
-        
+
         if(num!=0) return num
         else throw IllegalArgumentException("Classe sconosciuta!")
     }
 
+
+    // Inserisce le competenze predefinite nel database se la tabella delle competenze è vuota.
     private fun insertCompetenzePredefinite() {
 
         viewModelScope.launch {

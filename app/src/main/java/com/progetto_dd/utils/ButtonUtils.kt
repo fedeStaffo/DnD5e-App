@@ -10,6 +10,11 @@ import com.progetto_dd.R
 // il riferimento al context dove viene evocata
 class ButtonUtils(private val context: Context) {
 
+    /*
+     * Aggiorna lo stato dei pulsanti dopo il clic su uno di essi.
+     * @param clickedButton il pulsante cliccato
+     * @param unclickedButtons la lista dei pulsanti non cliccati
+     */
     fun updateButtonState(clickedButton: Button, unclickedButtons: List<Button>) {
         clickedButton.apply {
             text = context.getString(R.string.scelto).uppercase()
