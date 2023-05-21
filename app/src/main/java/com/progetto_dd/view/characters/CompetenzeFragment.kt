@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentCompetenzeBinding
 import com.progetto_dd.memory.personaggio.*
+import com.progetto_dd.memory.personaggio.competenza.*
 
 class CompetenzeFragment : Fragment() {
 

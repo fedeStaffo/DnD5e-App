@@ -70,6 +70,37 @@
         android:id="@+id/backgroundFragment"
         android:name="com.progetto_dd.view.characters.BackgroundFragment"
         android:label="@string/crea_personaggio"
-        tools:layout="@layout/fragment_background" />
+        tools:layout="@layout/fragment_background" >
+        <action
+            android:id="@+id/action_backgroundFragment_to_rollFragment"
+            app:destination="@id/rollFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rollFragment"
+        android:name="com.progetto_dd.view.characters.RollFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_roll" >
+        <action
+            android:id="@+id/action_rollFragment_to_equipaggiamentoFragment"
+            app:destination="@id/equipaggiamentoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipaggiamentoFragment"
+        android:name="com.progetto_dd.view.characters.EquipaggiamentoFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_equipaggiamento" >
+        <action
+            android:id="@+id/action_equipaggiamentoFragment_to_salvaPersonaggioFragment"
+            app:destination="@id/salvaPersonaggioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/salvaPersonaggioFragment"
+        android:name="com.progetto_dd.view.characters.SalvaPersonaggioFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_salva_personaggio" >
+        <action
+            android:id="@+id/action_salvaPersonaggioFragment_to_homeCharacterFragment"
+            app:destination="@id/homeCharacterFragment" />
+    </fragment>
 
 </navigation>
