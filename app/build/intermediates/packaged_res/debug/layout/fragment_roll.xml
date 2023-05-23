@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.characters.RollFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/statistiche_personaggio"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/textViewForza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forza_title"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewForzaDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forza"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewForza" />
+
+            <TextView
+                android:id="@+id/textViewDado1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dado"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewForzaDesc" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/num_forza"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/_3_d6"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado1" />
+
+            <TextView
+                android:id="@+id/textViewPiu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/num_forza"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado1" />
+
+            <TextView
+                android:id="@+id/textViewUguale1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="="
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/razza_num"
+                app:layout_constraintTop_toBottomOf="@+id/razza" />
+
+            <TextView
+                android:id="@+id/razza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/razza"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu1"
+                app:layout_constraintTop_toBottomOf="@+id/textViewForzaDesc" />
+
+            <TextView
+                android:id="@+id/totale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="@string/totale"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/razza"
+                app:layout_constraintTop_toBottomOf="@+id/textViewForzaDesc" />
+
+            <TextView
+                android:id="@+id/razza_num"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu1"
+                app:layout_constraintTop_toBottomOf="@+id/razza" />
+
+            <TextView
+                android:id="@+id/totale_num"
+                android:text="0"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewUguale1"
+                app:layout_constraintTop_toBottomOf="@+id/totale" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textViewDestrezza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/destrezza_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDestrezzaDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/destrezza"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDestrezza" />
+
+            <TextView
+                android:id="@+id/textViewDado2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dado"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDestrezzaDesc" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/num_destrezza"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/_3_d6"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado2" />
+
+            <TextView
+                android:id="@+id/textViewPiu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/num_destrezza"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado2" />
+
+            <TextView
+                android:id="@+id/textViewUguale2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="="
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/razza_num2"
+                app:layout_constraintTop_toBottomOf="@+id/razza2" />
+
+            <TextView
+                android:id="@+id/razza2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/razza"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu2"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDestrezzaDesc" />
+
+            <TextView
+                android:id="@+id/totale2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="@string/totale"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/razza2"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDestrezzaDesc" />
+
+            <TextView
+                android:id="@+id/razza_num2"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu2"
+                app:layout_constraintTop_toBottomOf="@+id/razza2" />
+
+            <TextView
+                android:id="@+id/totale_num2"
+                android:text="0"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewUguale2"
+                app:layout_constraintTop_toBottomOf="@+id/totale2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textViewCostituzione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/costituzione_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewCostituzioneDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/destrezza"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCostituzione" />
+
+            <TextView
+                android:id="@+id/textViewDado3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dado"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCostituzioneDesc" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/num_costituzione"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/_3_d6"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado3" />
+
+            <TextView
+                android:id="@+id/textViewPiu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/num_costituzione"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado3" />
+
+            <TextView
+                android:id="@+id/textViewUguale3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="="
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/razza_num3"
+                app:layout_constraintTop_toBottomOf="@+id/razza3" />
+
+            <TextView
+                android:id="@+id/razza3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/razza"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu3"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCostituzioneDesc" />
+
+            <TextView
+                android:id="@+id/totale3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="@string/totale"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/razza3"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCostituzioneDesc" />
+
+            <TextView
+                android:id="@+id/razza_num3"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu3"
+                app:layout_constraintTop_toBottomOf="@+id/razza3" />
+
+            <TextView
+                android:id="@+id/totale_num3"
+                android:text="0"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewUguale3"
+                app:layout_constraintTop_toBottomOf="@+id/totale3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textViewIntelligenza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/intelligenza_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewIntelligenzaDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/intelligenza"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewIntelligenza" />
+
+            <TextView
+                android:id="@+id/textViewDado4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dado"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewIntelligenzaDesc" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/num_intelligenza"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/_3_d6"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado4" />
+
+            <TextView
+                android:id="@+id/textViewPiu4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/num_intelligenza"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado4" />
+
+            <TextView
+                android:id="@+id/textViewUguale4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="="
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/razza_num4"
+                app:layout_constraintTop_toBottomOf="@+id/razza4" />
+
+            <TextView
+                android:id="@+id/razza4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/razza"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu4"
+                app:layout_constraintTop_toBottomOf="@+id/textViewIntelligenzaDesc" />
+
+            <TextView
+                android:id="@+id/totale4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="@string/totale"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/razza4"
+                app:layout_constraintTop_toBottomOf="@+id/textViewIntelligenzaDesc" />
+
+            <TextView
+                android:id="@+id/razza_num4"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu4"
+                app:layout_constraintTop_toBottomOf="@+id/razza4" />
+
+            <TextView
+                android:id="@+id/totale_num4"
+                android:text="0"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewUguale4"
+                app:layout_constraintTop_toBottomOf="@+id/totale4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textViewSaggezza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saggezza_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewSaggezzaDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saggezza"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSaggezza" />
+
+            <TextView
+                android:id="@+id/textViewDado5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dado"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSaggezzaDesc" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/num_saggezza"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/_3_d6"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado5" />
+
+            <TextView
+                android:id="@+id/textViewPiu5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/num_saggezza"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado5" />
+
+            <TextView
+                android:id="@+id/textViewUguale5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="="
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/razza_num5"
+                app:layout_constraintTop_toBottomOf="@+id/razza5" />
+
+            <TextView
+                android:id="@+id/razza5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/razza"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu5"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSaggezzaDesc" />
+
+            <TextView
+                android:id="@+id/totale5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="@string/totale"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/razza5"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSaggezzaDesc" />
+
+            <TextView
+                android:id="@+id/razza_num5"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu5"
+                app:layout_constraintTop_toBottomOf="@+id/razza5" />
+
+            <TextView
+                android:id="@+id/totale_num5"
+                android:text="0"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewUguale5"
+                app:layout_constraintTop_toBottomOf="@+id/totale5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textViewCarisma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/carisma_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewCarismaDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/carisma"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCarisma" />
+
+            <TextView
+                android:id="@+id/textViewDado6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dado"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCarismaDesc" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/num_carisma"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/_3_d6"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado6" />
+
+            <TextView
+                android:id="@+id/textViewPiu6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/num_carisma"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDado6" />
+
+            <TextView
+                android:id="@+id/textViewUguale6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="="
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toEndOf="@+id/razza_num6"
+                app:layout_constraintTop_toBottomOf="@+id/razza6" />
+
+            <TextView
+                android:id="@+id/razza6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/razza"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu6"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCarismaDesc" />
+
+            <TextView
+                android:id="@+id/totale6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="@string/totale"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintStart_toEndOf="@+id/razza6"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCarismaDesc" />
+
+            <TextView
+                android:id="@+id/razza_num6"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewPiu6"
+                app:layout_constraintTop_toBottomOf="@+id/razza6" />
+
+            <TextView
+                android:id="@+id/totale_num6"
+                android:text="0"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewUguale6"
+                app:layout_constraintTop_toBottomOf="@+id/totale6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_calcola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="@string/calcola_totali"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btn_avanti"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="@string/avanti"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

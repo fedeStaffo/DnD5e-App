@@ -1,29 +1,25 @@
 package com.progetto_dd
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.ui.NavigationUI
-import com.google.android.material.navigation.NavigationView
 import com.google.android.material.appbar.MaterialToolbar
-import com.google.firebase.auth.FirebaseAuth
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        firebaseAuth = FirebaseAuth.getInstance()
 
         // Imposta la toolbar personalizzata
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
@@ -47,15 +43,6 @@ class MainActivity : AppCompatActivity() {
         val navView = findViewById<NavigationView>(R.id.nav_view)
         NavigationUI.setupWithNavController(navView, navController)
 
-        // Prende un riferimento alla textview nel navigation header
-        // per far visualizzare sotto all'immagine del profilo la mail dell'utente
-        val headerView = navView.getHeaderView(0)
-        val mailTextView = headerView.findViewById<TextView>(R.id.mail_profilo)
-        val user = firebaseAuth.currentUser
-        if (user != null) {
-            val email = user.email
-            mailTextView.text = email
-        }
     }
 
     // Aggiunge gli item del menu alla toolbar
@@ -68,5 +55,10 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+    }
+
+    fun openMainActivity(menuItem: MenuItem) {
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
     }
 }

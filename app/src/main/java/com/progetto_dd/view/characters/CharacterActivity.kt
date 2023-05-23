@@ -1,5 +1,6 @@
 package com.progetto_dd.view.characters
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -10,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
+import com.progetto_dd.MainActivity
 import com.progetto_dd.R
 
 class CharacterActivity : AppCompatActivity() {
@@ -43,5 +45,10 @@ class CharacterActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_characters)
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+    }
+
+    fun openMainActivityFromChar(menuItem: MenuItem) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }

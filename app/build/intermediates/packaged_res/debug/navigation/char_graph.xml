@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/char_graph"
+    app:startDestination="@id/homeCharacterFragment">
+
+    <fragment
+        android:id="@+id/homeCharacterFragment"
+        android:name="com.progetto_dd.view.characters.HomeCharacterFragment"
+        android:label="@string/personaggi"
+        tools:layout="@layout/fragment_home_character" >
+        <action
+            android:id="@+id/action_homeCharacterFragment_to_nameCharacterFragment"
+            app:destination="@id/nameCharacterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nameCharacterFragment"
+        android:name="com.progetto_dd.view.characters.NameCharacterFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_name_character" >
+        <action
+            android:id="@+id/action_nameCharacterFragment_to_raceFragment"
+            app:destination="@id/raceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raceFragment"
+        android:name="com.progetto_dd.view.characters.RaceFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_race" >
+        <action
+            android:id="@+id/action_raceFragment_to_raceInfoFragment"
+            app:destination="@id/raceInfoFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_classFragment"
+            app:destination="@id/classFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raceInfoFragment"
+        android:name="com.progetto_dd.view.characters.RaceInfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_race_info" />
+    <fragment
+        android:id="@+id/classFragment"
+        android:name="com.progetto_dd.view.characters.ClassFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_class" >
+        <action
+            android:id="@+id/action_classFragment_to_classInfoFragment"
+            app:destination="@id/classInfoFragment" />
+        <action
+            android:id="@+id/action_classFragment_to_competenzeFragment"
+            app:destination="@id/competenzeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classInfoFragment"
+        android:name="com.progetto_dd.view.characters.ClassInfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_class_info" />
+    <fragment
+        android:id="@+id/competenzeFragment"
+        android:name="com.progetto_dd.view.characters.CompetenzeFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_competenze" >
+        <action
+            android:id="@+id/action_competenzeFragment_to_backgroundFragment"
+            app:destination="@id/backgroundFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/backgroundFragment"
+        android:name="com.progetto_dd.view.characters.BackgroundFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_background" >
+        <action
+            android:id="@+id/action_backgroundFragment_to_rollFragment"
+            app:destination="@id/rollFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rollFragment"
+        android:name="com.progetto_dd.view.characters.RollFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_roll" >
+        <action
+            android:id="@+id/action_rollFragment_to_equipaggiamentoFragment"
+            app:destination="@id/equipaggiamentoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipaggiamentoFragment"
+        android:name="com.progetto_dd.view.characters.EquipaggiamentoFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_equipaggiamento" >
+        <action
+            android:id="@+id/action_equipaggiamentoFragment_to_salvaPersonaggioFragment"
+            app:destination="@id/salvaPersonaggioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/salvaPersonaggioFragment"
+        android:name="com.progetto_dd.view.characters.SalvaPersonaggioFragment"
+        android:label="@string/crea_personaggio"
+        tools:layout="@layout/fragment_salva_personaggio" >
+        <action
+            android:id="@+id/action_salvaPersonaggioFragment_to_homeCharacterFragment"
+            app:destination="@id/homeCharacterFragment" />
+    </fragment>
+
+</navigation>

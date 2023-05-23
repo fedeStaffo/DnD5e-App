@@ -296,7 +296,7 @@ class PersonaggioViewModel : ViewModel() {
     }
 
     companion object {
-        private const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"
+        const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"
         private const val TAG_RACE = "com.progetto_dd.view.characters.RaceFragment"
         private const val TAG_CLASS = "com.progetto_dd.view.characters.ClassFragment"
         private const val TAG_SAVE = "com.progetto_dd.view.characters.SalvaPersonaggioFragment"

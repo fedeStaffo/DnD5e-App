@@ -20,7 +20,11 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val view = binding.root
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         // Definisce il comportamento dell'immagine del cavaliere che
         // porta alla sezione dei personaggi
@@ -49,8 +53,6 @@ class HomeFragment : Fragment() {
             // Chiude il Fragment
             activity?.finish()
         }
-
-        return view
     }
 
     override fun onDestroyView() {

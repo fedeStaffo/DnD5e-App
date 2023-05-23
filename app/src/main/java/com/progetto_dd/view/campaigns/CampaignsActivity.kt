@@ -1,5 +1,6 @@
 package com.progetto_dd.view.campaigns
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.progetto_dd.R
@@ -12,6 +13,7 @@ import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.progetto_dd.MainActivity
 
 
 class CampaignsActivity : AppCompatActivity() {
@@ -49,5 +51,10 @@ class CampaignsActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_campaigns)
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+    }
+
+    fun openMainActivityFromCamp(item: MenuItem){
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }

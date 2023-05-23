@@ -168,6 +168,12 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="scegli_il_tuo_equipaggiamento">Scegli il tuo equipaggiamento</string>
     <string name="sei_sicuro_di_creare_questo_personaggio">Sei sicuro di creare questo personaggio?</string>
     <string name="puoi_sempre_modificarlo_in_seguito">Puoi sempre modificarlo in seguito...</string>
+    <string name="nome_master">Nome Master</string>
+    <string name="inserisci_un_personaggio">Inserisci un personaggio:</string>
+    <string name="campagne_in_corso">Campagne in corso:</string>
+    <string name="email_utente">Email Utente:</string>
+    <string name="personaggi_creati">Personaggi creati:</string>
+    <string name="classe_e_razza_preferite">Classe e razza preferite:</string>
     <string-array name="allineamento_spinner">
         <item>-</item>
         <item>Legale buono</item>

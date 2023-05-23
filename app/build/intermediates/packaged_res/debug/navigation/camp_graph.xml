@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camp_graph"
+    app:startDestination="@id/homeCampaignsFragment">
+
+    <fragment
+        android:id="@+id/homeCampaignsFragment"
+        android:name="com.progetto_dd.view.campaigns.HomeCampaignsFragment"
+        android:label="@string/campagne"
+        tools:layout="@layout/fragment_home_campaigns" />
+    <fragment
+        android:id="@+id/addCampaignFragment"
+        android:name="com.progetto_dd.view.campaigns.AddCampaignFragment"
+        android:label="@string/crea"
+        tools:layout="@layout/fragment_add_campaign" />
+    <fragment
+        android:id="@+id/joinCampaignFragment"
+        android:name="com.progetto_dd.view.campaigns.JoinCampaignFragment"
+        android:label="@string/unisciti"
+        tools:layout="@layout/fragment_join_campaign" />
+</navigation>
