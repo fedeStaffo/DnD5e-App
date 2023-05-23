@@ -1,13 +1,12 @@
 package com.progetto_dd.view.characters
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
-import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentSalvaPersonaggioBinding
 import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
@@ -35,7 +34,11 @@ class SalvaPersonaggioFragment : Fragment() {
         // Salva il personaggio
         binding.btnSalva.setOnClickListener {
             viewModel.saveCharacterToFirestore()
-            findNavController().navigate(R.id.action_salvaPersonaggioFragment_to_homeCharacterFragment)
+
+            // Restarta l'activity personaggio
+            val intent = Intent(activity, CharacterActivity::class.java)
+            startActivity(intent)
+            activity?.finish()
         }
     }
 

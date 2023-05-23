@@ -16,7 +16,7 @@ class CompetenzaViewModel(private val dao: CompetenzaDao) : ViewModel() {
     }
 
     // Prende le competenze della classe data dal database ordinandole per nome
-    fun getCompetenzeNomiByClasse(classe: String) {
+    private fun getCompetenzeNomiByClasse(classe: String) {
         viewModelScope.launch {
             val competenzeNomi = withContext(Dispatchers.IO) {
                 dao.getCompetenzeNomiByClasse(classe).sorted()

@@ -49,6 +49,7 @@ class PersonaggioAdapter(private val personaggi: List<Personaggio>) :
             raceTextView.text = personaggio.razza
             // Imposta la classe del personaggio
             classTextView.text = personaggio.classe
+
         }
 
     }
