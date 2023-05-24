@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/nameCharacterFragment"
-        android:name="com.progetto_dd.view.characters.NameCharacterFragment"
+        android:name="com.progetto_dd.view.characters.crea.NameCharacterFragment"
         android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_name_character" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/raceFragment"
-        android:name="com.progetto_dd.view.characters.RaceFragment"
+        android:name="com.progetto_dd.view.characters.crea.RaceFragment"
         android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_race" >
         <action
@@ -37,12 +37,12 @@
     </fragment>
     <fragment
         android:id="@+id/raceInfoFragment"
-        android:name="com.progetto_dd.view.characters.RaceInfoFragment"
+        android:name="com.progetto_dd.view.characters.crea.RaceInfoFragment"
         android:label="@string/info"
         tools:layout="@layout/fragment_race_info" />
     <fragment
         android:id="@+id/classFragment"
-        android:name="com.progetto_dd.view.characters.ClassFragment"
+        android:name="com.progetto_dd.view.characters.crea.ClassFragment"
         android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_class" >
         <action
@@ -54,12 +54,12 @@
     </fragment>
     <fragment
         android:id="@+id/classInfoFragment"
-        android:name="com.progetto_dd.view.characters.ClassInfoFragment"
+        android:name="com.progetto_dd.view.characters.crea.ClassInfoFragment"
         android:label="@string/info"
         tools:layout="@layout/fragment_class_info" />
     <fragment
         android:id="@+id/competenzeFragment"
-        android:name="com.progetto_dd.view.characters.CompetenzeFragment"
+        android:name="com.progetto_dd.view.characters.crea.CompetenzeFragment"
         android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_competenze" >
         <action
@@ -68,7 +68,7 @@
     </fragment>
     <fragment
         android:id="@+id/backgroundFragment"
-        android:name="com.progetto_dd.view.characters.BackgroundFragment"
+        android:name="com.progetto_dd.view.characters.crea.BackgroundFragment"
         android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_background" >
         <action
@@ -77,7 +77,7 @@
     </fragment>
     <fragment
         android:id="@+id/rollFragment"
-        android:name="com.progetto_dd.view.characters.RollFragment"
+        android:name="com.progetto_dd.view.characters.crea.RollFragment"
         android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_roll" >
         <action
@@ -86,7 +86,7 @@
     </fragment>
     <fragment
         android:id="@+id/equipaggiamentoFragment"
-        android:name="com.progetto_dd.view.characters.EquipaggiamentoFragment"
+        android:name="com.progetto_dd.view.characters.crea.EquipaggiamentoFragment"
         android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_equipaggiamento" >
         <action
@@ -95,7 +95,7 @@
     </fragment>
     <fragment
         android:id="@+id/salvaPersonaggioFragment"
-        android:name="com.progetto_dd.view.characters.SalvaPersonaggioFragment"
+        android:name="com.progetto_dd.view.characters.crea.SalvaPersonaggioFragment"
         android:label="@string/crea_personaggio"
         tools:layout="@layout/fragment_salva_personaggio" >
         <action

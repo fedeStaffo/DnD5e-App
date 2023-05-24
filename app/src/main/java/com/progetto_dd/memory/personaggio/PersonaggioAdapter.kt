@@ -1,11 +1,14 @@
 package com.progetto_dd.memory.personaggio
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
+import com.progetto_dd.view.campaigns.drawer.MainDrawerCampagnaActivity
+import com.progetto_dd.view.characters.visualizza.VisualizzaPersonaggioActivity
 
 // Classe adapter per gestire la lista dei personaggi
 class PersonaggioAdapter(private val personaggi: List<Personaggio>) :
@@ -49,6 +52,16 @@ class PersonaggioAdapter(private val personaggi: List<Personaggio>) :
             raceTextView.text = personaggio.razza
             // Imposta la classe del personaggio
             classTextView.text = personaggio.classe
+
+            // Imposta il listener del clic sulla card della campagna
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, VisualizzaPersonaggioActivity::class.java)
+                // Passa il nome della campagna e l'id del master alla nuova activity
+                intent.putExtra("nome", personaggio.nome)
+                intent.putExtra("razza", personaggio.razza)
+                intent.putExtra("classe", personaggio.classe)
+                itemView.context.startActivity(intent)
+            }
 
         }
 

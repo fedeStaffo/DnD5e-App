@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/visualizzaCampagnaFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.visualizzaCampagnaFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaCampagnaFragment"
         android:label="Campagna"
         tools:layout="@layout/fragment_visualizza_campagna" />
     <fragment
         android:id="@+id/visualizzaNpcFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.visualizzaNpcFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaNpcFragment"
         android:label="Npc"
         tools:layout="@layout/fragment_visualizza_npc" />
     <fragment
@@ -22,22 +22,22 @@
         tools:layout="@layout/fragment_nuovo_oggetto" />
     <fragment
         android:id="@+id/effettiFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.effettiFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.EffettiFragment"
         android:label="fragment_effetti"
         tools:layout="@layout/fragment_effetti" />
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.resetPasswordFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.ResetPasswordFragment"
         android:label="fragment_resetpassword"
         tools:layout="@layout/fragment_reset_password" />
     <fragment
         android:id="@+id/eliminaGiocatoriFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.eliminaGiocatoriFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.EliminaGiocatoriFragment"
         android:label="fragment_eliminagiocatori"
         tools:layout="@layout/fragment_elimina_giocatori" />
     <fragment
         android:id="@+id/eliminaCampagnaFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.eliminaCampagnaFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.EliminaCampagnaFragment"
         android:label="fragment_eliminacampagna"
         tools:layout="@layout/fragment_elimina_campagna" />
     <fragment
@@ -47,7 +47,7 @@
         tools:layout="@layout/fragment_dado" />
     <fragment
         android:id="@+id/visualizzasessioniFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.visualizzaSessioniFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioniFragment"
         android:label="fragment_visualizzasessioni"
         tools:layout="@layout/fragment_visualizza_sessioni" />
     <fragment

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".view.characters.SalvaPersonaggioFragment">
+    tools:context=".view.characters.crea.SalvaPersonaggioFragment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,8 +26,9 @@
         android:textColor="@color/black"/>
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="384dp"
+        android:layout_width="wrap_content"
+        android:layout_height="418dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/classi_sfondo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,13 +37,15 @@
 
         <Button
             android:id="@+id/btn_salva"
+            android:layout_marginTop="20dp"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
             android:text="@string/crea"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

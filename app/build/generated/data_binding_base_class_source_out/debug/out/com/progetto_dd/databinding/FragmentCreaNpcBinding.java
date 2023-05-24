@@ -9,7 +9,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.textfield.TextInputEditText;
@@ -20,16 +19,13 @@ import java.lang.String;
 
 public final class FragmentCreaNpcBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final Button aggiungiNpc;
 
   @NonNull
   public final TextInputEditText descrizioneNpc;
-
-  @NonNull
-  public final TextInputEditText descrizionePerMaster;
 
   @NonNull
   public final TextInputEditText nomeNpc;
@@ -43,27 +39,21 @@ public final class FragmentCreaNpcBinding implements ViewBinding {
   @NonNull
   public final TextView textView2;
 
-  @NonNull
-  public final TextView textView3;
-
-  private FragmentCreaNpcBinding(@NonNull ConstraintLayout rootView, @NonNull Button aggiungiNpc,
-      @NonNull TextInputEditText descrizioneNpc, @NonNull TextInputEditText descrizionePerMaster,
-      @NonNull TextInputEditText nomeNpc, @NonNull ScrollView scrollView,
-      @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3) {
+  private FragmentCreaNpcBinding(@NonNull ScrollView rootView, @NonNull Button aggiungiNpc,
+      @NonNull TextInputEditText descrizioneNpc, @NonNull TextInputEditText nomeNpc,
+      @NonNull ScrollView scrollView, @NonNull TextView textView, @NonNull TextView textView2) {
     this.rootView = rootView;
     this.aggiungiNpc = aggiungiNpc;
     this.descrizioneNpc = descrizioneNpc;
-    this.descrizionePerMaster = descrizionePerMaster;
     this.nomeNpc = nomeNpc;
     this.scrollView = scrollView;
     this.textView = textView;
     this.textView2 = textView2;
-    this.textView3 = textView3;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -100,23 +90,13 @@ public final class FragmentCreaNpcBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.descrizione_per_master;
-      TextInputEditText descrizionePerMaster = ViewBindings.findChildViewById(rootView, id);
-      if (descrizionePerMaster == null) {
-        break missingId;
-      }
-
       id = R.id.nome_npc;
       TextInputEditText nomeNpc = ViewBindings.findChildViewById(rootView, id);
       if (nomeNpc == null) {
         break missingId;
       }
 
-      id = R.id.scrollView;
-      ScrollView scrollView = ViewBindings.findChildViewById(rootView, id);
-      if (scrollView == null) {
-        break missingId;
-      }
+      ScrollView scrollView = (ScrollView) rootView;
 
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
@@ -130,14 +110,8 @@ public final class FragmentCreaNpcBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView3;
-      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
-      if (textView3 == null) {
-        break missingId;
-      }
-
-      return new FragmentCreaNpcBinding((ConstraintLayout) rootView, aggiungiNpc, descrizioneNpc,
-          descrizionePerMaster, nomeNpc, scrollView, textView, textView2, textView3);
+      return new FragmentCreaNpcBinding((ScrollView) rootView, aggiungiNpc, descrizioneNpc, nomeNpc,
+          scrollView, textView, textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

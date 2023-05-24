@@ -289,7 +289,13 @@ class PersonaggioViewModel : ViewModel() {
             "intelligenza" to this.modIntelligenza.value,
             "saggezza" to this.modSaggezza.value,
             "carisma" to this.modCarisma.value,
-            "equipaggiamento" to this.equipaggiamento.value
+            "equipaggiamento" to this.equipaggiamento.value,
+
+            "stato" to "Nessuno",
+            "vitaMax" to 0,
+            "vita" to 0,
+            "livello" to 1
+            // slot ??
         )
 
         personaggiRef.add(character)
@@ -297,8 +303,8 @@ class PersonaggioViewModel : ViewModel() {
 
     companion object {
         const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"
-        private const val TAG_RACE = "com.progetto_dd.view.characters.RaceFragment"
-        private const val TAG_CLASS = "com.progetto_dd.view.characters.ClassFragment"
-        private const val TAG_SAVE = "com.progetto_dd.view.characters.SalvaPersonaggioFragment"
+        private const val TAG_RACE = "com.progetto_dd.view.characters.crea.RaceFragment"
+        private const val TAG_CLASS = "com.progetto_dd.view.characters.crea.ClassFragment"
+        private const val TAG_SAVE = "com.progetto_dd.view.characters.crea.SalvaPersonaggioFragment"
     }
 }

@@ -4,7 +4,6 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,9 +20,6 @@ public final class ItemPersonaggioBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
-  public final ImageView cancelButton;
-
-  @NonNull
   public final TextView listapClasse;
 
   @NonNull
@@ -32,10 +28,9 @@ public final class ItemPersonaggioBinding implements ViewBinding {
   @NonNull
   public final TextView listapRazza;
 
-  private ItemPersonaggioBinding(@NonNull CardView rootView, @NonNull ImageView cancelButton,
-      @NonNull TextView listapClasse, @NonNull TextView listapNome, @NonNull TextView listapRazza) {
+  private ItemPersonaggioBinding(@NonNull CardView rootView, @NonNull TextView listapClasse,
+      @NonNull TextView listapNome, @NonNull TextView listapRazza) {
     this.rootView = rootView;
-    this.cancelButton = cancelButton;
     this.listapClasse = listapClasse;
     this.listapNome = listapNome;
     this.listapRazza = listapRazza;
@@ -68,12 +63,6 @@ public final class ItemPersonaggioBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.cancel_button;
-      ImageView cancelButton = ViewBindings.findChildViewById(rootView, id);
-      if (cancelButton == null) {
-        break missingId;
-      }
-
       id = R.id.listap_classe;
       TextView listapClasse = ViewBindings.findChildViewById(rootView, id);
       if (listapClasse == null) {
@@ -92,8 +81,7 @@ public final class ItemPersonaggioBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemPersonaggioBinding((CardView) rootView, cancelButton, listapClasse, listapNome,
-          listapRazza);
+      return new ItemPersonaggioBinding((CardView) rootView, listapClasse, listapNome, listapRazza);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

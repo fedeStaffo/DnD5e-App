@@ -1,4 +1,4 @@
-#Tue May 23 23:18:16 CEST 2023
+#Wed May 24 19:04:19 CEST 2023
 path.4=15/classes.dex
 path.3=14/classes.dex
 path.2=11/classes.dex
@@ -8,6 +8,7 @@ renamed.8=classes9.dex
 path.8=8/classes.dex
 path.7=5/classes.dex
 path.6=3/classes.dex
+renamed.12=classes13.dex
 path.5=1/classes.dex
 renamed.11=classes12.dex
 renamed.10=classes11.dex
@@ -18,6 +19,7 @@ base.2=C\:\\Users\\fede0\\OneDrive\\Desktop\\esercizi e materiali\\3 anno\\progr
 base.1=C\:\\Users\\fede0\\OneDrive\\Desktop\\esercizi e materiali\\3 anno\\programmazione mobile\\Progetto-DnD\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.0=C\:\\Users\\fede0\\OneDrive\\Desktop\\esercizi e materiali\\3 anno\\programmazione mobile\\Progetto-DnD\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
+path.12=4/classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 path.10=classes2.dex
@@ -33,5 +35,6 @@ renamed.5=classes6.dex
 base.6=C\:\\Users\\fede0\\OneDrive\\Desktop\\esercizi e materiali\\3 anno\\programmazione mobile\\Progetto-DnD\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 renamed.4=classes5.dex
 base.5=C\:\\Users\\fede0\\OneDrive\\Desktop\\esercizi e materiali\\3 anno\\programmazione mobile\\Progetto-DnD\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.12=C\:\\Users\\fede0\\OneDrive\\Desktop\\esercizi e materiali\\3 anno\\programmazione mobile\\Progetto-DnD\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.11=C\:\\Users\\fede0\\OneDrive\\Desktop\\esercizi e materiali\\3 anno\\programmazione mobile\\Progetto-DnD\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 base.10=C\:\\Users\\fede0\\OneDrive\\Desktop\\esercizi e materiali\\3 anno\\programmazione mobile\\Progetto-DnD\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Progetto_D&amp;D</string>
+    <string name="app_name">Scheda personaggio 5e</string>
     <string name="nome_personaggio">Come si chiama il tuo personaggio?</string>
     <string name="indietro">INDIETRO</string>
     <string name="avanti">AVANTI</string>
@@ -354,6 +354,17 @@ disinvoltura in certi tipi di prove di Carisma.
         <item>Una dotazione da studioso</item>
         <item>Una dotazione da esploratore</item>
     </string-array>
+
+    <!-- Tabbed Visualizzazione -->
+    <string name="title_activity_visualizza_pers">VisualizzaPersActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="tab_text_4">Tab 4</string>
+    <string name="tab_text_5">Tab 5</string>
+    <string name="title_activity_visualizza_personaggio">VisualizzaPersonaggioActivity</string>
+    <string name="master">Master:</string>
+    <string name="giocatori">Giocatori:</string>
 
 </resources>
 

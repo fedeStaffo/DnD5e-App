@@ -173,6 +173,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFFF00</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <string name="_3_d6">3 D6</string>
     <string name="abilità">Abilità</string>
@@ -182,7 +187,7 @@
     <string name="aggiungi_personaggio">Aggiungi personaggio</string>
     <string name="aiuto">Aiuto</string>
     <string name="allineamento">Allineamento:</string>
-    <string name="app_name">Progetto_D&amp;D</string>
+    <string name="app_name">Scheda personaggio 5e</string>
     <string name="avanti">AVANTI</string>
     <string name="background">
 Ogni storia ha un inizio.
@@ -251,6 +256,7 @@ L\'abilità atletica rappresenta una maggiore prestanza in certi tipi di prove d
     </string>
     <string name="forza_title">FORZA</string>
     <string name="gcm_defaultSenderId" translatable="false">839056180853</string>
+    <string name="giocatori">Giocatori:</string>
     <string name="google_api_key" translatable="false">AIzaSyDcgPq3DEG1caZNXFNvE5pwZC79LNrW9EA</string>
     <string name="google_app_id" translatable="false">1:839056180853:android:60706d92b4d30d2d941a3c</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDcgPq3DEG1caZNXFNvE5pwZC79LNrW9EA</string>
@@ -280,6 +286,7 @@ superiore in certi tipi di prove di intelligenza.
     <string name="logout">Logout</string>
     <string name="logout_msg">Sei sicuro di voler effettuare il logout? Dovrai reinserire le tue credenziali per utilizzare di nuovo l\'app</string>
     <string name="mago">Mago</string>
+    <string name="master">Master:</string>
     <string name="messaggio_registrati">Benvenuto! Registrati per procedere</string>
     <string name="nano">Nano</string>
     <string name="nano_delle_colline">Nano delle colline</string>
@@ -332,6 +339,13 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="strumenti_1_linguaggi_1">1 linguaggio, 1 strumento</string>
     <string name="strumenti_2">2 strumenti</string>
     <string name="supporto">Supporto</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="tab_text_4">Tab 4</string>
+    <string name="tab_text_5">Tab 5</string>
+    <string name="title_activity_visualizza_pers">VisualizzaPersActivity</string>
+    <string name="title_activity_visualizza_personaggio">VisualizzaPersonaggioActivity</string>
     <string name="titolo">Campagne D&amp;D 5e</string>
     <string name="total">Total</string>
     <string name="totale">Totale</string>
@@ -352,4 +366,10 @@ maggiore sensibilità in certi tipi di prove di saggezza.
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         
     </style>
+    <style name="Theme.Progetto_DD.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.Progetto_DD.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Progetto_DD.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>

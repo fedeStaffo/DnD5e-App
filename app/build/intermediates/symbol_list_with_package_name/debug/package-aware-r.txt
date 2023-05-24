@@ -2092,6 +2092,10 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
+dimen appbar_padding
+dimen appbar_padding_top
 dimen appcompat_dialog_background_inset
 dimen browser_actions_context_menu_max_width
 dimen browser_actions_context_menu_min_padding
@@ -2157,6 +2161,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -2873,11 +2878,13 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable icon
+drawable info_image
 drawable john_wick
 drawable knight
 drawable lavoratore
 drawable left
 drawable libro_aperto
+drawable logo
 drawable logout
 drawable logout_112
 drawable logout_cloud
@@ -3161,6 +3168,7 @@ id confirmPassEt
 id confirmPasswordLayout
 id confirm_button
 id constraint
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -3198,7 +3206,6 @@ id dependency_ordering
 id descrizioneEt
 id descrizione_npc
 id descrizione_oggetto
-id descrizione_per_master
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3586,6 +3593,7 @@ id search_view_status_bar_spacer
 id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
+id section_label
 id select_dialog_listview
 id selected
 id selection_type
@@ -3645,6 +3653,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
+id tabs
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3667,6 +3676,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView1
 id textView2
 id textView3
 id textView4
@@ -3753,6 +3763,7 @@ id up
 id useLogo
 id vertical_only
 id view_offset_helper
+id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
@@ -3888,6 +3899,7 @@ layout activity_main
 layout activity_main_drawer_campagna
 layout activity_register
 layout activity_reset_password
+layout activity_visualizza_personaggio
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -3924,8 +3936,12 @@ layout fragment_home
 layout fragment_home_campaigns
 layout fragment_home_character
 layout fragment_info
+layout fragment_info_classe
+layout fragment_info_razza
+layout fragment_inventario
 layout fragment_join_campaign
 layout fragment_logout
+layout fragment_magie
 layout fragment_main_activity_drawer
 layout fragment_name_character
 layout fragment_nuovo_ogetto
@@ -3935,8 +3951,10 @@ layout fragment_race_info
 layout fragment_reset_password
 layout fragment_roll
 layout fragment_salva_personaggio
+layout fragment_statistiche
 layout fragment_visualizza_campagna
 layout fragment_visualizza_npc
+layout fragment_visualizza_personaggio
 layout fragment_visualizza_sessioni
 layout item_campagna
 layout item_personaggio
@@ -4009,6 +4027,7 @@ menu characters_toolbar
 menu menu_campagna
 menu menu_drawer
 menu menu_toolbar
+menu view_campagna_toolbar
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation camp_graph
@@ -4135,6 +4154,7 @@ string fallback_menu_item_share_link
 string forza
 string forza_title
 string gcm_defaultSenderId
+string giocatori
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
@@ -4172,6 +4192,7 @@ string m3_sys_motion_easing_standard
 string m3_sys_motion_easing_standard_accelerate
 string m3_sys_motion_easing_standard_decelerate
 string mago
+string master
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_24h_suffix
@@ -4316,6 +4337,13 @@ string storia
 string strumenti_1_linguaggi_1
 string strumenti_2
 string supporto
+string tab_text_1
+string tab_text_2
+string tab_text_3
+string tab_text_4
+string tab_text_5
+string title_activity_visualizza_pers
+string title_activity_visualizza_personaggio
 string titolo
 string total
 string totale
@@ -4934,6 +4962,9 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_Progetto_DD
+style Theme_Progetto_DD_AppBarOverlay
+style Theme_Progetto_DD_NoActionBar
+style Theme_Progetto_DD_PopupOverlay
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

@@ -1,5 +1,6 @@
 package com.progetto_dd.view.campaigns.drawer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.appbar.MaterialToolbar
@@ -13,7 +14,9 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
+import com.progetto_dd.MainActivity
 import com.progetto_dd.R
+import com.progetto_dd.view.campaigns.CampaignsActivity
 
 //activity nuova per la visualizzazione della campagna
 class MainDrawerCampagnaActivity : AppCompatActivity() {
@@ -37,7 +40,7 @@ class MainDrawerCampagnaActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_campagna, menu)
+        menuInflater.inflate(R.menu.view_campagna_toolbar, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -45,5 +48,10 @@ class MainDrawerCampagnaActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_campagna)
         return item.onNavDestinationSelected(navController)
                 ||super.onOptionsItemSelected(item)
+    }
+
+    fun openCampaignActivityFromView(menuItem: MenuItem) {
+        val intent = Intent(this, CampaignsActivity::class.java)
+        startActivity(intent)
     }
 }

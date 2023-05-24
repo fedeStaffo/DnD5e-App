@@ -11,14 +11,43 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.progetto_dd.memory.personaggio.Personaggio
 
 class CampagnaViewModel : ViewModel() {
 
     // Riferimenti alle collezioni nel database
     private val campagneRef = FirebaseFirestore.getInstance().collection("campagne")
+    private val personaggiRef = FirebaseFirestore.getInstance().collection("personaggi")
 
     // Riferimento all'utente loggato
     private val currentUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
+
+    // Variabile per il nome della campagna
+    private val _nomeCampagna = MutableLiveData<String>()
+    val nomeCampagna: LiveData<String>
+        get() = _nomeCampagna
+
+    fun setNomeCampagna(nome: String) {
+        _nomeCampagna.value = nome
+    }
+
+    // Variabile per il nome del Master
+    private val _nomeMaster = MutableLiveData<String>()
+    val nomeMaster: LiveData<String>
+        get() = _nomeMaster
+
+    fun setNomeMaster(nome: String) {
+        _nomeMaster.value = nome
+    }
+
+    // Variabile per il MasterId
+    private val _nomeMasterId = MutableLiveData<String>()
+    val nomeMasterId: LiveData<String>
+        get() = _nomeMasterId
+
+    fun setNomeMasterId(nome: String) {
+        _nomeMasterId.value = nome
+    }
 
     fun creaCampagna(nome: String, password: String, master: String) {
         currentUser?.let { user ->
@@ -115,6 +144,63 @@ class CampagnaViewModel : ViewModel() {
 
         return mutableLiveData
     }
+    fun getPersonaggiByCampagna(nomeCampagna: String): LiveData<List<Personaggio>> {
+        // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
+        val mutableLiveData = MutableLiveData<List<Personaggio>>()
+
+        // Query per ottenere i documenti delle campagne che corrispondono al nome specificato
+        val campagneQuery = campagneRef.whereEqualTo("nome", nomeCampagna)
+
+        // Aggiunge un listener per gli snapshot delle campagne
+        campagneQuery.addSnapshotListener { campagneSnapshot, campagneError ->
+            // Se si verifica un errore, lo stampa nel log e ritorna
+            if (campagneError != null) {
+                Log.w(TAG, "Listen failed for campagne.", campagneError)
+                return@addSnapshotListener
+            }
+
+            // Se lo snapshot delle campagne non è nullo e contiene almeno un documento
+            if (campagneSnapshot != null && !campagneSnapshot.isEmpty) {
+                val campagnaDocument = campagneSnapshot.documents[0]
+                val personaggi = campagnaDocument.get("personaggi") as? List<String>
+
+                // Se il campo "personaggi" è presente e non è vuoto
+                if (personaggi != null && personaggi.isNotEmpty()) {
+                    // Query per ottenere i personaggi la cui ID è presente nell'array "personaggi" della campagna
+                    val personaggiQuery = personaggiRef.whereIn("nome", personaggi).whereEqualTo("campagna", nomeCampagna)
+
+                    // Aggiunge un listener per gli snapshot dei personaggi
+                    personaggiQuery.addSnapshotListener { personaggiSnapshot, personaggiError ->
+                        // Se si verifica un errore, lo stampa nel log e ritorna
+                        if (personaggiError != null) {
+                            Log.w(TAG, "Listen failed for personaggi.", personaggiError)
+                            return@addSnapshotListener
+                        }
+
+                        // Se lo snapshot dei personaggi non è nullo, crea una lista di personaggi a partire dallo snapshot
+                        if (personaggiSnapshot != null) {
+                            val personaggiList = personaggiSnapshot.toObjects(Personaggio::class.java)
+                            // Aggiorna l'oggetto MutableLiveData con la nuova lista di personaggi
+                            mutableLiveData.postValue(personaggiList)
+                        } else {
+                            // Se lo snapshot dei personaggi è nullo, lo stampa nel log
+                            Log.d(TAG, "Current data for personaggi: null")
+                        }
+                    }
+                } else {
+                    // Se il campo "personaggi" non è presente o è vuoto, imposta l'oggetto MutableLiveData come lista vuota
+                    mutableLiveData.postValue(emptyList())
+                }
+            } else {
+                // Se lo snapshot delle campagne è nullo o non contiene documenti, imposta l'oggetto MutableLiveData come lista vuota
+                mutableLiveData.postValue(emptyList())
+            }
+        }
+
+        // Restituisce l'oggetto MutableLiveData come oggetto LiveData
+        return mutableLiveData
+    }
+
 
     fun aggiungiPersonaggioACampagna(context: Context, nomeCampagna: String, passwordCampagna: String, nomePersonaggioSelezionato: String) {
         // Verifica l'esistenza della campagna con la password fornita
@@ -148,42 +234,54 @@ class CampagnaViewModel : ViewModel() {
                     return@addOnSuccessListener
                 }
 
-                val personaggiRef = campagneRef.document(campagnaId)
+                // Aggiungi l'ID dell'utente corrente all'array "partecipanti"
+                campagneRef.document(campagnaId)
+                    .update("partecipanti", FieldValue.arrayUnion(currentUser?.uid))
+                    .addOnSuccessListener {
+                        // L'utente corrente è stato aggiunto con successo all'array "partecipanti"
 
-                // Verifica se l'utente corrente ha già un personaggio nella campagna
-                personaggiRef.get()
-                    .addOnSuccessListener { campagnaSnapshot ->
-                        val personaggi = campagnaSnapshot.get("personaggi") as? List<String>
-
-                        if (personaggi != null && personaggi.contains(currentUser?.uid)) {
-                            // L'utente corrente ha già un personaggio nella campagna
-                            Toast.makeText(context, "Hai già un personaggio nella campagna", Toast.LENGTH_SHORT).show()
-                            return@addOnSuccessListener
-                        }
-
-                        // Aggiungi il personaggio alla campagna
-                        personaggiRef.update("personaggi", FieldValue.arrayUnion(nomePersonaggioSelezionato))
+                        // Aggiungi il nome del personaggio all'array "personaggi"
+                        campagneRef.document(campagnaId)
+                            .update("personaggi", FieldValue.arrayUnion(nomePersonaggioSelezionato))
                             .addOnSuccessListener {
                                 // Il personaggio è stato aggiunto con successo all'array "personaggi"
                             }
                             .addOnFailureListener { exception ->
                                 Log.e(TAG, "Errore nella scrittura del personaggio su Firestore: ", exception)
                             }
-
-                        // Aggiungi l'ID dell'utente corrente all'array "partecipanti"
-                        personaggiRef.update("partecipanti", FieldValue.arrayUnion(currentUser?.uid))
-                            .addOnSuccessListener {
-                                // L'utente corrente è stato aggiunto con successo all'array "partecipanti"
-                            }
-                            .addOnFailureListener { exception ->
-                                Log.e(TAG, "Errore nella scrittura del partecipante su Firestore: ", exception)
-                            }
                     }
                     .addOnFailureListener { exception ->
-                        Log.e(TAG, "Errore nella lettura dei personaggi della campagna su Firestore: ", exception)
+                        Log.e(TAG, "Errore nella scrittura del partecipante su Firestore: ", exception)
                     }
             }
     }
+
+
+
+    fun aggiungiCampagnaAPersonaggio(nomePersonaggio: String, nomeCampagna: String) {
+
+        // Query per ottenere il riferimento al personaggio con il nome specificato
+        val query = personaggiRef.whereEqualTo("nome", nomePersonaggio)
+
+        query.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot.documents) {
+                // Aggiungi il nome della campagna al campo "campagna" del personaggio
+                document.reference.update("campagna", nomeCampagna)
+                    .addOnSuccessListener {
+                        // Aggiornamento riuscito
+                    }
+                    .addOnFailureListener { exception ->
+                        // Errore durante l'aggiornamento
+                        Log.e(TAG, "Errore durante l'aggiornamento del personaggio: ", exception)
+                    }
+            }
+        }.addOnFailureListener { exception ->
+            // Errore durante la query
+            Log.e(TAG, "Errore durante la ricerca del personaggio: ", exception)
+        }
+    }
+
+
 
 
     companion object {

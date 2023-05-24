@@ -31,6 +31,11 @@ color teal_200
 color teal_700
 color white
 color yellow
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
+dimen appbar_padding
+dimen appbar_padding_top
+dimen fab_margin
 dimen text_margin
 drawable add_user
 drawable backspace
@@ -51,11 +56,13 @@ drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon
+drawable info_image
 drawable john_wick
 drawable knight
 drawable lavoratore
 drawable left
 drawable libro_aperto
+drawable logo
 drawable logout
 drawable logout_112
 drawable logout_cloud
@@ -124,7 +131,6 @@ id button_aggiungi
 id camp_bottombar
 id camp_graph
 id campagneInCorso
-id cancel_button
 id char_graph
 id classFragment
 id classInfoFragment
@@ -134,6 +140,7 @@ id competenzeFragment
 id confermaEliminazioneFragment
 id confirmPassEt
 id confirmPasswordLayout
+id constraintLayout
 id creaNpcFragment
 id creaSessioniFragment
 id d10
@@ -149,7 +156,6 @@ id dadoFragment
 id descrizioneEt
 id descrizione_npc
 id descrizione_oggetto
-id descrizione_per_master
 id difettiEt
 id drawer_layout
 id drawer_layout_campagna
@@ -289,6 +295,7 @@ id scelta2
 id scelta3
 id scelta4
 id scrollView
+id section_label
 id sopravvivenza
 id sopravvivenzaCheckBox
 id spinner
@@ -304,8 +311,10 @@ id spinner_scelta_guerriero
 id storia
 id storiaCheckBox
 id storiaEt
+id tabs
 id textDado
 id textView
+id textView1
 id textView2
 id textView3
 id textView4
@@ -342,6 +351,7 @@ id textViewUguale3
 id textViewUguale4
 id textViewUguale5
 id textViewUguale6
+id title
 id toolbar
 id toolbarCampagna
 id toolbar_camp
@@ -359,6 +369,7 @@ id totale_num4
 id totale_num5
 id totale_num6
 id trattiEt
+id view_pager
 id visualizzaCampagnaFragment
 id visualizzaNpcFragment
 id visualizzasessioniFragment
@@ -369,6 +380,7 @@ layout activity_main
 layout activity_main_drawer_campagna
 layout activity_register
 layout activity_reset_password
+layout activity_visualizza_personaggio
 layout fragment_add_campaign
 layout fragment_background
 layout fragment_class
@@ -387,8 +399,12 @@ layout fragment_home
 layout fragment_home_campaigns
 layout fragment_home_character
 layout fragment_info
+layout fragment_info_classe
+layout fragment_info_razza
+layout fragment_inventario
 layout fragment_join_campaign
 layout fragment_logout
+layout fragment_magie
 layout fragment_main_activity_drawer
 layout fragment_name_character
 layout fragment_nuovo_ogetto
@@ -398,8 +414,10 @@ layout fragment_race_info
 layout fragment_reset_password
 layout fragment_roll
 layout fragment_salva_personaggio
+layout fragment_statistiche
 layout fragment_visualizza_campagna
 layout fragment_visualizza_npc
+layout fragment_visualizza_personaggio
 layout fragment_visualizza_sessioni
 layout item_campagna
 layout item_personaggio
@@ -411,6 +429,7 @@ menu characters_toolbar
 menu menu_campagna
 menu menu_drawer
 menu menu_toolbar
+menu view_campagna_toolbar
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation camp_graph
@@ -462,6 +481,7 @@ string email_utente
 string forza
 string forza_title
 string gcm_defaultSenderId
+string giocatori
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
@@ -485,6 +505,7 @@ string linguaggi_2
 string logout
 string logout_msg
 string mago
+string master
 string messaggio_registrati
 string nano
 string nano_delle_colline
@@ -531,6 +552,13 @@ string storia
 string strumenti_1_linguaggi_1
 string strumenti_2
 string supporto
+string tab_text_1
+string tab_text_2
+string tab_text_3
+string tab_text_4
+string tab_text_5
+string title_activity_visualizza_pers
+string title_activity_visualizza_personaggio
 string titolo
 string total
 string totale
@@ -539,5 +567,8 @@ string umano
 string unisciti
 string username
 style Theme.Progetto_DD
+style Theme.Progetto_DD.AppBarOverlay
+style Theme.Progetto_DD.NoActionBar
+style Theme.Progetto_DD.PopupOverlay
 xml backup_rules
 xml data_extraction_rules

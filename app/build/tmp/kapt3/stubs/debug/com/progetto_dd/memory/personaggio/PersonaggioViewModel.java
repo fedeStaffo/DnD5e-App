@@ -30,9 +30,9 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     public static final com.progetto_dd.memory.personaggio.PersonaggioViewModel.Companion Companion = null;
     @org.jetbrains.annotations.NotNull()
     public static final java.lang.String TAG = "com.progetto_dd.view.characters.HomeCharacterFragment";
-    private static final java.lang.String TAG_RACE = "com.progetto_dd.view.characters.RaceFragment";
-    private static final java.lang.String TAG_CLASS = "com.progetto_dd.view.characters.ClassFragment";
-    private static final java.lang.String TAG_SAVE = "com.progetto_dd.view.characters.SalvaPersonaggioFragment";
+    private static final java.lang.String TAG_RACE = "com.progetto_dd.view.characters.crea.RaceFragment";
+    private static final java.lang.String TAG_CLASS = "com.progetto_dd.view.characters.crea.ClassFragment";
+    private static final java.lang.String TAG_SAVE = "com.progetto_dd.view.characters.crea.SalvaPersonaggioFragment";
     
     public PersonaggioViewModel() {
         super();

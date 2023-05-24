@@ -6,7 +6,7 @@
     android:id="@+id/drawer_layout_campagna"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.campaigns.drawer.MainDrawerCampagnaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

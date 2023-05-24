@@ -1,11 +1,13 @@
 package com.progetto_dd.memory.campagna
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
+import com.progetto_dd.view.campaigns.drawer.MainDrawerCampagnaActivity
 
 class CampagnaAdapter(private val campagne: List<Campagna>):
     RecyclerView.Adapter<CampagnaAdapter.CampagnaViewHolder>() {
@@ -45,6 +47,16 @@ class CampagnaAdapter(private val campagne: List<Campagna>):
             nameTextView.text = campagna.nome
             // Imposta la razza del campagna
             masterTextView.text = campagna.masterNome
+
+            // Imposta il listener del clic sulla card della campagna
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, MainDrawerCampagnaActivity::class.java)
+                // Passa il nome della campagna e l'id del master alla nuova activity
+                intent.putExtra("campagna_nome", campagna.nome)
+                intent.putExtra("master_id", campagna.masterId)
+                intent.putExtra("master_nome", campagna.masterNome)
+                itemView.context.startActivity(intent)
+            }
         }
     }
 }

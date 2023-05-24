@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
+import com.progetto_dd.MainActivity
 import com.progetto_dd.databinding.FragmentJoinCampaignBinding
 import com.progetto_dd.memory.campagna.CampagnaViewModel
 
@@ -45,10 +46,13 @@ class JoinCampaignFragment : Fragment() {
                 val nomeCampagna = binding.nomecampagnaEt.text.toString()
                 val passCampagna = binding.editTextPassword.text.toString()
 
+                // Chiamata alla funzione del view model per aggiungere la campagna al personaggio
+                viewModel.aggiungiCampagnaAPersonaggio(nomePersonaggioSelezionato,nomeCampagna)
                 // Chiamata alla funzione del view model per aggiungere il personaggio alla campagna
                 viewModel.aggiungiPersonaggioACampagna(requireContext(), nomeCampagna, passCampagna, nomePersonaggioSelezionato)
+
                 // Restarta l'activity campagna
-                val intent = Intent(activity, CampaignsActivity::class.java)
+                val intent = Intent(activity, MainActivity::class.java)
                 startActivity(intent)
                 activity?.finish()
             }

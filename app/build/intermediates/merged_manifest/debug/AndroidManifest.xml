@@ -27,11 +27,16 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/logo"
+        android:label="Scheda\nD&amp;D 5e"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Progetto_DD" >
+        <activity
+            android:name="com.progetto_dd.view.characters.visualizza.VisualizzaPersonaggioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_visualizza_personaggio"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.progetto_dd.view.campaigns.drawer.MainDrawerCampagnaActivity"
             android:exported="false"

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.characters.RaceInfoFragment">
+    tools:context=".view.characters.crea.RaceInfoFragment">
 
     <TextView
         android:id="@+id/race_info_text"

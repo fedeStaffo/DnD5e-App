@@ -27,58 +27,56 @@ class ProfileFragment : Fragment() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val user = firebaseAuth.currentUser
         if (user != null) {
             val email = user.email
             binding.mailUtente.text = email
+
+            getCountOfCharactersForCurrentUser(user.uid,
+                onSuccess = { count ->
+                    binding.personaggiCreati.text = count.toString()
+                },
+                onFailure = { exception ->
+                    throw IllegalArgumentException("Personaggi non trovati")
+                }
+            )
+
+            countMostFrequentRaceForUser(user.uid,
+                onSuccess = { race ->
+                    binding.razzaPref.text = race
+                },
+                onFailure = { exception ->
+                    throw IllegalArgumentException("Personaggi non trovati")
+                }
+            )
+
+            countMostFrequentClassForUser(user.uid,
+                onSuccess = { charClass ->
+                    binding.classePref.text = charClass
+                },
+                onFailure = { exception ->
+                    throw IllegalArgumentException("Personaggi non trovati")
+                }
+            )
+
+            countOccurrencesOfUserId(user.uid,
+                onSuccess = { totalCount ->
+                    binding.campagneInCorso.text = totalCount.toString()
+                },
+                onFailure = { exception ->
+                    throw IllegalArgumentException("Personaggi non trovati")
+                }
+            )
         }
-
-        getCountOfCharactersForCurrentUser(user.toString(),
-            onSuccess = { count ->
-                // Il numero di personaggi per l'utente corrente è disponibile qui
-                binding.personaggiCreati.text = count.toString()
-            },
-            onFailure = { exception ->
-                throw java.lang.IllegalArgumentException("Personaggi non trovati")
-            }
-        )
-
-        countMostFrequentRaceForUser(user.toString(),
-            onSuccess = { race ->
-                // La razza più frequente per l'utente corrente è disponibile qui
-                binding.razzaPref.text = race
-            },
-            onFailure = { exception ->
-                // Si è verificato un errore durante il conteggio delle razze
-                throw java.lang.IllegalArgumentException("Personaggi non trovati")
-            }
-        )
-
-        countMostFrequentClassForUser(user.toString(),
-            onSuccess = { charClass ->
-                // La classe più frequente per l'utente corrente è disponibile qui
-                binding.classePref.text = charClass
-            },
-            onFailure = { exception ->
-                // Si è verificato un errore durante il conteggio delle classi
-                throw java.lang.IllegalArgumentException("Personaggi non trovati")
-            }
-        )
-
-        countOccurrencesOfUserId(user.toString(),
-            onSuccess = { totalCount ->
-                // Il numero totale di occorrenze dell'ID utente nella collezione "campagne"
-                binding.campagneInCorso.text = totalCount.toString()
-            },
-            onFailure = { exception ->
-                // Si è verificato un errore durante il conteggio delle occorrenze
-                throw java.lang.IllegalArgumentException("Personaggi non trovati")
-            }
-        )
-
-
-        return view
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -87,7 +85,7 @@ class ProfileFragment : Fragment() {
 
     fun getCountOfCharactersForCurrentUser(userId: String, onSuccess: (Int) -> Unit, onFailure: (Exception) -> Unit) {
         val firestore = FirebaseFirestore.getInstance()
-        val collectionRef = firestore.collection("campagne")
+        val collectionRef = firestore.collection("personaggi")
 
         collectionRef
             .whereEqualTo("utenteId", userId)
@@ -100,6 +98,7 @@ class ProfileFragment : Fragment() {
                 onFailure(exception)
             }
     }
+
 
     fun countMostFrequentRaceForUser(userId: String, onSuccess: (String) -> Unit, onFailure: (Exception) -> Unit) {
         val firestore = FirebaseFirestore.getInstance()
