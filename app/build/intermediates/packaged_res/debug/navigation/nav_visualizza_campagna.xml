@@ -14,56 +14,53 @@
         android:id="@+id/visualizzaNpcFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaNpcFragment"
         android:label="Npc"
-        tools:layout="@layout/fragment_visualizza_npc" />
+        tools:layout="@layout/fragment_visualizza_npc" >
+    </fragment>
     <fragment
         android:id="@+id/nuovoOggettoFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.NuovoOggettoFragment"
         android:label="Inventario"
-        tools:layout="@layout/fragment_nuovo_oggetto" />
+        tools:layout="@layout/fragment_nuovo_ogetto" />
     <fragment
         android:id="@+id/effettiFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.EffettiFragment"
-        android:label="fragment_effetti"
+        android:label="Status"
         tools:layout="@layout/fragment_effetti" />
     <fragment
         android:id="@+id/resetPasswordFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.ResetPasswordFragment"
-        android:label="fragment_resetpassword"
+        android:label="Reset Password"
         tools:layout="@layout/fragment_reset_password" />
     <fragment
         android:id="@+id/eliminaGiocatoriFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.EliminaGiocatoriFragment"
-        android:label="fragment_eliminagiocatori"
+        android:label="Elimina giocatori"
         tools:layout="@layout/fragment_elimina_giocatori" />
     <fragment
         android:id="@+id/eliminaCampagnaFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.EliminaCampagnaFragment"
-        android:label="fragment_eliminacampagna"
+        android:label="Elimina campagna"
         tools:layout="@layout/fragment_elimina_campagna" />
     <fragment
         android:id="@+id/dadoFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.DadoFragment"
-        android:label="fragment_dado"
+        android:label="Dado"
         tools:layout="@layout/fragment_dado" />
     <fragment
         android:id="@+id/visualizzasessioniFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioniFragment"
-        android:label="fragment_visualizzasessioni"
+        android:label="Visualizza sessioni"
         tools:layout="@layout/fragment_visualizza_sessioni" />
     <fragment
         android:id="@+id/creaNpcFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.CreaNpcFragment"
-        android:label="fragment_crea_npc"
+        android:label="Crea Npc"
         tools:layout="@layout/fragment_crea_npc" />
     <fragment
         android:id="@+id/creaSessioniFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.CreaSessioniFragment"
-        android:label="fragment_crea_sessioni"
+        android:label="Crea sessioni"
         tools:layout="@layout/fragment_crea_sessioni" />
-    <fragment
-        android:id="@+id/confermaEliminazioneFragment"
-        android:name="com.progetto_dd.view.campaigns.drawer.ConfermaEliminazioneFragment"
-        android:label="ConfermaEliminazioneFragment" />
 
 
 </navigation>

@@ -365,6 +365,26 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="title_activity_visualizza_personaggio">VisualizzaPersonaggioActivity</string>
     <string name="master">Master:</string>
     <string name="giocatori">Giocatori:</string>
+    <string name="legame">Legame:</string>
+    <string name="elimina">Elimina!</string>
+    <string name="descrizione1">Descrizione:</string>
+    <string name="nome1">Nome:</string>
+
+    <string-array name="legame_npc">
+        <item>Alleato</item>
+        <item>Amico</item>
+        <item>Animale</item>
+        <item>Base</item>
+        <item>Boss</item>
+        <item>Divinità</item>
+        <item>Famigliare</item>
+        <item>Locandiere</item>
+        <item>Maestro</item>
+        <item>Mostriciattolo</item>
+        <item>Nemesi</item>
+        <item>Nemico</item>
+        <item>Patrono</item>
+    </string-array>
 
 </resources>
 

@@ -12,6 +12,21 @@
         <item>Neutrale malvagio</item>
         <item>Caotico malvagio</item>
     </string-array>
+    <string-array name="legame_npc">
+        <item>Alleato</item>
+        <item>Amico</item>
+        <item>Animale</item>
+        <item>Base</item>
+        <item>Boss</item>
+        <item>Divinità</item>
+        <item>Famigliare</item>
+        <item>Locandiere</item>
+        <item>Maestro</item>
+        <item>Mostriciattolo</item>
+        <item>Nemesi</item>
+        <item>Nemico</item>
+        <item>Patrono</item>
+    </string-array>
     <string-array name="scelta_bardo_1">
         <item>-</item>
         <item>Uno stocco</item>
@@ -232,6 +247,7 @@ oltre i propri limiti.
     <string name="dado">Dado</string>
     <string name="default_web_client_id" translatable="false">839056180853-7uilmg6sr7mqtic63835jk0apquructj.apps.googleusercontent.com</string>
     <string name="descrizione">Descrizione fisica:</string>
+    <string name="descrizione1">Descrizione:</string>
     <string name="destrezza">
 La Destrezza misura l\'agilità, i riflessi e l\'equilibrio.
 Una prova di destrezza può rappresentar ogni tentativo di muoversi agilmente, rapidamente o silenziosamente,
@@ -244,6 +260,7 @@ Le abilità acrobazia, furtività e rapidità di mano rappresentano una maggiore
     <string name="elfo_alto">Elfo alto</string>
     <string name="elfo_dei_boschi">Elfo dei boschi</string>
     <string name="elfo_oscuro">Elfo oscuro</string>
+    <string name="elimina">Elimina!</string>
     <string name="eliminazione_campagna">ATTENZIONE!!!\n \n Stai per eliminare dei dati che potrebbero non essere più recuperabili\n Vuoi continuare?</string>
     <string name="email">Email</string>
     <string name="email_utente">Email Utente:</string>
@@ -281,6 +298,7 @@ superiore in certi tipi di prove di intelligenza.
     </string>
     <string name="intelligenza_title">INTELLIGENZA</string>
     <string name="ladro">Ladro</string>
+    <string name="legame">Legame:</string>
     <string name="legami">Legami:</string>
     <string name="linguaggi_2">2 linguaggi</string>
     <string name="logout">Logout</string>
@@ -292,6 +310,7 @@ superiore in certi tipi di prove di intelligenza.
     <string name="nano_delle_colline">Nano delle colline</string>
     <string name="nano_delle_montagne">Nano delle montagne</string>
     <string name="nome">Nome</string>
+    <string name="nome1">Nome:</string>
     <string name="nome_campagna">Nome Campagna</string>
     <string name="nome_master">Nome Master</string>
     <string name="nome_npc">Nome NPC</string>

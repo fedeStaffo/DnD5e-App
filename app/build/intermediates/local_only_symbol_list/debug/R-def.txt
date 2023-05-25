@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 array allineamento_spinner
+array legame_npc
 array scelta_bardo_1
 array scelta_bardo_2
 array scelta_bardo_3
@@ -83,6 +84,9 @@ drawable update_new_password_icon
 drawable user
 drawable xbutton
 drawable zaino_scolastico
+id Descrizione
+id Legame
+id Nome
 id acrobazia
 id acrobaziaCheckBox
 id action_backgroundFragment_to_rollFragment
@@ -120,6 +124,7 @@ id bottone8
 id bottone9
 id bottone_meno
 id bottone_piu
+id btnAvanti
 id btn_avanti
 id btn_avanti_crea_pers
 id btn_calcola
@@ -137,7 +142,6 @@ id classInfoFragment
 id class_info_text
 id classePref
 id competenzeFragment
-id confermaEliminazioneFragment
 id confirmPassEt
 id confirmPasswordLayout
 id constraintLayout
@@ -166,6 +170,7 @@ id effetti
 id effettiFragment
 id eliminaCampagnaFragment
 id eliminaGiocatoriFragment
+id elimina_npc
 id emailEt
 id emailLayout
 id email_per_reset
@@ -204,6 +209,8 @@ id intuizione
 id intuizioneCheckBox
 id joinCampaignFragment
 id legamiEt
+id lista_npcLegame
+id lista_npcNome
 id listap_classe
 id listap_nome
 id listap_razza
@@ -277,6 +284,7 @@ id religioneCheckBox
 id resetPasswordFragment
 id reset_button
 id reyclerViewCamp
+id reyclerViewNpc
 id reyclerViewPers
 id roll
 id rollFragment
@@ -299,6 +307,7 @@ id section_label
 id sopravvivenza
 id sopravvivenzaCheckBox
 id spinner
+id spinnerLegame
 id spinnerPersonaggi
 id spinner_effetti
 id spinner_giocatore
@@ -380,13 +389,13 @@ layout activity_main
 layout activity_main_drawer_campagna
 layout activity_register
 layout activity_reset_password
+layout activity_visualizza_npc
 layout activity_visualizza_personaggio
 layout fragment_add_campaign
 layout fragment_background
 layout fragment_class
 layout fragment_class_info
 layout fragment_competenze
-layout fragment_conferma_eliminazione
 layout fragment_crea_npc
 layout fragment_crea_sessioni
 layout fragment_dado
@@ -420,6 +429,7 @@ layout fragment_visualizza_npc
 layout fragment_visualizza_personaggio
 layout fragment_visualizza_sessioni
 layout item_campagna
+layout item_npc
 layout item_personaggio
 layout nav_header
 layout nav_immagine_campagna
@@ -468,6 +478,7 @@ string crea_personaggio
 string dado
 string default_web_client_id
 string descrizione
+string descrizione1
 string destrezza
 string destrezza_title
 string difetti
@@ -475,6 +486,7 @@ string elfo
 string elfo_alto
 string elfo_dei_boschi
 string elfo_oscuro
+string elimina
 string eliminazione_campagna
 string email
 string email_utente
@@ -500,6 +512,7 @@ string inserisci_un_personaggio
 string intelligenza
 string intelligenza_title
 string ladro
+string legame
 string legami
 string linguaggi_2
 string logout
@@ -511,6 +524,7 @@ string nano
 string nano_delle_colline
 string nano_delle_montagne
 string nome
+string nome1
 string nome_campagna
 string nome_master
 string nome_npc

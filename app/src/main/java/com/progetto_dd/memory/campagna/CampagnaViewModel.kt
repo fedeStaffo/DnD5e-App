@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.progetto_dd.memory.personaggio.Personaggio
 
 class CampagnaViewModel : ViewModel() {
@@ -70,6 +71,7 @@ class CampagnaViewModel : ViewModel() {
 
     fun getCampagne(): LiveData<List<Campagna>> {
         val mutableLiveData = MutableLiveData<List<Campagna>>()
+
 
         val userId = currentUser?.uid
 
@@ -219,7 +221,7 @@ class CampagnaViewModel : ViewModel() {
 
                 val partecipanti = campagnaDocument.get("partecipanti") as? List<String>
 
-                if (partecipanti != null && partecipanti.contains(currentUser?.uid)) {
+                if (partecipanti?.contains(currentUser?.uid) == true) {
                     // L'utente corrente è già un partecipante della campagna
                     Toast.makeText(context, "Partecipi già a questa campagna", Toast.LENGTH_SHORT).show()
                     return@addOnSuccessListener
@@ -228,34 +230,28 @@ class CampagnaViewModel : ViewModel() {
                 val userId = currentUser?.uid
                 val campagnaMasterId = campagnaDocument.getString("masterId")
 
-                if (userId != null && userId == campagnaMasterId) {
+                if (userId == campagnaMasterId) {
                     // L'utente corrente è il master della campagna
                     Toast.makeText(context, "Sei già il master di questa campagna", Toast.LENGTH_SHORT).show()
                     return@addOnSuccessListener
                 }
 
-                // Aggiungi l'ID dell'utente corrente all'array "partecipanti"
+                val updates = mutableMapOf<String, Any>()
+                updates["partecipanti"] = FieldValue.arrayUnion(userId)
+                updates["personaggi"] = FieldValue.arrayUnion(nomePersonaggioSelezionato)
+
+                // Aggiorna i campi "partecipanti" e "personaggi" nell'array "campagne"
                 campagneRef.document(campagnaId)
-                    .update("partecipanti", FieldValue.arrayUnion(currentUser?.uid))
+                    .update(updates)
                     .addOnSuccessListener {
                         // L'utente corrente è stato aggiunto con successo all'array "partecipanti"
-
-                        // Aggiungi il nome del personaggio all'array "personaggi"
-                        campagneRef.document(campagnaId)
-                            .update("personaggi", FieldValue.arrayUnion(nomePersonaggioSelezionato))
-                            .addOnSuccessListener {
-                                // Il personaggio è stato aggiunto con successo all'array "personaggi"
-                            }
-                            .addOnFailureListener { exception ->
-                                Log.e(TAG, "Errore nella scrittura del personaggio su Firestore: ", exception)
-                            }
+                        // Il personaggio è stato aggiunto con successo all'array "personaggi"
                     }
                     .addOnFailureListener { exception ->
-                        Log.e(TAG, "Errore nella scrittura del partecipante su Firestore: ", exception)
+                        Log.e(TAG, "Errore nella scrittura del partecipante o del personaggio su Firestore: ", exception)
                     }
             }
     }
-
 
 
     fun aggiungiCampagnaAPersonaggio(nomePersonaggio: String, nomeCampagna: String) {
@@ -282,9 +278,76 @@ class CampagnaViewModel : ViewModel() {
     }
 
 
+    fun eliminaGiocatoreDaCampagna(
+        personaggioSelezionato: String,
+        nomeCampagna: String,
+        masterId: String,
+        context: Context
+    ) {
+        val personaggiQuery = personaggiRef.whereEqualTo("nome", personaggioSelezionato)
+
+        personaggiQuery.get().addOnSuccessListener { querySnapshot ->
+            if (querySnapshot.isEmpty) {
+                // Il personaggio non esiste
+                return@addOnSuccessListener
+            }
+
+            val personaggioDocument = querySnapshot.documents[0]
+
+            // Setta a vuoto il campo "campagna" del personaggio
+            personaggioDocument.reference.set(
+                mapOf("campagna" to ""),
+                SetOptions.merge()
+            )
+                .addOnSuccessListener {
+                    // Aggiornamento riuscito
+
+                    // Rimuovi l'id dell'utente dall'array "partecipanti" della campagna
+                    val updates = mutableMapOf<String, Any>()
+                    updates["partecipanti"] = FieldValue.arrayRemove(currentUser?.uid)
+
+                    campagneRef.whereEqualTo("nome", nomeCampagna)
+                        .whereEqualTo("masterId", masterId)
+                        .get()
+                        .addOnSuccessListener { querySnapshot ->
+                            if (querySnapshot.isEmpty) {
+                                // La campagna non esiste
+                                return@addOnSuccessListener
+                            }
+
+                            val campagnaDocument = querySnapshot.documents[0]
+                            campagnaDocument.reference.update(updates)
+                                .addOnSuccessListener {
+                                    // Rimozione riuscita
+                                    Toast.makeText(context, "Giocatore eliminato dalla campagna", Toast.LENGTH_SHORT).show()
+                                }
+                                .addOnFailureListener { exception ->
+                                    Log.e(TAG_ELIMINA, "Errore durante la rimozione del giocatore dalla campagna: ", exception)
+                                }
+                        }
+                        .addOnFailureListener { exception ->
+                            // Errore durante la query della campagna
+                            Log.e(TAG_ELIMINA, "Errore durante la ricerca della campagna: ", exception)
+                        }
+                }
+                .addOnFailureListener { exception ->
+                    // Errore durante l'aggiornamento del personaggio
+                    Log.e(TAG_ELIMINA, "Errore durante l'aggiornamento del personaggio: ", exception)
+                }
+        }.addOnFailureListener { exception ->
+            // Errore durante la query del personaggio
+            Log.e(TAG_ELIMINA, "Errore durante la ricerca del personaggio: ", exception)
+        }
+    }
+
+
+
+
+
 
 
     companion object {
         private const val TAG = "com.progetto_dd.view.campaigns.HomeCampaignsFragment"
+        private const val TAG_ELIMINA = "com.progetto_dd.view.campaigns.EliminaGiocatoriFragment"
     }
 }

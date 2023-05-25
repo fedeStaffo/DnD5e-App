@@ -33,9 +33,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Progetto_DD" >
         <activity
+            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaNpcActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.progetto_dd.view.characters.visualizza.VisualizzaPersonaggioActivity"
             android:exported="false"
-            android:label="@string/title_activity_visualizza_personaggio"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.progetto_dd.view.campaigns.drawer.MainDrawerCampagnaActivity"

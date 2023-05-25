@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,21 +35,30 @@ public final class FragmentCreaNpcBinding implements ViewBinding {
   public final ScrollView scrollView;
 
   @NonNull
+  public final Spinner spinnerLegame;
+
+  @NonNull
   public final TextView textView;
 
   @NonNull
   public final TextView textView2;
 
+  @NonNull
+  public final TextView textView3;
+
   private FragmentCreaNpcBinding(@NonNull ScrollView rootView, @NonNull Button aggiungiNpc,
       @NonNull TextInputEditText descrizioneNpc, @NonNull TextInputEditText nomeNpc,
-      @NonNull ScrollView scrollView, @NonNull TextView textView, @NonNull TextView textView2) {
+      @NonNull ScrollView scrollView, @NonNull Spinner spinnerLegame, @NonNull TextView textView,
+      @NonNull TextView textView2, @NonNull TextView textView3) {
     this.rootView = rootView;
     this.aggiungiNpc = aggiungiNpc;
     this.descrizioneNpc = descrizioneNpc;
     this.nomeNpc = nomeNpc;
     this.scrollView = scrollView;
+    this.spinnerLegame = spinnerLegame;
     this.textView = textView;
     this.textView2 = textView2;
+    this.textView3 = textView3;
   }
 
   @Override
@@ -98,6 +108,12 @@ public final class FragmentCreaNpcBinding implements ViewBinding {
 
       ScrollView scrollView = (ScrollView) rootView;
 
+      id = R.id.spinnerLegame;
+      Spinner spinnerLegame = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerLegame == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
@@ -110,8 +126,14 @@ public final class FragmentCreaNpcBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView3;
+      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
+      if (textView3 == null) {
+        break missingId;
+      }
+
       return new FragmentCreaNpcBinding((ScrollView) rootView, aggiungiNpc, descrizioneNpc, nomeNpc,
-          scrollView, textView, textView2);
+          scrollView, spinnerLegame, textView, textView2, textView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

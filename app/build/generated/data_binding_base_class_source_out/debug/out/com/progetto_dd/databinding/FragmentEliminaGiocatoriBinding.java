@@ -5,11 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.progetto_dd.R;
@@ -19,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentEliminaGiocatoriBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final Button btnAvanti;
@@ -27,20 +26,16 @@ public final class FragmentEliminaGiocatoriBinding implements ViewBinding {
   @NonNull
   public final Spinner spinner;
 
-  @NonNull
-  public final TextView textView52;
-
-  private FragmentEliminaGiocatoriBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btnAvanti, @NonNull Spinner spinner, @NonNull TextView textView52) {
+  private FragmentEliminaGiocatoriBinding(@NonNull LinearLayout rootView, @NonNull Button btnAvanti,
+      @NonNull Spinner spinner) {
     this.rootView = rootView;
     this.btnAvanti = btnAvanti;
     this.spinner = spinner;
-    this.textView52 = textView52;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -65,7 +60,7 @@ public final class FragmentEliminaGiocatoriBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_avanti;
+      id = R.id.btnAvanti;
       Button btnAvanti = ViewBindings.findChildViewById(rootView, id);
       if (btnAvanti == null) {
         break missingId;
@@ -77,14 +72,7 @@ public final class FragmentEliminaGiocatoriBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView52;
-      TextView textView52 = ViewBindings.findChildViewById(rootView, id);
-      if (textView52 == null) {
-        break missingId;
-      }
-
-      return new FragmentEliminaGiocatoriBinding((ConstraintLayout) rootView, btnAvanti, spinner,
-          textView52);
+      return new FragmentEliminaGiocatoriBinding((LinearLayout) rootView, btnAvanti, spinner);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

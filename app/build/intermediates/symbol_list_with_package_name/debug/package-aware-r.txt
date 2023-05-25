@@ -83,6 +83,7 @@ animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
 array allineamento_spinner
+array legame_npc
 array scelta_bardo_1
 array scelta_bardo_2
 array scelta_bardo_3
@@ -2983,9 +2984,12 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Descrizione
 id FUNCTION
+id Legame
 id META
 id NO_DEBUG
+id Nome
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -3122,6 +3126,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnAvanti
 id btn_avanti
 id btn_avanti_crea_pers
 id btn_calcola
@@ -3163,7 +3168,6 @@ id closest
 id collapseActionView
 id competenzeFragment
 id compress
-id confermaEliminazioneFragment
 id confirmPassEt
 id confirmPasswordLayout
 id confirm_button
@@ -3244,6 +3248,7 @@ id effettiFragment
 id elastic
 id eliminaCampagnaFragment
 id eliminaGiocatoriFragment
+id elimina_npc
 id emailEt
 id emailLayout
 id email_per_reset
@@ -3350,6 +3355,8 @@ id line3
 id linear
 id listMode
 id list_item
+id lista_npcLegame
+id lista_npcNome
 id listap_classe
 id listap_nome
 id listap_razza
@@ -3535,6 +3542,7 @@ id resetPasswordFragment
 id reset_button
 id reverseSawtooth
 id reyclerViewCamp
+id reyclerViewNpc
 id reyclerViewPers
 id right
 id rightToLeft
@@ -3619,6 +3627,7 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinner
+id spinnerLegame
 id spinnerPersonaggi
 id spinner_effetti
 id spinner_giocatore
@@ -3899,6 +3908,7 @@ layout activity_main
 layout activity_main_drawer_campagna
 layout activity_register
 layout activity_reset_password
+layout activity_visualizza_npc
 layout activity_visualizza_personaggio
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3923,7 +3933,6 @@ layout fragment_background
 layout fragment_class
 layout fragment_class_info
 layout fragment_competenze
-layout fragment_conferma_eliminazione
 layout fragment_crea_npc
 layout fragment_crea_sessioni
 layout fragment_dado
@@ -3957,6 +3966,7 @@ layout fragment_visualizza_npc
 layout fragment_visualizza_personaggio
 layout fragment_visualizza_sessioni
 layout item_campagna
+layout item_npc
 layout item_personaggio
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -4133,6 +4143,7 @@ string crea_personaggio
 string dado
 string default_web_client_id
 string descrizione
+string descrizione1
 string destrezza
 string destrezza_title
 string difetti
@@ -4140,6 +4151,7 @@ string elfo
 string elfo_alto
 string elfo_dei_boschi
 string elfo_oscuro
+string elimina
 string eliminazione_campagna
 string email
 string email_utente
@@ -4176,6 +4188,7 @@ string intelligenza
 string intelligenza_title
 string item_view_role_description
 string ladro
+string legame
 string legami
 string linguaggi_2
 string logout
@@ -4284,6 +4297,7 @@ string nano_delle_montagne
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string nome
+string nome1
 string nome_campagna
 string nome_master
 string nome_npc

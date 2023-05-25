@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
-import com.progetto_dd.view.campaigns.drawer.MainDrawerCampagnaActivity
 import com.progetto_dd.view.characters.visualizza.VisualizzaPersonaggioActivity
 
 // Classe adapter per gestire la lista dei personaggi
