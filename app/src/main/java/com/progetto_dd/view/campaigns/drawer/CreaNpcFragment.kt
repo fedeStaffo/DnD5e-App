@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.firestore.FirebaseFirestore
 import com.progetto_dd.R
@@ -57,9 +58,7 @@ class CreaNpcFragment : Fragment() {
                 firestore.collection("npc")
                     .add(npc)
                     .addOnSuccessListener {
-                        val intent = Intent(activity, MainDrawerCampagnaActivity::class.java)
-                        startActivity(intent)
-                        activity?.finish()
+                        findNavController().navigate(R.id.action_creaNpcFragment_to_visualizzaCampagnaFragment)
                     }
             }
         }

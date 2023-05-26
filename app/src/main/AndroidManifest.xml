@@ -12,10 +12,13 @@
         android:theme="@style/Theme.Progetto_DD"
         tools:targetApi="31">
         <activity
+            android:name=".view.campaigns.drawer.VisualizzaSessioniActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".view.campaigns.drawer.VisualizzaNpcActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".view.characters.visualizza.VisualizzaPersonaggioActivity"
             android:exported="false"

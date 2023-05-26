@@ -301,10 +301,53 @@ class PersonaggioViewModel : ViewModel() {
         personaggiRef.add(character)
     }
 
+    fun aggiungiEquipaggiamento(nomePersonaggio: String, nomeCampagna: String, nuovoOggetto: String) {
+        val db = FirebaseFirestore.getInstance()
+        val personaggiRef = db.collection("personaggi")
+
+        val equipaggiamentoList = _equipaggiamento.value?.toMutableList() ?: mutableListOf()
+        equipaggiamentoList.add(nuovoOggetto)
+
+        val personaggioQuery = personaggiRef
+            .whereEqualTo("nome", nomePersonaggio)
+            .whereEqualTo("campagna", nomeCampagna)
+
+        personaggioQuery.get().addOnSuccessListener { querySnapshot ->
+            if (!querySnapshot.isEmpty) {
+                val documentSnapshot = querySnapshot.documents[0]
+                val personaggioId = documentSnapshot.id
+
+                val updateData = hashMapOf<String, Any>(
+                    "equipaggiamento" to equipaggiamentoList
+                )
+
+                personaggiRef.document(personaggioId)
+                    .update(updateData)
+
+            }
+        }
+    }
+
+    fun updatePersonaggioStato(nomePersonaggio: String, nomeCampagna: String, nuovoStato: String) {
+
+        val db = FirebaseFirestore.getInstance()
+        val personaggiRef = db.collection("personaggi")
+
+        val query = personaggiRef.whereEqualTo("nome", nomePersonaggio)
+            .whereEqualTo("campagna", nomeCampagna)
+
+        query.get().addOnSuccessListener { documents ->
+            for (document in documents) {
+                // Modifica il campo "stato" del personaggio
+                document.reference.update("stato", nuovoStato)
+            }
+        }
+    }
+
+
     companion object {
         const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"
         private const val TAG_RACE = "com.progetto_dd.view.characters.crea.RaceFragment"
         private const val TAG_CLASS = "com.progetto_dd.view.characters.crea.ClassFragment"
-        private const val TAG_SAVE = "com.progetto_dd.view.characters.crea.SalvaPersonaggioFragment"
     }
 }

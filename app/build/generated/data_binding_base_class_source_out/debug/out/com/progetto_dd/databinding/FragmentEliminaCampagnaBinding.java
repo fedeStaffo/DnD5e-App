@@ -5,10 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.progetto_dd.R;
@@ -18,24 +17,20 @@ import java.lang.String;
 
 public final class FragmentEliminaCampagnaBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnAvanti;
+  public final Button btnEliminaCampagna;
 
-  @NonNull
-  public final TextView textView52;
-
-  private FragmentEliminaCampagnaBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btnAvanti, @NonNull TextView textView52) {
+  private FragmentEliminaCampagnaBinding(@NonNull LinearLayout rootView,
+      @NonNull Button btnEliminaCampagna) {
     this.rootView = rootView;
-    this.btnAvanti = btnAvanti;
-    this.textView52 = textView52;
+    this.btnEliminaCampagna = btnEliminaCampagna;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -60,19 +55,13 @@ public final class FragmentEliminaCampagnaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_avanti;
-      Button btnAvanti = ViewBindings.findChildViewById(rootView, id);
-      if (btnAvanti == null) {
+      id = R.id.btnEliminaCampagna;
+      Button btnEliminaCampagna = ViewBindings.findChildViewById(rootView, id);
+      if (btnEliminaCampagna == null) {
         break missingId;
       }
 
-      id = R.id.textView52;
-      TextView textView52 = ViewBindings.findChildViewById(rootView, id);
-      if (textView52 == null) {
-        break missingId;
-      }
-
-      return new FragmentEliminaCampagnaBinding((ConstraintLayout) rootView, btnAvanti, textView52);
+      return new FragmentEliminaCampagnaBinding((LinearLayout) rootView, btnEliminaCampagna);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

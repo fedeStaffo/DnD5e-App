@@ -33,6 +33,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.Progetto_DD" >
         <activity
+            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioniActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaNpcActivity"
             android:exported="false"
             android:screenOrientation="portrait" />

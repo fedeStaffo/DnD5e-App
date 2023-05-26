@@ -5,11 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Spinner;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.textfield.TextInputEditText;
@@ -20,22 +19,22 @@ import java.lang.String;
 
 public final class FragmentCreaSessioniBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
-  public final Button aggiungiOggetto;
+  public final Button aggiungiSessione;
 
   @NonNull
-  public final TextInputEditText descrizioneOggetto;
+  public final TextInputEditText descrizioneSessione;
 
   @NonNull
-  public final TextInputEditText nomeOggetto;
+  public final TextInputEditText giornoSessione;
 
   @NonNull
-  public final TextInputEditText quantitOggetto;
+  public final TextInputEditText numeroSessione;
 
   @NonNull
-  public final Spinner spinnerGiocatore;
+  public final ScrollView scrollView;
 
   @NonNull
   public final TextView textView;
@@ -46,29 +45,25 @@ public final class FragmentCreaSessioniBinding implements ViewBinding {
   @NonNull
   public final TextView textView3;
 
-  @NonNull
-  public final TextView textView53;
-
-  private FragmentCreaSessioniBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button aggiungiOggetto, @NonNull TextInputEditText descrizioneOggetto,
-      @NonNull TextInputEditText nomeOggetto, @NonNull TextInputEditText quantitOggetto,
-      @NonNull Spinner spinnerGiocatore, @NonNull TextView textView, @NonNull TextView textView2,
-      @NonNull TextView textView3, @NonNull TextView textView53) {
+  private FragmentCreaSessioniBinding(@NonNull ScrollView rootView,
+      @NonNull Button aggiungiSessione, @NonNull TextInputEditText descrizioneSessione,
+      @NonNull TextInputEditText giornoSessione, @NonNull TextInputEditText numeroSessione,
+      @NonNull ScrollView scrollView, @NonNull TextView textView, @NonNull TextView textView2,
+      @NonNull TextView textView3) {
     this.rootView = rootView;
-    this.aggiungiOggetto = aggiungiOggetto;
-    this.descrizioneOggetto = descrizioneOggetto;
-    this.nomeOggetto = nomeOggetto;
-    this.quantitOggetto = quantitOggetto;
-    this.spinnerGiocatore = spinnerGiocatore;
+    this.aggiungiSessione = aggiungiSessione;
+    this.descrizioneSessione = descrizioneSessione;
+    this.giornoSessione = giornoSessione;
+    this.numeroSessione = numeroSessione;
+    this.scrollView = scrollView;
     this.textView = textView;
     this.textView2 = textView2;
     this.textView3 = textView3;
-    this.textView53 = textView53;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -93,35 +88,31 @@ public final class FragmentCreaSessioniBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.aggiungi_oggetto;
-      Button aggiungiOggetto = ViewBindings.findChildViewById(rootView, id);
-      if (aggiungiOggetto == null) {
+      id = R.id.aggiungi_sessione;
+      Button aggiungiSessione = ViewBindings.findChildViewById(rootView, id);
+      if (aggiungiSessione == null) {
         break missingId;
       }
 
-      id = R.id.descrizione_oggetto;
-      TextInputEditText descrizioneOggetto = ViewBindings.findChildViewById(rootView, id);
-      if (descrizioneOggetto == null) {
+      id = R.id.descrizione_sessione;
+      TextInputEditText descrizioneSessione = ViewBindings.findChildViewById(rootView, id);
+      if (descrizioneSessione == null) {
         break missingId;
       }
 
-      id = R.id.nome_oggetto;
-      TextInputEditText nomeOggetto = ViewBindings.findChildViewById(rootView, id);
-      if (nomeOggetto == null) {
+      id = R.id.giorno_sessione;
+      TextInputEditText giornoSessione = ViewBindings.findChildViewById(rootView, id);
+      if (giornoSessione == null) {
         break missingId;
       }
 
-      id = R.id.quantità_oggetto;
-      TextInputEditText quantitOggetto = ViewBindings.findChildViewById(rootView, id);
-      if (quantitOggetto == null) {
+      id = R.id.numero_sessione;
+      TextInputEditText numeroSessione = ViewBindings.findChildViewById(rootView, id);
+      if (numeroSessione == null) {
         break missingId;
       }
 
-      id = R.id.spinner_giocatore;
-      Spinner spinnerGiocatore = ViewBindings.findChildViewById(rootView, id);
-      if (spinnerGiocatore == null) {
-        break missingId;
-      }
+      ScrollView scrollView = (ScrollView) rootView;
 
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
@@ -141,15 +132,9 @@ public final class FragmentCreaSessioniBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView53;
-      TextView textView53 = ViewBindings.findChildViewById(rootView, id);
-      if (textView53 == null) {
-        break missingId;
-      }
-
-      return new FragmentCreaSessioniBinding((ConstraintLayout) rootView, aggiungiOggetto,
-          descrizioneOggetto, nomeOggetto, quantitOggetto, spinnerGiocatore, textView, textView2,
-          textView3, textView53);
+      return new FragmentCreaSessioniBinding((ScrollView) rootView, aggiungiSessione,
+          descrizioneSessione, giornoSessione, numeroSessione, scrollView, textView, textView2,
+          textView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -386,5 +386,45 @@ disinvoltura in certi tipi di prove di Carisma.
         <item>Patrono</item>
     </string-array>
 
+    <string name="title_activity_visualizza_sessioni">VisualizzaSessioniActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="numero">Numero:</string>
+    <string name="giorno">Giorno:</string>
+    <string name="numero_sessione">Numero sessione</string>
+    <string name="giorno_della_sessione">Giorno della sessione</string>
+    <string name="oggetto">Oggetto:</string>
+    <string name="scegli_un_personaggio">Scegli un personaggio</string>
+    <string name="quale_personaggio_vuoi_nvisualizzare">Quale personaggio vuoi\nvisualizzare?</string>
+    <string name="quale_effetto_gli_vuoi_naggiungere">Quale effetto gli vuoi\naggiungere?</string>
+    <string name="effetti">Effetti</string>
+    <string name="vecchia_password">Vecchia password</string>
+    <string name="nuova_password">Nuova password</string>
+    <string name="stai_per_eliminare_la_campagna_nse_vuoi_continuare_clicca_procedi_naltrimenti_torna_indietro">Stai per eliminare la campagna!\nSe vuoi continuare clicca procedi,\naltrimenti torna indietro</string>
+
+    <string-array name="status">
+        <item>Accecato</item>
+        <item>Affascinato</item>
+        <item>Afferrato</item>
+        <item>Assordato</item>
+        <item>Avvelenato</item>
+        <item>Incapacitato</item>
+        <item>Invisibile</item>
+        <item>Paralizzato</item>
+        <item>Pietrificato</item>
+        <item>Privo di sensi</item>
+        <item>Prono</item>
+        <item>Spaventato</item>
+        <item>Stordito</item>
+        <item>Trattenuto</item>
+        <item>Nessuno</item>
+    </string-array>
+
 </resources>
 

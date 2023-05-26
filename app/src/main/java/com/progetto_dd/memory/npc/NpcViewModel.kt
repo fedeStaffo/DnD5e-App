@@ -52,4 +52,25 @@ class NpcViewModel: ViewModel() {
             }
     }
 
+    fun deleteNPCsFromCampaign(campaignName: String, masterId: String) {
+        val db = FirebaseFirestore.getInstance()
+        val npcCollection = db.collection("npc")
+
+        npcCollection
+            .whereEqualTo("campagna", campaignName)
+            .whereEqualTo("master", masterId)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                val batch = db.batch()
+
+                for (document in querySnapshot.documents) {
+                    val npcDocumentRef = npcCollection.document(document.id)
+                    batch.delete(npcDocumentRef)
+                }
+
+                batch.commit()
+            }
+    }
+
+
 }

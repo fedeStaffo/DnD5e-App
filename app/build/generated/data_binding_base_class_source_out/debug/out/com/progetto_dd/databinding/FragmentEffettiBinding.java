@@ -22,16 +22,10 @@ public final class FragmentEffettiBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button buttonAggiungi;
-
-  @NonNull
-  public final TextView effetti;
+  public final Button buttonAggiungiEffetto;
 
   @NonNull
   public final TextView scegliEffetto;
-
-  @NonNull
-  public final TextView scegliPersonaggio;
 
   @NonNull
   public final Spinner spinnerEffetti;
@@ -39,15 +33,12 @@ public final class FragmentEffettiBinding implements ViewBinding {
   @NonNull
   public final Spinner spinnerGiocatori;
 
-  private FragmentEffettiBinding(@NonNull LinearLayout rootView, @NonNull Button buttonAggiungi,
-      @NonNull TextView effetti, @NonNull TextView scegliEffetto,
-      @NonNull TextView scegliPersonaggio, @NonNull Spinner spinnerEffetti,
-      @NonNull Spinner spinnerGiocatori) {
+  private FragmentEffettiBinding(@NonNull LinearLayout rootView,
+      @NonNull Button buttonAggiungiEffetto, @NonNull TextView scegliEffetto,
+      @NonNull Spinner spinnerEffetti, @NonNull Spinner spinnerGiocatori) {
     this.rootView = rootView;
-    this.buttonAggiungi = buttonAggiungi;
-    this.effetti = effetti;
+    this.buttonAggiungiEffetto = buttonAggiungiEffetto;
     this.scegliEffetto = scegliEffetto;
-    this.scegliPersonaggio = scegliPersonaggio;
     this.spinnerEffetti = spinnerEffetti;
     this.spinnerGiocatori = spinnerGiocatori;
   }
@@ -79,15 +70,9 @@ public final class FragmentEffettiBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button_aggiungi;
-      Button buttonAggiungi = ViewBindings.findChildViewById(rootView, id);
-      if (buttonAggiungi == null) {
-        break missingId;
-      }
-
-      id = R.id.effetti;
-      TextView effetti = ViewBindings.findChildViewById(rootView, id);
-      if (effetti == null) {
+      id = R.id.buttonAggiungiEffetto;
+      Button buttonAggiungiEffetto = ViewBindings.findChildViewById(rootView, id);
+      if (buttonAggiungiEffetto == null) {
         break missingId;
       }
 
@@ -97,26 +82,20 @@ public final class FragmentEffettiBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.scegli_personaggio;
-      TextView scegliPersonaggio = ViewBindings.findChildViewById(rootView, id);
-      if (scegliPersonaggio == null) {
-        break missingId;
-      }
-
-      id = R.id.spinner_effetti;
+      id = R.id.spinnerEffetti;
       Spinner spinnerEffetti = ViewBindings.findChildViewById(rootView, id);
       if (spinnerEffetti == null) {
         break missingId;
       }
 
-      id = R.id.spinner_giocatori;
+      id = R.id.spinnerGiocatori;
       Spinner spinnerGiocatori = ViewBindings.findChildViewById(rootView, id);
       if (spinnerGiocatori == null) {
         break missingId;
       }
 
-      return new FragmentEffettiBinding((LinearLayout) rootView, buttonAggiungi, effetti,
-          scegliEffetto, scegliPersonaggio, spinnerEffetti, spinnerGiocatori);
+      return new FragmentEffettiBinding((LinearLayout) rootView, buttonAggiungiEffetto,
+          scegliEffetto, spinnerEffetti, spinnerGiocatori);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -6,12 +6,14 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.tasks.Tasks
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
+import com.progetto_dd.memory.npc.NpcViewModel
 import com.progetto_dd.memory.personaggio.Personaggio
 
 class CampagnaViewModel : ViewModel() {
@@ -340,9 +342,94 @@ class CampagnaViewModel : ViewModel() {
         }
     }
 
+    fun getPasswordByCampagna(nomeCampagna: String, masterId: String): MutableLiveData<String?> {
+        // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
+        val mutableLiveData = MutableLiveData<String?>()
+
+        // Query per ottenere il documento della campagna che corrisponde al nome e masterId specificati
+        val campagneQuery = campagneRef.whereEqualTo("nome", nomeCampagna).whereEqualTo("masterId", masterId)
+
+        // Aggiunge un listener per gli snapshot delle campagne
+        campagneQuery.addSnapshotListener { campagneSnapshot, campagneError ->
+            // Se si verifica un errore, lo stampa nel log e ritorna
+            if (campagneError != null) {
+                Log.w(TAG, "Listen failed for campagne.", campagneError)
+                return@addSnapshotListener
+            }
+
+            // Se lo snapshot delle campagne non è nullo e contiene almeno un documento
+            if (campagneSnapshot != null && !campagneSnapshot.isEmpty) {
+                val campagnaDocument = campagneSnapshot.documents[0]
+                val password = campagnaDocument.getString("password")
+
+                // Se il campo "password" è presente
+                if (password != null) {
+                    // Aggiorna l'oggetto MutableLiveData con la nuova password
+                    mutableLiveData.postValue(password)
+                } else {
+                    // Se il campo "password" non è presente, imposta l'oggetto MutableLiveData come stringa vuota
+                    mutableLiveData.postValue("")
+                }
+            } else {
+                // Se lo snapshot delle campagne è nullo o non contiene documenti, imposta l'oggetto MutableLiveData come stringa vuota
+                mutableLiveData.postValue("")
+            }
+        }
+
+        // Restituisce l'oggetto MutableLiveData come oggetto LiveData
+        return mutableLiveData
+    }
 
 
+    fun updateCampagnaPassword(nomeCampagna: String, masterId: String, password: String) {
+        val query =
+            campagneRef.whereEqualTo("nome", nomeCampagna).whereEqualTo("masterId", masterId)
 
+        query.get().addOnSuccessListener { querySnapshot ->
+            if (querySnapshot.isEmpty) {
+                // La campagna non esiste o il masterId non corrisponde
+                return@addOnSuccessListener
+            }
+
+            val campagnaDocument = querySnapshot.documents[0]
+            val campagnaId = campagnaDocument.id
+
+            val updates = hashMapOf<String, Any>(
+                "password" to password
+            )
+
+            campagneRef.document(campagnaId).update(updates)
+        }
+    }
+
+    fun eliminaCampagna(nomeCampagna: String, masterId: String) {
+        // Query per ottenere la campagna con il nome e masterId specificati
+        val campagnaQuery = campagneRef.whereEqualTo("nome", nomeCampagna).whereEqualTo("masterId", masterId)
+
+        // Aggiunge un listener per lo snapshot della campagna
+        campagnaQuery.get().addOnSuccessListener { campagneSnapshot ->
+            // Se lo snapshot non è nullo e contiene almeno un documento
+            if (campagneSnapshot != null && !campagneSnapshot.isEmpty) {
+                val campagnaDocument = campagneSnapshot.documents[0]
+                val campagnaId = campagnaDocument.id
+
+                // Ottieni il campo "personaggi" della campagna
+                val personaggi = campagnaDocument.get("personaggi") as? List<String>
+
+                // Setta a vuoto il campo "campagna" di tutti i personaggi che hanno come valore del campo "campagna" il nomeCampagna specificato
+                personaggi?.let {
+                    val personaggiQuery = personaggiRef.whereIn("nome", it).whereEqualTo("campagna", nomeCampagna)
+                    personaggiQuery.get().addOnSuccessListener { personaggiSnapshot ->
+                        for (personaggioDocument in personaggiSnapshot.documents) {
+                            personaggioDocument.reference.update("campagna", "")
+                        }
+                    }
+                }
+                // Elimina il documento della campagna
+                campagneRef.document(campagnaId).delete()
+            }
+        }
+    }
 
 
 
