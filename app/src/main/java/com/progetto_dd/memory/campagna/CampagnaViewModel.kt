@@ -279,68 +279,112 @@ class CampagnaViewModel : ViewModel() {
         }
     }
 
+    fun rimuoviPersonaggioDaCampagna(personaggio: String, nomeCampagna: String, masterId: String) {
+        val db = FirebaseFirestore.getInstance()
+        val campagneCollection = db.collection("campagne")
 
-    fun eliminaGiocatoreDaCampagna(
-        personaggioSelezionato: String,
-        nomeCampagna: String,
-        masterId: String,
-        context: Context
-    ) {
-        val personaggiQuery = personaggiRef.whereEqualTo("nome", personaggioSelezionato)
+        val query = campagneCollection
+            .whereEqualTo("nome", nomeCampagna)
+            .whereEqualTo("masterId", masterId)
 
-        personaggiQuery.get().addOnSuccessListener { querySnapshot ->
-            if (querySnapshot.isEmpty) {
-                // Il personaggio non esiste
-                return@addOnSuccessListener
-            }
+        query.get()
+            .addOnSuccessListener { querySnapshot ->
+                if (!querySnapshot.isEmpty) {
+                    val campagnaDocument = querySnapshot.documents[0]
+                    val campagnaDocumentRef = campagneCollection.document(campagnaDocument.id)
 
-            val personaggioDocument = querySnapshot.documents[0]
+                    campagnaDocumentRef.get()
+                        .addOnSuccessListener { documentSnapshot ->
+                            val personaggiList = documentSnapshot.get("personaggi") as? MutableList<String>
 
-            // Setta a vuoto il campo "campagna" del personaggio
-            personaggioDocument.reference.set(
-                mapOf("campagna" to ""),
-                SetOptions.merge()
-            )
-                .addOnSuccessListener {
-                    // Aggiornamento riuscito
+                            personaggiList?.let {
+                                it.remove(personaggio)
 
-                    // Rimuovi l'id dell'utente dall'array "partecipanti" della campagna
-                    val updates = mutableMapOf<String, Any>()
-                    updates["partecipanti"] = FieldValue.arrayRemove(currentUser?.uid)
-
-                    campagneRef.whereEqualTo("nome", nomeCampagna)
-                        .whereEqualTo("masterId", masterId)
-                        .get()
-                        .addOnSuccessListener { querySnapshot ->
-                            if (querySnapshot.isEmpty) {
-                                // La campagna non esiste
-                                return@addOnSuccessListener
+                                campagnaDocumentRef.update("personaggi", it)
+                                    .addOnSuccessListener {
+                                        // Il personaggio è stato rimosso con successo dal campo "personaggi" della campagna
+                                    }
+                                    .addOnFailureListener { exception ->
+                                        // Si è verificato un errore durante l'aggiornamento
+                                        // Gestisci l'errore di conseguenza
+                                    }
                             }
-
-                            val campagnaDocument = querySnapshot.documents[0]
-                            campagnaDocument.reference.update(updates)
-                                .addOnSuccessListener {
-                                    // Rimozione riuscita
-                                    Toast.makeText(context, "Giocatore eliminato dalla campagna", Toast.LENGTH_SHORT).show()
-                                }
-                                .addOnFailureListener { exception ->
-                                    Log.e(TAG_ELIMINA, "Errore durante la rimozione del giocatore dalla campagna: ", exception)
-                                }
                         }
                         .addOnFailureListener { exception ->
-                            // Errore durante la query della campagna
-                            Log.e(TAG_ELIMINA, "Errore durante la ricerca della campagna: ", exception)
+                            // Si è verificato un errore durante la lettura del documento
+                            // Gestisci l'errore di conseguenza
                         }
                 }
-                .addOnFailureListener { exception ->
-                    // Errore durante l'aggiornamento del personaggio
-                    Log.e(TAG_ELIMINA, "Errore durante l'aggiornamento del personaggio: ", exception)
-                }
-        }.addOnFailureListener { exception ->
-            // Errore durante la query del personaggio
-            Log.e(TAG_ELIMINA, "Errore durante la ricerca del personaggio: ", exception)
-        }
+            }
+            .addOnFailureListener { exception ->
+                // Si è verificato un errore durante la lettura dei documenti
+                // Gestisci l'errore di conseguenza
+            }
     }
+
+    fun aggiornaCampagnaPersonaggio(personaggio: String, nomeCampagna: String) {
+        val db = FirebaseFirestore.getInstance()
+        val personaggiCollection = db.collection("personaggi")
+        val campagneCollection = db.collection("campagne")
+
+        personaggiCollection
+            .whereEqualTo("nome", personaggio)
+            .whereEqualTo("campagna", nomeCampagna)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                if (!querySnapshot.isEmpty) {
+                    val personaggioDocument = querySnapshot.documents[0]
+                    val personaggioDocumentRef = personaggiCollection.document(personaggioDocument.id)
+
+                    personaggioDocumentRef.update("campagna", "")
+                        .addOnSuccessListener {
+                            // Campo "campagna" del personaggio aggiornato con successo
+                            // Puoi eseguire altre azioni o mostrare una notifica all'utente
+                        }
+                        .addOnFailureListener { exception ->
+                            // Si è verificato un errore durante l'aggiornamento
+                            // Gestisci l'errore di conseguenza
+                        }
+
+                    val partecipantiList = campagneCollection
+                        .whereEqualTo("nome", nomeCampagna)
+                        .get()
+                        .addOnSuccessListener { querySnapshot ->
+                            if (!querySnapshot.isEmpty) {
+                                val campagnaDocument = querySnapshot.documents[0]
+                                val campagnaDocumentRef = campagneCollection.document(campagnaDocument.id)
+
+                                val partecipantiList = campagnaDocument["partecipanti"] as MutableList<String>
+                                partecipantiList.remove(personaggioDocument["utenteId"].toString())
+
+                                campagnaDocumentRef.update("partecipanti", partecipantiList)
+                                    .addOnSuccessListener {
+                                        // Campo "partecipanti" della campagna aggiornato con successo
+                                        // Puoi eseguire altre azioni o mostrare una notifica all'utente
+                                    }
+                                    .addOnFailureListener { exception ->
+                                        // Si è verificato un errore durante l'aggiornamento
+                                        // Gestisci l'errore di conseguenza
+                                    }
+                            }
+                        }
+                        .addOnFailureListener { exception ->
+                            // Si è verificato un errore durante la lettura dei documenti
+                            // Gestisci l'errore di conseguenza
+                        }
+                }
+            }
+            .addOnFailureListener { exception ->
+                // Si è verificato un errore durante la lettura dei documenti
+                // Gestisci l'errore di conseguenza
+            }
+    }
+
+    fun eliminaGiocatoreDaCampagna(personaggio: String, nomeCampagna: String, masterId: String) {
+        rimuoviPersonaggioDaCampagna(personaggio, nomeCampagna, masterId)
+        aggiornaCampagnaPersonaggio(personaggio, nomeCampagna)
+    }
+
 
     fun getPasswordByCampagna(nomeCampagna: String, masterId: String): MutableLiveData<String?> {
         // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono

@@ -43,7 +43,7 @@ class SessioneAdapter(private val sessione: List<Sessione>) :
         // Associa i dati della sessione alle view
         fun bind(sessione: Sessione) {
             // Imposta il numero della sessione
-            numeroTextView.text = sessione.numero
+            numeroTextView.text = sessione.numero.toString()
             // Imposta il giorno della sessione
             giornoTextView.text = sessione.giorno
 

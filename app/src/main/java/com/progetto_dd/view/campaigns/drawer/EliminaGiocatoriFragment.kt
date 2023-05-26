@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.progetto_dd.R
 import com.progetto_dd.memory.campagna.CampagnaViewModel
@@ -55,7 +56,8 @@ class EliminaGiocatoriFragment : Fragment() {
                     // Esegui l'eliminazione del giocatore selezionato
                     if (personaggioSelezionato != null) {
                         if (campagnaNome != null && masterNome != null && masterId != null) {
-                            viewModel.eliminaGiocatoreDaCampagna(personaggioSelezionato, campagnaNome, masterNome, requireContext())
+                            viewModel.eliminaGiocatoreDaCampagna(personaggioSelezionato, campagnaNome, masterId)
+                            findNavController().navigate(R.id.action_eliminaGiocatoriFragment_to_visualizzaCampagnaFragment)
                         }
                     }
                 }

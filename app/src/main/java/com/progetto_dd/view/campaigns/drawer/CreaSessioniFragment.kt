@@ -52,21 +52,40 @@ class CreaSessioniFragment : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
-                val sessione = hashMapOf(
-                    "numero" to numeroSessione,
-                    "giorno" to giornoSessione,
-                    "descrizione" to descrizioneSessione,
-                    "campagna" to campagnaNome,
-                    "master" to masterId
-                )
+                // Controlla se esiste già una sessione con lo stesso numero nella stessa campagna
+                val sessioniCollection = firestore.collection("sessioni")
+                sessioniCollection
+                    .whereEqualTo("campagna", campagnaNome)
+                    .whereEqualTo("numero", numeroSessione)
+                    .get()
+                    .addOnSuccessListener { querySnapshot ->
+                        if (querySnapshot.isEmpty) {
+                            // Non esiste una sessione con lo stesso numero nella stessa campagna, procedi con l'aggiunta
+                            val sessione = hashMapOf(
+                                "numero" to numeroSessione,
+                                "giorno" to giornoSessione,
+                                "descrizione" to descrizioneSessione,
+                                "campagna" to campagnaNome,
+                                "master" to masterId
+                            )
 
-                firestore.collection("sessioni")
-                    .add(sessione)
-                    .addOnSuccessListener {
-                        findNavController().navigate(R.id.action_creaSessioniFragment_to_visualizzaCampagnaFragment)
+                            firestore.collection("sessioni")
+                                .add(sessione)
+                                .addOnSuccessListener {
+                                    findNavController().navigate(R.id.action_creaSessioniFragment_to_visualizzaCampagnaFragment)
+                                }
+                        } else {
+                            // Esiste già una sessione con lo stesso numero nella stessa campagna, mostra un Toast di avviso
+                            Toast.makeText(
+                                requireContext(),
+                                "Esiste già una sessione con lo stesso numero nella stessa campagna",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
             }
         }
+
 
         return view
     }

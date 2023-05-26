@@ -23,10 +23,10 @@ class SessioneViewModel : ViewModel() {
                     val numero = document.getString("numero")
                     val giorno = document.getString("giorno")
                     val descrizione = document.getString("descrizione") ?: ""
-                    val master = document.getString("master") ?: ""
-                    val campagna = document.getString("campagna") ?: ""
+                    val masterNome = document.getString("master") ?: ""
+                    val campagnaNome = document.getString("campagna") ?: ""
 
-                    val sessione = Sessione(numero, giorno, descrizione, master, campagna)
+                    val sessione = Sessione(numero, giorno, descrizione, campagnaNome, masterNome)
                     sessioneList.add(sessione)
                 }
                 sessioneLiveData.value = sessioneList
@@ -34,21 +34,23 @@ class SessioneViewModel : ViewModel() {
         return sessioneLiveData
     }
 
-    fun eliminaSessione(numero: String, master: String, campagna: String) {
+    fun eliminaSessione(campagnaNome: String, masterId: String, numeroSessione: String) {
         val db = FirebaseFirestore.getInstance()
-        val sessioneCollection = db.collection("sessioni")
-
-        sessioneCollection
-            .whereEqualTo("numero", numero)
-            .whereEqualTo("master", master)
-            .whereEqualTo("campagna", campagna)
+        val sessioniCollection = db
+            .collection("sessioni")
+        sessioniCollection
+            .whereEqualTo("campagna", campagnaNome)
+            .whereEqualTo("master", masterId)
+            .whereEqualTo("numero", numeroSessione)
             .get()
-            .addOnSuccessListener { documents ->
-                for (document in documents) {
-                    sessioneCollection.document(document.id).delete()
+            .addOnSuccessListener { querySnapshot ->
+                for (document in querySnapshot.documents) {
+                    document.reference.delete()
                 }
             }
     }
+
+
 
     fun deleteSessionsFromCampaign(campaignName: String, masterId: String) {
         val db = FirebaseFirestore.getInstance()

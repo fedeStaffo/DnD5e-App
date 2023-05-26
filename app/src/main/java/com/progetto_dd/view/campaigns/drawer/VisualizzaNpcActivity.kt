@@ -1,11 +1,13 @@
 package com.progetto_dd.view.campaigns.drawer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.progetto_dd.databinding.ActivityVisualizzaNpcBinding
 import com.progetto_dd.memory.npc.NpcViewModel
+import com.progetto_dd.view.campaigns.CampaignsActivity
 
 class VisualizzaNpcActivity : AppCompatActivity() {
 
@@ -48,7 +50,8 @@ class VisualizzaNpcActivity : AppCompatActivity() {
             .setPositiveButton("Conferma") { _, _ ->
                 // Chiamata alla funzione eliminaNpc nel ViewModel
                 npcViewModel.eliminaNpc(npcNome, npcMaster, campagna)
-                finish() // Finisci l'Activity dopo l'eliminazione
+                val intent = Intent(this, CampaignsActivity::class.java)
+                startActivity(intent)
             }
             .setNegativeButton("Annulla", null)
 

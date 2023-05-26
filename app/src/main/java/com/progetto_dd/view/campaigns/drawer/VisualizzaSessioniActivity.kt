@@ -1,11 +1,13 @@
 package com.progetto_dd.view.campaigns.drawer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.progetto_dd.databinding.ActivityVisualizzaSessioneBinding
 import com.progetto_dd.memory.sessione.SessioneViewModel
+import com.progetto_dd.view.campaigns.CampaignsActivity
 
 class VisualizzaSessioniActivity : AppCompatActivity() {
 
@@ -38,11 +40,12 @@ class VisualizzaSessioniActivity : AppCompatActivity() {
                 if (master != null) {
                     if (campagna != null) {
                         if (sessioneNumero != null) {
-                            sessioneViewModel.eliminaSessione(sessioneNumero, master, campagna)
+                            sessioneViewModel.eliminaSessione(campagna, master, sessioneNumero)
+                            val intent = Intent(this, CampaignsActivity::class.java)
+                            startActivity(intent)
                         }
                     }
                 }
-                finish()
             }
             builder.setNegativeButton("Annulla", null)
             val dialog: AlertDialog = builder.create()

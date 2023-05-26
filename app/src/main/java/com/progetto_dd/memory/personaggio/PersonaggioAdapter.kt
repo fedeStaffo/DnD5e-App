@@ -52,7 +52,7 @@ class PersonaggioAdapter(private val personaggi: List<Personaggio>) :
             // Imposta la classe del personaggio
             classTextView.text = personaggio.classe
 
-            // Imposta il listener del clic sulla card della campagna
+            // Imposta il listener del clic sulla card del personaggio
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, VisualizzaPersonaggioActivity::class.java)
                 // Passa il nome della campagna e l'id del master alla nuova activity

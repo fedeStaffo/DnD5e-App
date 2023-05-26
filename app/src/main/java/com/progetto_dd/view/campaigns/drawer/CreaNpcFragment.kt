@@ -1,7 +1,7 @@
 package com.progetto_dd.view.campaigns.drawer
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +13,6 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.firestore.FirebaseFirestore
 import com.progetto_dd.R
-import com.progetto_dd.view.campaigns.CampaignsActivity
 
 class CreaNpcFragment : Fragment() {
 
@@ -47,21 +46,40 @@ class CreaNpcFragment : Fragment() {
             if (nomeNpc.isEmpty() || descrizioneNpc.isEmpty()) {
                 Toast.makeText(requireContext(), "Inserisci il nome e la descrizione dell'NPC", Toast.LENGTH_SHORT).show()
             } else {
-                val npc = hashMapOf(
-                    "nome" to nomeNpc,
-                    "descrizione" to descrizioneNpc,
-                    "legame" to legameNpc,
-                    "campagna" to campagnaNome,
-                    "master" to masterId
-                )
+                val npcQuery = firestore.collection("npc")
+                    .whereEqualTo("nome", nomeNpc)
+                    .whereEqualTo("campagna", campagnaNome)
 
-                firestore.collection("npc")
-                    .add(npc)
-                    .addOnSuccessListener {
-                        findNavController().navigate(R.id.action_creaNpcFragment_to_visualizzaCampagnaFragment)
+                npcQuery.get()
+                    .addOnSuccessListener { querySnapshot ->
+                        if (querySnapshot.isEmpty) {
+                            // Non esiste un NPC con lo stesso nome nella stessa campagna, procedi con l'aggiunta
+                            val npc = hashMapOf(
+                                "nome" to nomeNpc,
+                                "descrizione" to descrizioneNpc,
+                                "legame" to legameNpc,
+                                "campagna" to campagnaNome,
+                                "master" to masterId
+                            )
+
+                            firestore.collection("npc")
+                                .add(npc)
+                                .addOnSuccessListener {
+                                    findNavController().navigate(R.id.action_creaNpcFragment_to_visualizzaCampagnaFragment)
+                                }
+                        } else {
+                            // Esiste già un NPC con lo stesso nome nella stessa campagna, mostra un messaggio di errore
+                            Toast.makeText(requireContext(), "Esiste già un NPC con lo stesso nome nella campagna", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        // Gestisci eventuali errori nella query
+                        Toast.makeText(requireContext(), "Errore durante il controllo dell'NPC", Toast.LENGTH_SHORT).show()
+                        Log.e("CreaNpcFragment", "Errore nella query NPC: $exception")
                     }
             }
         }
+
 
         return view
     }
