@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/statsFragment"
+        android:icon="@drawable/personaggio"
+        android:title="Statistiche"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/zainoFragment"
+        android:icon="@drawable/zaino"
+        android:title="Inventario"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/magieFragment"
+        android:icon="@drawable/mage_staff"
+        android:title="Incantesimi"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/statsRazzaFragment"
+        android:icon="@drawable/elf"
+        android:title="Razza"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/statsClasseFragment"
+        android:icon="@drawable/crusader"
+        android:title="Classe"
+        app:showAsAction="always"/>
+</menu>

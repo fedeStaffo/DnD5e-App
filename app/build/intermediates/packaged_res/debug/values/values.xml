@@ -374,6 +374,7 @@ Le abilità addestrare animali, intuizione, medicina, percezione e sopravvivenza
 maggiore sensibilità in certi tipi di prove di saggezza.
     </string>
     <string name="saggezza_title">SAGGEZZA</string>
+    <string name="salva">Salva</string>
     <string name="scegli">Scegli</string>
     <string name="scegli_classe">Scegli una classe</string>
     <string name="scegli_il_tuo_equipaggiamento">Scegli il tuo equipaggiamento</string>
@@ -396,7 +397,7 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="tab_text_2">Zaino</string>
     <string name="tab_text_3">Magie</string>
     <string name="tab_text_4">Razza</string>
-    <string name="tab_text_5">Classe</string>
+    <string name="tab_text_5">Class</string>
     <string name="title_activity_visualizza_pers">VisualizzaPersActivity</string>
     <string name="title_activity_visualizza_personaggio">VisualizzaPersonaggioActivity</string>
     <string name="title_activity_visualizza_sessioni">VisualizzaSessioniActivity</string>

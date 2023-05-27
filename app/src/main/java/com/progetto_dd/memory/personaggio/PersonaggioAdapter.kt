@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
-import com.progetto_dd.view.characters.visualizza.VisualizzaPersonaggioActivity
+import com.progetto_dd.view.characters.VisualizzaPersonaggioActivity
 
 // Classe adapter per gestire la lista dei personaggi
 class PersonaggioAdapter(private val personaggi: List<Personaggio>) :
@@ -60,6 +60,7 @@ class PersonaggioAdapter(private val personaggi: List<Personaggio>) :
                 intent.putExtra("razza", personaggio.razza)
                 intent.putExtra("classe", personaggio.classe)
                 itemView.context.startActivity(intent)
+
             }
 
         }

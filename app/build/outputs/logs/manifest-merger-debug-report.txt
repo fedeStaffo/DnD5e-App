@@ -209,30 +209,30 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\fede0\.gradle\cach
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:12:9-49
 	android:dataExtractionRules
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity
+activity#com.progetto_dd.view.characters.VisualizzaPersonaggioActivity
 ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:14:9-17:51
 	android:screenOrientation
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:17:13-49
 	android:exported
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:16:13-37
 	android:name
-		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:15:13-77
-activity#com.progetto_dd.view.campaigns.drawer.VisualizzaNpcActivity
+		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:15:13-74
+activity#com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity
 ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:18:9-21:52
 	android:screenOrientation
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:21:13-49
 	android:exported
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:19:13-72
-activity#com.progetto_dd.view.characters.visualizza.VisualizzaPersonaggioActivity
+		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:19:13-77
+activity#com.progetto_dd.view.campaigns.drawer.VisualizzaNpcActivity
 ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:22:9-25:52
 	android:screenOrientation
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:25:13-49
 	android:exported
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:23:13-85
+		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:23:13-72
 activity#com.progetto_dd.view.campaigns.drawer.MainDrawerCampagnaActivity
 ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:26:9-29:52
 	android:screenOrientation

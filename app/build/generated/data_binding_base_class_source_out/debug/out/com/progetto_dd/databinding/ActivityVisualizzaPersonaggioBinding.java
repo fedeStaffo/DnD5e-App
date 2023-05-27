@@ -4,14 +4,14 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import androidx.viewpager.widget.ViewPager;
-import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.progetto_dd.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -19,28 +19,29 @@ import java.lang.String;
 
 public final class ActivityVisualizzaPersonaggioBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final TabLayout tabs;
+  public final FragmentContainerView navHostFragmentViewCharacters;
 
   @NonNull
-  public final TextView title;
+  public final MaterialToolbar toolbarViewChar;
 
   @NonNull
-  public final ViewPager viewPager;
+  public final BottomNavigationView viewCharBottombar;
 
-  private ActivityVisualizzaPersonaggioBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull TabLayout tabs, @NonNull TextView title, @NonNull ViewPager viewPager) {
+  private ActivityVisualizzaPersonaggioBinding(@NonNull ConstraintLayout rootView,
+      @NonNull FragmentContainerView navHostFragmentViewCharacters,
+      @NonNull MaterialToolbar toolbarViewChar, @NonNull BottomNavigationView viewCharBottombar) {
     this.rootView = rootView;
-    this.tabs = tabs;
-    this.title = title;
-    this.viewPager = viewPager;
+    this.navHostFragmentViewCharacters = navHostFragmentViewCharacters;
+    this.toolbarViewChar = toolbarViewChar;
+    this.viewCharBottombar = viewCharBottombar;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -65,26 +66,26 @@ public final class ActivityVisualizzaPersonaggioBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.tabs;
-      TabLayout tabs = ViewBindings.findChildViewById(rootView, id);
-      if (tabs == null) {
+      id = R.id.nav_host_fragment_view_characters;
+      FragmentContainerView navHostFragmentViewCharacters = ViewBindings.findChildViewById(rootView, id);
+      if (navHostFragmentViewCharacters == null) {
         break missingId;
       }
 
-      id = R.id.title;
-      TextView title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
+      id = R.id.toolbar_view_char;
+      MaterialToolbar toolbarViewChar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarViewChar == null) {
         break missingId;
       }
 
-      id = R.id.view_pager;
-      ViewPager viewPager = ViewBindings.findChildViewById(rootView, id);
-      if (viewPager == null) {
+      id = R.id.view_char_bottombar;
+      BottomNavigationView viewCharBottombar = ViewBindings.findChildViewById(rootView, id);
+      if (viewCharBottombar == null) {
         break missingId;
       }
 
-      return new ActivityVisualizzaPersonaggioBinding((CoordinatorLayout) rootView, tabs, title,
-          viewPager);
+      return new ActivityVisualizzaPersonaggioBinding((ConstraintLayout) rootView,
+          navHostFragmentViewCharacters, toolbarViewChar, viewCharBottombar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

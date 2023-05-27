@@ -18,5 +18,10 @@
     "name": "nav_visualizza_campagna",
     "navigationXmlIds": [],
     "deepLinks": []
+  },
+  {
+    "name": "viewcharacter_graph",
+    "navigationXmlIds": [],
+    "deepLinks": []
   }
 ]

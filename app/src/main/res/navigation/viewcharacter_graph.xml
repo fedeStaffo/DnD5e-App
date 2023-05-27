@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewcharacter_graph"
+    app:startDestination="@id/statsFragment">
+
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.StatsFragment"
+        android:label="Statistiche"
+        tools:layout="@layout/fragment_stats" />
+    <fragment
+        android:id="@+id/statsClasseFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.StatsClasseFragment"
+        android:label="Stats Classe"
+        tools:layout="@layout/fragment_stats_classe" />
+    <fragment
+        android:id="@+id/statsRazzaFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.StatsRazzaFragment"
+        android:label="Stats Razza"
+        tools:layout="@layout/fragment_stats_razza" />
+    <fragment
+        android:id="@+id/magieFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.MagieFragment"
+        android:label="Magie"
+        tools:layout="@layout/fragment_magie" />
+    <fragment
+        android:id="@+id/Zaino"
+        android:name="com.progetto_dd.view.characters.visualizza.ZainoFragment"
+        android:label="fragment_zaino"
+        tools:layout="@layout/fragment_zaino" />
+</navigation>

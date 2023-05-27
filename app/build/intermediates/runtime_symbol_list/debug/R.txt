@@ -2810,6 +2810,7 @@ int drawable add_user 0x7f080078
 int drawable avd_hide_password 0x7f080079
 int drawable avd_show_password 0x7f08007a
 int drawable backspace 0x7f08007b
+int drawable backspace2 0x7f080129
 int drawable bombetta 0x7f08007c
 int drawable borsa_di_cura 0x7f08007d
 int drawable btn_checkbox_checked_mtrl 0x7f08007e
@@ -2841,6 +2842,7 @@ int drawable common_google_signin_btn_text_light 0x7f080097
 int drawable common_google_signin_btn_text_light_focused 0x7f080098
 int drawable common_google_signin_btn_text_light_normal 0x7f080099
 int drawable common_google_signin_btn_text_light_normal_background 0x7f08009a
+int drawable crusader 0x7f08012a
 int drawable d20 0x7f08009b
 int drawable dado 0x7f08009c
 int drawable design_fab_background 0x7f08009d
@@ -2852,6 +2854,7 @@ int drawable dragon 0x7f0800a2
 int drawable drawer_campagna 0x7f0800a3
 int drawable drawer_image 0x7f0800a4
 int drawable effetti 0x7f0800a5
+int drawable elf 0x7f08012b
 int drawable fabbro 0x7f0800a6
 int drawable forget_password_icon 0x7f0800a7
 int drawable googleg_disabled_color_18 0x7f0800a8
@@ -2900,6 +2903,7 @@ int drawable m3_tabs_background 0x7f0800d2
 int drawable m3_tabs_line_indicator 0x7f0800d3
 int drawable m3_tabs_rounded_line_indicator 0x7f0800d4
 int drawable m3_tabs_transparent_background 0x7f0800d5
+int drawable mage_staff 0x7f08012c
 int drawable mail 0x7f0800d6
 int drawable material_cursor_drawable 0x7f0800d7
 int drawable material_ic_calendar_black_24dp 0x7f0800d8
@@ -2968,6 +2972,7 @@ int drawable password 0x7f080115
 int drawable password_updated_icon 0x7f080116
 int drawable pencil 0x7f080117
 int drawable penna_antica 0x7f080118
+int drawable personaggio 0x7f08012d
 int drawable pozione 0x7f080128
 int drawable profile_std_pic 0x7f080119
 int drawable sfondo_fumetto 0x7f08011a
@@ -2982,6 +2987,7 @@ int drawable treasure_map 0x7f080121
 int drawable update_new_password_icon 0x7f080122
 int drawable user 0x7f080123
 int drawable xbutton 0x7f080124
+int drawable zaino 0x7f08012e
 int drawable zaino_scolastico 0x7f080125
 int id ALT 0x7f090000
 int id BOTTOM_END 0x7f090001
@@ -3002,6 +3008,7 @@ int id SHOW_PROGRESS 0x7f09000d
 int id SYM 0x7f09000e
 int id TOP_END 0x7f09000f
 int id TOP_START 0x7f090010
+int id Zaino 0x7f09035e
 int id accelerate 0x7f090011
 int id accessibility_action_clickable_span 0x7f090012
 int id accessibility_custom_action_0 0x7f090013
@@ -3195,7 +3202,6 @@ int id confirm_button 0x7f0900bf
 int id constraint 0x7f0900c0
 int id constraint1 0x7f090350
 int id constraint2 0x7f090351
-int id constraintLayout 0x7f0900c1
 int id container 0x7f0900c2
 int id content 0x7f0900c3
 int id contentPanel 0x7f0900c4
@@ -3391,6 +3397,7 @@ int id logoutFragment 0x7f090180
 int id logout_btn 0x7f090181
 int id ltr 0x7f090182
 int id m3_side_sheet 0x7f090183
+int id magieFragment 0x7f090355
 int id mailUtente 0x7f090184
 int id main_graph 0x7f090185
 int id marquee 0x7f090186
@@ -3468,6 +3475,7 @@ int id nav_host_fragment_campagna 0x7f0901cc
 int id nav_host_fragment_campaigns 0x7f0901cd
 int id nav_host_fragment_characters 0x7f0901ce
 int id nav_host_fragment_container 0x7f0901cf
+int id nav_host_fragment_view_characters 0x7f090356
 int id nav_view 0x7f0901d0
 int id nav_view_campagna 0x7f0901d1
 int id nav_visualizza_campagna 0x7f0901d2
@@ -3628,7 +3636,6 @@ int id search_view_status_bar_spacer 0x7f09026c
 int id search_view_toolbar 0x7f09026d
 int id search_view_toolbar_container 0x7f09026e
 int id search_voice_btn 0x7f09026f
-int id section_label 0x7f090270
 int id select_dialog_listview 0x7f090271
 int id selected 0x7f090272
 int id selection_type 0x7f090273
@@ -3683,6 +3690,9 @@ int id startToEnd 0x7f0902a0
 int id startVertical 0x7f0902a1
 int id staticLayout 0x7f0902a2
 int id staticPostLayout 0x7f0902a3
+int id statsClasseFragment 0x7f090357
+int id statsFragment 0x7f090358
+int id statsRazzaFragment 0x7f090359
 int id stop 0x7f0902a4
 int id storia 0x7f0902a5
 int id storiaCheckBox 0x7f0902a6
@@ -3692,7 +3702,6 @@ int id submenuarrow 0x7f0902a9
 int id submit_area 0x7f0902aa
 int id supportScrollUp 0x7f0902ab
 int id tabMode 0x7f0902ac
-int id tabs 0x7f0902ad
 int id tag_accessibility_actions 0x7f0902ae
 int id tag_accessibility_clickable_spans 0x7f0902af
 int id tag_accessibility_heading 0x7f0902b0
@@ -3770,6 +3779,7 @@ int id toolbar 0x7f0902f8
 int id toolbarCampagna 0x7f0902f9
 int id toolbar_camp 0x7f0902fa
 int id toolbar_char 0x7f0902fb
+int id toolbar_view_char 0x7f09035a
 int id top 0x7f0902fc
 int id topPanel 0x7f0902fd
 int id totale 0x7f0902fe
@@ -3800,13 +3810,14 @@ int id unlabeled 0x7f090316
 int id up 0x7f090317
 int id useLogo 0x7f090318
 int id vertical_only 0x7f090319
+int id view_char_bottombar 0x7f09035b
 int id view_offset_helper 0x7f09031a
-int id view_pager 0x7f09031b
 int id view_transition 0x7f09031c
 int id view_tree_lifecycle_owner 0x7f09031d
 int id view_tree_on_back_pressed_dispatcher_owner 0x7f09031e
 int id view_tree_saved_state_registry_owner 0x7f09031f
 int id view_tree_view_model_store_owner 0x7f090320
+int id viewcharacter_graph 0x7f09035c
 int id visible 0x7f090321
 int id visible_removing_fragment_view_tag 0x7f090322
 int id visualizzaCampagnaFragment 0x7f090323
@@ -3822,6 +3833,7 @@ int id wrap_content 0x7f09032c
 int id wrap_content_constrained 0x7f09032d
 int id x_left 0x7f09032e
 int id x_right 0x7f09032f
+int id zainoFragment 0x7f09035d
 int integer abc_config_activityDefaultDur 0x7f0a0000
 int integer abc_config_activityShortDur 0x7f0a0001
 int integer app_bar_elevation_anim_duration 0x7f0a0002
@@ -3975,8 +3987,6 @@ int layout fragment_home 0x7f0c0044
 int layout fragment_home_campaigns 0x7f0c0045
 int layout fragment_home_character 0x7f0c0046
 int layout fragment_info 0x7f0c0047
-int layout fragment_info_classe 0x7f0c0048
-int layout fragment_info_razza 0x7f0c0049
 int layout fragment_join_campaign 0x7f0c004b
 int layout fragment_logout 0x7f0c004c
 int layout fragment_magie 0x7f0c004d
@@ -3989,11 +3999,13 @@ int layout fragment_race_info 0x7f0c0053
 int layout fragment_reset_password 0x7f0c0054
 int layout fragment_roll 0x7f0c0055
 int layout fragment_salva_personaggio 0x7f0c0056
-int layout fragment_statistiche 0x7f0c0057
+int layout fragment_stats 0x7f0c00a3
+int layout fragment_stats_classe 0x7f0c00a4
+int layout fragment_stats_razza 0x7f0c00a5
 int layout fragment_visualizza_campagna 0x7f0c0058
 int layout fragment_visualizza_npc 0x7f0c0059
-int layout fragment_visualizza_personaggio 0x7f0c005a
 int layout fragment_visualizza_sessione 0x7f0c00a0
+int layout fragment_zaino 0x7f0c00a6
 int layout item_campagna 0x7f0c005d
 int layout item_npc 0x7f0c005e
 int layout item_personaggio 0x7f0c005f
@@ -4068,12 +4080,15 @@ int menu menu_campagna 0x7f0e0003
 int menu menu_drawer 0x7f0e0004
 int menu menu_toolbar 0x7f0e0005
 int menu view_campagna_toolbar 0x7f0e0006
+int menu visualizza_personaggio_bottombar 0x7f0e0007
+int menu visualizza_personaggio_toolbar 0x7f0e0008
 int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001
 int navigation camp_graph 0x7f100000
 int navigation char_graph 0x7f100001
 int navigation main_graph 0x7f100002
 int navigation nav_visualizza_campagna 0x7f100003
+int navigation viewcharacter_graph 0x7f100004
 int plurals mtrl_badge_content_description 0x7f110000
 int raw firebase_common_keep 0x7f120000
 int string _3_d6 0x7f130000
@@ -4373,6 +4388,7 @@ int string reset 0x7f130117
 int string reset_button 0x7f130118
 int string saggezza 0x7f130119
 int string saggezza_title 0x7f13011a
+int string salva 0x7f130152
 int string scegli 0x7f13011b
 int string scegli_classe 0x7f13011c
 int string scegli_il_tuo_equipaggiamento 0x7f13011d

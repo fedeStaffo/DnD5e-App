@@ -60,24 +60,24 @@
 34-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:12:9-49
 35        <activity
 35-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:14:9-17:51
-36            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity"
-36-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:15:13-77
+36            android:name="com.progetto_dd.view.characters.VisualizzaPersonaggioActivity"
+36-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:15:13-74
 37            android:exported="false"
 37-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:16:13-37
 38            android:screenOrientation="portrait" />
 38-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:17:13-49
 39        <activity
 39-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:18:9-21:52
-40            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaNpcActivity"
-40-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:19:13-72
+40            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity"
+40-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:19:13-77
 41            android:exported="false"
 41-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:20:13-37
 42            android:screenOrientation="portrait" />
 42-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:21:13-49
 43        <activity
 43-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:22:9-25:52
-44            android:name="com.progetto_dd.view.characters.visualizza.VisualizzaPersonaggioActivity"
-44-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:23:13-85
+44            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaNpcActivity"
+44-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:23:13-72
 45            android:exported="false"
 45-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:24:13-37
 46            android:screenOrientation="portrait" />

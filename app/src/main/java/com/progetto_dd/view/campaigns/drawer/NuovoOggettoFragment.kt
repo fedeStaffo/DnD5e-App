@@ -1,6 +1,5 @@
 package com.progetto_dd.view.campaigns.drawer
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,7 +15,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.progetto_dd.R
 import com.progetto_dd.memory.campagna.CampagnaViewModel
 import com.progetto_dd.memory.personaggio.PersonaggioViewModel
-import com.progetto_dd.view.characters.visualizza.VisualizzaPersonaggioActivity
 
 class NuovoOggettoFragment : Fragment() {
 

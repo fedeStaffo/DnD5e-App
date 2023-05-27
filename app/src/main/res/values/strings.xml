@@ -427,5 +427,20 @@ disinvoltura in certi tipi di prove di Carisma.
         <item>Nessuno</item>
     </string-array>
 
+    <string name="lambda">/</string>
+    <string name="punti_ferita_max2">Punti ferita max = </string>
+    <string name="punti_ferita_attuali2">Punti ferita attuali = </string>
+    <string name="c_a">C.A.= </string>
+    <string name="forza_stat">Forza = </string>
+    <string name="destrezza_stat">Destrezza = </string>
+    <string name="intelligenza_stat">Intelligenza = </string>
+    <string name="saggezza_stat">Saggezza = </string>
+    <string name="carisma_stat">Carisma = </string>
+    <string name="costituzione_stat2">Costituzione = </string>
+    <string name="competenze_personaggio">Competenze: </string>
+    <string name="stato">Stato: </string>
+    <string name="modifica">Modifica</string>
+    <string name="classe_armatura">Classe armatura = </string>
+
 </resources>
 
