@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.progetto_dd.databinding.FragmentPage1Binding
 import com.progetto_dd.databinding.FragmentVisualizzaPersonaggioBinding
 
 /**
@@ -34,16 +35,25 @@ class PlaceholderFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = FragmentVisualizzaPersonaggioBinding.inflate(inflater, container, false)
         val root = binding.root
 
-        val textView: TextView = binding.sectionLabel
-        pageViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val sectionNumber = arguments?.getInt(ARG_SECTION_NUMBER) ?: 1
+
+        when (sectionNumber) {
+            1 -> {
+                // Infla il layout per la pagina 1
+                val page1Binding = FragmentPage1Binding.inflate(inflater, container, false)
+                
+
+                // Aggiungi il layout della pagina 1 alla radice del frammento
+                root.addView(page1Binding.root)
+            }
+        }
+
         return root
     }
+
 
     companion object {
         /**

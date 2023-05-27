@@ -4,16 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.progetto_dd.databinding.ActivityVisualizzaSessioneBinding
+import com.progetto_dd.memory.campagna.CampagnaViewModel
 import com.progetto_dd.memory.sessione.SessioneViewModel
 import com.progetto_dd.view.campaigns.CampaignsActivity
 
-class VisualizzaSessioniActivity : AppCompatActivity() {
+class VisualizzaSessioneActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityVisualizzaSessioneBinding
 
     private lateinit var sessioneViewModel: SessioneViewModel
+    private lateinit var viewModelCampagna: CampagnaViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +34,18 @@ class VisualizzaSessioniActivity : AppCompatActivity() {
         binding.Numero.text = sessioneNumero
         binding.Giorno.text = sessioneGiorno
         binding.Descrizione.text = sessioneDescrizione
+
+        // Inizializza il CampagnaViewModel
+        viewModelCampagna = ViewModelProvider(this).get(CampagnaViewModel::class.java)
+
+        // Prende l'id del master
+        val masterId = this.intent.getStringExtra("master_id")
+
+        val isMaster = masterId?.let { viewModelCampagna.isCurrentPlayerMaster(it) }
+
+        if (isMaster == false){
+            binding.eliminaSessione.isVisible = false
+        }
 
         binding.eliminaSessione.setOnClickListener {
             val builder = AlertDialog.Builder(this)

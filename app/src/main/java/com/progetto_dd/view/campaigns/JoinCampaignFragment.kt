@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.progetto_dd.MainActivity
+import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentJoinCampaignBinding
 import com.progetto_dd.memory.campagna.CampagnaViewModel
 
@@ -51,10 +53,8 @@ class JoinCampaignFragment : Fragment() {
                 // Chiamata alla funzione del view model per aggiungere il personaggio alla campagna
                 viewModel.aggiungiPersonaggioACampagna(requireContext(), nomeCampagna, passCampagna, nomePersonaggioSelezionato)
 
-                // Restarta l'activity campagna
-                val intent = Intent(activity, MainActivity::class.java)
-                startActivity(intent)
-                activity?.finish()
+                // Riporta alla pagina principale
+                findNavController().navigate(R.id.action_joinCampaignFragment_to_homeCampaignsFragment)
             }
         }
     }

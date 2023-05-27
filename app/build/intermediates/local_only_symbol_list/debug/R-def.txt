@@ -69,12 +69,14 @@ drawable logout
 drawable logout_112
 drawable logout_cloud
 drawable mail
+drawable npc
 drawable npc_goblin
 drawable open_book
 drawable password
 drawable password_updated_icon
 drawable pencil
 drawable penna_antica
+drawable pozione
 drawable profile_std_pic
 drawable sfondo_fumetto
 drawable sfondo_rotondo
@@ -93,6 +95,7 @@ id Nome
 id Numero
 id acrobazia
 id acrobaziaCheckBox
+id action_addCampaignFragment_to_homeCampaignsFragment
 id action_backgroundFragment_to_rollFragment
 id action_classFragment_to_classInfoFragment
 id action_classFragment_to_competenzeFragment
@@ -104,6 +107,7 @@ id action_eliminaCampagnaFragment_to_visualizzaCampagnaFragment
 id action_eliminaGiocatoriFragment_to_visualizzaCampagnaFragment
 id action_equipaggiamentoFragment_to_salvaPersonaggioFragment
 id action_homeCharacterFragment_to_nameCharacterFragment
+id action_joinCampaignFragment_to_homeCampaignsFragment
 id action_nameCharacterFragment_to_raceFragment
 id action_nuovoOggettoFragment_to_visualizzaCampagnaFragment
 id action_raceFragment_to_classFragment
@@ -122,6 +126,7 @@ id arcanoCheckBox
 id atletica
 id atleticaCheckBox
 id backgroundFragment
+id backspaceButton
 id benvenuto
 id bottone0
 id bottone1
@@ -147,6 +152,7 @@ id button
 id buttonAggiungiEffetto
 id buttonCrea
 id buttonPartecipa
+id calcolatrice
 id camp_bottombar
 id camp_graph
 id campagneInCorso
@@ -160,6 +166,8 @@ id confPassET
 id confPasswordLayout
 id confirmPassEt
 id confirmPasswordLayout
+id constraint1
+id constraint2
 id constraintLayout
 id creaNpcFragment
 id creaSessioniFragment
@@ -198,6 +206,7 @@ id forget_password_icon
 id forget_password_title
 id furtivita
 id furtivitaCheckBox
+id gestione_campagna_group
 id giorno_sessione
 id homeCampaignsFragment
 id homeCharacterFragment
@@ -217,6 +226,7 @@ id info_nano
 id info_umano
 id inganno
 id ingannoCheckBox
+id input_cancella
 id instructionTextView
 id intimidazione
 id intimidazioneCheckBox
@@ -236,6 +246,7 @@ id logout_btn
 id mailUtente
 id main_graph
 id masterEt
+id master_group
 id medicina
 id medicinaCheckBox
 id nameCharacterFragment

@@ -2962,12 +2962,14 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable npc
 drawable npc_goblin
 drawable open_book
 drawable password
 drawable password_updated_icon
 drawable pencil
 drawable penna_antica
+drawable pozione
 drawable profile_std_pic
 drawable sfondo_fumetto
 drawable sfondo_rotondo
@@ -3040,6 +3042,7 @@ id acrobaziaCheckBox
 id actionDown
 id actionDownUp
 id actionUp
+id action_addCampaignFragment_to_homeCampaignsFragment
 id action_backgroundFragment_to_rollFragment
 id action_bar
 id action_bar_activity_content
@@ -3062,6 +3065,7 @@ id action_eliminaGiocatoriFragment_to_visualizzaCampagnaFragment
 id action_equipaggiamentoFragment_to_salvaPersonaggioFragment
 id action_homeCharacterFragment_to_nameCharacterFragment
 id action_image
+id action_joinCampaignFragment_to_homeCampaignsFragment
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -3108,6 +3112,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id backgroundFragment
+id backspaceButton
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3151,6 +3156,7 @@ id buttonCrea
 id buttonPanel
 id buttonPartecipa
 id cache_measures
+id calcolatrice
 id callMeasure
 id camp_bottombar
 id camp_graph
@@ -3188,6 +3194,8 @@ id confirmPassEt
 id confirmPasswordLayout
 id confirm_button
 id constraint
+id constraint1
+id constraint2
 id constraintLayout
 id container
 id content
@@ -3301,6 +3309,7 @@ id frost
 id fullscreen_header
 id furtivita
 id furtivitaCheckBox
+id gestione_campagna_group
 id ghost_view
 id ghost_view_holder
 id giorno_sessione
@@ -3345,6 +3354,7 @@ id info_nano
 id info_umano
 id inganno
 id ingannoCheckBox
+id input_cancella
 id instructionTextView
 id intimidazione
 id intimidazioneCheckBox
@@ -3387,6 +3397,7 @@ id main_graph
 id marquee
 id masked
 id masterEt
+id master_group
 id match_constraint
 id match_parent
 id material_clock_display

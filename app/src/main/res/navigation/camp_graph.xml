@@ -14,10 +14,18 @@
         android:id="@+id/addCampaignFragment"
         android:name="com.progetto_dd.view.campaigns.AddCampaignFragment"
         android:label="@string/crea"
-        tools:layout="@layout/fragment_add_campaign" />
+        tools:layout="@layout/fragment_add_campaign" >
+        <action
+            android:id="@+id/action_addCampaignFragment_to_homeCampaignsFragment"
+            app:destination="@id/homeCampaignsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/joinCampaignFragment"
         android:name="com.progetto_dd.view.campaigns.JoinCampaignFragment"
         android:label="@string/unisciti"
-        tools:layout="@layout/fragment_join_campaign" />
+        tools:layout="@layout/fragment_join_campaign" >
+        <action
+            android:id="@+id/action_joinCampaignFragment_to_homeCampaignsFragment"
+            app:destination="@id/homeCampaignsFragment" />
+    </fragment>
 </navigation>

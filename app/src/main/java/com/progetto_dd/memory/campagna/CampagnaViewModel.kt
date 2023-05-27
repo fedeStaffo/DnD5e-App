@@ -70,6 +70,28 @@ class CampagnaViewModel : ViewModel() {
         }
     }
 
+    fun checkExistingCampaign(campaignName: String): LiveData<Boolean> {
+        val resultLiveData = MutableLiveData<Boolean>()
+
+        val db = FirebaseFirestore.getInstance()
+        val campaignsCollection = db.collection("campagne")
+
+        val userId = currentUser?.uid
+
+        campaignsCollection
+            .whereEqualTo("masterId", userId)
+            .whereEqualTo("nome", campaignName)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                resultLiveData.value = !querySnapshot.isEmpty
+            }
+            .addOnFailureListener {
+                resultLiveData.value = false
+            }
+
+        return resultLiveData
+    }
+
 
     fun getCampagne(): LiveData<List<Campagna>> {
         val mutableLiveData = MutableLiveData<List<Campagna>>()
@@ -475,10 +497,16 @@ class CampagnaViewModel : ViewModel() {
         }
     }
 
+    // Confronta l'id del giocatore attuale con quello del master
+    fun isCurrentPlayerMaster(masterId: String): Boolean {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        val currentUserId = currentUser?.uid
+
+        return currentUserId == masterId
+    }
 
 
     companion object {
         private const val TAG = "com.progetto_dd.view.campaigns.HomeCampaignsFragment"
-        private const val TAG_ELIMINA = "com.progetto_dd.view.campaigns.EliminaGiocatoriFragment"
     }
 }

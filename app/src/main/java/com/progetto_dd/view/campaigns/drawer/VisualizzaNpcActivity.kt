@@ -4,16 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.progetto_dd.databinding.ActivityVisualizzaNpcBinding
+import com.progetto_dd.memory.campagna.CampagnaViewModel
 import com.progetto_dd.memory.npc.NpcViewModel
 import com.progetto_dd.view.campaigns.CampaignsActivity
 
 class VisualizzaNpcActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityVisualizzaNpcBinding
-
-    // Aggiungi una proprietà per il tuo ViewModel
+    private lateinit var viewModelCampagna: CampagnaViewModel
     private lateinit var npcViewModel: NpcViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +35,18 @@ class VisualizzaNpcActivity : AppCompatActivity() {
         binding.Nome.text = npcNome
         binding.Legame.text = npcLegame
         binding.Descrizione.text = npcDescrizione
+
+        // Inizializza il CampagnaViewModel
+        viewModelCampagna = ViewModelProvider(this).get(CampagnaViewModel::class.java)
+
+        // Prende l'id del master
+        val masterId = this.intent.getStringExtra("master_id")
+
+        val isMaster = masterId?.let { viewModelCampagna.isCurrentPlayerMaster(it) }
+
+        if (isMaster == false){
+            binding.eliminaNpc.isVisible = false
+        }
 
         binding.eliminaNpc.setOnClickListener {
             if (npcNome != null && npcMaster != null && campagna != null) {

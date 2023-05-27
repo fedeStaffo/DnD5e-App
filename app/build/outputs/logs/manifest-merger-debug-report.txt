@@ -209,7 +209,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\fede0\.gradle\cach
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:12:9-49
 	android:dataExtractionRules
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.progetto_dd.view.campaigns.drawer.VisualizzaSessioniActivity
+activity#com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity
 ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:14:9-17:51
 	android:screenOrientation
 		ADDED from C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:17:13-49

@@ -9,11 +9,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
+import com.progetto_dd.MainActivity
 import com.progetto_dd.R
 import com.progetto_dd.memory.campagna.CampagnaViewModel
 import com.progetto_dd.memory.npc.NpcViewModel
 import com.progetto_dd.memory.sessione.SessioneViewModel
-import com.progetto_dd.view.campaigns.CampaignsActivity
 
 
 class EliminaCampagnaFragment : Fragment() {
@@ -50,7 +50,7 @@ class EliminaCampagnaFragment : Fragment() {
                     viewModelNpc.deleteNPCsFromCampaign(campagnaNome, masterId)
                     viewModelSessione.deleteSessionsFromCampaign(campagnaNome, masterId)
 
-                    val intent = Intent(requireContext(), CampaignsActivity::class.java)
+                    val intent = Intent(requireContext(), MainActivity::class.java)
                     requireContext().startActivity(intent)
                 }
                 dialog.dismiss()

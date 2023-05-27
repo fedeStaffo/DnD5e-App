@@ -2961,12 +2961,14 @@ int drawable notification_template_icon_bg 0x7f08010f
 int drawable notification_template_icon_low_bg 0x7f080110
 int drawable notification_tile_bg 0x7f080111
 int drawable notify_panel_notification_icon_bg 0x7f080112
+int drawable npc 0x7f080127
 int drawable npc_goblin 0x7f080113
 int drawable open_book 0x7f080114
 int drawable password 0x7f080115
 int drawable password_updated_icon 0x7f080116
 int drawable pencil 0x7f080117
 int drawable penna_antica 0x7f080118
+int drawable pozione 0x7f080128
 int drawable profile_std_pic 0x7f080119
 int drawable sfondo_fumetto 0x7f08011a
 int drawable sfondo_rotondo 0x7f08011b
@@ -3039,6 +3041,7 @@ int id acrobaziaCheckBox 0x7f090034
 int id actionDown 0x7f090035
 int id actionDownUp 0x7f090036
 int id actionUp 0x7f090037
+int id action_addCampaignFragment_to_homeCampaignsFragment 0x7f090353
 int id action_backgroundFragment_to_rollFragment 0x7f090038
 int id action_bar 0x7f090039
 int id action_bar_activity_content 0x7f09003a
@@ -3061,6 +3064,7 @@ int id action_eliminaGiocatoriFragment_to_visualizzaCampagnaFragment 0x7f090345
 int id action_equipaggiamentoFragment_to_salvaPersonaggioFragment 0x7f090046
 int id action_homeCharacterFragment_to_nameCharacterFragment 0x7f090047
 int id action_image 0x7f090048
+int id action_joinCampaignFragment_to_homeCampaignsFragment 0x7f090354
 int id action_menu_divider 0x7f090049
 int id action_menu_presenter 0x7f09004a
 int id action_mode_bar 0x7f09004b
@@ -3107,6 +3111,7 @@ int id autoComplete 0x7f090071
 int id autoCompleteToEnd 0x7f090072
 int id autoCompleteToStart 0x7f090073
 int id backgroundFragment 0x7f090074
+int id backspaceButton 0x7f09034e
 int id barrier 0x7f090075
 int id baseline 0x7f090076
 int id beginOnFirstDraw 0x7f090077
@@ -3150,6 +3155,7 @@ int id buttonCrea 0x7f090099
 int id buttonPanel 0x7f09009a
 int id buttonPartecipa 0x7f09009b
 int id cache_measures 0x7f09009d
+int id calcolatrice 0x7f09034f
 int id callMeasure 0x7f09009e
 int id camp_bottombar 0x7f09009f
 int id camp_graph 0x7f0900a0
@@ -3187,6 +3193,8 @@ int id confirmPassEt 0x7f0900bd
 int id confirmPasswordLayout 0x7f0900be
 int id confirm_button 0x7f0900bf
 int id constraint 0x7f0900c0
+int id constraint1 0x7f090350
+int id constraint2 0x7f090351
 int id constraintLayout 0x7f0900c1
 int id container 0x7f0900c2
 int id content 0x7f0900c3
@@ -3300,6 +3308,7 @@ int id frost 0x7f090130
 int id fullscreen_header 0x7f090131
 int id furtivita 0x7f090132
 int id furtivitaCheckBox 0x7f090133
+int id gestione_campagna_group 0x7f09034c
 int id ghost_view 0x7f090134
 int id ghost_view_holder 0x7f090135
 int id giorno_sessione 0x7f090336
@@ -3344,6 +3353,7 @@ int id info_nano 0x7f09015b
 int id info_umano 0x7f09015c
 int id inganno 0x7f09015d
 int id ingannoCheckBox 0x7f09015e
+int id input_cancella 0x7f090352
 int id instructionTextView 0x7f09015f
 int id intimidazione 0x7f090160
 int id intimidazioneCheckBox 0x7f090161
@@ -3386,6 +3396,7 @@ int id main_graph 0x7f090185
 int id marquee 0x7f090186
 int id masked 0x7f090187
 int id masterEt 0x7f090188
+int id master_group 0x7f09034d
 int id match_constraint 0x7f090189
 int id match_parent 0x7f09018a
 int id material_clock_display 0x7f09018b

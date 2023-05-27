@@ -1,15 +1,16 @@
 package com.progetto_dd.view.campaigns
 
-import com.progetto_dd.memory.campagna.CampagnaViewModel
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentAddCampaignBinding
+import com.progetto_dd.memory.campagna.CampagnaViewModel
 
 class AddCampaignFragment : Fragment() {
 
@@ -35,7 +36,6 @@ class AddCampaignFragment : Fragment() {
 
         // Definisce il comportamento della creazione
         binding.buttonCrea.setOnClickListener {
-
             val nome = binding.nameEt.text.toString()
             val password = binding.passEt.text.toString()
             val confPassword = binding.confirmPassEt.text.toString()
@@ -43,20 +43,26 @@ class AddCampaignFragment : Fragment() {
 
             // Controlla i campi inseriti
             if (nome.isNotEmpty() && password.isNotEmpty() && confPassword.isNotEmpty() && master.isNotEmpty()) {
-
-                if(password == confPassword){
-                    // Crea la campagna con il nome e password scelti
-                    viewModel.creaCampagna(nome,password,master)
-                    // Restarta l'activity campagna
-                    val intent = Intent(activity, CampaignsActivity::class.java)
-                    startActivity(intent)
-                    activity?.finish()
+                if (password == confPassword) {
+                    // Esegui la query per verificare l'esistenza della campagna
+                    viewModel.checkExistingCampaign(nome).observe(viewLifecycleOwner) { existingCampaign ->
+                        if (existingCampaign) {
+                            Toast.makeText(
+                                context,
+                                "Hai già una campagna con lo stesso nome!",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            // La campagna non esiste, puoi procedere con la creazione
+                            viewModel.creaCampagna(nome, password, master)
+                            findNavController().navigate(R.id.action_addCampaignFragment_to_homeCampaignsFragment)
+                        }
+                    }
+                } else {
+                    Toast.makeText(context, "Le due password non coincidono!", Toast.LENGTH_SHORT).show()
                 }
-                else{ // Lancia un Toast se password e confPassword sono diverse
-                    Toast.makeText(context, "Le due password non coincidono !", Toast.LENGTH_SHORT).show()
-                }
-            } else { // Lancia un Toast se uno dei campi è vuoto
-                Toast.makeText(context, "Non sono ammessi campi vuoti !", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(context, "Non sono ammessi campi vuoti!", Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
-import com.progetto_dd.view.campaigns.drawer.VisualizzaSessioniActivity
+import com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity
 
 class SessioneAdapter(private val sessione: List<Sessione>) :
     RecyclerView.Adapter<SessioneAdapter.SessioneViewHolder>() {
@@ -50,7 +50,7 @@ class SessioneAdapter(private val sessione: List<Sessione>) :
             // Aggiungi il ClickListener alla card
             itemView.setOnClickListener {
 
-                val intent = Intent(itemView.context, VisualizzaSessioniActivity::class.java)
+                val intent = Intent(itemView.context, VisualizzaSessioneActivity::class.java)
 
                 intent.putExtra("numero_sessione", sessione.numero.toString())
                 intent.putExtra("giorno_sessione", sessione.giorno)

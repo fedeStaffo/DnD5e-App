@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +23,9 @@ import java.lang.String;
 public final class FragmentDadoBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ImageButton backspaceButton;
 
   @NonNull
   public final Button bottone0;
@@ -58,6 +64,15 @@ public final class FragmentDadoBinding implements ViewBinding {
   public final Button bottonePiu;
 
   @NonNull
+  public final LinearLayout calcolatrice;
+
+  @NonNull
+  public final ConstraintLayout constraint1;
+
+  @NonNull
+  public final ConstraintLayout constraint2;
+
+  @NonNull
   public final Button d10;
 
   @NonNull
@@ -85,6 +100,9 @@ public final class FragmentDadoBinding implements ViewBinding {
   public final Button d8;
 
   @NonNull
+  public final RelativeLayout inputCancella;
+
+  @NonNull
   public final Button roll;
 
   @NonNull
@@ -93,15 +111,19 @@ public final class FragmentDadoBinding implements ViewBinding {
   @NonNull
   public final TextView textView53;
 
-  private FragmentDadoBinding(@NonNull ConstraintLayout rootView, @NonNull Button bottone0,
-      @NonNull Button bottone1, @NonNull Button bottone2, @NonNull Button bottone3,
-      @NonNull Button bottone4, @NonNull Button bottone5, @NonNull Button bottone6,
-      @NonNull Button bottone7, @NonNull Button bottone8, @NonNull Button bottone9,
-      @NonNull Button bottoneMeno, @NonNull Button bottonePiu, @NonNull Button d10,
-      @NonNull Button d100, @NonNull Button d12, @NonNull Button d2, @NonNull Button d20,
-      @NonNull Button d3, @NonNull Button d4, @NonNull Button d6, @NonNull Button d8,
-      @NonNull Button roll, @NonNull TextInputEditText textDado, @NonNull TextView textView53) {
+  private FragmentDadoBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ImageButton backspaceButton, @NonNull Button bottone0, @NonNull Button bottone1,
+      @NonNull Button bottone2, @NonNull Button bottone3, @NonNull Button bottone4,
+      @NonNull Button bottone5, @NonNull Button bottone6, @NonNull Button bottone7,
+      @NonNull Button bottone8, @NonNull Button bottone9, @NonNull Button bottoneMeno,
+      @NonNull Button bottonePiu, @NonNull LinearLayout calcolatrice,
+      @NonNull ConstraintLayout constraint1, @NonNull ConstraintLayout constraint2,
+      @NonNull Button d10, @NonNull Button d100, @NonNull Button d12, @NonNull Button d2,
+      @NonNull Button d20, @NonNull Button d3, @NonNull Button d4, @NonNull Button d6,
+      @NonNull Button d8, @NonNull RelativeLayout inputCancella, @NonNull Button roll,
+      @NonNull TextInputEditText textDado, @NonNull TextView textView53) {
     this.rootView = rootView;
+    this.backspaceButton = backspaceButton;
     this.bottone0 = bottone0;
     this.bottone1 = bottone1;
     this.bottone2 = bottone2;
@@ -114,6 +136,9 @@ public final class FragmentDadoBinding implements ViewBinding {
     this.bottone9 = bottone9;
     this.bottoneMeno = bottoneMeno;
     this.bottonePiu = bottonePiu;
+    this.calcolatrice = calcolatrice;
+    this.constraint1 = constraint1;
+    this.constraint2 = constraint2;
     this.d10 = d10;
     this.d100 = d100;
     this.d12 = d12;
@@ -123,6 +148,7 @@ public final class FragmentDadoBinding implements ViewBinding {
     this.d4 = d4;
     this.d6 = d6;
     this.d8 = d8;
+    this.inputCancella = inputCancella;
     this.roll = roll;
     this.textDado = textDado;
     this.textView53 = textView53;
@@ -155,6 +181,12 @@ public final class FragmentDadoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.backspaceButton;
+      ImageButton backspaceButton = ViewBindings.findChildViewById(rootView, id);
+      if (backspaceButton == null) {
+        break missingId;
+      }
+
       id = R.id.bottone0;
       Button bottone0 = ViewBindings.findChildViewById(rootView, id);
       if (bottone0 == null) {
@@ -227,6 +259,24 @@ public final class FragmentDadoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.calcolatrice;
+      LinearLayout calcolatrice = ViewBindings.findChildViewById(rootView, id);
+      if (calcolatrice == null) {
+        break missingId;
+      }
+
+      id = R.id.constraint1;
+      ConstraintLayout constraint1 = ViewBindings.findChildViewById(rootView, id);
+      if (constraint1 == null) {
+        break missingId;
+      }
+
+      id = R.id.constraint2;
+      ConstraintLayout constraint2 = ViewBindings.findChildViewById(rootView, id);
+      if (constraint2 == null) {
+        break missingId;
+      }
+
       id = R.id.d10;
       Button d10 = ViewBindings.findChildViewById(rootView, id);
       if (d10 == null) {
@@ -281,6 +331,12 @@ public final class FragmentDadoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.input_cancella;
+      RelativeLayout inputCancella = ViewBindings.findChildViewById(rootView, id);
+      if (inputCancella == null) {
+        break missingId;
+      }
+
       id = R.id.roll;
       Button roll = ViewBindings.findChildViewById(rootView, id);
       if (roll == null) {
@@ -299,9 +355,10 @@ public final class FragmentDadoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDadoBinding((ConstraintLayout) rootView, bottone0, bottone1, bottone2,
-          bottone3, bottone4, bottone5, bottone6, bottone7, bottone8, bottone9, bottoneMeno,
-          bottonePiu, d10, d100, d12, d2, d20, d3, d4, d6, d8, roll, textDado, textView53);
+      return new FragmentDadoBinding((ConstraintLayout) rootView, backspaceButton, bottone0,
+          bottone1, bottone2, bottone3, bottone4, bottone5, bottone6, bottone7, bottone8, bottone9,
+          bottoneMeno, bottonePiu, calcolatrice, constraint1, constraint2, d10, d100, d12, d2, d20,
+          d3, d4, d6, d8, inputCancella, roll, textDado, textView53);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

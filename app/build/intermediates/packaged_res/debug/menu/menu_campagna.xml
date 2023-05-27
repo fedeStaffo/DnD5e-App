@@ -18,7 +18,7 @@
 
         <item
             android:id="@+id/visualizzaNpcFragment"
-            android:icon="@drawable/npc_goblin"
+            android:icon="@drawable/npc"
             android:title="Npc" />
 
         <item
@@ -28,13 +28,13 @@
 
     </group>
 
-    <item android:title="Master">
+    <item android:title="Master" android:id="@+id/master_group">
         <menu>
             <group android:checkableBehavior="single">
 
                 <item
                     android:id="@+id/nuovoOggettoFragment"
-                    android:icon="@drawable/zaino_scolastico"
+                    android:icon="@drawable/pozione"
                     android:title="Nuovo oggetto" />
 
                 <item
@@ -56,7 +56,7 @@
         </menu>
     </item>
 
-    <item android:title="Gestione campagna">
+    <item android:title="Gestione campagna" android:id="@+id/gestione_campagna_group">
         <menu>
             <group android:checkableBehavior="single">
 

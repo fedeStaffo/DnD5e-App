@@ -60,7 +60,7 @@
 34-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:12:9-49
 35        <activity
 35-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:14:9-17:51
-36            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioniActivity"
+36            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity"
 36-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:15:13-77
 37            android:exported="false"
 37-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:16:13-37

@@ -33,7 +33,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Progetto_DD" >
         <activity
-            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioniActivity"
+            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

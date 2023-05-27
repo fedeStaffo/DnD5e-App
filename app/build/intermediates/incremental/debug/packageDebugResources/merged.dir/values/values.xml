@@ -392,11 +392,11 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="strumenti_1_linguaggi_1">1 linguaggio, 1 strumento</string>
     <string name="strumenti_2">2 strumenti</string>
     <string name="supporto">Supporto</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
-    <string name="tab_text_4">Tab 4</string>
-    <string name="tab_text_5">Tab 5</string>
+    <string name="tab_text_1">Stats</string>
+    <string name="tab_text_2">Zaino</string>
+    <string name="tab_text_3">Magie</string>
+    <string name="tab_text_4">Razza</string>
+    <string name="tab_text_5">Classe</string>
     <string name="title_activity_visualizza_pers">VisualizzaPersActivity</string>
     <string name="title_activity_visualizza_personaggio">VisualizzaPersonaggioActivity</string>
     <string name="title_activity_visualizza_sessioni">VisualizzaSessioniActivity</string>

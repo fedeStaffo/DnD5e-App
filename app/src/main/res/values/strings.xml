@@ -357,11 +357,11 @@ disinvoltura in certi tipi di prove di Carisma.
 
     <!-- Tabbed Visualizzazione -->
     <string name="title_activity_visualizza_pers">VisualizzaPersActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
-    <string name="tab_text_4">Tab 4</string>
-    <string name="tab_text_5">Tab 5</string>
+    <string name="tab_text_1">Stats</string>
+    <string name="tab_text_2">Zaino</string>
+    <string name="tab_text_3">Magie</string>
+    <string name="tab_text_4">Razza</string>
+    <string name="tab_text_5">Class</string>
     <string name="title_activity_visualizza_personaggio">VisualizzaPersonaggioActivity</string>
     <string name="master">Master:</string>
     <string name="giocatori">Giocatori:</string>
@@ -407,6 +407,7 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="vecchia_password">Vecchia password</string>
     <string name="nuova_password">Nuova password</string>
     <string name="stai_per_eliminare_la_campagna_nse_vuoi_continuare_clicca_procedi_naltrimenti_torna_indietro">Stai per eliminare la campagna!\nSe vuoi continuare clicca procedi,\naltrimenti torna indietro</string>
+    <string name="salva">Salva</string>
 
     <string-array name="status">
         <item>Accecato</item>

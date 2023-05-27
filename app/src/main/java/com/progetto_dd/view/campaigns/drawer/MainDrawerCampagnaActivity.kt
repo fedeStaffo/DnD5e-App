@@ -12,14 +12,17 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
-import com.progetto_dd.MainActivity
 import com.progetto_dd.R
+import com.progetto_dd.memory.campagna.CampagnaViewModel
 import com.progetto_dd.view.campaigns.CampaignsActivity
 
-//activity nuova per la visualizzazione della campagna
 class MainDrawerCampagnaActivity : AppCompatActivity() {
+
+    private lateinit var viewModelCampagna: CampagnaViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_drawer_campagna)
@@ -37,6 +40,27 @@ class MainDrawerCampagnaActivity : AppCompatActivity() {
         toolbar.setupWithNavController(navController, appBarConfiguration)
         val navView = findViewById<NavigationView>(R.id.nav_view_campagna)
         NavigationUI.setupWithNavController(navView, navController)
+
+        // Inizializza il CampagnaViewModel
+        viewModelCampagna = ViewModelProvider(this).get(CampagnaViewModel::class.java)
+
+        // Prende l'id del master
+        val masterId = this.intent.getStringExtra("master_id")
+
+        val isMaster = masterId?.let { viewModelCampagna.isCurrentPlayerMaster(it) }
+
+        if (isMaster == false) {
+            // L'utente loggato non è il master della campagna
+            // Nasconde le sezioni del drawer
+            val menu = navView.menu
+
+            // Nasconde la sezione "Master"
+            menu.findItem(R.id.master_group).isVisible = false
+
+            // Nasconde la sezione "Gestione campagna"
+            menu.findItem(R.id.gestione_campagna_group).isVisible = false
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
