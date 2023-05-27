@@ -1,13 +1,13 @@
 package com.progetto_dd.memory.npc
 
-import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
-import com.progetto_dd.view.campaigns.drawer.VisualizzaNpcActivity
 
 class NpcAdapter(private val npc: List<Npc>) :
     RecyclerView.Adapter<NpcAdapter.NpcViewHolder>() {
@@ -49,17 +49,18 @@ class NpcAdapter(private val npc: List<Npc>) :
 
             // Aggiungi il ClickListener alla card
             itemView.setOnClickListener {
+                val args = Bundle().apply {
+                    putString("nome_npc", npc.nome)
+                    putString("descrizione_npc", npc.descrizione)
+                    putString("legame_npc", npc.legame)
+                    putString("master_id", npc.master)
+                    putString("campagna", npc.campagna)
+                }
 
-                val intent = Intent(itemView.context, VisualizzaNpcActivity::class.java)
-
-                intent.putExtra("nome_npc", npc.nome)
-                intent.putExtra("descrizione_npc", npc.descrizione)
-                intent.putExtra("legame_npc", npc.legame)
-                intent.putExtra("master_id", npc.master)
-                intent.putExtra("campagna", npc.campagna)
-                itemView.context.startActivity(intent)
-
+                val navController = itemView.findNavController()
+                navController.navigate(R.id.action_visualizzaNpcFragment_to_npcDetailsFragment, args)
             }
+
 
         }
 

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="@color/macaroon"
     tools:context=".view.campaigns.drawer.EffettiFragment">
 
     <TextView
@@ -14,8 +15,13 @@
         android:gravity="center"
         android:textColor="@color/rosso"
         android:textStyle="bold"
-        android:text="@string/effetti"
+        android:text="@string/status"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -33,6 +39,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"/>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
     <TextView
         android:id="@+id/scegli_effetto"
         android:layout_width="match_parent"
@@ -49,6 +59,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/status"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
 
     <Button
         android:id="@+id/buttonAggiungiEffetto"

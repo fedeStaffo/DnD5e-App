@@ -1,13 +1,13 @@
 package com.progetto_dd.memory.sessione
 
-import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
-import com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity
 
 class SessioneAdapter(private val sessione: List<Sessione>) :
     RecyclerView.Adapter<SessioneAdapter.SessioneViewHolder>() {
@@ -49,16 +49,18 @@ class SessioneAdapter(private val sessione: List<Sessione>) :
 
             // Aggiungi il ClickListener alla card
             itemView.setOnClickListener {
+                val args = Bundle().apply {
+                    putString("numero_sessione", sessione.numero.toString())
+                    putString("giorno_sessione", sessione.giorno)
+                    putString("descrizione_sessione", sessione.descrizione)
+                    putString("master_id", sessione.master)
+                    putString("campagna", sessione.campagna)
+                }
 
-                val intent = Intent(itemView.context, VisualizzaSessioneActivity::class.java)
-
-                intent.putExtra("numero_sessione", sessione.numero.toString())
-                intent.putExtra("giorno_sessione", sessione.giorno)
-                intent.putExtra("descrizione_sessione", sessione.descrizione)
-                intent.putExtra("master_id", sessione.master)
-                intent.putExtra("campagna", sessione.campagna)
-                itemView.context.startActivity(intent)
+                val navController = itemView.findNavController()
+                navController.navigate(R.id.action_visualizzasessioniFragment_to_sessionDetailsFragment, args)
             }
+
         }
     }
 }

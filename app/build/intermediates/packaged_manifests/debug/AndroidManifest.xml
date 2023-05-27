@@ -37,14 +37,6 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaNpcActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.progetto_dd.view.campaigns.drawer.MainDrawerCampagnaActivity"
             android:exported="false"
             android:screenOrientation="portrait" />

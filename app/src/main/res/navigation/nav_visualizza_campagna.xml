@@ -15,6 +15,9 @@
         android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaNpcFragment"
         android:label="Npc"
         tools:layout="@layout/fragment_visualizza_npc" >
+        <action
+            android:id="@+id/action_visualizzaNpcFragment_to_npcDetailsFragment"
+            app:destination="@id/npcDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/nuovoOggettoFragment"
@@ -70,7 +73,11 @@
         android:id="@+id/visualizzasessioniFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.VisualizzaSessioneFragment"
         android:label="Visualizza sessioni"
-        tools:layout="@layout/fragment_visualizza_sessione" />
+        tools:layout="@layout/fragment_visualizza_sessione" >
+        <action
+            android:id="@+id/action_visualizzasessioniFragment_to_sessionDetailsFragment"
+            app:destination="@id/sessionDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/creaNpcFragment"
         android:name="com.progetto_dd.view.campaigns.drawer.CreaNpcFragment"
@@ -88,6 +95,24 @@
         <action
             android:id="@+id/action_creaSessioniFragment_to_visualizzaCampagnaFragment"
             app:destination="@id/visualizzaCampagnaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/npcDetailsFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.NpcDetailsFragment"
+        android:label="Dettagli Npc"
+        tools:layout="@layout/fragment_npc_details" >
+        <action
+            android:id="@+id/action_npcDetailsFragment_to_visualizzaNpcFragment"
+            app:destination="@id/visualizzaNpcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sessionDetailsFragment"
+        android:name="com.progetto_dd.view.campaigns.drawer.SessionDetailsFragment"
+        android:label="Dettagli Sessione"
+        tools:layout="@layout/fragment_session_details" >
+        <action
+            android:id="@+id/action_sessionDetailsFragment_to_visualizzasessioniFragment"
+            app:destination="@id/visualizzasessioniFragment" />
     </fragment>
 
 

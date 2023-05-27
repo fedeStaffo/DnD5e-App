@@ -8,10 +8,6 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_race.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_visualizza_personaggio.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_visualizza_personaggio.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_elimina_campagna.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_elimina_campagna.xml"
     },
@@ -32,12 +28,12 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_visualizza_campagna.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\activity_visualizza_sessione.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\activity_visualizza_sessione.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_class.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_class.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_session_details.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_session_details.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\activity_login.xml",
@@ -52,24 +48,20 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_logout.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_info_razza.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_info_razza.xml"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_modifica_stats.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_modifica_stats.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_home_character.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_home_character.xml"
     },
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-62:/layout/fragment_zaino.xml",
-        "source": "com.progetto_dd.app-main-65:/layout/fragment_zaino.xml"
-    },
-    {
-        "merged": "com.progetto_dd.app-mergeDebugResources-62:/layout/fragment_dado.xml",
-        "source": "com.progetto_dd.app-main-65:/layout/fragment_dado.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_equipaggiamento.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_equipaggiamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_stats_back.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_stats_back.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_help.xml",
@@ -86,6 +78,10 @@
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_main_activity_drawer.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_main_activity_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_npc_details.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_npc_details.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\item_sessione.xml",
@@ -124,16 +120,8 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\item_personaggio.xml"
     },
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-62:/layout/fragment_stats_razza.xml",
-        "source": "com.progetto_dd.app-main-65:/layout/fragment_stats_razza.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_reset_password.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_reset_password.xml"
-    },
-    {
-        "merged": "com.progetto_dd.app-mergeDebugResources-62:/layout/activity_visualizza_personaggio.xml",
-        "source": "com.progetto_dd.app-main-65:/layout/activity_visualizza_personaggio.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_visualizza_sessione.xml",
@@ -144,6 +132,14 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_join_campaign.xml"
     },
     {
+        "merged": "com.progetto_dd.app-mergeDebugResources-62:/layout/fragment_modifica_stats.xml",
+        "source": "com.progetto_dd.app-main-65:/layout/fragment_modifica_stats.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_stats_background.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_stats_background.xml"
+    },
+    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_salva_personaggio.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_salva_personaggio.xml"
     },
@@ -152,16 +148,12 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_add_campaign.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_info_classe.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_info_classe.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_home_campaigns.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_home_campaigns.xml"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\activity_visualizza_npc.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\activity_visualizza_npc.xml"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_stats_classe.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_stats_classe.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\activity_register.xml",
@@ -180,16 +172,16 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_race_info.xml"
     },
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-62:/layout/fragment_stats.xml",
-        "source": "com.progetto_dd.app-main-65:/layout/fragment_stats.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\activity_campaigns.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\activity_campaigns.xml"
     },
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-62:/layout/fragment_stats_classe.xml",
-        "source": "com.progetto_dd.app-main-65:/layout/fragment_stats_classe.xml"
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_modifica_background.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_modifica_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_zaino.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_zaino.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_magie.xml",
@@ -198,6 +190,10 @@
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_background.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_stats.xml",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_stats.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_effetti.xml",
@@ -210,10 +206,6 @@
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_dado.xml",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_dado.xml"
-    },
-    {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\fragment_statistiche.xml",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-65:\\layout\\fragment_statistiche.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-62:\\layout\\item_npc.xml",

@@ -84,11 +84,11 @@ class RollFragment : Fragment() {
 
         binding.btnAvanti.setOnClickListener {
             val tot1 = binding.totaleNum.text.toString().toInt()
-            val tot2 = binding.totaleNum.text.toString().toInt()
-            val tot3 = binding.totaleNum.text.toString().toInt()
-            val tot4 = binding.totaleNum.text.toString().toInt()
-            val tot5 = binding.totaleNum.text.toString().toInt()
-            val tot6 = binding.totaleNum.text.toString().toInt()
+            val tot2 = binding.totaleNum2.text.toString().toInt()
+            val tot3 = binding.totaleNum3.text.toString().toInt()
+            val tot4 = binding.totaleNum4.text.toString().toInt()
+            val tot5 = binding.totaleNum5.text.toString().toInt()
+            val tot6 = binding.totaleNum6.text.toString().toInt()
 
             if(this.getNumValidoTotale(tot1,tot2,tot3,tot4,tot5,tot6)){
                 viewModel.setModForza(tot1)

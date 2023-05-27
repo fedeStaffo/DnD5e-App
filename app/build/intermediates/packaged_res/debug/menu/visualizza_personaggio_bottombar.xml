@@ -18,14 +18,14 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/statsRazzaFragment"
-        android:icon="@drawable/elf"
-        android:title="Razza"
+        android:id="@+id/statsBackFragment"
+        android:icon="@drawable/story"
+        android:title="Background"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/statsClasseFragment"
         android:icon="@drawable/crusader"
-        android:title="Classe"
+        android:title="Classe e Razza"
         app:showAsAction="always"/>
 </menu>

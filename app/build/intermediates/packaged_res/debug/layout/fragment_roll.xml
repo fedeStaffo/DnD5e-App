@@ -38,6 +38,7 @@
 
             <TextView
                 android:id="@+id/textViewForzaDesc"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/forza"
@@ -46,6 +47,7 @@
 
             <TextView
                 android:id="@+id/textViewDado1"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dado"
@@ -88,6 +90,7 @@
 
             <TextView
                 android:id="@+id/razza"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -99,6 +102,7 @@
 
             <TextView
                 android:id="@+id/totale"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45dp"
@@ -111,6 +115,7 @@
             <TextView
                 android:id="@+id/razza_num"
                 android:layout_width="30dp"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
@@ -120,6 +125,7 @@
             <TextView
                 android:id="@+id/totale_num"
                 android:text="0"
+                android:textColor="@color/black"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -146,12 +152,14 @@
                 android:id="@+id/textViewDestrezzaDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/destrezza"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewDestrezza" />
 
             <TextView
                 android:id="@+id/textViewDado2"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dado"
@@ -194,6 +202,7 @@
 
             <TextView
                 android:id="@+id/razza2"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -205,6 +214,7 @@
 
             <TextView
                 android:id="@+id/totale2"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45dp"
@@ -215,6 +225,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textViewDestrezzaDesc" />
 
             <TextView
+                android:textColor="@color/black"
                 android:id="@+id/razza_num2"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
@@ -226,6 +237,7 @@
             <TextView
                 android:id="@+id/totale_num2"
                 android:text="0"
+                android:textColor="@color/black"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -252,6 +264,7 @@
                 android:id="@+id/textViewCostituzioneDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/destrezza"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCostituzione" />
@@ -261,6 +274,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dado"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toStartOf="parent"
@@ -304,6 +318,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="@string/razza"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@+id/textViewPiu3"
@@ -315,6 +330,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45dp"
                 android:text="@string/totale"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@+id/razza3"
@@ -323,6 +339,7 @@
             <TextView
                 android:id="@+id/razza_num3"
                 android:layout_width="30dp"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
@@ -332,6 +349,7 @@
             <TextView
                 android:id="@+id/totale_num3"
                 android:text="0"
+                android:textColor="@color/black"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -358,6 +376,7 @@
                 android:id="@+id/textViewIntelligenzaDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/intelligenza"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewIntelligenza" />
@@ -367,6 +386,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dado"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toStartOf="parent"
@@ -387,6 +407,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="8dp"
                 android:text="+"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -400,6 +421,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="8dp"
                 android:text="="
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintStart_toEndOf="@+id/razza_num4"
                 app:layout_constraintTop_toBottomOf="@+id/razza4" />
@@ -411,6 +433,7 @@
                 android:layout_marginStart="20dp"
                 android:text="@string/razza"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@+id/textViewPiu4"
                 app:layout_constraintTop_toBottomOf="@+id/textViewIntelligenzaDesc" />
@@ -421,6 +444,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45dp"
                 android:text="@string/totale"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@+id/razza4"
@@ -432,6 +456,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textViewPiu4"
                 app:layout_constraintTop_toBottomOf="@+id/razza4" />
 
@@ -441,6 +466,7 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toEndOf="@+id/textViewUguale4"
                 app:layout_constraintTop_toBottomOf="@+id/totale4" />
@@ -464,6 +490,7 @@
                 android:id="@+id/textViewSaggezzaDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/saggezza"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSaggezza" />
@@ -473,6 +500,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dado"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toStartOf="parent"
@@ -494,6 +522,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="+"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintStart_toEndOf="@+id/num_saggezza"
@@ -505,6 +534,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/black"
                 android:text="="
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintStart_toEndOf="@+id/razza_num5"
@@ -517,6 +547,7 @@
                 android:layout_marginStart="20dp"
                 android:text="@string/razza"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@+id/textViewPiu5"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSaggezzaDesc" />
@@ -528,6 +559,7 @@
                 android:layout_marginStart="45dp"
                 android:text="@string/totale"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@+id/razza5"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSaggezzaDesc" />
@@ -538,6 +570,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textViewPiu5"
                 app:layout_constraintTop_toBottomOf="@+id/razza5" />
 
@@ -548,6 +581,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textViewUguale5"
                 app:layout_constraintTop_toBottomOf="@+id/totale5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -570,6 +604,7 @@
                 android:id="@+id/textViewCarismaDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/carisma"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCarisma" />
@@ -579,6 +614,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dado"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toStartOf="parent"
@@ -601,6 +637,7 @@
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="8dp"
                 android:text="+"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintStart_toEndOf="@+id/num_carisma"
                 app:layout_constraintTop_toBottomOf="@+id/textViewDado6" />
@@ -612,6 +649,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="8dp"
                 android:text="="
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintStart_toEndOf="@+id/razza_num6"
                 app:layout_constraintTop_toBottomOf="@+id/razza6" />
@@ -623,6 +661,7 @@
                 android:layout_marginStart="20dp"
                 android:text="@string/razza"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@+id/textViewPiu6"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCarismaDesc" />
@@ -634,6 +673,7 @@
                 android:layout_marginStart="45dp"
                 android:text="@string/totale"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@+id/razza6"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCarismaDesc" />
@@ -644,6 +684,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textViewPiu6"
                 app:layout_constraintTop_toBottomOf="@+id/razza6" />
 
@@ -654,6 +695,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textViewUguale6"
                 app:layout_constraintTop_toBottomOf="@+id/totale6" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -662,7 +704,7 @@
             android:id="@+id/btn_calcola"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/brune_red"
             android:text="@string/calcola_totali"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp" />
@@ -671,7 +713,7 @@
             android:id="@+id/btn_avanti"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/brune_red"
             android:text="@string/avanti"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp" />

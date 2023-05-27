@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="@string/inserisci_nome_e_password"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,9 +37,7 @@
             android:id="@+id/nameEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
             android:hint="@string/nome_campagna"
-            android:textColorHint="@color/black"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,9 +56,7 @@
             android:id="@+id/masterEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
             android:hint="@string/nome_master"
-            android:textColorHint="@color/black"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,8 +79,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            android:backgroundTint="@color/white"
-            android:textColorHint="@color/black"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -106,8 +99,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/conferma_passw"
-            android:backgroundTint="@color/white"
-            android:textColorHint="@color/black"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,7 +107,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/brune_red"
         android:text="@string/crea"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

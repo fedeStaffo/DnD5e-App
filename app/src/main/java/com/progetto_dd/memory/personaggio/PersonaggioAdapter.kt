@@ -6,12 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.progetto_dd.R
 import com.progetto_dd.view.characters.VisualizzaPersonaggioActivity
+import java.util.ArrayList
 
 // Classe adapter per gestire la lista dei personaggi
 class PersonaggioAdapter(private val personaggi: List<Personaggio>) :
     RecyclerView.Adapter<PersonaggioAdapter.PersonaggioViewHolder>() {
+
+    // Riferimento all'utente loggato
+    private val currentUser = FirebaseAuth.getInstance().currentUser
 
     // Crea una nuova istanza di PersonaggioViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonaggioViewHolder {
@@ -52,15 +57,40 @@ class PersonaggioAdapter(private val personaggi: List<Personaggio>) :
             // Imposta la classe del personaggio
             classTextView.text = personaggio.classe
 
-            // Imposta il listener del clic sulla card del personaggio
-            itemView.setOnClickListener {
-                val intent = Intent(itemView.context, VisualizzaPersonaggioActivity::class.java)
-                // Passa il nome della campagna e l'id del master alla nuova activity
-                intent.putExtra("nome", personaggio.nome)
-                intent.putExtra("razza", personaggio.razza)
-                intent.putExtra("classe", personaggio.classe)
-                itemView.context.startActivity(intent)
+            if(currentUser?.uid == personaggio.utenteId ){
+                // Imposta il listener del clic sulla card del personaggio
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, VisualizzaPersonaggioActivity::class.java)
 
+                    intent.putExtra("nome", personaggio.nome)
+                    intent.putExtra("razza", personaggio.razza)
+                    intent.putExtra("classe", personaggio.classe)
+                    intent.putExtra("utente_id", personaggio.utenteId)
+                    intent.putExtra("campagna", personaggio.campagna)
+                    intent.putStringArrayListExtra("competenze", ArrayList(personaggio.competenze ?: emptyList()))
+                    intent.putStringArrayListExtra("equipaggiamento", ArrayList(personaggio.equipaggiamento ?: emptyList()))
+                    intent.putExtra("stato", personaggio.stato)
+                    intent.putExtra("vitaMax", personaggio.vitaMax.toString())
+                    intent.putExtra("vita", personaggio.vita.toString())
+                    intent.putExtra("livello", personaggio.livello.toString())
+                    intent.putExtra("classeArmatura", personaggio.classeArmatura.toString())
+
+                    intent.putExtra("carisma", personaggio.carisma.toString())
+                    intent.putExtra("costituzione", personaggio.costituzione.toString())
+                    intent.putExtra("forza", personaggio.forza.toString())
+                    intent.putExtra("destrezza", personaggio.destrezza.toString())
+                    intent.putExtra("intelligenza", personaggio.intelligenza.toString())
+                    intent.putExtra("saggezza", personaggio.saggezza.toString())
+
+                    intent.putExtra("allineamento", personaggio.allineamento)
+                    intent.putExtra("descrizione", personaggio.descrizione)
+                    intent.putExtra("ideali", personaggio.ideali)
+                    intent.putExtra("legami", personaggio.legami)
+                    intent.putExtra("storia", personaggio.storia)
+                    intent.putExtra("difetti", personaggio.difetti)
+                    intent.putExtra("tratti", personaggio.tratti)
+                    itemView.context.startActivity(intent)
+                }
             }
 
         }

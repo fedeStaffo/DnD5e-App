@@ -294,7 +294,9 @@ class PersonaggioViewModel : ViewModel() {
             "stato" to "Nessuno",
             "vitaMax" to 0,
             "vita" to 0,
-            "livello" to 1
+            "livello" to 1,
+            "classeArmatura" to 0,
+            "campagna" to ""
             // slot ??
         )
 
@@ -344,6 +346,87 @@ class PersonaggioViewModel : ViewModel() {
         }
     }
 
+    fun deletePersonaggio(nome: String, razza: String, classe: String, utenteId: String, campagna: String): LiveData<Boolean> {
+        val deletionLiveData = MutableLiveData<Boolean>()
+
+        if (campagna != "") {
+            deletionLiveData.value = false
+            return deletionLiveData
+        }
+
+        val query = personaggiRef
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("razza", razza)
+            .whereEqualTo("classe", classe)
+            .whereEqualTo("utenteId", utenteId)
+            .whereEqualTo("campagna", campagna)
+
+        query.get()
+            .addOnSuccessListener { querySnapshot ->
+                for (document in querySnapshot.documents) {
+                    personaggiRef.document(document.id).delete()
+                        .addOnSuccessListener {
+                            deletionLiveData.value = true
+                        }
+                        .addOnFailureListener { exception ->
+                            deletionLiveData.value = false
+                        }
+                }
+            }
+            .addOnFailureListener { exception ->
+                deletionLiveData.value = false
+            }
+
+        return deletionLiveData
+    }
+
+    fun updateCampoNumerico(
+        nome: String,
+        razza: String,
+        classe: String,
+        utenteId: String,
+        nomeCampo: String,
+        nuovoValore: Number) {
+        val db = FirebaseFirestore.getInstance()
+        val personaggiRef = db.collection("personaggi")
+
+        personaggiRef
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("razza", razza)
+            .whereEqualTo("classe", classe)
+            .whereEqualTo("utenteId", utenteId)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                if (querySnapshot.isEmpty) {
+                    // Nessun documento trovato con i parametri specificati
+                    return@addOnSuccessListener
+                }
+
+                val document = querySnapshot.documents.first()
+                val documentId = document.id
+
+                // Aggiorna il campo con il nuovo valore
+                val updateData = mapOf(nomeCampo to nuovoValore)
+
+                personaggiRef.document(documentId)
+                    .update(updateData)
+            }
+    }
+
+    fun updateCampoString(nome: String, razza: String, classe: String, utenteId: String, campo: String, nuovoValore: String) {
+        val db = FirebaseFirestore.getInstance()
+        val personaggioRef = db.collection("personaggio")
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("razza", razza)
+            .whereEqualTo("classe", classe)
+            .whereEqualTo("utenteId", utenteId)
+
+        personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot) {
+                document.reference.update(campo, nuovoValore)
+            }
+        }
+    }
 
     companion object {
         const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"

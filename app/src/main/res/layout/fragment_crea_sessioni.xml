@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".view.campaigns.drawer.CreaSessioniFragment"
     android:layout_marginStart="0dp"
+    android:background="@color/macaroon"
     android:padding="16dp">
 
     <LinearLayout

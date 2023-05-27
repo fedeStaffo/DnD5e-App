@@ -4,25 +4,38 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.google.android.material.textfield.TextInputEditText;
 import com.progetto_dd.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentZainoBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ScrollView rootView;
 
-  private FragmentZainoBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final TextInputEditText inputOggetto;
+
+  @NonNull
+  public final TextView textViewInventario;
+
+  private FragmentZainoBinding(@NonNull ScrollView rootView,
+      @NonNull TextInputEditText inputOggetto, @NonNull TextView textViewInventario) {
     this.rootView = rootView;
+    this.inputOggetto = inputOggetto;
+    this.textViewInventario = textViewInventario;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -43,10 +56,25 @@ public final class FragmentZainoBinding implements ViewBinding {
 
   @NonNull
   public static FragmentZainoBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.inputOggetto;
+      TextInputEditText inputOggetto = ViewBindings.findChildViewById(rootView, id);
+      if (inputOggetto == null) {
+        break missingId;
+      }
 
-    return new FragmentZainoBinding((FrameLayout) rootView);
+      id = R.id.textViewInventario;
+      TextView textViewInventario = ViewBindings.findChildViewById(rootView, id);
+      if (textViewInventario == null) {
+        break missingId;
+      }
+
+      return new FragmentZainoBinding((ScrollView) rootView, inputOggetto, textViewInventario);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,7 +23,7 @@ import java.lang.String;
 
 public final class FragmentDadoBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final ImageButton backspaceButton;
@@ -111,16 +112,16 @@ public final class FragmentDadoBinding implements ViewBinding {
   @NonNull
   public final TextView textView53;
 
-  private FragmentDadoBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton backspaceButton, @NonNull Button bottone0, @NonNull Button bottone1,
-      @NonNull Button bottone2, @NonNull Button bottone3, @NonNull Button bottone4,
-      @NonNull Button bottone5, @NonNull Button bottone6, @NonNull Button bottone7,
-      @NonNull Button bottone8, @NonNull Button bottone9, @NonNull Button bottoneMeno,
-      @NonNull Button bottonePiu, @NonNull LinearLayout calcolatrice,
-      @NonNull ConstraintLayout constraint1, @NonNull ConstraintLayout constraint2,
-      @NonNull Button d10, @NonNull Button d100, @NonNull Button d12, @NonNull Button d2,
-      @NonNull Button d20, @NonNull Button d3, @NonNull Button d4, @NonNull Button d6,
-      @NonNull Button d8, @NonNull RelativeLayout inputCancella, @NonNull Button roll,
+  private FragmentDadoBinding(@NonNull ScrollView rootView, @NonNull ImageButton backspaceButton,
+      @NonNull Button bottone0, @NonNull Button bottone1, @NonNull Button bottone2,
+      @NonNull Button bottone3, @NonNull Button bottone4, @NonNull Button bottone5,
+      @NonNull Button bottone6, @NonNull Button bottone7, @NonNull Button bottone8,
+      @NonNull Button bottone9, @NonNull Button bottoneMeno, @NonNull Button bottonePiu,
+      @NonNull LinearLayout calcolatrice, @NonNull ConstraintLayout constraint1,
+      @NonNull ConstraintLayout constraint2, @NonNull Button d10, @NonNull Button d100,
+      @NonNull Button d12, @NonNull Button d2, @NonNull Button d20, @NonNull Button d3,
+      @NonNull Button d4, @NonNull Button d6, @NonNull Button d8,
+      @NonNull RelativeLayout inputCancella, @NonNull Button roll,
       @NonNull TextInputEditText textDado, @NonNull TextView textView53) {
     this.rootView = rootView;
     this.backspaceButton = backspaceButton;
@@ -156,7 +157,7 @@ public final class FragmentDadoBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -355,8 +356,8 @@ public final class FragmentDadoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDadoBinding((ConstraintLayout) rootView, backspaceButton, bottone0,
-          bottone1, bottone2, bottone3, bottone4, bottone5, bottone6, bottone7, bottone8, bottone9,
+      return new FragmentDadoBinding((ScrollView) rootView, backspaceButton, bottone0, bottone1,
+          bottone2, bottone3, bottone4, bottone5, bottone6, bottone7, bottone8, bottone9,
           bottoneMeno, bottonePiu, calcolatrice, constraint1, constraint2, d10, d100, d12, d2, d20,
           d3, d4, d6, d8, inputCancella, roll, textDado, textView53);
     }

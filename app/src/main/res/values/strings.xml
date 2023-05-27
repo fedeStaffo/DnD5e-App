@@ -442,5 +442,34 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="modifica">Modifica</string>
     <string name="classe_armatura">Classe armatura = </string>
 
+    <string name="status">Status</string>
+    <string name="nuovo_oggetto">Nuovo oggetto</string>
+    <string name="punti_ferita_massimi">Punti ferita massimi:</string>
+    <string name="valore_attuale">(Valore Attuale)</string>
+    <string name="salva_bottone">Salva</string>
+    <string name="punti_ferita_attuali">Punti ferita attuali:</string>
+    <string name="classe_armatura_punti">Classe Armatura:</string>
+    <string name="forza2">Forza:</string>
+    <string name="destrezza2">Destrezza:</string>
+    <string name="costituzione2">Costituzione:</string>
+    <string name="intelligenza2">Intelligenza:</string>
+    <string name="saggezza2">Saggezza:</string>
+    <string name="carisma2">Carisma:</string>
+    <string name="status2">Status:</string>
+
+    <string name="inventario">Inventario</string>
+    <string name="aggiungi2">Aggiungi!</string>
+    <string name="vuoi_rimuovere_no_aggiungere_qualcosa">Vuoi rimuovere\no aggiungere qualcosa?</string>
+    <string name="x">X</string>
+    <string name="testo_attuale">(Testo attuale)</string>
+    <string name="tiri_salvezza">Tiri salvezza:</string>
+    <string name="livello">Livello:</string>
+    <string name="bonus_competenza">Bonus Competenza =</string>
+    <string name="livello2">Livello:</string>
+
+    <string name="classe">Classe</string>
+    <string name="sottoclasse">Sottoclasse</string>
+    <string name="testo_di_prova">TESTO DI PROVA</string>
+    <string name="tipo">Tipo: </string>
 </resources>
 
