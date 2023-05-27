@@ -125,6 +125,7 @@ id action_resetPasswordFragment_to_visualizzaCampagnaFragment
 id action_rollFragment_to_equipaggiamentoFragment
 id action_salvaPersonaggioFragment_to_homeCharacterFragment
 id action_sessionDetailsFragment_to_visualizzasessioniFragment
+id action_statsBackFragment_to_modificaBackgroundFragment
 id action_statsFragment_to_modificaStatsFragment
 id action_visualizzaNpcFragment_to_npcDetailsFragment
 id action_visualizzasessioniFragment_to_sessionDetailsFragment
@@ -152,6 +153,9 @@ id bottone6
 id bottone7
 id bottone8
 id bottone9
+id bottoneInfoClasse
+id bottoneInfoRazza
+id bottoneInfoSottoClasse
 id bottone_meno
 id bottone_piu
 id btnAggiungiOggetto
@@ -224,7 +228,6 @@ id drawer_layout
 id drawer_layout_campagna
 id drawer_layout_campaigns
 id drawer_layout_characters
-id editTextAllineamento
 id editTextCarisma
 id editTextClasseArmatura
 id editTextCostituzione
@@ -238,7 +241,6 @@ id editTextLegami
 id editTextLivello
 id editTextPassword
 id editTextSaggezza
-id editTextStatus
 id editTextStoria
 id editTextTratticaratteriali
 id editTextVitaAttuale
@@ -306,6 +308,7 @@ id masterEt
 id master_group
 id medicina
 id medicinaCheckBox
+id modificaBackgroundFragment
 id modificaStatsFragment
 id modificatore_carisma
 id modificatore_costituzione
@@ -407,11 +410,13 @@ id sessione_text
 id sopravvivenza
 id sopravvivenzaCheckBox
 id spinner
+id spinnerAllineamento
 id spinnerEffetti
 id spinnerGiocatore
 id spinnerGiocatori
 id spinnerLegame
 id spinnerPersonaggi
+id spinnerStatus
 id spinner_scelta1
 id spinner_scelta2
 id spinner_scelta3
@@ -449,17 +454,15 @@ id textViewDado3
 id textViewDado4
 id textViewDado5
 id textViewDado6
-id textViewDescrizione
 id textViewDestrezza
 id textViewDestrezzaDesc
-id textViewDifetti
 id textViewForza
 id textViewForzaDesc
-id textViewIdeali
+id textViewIncantesimo
 id textViewIntelligenza
 id textViewIntelligenzaDesc
 id textViewInventario
-id textViewLegami
+id textViewLivello
 id textViewPiu1
 id textViewPiu2
 id textViewPiu3
@@ -468,8 +471,7 @@ id textViewPiu5
 id textViewPiu6
 id textViewSaggezza
 id textViewSaggezzaDesc
-id textViewStoria
-id textViewTratticaratteriali
+id textViewTipo
 id textViewUguale1
 id textViewUguale2
 id textViewUguale3
@@ -544,12 +546,13 @@ layout fragment_salva_personaggio
 layout fragment_session_details
 layout fragment_stats
 layout fragment_stats_back
-layout fragment_stats_classe
+layout fragment_stats_classe_razza
 layout fragment_visualizza_campagna
 layout fragment_visualizza_npc
 layout fragment_visualizza_sessione
 layout fragment_zaino
 layout item_campagna
+layout item_incantesimo
 layout item_npc
 layout item_personaggio
 layout item_sessione
@@ -596,6 +599,7 @@ string carisma2
 string carisma_stat
 string carisma_title
 string chierico
+string classe
 string classe_armatura
 string classe_armatura_punti
 string classe_e_razza_preferite
@@ -732,6 +736,7 @@ string scegli_un_personaggio
 string scelto
 string second_fragment_label
 string sei_sicuro_di_creare_questo_personaggio
+string sottoclasse
 string stai_per_eliminare_la_campagna_nse_vuoi_continuare_clicca_procedi_naltrimenti_torna_indietro
 string statistiche_personaggio
 string stato
@@ -747,6 +752,8 @@ string tab_text_3
 string tab_text_4
 string tab_text_5
 string testo_attuale
+string testo_di_prova
+string tipo
 string tiri_salvezza
 string title_activity_visualizza_pers
 string title_activity_visualizza_personaggio

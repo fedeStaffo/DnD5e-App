@@ -16,14 +16,18 @@
     </fragment>
     <fragment
         android:id="@+id/statsClasseFragment"
-        android:name="com.progetto_dd.view.characters.visualizza.StatsClasseFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.StatsClasseRazzaFragment"
         android:label="Stats Classe"
-        tools:layout="@layout/fragment_stats_classe" />
+        tools:layout="@layout/fragment_stats_classe_razza" />
     <fragment
         android:id="@+id/statsBackFragment"
         android:name="com.progetto_dd.view.characters.visualizza.StatsBackFragment"
         android:label="Stats Background"
-        tools:layout="@layout/fragment_stats_back" />
+        tools:layout="@layout/fragment_stats_back" >
+        <action
+            android:id="@+id/action_statsBackFragment_to_modificaBackgroundFragment"
+            app:destination="@id/modificaBackgroundFragment" />
+    </fragment>
     <fragment
         android:id="@+id/magieFragment"
         android:name="com.progetto_dd.view.characters.visualizza.MagieFragment"
@@ -32,11 +36,16 @@
     <fragment
         android:id="@+id/zainoFragment"
         android:name="com.progetto_dd.view.characters.visualizza.ZainoFragment"
-        android:label="fragment_zaino"
+        android:label="Inventario"
         tools:layout="@layout/fragment_zaino" />
     <fragment
         android:id="@+id/modificaStatsFragment"
         android:name="com.progetto_dd.view.characters.visualizza.ModificaStatsFragment"
-        android:label="fragment_modifica_stats"
+        android:label="Modifica statistiche"
         tools:layout="@layout/fragment_modifica_stats" />
+    <fragment
+        android:id="@+id/modificaBackgroundFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.ModificaBackgroundFragment"
+        android:label="Modifica background"
+        tools:layout="@layout/fragment_modifica_background" />
 </navigation>

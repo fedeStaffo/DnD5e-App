@@ -1,60 +1,64 @@
 package com.progetto_dd.view.characters.visualizza
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.progetto_dd.R
+import com.progetto_dd.databinding.FragmentStatsBackBinding
+import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [StatsBackFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class StatsBackFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentStatsBackBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var viewModel: PersonaggioViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_stats_back, container, false)
+        _binding = FragmentStatsBackBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment StatsBackFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            StatsBackFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Inizializza il view model
+        viewModel = ViewModelProvider(requireActivity()).get(PersonaggioViewModel::class.java)
+
+        val intent = requireActivity().intent
+
+        val allineamento = intent.getStringExtra("allineamento")
+        val descrizione = intent.getStringExtra("descrizione")
+        val legami = intent.getStringExtra("legami")
+        val difetti = intent.getStringExtra("difetti")
+        val tratti = intent.getStringExtra("tratti")
+        val storia = intent.getStringExtra("storia")
+        val ideali = intent.getStringExtra("ideali")
+
+        binding.textAllineamento.text = allineamento
+        binding.textDescrizione.text = descrizione
+        binding.textLegami.text = legami
+        binding.textDifetti.text = difetti
+        binding.textTratticaratteriali.text = tratti
+        binding.textStoria.text = storia
+        binding.textIdeali.text = ideali
+
+        binding.btnModifica.setOnClickListener {
+            findNavController().navigate(R.id.action_statsBackFragment_to_modificaBackgroundFragment)
+        }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }

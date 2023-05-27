@@ -5,56 +5,117 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.progetto_dd.R
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import com.progetto_dd.databinding.FragmentModificaBackgroundBinding
+import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ModificaBackgroundFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ModificaBackgroundFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentModificaBackgroundBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var viewModel: PersonaggioViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_modifica_background, container, false)
+        _binding = FragmentModificaBackgroundBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ModificaBackgroundFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ModificaBackgroundFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Inizializza il view model
+        viewModel = ViewModelProvider(requireActivity()).get(PersonaggioViewModel::class.java)
+
+        val intent = requireActivity().intent
+
+        val nome = intent.getStringExtra("nome")
+        val razza = intent.getStringExtra("razza")
+        val classe = intent.getStringExtra("classe")
+        val utenteId = intent.getStringExtra("utente_id")
+
+        binding.buttonSalvaDescrizione.setOnClickListener {
+            val descrizione = binding.editTextDescrizione.text.toString()
+            if(descrizione!= ""){
+                if (nome != null && razza != null && classe != null && utenteId != null) {
+                    viewModel.updateCampoString(nome, razza, classe, utenteId, "descrizione", descrizione)
                 }
+                Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
             }
+            else Toast.makeText(requireContext(),"Non puoi inserire campi vuoti!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonSalvaDifetti.setOnClickListener {
+            val difetti = binding.editTextDifetti.text.toString()
+            if(difetti!= ""){
+                if (nome != null && razza != null && classe != null && utenteId != null) {
+                    viewModel.updateCampoString(nome, razza, classe, utenteId, "difetti", difetti)
+                }
+                Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
+            }
+            else Toast.makeText(requireContext(),"Non puoi inserire campi vuoti!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonSalvaLegami.setOnClickListener {
+            val legami = binding.editTextLegami.text.toString()
+            if(legami!= ""){
+                if (nome != null && razza != null && classe != null && utenteId != null) {
+                    viewModel.updateCampoString(nome, razza, classe, utenteId, "legami", legami)
+                }
+                Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
+            }
+            else Toast.makeText(requireContext(),"Non puoi inserire campi vuoti!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonSalvaStoria.setOnClickListener {
+            val storia = binding.editTextStoria.text.toString()
+            if(storia!= ""){
+                if (nome != null && razza != null && classe != null && utenteId != null) {
+                    viewModel.updateCampoString(nome, razza, classe, utenteId, "storia", storia)
+                }
+                Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
+            }
+            else Toast.makeText(requireContext(),"Non puoi inserire campi vuoti!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonSalvaTratticaratteriali.setOnClickListener {
+            val tratti = binding.editTextTratticaratteriali.text.toString()
+            if(tratti!= ""){
+                if (nome != null && razza != null && classe != null && utenteId != null) {
+                    viewModel.updateCampoString(nome, razza, classe, utenteId, "tratti", tratti)
+                }
+                Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
+            }
+            else Toast.makeText(requireContext(),"Non puoi inserire campi vuoti!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonSalvaIdeali.setOnClickListener {
+            val ideali = binding.editTextIdeali.text.toString()
+            if(ideali!= ""){
+                if (nome != null && razza != null && classe != null && utenteId != null) {
+                    viewModel.updateCampoString(nome, razza, classe, utenteId, "ideali", ideali)
+                }
+                Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
+            }
+            else Toast.makeText(requireContext(),"Non puoi inserire campi vuoti!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonSalvaAllineamento.setOnClickListener {
+            val allineamento = binding.spinnerAllineamento.selectedItem as String
+            if (nome != null && razza != null && classe != null && utenteId != null){
+                viewModel.updateCampoString(nome, razza, classe, utenteId, "allineamento", allineamento)
+                Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

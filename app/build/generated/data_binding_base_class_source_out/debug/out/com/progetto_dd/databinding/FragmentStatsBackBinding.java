@@ -4,6 +4,7 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -18,6 +19,9 @@ import java.lang.String;
 public final class FragmentStatsBackBinding implements ViewBinding {
   @NonNull
   private final ScrollView rootView;
+
+  @NonNull
+  public final Button btnModifica;
 
   @NonNull
   public final TextView textAllineamento;
@@ -40,11 +44,12 @@ public final class FragmentStatsBackBinding implements ViewBinding {
   @NonNull
   public final TextView textTratticaratteriali;
 
-  private FragmentStatsBackBinding(@NonNull ScrollView rootView, @NonNull TextView textAllineamento,
-      @NonNull TextView textDescrizione, @NonNull TextView textDifetti,
-      @NonNull TextView textIdeali, @NonNull TextView textLegami, @NonNull TextView textStoria,
-      @NonNull TextView textTratticaratteriali) {
+  private FragmentStatsBackBinding(@NonNull ScrollView rootView, @NonNull Button btnModifica,
+      @NonNull TextView textAllineamento, @NonNull TextView textDescrizione,
+      @NonNull TextView textDifetti, @NonNull TextView textIdeali, @NonNull TextView textLegami,
+      @NonNull TextView textStoria, @NonNull TextView textTratticaratteriali) {
     this.rootView = rootView;
+    this.btnModifica = btnModifica;
     this.textAllineamento = textAllineamento;
     this.textDescrizione = textDescrizione;
     this.textDifetti = textDifetti;
@@ -81,6 +86,12 @@ public final class FragmentStatsBackBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnModifica;
+      Button btnModifica = ViewBindings.findChildViewById(rootView, id);
+      if (btnModifica == null) {
+        break missingId;
+      }
+
       id = R.id.textAllineamento;
       TextView textAllineamento = ViewBindings.findChildViewById(rootView, id);
       if (textAllineamento == null) {
@@ -123,8 +134,8 @@ public final class FragmentStatsBackBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentStatsBackBinding((ScrollView) rootView, textAllineamento, textDescrizione,
-          textDifetti, textIdeali, textLegami, textStoria, textTratticaratteriali);
+      return new FragmentStatsBackBinding((ScrollView) rootView, btnModifica, textAllineamento,
+          textDescrizione, textDifetti, textIdeali, textLegami, textStoria, textTratticaratteriali);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

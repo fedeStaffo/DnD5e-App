@@ -354,7 +354,7 @@
             android:orientation="horizontal">
 
             <Spinner
-                android:id="@+id/editTextStatus"
+                android:id="@+id/spinnerStatus"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

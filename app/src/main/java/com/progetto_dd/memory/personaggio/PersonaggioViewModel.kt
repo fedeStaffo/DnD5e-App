@@ -415,7 +415,7 @@ class PersonaggioViewModel : ViewModel() {
 
     fun updateCampoString(nome: String, razza: String, classe: String, utenteId: String, campo: String, nuovoValore: String) {
         val db = FirebaseFirestore.getInstance()
-        val personaggioRef = db.collection("personaggio")
+        val personaggioRef = db.collection("personaggi")
             .whereEqualTo("nome", nome)
             .whereEqualTo("razza", razza)
             .whereEqualTo("classe", classe)

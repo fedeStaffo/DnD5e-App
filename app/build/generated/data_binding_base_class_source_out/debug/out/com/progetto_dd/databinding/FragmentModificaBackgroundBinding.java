@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -44,9 +43,6 @@ public final class FragmentModificaBackgroundBinding implements ViewBinding {
   public final Button buttonSalvaTratticaratteriali;
 
   @NonNull
-  public final Spinner editTextAllineamento;
-
-  @NonNull
   public final EditText editTextDescrizione;
 
   @NonNull
@@ -65,34 +61,16 @@ public final class FragmentModificaBackgroundBinding implements ViewBinding {
   public final EditText editTextTratticaratteriali;
 
   @NonNull
-  public final TextView textViewDescrizione;
-
-  @NonNull
-  public final TextView textViewDifetti;
-
-  @NonNull
-  public final TextView textViewIdeali;
-
-  @NonNull
-  public final TextView textViewLegami;
-
-  @NonNull
-  public final TextView textViewStoria;
-
-  @NonNull
-  public final TextView textViewTratticaratteriali;
+  public final Spinner spinnerAllineamento;
 
   private FragmentModificaBackgroundBinding(@NonNull ScrollView rootView,
       @NonNull Button buttonSalvaAllineamento, @NonNull Button buttonSalvaDescrizione,
       @NonNull Button buttonSalvaDifetti, @NonNull Button buttonSalvaIdeali,
       @NonNull Button buttonSalvaLegami, @NonNull Button buttonSalvaStoria,
-      @NonNull Button buttonSalvaTratticaratteriali, @NonNull Spinner editTextAllineamento,
-      @NonNull EditText editTextDescrizione, @NonNull EditText editTextDifetti,
-      @NonNull EditText editTextIdeali, @NonNull EditText editTextLegami,
-      @NonNull EditText editTextStoria, @NonNull EditText editTextTratticaratteriali,
-      @NonNull TextView textViewDescrizione, @NonNull TextView textViewDifetti,
-      @NonNull TextView textViewIdeali, @NonNull TextView textViewLegami,
-      @NonNull TextView textViewStoria, @NonNull TextView textViewTratticaratteriali) {
+      @NonNull Button buttonSalvaTratticaratteriali, @NonNull EditText editTextDescrizione,
+      @NonNull EditText editTextDifetti, @NonNull EditText editTextIdeali,
+      @NonNull EditText editTextLegami, @NonNull EditText editTextStoria,
+      @NonNull EditText editTextTratticaratteriali, @NonNull Spinner spinnerAllineamento) {
     this.rootView = rootView;
     this.buttonSalvaAllineamento = buttonSalvaAllineamento;
     this.buttonSalvaDescrizione = buttonSalvaDescrizione;
@@ -101,19 +79,13 @@ public final class FragmentModificaBackgroundBinding implements ViewBinding {
     this.buttonSalvaLegami = buttonSalvaLegami;
     this.buttonSalvaStoria = buttonSalvaStoria;
     this.buttonSalvaTratticaratteriali = buttonSalvaTratticaratteriali;
-    this.editTextAllineamento = editTextAllineamento;
     this.editTextDescrizione = editTextDescrizione;
     this.editTextDifetti = editTextDifetti;
     this.editTextIdeali = editTextIdeali;
     this.editTextLegami = editTextLegami;
     this.editTextStoria = editTextStoria;
     this.editTextTratticaratteriali = editTextTratticaratteriali;
-    this.textViewDescrizione = textViewDescrizione;
-    this.textViewDifetti = textViewDifetti;
-    this.textViewIdeali = textViewIdeali;
-    this.textViewLegami = textViewLegami;
-    this.textViewStoria = textViewStoria;
-    this.textViewTratticaratteriali = textViewTratticaratteriali;
+    this.spinnerAllineamento = spinnerAllineamento;
   }
 
   @Override
@@ -185,12 +157,6 @@ public final class FragmentModificaBackgroundBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.editTextAllineamento;
-      Spinner editTextAllineamento = ViewBindings.findChildViewById(rootView, id);
-      if (editTextAllineamento == null) {
-        break missingId;
-      }
-
       id = R.id.editTextDescrizione;
       EditText editTextDescrizione = ViewBindings.findChildViewById(rootView, id);
       if (editTextDescrizione == null) {
@@ -227,48 +193,17 @@ public final class FragmentModificaBackgroundBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textViewDescrizione;
-      TextView textViewDescrizione = ViewBindings.findChildViewById(rootView, id);
-      if (textViewDescrizione == null) {
-        break missingId;
-      }
-
-      id = R.id.textViewDifetti;
-      TextView textViewDifetti = ViewBindings.findChildViewById(rootView, id);
-      if (textViewDifetti == null) {
-        break missingId;
-      }
-
-      id = R.id.textViewIdeali;
-      TextView textViewIdeali = ViewBindings.findChildViewById(rootView, id);
-      if (textViewIdeali == null) {
-        break missingId;
-      }
-
-      id = R.id.textViewLegami;
-      TextView textViewLegami = ViewBindings.findChildViewById(rootView, id);
-      if (textViewLegami == null) {
-        break missingId;
-      }
-
-      id = R.id.textViewStoria;
-      TextView textViewStoria = ViewBindings.findChildViewById(rootView, id);
-      if (textViewStoria == null) {
-        break missingId;
-      }
-
-      id = R.id.textViewTratticaratteriali;
-      TextView textViewTratticaratteriali = ViewBindings.findChildViewById(rootView, id);
-      if (textViewTratticaratteriali == null) {
+      id = R.id.spinnerAllineamento;
+      Spinner spinnerAllineamento = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerAllineamento == null) {
         break missingId;
       }
 
       return new FragmentModificaBackgroundBinding((ScrollView) rootView, buttonSalvaAllineamento,
           buttonSalvaDescrizione, buttonSalvaDifetti, buttonSalvaIdeali, buttonSalvaLegami,
-          buttonSalvaStoria, buttonSalvaTratticaratteriali, editTextAllineamento,
-          editTextDescrizione, editTextDifetti, editTextIdeali, editTextLegami, editTextStoria,
-          editTextTratticaratteriali, textViewDescrizione, textViewDifetti, textViewIdeali,
-          textViewLegami, textViewStoria, textViewTratticaratteriali);
+          buttonSalvaStoria, buttonSalvaTratticaratteriali, editTextDescrizione, editTextDifetti,
+          editTextIdeali, editTextLegami, editTextStoria, editTextTratticaratteriali,
+          spinnerAllineamento);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -250,6 +250,7 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="carisma_stat">Carisma = </string>
     <string name="carisma_title">CARISMA</string>
     <string name="chierico">Chierico</string>
+    <string name="classe">Classe</string>
     <string name="classe_armatura">Classe armatura = </string>
     <string name="classe_armatura_punti">Classe Armatura:</string>
     <string name="classe_e_razza_preferite">Classe e razza preferite:</string>
@@ -416,6 +417,7 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="scelto">scelto</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="sei_sicuro_di_creare_questo_personaggio">Sei sicuro di creare questo personaggio?</string>
+    <string name="sottoclasse">Sottoclasse</string>
     <string name="stai_per_eliminare_la_campagna_nse_vuoi_continuare_clicca_procedi_naltrimenti_torna_indietro">Stai per eliminare la campagna!\nSe vuoi continuare clicca procedi,\naltrimenti torna indietro</string>
     <string name="statistiche_personaggio">Statistiche personaggio</string>
     <string name="stato">Stato: </string>
@@ -431,6 +433,8 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="tab_text_4">Razza</string>
     <string name="tab_text_5">Class</string>
     <string name="testo_attuale">(Testo attuale)</string>
+    <string name="testo_di_prova">TESTO DI PROVA</string>
+    <string name="tipo">Tipo: </string>
     <string name="tiri_salvezza">Tiri salvezza:</string>
     <string name="title_activity_visualizza_pers">VisualizzaPersActivity</string>
     <string name="title_activity_visualizza_personaggio">VisualizzaPersonaggioActivity</string>

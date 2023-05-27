@@ -79,13 +79,13 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
   public final EditText editTextSaggezza;
 
   @NonNull
-  public final Spinner editTextStatus;
-
-  @NonNull
   public final EditText editTextVitaAttuale;
 
   @NonNull
   public final EditText editTextVitaMassima;
+
+  @NonNull
+  public final Spinner spinnerStatus;
 
   private FragmentModificaStatsBinding(@NonNull ScrollView rootView,
       @NonNull Button buttonSalvaCarisma, @NonNull Button buttonSalvaClasseArmatura,
@@ -97,8 +97,8 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
       @NonNull EditText editTextClasseArmatura, @NonNull EditText editTextCostituzione,
       @NonNull EditText editTextDestrezza, @NonNull EditText editTextForza,
       @NonNull EditText editTextIntelligenza, @NonNull EditText editTextLivello,
-      @NonNull EditText editTextSaggezza, @NonNull Spinner editTextStatus,
-      @NonNull EditText editTextVitaAttuale, @NonNull EditText editTextVitaMassima) {
+      @NonNull EditText editTextSaggezza, @NonNull EditText editTextVitaAttuale,
+      @NonNull EditText editTextVitaMassima, @NonNull Spinner spinnerStatus) {
     this.rootView = rootView;
     this.buttonSalvaCarisma = buttonSalvaCarisma;
     this.buttonSalvaClasseArmatura = buttonSalvaClasseArmatura;
@@ -119,9 +119,9 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
     this.editTextIntelligenza = editTextIntelligenza;
     this.editTextLivello = editTextLivello;
     this.editTextSaggezza = editTextSaggezza;
-    this.editTextStatus = editTextStatus;
     this.editTextVitaAttuale = editTextVitaAttuale;
     this.editTextVitaMassima = editTextVitaMassima;
+    this.spinnerStatus = spinnerStatus;
   }
 
   @Override
@@ -265,12 +265,6 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.editTextStatus;
-      Spinner editTextStatus = ViewBindings.findChildViewById(rootView, id);
-      if (editTextStatus == null) {
-        break missingId;
-      }
-
       id = R.id.editTextVitaAttuale;
       EditText editTextVitaAttuale = ViewBindings.findChildViewById(rootView, id);
       if (editTextVitaAttuale == null) {
@@ -283,13 +277,19 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.spinnerStatus;
+      Spinner spinnerStatus = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerStatus == null) {
+        break missingId;
+      }
+
       return new FragmentModificaStatsBinding((ScrollView) rootView, buttonSalvaCarisma,
           buttonSalvaClasseArmatura, buttonSalvaCostituzione, buttonSalvaDestrezza,
           buttonSalvaForza, buttonSalvaIntelligenza, buttonSalvaLivello, buttonSalvaSaggezza,
           buttonSalvaStatus, buttonSalvaVitaAttuale, buttonSalvaVitaMassima, editTextCarisma,
           editTextClasseArmatura, editTextCostituzione, editTextDestrezza, editTextForza,
-          editTextIntelligenza, editTextLivello, editTextSaggezza, editTextStatus,
-          editTextVitaAttuale, editTextVitaMassima);
+          editTextIntelligenza, editTextLivello, editTextSaggezza, editTextVitaAttuale,
+          editTextVitaMassima, spinnerStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

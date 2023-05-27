@@ -25,12 +25,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/descrizione" />
 
-            <TextView
-                android:id="@+id/textViewDescrizione"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/testo_attuale" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -43,7 +37,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="text" />
+                android:inputType="textMultiLine"/>
 
             <Button
                 android:id="@+id/buttonSalvaDescrizione"
@@ -64,12 +58,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/storia" />
 
-            <TextView
-                android:id="@+id/textViewStoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/testo_attuale" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -82,7 +70,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="text" />
+                android:inputType="textMultiLine" />
 
             <Button
                 android:id="@+id/buttonSalvaStoria"
@@ -103,12 +91,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tratti_caratteriali" />
 
-            <TextView
-                android:id="@+id/textViewTratticaratteriali"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/testo_attuale" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -121,7 +103,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="text" />
+                android:inputType="textMultiLine" />
 
             <Button
                 android:id="@+id/buttonSalvaTratticaratteriali"
@@ -142,11 +124,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/difetti" />
 
-            <TextView
-                android:id="@+id/textViewDifetti"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/testo_attuale" />
         </LinearLayout>
 
         <LinearLayout
@@ -159,7 +136,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="text" />
+                android:inputType="textMultiLine" />
 
             <Button
                 android:id="@+id/buttonSalvaDifetti"
@@ -179,11 +156,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ideali" />
 
-            <TextView
-                android:id="@+id/textViewIdeali"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/testo_attuale" />
         </LinearLayout>
 
         <LinearLayout
@@ -196,7 +168,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="text" />
+                android:inputType="textMultiLine" />
 
             <Button
                 android:id="@+id/buttonSalvaIdeali"
@@ -216,11 +188,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/legami" />
 
-            <TextView
-                android:id="@+id/textViewLegami"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/testo_attuale" />
         </LinearLayout>
 
         <LinearLayout
@@ -233,7 +200,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="text" />
+                android:inputType="textMultiLine" />
 
             <Button
                 android:id="@+id/buttonSalvaLegami"
@@ -260,7 +227,7 @@
             android:orientation="horizontal">
 
             <Spinner
-                android:id="@+id/editTextAllineamento"
+                android:id="@+id/spinnerAllineamento"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
