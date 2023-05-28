@@ -704,7 +704,6 @@
             android:id="@+id/btn_calcola"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/brune_red"
             android:text="@string/calcola_totali"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp" />
@@ -713,7 +712,6 @@
             android:id="@+id/btn_avanti"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/brune_red"
             android:text="@string/avanti"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp" />

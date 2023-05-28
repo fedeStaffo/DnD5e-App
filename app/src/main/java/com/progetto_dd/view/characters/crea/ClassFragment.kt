@@ -84,22 +84,22 @@ class ClassFragment : Fragment() {
 
         // Listener che definiscono il comportamento dei bottoni di info
         binding.infoBardo.setOnClickListener {
-            viewModel.setClassePersonaggio("bardo")
+            viewModel.setClassePersonaggio("Bardo")
             findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
         }
 
         binding.infoGuerriero.setOnClickListener {
-            viewModel.setClassePersonaggio("guerriero")
+            viewModel.setClassePersonaggio("Guerriero")
             findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
         }
 
         binding.infoLadro.setOnClickListener {
-            viewModel.setClassePersonaggio("ladro")
+            viewModel.setClassePersonaggio("Ladro")
             findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
         }
 
         binding.infoMago.setOnClickListener {
-            viewModel.setClassePersonaggio("mago")
+            viewModel.setClassePersonaggio("Mago")
             findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
         }
 

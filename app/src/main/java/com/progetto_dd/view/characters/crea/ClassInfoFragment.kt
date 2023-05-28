@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentClassInfoBinding
 import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
@@ -34,12 +35,13 @@ class ClassInfoFragment : Fragment() {
         // Inizializza la classe selezionata dall'utente dal viewmodel
         val classe = viewModel.classePersonaggio.value
 
-        // Chiama la funzione getInfoClasse del viewmodel per ottenere le informazioni sulla classe
         if (classe != null) {
-            viewModel.getInfoClasse(classe).observe(viewLifecycleOwner, Observer { infoClasse ->
-                // Aggiorna la TextView con le informazioni sulla razza
-                binding.classInfoText.text = infoClasse.orEmpty()
-            })
+            when(classe){
+                "Bardo"-> binding.classInfoText.text = getString(R.string.Bardo_info)
+                "Guerriero"-> binding.classInfoText.text = getString(R.string.Guerriero_info)
+                "Ladro"-> binding.classInfoText.text = getString(R.string.Ladro_info)
+                "Mago"-> binding.classInfoText.text = getString(R.string.Mago_info)
+            }
         }
     }
 

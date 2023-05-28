@@ -471,5 +471,83 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="sottoclasse">Sottoclasse</string>
     <string name="testo_di_prova">TESTO DI PROVA</string>
     <string name="tipo">Tipo: </string>
+    <string-array name="sottoclassi_bardo">
+        <item>Collegio della sapienza</item>
+        <item>Collegio del valore</item>
+    </string-array>
+
+    <string-array name="sottoclassi_guerriero">
+        <item>Campione</item>
+        <item>Maestro di battaglia</item>
+        <item>Cavaliere mistico</item>
+    </string-array>
+
+    <string-array name="sottoclassi_ladro">
+        <item>Furfante</item>
+        <item>Assassino</item>
+        <item>Mistificatore arcano</item>
+    </string-array>
+
+    <string-array name="sottoclassi_mago">
+        <item>Scuola di abiurazione</item>
+        <item>Scuola di ammaliamento</item>
+        <item>Scuola di divinazione</item>
+        <item>Scuola di evocazione</item>
+        <item>Scuola di illusione</item>
+        <item>Scuola di invocazione</item>
+        <item>Scuola di necromanzia</item>
+        <item>Scuola di trasmutazione</item>
+    </string-array>
+
+    <string name="trucchetti">Trucchetti</string>
+    <string name="slot_totali">Slot totali: </string>
+    <string name="livello_1">Livello 1</string>
+    <string name="slot_usati">Slot usati: </string>
+    <string name="livello_2">Livello 2</string>
+    <string name="livello_3">Livello 3</string>
+    <string name="livello_4">Livello 4</string>
+    <string name="livello_5">Livello 5</string>
+    <string name="livello_6">Livello 6</string>
+    <string name="livello_7">Livello 7</string>
+    <string name="livello_8">Livello 8</string>
+    <string name="livello_9">Livello 9</string>
+    <string name="aggiungi_incantesimo">Aggiungi incantesimo</string>
+    <string name="seleziona_l_incantatore">Seleziona l\'incantatore</string>
+    <string name="seleziona_il_livello">Seleziona il livello</string>
+    <string name="seleziona_il_tipo">Seleziona il tipo</string>
+    <string name="cerca">cerca</string>
+    <string name="elimina3">Elimina</string>
+
+    <string-array name="livello_magie">
+        <item>-</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="tipo_magie">
+        <item>-</item>
+        <item>Abiurazione</item>
+        <item>Ammaliamento</item>
+        <item>Divinazione</item>
+        <item>Evocazione</item>
+        <item>Illusione</item>
+        <item>Invocazione</item>
+        <item>Necromanzia</item>
+        <item>Trasmutazione</item>
+    </string-array>
+
+    <string-array name="classe_magie">
+        <item>-</item>
+        <item>Bardo</item>
+        <item>Mago</item>
+    </string-array>
 </resources>
 

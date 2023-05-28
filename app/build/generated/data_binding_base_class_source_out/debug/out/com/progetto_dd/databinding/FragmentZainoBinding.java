@@ -4,6 +4,7 @@ package com.progetto_dd.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,14 +22,23 @@ public final class FragmentZainoBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final Button btnAggiungiOggetto;
+
+  @NonNull
+  public final Button btnEliminaOggetto;
+
+  @NonNull
   public final TextInputEditText inputOggetto;
 
   @NonNull
   public final TextView textViewInventario;
 
-  private FragmentZainoBinding(@NonNull ScrollView rootView,
-      @NonNull TextInputEditText inputOggetto, @NonNull TextView textViewInventario) {
+  private FragmentZainoBinding(@NonNull ScrollView rootView, @NonNull Button btnAggiungiOggetto,
+      @NonNull Button btnEliminaOggetto, @NonNull TextInputEditText inputOggetto,
+      @NonNull TextView textViewInventario) {
     this.rootView = rootView;
+    this.btnAggiungiOggetto = btnAggiungiOggetto;
+    this.btnEliminaOggetto = btnEliminaOggetto;
     this.inputOggetto = inputOggetto;
     this.textViewInventario = textViewInventario;
   }
@@ -60,6 +70,18 @@ public final class FragmentZainoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnAggiungiOggetto;
+      Button btnAggiungiOggetto = ViewBindings.findChildViewById(rootView, id);
+      if (btnAggiungiOggetto == null) {
+        break missingId;
+      }
+
+      id = R.id.btnEliminaOggetto;
+      Button btnEliminaOggetto = ViewBindings.findChildViewById(rootView, id);
+      if (btnEliminaOggetto == null) {
+        break missingId;
+      }
+
       id = R.id.inputOggetto;
       TextInputEditText inputOggetto = ViewBindings.findChildViewById(rootView, id);
       if (inputOggetto == null) {
@@ -72,7 +94,8 @@ public final class FragmentZainoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentZainoBinding((ScrollView) rootView, inputOggetto, textViewInventario);
+      return new FragmentZainoBinding((ScrollView) rootView, btnAggiungiOggetto, btnEliminaOggetto,
+          inputOggetto, textViewInventario);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

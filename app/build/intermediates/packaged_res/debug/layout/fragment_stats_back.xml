@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@color/macaroon"
     tools:context=".view.characters.visualizza.StatsBackFragment">
 
     <LinearLayout
@@ -13,6 +14,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -22,6 +24,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textAllineamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,6 +32,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -38,6 +42,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textDescrizione"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +50,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -54,6 +60,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textStoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,6 +68,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -70,6 +78,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textTratticaratteriali"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,6 +86,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -86,6 +96,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textDifetti"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,6 +104,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -102,6 +114,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textIdeali"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -109,6 +122,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -118,6 +132,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textLegami"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -134,7 +149,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/modifica"
-            android:backgroundTint="@color/rosso"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/white"
             android:textStyle="bold"/>

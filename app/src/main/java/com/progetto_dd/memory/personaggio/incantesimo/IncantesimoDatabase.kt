@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.progetto_dd.utils.Converters
 
-@Database(entities = [Incantesimo::class], version = 1, exportSchema = false)
+@Database(entities = [Incantesimo::class], version = 2, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class IncantesimoDatabase: RoomDatabase() {
 

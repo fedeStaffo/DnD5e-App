@@ -34,7 +34,7 @@ public final class IncantesimoDatabase_Impl extends IncantesimoDatabase {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `tabella_incantesimi` (`nome` TEXT NOT NULL, `livello` INTEGER NOT NULL, `tipo` TEXT NOT NULL, `classi` TEXT NOT NULL, `info` TEXT NOT NULL, PRIMARY KEY(`nome`))");

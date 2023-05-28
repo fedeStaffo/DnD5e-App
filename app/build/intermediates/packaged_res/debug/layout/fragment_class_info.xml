@@ -6,6 +6,7 @@
     tools:context=".view.characters.crea.ClassInfoFragment">
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/class_info_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

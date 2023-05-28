@@ -18,7 +18,7 @@ data class Incantesimo(
     var tipo: String,
 
     @ColumnInfo(name = "classi")
-    var classi: List<String>,
+    var classi: String,
 
     @ColumnInfo(name = "info")
     var info: String

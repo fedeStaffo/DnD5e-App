@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -17,7 +19,16 @@ import java.lang.String;
 
 public final class FragmentStatsClasseRazzaBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ScrollView rootView;
+
+  @NonNull
+  public final TextView Classenascosta;
+
+  @NonNull
+  public final TextView Razzanascosta;
+
+  @NonNull
+  public final TextView Sottoclassenascosta;
 
   @NonNull
   public final Button bottoneInfoClasse;
@@ -28,18 +39,27 @@ public final class FragmentStatsClasseRazzaBinding implements ViewBinding {
   @NonNull
   public final Button bottoneInfoSottoClasse;
 
-  private FragmentStatsClasseRazzaBinding(@NonNull LinearLayout rootView,
-      @NonNull Button bottoneInfoClasse, @NonNull Button bottoneInfoRazza,
-      @NonNull Button bottoneInfoSottoClasse) {
+  @NonNull
+  public final Spinner spinner;
+
+  private FragmentStatsClasseRazzaBinding(@NonNull ScrollView rootView,
+      @NonNull TextView Classenascosta, @NonNull TextView Razzanascosta,
+      @NonNull TextView Sottoclassenascosta, @NonNull Button bottoneInfoClasse,
+      @NonNull Button bottoneInfoRazza, @NonNull Button bottoneInfoSottoClasse,
+      @NonNull Spinner spinner) {
     this.rootView = rootView;
+    this.Classenascosta = Classenascosta;
+    this.Razzanascosta = Razzanascosta;
+    this.Sottoclassenascosta = Sottoclassenascosta;
     this.bottoneInfoClasse = bottoneInfoClasse;
     this.bottoneInfoRazza = bottoneInfoRazza;
     this.bottoneInfoSottoClasse = bottoneInfoSottoClasse;
+    this.spinner = spinner;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -64,6 +84,24 @@ public final class FragmentStatsClasseRazzaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.Classenascosta;
+      TextView Classenascosta = ViewBindings.findChildViewById(rootView, id);
+      if (Classenascosta == null) {
+        break missingId;
+      }
+
+      id = R.id.Razzanascosta;
+      TextView Razzanascosta = ViewBindings.findChildViewById(rootView, id);
+      if (Razzanascosta == null) {
+        break missingId;
+      }
+
+      id = R.id.Sottoclassenascosta;
+      TextView Sottoclassenascosta = ViewBindings.findChildViewById(rootView, id);
+      if (Sottoclassenascosta == null) {
+        break missingId;
+      }
+
       id = R.id.bottoneInfoClasse;
       Button bottoneInfoClasse = ViewBindings.findChildViewById(rootView, id);
       if (bottoneInfoClasse == null) {
@@ -82,8 +120,15 @@ public final class FragmentStatsClasseRazzaBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentStatsClasseRazzaBinding((LinearLayout) rootView, bottoneInfoClasse,
-          bottoneInfoRazza, bottoneInfoSottoClasse);
+      id = R.id.spinner;
+      Spinner spinner = ViewBindings.findChildViewById(rootView, id);
+      if (spinner == null) {
+        break missingId;
+      }
+
+      return new FragmentStatsClasseRazzaBinding((ScrollView) rootView, Classenascosta,
+          Razzanascosta, Sottoclassenascosta, bottoneInfoClasse, bottoneInfoRazza,
+          bottoneInfoSottoClasse, spinner);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

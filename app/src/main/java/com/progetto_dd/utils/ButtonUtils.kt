@@ -18,15 +18,15 @@ class ButtonUtils(private val context: Context) {
     fun updateButtonState(clickedButton: Button, unclickedButtons: List<Button>) {
         clickedButton.apply {
             text = context.getString(R.string.scelto).uppercase()
-            setTextColor(ContextCompat.getColor(context, R.color.black))
-            backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.orange))
+            setTextColor(ContextCompat.getColor(context, R.color.white))
+            backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.black))
         }
 
         unclickedButtons.forEach { button ->
             button.apply {
                 text = context.getString(R.string.scegli).uppercase()
-                setTextColor(ContextCompat.getColor(context, R.color.white))
-                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.brune_red))
+                setTextColor(ContextCompat.getColor(context, R.color.black))
+                backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.ocra))
             }
         }
     }

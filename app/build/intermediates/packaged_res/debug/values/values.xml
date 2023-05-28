@@ -12,6 +12,11 @@
         <item>Neutrale malvagio</item>
         <item>Caotico malvagio</item>
     </string-array>
+    <string-array name="classe_magie">
+        <item>-</item>
+        <item>Bardo</item>
+        <item>Mago</item>
+    </string-array>
     <string-array name="legame_npc">
         <item>Alleato</item>
         <item>Amico</item>
@@ -26,6 +31,19 @@
         <item>Nemesi</item>
         <item>Nemico</item>
         <item>Patrono</item>
+    </string-array>
+    <string-array name="livello_magie">
+        <item>-</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
     </string-array>
     <string-array name="scelta_bardo_1">
         <item>-</item>
@@ -175,6 +193,30 @@
         <item>Una dotazione da studioso</item>
         <item>Una dotazione da esploratore</item>
     </string-array>
+    <string-array name="sottoclassi_bardo">
+        <item>Collegio della sapienza</item>
+        <item>Collegio del valore</item>
+    </string-array>
+    <string-array name="sottoclassi_guerriero">
+        <item>Campione</item>
+        <item>Maestro di battaglia</item>
+        <item>Cavaliere mistico</item>
+    </string-array>
+    <string-array name="sottoclassi_ladro">
+        <item>Furfante</item>
+        <item>Assassino</item>
+        <item>Mistificatore arcano</item>
+    </string-array>
+    <string-array name="sottoclassi_mago">
+        <item>Scuola di abiurazione</item>
+        <item>Scuola di ammaliamento</item>
+        <item>Scuola di divinazione</item>
+        <item>Scuola di evocazione</item>
+        <item>Scuola di illusione</item>
+        <item>Scuola di invocazione</item>
+        <item>Scuola di necromanzia</item>
+        <item>Scuola di trasmutazione</item>
+    </string-array>
     <string-array name="status">
         <item>Accecato</item>
         <item>Affascinato</item>
@@ -192,9 +234,21 @@
         <item>Trattenuto</item>
         <item>Nessuno</item>
     </string-array>
+    <string-array name="tipo_magie">
+        <item>-</item>
+        <item>Abiurazione</item>
+        <item>Ammaliamento</item>
+        <item>Divinazione</item>
+        <item>Evocazione</item>
+        <item>Illusione</item>
+        <item>Invocazione</item>
+        <item>Necromanzia</item>
+        <item>Trasmutazione</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="brune_red">#841922</color>
     <color name="macaroon">#F9E076</color>
+    <color name="ocra">#E6AF2E</color>
     <color name="orange">#FFA52C</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -211,16 +265,741 @@
     <dimen name="appbar_padding_top">8dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <string name="Bardo_info">
+Bardo
+
+Un bardo ottiene i seguenti privilegi di classe.
+
+PUNTI FERITA
+Dadi Vita: 1d8 per ogni livello da bardo
+Punti Ferita al 1° Livello: 8 + il modificatore di Costituzione del bardo
+Punti Ferita ai Livelli Successivi: 1d8 (o 5) + il modificatore di Costituzione del bardo per ogni livello da bardo dopo il 1°
+
+COMPETENZE
+Armature: Armature leggere
+Armi: Armi semplici, balestre a mano, spade corte, spade lunghe, stocchi
+Strumenti: Tre strumenti musicali a scelta del bardo
+Tiri Salvezza: Destrezza, Carisma
+Abilità: Tre a scelta
+
+EQUIPAGGIAMENTO
+Un bardo inizia con l\'equipaggiamento seguente, in aggiunta all\'equipaggiamento conferito dal suo background:
+(a) uno stocco, (b) una spada lunga o (c) una qualsiasi arma semplice
+(a) una dotazione da diplomatico o (b) una dotazione da intrattenitore
+(a) un liuto o (b) un qualsiasi altro strumento musicale
+Un\'armatura di cuoio e un pugnale
+
+INCANTESIMI
+Un bardo ha imparato a districare e rimodellare la trama della realtà in armonia con i suoi desideri tramite la musica.
+I suoi incantesimi fanno parte del suo vasto repertorio come magie che il bardo può mettere in sintonia con le situazioni più disparate.
+
+TRUCCHETTI
+Un bardo conosce due trucchetti a sua scelta tratti dalla lista degli incantesimi da bardo.
+Apprende ulteriori trucchetti da bardo a sua scelta ai livelli successivi,
+come indicato dalla colonna "Trucchetti Conosciuti" nella tabella.
+
+SLOT INCANTESIMO
+La tabella indica quanti slot incantesimo possiede un bardo per lanciare i suoi incantesimi
+di 1° livello e di livello superiore.
+Per lanciare uno di questi incantesimi, il bardo deve spendere uno slot incantesimo
+di livello pari o superiore al livello dell\'incantesimo.
+Il bardo recupera tutti gli slot incantesimo spesi quando completa un riposo lungo.
+Per esempio, se un bardo conosce l\'incantesimo di 1° livello Cura Ferite e possiede uno slot
+incantesimo di 1° livello e uno slot incantesimo di 2° livello, può lanciare Cura Ferite usando uno qualsiasi dei due slot.
+
+INCANTESIMI CONOSCIUTI DI 1° LIVELLO E DI LIVELLO SUPERIORE
+Un bardo conosce quattro incantesimi di 1° livello a sua scelta dalla lista degli incantesimi da bardo.
+La colonna "Incantesimi Conosciuti" nella tabella indica quando un bardo impara altri incantesimi da bardo a sua scelta.
+Ognuno di questi incantesimi deve appartenere a un livello di cui il bardo possiede degli slot incantesimo,
+come indicato nella tabella. Per esempio, quando un bardo arriva al 3° livello,
+può imparare un nuovo incantesimo di 1° o di 2° livello.
+Inoltre, quando un bardo acquisisce un livello, può scegliere un incantesimo da bardo che conosce
+e sostituirlo con un altro incantesimo della lista degli incantesimi da bardo;
+anche il nuovo incantesimo deve essere di un livello di cui il bardo possiede degli slot incantesimo.
+
+CARATTERISTICA DA INCANTATORE
+Carisma è la caratteristica da incantatore per gli incantesimi da bardo.
+La magia di un bardo fluisce dal cuore e dall\'anima che egli riversa in ogni esibizione della sua musica o della sua oratoria.
+Un bardo usa Carisma ogni volta che un incantesimo fa riferimento alla sua caratteristica da incantatore.
+Usa inoltre il suo modificatore di Carisma per definire la CD del tiro salvezza di un incantesimo da bardo da lui lanciato
+e quando effettua un tiro per colpire con un incantesimo.
+
+CD del tiro salvezza dell\'incantesimo = 8 + il bonus di competenza del bardo + il modificatore di Carisma del bardo.
+Modificatore di attacco dell\'incantesimo = il bonus di competenza del bardo + il modificatore di Carisma del bardo
+
+CELEBRARE RITUALI
+Un bardo può lanciare qualsiasi incantesimo da bardo da lui conosciuto come rituale se quell\'incantesimo possiede il descrittore Rituale.
+
+FOCUS DA INCANTATORE
+Un bardo può usare uno strumento musicale come focus da incantatore per i suoi incantesimi da bardo
+
+ISPIRAZIONE BARDICA
+Un bardo può ispirare gli altri tramite il lirismo delle sue parole o della sua musica.
+Per farlo usa un\'azione bonus nel suo turno per scegliere una creatura diversa da sé stesso,
+situata entro 18 metri da lui e in grado di sentirlo.
+Quella creatura ottiene un dado di Ispirazione Bardica, un d6.
+Per una volta entro i 10 minuti successivi, quella creatura può tirare il dado e aggiungere
+il risultato ottenuto a una prova di caratteristica, un tiro per colpire o un tiro salvezza da essa effettuato.
+La creatura può aspettare di avere tirato il d20 prima di decidere se utilizzare il dado di Ispirazione Bardica,
+ma deve decidere se utilizzarlo o meno prima che il DM dichiari se il tiro abbia avuto successo o meno.
+Una volta tirato il dado di Ispirazione Bardica, quel dado è perduto.
+Una creatura può possedere un solo dado di Ispirazione Bardica alla volta.
+Il bardo può utilizzare questo privilegio un numero di volte pari al suo modificatore di Carisma (fino a un minimo di una volta).
+Recupera tutti gli utilizzi spesi quando completa un riposo lungo.
+Il dado di Ispirazione Bardica cambia quando il bardo raggiunge livelli superiori.
+Il dado diventa un d8 al 5° livello, un d10 al 10° livello e un d12 al 15° livello.
+
+FACTOTUM
+A partire dal 2° livello, un bardo può aggiungere metà del suo bonus di competenza, arrotondato per difetto,
+a ogni prova di caratteristica da lui effettuata che non includa già il suo bonus di competenza.
+
+CANTO DI RIPOSO
+Dal 2° livello, un bardo può usare una musica o un\'orazione lenitiva per infondere nuova vita nei suoi alleati durante un riposo breve.
+Se il bardo o le eventuali creature amiche in grado di udire la sua esibizione recuperano punti ferita alla fine di un riposo breve spendendo uno o più Dadi Vita,
+ognuna di quelle creature recupera 1d6 punti ferita extra.
+I punti ferita extra aumentano quando il bardo raggiunge livelli superiori: 1d8 al 9° livello, 1d10 al 13° livello e 1d12 al 17° livello.
+
+COLLEGIO BARDICO
+Al 3° livello, un bardo apprende le tecniche più avanzate di un collegio bardico a sua scelta
+come ad esempio il Collegio della Sapienza.
+Il collegio a sua scelta gli conferisce alcuni privilegi al 3° livello e poi di nuovo al 6° e al 14° livello.
+
+MAESTRIA
+Al 3° livello, un bardo sceglie due tra le sue competenze nelle abilità.
+Il suo bonus di competenza raddoppia in ogni prova di caratteristica effettuata usando una delle competenza scelte.
+Al 10° livello, un bardo può scegliere altre due competenze nelle abilità per ottenere questo beneficio.
+
+AUMENTO DEI PUNTEGGI CARATTERISTICA
+Quando arriva al 4° livello e poi di nuovo all\'8°, 12°, 16° e 19° livello,
+un bardo può aumentare di 2 un punteggio di caratteristica a sua scelta, oppure può aumentare di 1 due punteggi di caratteristica a sua scelta.
+Come di consueto, non è consentito aumentare un punteggio di caratteristica a più di 20 utilizzando questo privilegio.
+
+FONTE DI ISPIRAZIONE
+A partire dal 5° livello, un bardo recupera tutti i suoi utilizzi spesi di Ispirazione Bardica
+quando completa un riposo breve o lungo.
+
+CONTROFASCINO
+Al 6° livello, un bardo ottiene la capacità di usare note musicali o parole del potere
+per interferire negli effetti di influenza mentale.
+Con un\'azione può iniziare un\'esibizione che dura fino alla fine del suo turno successivo.
+Durante quel periodo, il bardo e ogni creatura amica entro 9 metri da lui dispongono di vantaggio
+ai tiri salvezza per non essere affascinati o spaventati.
+Una creatura deve essere in grado di sentire il bardo per ottenere questo beneficio.
+L\'esibizione termina prematuramente se il bardo diventa incapacitato o è ridotto al silenzio,
+o se vi pone fine volontariamente (non è richiesta un\'azione per farlo).
+
+SEGRETI MAGICI
+Giunto al 10° livello, un bardo ha attinto alle conoscenze magiche provenienti da una vasta gamma di discipline.
+Il bardo sceglie due incantesimi di qualsiasi classe, inclusa questa stessa classe.
+Ogni incantesimo scelto deve essere di un livello che il bardo sia in grado di lanciare,
+come indicato nella tabella, oppure deve essere un trucchetto.
+Gli incantesimi scelti contano come incantesimi da bardo e vanno inclusi nel numero specificato dalla colonna "Incantesimi Conosciuti" nella tabella.
+Un bardo apprende due incantesimi aggiuntivi di qualsiasi classe al 14° livello e poi di nuovo al 18° livello.
+
+ISPIRAZIONE SUPERIORE
+Al 20° livello, quando il bardo tira per l\'iniziativa e non gli rimane alcun utilizzo di Ispirazione Bardica, ne recupera un utilizzo.
+</string>
+    <string name="Elfo_info">
+Elfo\n
+\n
+AUMENTO DEI PUNTEGGI CARATTERISTICA
+Il punteggio di Destrezza aumenta di 2.
+
+ETÀ
+Sebbene gli elfi raggiungano la maturità fisica circa alla stessa età degli umani,
+la cultura elfica dell\'età adulta va oltre la crescita fisica per racchiudere
+l\'esperienza terrena.
+Un elfo rivendica tipicamente l\'età adulta ed un nome da adulto attorno all\'età di 100 anni
+e può vivere fino a 750 anni.
+
+ALLINEAMENTO
+Gli elfi amano la libertà, la diversità e l\'espressione di se stessi,
+quindi tendono fortemente agli aspetti più moderati del caos.
+Stimano e proteggono la libertà degli altri come la propria e sono di solito buoni.
+I drow sono un\'eccezione: il loro esilio nel Sottosuolo li ha resi maligni e pericolosi.
+I drow sono di solito malvagi.
+
+TAGLIA
+Gli elfi sono alti tra meno di 150 e più di 180 cm ed hanno corporature snelle.
+La taglia è Media.
+
+VELOCITÀ
+La velocità base sul terreno è 9 metri.
+
+SCUROVISIONE
+Abituati a foreste in penombra ed al cielo notturno,
+avete una vista superiore in condizioni di buio o luce debole.
+Possono vedere con luce debole entro 18 metri come se fosse luce intensa e nell\'oscurità
+come fosse luce debole.
+Non possono discernere i colori nell\'oscurità, solo sfumature di grigio.
+
+SENSI ACUTI
+Si ottiene competenza nell\'abilità Percezione.
+
+STIRPE FATATA
+Si ha vantaggio nei tiri salvezza contro l\'essere affascinati
+e la magia non può farvi addormentare.
+
+TRANCE
+Gli elfi non hanno bisogno di dormire. ù
+Invece meditano profondamente, rimanendo semi-coscienti, per 4 ore al giorno.
+Mentre meditano, possono in qualche modo sognare: tali sogni sono in realtà esercizi mentali
+che sono divenuti riflessivi attraverso anni di pratica.
+Dopo aver riposato in questo modo, guadagnate lo stesso beneficio
+che un umano ottiene da 8 ore di sonno.
+
+LINGUAGGI.
+Possono parlare, leggere e scrivere in Comune ed Elfico.
+L\'Elfico è fluido, con intonazioni delicate e una grammatica intricata.
+La letteratura elfica è ricca e varia e le loro canzoni e i poemi sono famosi tra le altre razze.
+Molti bardi imparano il loro linguaggio così da poter aggiungere le ballate in Elfico ai loro repertori.
+</string>
+    <string name="Guerriero_info">
+Guerriero
+Come guerriero, ottieni i seguenti privilegi di classe.
+
+PUNTI FERITA
+Dado Vita: 1d10 per livello da guerriero
+Punti Ferita al 1° livello: 10 + il tuo modificatore di Costituzione
+Punti Ferita ai Livelli Più Alti: 1d10 (o 6) + il tuo modificatore di Costituzione per livello da guerriero oltre il 1°
+
+COMPETENZE
+Armature: Tutte le armature, scudi
+Armi: Armi semplici, armi da guerra
+Attrezzi: Nessuno
+Tiri Salvezza: Forza, Costituzione
+Abilità: Scegli due abilità tra Acrobazia, Addestrare Animali, Atletica, Intimidire, Intuizione, Percezione, Sopravvivenza e Storia
+
+EQUIPAGGIAMENTO
+Inizi con il seguente equipaggiamento, oltre all’equipaggiamento fornito dalla tuo background:
+(a) cotta di maglia o (b) armatura di cuoio, arco lungo e 20 frecce
+(a) un’arma da guerra e uno scudo o (b) due armi da guerra
+(a) una balestra leggera e 20 quadrelli o (b) due asce
+(a) uno zaino da speleologo o (b) uno zaino da esploratore
+
+STILE DI COMBATTIMENTO
+Come tua specializzazione adotti un particolare stile di combattimento.
+Scegli una delle seguenti opzioni. Non puoi acquisire più di una volta lo stesso Stile di Combattimento,
+anche se in seguito ottieni una nuova scelta.
+
+COMBATTERE CON ARMI POSSENTI
+Quando tiri 1 o 2 per il dado di danno di un attacco effettuato con un’arma da mischia
+che stai impugnando con due mani, puoi ritirare il dado e devi usare il nuovo risultato,
+anche se questo tiro fosse nuovamente 1 o 2.
+L’arma deve avere la proprietà due mani o versatile per farti ottenere questo beneficio.
+
+COMBATTERE CON DUE ARMI
+Quando ti impegni nel combattimento con due armi,
+puoi sommare il tuo modificatore di caratteristica al danno del secondo attacco.
+
+DIFESA
+Quando indossi un’armatura, ottieni un bonus di +1 alla CA.
+
+DUELLARE
+Quando impugni un’arma da mischia in una mano e nessun’altra arma,
+ottieni un bonus di +2 ai tiri dei danni con quell’arma.
+
+PROTEZIONE
+Quando una creatura che puoi vedere attacca un bersaglio diverso da te e che si trova entro 1,5 metri da te,
+puoi usare la tua reazione per imporre svantaggio al suo tiro per colpire. Devi impugnare uno scudo.
+
+TIRO
+Ottieni un bonus di +2 ai tiri per colpire effettuati con le armi a distanza.
+
+RECUPERARE ENERGIE
+Hai una fonte limitata di energia a cui puoi attingere per rimetterti dalle ferite.
+Durante il tuo turno, puoi usare un’azione bonus per recuperare punti ferita
+pari a 1d10 + il tuo livello da guerriero.
+Una volta impiegato questo privilegio, devi terminare un riposo breve o lungo prima di riutilizzarlo.
+
+AZIONE IMPETUOSA
+A partire dal 2° livello, puoi spingerti oltre i tuoi normali limiti per brevi periodi di tempo.
+Durante il tuo turno, puoi eseguire un’azione aggiuntiva oltre alla tua normale azione e una possibile azione bonus.
+Una volta impiegato questo privilegio, devi terminare un riposo breve o lungo prima di riutilizzarlo.
+A partire dal 17° livello, puoi utilizzarlo due volte prima di riposare, ma solo una volta durante lo stesso turno.
+
+ARCHETIPO MARZIALE
+Al 3° livello, puoi scegliere un archetipo da emulare con il tuo stile e le tue tecniche di combattimento, come quello del Campione.
+Il tuo archetipo ti conferisce privilegi al 3° livello e ancora al 7°, 10°, 15° e 18° livello.
+
+INCREMENTO DEI PUNTEGGI CARATTERISTICA
+Quando raggiungi il 4° livello, e poi ancora al 6°, 8°, 12°, 14°, 16° e 19° livello,
+puoi incrementare un tuo punteggio di caratteristica di 2, o incrementare due punteggi di caratteristica di 1.
+Di norma, utilizzando questo privilegio non puoi accrescere un punteggio di caratteristica oltre il 20.
+
+ATTACCO EXTRA
+A partire dal 5° livello, puoi attaccare due volte, invece che una volta,
+ogni volta che effettui l’azione Attaccare durante il tuo turno.
+Il numero di attacchi incrementa a tre quando raggiungi l’11° livello in questa classe
+e a quattro quando raggiungi il 20° livello in questa classe.
+
+INDOMITO
+A partire dal 9° livello, puoi ritirare un tiro salvezza che hai fallito.
+Se lo fai, devi usare il nuovo tiro, e non puoi più usare questo privilegio
+fino a quando non terminerai un riposo lungo.
+Puoi usare questo privilegio due volte tra ogni riposo lungo a partire dal 13° livello
+e tre volte tra ogni riposo lungo a partire dal 17° livello.
+</string>
+    <string name="Ladro_info">
+Ladro
+
+Come ladro, ottieni i seguenti privilegi di classe.
+
+PUNTI FERITA
+Dado Vita: 1d8 per livello da ladro
+Punti Ferita al 1° livello: 8 + il tuo modificatore di Costituzione
+Punti Ferita ai Livelli Più Alti: 1d8 (o 5) + il tuo modificatore di Costituzione per livello da ladro oltre il 1°
+
+COMPETENZE
+Armature: Armature leggere
+Armi: Armi semplici, balestre a mano, spade lunghe, stocchi, spade corte
+Attrezzi: Attrezzi da scasso
+Tiri Salvezza: Destrezza, Intelligenza
+Abilità: Scegli quattro abilità tra Acrobazia, Atletica, Furtività, Indagare, Inganno, Intimidire, Intrattenere, Intuizione, Percezione, Persuasione, Rapidità di Mano
+
+EQUIPAGGIAMENTO
+Inizi con il seguente equipaggiamento, oltre all’equipaggiamento fornito dalla tuo background:
+(a) uno stocco o (b) una spada corta
+(a) un arco corto e una faretra con 20 frecce o (b) una spada corta
+(a) uno zaino da rapinatore, (b) uno zaino da speleologo o (c) uno zaino da esploratore
+Armatura di cuoio, due pugnali, e attrezzi da ladro
+
+MAESTRIA
+Al 1° livello, scegli due tue competenze nelle abilità, o una delle tue competenze nelle abilitàe la tua competenza con gli attrezzi da scasso.
+Il tuo bonus di competenza è raddoppiato per qualsiasi prova di caratteristica che usi una delle competenze scelte.
+Al 6° lIvello, puoi scegliere altre due competenze (in abilità o attrezzi da scasso) su cui applicare questo beneficio.
+
+ATTACCO FURTIVO
+A partire dal 1° livello, impari a colpire con precisione e sfruttare le distrazioni dell’avversario.
+Una volta per turno, puoi infliggere 1d6 danni extra a una creatura che colpisci
+con un attacco se godi di vantaggio sul tiro per colpire.
+L’attacco deve impiegare un’arma di precisione o a distanza.
+Non hai bisogno di vantaggio sul tiro per colpire se un altro nemico del bersaglio si trova entro 1,5 metri da esso,
+quel nemico non è inabile, e non hai svantaggio sul tiro per colpire.
+L’ammontare di danno aggiuntivo aumenta con i tuoi livelli in questa classe come indicato
+nella colonna Attacco Furtivo della tabella Il Ladro.
+
+GERGO LADRESCO
+Durante il tuo addestramento da ladro hai appreso il gergo dei ladri, una miscela segreta di dialetti,
+gergo e codici che ti permettono di nascondere dei messaggi in conversazioni apparentemente normali.
+Solo un’altra creatura che conosca il gergo dei ladri può comprendere questi messaggi.
+Ci vuole il quadruplo del tempo per trasmettere un simile messaggio rispetto alla normale conversazione.
+Inoltre, comprendi una serie di segni e simboli segreti impiegati per inviare messaggi semplici e brevi,
+per identificare un’area come pericolosa o territorio della gilda dei ladri, se c’è del bottino nelle vicinanze,
+o se le persone del luogo sono facili prede o possano fornire un rifugio ad un ladro in fuga.
+
+AZIONE SCALTRA
+A partire dal 2° livello, pensiero rapido e grande coordinazione ti permettono di muoverti e agire velocemente.
+Puoi effettuare un’azione bonus durante ciascun tuo turno in combattimento.
+Quest’azione può essere usata solo per effettuare le azioni Disimpegnarsi, Nascondersi o Scattare.
+
+ARCHETIPO LADRESCO
+Al 3° livello, puoi scegliere un archetipo da emulare nell’esercizio delle tue capacità ladresche,
+come quello del furfante. Il tuo archetipo conferisce privilegi al 3° livello e ancora al 9°, 13° e 17° livello.
+
+INCREMENTO DEI PUNTEGGI CARATTERISTICA
+Quando raggiungi il 4° livello, e poi ancora all’8°, 10°, 12°, 16° e 19° livello,
+puoi incrementare un tuo punteggio di caratteristica di 2, o incrementare due punteggi di caratteristica di 1.
+Di norma, utilizzando questo privilegio non puoi accrescere un punteggio di caratteristica oltre il 20.
+
+SCHIVATA pRODIGIOSA
+A partire dal 5° livello, quando un attaccante che sei in grado di vedere ti colpisce con un attacco,
+puoi usare la tua reazione per dimezzare il danno dell’attacco effettuato contro di te.
+
+ELUSIONE
+A partire dal 7° livello, puoi tirarti fuori rapidamente da certe aree di effetto,
+come quella del soffio infuocato di un drago rosso o l’incantesimo tempesta di ghiaccio.
+Quando sei vittima di un effetto che ti permette di compiere un tiro salvezza su Destrezza per dimezzare i danni,
+non subisci danni se superi il tiro salvezza, e solo metà danni se lo fallisci.
+
+DOTE AFFIDABILE
+Dall’11° livello, hai affinato le tue abilità prescelte quasi alla perfezione.
+Ogni volta che devi compiere una prova di caratteristica che ti permette di sommare il tuo bonus di competenza,
+puoi trattare il risultato di 9 o meno su un d20 come fosse 10.
+
+PERCEZIONE CIECA
+A partire dal 14° livello, se sei in grado di udirla, sei consapevole della posizione di qualsiasi creatura
+invisibile o nascosta entro 3 metri da te.
+
+MENTE SFUGGENTE
+Per il 15° livello, la tua mente ha acquisito una grande forza.
+Ottieni la competenza nei tiri salvezza su Saggezza.
+
+INAFFERABILE
+A partire dal 18° livello, sei così evasivo che è difficile che gli avversari riescano a prenderti in fallo.
+Nessun tiro per colpire gode di vantaggio contro di te, a meno che tu non sia inabile.
+
+COLPO DI FORTUNA
+Al 20° livello, hai una prodigiosa predisposizione per riuscire nel momento del bisogno.
+Se il tuo attacco manca un bersaglio che si trovi nella tua gittata, puoi trasformarlo in un attacco riuscito.
+In alternativa, se fallisci una prova di caratteristica, puoi trattare il risultato del d20 come se fosse 20.
+Una volta usato questo privilegio, non lo puoi riusare fino a quando non termini un riposo breve o lungo.
+</string>
+    <string name="Mago_info">
+Mago
+Un mago ottiene i seguenti privilegi di classe.
+
+PUNTI FERITA
+Dadi Vita: 1d6 per ogni livello da mago
+Punti Ferita al 1° livello: 6 + il modificatore di Costituzione del mago
+Punti Ferita ai Livelli Successivi: 1d6 (o 4) + il modificatore di Costituzione del mago per ogni livello da mago dopo il 1°
+
+COMPETENZE
+Armature: Nessuna
+Armi: Balestre leggere, bastoni ferrati, dardi, fionde, pugnali.
+Strumenti: Nessuno
+Tiri Salvezza: Intelligenza, Saggezza
+Abilità: Due a scelta tra Arcano, Indagare, Intuizione, Medicina, Religione e Storia
+
+EQUIPAGGIAMENTO
+Un mago inizia con l\'equipaggiamento seguente, in aggiunta all\'equipaggiamento conferito dal suo background:
+(a) un bastone ferrato o (b) un pugnale
+(a) una borsa per componenti o (b) un focus arcano
+(a) una dotazione da studioso o (b) una dotazione da esploratore
+Un libro degli incantesimi
+
+INCANTESIMI
+Un mago è uno studioso di magia arcana: possiede un libro degli incantesimi
+in cui sono contenuti gli incantesimi che costituiscono le prime scintille del suo futuro potere.
+
+TRUCCHETTI
+Al 1° livello, un mago conosce tre trucchetti a sua scelta dalla lista degli incantesimi da mago.
+Apprende ulteriori trucchetti da mago a sua scelta ai livelli successivi.
+
+LIBRO DEGLI INCANTESIMI
+Al 1° livello, un mago possiede un libro degli incantesimi che contiene sei incantesimi da mago di 1° livello a sua scelta.
+Questo libro degli incantesimi contiene tutti gli incantesimi da mago conosciuti dal personaggio,
+ad eccezione dei suoi trucchetti, che sono impressi direttamente nella sua mente.
+
+PREPARARE E LANCIARE INCANTESIMI
+La tabella indica quanti slot incantesimo possiede un mago per lanciare i suoi incantesimi di 1° livello e di livello superiore.
+Per lanciare uno di questi incantesimi, il mago deve spendere uno slot incantesimo di livello
+pari o superiore al livello dell\'incantesimo. I
+l mago recupera tutti gli slot incantesimo spesi quando completa un riposo lungo.
+Il mago prepara la lista degli incantesimi da mago disponibili da lanciare scegliendoli dalla lista degli incantesimi da mago.
+Quando lo fa, deve scegliere un numero di incantesimi da mago dal suo libro degli incantesimi
+pari al suo modificatore di Intelligenza + il suo livello da mago (fino a un minimo di un incantesimo).
+Gli incantesimi devono essere di un livello di cui il mago possiede degli slot incantesimo.
+Per esempio, un mago di 3° livello possiede quattro slot incantesimo di 1° livello e due slot incantesimo di 2° livello.
+Con Intelligenza pari a 16, la lista dei suoi incantesimi preparati può includere sei incantesimi di 1° o 2° livello,
+in qualsiasi combinazione, scelti dal suo libro degli incantesimi.
+Se prepara l\'incantesimo di 1° livello Dardo Incantato, potrà lanciarlo usando uno slot incantesimo
+di 1° livello o di 2° livello.
+Il lancio di quell\'incantesimo non rimuove quell\'incantesimo dalla lista di incantesimi preparati.
+Il mago può cambiare la lista dei suoi incantesimi preparati quando completa un riposo lungo.
+Per preparare una nuova lista di incantesimi da mago è necessario un certo ammontare di tempo
+da trascorrere studiando il libro degli incantesimi e memorizzando le formule e i gesti necessari
+per lanciare l\'incantesimo: almeno 1 minuto per livello di incantesimo per ogni incantesimo nella sua lista.
+
+CARATTERISTICA DA INCANTATORE
+Intelligenza è la caratteristica da incantatore usata per gli incantesimi da mago,
+dal momento che egli impara i suoi incantesimi tramite lo studio costante e la memorizzazione.
+Un mago usa Intelligenza ogni volta che un incantesimo fa riferimento alla sua caratteristica da incantatore.
+Usa inoltre il suo modificatore di Intelligenza per definire la CD del tiro salvezza di un incantesimo da mago
+da lui lanciato e quando effettua un tiro per colpire con un incantesimo.
+
+CD del tiro salvezza dell\'incantesimo= 8 + il bonus di competenza del mago + il modificatore di Intelligenza del mago
+Modificatore di attacco dell\'incantesimo= il bonus di competenza del mago + il modificatore di Intelligenza del mago
+
+CELEBRARE RITUALI
+Un mago può lanciare un incantesimo da mago come rituale se quell\'incantesimo possiede il descrittore rituale.
+Non è necessario che abbia preparato quell\'incantesimo.
+
+FOCUS DA INCANTATORE
+Un mago può usare un focus arcano come focus da incantatore per i suoi incantesimi da mago.
+
+IMPARARE INCANTESIMI DI LIVELLO 1 E DI LIVELLO SUPERIORE
+Ogni volta che il personaggio acquisisce un livello da mago, può aggiungere gratuitamente due incantesimi da mago
+a sua scelta al suo libro degli incantesimi.
+Ognuno di questi incantesimi deve essere di un livello di cui il mago possiede degli slot incantesimo,
+come indicato nella tabella.
+Nel corso delle sue avventure potrebbe trovare altri incantesimi da aggiungere al suo libro.
+
+IL LIBRO DEGLI INCANTESIMI DEL MAGO
+Gli incantesimi che il mago aggiunge al suo libro man mano che acquisisce livelli derivano
+dalle ricerche arcane che conduce personalmente, nonché dalle scoperte intellettuali che riesce a fare
+sulla natura del multiverso.
+Potrebbe trovare altri incantesimi nel corso delle sue avventure,, magari scoprendone uno trascritto
+su una pergamena nascosta nel forziere di un mago malvagio o in un tomo polveroso custodito in un\'antica biblioteca.
+
+COPIARE UN INCANTESIMO NEL LIBRO
+Quando il mago entra in possesso di un incantesimo da mago di livello pari o superiore al 1°,
+può aggiungerlo al suo libro, se si tratta di un incantesimo di un livello che egli può preparare
+e se dispone del tempo per decifrarlo e copiarlo.
+Per copiare un incantesimo nel libro è necessario riprodurre il formato basilare dell\'incantesimo
+per poi decifrare il sistema di trascrizione speciale usato dal mago che lo ha scritto.
+Il personaggio deve fare pratica con l\'incantesimo finché non comprende i suoni o i gesti richiesti,
+e poi trascriverlo nel proprio libro degli incantesimi usando il suo metodo personale di trascrizione.
+Per ogni livello dell\'incantesimo, il processo di trascrizione richiede 2 ore e costa 50 mo.
+Il costo rappresenta le componenti materiali consumate dal mago nel corso dei suoi esperimenti
+per padroneggiare l\'incantesimo, nonché gli inchiostri pregiati necessari per trascriverlo.
+Una volta speso l\'ammontare di tempo e il denaro necessario,
+il mago può preparare l\'incantesimo proprio come tutti gli altri suoi incantesimi.
+
+SOSTITUIRE IL LIBRO
+Un mago può copiare un incantesimo dal suo libro degli incantesimi a un altro
+(per esempio, se desidera farne una copia di riserva).
+Procede come se copiasse un nuovo incantesimo nel proprio libro degli incantesimi,
+ma in modo più rapido e facile, dal momento che conosce già il proprio metodo di trascrizione
+e sa già come si lancia l\'incantesimo.
+Dovrà spendere solo 1 ora e 10 mo per ogni livello dell\'incantesimo copiato.
+Se il mago perde il suo libro degli incantesimi, può usare la stessa procedura per trascrivere
+gli incantesimi che ha preparato in un nuovo libro degli incantesimi.
+Per completare il resto del suo libro degli incantesimi dovrà trovarne di nuovi come il consueto.
+E\' per questo motivo che molti maghi custodiscono delle copie di riserva dei loro libri degli incantesimi in luoghi sicuri.
+
+ASPETTO DEL LIBRO
+Il libro degli incantesimi di un mago è una combinazione unica di incantesimi,
+dotato di rifiniture decorative e note a margine personali.
+Potrebbe trattarsi di un semplice e pratico volume rilegato in cuoio che il mago ha ricevuto
+in dono dal suo maestro, di un tomo finemente rilegato e decorato in oro rinvenuto in un\'antica biblioteca,
+o perfino di un cumulo disordinato di appunti messi assieme in tutta fretta
+dopo che il libro degli incantesimi precedenti è andato perduto in un incidente.
+
+RECUPERO ARCANO
+Un mago impara a recuperare parte della sua energia magica studiando il suo libro degli incantesimi.
+Una volta al giorno, quando completa un riposo breve, il mago sceglie quali slot incantesimo spesi desidera recuperare.
+Questi slot incantesimo possono avere un livello totale pari o inferiore alla metà del livello da mago
+(arrotondato per eccesso) e nessuno slot può essere di livello pari o superiore al 6°.
+Per esempio, un mago di 4° livello può recuperare slot incantesimo per un valore totale di due livelli.
+Potrà quindi recuperare uno slot di 2° livello o due slot di 1° livello.
+
+TRADIZIONE ARCANA
+Quando un mago arriva al 2° livello, sceglie una tradizione arcana che modellerà la sua pratica
+della magia in base ai precetti di una delle otto scuole seguenti:
+Abiurazione, Ammaliamento, Divinazione, Evocazione, Illusione, Invocazione, Necromanzia, Trasmutazione,
+tutte descritte alla fine della sezione di questa classe.
+La scuola scelta conferisce al mago alcuni privilegi al 2° livello e poi di nuovo al 6°, 10° e 14° livello.
+
+AUMENTO DEI PUNTEGGI CARATTERISTICA
+Quando arriva al 4° livello, e poi di nuovo all\'8°, 12°, 16° e 19° livello,
+un mago può aumentare di 2 un punteggio di caratteristica a sua scelta,
+oppure può aumentare di 1 due punteggi di caratteristica a sua scelta.
+Come di consueto non è consentito aumentare un punteggio di caratteristica a più di 20 utilizzando questo privilegio.
+
+MAESTRIA NEGLI INCANTESIMI
+Al 18° livello, il mago raggiunge una tale maestria nell\'uso di certi incantesimi da poterli lanciare a volontà.
+Il personaggio sceglie un incantesimo da mago di 1° livello e un incantesimo da mago di 2° livello contenuti
+nel suo libro degli incantesimi.
+Può lanciare quegli incantesimi al loro livello più basso senza spendere uno slot incantesimo quando li ha preparati.
+Se desidera lanciare uno di quegli incantesimi a un livello superiore,
+deve spendere uno slot incantesimo come di consueto.
+
+INCANTESIMI PERSONALI
+Quando il mago arriva al 20° livello, padroneggia due potenti incantesimi che sia in grado di lanciare con minimo sforzo.
+Il mago sceglie due incantesimi da mago di 3° livello contenuti nel suo libro degli incantesimi
+come suoi incantesimi personali.
+Il mago considera questi incantesimi sempre preparati, non li conta ai fini di determinare il numero di incantesimi
+preparati e può lanciare ognuno di quegli incantesimi una volta al 3° livello senza spendere uno slot incantesimo.
+Quando lo fa, non può farlo di nuovo finché non completa un riposo breve o lungo.
+Se desidera lanciare uno di quegli incantesimi a un livello superiore, deve spendere uno slot incantesimo come di consueto.
+</string>
+    <string name="Nano_info">
+Nano
+
+AUMENTO DEI PUNTEGGI CARATTERISTICA
+Il punteggio di Costituzione aumenta di 2.
+
+ETÀ
+I nani maturano allo stessa velocità degli umani, ma sono considerati giovani finché
+raggiungono l\'età di 50 anni. In media, vivono circa 350 anni.
+
+ALLINEAMENTO
+La maggior parte dei nani sono legali, credendo fermamente nei benefici di una società ben organizzata.
+Tendono anche al bene, con un forte senso di correttezza e una convinzione che ognuno meriti di partecipare ai benefici di un ordine retto.
+
+TAGLIA
+I nani sono alti tra 120 e 150 cm e pesano circa 70 kg. La taglia è Media.
+
+VELOCITÀ
+La velocità base sul terreno è 7,5 metri.
+La velocità non viene ridotta indossando armature pesanti.
+
+SCUROVISIONE
+Abituati alla vita sotterranea, avete una vista superiore in condizioni di buio o luce debole.
+Potete vedere con luce debole entro 18 metri come se fosse luce intensa e nell\'oscurità come fosse luce debole.
+Non potete discernere i colori nell\'oscurità, solo sfumature di grigio.
+
+RESILIENZA NANICA
+Avete vantaggio nei tiri salvezza contro il veleno ed avete resistenza contro i danni da veleno (spiegato nel capitolo 9).
+
+ADDESTRAMENTO NEL COMBATTIMENTO NANICO
+Avete competenza con l\'ascia da battaglia, l\'ascia da lancio, il martello da lancio e il martello da guerra.
+
+COMPETENZA NEGLI STRUMENTI
+Guadagnate competenza con strumenti da artigiano a vostra scelta:
+strumenti da fabbro, forniture da birraio o strumenti da muratore.
+
+ESPERTO MINATORE
+Ogni volta che effettuate una prova di Intelligenza (Storia) relativa all\'origine di opere in muratura,
+venite considerati competenti nell\'abilità Storia ed aggiungete il doppio del bonus di competenza alla prova,
+invece del normale bonus di competenza.
+
+LINGUAGGI
+Potete parlare, leggere e scrivere in Comune e Nanico.
+Il Nanico è pieno di consonanti dure e suoni gutturali e tali caratteristiche si riversano in qualunque altro linguaggio un nano possa parlare.
+</string>
+    <string name="Umano_info">
+Umano
+
+AUMENTO DEI PUNTEGGI CARATTERISTICA.
+Ognuno dei punteggi di caratteristica aumenta di 1.
+
+ETÀ
+Gli umani raggiungono la maturità nel secondo decennio e vivono meno di un secolo.
+
+ALLINEAMENTO.
+Gli umani non tendono verso nessun allineamento particolare.
+Tra loro si trova il meglio ed il peggio.
+
+TAGLIA.
+Gli umani variano molto in peso e corporatura, da appena 150 cm a ben più di 180 cm. ù
+A prescindere dalla posizione in tale intervallo, la taglia è Media.
+
+VELOCITÀ
+La velocità base sul terreno è 9 metri.
+
+LINGUAGGI
+Potete parlare, leggere e scrivere in Comune ed un linguaggio extra a vostra scelta.
+Gli umani imparano tipicamente i linguaggi degli altri popoli con cui fanno affari,
+inclusi oscuri dialetti.
+Gli piace disseminare il loro discorso di parole prese in prestito da altre lingue:
+maledizioni Orchesche, espressioni musicali Elfiche, frasi militari Naniche e così via.
+</string>
     <string name="_3_d6">3 D6</string>
     <string name="abilità">Abilità</string>
+    <string name="abiurazione_info">
+Scuola di Abiurazione
+
+ABIURATORE SAPIENTE
+A partire da quando il mago sceglie questa scuola al 2° livello, il tempo e il denaro
+che egli deve spendere per copiare un incantesimo di abiurazione nel suo llbro degli incantesimi sono dimezzati.
+
+INTERDIZIONE ARCANA
+A partire dal 2° livello, il mago può intrecciare una trama magica intorno a sé per proteggersi.
+Quando lancia un incantesimo di abiurazione di livello pari o superiore al 1,
+il mago può utilizzare un filamento dell\'energia magica dell\'incantesimo per creare
+un\'interdizione magica che dura finché il mago non completa un riposo lungo.
+L\'interdizione possiede un numero di punti ferita pari al doppio del livello da mago + il modificatore
+di Intelligenza del mago.
+Ogni volta che il mago subisce danni, è invece l\'interdizione a subire quei danni.
+Se questi danni riducono l\'interdizione a O punti ferita, il mago subisce gli eventuali danni rimanenti.
+Quando rinterdizione ha o punti ferita, non può più assorbire danni, ma la sua magia permane.
+Ogni volta che il mago lancia un incantesimo di abiurazione di livello pari o superiore al 1°,
+l\'interdizione riacquista un numero di punti ferita pari al doppio del livello dell\'incantesimo.
+Una volta creata l\'interdizione, il mago non pub crearne un\'altra finché non completa un riposo lungo.
+
+INTERDIZIONE PROIETTATA
+A partire dal 6° livello, quando una creatura situata entro 9 metri dal mago e che egli sia in grado di vedere
+subisce danni, il mago può usare la sua reazione per fare in modo che la sua Interdizione Arcana assorba quei danni.
+Se questi danni riducono l\'interdizione a O punti ferita, la creatura protetta subisce gli eventuali danni rimanenti.
+
+ABIURAZIONE MIGLIORATA
+A partire dal 10° livello, quando lancia un incantesimo di abiurazione che richiede una prova di caratteristica
+come parte del lancio dell\'incantesimo stesso (come nel caso di controincantesimo o dissolvi magie),
+il mago può aggiungere il suo bonus di competenza a quella prova di caratteristica.
+
+RESISTENZA AGLI INCANTESIMI
+A partire dal 14° livello, il mago dispone di vantaggio ai tiri salvezza contro incantesimi.
+Dispone inoltre di resistenza ai danni degli incantesimi.
+</string>
     <string name="accedi">Accedi</string>
     <string name="accedi_o_registrati">Accedi o registrati per procedere</string>
     <string name="aggiungi">Aggiungi</string>
     <string name="aggiungi2">Aggiungi!</string>
+    <string name="aggiungi_incantesimo">Aggiungi incantesimo</string>
     <string name="aggiungi_personaggio">Aggiungi personaggio</string>
     <string name="aiuto">Aiuto</string>
     <string name="allineamento">Allineamento:</string>
+    <string name="ammaliamento_info">
+Scuola di Ammaliamento
+
+AMMALIATORE SAPIENTE
+A partire da quando il mago sceglie questa scuola al 2° livello,
+il tempo e il denaro che egli deve spendere per copiare un incantesimo di ammaliamento nel suo libro degli incantesimi sono dimezzati.
+
+SGUARDO IPNOTICO
+A partire da quando il mago sceglie questa scuola al 2° livello, le sue parole suadenti e il suo sguardo ipnotico
+sono in grado di estasiare magicamente un\'altra creatura.
+Con un\'azione, il mago sceglie una creatura situata entro 1,5 metri e che egli sia in grado di vedere.
+Se il bersaglio è in grado di vedere e sentire il mago, deve superare un tiro salvezza su Saggezza contro la CD degli incantesimi
+del mago, altrimenti sarà affascinata dal mago fino alla fine del turno successivo di quest\'ultimo.
+La velocità della creatura affascinata scende a O e la creatura è incapacitata e visibilmente frastornata.
+Nei turni successivi il mago può usare la sua azione per mantenere questo effetto,
+estendendone la durata fino alla fine del suo turno successivo.
+Tuttavia, l\'effetto termina se il mago si allontana a più di 1,5 metri dalla creatura,
+se la creatura non è più in grado di vederlo o di sentirlo o se la creatura subisce danni.
+Una volta terminato l\'effetto, o se la creatura ha superato il suo tiro salvezza iniziale contro questo effetto,
+il mago non può più utilizzare questo privilegio su quella stessa creatura finché non completa un riposo lungo.
+
+FASCINO ISTINTIVO
+A partire dal 6° livello, quando una creatura situata entro 9 metri dal mago e che egli sia in grado di vedere effettua
+un tiro per colpire contro di lui, il mago può usare la sua reazione per deviare l\'attacco,
+purché un\'altra creatura si trovi entro Ja gittata dell\'attacco.
+L\'attaccante deve effettuare un tiro salvezza su Saggezza contro la CD degli incantesimi del mago.
+Se lo fallisce, l\'attaccante deve bersagliare la creatura a esso più vicina (escludendo il mago e se stesso).
+Se più creature sono egualmente distanti, l\'attaccante sceglie quale bersagliare.
+Se la creatura supera il tiro salvezza, il mago non può più utilizzare questo privilegio
+contro l\'attaccante finché non completa un riposo lungo.
+Il mago deve scegliere se utiUzzare questo privilegio prima di sapere se l\'attacco colpirà o mancherà.
+Le creature che non possono essere affascinate sono immuni a questo effetto.
+
+AMMALIAMENTO CONDIVISO
+A partire dal 10° livello, quando il mago lancia un incantesimo di ammaliamento di livello pari o superiore
+al 1° che bersagli una sola creatura, può rare in modo che bersagli anche una seconda creatura.
+
+ALTERARE RICORDI
+Al 14° livello, il mago ottiene la capacità di far dimenticare a una creatura di avere subito la sua influenza magica.
+Quando il mago lancia un incantesimo di ammaliamento per affascinare una o più creature, può alterare Ja
+percezione di una creatura in modo che resti inconsapevole di essere stata affascinata.
+Inoltre, prima che l\'incantesimo termini, il mago può usare una volta la sua azione per tentare di far dimenticare
+alla creatura parte del tempo in cui è rimasta affascinata.
+La creatura deve superare un tiro salvezza su Intelligenza contro la CD degli incantesimi del mago,
+altrimenti perderà un ammontare di ore di ricordi pari a 1 + il modificatore di Carisma del mago (fino a un minimo di 1).
+Il mago può far dimenticare alla creatura un ammontare di tempo
+inferiore, e l\'ammontare in questione non può superare la
+durata dell\'incantesimo di ammaliamento.
+</string>
     <string name="app_name">Scheda personaggio 5e</string>
+    <string name="assassino">
+ASSASSINO
+
+COMPETENZE BONUS
+Quando un ladro sceglie questo archetipo al 3° livello, ottiene competenza nei trucchi per il camuffamento
+e nelle sostanze da avvelenatore.
+
+ASSASSINARE
+A partire dal 3° livello, il ladro risulta particolarmente letale quando coglie i propri nemici alla sprovvista
+e dispone di vantaggio ai tiri per colpire contro qualsiasi creatura che
+non abbia ancora effettuato un turno in combattimento.
+Inoltre, ogni colpo da lui messo a segno contro una creatura sorpresa è considerato un colpo critico.
+
+MAESTRO INFILTRATO
+A partire dal 9° livello, il ladro può creare infallibilmente delle identità fittizie per se stesso.
+Deve utilizzare sette giorni e 25 mo per stabilire la storia, la progressione e le
+affiliazioni dell\'identità in questione.
+Non può stabilire un\'identità che appartiene a qualcun altro.
+Potrebbe per esempio procurarsi degli abiti adeguati, una lettera di presentazione
+e un certificato apparentemente legittimo per spacciarsi per un membro di un casato mercantile di
+una remota città, in modo da potersi insinuare nella cerchia delle frequentazioni di altri ricchi mercanti.
+Da allora in poi, quando il ladro adotta la nuova identità come travestimento,
+le altre creature lo riterranno quella persona finché il ladro non offrirà loro dei motivi validi per dubitare di lui.
+
+IMPOSTORE
+Al 13° livello, un ladro ottiene la capacità di imitare infallibilmente la parlata,
+la calligrafia e il modo di fare di un\'altra persona.
+Il ladro deve trascorrere almeno tre ore a studiare queste tre componenti comportamentali del
+soggetto, ascoltandolo parlare, studiando la sua calligrafia e osservandone i modi di fare.
+L\'inganno del ladro è impossibile da discernere per un osservatore casuale.
+Se una creatura sospettosa ha ragione di credere che ci sia qualcosa che non va,
+il ladro dispone di vantaggio a qualsiasi prova di Carisma (Inganno) da lui effettuata per evitare di essere scoperto.
+
+COLPO MORTALE
+A partire dal 17° livello, il ladro diventa un maestro nell\'impartire la morte istantaneamente.
+Quando attacca e colpisce una creatura sorpresa, quella creatura deve effettuare un tiro salvezza su Costituzione
+{CD 8 + il modificatore di Destrezza del ladro+ il bonus di competenza del ladro).
+Se lo fallisce, il ladro raddoppia i danni del suo attacco contro di essa.
+</string>
     <string name="avanti">AVANTI</string>
     <string name="background">
 Ogni storia ha un inizio.
@@ -237,6 +1016,32 @@ Il tuo ladro potrebbe essersi guadagnato da vivere lavorando per una gilda o int
     <string name="calcola_totali">Calcola totali</string>
     <string name="campagne">Campagne</string>
     <string name="campagne_in_corso">Campagne in corso:</string>
+    <string name="campione">
+CAMPIONE
+
+CRITICO MIGLIORATO
+A partire da quando il guerriero sceglie questo archetipo al 3° livello,
+i suoi attacchi con un\'arma mettono a segno un colpo critico con un risultato di 19-20 al tiro.
+
+ATLETA STRAORDINARIO
+A partire dal 7° livello, il guerriero può aggiungere metà del suo bonus di competenza (arrotondalo per eccesso)
+a qualsiasi prova di Forza, Destrezza o Coatituzione che effettua e che non utilizzi già il suo bonus di competenza.
+Inoltre, quando il guerriero effettua un salto in lungo con rincorsa,
+la distanza che copre aumenta di 30 cm per ogni punto del suo modificatore di Forza.
+
+STILE DI COMBATTIMENTO AGGIUNTIVO
+Al 10° livello, il guerriero può scegliere una seconda opzione dal privilegio di classe Stile di Combattimento.
+
+CRITICO SUPERIORE
+A partire dal 15° livello, gli attacchi con un\'arma del guerriero
+mettono a segno un colpo critico con un risultato di 18-20 al tiro.
+
+SOPRAVVISSUTO
+Al 18° livetlo, il guerriero giunge all\'apice della sua resilienza in battaglia.
+All\'inizio di ogni suo turno, recupera un ammontare di punti ferita pari a 5 + il suo modificatore di Costituzione,
+se non gli rimane più della metà dei suoi punti ferita.
+Non ottiene questo beneficio se ha O punti ferita.
+</string>
     <string name="carisma">
 Il Carisma misura la capacità del personaggio di interagire con successo con gli altri.
 Include fattori come la sua sicurezza e la sua eloquenza e può rappresentare una personalità accattivante o imperiosa.
@@ -249,6 +1054,84 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="carisma2">Carisma:</string>
     <string name="carisma_stat">Carisma = </string>
     <string name="carisma_title">CARISMA</string>
+    <string name="cavaliere_mistico">
+CAVALIERE MISTICO
+
+INCANTESIMI
+Quando arriva al 3° livello, il guerriero potenzia le sue doti marziali grazie alla capacità di lanciare incantesimi.
+
+TRUCCHETTI
+Un guerriero conosce due trucchetti a sua scelta tratti dalla lista degli incantesimi da mago.
+Apprende un trucchetto da mago aggiuntivo a sua scelta al 10° livello.
+
+SLOT INCANTESIMO
+La tabella "Incantesimi del Cavalliere Mistico" indica quanti slot incantesimo possiede un guerriero
+per lanciare i suoi incantesimi
+Per lanciare uno di questi incantesmi, un guerriero deve spendere uno slot incantesimo di livello
+pari o superiore al livello dell\'incantesimo.
+Il guerriero recupera tutti gli slot incantesimo spesi quando completa un riposo lungo.
+Per esempio, se un guerriero conosce l\'incantesimo di 1° livello scudo e possiede uno slot
+incantesimo di 1° livello e uno slot incantesimo di 2° livello,
+può lanciare scudo usando uno qualsiasi dei due slot.
+
+INCANTESIMI CONOSCIUTI DI 1° LIVELLO E DI LIVELLO SUPERIORE.
+Un guerriero conosce tre incantesimi da mago di 1° livello a sua scelta, due dei quali devono essere scelti
+tra gli incantesimi di abiurazione e invotazione sulla lista degli incantesimi da mago.
+La colonna "Incantesimi Conosciuti" nella tabella "Incantesimi del Cavaliere Mistico" indica quando un
+guerriero impara altri incantesimi da mago di 1° livello o di livello superiore.
+Ognuno di questi incantesimi deve essere un incantesimo di abiurazione o di invocazione a
+scelta del guerriero e deve appartenere a un livello di cui il guerriero possiede degli slot incantesimo.
+Per esempio, quando un guerriero arriva al 7° livello in questa classe,
+può apprendere un nuovo incantesimo di 1° o 2° livello.
+Gli incantesimi che apprende all\'8°, 14° e 20° livello possono appartenere a qualsiasi scuola di magia.
+Ogni volta che il guerriero acquisisce un livello, può sostituire uno degli incantesimi da mago che conosce
+con un altro incantesimo a sua scelta della lista degli incantesimi da mago.
+Il nuovo incantesimo deve essere di un livello di cui il guerriero possiede almeno uno slot
+incantesimo e deve essere un incantesimo di abiurazione o di invocazione, a meno che non stia sostituendo
+l\'incantesimo ottenuto al 3°, 8°, 14° o 20° livello di una qualsiasi scuola di magia.
+
+CARATTERISTICA DA INCANTATORE
+Intelligenza è la caratteristica da incantatore per gli incantesimi da mago del guerriero,
+dal momento che egli apprende i suoi incantesimi tramite lo studio costante e la memorizzazione.
+Un guerriero usa Intelligenza ogni volta che un incantesimo fa riferimento alla sua caratteristica da incantatore.
+Usa inoltre il suo modificatore di Intelligenza per definire la CD del tiro salvezza
+di un incantesimo da mago da lui lanciato e quando effettua un tiro per colpire con un incantesimo.
+
+CD der tiro salvezza dell\'incantesimo = 8 + il bonus di competenza del guerriero + il modificatore di Intelligenza del guerriero
+Modificatore di attacco dell\'incantestmo = Il bonus di competenza del guerriero + il modificatore di Intelligenza del guerriero
+
+ARMA VINCOLATA
+Al 3° livello, il guerriero apprende un rituale che stabilisce un vincolo magico tra lui e un\'arma.
+Il guerriero celebra il rituale nell\'arco di 1 ora, e può farlo durante un riposo breve.
+L\'arma deve trovarsi a sua portata di mano nel corso di tutto il rituale;
+alla conclusione del rituale, il guerriero tocca t\'arma e stabilisce il vincolo.
+Una volta vincolata l\'arma a sé, il guerriero non può essere disarmato di quell\'arma
+a meno che non sia incapacitato. Se il guerriero e l\'arma si trovano sullo stesso
+piano di esistenza, il guerriero può evocare quell\'arma come azione bonus nel proprio turno,
+facendo in modo che si teletrasporti istantaneamente netta sua mano.
+Un guerriero può avere al massimo due armi vincolate, ma può evocarne solo una alta volta con la sua azione bonus.
+Se tenta di vincolare una terza arma, dovrà spezzare il vincolo con una delle altre due.
+
+MAGIA DA GUERRA
+A partire dal 7• livello, quando il guerriero usa la sua azione per lanciare un trucchetto,
+può effettuare un attacco con un\'arma come azione bonus.
+
+COLPO MISTICO
+Al 10° livello, il guerriero impara a demolire la resistenza agli incantesimi delle creature che colpisce con la sua arma.
+Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+quella creatura subisce svantaggio al tiro salvezza successivo che effettua contro un incantesimo
+lanciato dal guerriero entro la fine del turno successivo di quest\'ultimo.
+
+CARICA ARCANA
+Al 15 livello, il guerriero ottiene la capacità di teletrasportarsi di un massimo di 9 metri
+ino a uno spazio libero cho egli sia in grado di vedere quando utilizza la sua Azione Impetuosa.
+Il guerriero pub teletrasportarsi prima o dopo l\'azione aggiuntiva.
+
+MAGIA DA GUERRA MIGLIORATA
+A partire dal 18° lìvello, quando il guerriero usa la sua azione per lanciare un incantesimo,
+può effettuare un attacco con un\'arma come azione bonus.
+</string>
+    <string name="cerca">cerca</string>
     <string name="chierico">Chierico</string>
     <string name="classe">Classe</string>
     <string name="classe_armatura">Classe armatura = </string>
@@ -256,6 +1139,62 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="classe_e_razza_preferite">Classe e razza preferite:</string>
     <string name="classe_personaggio_lista">Classe: </string>
     <string name="cognome">Cognome</string>
+    <string name="collegio_sapienza">
+COLLEGIO DELLA SAPIENZA
+
+COMPETENZE BONUS
+Quando un bardo si unisce al Collegio della Sapienza al 3°
+livello, ottiene competenza in tre abilità a sua scelta.
+
+PAROLE TAGLIENTI
+Sempre al 3° livello, il bardo impara anche a fare buon uso del suo ingegno per distrarre,
+confondere e fiaccare la determinazione e la competenza altrui.
+Quando una creatura situata entro 18 metri e che il bardo sia in grado di vedere effettua un tiro per colpire,
+una prova di caratteristica o un tiro per i danni, il bardo può usare la sua reazione per spendere
+uno dei suoi utilizzi di Ispirazione Bardica, tirare un dado di Ispirazione Bardica e sottrarre
+il numero ottenuto dal tiro della creatura.
+Può scegliere di utilizzare questo privilegio dopo che la creatura ha effettuato il suo tiro,
+ma prima che il DM dichiari se il tiro per colpire o la prova di caratteristica abbia avuto successo
+o meno, o prima che la creatura infligga i danni.
+La creatura è immune se non è in grado di sentire il bardo o se non può essere affascinata.
+
+SEGRETI MAGICI AGGIUNTIVI
+Al 6° livello, un bardo impara due incantesimi a sua scelta da qualsiasi classe.
+Ogni incantesimo scelto deve essere di un livello che il bardo sia in grado di lanciare, come
+indicato dalla tabella "Bardo", oppure deve essere un trucchetto.
+Gli incantesimi scelti contano come incantesimi da bardo, ma non contano al fine di determinare il numero di incantesimi da bardo conosciuti.
+
+ABILITÀ IMPAREGGIABILE
+A partire dal 14° livello, quando un bardo effettua una prova di caratteristica, può spendere un utilizzo di Ispirazione Bardita.
+Se lo fa, tira un dado di Ispirazione Bardica e aggiunge il risultato ottenuto alla sua prova di caratteristica.
+Può scegliere di farlo dopo avere tirato il dado per la prova di caratteristica,
+ma prima che il DM dichiari se la prova abbia avuto successo o meno.
+</string>
+    <string name="collegio_valore">
+COLLEGIO DEL VALORE
+
+COMPETENZE BONUS
+Quando un bardo si unisce al Collegio del Valore al 3°
+livello, ottiene competenza nelle armature medie, negli scudi e nelle armi da guerra.
+
+ISPIRAZIONE IN COMBATTIMENTO
+Al 3° livello, un bardo apprende anche a ispirare gli ahri in battaglia.
+Una creatura a cui il bardo abbia fornito un dado di Ispirazione Bardica può tirare quel dado e
+aggiungere il risultato ottenuto al tiro appena effettuato per i danni dell\'arma.
+In alternativa, quando qualcuno effettua un tiro per colpire contro la creatura,
+essa può usare la sua reazione per tirare il dado di Ispirazione Bardica
+e aggiungere il risultato ottenuto alla sua CA contro quell\'attacco, dopo avere visto il tiro,
+ma prima di sapere se la colpirà o meno.
+
+ATTACCO EXTRA
+A partire dal 6° livello, un bardo può attaccare due volte anziché una,
+ogni volta che effettua l\'azione di Attacco, nel proprio turno.
+
+MAGIA DA BATTAGLIA
+Al 14° livello, un bardo ha padroneggiato l\'arte di intessere incantesimi e di utilizzare le armi in un\'unica pratica armonizzata.
+Quando usa la propria azione per lanciare un incantesimo da bardo,
+può effettuare un attacco con un\'arma come azione bonus.
+</string>
     <string name="competenze">Competenze</string>
     <string name="competenze_personaggio">Competenze: </string>
     <string name="conferma_passw">Conferma password</string>
@@ -286,15 +1225,91 @@ Le abilità acrobazia, furtività e rapidità di mano rappresentano una maggiore
     <string name="destrezza_stat">Destrezza = </string>
     <string name="destrezza_title">DESTREZZA</string>
     <string name="difetti">Difetti:</string>
+    <string name="divinazione_info">
+Scuola di Divinazione
+
+DIVINATORE SAPIENTE
+A partire da quando il mago sceglie questa scuola al 2 livello,
+il tempo e il denaro che egli deve spendere per copiare un incantesimo di divinazione nel suo libro degli incantesimi sono dimezzati.
+
+PORTENTO
+A partire da quando sceglie questa scuota al 2° livello, il mago inizia a intravedere
+bagliori di futuro che si fanno strada a tratti neJJa sua coscienza.
+Dopo avere completato un riposo lungo, il mago tira due d20 e annota i risultati ottenuti.
+Potrà sostituire un qualsiasi tiro per colpire, tiro salvezza o prova di caratteristica
+da lui effettuata con uno di quei risultati di preveggenza.
+Deve scegliere di farlo prima di effettuare il tiro e può sostituire
+un tiro in questo modo soltanto una volta per turno.
+Ogni tiro di preveggenza può essere usato una volta sola.
+Quando il mago completa un riposo lungo, perde ogni eventuale tiro di preveggenza inutilizzato.
+
+DIVINAZIONE ESPERTA
+A partire dal 6° livello, lanciare incantesimi di divinazione diventa talmente naturale per il mago
+da richiedergli soltanto uno sforzo minimale.
+Quando il mago lancia un incantesimo di divinazione di livello pari o superiore al 2°,
+recupera uno slot incantesimo già speso.
+Lo slot recuperato deve essere di livello inferiore a quello dell\'incantesimo
+lanciato e non può essere di livello superiore al 5°.
+
+TERZO OCCHIO
+A partire dat 10° livello, il mago può usare la sua azione per amplificare i suoi poteri di percezione.
+Quando lo fa, deve scegliere uno dei benefici seguenti, che permane finché il
+mago non diventa incapacitato o finché non completa un riposo breve o lungo.
+Il mago non può più utilizzare questo privilegio finché non completa un riposo.
+COMPRENSIONE SUPERIORE: Il mago è in grado di leggere qualsiasi linguaggio.
+SCUROVISIONE: Il mago ottiene scurovisione entro 18 metri, come descritto nel capitolo 8, "All\'Avventura".
+VEDERE INVISIBILITà: Il mago è in grado di vedere le creature e gli oggetti invisibili entro 3 metri
+da lui e situati entro linea di vista.
+VISTA ETEREA: IL mago può vedere sul Piano Etereo entro 18 metri.
+
+PORTENTO SUPERIORE
+A partire dal 14° livello, Le visioni che affollano i sogni del mago si intensificano, e compongono nella sua mente un
+quadro più preciso di ciò che accadrà.
+Quando il mago utilizza il privilegio Portento, tira 3d20 anziché 2.
+</string>
     <string name="effetti">Effetti</string>
     <string name="elfo">Elfo</string>
     <string name="elfo_alto">Elfo alto</string>
     <string name="elfo_dei_boschi">Elfo dei boschi</string>
     <string name="elfo_oscuro">Elfo oscuro</string>
     <string name="elimina">Elimina!</string>
+    <string name="elimina3">Elimina</string>
     <string name="eliminazione_campagna">ATTENZIONE!!!\n \n Stai per eliminare dei dati che potrebbero non essere più recuperabili\n Vuoi continuare?</string>
     <string name="email">Email</string>
     <string name="email_utente">Email Utente:</string>
+    <string name="evocazione_info">
+Scuola di Evocazione
+
+EVOCATORE SAPIENTE
+A partire da quando il mago sceglie questa scuola al 2° livello,
+il tempo e il denaro che egli deve spendere per copiare un incantesimo di evocazione
+nel suo libro degli incantesimi sono dimezzati.
+
+EVOCAZIONE MINORE
+A partire da quando sceglie questa scuola al 2° livello, il mago può usare la sua azione per evocare un oggetto inanimato
+che compare nelle sue mani o a terra, in uno spazio libero situato entro 3 metri da lui e che egli sia in grado di vedere.
+Questo oggetto non deve essere più lungo di 90 cm, non deve pesare
+più di 5 kg e deve avere la forma di un oggetto non magico che il mago abbia già visto.
+L\'oggetto è palesemente magico ed emana luce lioca entro 1,5 metri di distanza.
+L\'oggetto scompare dopo 1 ora, quando il mago utilizza di nuovo questo privilegio
+o se l\'oggetto stesso subisce qualsiasi danno.
+
+TRASPOSIZIONE BENEVOLA
+A partire dal 6° livello, il mago può usare la sua azione per teletrasportarsi lino a 9 metri di distanza in uno
+spazio libero che egli sia in grado di vedere.
+In alternativa può scegliere uno spazio entro gittata che sia occupato da una creatura Piccola o Media.
+Se quella creatura è consenziente, sia il mago che la creatura si teletrasportano, scambiandosi di posto.
+Una volta utilizzato questo privilegio, il mago non può più utilizzarlo finché non completa un riposo lungo o finché
+non lancia un incantesimo di evocazione di livello pari o superiore al 1°.
+
+EVOCAZIONE FOCALIZZATA
+A partire dal 10° livello, quando il mago si concentra su un
+incantesimo di evocazione, la sua concentrazione non può più essere interrotta dai danni che subisce.
+
+EVOCAZIONI PERDURANTI
+A partire dal 14° livello, le creature evocate o create dalmago con un incantesimo di evocazione
+possiedono 30 punti vita temporanei.
+</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="forza">
 La Forza misura la potenza del proprio corpo, l\'addestramento fisico e l\'efficacia
@@ -306,6 +1321,37 @@ L\'abilità atletica rappresenta una maggiore prestanza in certi tipi di prove d
     <string name="forza2">Forza:</string>
     <string name="forza_stat">Forza = </string>
     <string name="forza_title">FORZA</string>
+    <string name="furfante">
+FURFANTE
+
+MANI VELOCI
+A partire dal 3° livello, un ladro può usare razione bonus conferitagli da Azione Scaltra
+per effettuare una prova di Destrezza (Rapidità di Mano), usare i propri arnesi
+da scasso per disattivare una trappola o scassinare una serratura, o effettuare un\'azione di Usare un Oggetto.
+
+LAVORO AL SECONDO PIANO
+Quando un ladro sceglie questo archetipo al 3° livello, diventa in grado di scalare più velocemente rispetto al normale;
+scalare non gli richiede più un movimento extra.
+Inoltre, quando il ladro effettua un salto in lungo con rincorsa, la distanza che copre aumenta di 30 cm
+per ogni punto del suo modificatore di Destrezza.
+
+FURTIVITÀ SUPREMA
+A partire dal 9° livello, un ladro dispone di vantaggio a una
+prova di Destrezza {Furtività) se si muove di non più della
+metà della sua velocità in quello stesso turno.
+
+USARE OGGETTO MAGICO
+Giunto al 13° livello, un ladro ha imparato come funziona
+la magia quanto basta da improvvisare un utilizzo di questi oggetti che non sono destinati a lui.
+Il ladro ignora tutti 1 requisiti di classe, razza e livello quando usa gli oggetti magici.
+
+RIFLESSI DA FURFANTE
+Una volta giunto al 17° livello, un ladro diventa articolarmente abile nel tendere imboscate e nello
+sfuggire rapidamente ai pericoli.
+Il ladro può effettuare due turni durante il primo round di ogni combattimento.
+Effettua il suo primo turno alla sua normale iniziativa e il secondo turno alla sua iniziativa meno 10.
+Non può utilizzare questo privilegio se è sorpreso.
+</string>
     <string name="gcm_defaultSenderId" translatable="false">839056180853</string>
     <string name="giocatori">Giocatori:</string>
     <string name="giorno">Giorno:</string>
@@ -320,6 +1366,42 @@ L\'abilità atletica rappresenta una maggiore prestanza in certi tipi di prove d
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="home">Home</string>
     <string name="ideali">Ideali:</string>
+    <string name="illusione_info">
+Scuola di Illusione
+
+ILLUSIONISTA SAPIENTE
+A partire da quando il mago sceglie questa scuola al 2° livello,
+il tempo e il denaro che egli deve spendere per copiare un incantesimo di illusione
+nel suo libro degli incantesimi sono dimezzati.
+
+ILLUSIONE MINORE MIGLIORATA
+A partire da quando sceglie questa scuola al 2° livello, il mago apprende il trucchetto illusione minore.
+Se già conosceva questo trucchetto, apprende un diverso trucchetto da mago a sua scelta.
+Il trucchetto non conta al fine di determinare il numero di trucchetti conosciuti dal mago.
+Quando il mago lancia illusione minare, può creare sia un suono che un\'immagine con un singolo lancio dell\'incantesimo.
+
+ILLUSIONI DUTTILI
+A partire dal 6° livello, quando lancia un incantesimo con una durata pari o superiore a 1 minuto,
+il mago può usare la propria azione per cambiare la natura dell\'illusione creata
+(rispettando i limiti dei normali parametri dell\'incantesimo), purché sia in grado di vedere l\'illusione.
+
+SOSIA ILLUSORIO
+A partire dal 10° livello, il mago può creare un duplicato illusorio di se stesso come reazione istantanea al pericolo.
+Quando una creatura effettua un attacco contro il di lui, il mago può usare la sua reazione
+per frapporre il sosia illusorio tra sé e l\'attaccante.
+L\'attacco manca il mago automaticamente e l\'illusione svanisce.
+Una volta utilizzato questo privilegio, il mago non può più utilizzarlo finché non completa un riposo breve o lungo.
+
+REALTÀ ILLUSORIA
+Giunto al 14° livello, il mago ha imparato a intessere la magia dell\'ombra per impartire alle sue illusioni una parvenza , di realtà.
+Quando lancia un incantesimo di illusione di livello pari o superiore al 1°,
+può scegliere un oggetto inanimato non magico che sia parte dell\'illusione e rendere quel oggetto reale.
+Può farlo nel suo turno con un\'azione bonus finché l\'incantesimo è attivo.
+L\'oggetto resta reale per 1 minuto.
+Per esempio, il mago può creare l\'illusione di un ponte che attraversa un baratro e renderla reale quanto
+basta da consentire ai suoi alleati di attraversarlo.
+L\'oggetto non può infliggere danni o ferire in modo diretto.
+</string>
     <string name="indietro">INDIETRO</string>
     <string name="info">Info</string>
     <string name="info_contatti">Info e Contatti</string>
@@ -338,6 +1420,44 @@ superiore in certi tipi di prove di intelligenza.
     <string name="intelligenza_stat">Intelligenza = </string>
     <string name="intelligenza_title">INTELLIGENZA</string>
     <string name="inventario">Inventario</string>
+    <string name="invocazione_info">
+Scuola di Invocazione
+
+INVOCATORE SAPIENTE
+A partire da quando il mago sceglie questa scuola al 2° livello,
+il tempo e il denaro che egli deve spendere per copiare un incantesimo
+di invocazione nel suo libro degli incantesimi sono dimezzati.
+
+PLASMARE INCANTESIMI
+A partire dal 2° tivello, il mago è in grado di creare delle sacche
+di relativa sicurezza all\'interno degli effetti dei suoi incantesimi di invocazione.
+Quando il mago lancia un incantesimo di invocazione che influenza le altre creature che è in grado
+di vedere, può scegliere un numero di quelle creature pari a 1 + il livello dell1ncantesimo.
+Le creature scelte superano automaticamente i loro tiri salvezza contro l\'incantesimo e non
+subiscono alcun danno se normalmente subirebbero la metà dei danni in caso di tiro salvezza superato.
+
+TRUCCHETTO POTENTE
+A partire dal 6° livello, i trucchetti del mago che infliggono danni possono influenzare perfino le creature che
+altrimenti eviterebbero il grosso dell\'effetto.
+Quando una creatura supera un tiro salvezza contro un trucchetto del mago,
+quella creatura subisce la metà dei danni del trucchetto (se previsti),
+ma non subisce alcun effetto aggiuntivo da quel trucchetto.
+
+INVOCAZIONE POTENTE
+A partire dal 10° livello, il mago può aggiungere il suo modificatore di Intelligenza a un tiro per i danni di un
+qualsiasi incantesimo di invocazione da mago da lui lanciato.
+
+SATURAZIONE MAGICA
+A partire dal 14° livello, il mago può intensificare il potere dei suoi incantesimi più semplici.
+Quando lancia un incantesimo da mago compreso tra il 1° e il 5° livello e che infligga danni,
+può infliggere il massimo dei danni con quell\'incantesimo.
+La prima volta che il mago lo fa, non subisce alcun effetto avverso.
+Se però utilizza questo privilegio di nuovo prima di avere completato un riposo lungo,
+subisce 2d12 danni necrotici per ogni livello dell\'incantesimo in questione, subito dopo averlo lanciato.
+Ogni volta che utilizza di nuovo questo privilegio prima di avere completato un riposo lungo,
+i danni necrotici per livello dell\'incantesimo aumentano di 1d12.
+Questi danni ignorano le varie forme di resistenza e immunità.
+</string>
     <string name="ladro">Ladro</string>
     <string name="lambda">/</string>
     <string name="legame">Legame:</string>
@@ -345,15 +1465,281 @@ superiore in certi tipi di prove di intelligenza.
     <string name="linguaggi_2">2 linguaggi</string>
     <string name="livello">Livello:</string>
     <string name="livello2">Livello:</string>
+    <string name="livello_1">Livello 1</string>
+    <string name="livello_2">Livello 2</string>
+    <string name="livello_3">Livello 3</string>
+    <string name="livello_4">Livello 4</string>
+    <string name="livello_5">Livello 5</string>
+    <string name="livello_6">Livello 6</string>
+    <string name="livello_7">Livello 7</string>
+    <string name="livello_8">Livello 8</string>
+    <string name="livello_9">Livello 9</string>
     <string name="logout">Logout</string>
     <string name="logout_msg">Sei sicuro di voler effettuare il logout? Dovrai reinserire le tue credenziali per utilizzare di nuovo l\'app</string>
+    <string name="maestro_di_battaglia">
+MAESTRO DI BATTAGLIA
+
+SUPERIORITÀ IN COMBATTIMENTO
+Quando il guerriero sceglie questo archetipo al 3° livello, apprende alcune manovre alimentate
+da dadi speciali chiamati dadi di superiorità.
+MANOVRE: Il guerriero apprende tre manovre a sua scelta, descritte nella sezione "Manovre" seguente.
+Molte manovre potenziano un attacco in qualche modo. Il guerriero può usare soltanto una manovra per attacco.
+Un guerriero apprende due manovre aggiuntive a sua scelta al 7°, 10° e 15° livello.
+Ogni volta che apprende nuove manovre, può anche sostituire una manovra che conosce con una manovra diversa.
+DADI DI SUPERIORITà: Il guerriero possiede quattro dadi di superiorità, rappresentati da d8.
+Quando il guerriero usa un dado di superiorità, lo spende.
+Recupera tutti i dadi di superiorità quando completa un riposo breve o lungo.
+Ottiene un altro dado di superiorità al 7° livello e un altro ancora al 15° livello.
+TIRI SALVEZZA: Alcune manovre del guerriero richiedono che il bersaglio effettui un tiro salvezza
+per resistere agli effetti della manovra.
+La CD del tiro salvezza va calcolata come segue:
+CD del tiro salvezza della manovra = 8 + A bonus di competenza del guerriero + il modificatore di Forza o di Destrezza del guerriero (a scelta del guerriero)
+
+STUDIOSO DI GUERRA
+Al 3° livello, il guerriero ottiene competenza in un tipo di strumenti da artigiano a sua scelta.
+
+CONOSCI IL TUO NEMICO
+A partire dal 7° livello, se il guerriero spende almeno 1 minuto a osservare un\'altra creatura al di fuori del
+combattimento o a interagire con essa, può apprendere alcune informazioni
+relative alle capacità di quella Creatura, confrontandole con le proprie.
+Il DM rivela al guerriero se la creatura gli è pari, superiore o inferiore relativamente a due
+dei seguenti tratti a scelta del guerriero:
+• Punteggio di Forza
+• Punteggio di Destrezza
+• Punteggio di Costituzione
+• Classe Armatura
+• Punti ferita attuali
+• Livelli di classe totali (se ne possiede)
+• Livelli di classe da guerriero (se ne possiede)
+
+SUPERIORITÀ IN COMBATTIMENTO MIGLIORATA
+Al 10° livello, i dadi di superiorità del guerriero diventano d1O. Al 18° livello, diventano d12.
+
+IMPLACABILE
+A partire dal 15° livello, quando il guerriero tira per l\'iniziativa e non gli rimane
+alcun dado di superiorità, recupera un dado di superiorità.
+
+MANOVRE
+Le manovre sono presentate in ordine alfabetico:
+
+ATTACCO ADDESCANTE: Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+può spendere un dado di superiorità per indurre il bersaglio ad attaccarlo.
+Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco,
+e il bersaglio deve effettuare un tiro salvezza su Saggezza.
+Se lo fallisce, il bersaglio subisce svantaggio a tutti i tiri per colpire contro bersagli diversi dal guerriero
+fino alla fine del turno successivo del guerriero.
+
+ATTACCO CON AFFONDO: Quando il guerriero effettua un attacco con un\'arma da mischia nel suo turno,
+può spendere un dado di superiorità per aumentare di 1,5 metri la propria portata per quell\'attacco.
+Se colpisce, aggiunge il dado di superiorità al tiro per i danni dell\'attacco.
+
+ATTACCO CON FINTA: Il guerriero può spendere un dado di superiorità e usare un\'azione bonus nel suo turno
+per fintare, scegliendo una creatura entro 1,5 metri da sé come bersaglio.
+Il guerriero dispone di vantaggio al suo prossimo tiro per colpire contro quella creatura in questo turno.
+Se quell\'attacco colpisce, il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco.
+
+ATTACCO CON MANOVRA: Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+può spendere un dado di superiorità per spostare uno dei suoi compagni in una posizione più vantaggiosa.
+Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco e sceglie
+una creatura amica che sia in grado di vederlo o di sentirlo.
+Quella creatura può usare la sua reazione per muoversi fino alla metà della sua velocità senza provocare attacchi
+di opportunità da parte del bersaglio dell\'attacco del guerriero.
+
+ATTACCO CON SPAZZATA: Quando il guerriero colpisce una creatura con un attacco con un\'arma da mischia,
+può spendere un dado di superiorità per tentare di infliggere danni a un\'altra creatura con lo stesso attacco.
+II guerriero sceglie un\'altra creatura entro 1,5 metri dal bersaglio originale ed entro la propria portata.
+Se il tiro per colpire originale colpirebbe anche la seconda creatura,
+quest\'ultima subisce danni pari al risultato del tiro ottenuto con il dado di superiorità del guerriero.
+I danni sono dello stesso tipo dell\'attacco originale.
+
+ATTACCO CON SPINTA: Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+può spendere un dado di superiorità per tentare di spingere il bersaglio rigettandolo indietro.
+Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco.
+Se il bersaglio è di taglia Grande o inferiore, deve effettuare un tiro salvezza su Forza.
+Se lo fallisce, il guerriero spinge il bersaglio fino a un massimo di 4,5 metri allontanandolo da sé.
+
+ATTACCO DISARMANTE: Quando il guerriero colpisce una creatura con un attacco con un\'arma può spendere un
+dado di superiorità per tentare di disarmare il bersaglio, costringendolo a lasciare cadere un oggetto che sta
+impugnando a scelta del guerriero.
+Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco,
+e il bersaglio deve effettuare un tiro salvezza su Forza.
+Se lo fallisce, lascia cadere l\'oggetto scelto dal guerriero.
+L\'oggetto cade ai piedi della creatura.
+
+ATTACCO MINACCIOSO: Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+può spendere un dado di superiorità per tentare di spaventare il bersaglio.
+Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco,
+e il bersaglio deve effettuare un tiro salvezza su Saggezza.
+Se lo fallisce, il bersaglio è spaventato dal guerriero fino aLLa fine del turno successivo di quest\'ultimo.
+
+ATTACCO PRECISO: Quando il guerriero effettua un tiro per colpire con un\'arma contro una creatura,
+può spendere un dado di superiorità per aggiungerlo al tiro.
+Può usare questa manovra prima o dopo avere effettuato il tiro per colpire,
+ma prima di applicare qualsiasi effetto dell\'attacco.
+
+ATTACCO SBILANCIANTE: Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+può spendere un dado di superiorità per tentare di buttare a terra il bersaglio.
+Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco.
+Se il bersaglio è di taglia Grande o inferiore, deve effettuare u n tiro salvezza su Forza.
+Se lo fallisce, cade a terra prono.
+
+COLPO DEL COMANDANTE: Quando il guerriero effettua l\'azione di Attacco nel suo turno,
+può rinunciare a uno dei suoi attacchi e usare un\'azione bonus per ordinare a uno dei suoi compagni di colpire.
+Quando lo fa, sceglie una creatura amica che sia in grado di vederlo o di sentirlo
+e spende un dado di superiorità.
+Quella creatura può immediatamente usare la sua reazione per effettuare un attacco con un\'arma,
+aggiungendo il dado di superiorità al tiro per i danni dell\'attacco.
+
+COLPO DISTRAENTE: Quando il guerriero colpisce una creatura con un attacco con un\'arma,
+può spendere un dado di superiorità per distrarre la creatura e procurare ai suoi alleati un\'apertura.
+Il guerriero aggiunge il dado di superiorità al tiro per i danni dell\'attacco.
+Il prossimo tiro per colpire effettuato contro il bersaglio da un attaccante che non sia il guerriero
+dispone di vantaggio, purché sia effettuato prima dell\'inizio del turno successivo del guerriero.
+
+INCORAGGIAMENTO: Nel proprio turno, il guerriero può usare un\'azione bonus
+e spendere un dado di superiorità per incitare uno dei suoi compagni.
+Quando lo fa, sceglie una creatura amica che sia in grado di vederlo o di sentirlo.
+Quella creatura ottiene un ammontare di punti ferita temporanei pari al risultato del tiro del dado
+di superiorità + il modificatore di Carisma del guerriero.
+
+PARATA: Quando un\'altra creatura infligge danni al guerriero con un attacco in mischia,
+il guerriero può usare la sua reazione e spendere un dado di superiorità per ridurre i danni
+del numero ottenuto con il tiro del suo dado di superiorità + il suo modificatore di Destrezza.
+
+REPLICA: Quando una creatura manca il guerriero con un attacco in mischia,
+il guerriero può usare la sua reazione e spendere un dado di superiorità per effettuare un attacco
+con un\'arma da mischia contro la creatura.
+Se la colpisce, aggiunge il dado di superiorità al tiro per i danni dell\'attacco.
+
+SCARTO ELUSIVO: Quando il guerriero si muove, può spendere un dado di superiorità,
+tirarlo e aggiungere il risultato ottenuto alla sua CA finché non smette di muoversi.
+</string>
     <string name="mago">Mago</string>
     <string name="master">Master:</string>
     <string name="messaggio_registrati">Benvenuto! Registrati per procedere</string>
+    <string name="mistificatore_arcano">
+MISTIFICATORE ARCANO
+
+INCANTESIMI
+Quando arriva al 3° livello, il ladro ottiene la capacità di lanciare incantesimi da mago.
+
+TRUCCHETTI
+Un ladro apprende tre trucchetti: mano magica e altri due trucchetti a sua scelta tratti dalla lista
+degli incantesimi da mago.
+Apprende un trucchetto da mago aggiuntivo a sua scelta al 10° livello.
+
+SLOT INCANTESIMO
+La tabella "Incantesimi del Mistificatore Arcano" indica quanti slot incantesimo
+possiede un ladro per lanciare i suoi incantesimi di 1° livello e di livello superiore.
+Per lanciare uno di questi incantesimi, il ladro deve spendere uno slot incantesimo di livello pari
+o superiore al livello dell\'incantesimo.
+Il ladro recupera tutti gli slot incantesimo spesi quando completa un riposo lungo.
+Per esempio, se un ladro conosce l\'incantesimo di 1° livello charme su persone e possiede uno slot incantesimo
+di 1° livello e uno slot incantesimo di 2° livello, può lanciare charme su persone usando uno qualsiasi dei due slot.
+
+INCANTESIMI CONOSCIUTI DI 1° LIVELLO E DI LIVELLO SUPERIORE
+Un ladro conosce tre incantesimi da mago di 1° Livello a sua scelta, due dei quali devono essere scelti
+tra gli incantesimi di ammaliamento e illusione sulla lista degli incantesimi da mago.
+La colonna "incantesimi Conosciuti" nella tabella "Incantesimi del Mistificatore Arcano" i
+ndica quando un ladro impara altri incantesimi da mago di 1° livello o di livello superiore.
+Ognuno di questi incantesimi deve essere un incantesimo di ammaliamento o di illusione a scelta del
+ladro e deve appartenere a un livello di cui il ladro possiede degli slot incantesimo.
+Per esempio, quando un ladro arriva al 7° livello in questa classe, può apprendere un nuovo incantesimo di 1° o di 2° livello.
+Gli incantesimi che apprende all\'8°, 14° o 20° livello possono appartenere a qualsiasi scuola di magia.
+Ogni volta che il ladro acquisisce un livello, può sostituire uno degli incantesimi da mago
+che conosce con un altro incantesimo a sua scelta della lista degli incantesimi da mago.
+Il nuovo incantesimo deve essere di un livello di cui il ladro possiede almeno uno slot incantesimo e deve
+essere un incantesimo di ammaliamento o di illusione, a meno che non stia sostituendo l\'incantesimo ottenuto
+all\'8°, 14° o 20° Jivello di una qualsiasi scuola di magia.
+
+CARATTERISTICA DA INCANTATORE
+Intelligenza è la caratteristica da incantatore per gli incantesimi da mago del ladro,
+dal momento che egli apprende i suoi incantesimi tramite lo studio costante e la memorizzazione.
+Il ladro usa Intelligenza ogni volta che un incantesimo fa riferimento alla sua caratteristica da incantatore.
+Usa inoltre il suo modificatore di Intelligenza per definire la CD del tiro
+salvezza di un incantesimo da mago da lui lanciato e quando effettua un tiro per colpire con un incantesimo.
+
+CD del tiro safvezza dell\'incantesimo= 8 + il bonus di competenza del ladro + il modificatore di Intelligenza del ladro
+Modificatore di attacco dell\'incantesimo= Il bonus di competenza del ladro + il modificatore di Intelligenza del ladro
+
+GIOCO DI PRESTIGIO DELLA MANO MAGICA
+A partire dal 3° livello, quando il ladro lancia mano magica, può rendere la mano spettrale invisibile e può farle svolgere i seguenti compiti aggiuntivi:
+• Riporre un oggetto impugnato dalla mano in un contenitore indossato o trasportato da un\'altra creatura.
+• Recuperare un oggetto in un contenitore Indossato o trasportato da un\'altra creatura.
+• Usare gli arnesi da scasso del ladro per scassinare serrature e disattivare trappole a distanza.
+Il ladro può svolgere uno di questi compiti senza essere notato da una creatura se effettua
+con successo una prova di Destrezza (Rapidità di Mano) contrapposta a una prova di Saggezza (Percezione) della creatura.
+Il ladro può inoltre usare l\'azione bonus conferitagli da Azione Scaltra per controllare la mano.
+
+IMBOSCATA MAGICA
+A partire dal 9° 1ivello, se il ladro è nascosto da una creatura quando lancia un incantesimo su di essa,
+quella creatura subisce svantaggio a ogni tiro salvezza che effettua contro quell\'incantesimo in quel turno.
+
+INGANNATORE VERSATILE
+Al 13° livello, il ladro sviluppa la capacità di distrarre i bersagli grazie alla sua mano magica.
+Come azione bonus nel suo turno, può designare una creatura entro 1,5 metri dalla mano spettrale creata dall\'incantesimo.
+Così facendo dispone di vantaggio ai tiri per colpire contro quella creatura fino alla fine del turno.
+
+LADRO DI INCANTESIMI
+Al 17° livello, il ladro ottiene la capacità di rubare magicamente a un altro incantatore
+le conoscenze richieste per lanciare un incantesimo.
+Immediatamente dopo che una creatura ha lanciato un incantesimo che bersaglia il ladro o lo include nella
+sua area di effetto, il ladro può usare la sua reazione per obbligare la creatura a effettuare un tiro salvezza con
+il modificatore della caratteristica da incantatore della creatura.
+La CD è pari alla CD del tiro salvezza degli incantesimi del ladro.
+Se lo fallisce, il ladro nega l\'effetto dell\'incantesimo contro di lui e ruba la conoscenza dell\'incantesimo,
+se il livello di quell\'incantesimo è pari almeno al 1° ed è un livello che il ladro sia in grado di lanciare
+(non è necessario che si tratti di un incantesimo da mago).
+Per le 8 ore successive, il ladro conosce l\'incantesimo e può lanciarlo usando i propri slot incantesimo.
+La creatura non può lanciare quell\'incantesimo finché le ore non sono trascorse.
+Una volta utilizzato questo privilegio, il ladro non può più utilizzarlo finché non completa un riposo lungo.
+</string>
     <string name="modifica">Modifica</string>
     <string name="nano">Nano</string>
     <string name="nano_delle_colline">Nano delle colline</string>
     <string name="nano_delle_montagne">Nano delle montagne</string>
+    <string name="necromanzia_info">
+Scuola di Necromanzia
+
+NECROMANTE SAPIENTE
+A partire da quando il mago sceglie questa scuola al 2° livello,
+il tempo e il denaro che egli deve spendere per copiare un incantesimo di necromanzia
+nel suo libro degli incantesimi sono dimezzati.
+
+RACCOLTO MACABRO
+Al 2° livello, il mago sviluppa la capacità di raccogliere l\'energia vitale delle creature uccise dai suoi incantesimi.
+Una volta per turno, quando uccide una o più creature con un incantesimo di livello pari o superiore al 1°,
+il mago recupera un ammontare di punti ferita pari al doppio del livello dell\'incantesimo,
+o al triplo del livello se l\'incantesimo appartiene alla Scuola di Necromanzia.
+Non ottiene questo beneficio se uccide dei costrutti o dei non morti.
+
+SERVITORI NON MORTI
+Al 6° livello, il mago aggiunge l\'incantesimo animare morti
+al suo libro degli incantesimi, se non lo possedeva già.
+Quando lancia animare morti, può bersagliare un cadavere o un cumulo di ossa aggiuntivo per creare un altro
+scheletro o zombi, come appropriato.
+Ogni volta che il mago crea un non morto usando un incantesimo di necromanzia,
+quella creatura ottiene i benefici seguenti:
+• Il massimo dei punti ferita della creatura aumenta di un ammontare pari al livello del mago.
+• La creatura aggiunge il bonus di competenza del mago ai suoi tiri per i danni con le armi.
+
+IMPERVIO ALLA NON MORTE
+A partire dal 10° livello, il mago dispone di resistenza ai danni necrotici e il suo massimo dei punti ferita non può essere ridotto.
+Il mago ha trascorso tanto tempo a occuparsi dei non morti e delle forze che li animano che è
+diventato impervio ad alcuni dei loro effetti peggiori.
+
+COMANDARE NON MORTI
+A partire dal 14° livello, il mago può usare la magia per condurre sotto il suo controllo anche i non morti creati da altri maghi.
+Con un\'azione può scegliere un non morto situato entro 18 metri da lui e che egli sia in grado di vedere.
+Quella creatura deve superare un tiro salvezza su Carisma contro la CD degli incantesimi del mago.
+Se lo supera, il mago non può più utilizzare questo privilegio contro di lei.
+Se lo fallisce, la creatura diventa amichevole nei confronti del mago e obbedisce ai suoi comandi finché il
+mago non utilizza di nuovo questo privilegio.
+I non morti intelligenti sono più difficili da controllare in questo modo.
+Se il bersaglio possiede un\'Intelligenza pari o superiore a 8, dispone di vantaggio al tiro salvezza.
+Se fallisce il tiro salvezza e possiede un\'Intelligenza pari o superiore a 12,
+può ripetere il tiro salvezza alla fine di ogni ora, finché non lo supera e si libera.
+</string>
     <string name="next">Next</string>
     <string name="nome">Nome</string>
     <string name="nome1">Nome:</string>
@@ -417,6 +1803,11 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="scelto">scelto</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="sei_sicuro_di_creare_questo_personaggio">Sei sicuro di creare questo personaggio?</string>
+    <string name="seleziona_il_livello">Seleziona il livello</string>
+    <string name="seleziona_il_tipo">Seleziona il tipo</string>
+    <string name="seleziona_l_incantatore">Seleziona l\'incantatore</string>
+    <string name="slot_totali">Slot totali: </string>
+    <string name="slot_usati">Slot usati: </string>
     <string name="sottoclasse">Sottoclasse</string>
     <string name="stai_per_eliminare_la_campagna_nse_vuoi_continuare_clicca_procedi_naltrimenti_torna_indietro">Stai per eliminare la campagna!\nSe vuoi continuare clicca procedi,\naltrimenti torna indietro</string>
     <string name="statistiche_personaggio">Statistiche personaggio</string>
@@ -442,7 +1833,64 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="titolo">Campagne D&amp;D 5e</string>
     <string name="total">Total</string>
     <string name="totale">Totale</string>
+    <string name="trasmutazione_info">
+Scuola di Trasmutazione
+
+TRASMUTATORE SAPIENTE
+A partire da quando il mago sceglie questa scuola al 2° livello,
+il tempo e il denaro che egli deve spendere per
+copiare un incantesimo di trasmutazione nel suo libro degli incantesimi sono dimezzati.
+
+ALCHIMIA MINORE
+A partire da quando sceglie questa scuola al 2° livello, il mago può alterare temporaneamente
+le proprietà fisiche di un oggetto non magico, trasformandolo da una sostanza all\'altra.
+Il mago applica una procedura alchemica speciale a un oggetto composto interamente di legno, pietra (ma non gemme), ferro, rame o argento, trasformandolo in un oggetto
+diverso fatto di quei materiali.
+Ogni 10 minuti trascorsi ad applicare la procedura gli consentono di trasformare
+materiale pari a un cubo con spigolo di 30 cm.
+Dopo 1 ora, o finché il mago non perde la concentrazione (come se si stesse concentrando su un incantesimo),
+il materiale si ritrasforma nella sua sostanza originale.
+
+PIETRA DEL TRASMUTATORE
+A partire dal 6° livello, il mago può trascorrere 8 ore a
+creare una pietra del trasmutatore che accumuli la magia di trasmutazione.
+Il mago può beneficiare della pietra personalmente o cederla a un\'altra creatura.
+Una creatura ottiene un beneficio a scelta del mago fintanto che la pietra resta in suo possesso.
+Quando il mago crea la pietra, sceglie il beneficio tra le opzioni seguenti:
+• Scurovisione entro 18 metri, come descritto nel capitolo 8, "All\'Avventura"
+• Un aumento della velocità di 3 metri fintanto che la creatura è priva di ingombro
+• Competenza nei tiri salvezza su Costituzione
+• Resistenza ai danni da acido, freddo, fulmine, fuoco o tuono (a scelta del mago al momento di determinare questo beneficio)
+Ogni volta che il mago lancia un incantesimo di trasmutazione di livello pari o superiore al 1°,
+può cambiare l\'effetto della pietra, se la pietra si trova sulla sua persona.
+Se il mago crea una nuova pietra del trasmutatore, quella precedente cessa di funzionare.
+
+MUTAFORMA
+Al 10° livello, il mago aggiunge l\'incantesimo metamorfosi al suo libro degli incantesimi, se non lo possedeva già.
+Può lanciare metamorfosi senza spendere uno slot incantesimo.
+Quando lo fa, può bersagliare solo se stesso e trasformarsi in una bestia il cui grado di sfida sia pari o inferiore a 1.
+Una volta lanciato metamorfosi in questo modo, il mago non può più farlo di nuovo finché non completa un riposo
+breve o lungo, ma può comunque lanciarlo normalmente usando uno slot incantesimo disponibile.
+
+MAESTRO TRASMUTATORE
+A partire dal 14° livello, il mago può usare la sua azione per consumare la riserva di magia di trasmutazione
+accumulata all\'interno della sua pietra del trasmutatore in un\'unica soluzione.
+Quando lo fa, sceglie uno degli effetti seguenti.
+La sua pietra del trasmutatore si distrugge e non può essere ricreata finché il mago non completa un riposo lungo.
+PANACEA: Il mago rimuove tutte le maledizioni, malattie e veleni che influenzano una creatura
+da lui toccata con la pietra del trasmutatore. La creatura recupera anche tutti i suoi punti ferita.
+RIPRISTINARE GIOVINEZZA: Il mago tocca una creatura consenziente con la pietra del trasmutatore e l\'età
+apparente di quella creatura è ridotta di 3dl0 anni, fino a un minimo di 13 anni.
+Questo effetto non prolunga l\'arco vitale della creatura.
+RIPRISTINARE VITA: Il mago lancia l\'incantesimo rianimare morti su una creatura da lui toccata con la pietra del trasmutatore,
+senza spendere uno slot incantesimo e senza che debba possedere l\'incantesimo nel suo libro degli incantesimi.
+TRASFORMAZIONE MAGGIORE: Il mago può trasmutare un oggetto non magico
+(che non sia più grande di un cubo con spigolo di 1,5 metri) in un altro oggetto non magico di taglia
+e massa analoga e di valore pari o inferiore.
+Deve trascorrere 10 minuti a maneggiare l\'oggetto che intende trasformare.
+</string>
     <string name="tratti_caratteriali">Tratti caratteriali:</string>
+    <string name="trucchetti">Trucchetti</string>
     <string name="umano">Umano</string>
     <string name="unisciti">Unisciti</string>
     <string name="username">Username</string>

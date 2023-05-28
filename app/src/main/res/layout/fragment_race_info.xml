@@ -6,6 +6,7 @@
     tools:context=".view.characters.crea.RaceInfoFragment">
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/race_info_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

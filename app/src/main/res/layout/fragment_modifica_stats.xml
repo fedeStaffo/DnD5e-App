@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/macaroon"
     tools:context=".view.characters.visualizza.ModificaStatsFragment"
     android:padding="16dp">
 
@@ -19,6 +20,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/livello2" />
@@ -52,6 +54,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/punti_ferita_massimi" />
@@ -85,6 +88,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/punti_ferita_attuali" />
@@ -118,6 +122,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/classe_armatura_punti" />
@@ -151,6 +156,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/forza2" />
@@ -183,6 +189,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/destrezza2" />
@@ -215,6 +222,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/costituzione2" />
@@ -247,6 +255,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/intelligenza2" />
@@ -279,6 +288,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/saggezza2" />
@@ -311,6 +321,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/carisma2" />
@@ -343,6 +354,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/status2" />

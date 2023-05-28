@@ -171,8 +171,6 @@ class PersonaggioViewModel : ViewModel() {
         _equipaggiamento.value = equipaggiamentoList
     }
 
-
-
     // Funzione che restituisce un oggetto LiveData contenente una lista di Personaggi
     // da usare per la recycler view dove vengono visualizzati tutti i personaggi di un utente
     fun getPersonaggi(): LiveData<List<Personaggio>> {
@@ -206,69 +204,12 @@ class PersonaggioViewModel : ViewModel() {
         return mutableLiveData
     }
 
-    // Metodo per ottenere informazioni sulla razza prendendole da Firestore
-    fun getInfoRazza(razza: String): MutableLiveData<String?> {
-
-        // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
-        val mutableLiveData = MutableLiveData<String?>()
-
-        // Query per leggere la razza dalla collezione "razze" di Firestore
-        val razzaQuery = razzeRef.document(razza)
-
-        razzaQuery.addSnapshotListener { snapshot, e ->
-            // Se si verifica un errore, lo stampa nel log e ritorna
-            if (e != null) {
-                Log.w(TAG_RACE, "Listen failed.", e)
-                return@addSnapshotListener
-            }
-
-            // Se lo snapshot non è nullo, estrae il campo "info" e lo aggiorna nell'oggetto MutableLiveData
-            if (snapshot != null && snapshot.exists()) {
-                val info = snapshot.getString("info")
-                mutableLiveData.postValue(info)
-            } else {
-                // Se lo snapshot è nullo o non esiste, lo stampa nel log
-                Log.d(TAG_RACE, "Current data: null")
-            }
-        }
-
-        // Restituisce l'oggetto MutableLiveData come oggetto LiveData
-        return mutableLiveData
-    }
-
-    // Funzione per leggere dal database le info della classe
-    fun getInfoClasse(classe: String): MutableLiveData<String?> {
-
-        // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
-        val mutableLiveData = MutableLiveData<String?>()
-
-        // Query per leggere la classe dalla collezione "classi" di Firestore
-        val classeQuery = classiRef.document(classe)
-
-        classeQuery.addSnapshotListener { snapshot, e ->
-            // Se si verifica un errore, lo stampa nel log e ritorna
-            if (e != null) {
-                Log.w(TAG_CLASS, "Listen failed.", e)
-                return@addSnapshotListener
-            }
-
-            // Se lo snapshot non è nullo, estrae il campo "info" e lo aggiorna nell'oggetto MutableLiveData
-            if (snapshot != null && snapshot.exists()) {
-                val info = snapshot.getString("info")
-                mutableLiveData.postValue(info)
-            } else {
-                // Se lo snapshot è nullo o non esiste, lo stampa nel log
-                Log.d(TAG_CLASS, "Current data: null")
-            }
-        }
-
-        // Restituisce l'oggetto MutableLiveData come oggetto LiveData
-        return mutableLiveData
-    }
-
     fun saveCharacterToFirestore() {
         val db = FirebaseFirestore.getInstance()
         val personaggiRef = db.collection("personaggi")
+
+        val slots: List<Int> = listOf(0, 0, 0, 0, 0, 0, 0, 0, 0)
+        val magie: List<String> = emptyList()
 
         val character = hashMapOf<String, Any?>(
             "classe" to this.classePersonaggio.value,
@@ -296,8 +237,10 @@ class PersonaggioViewModel : ViewModel() {
             "vita" to 0,
             "livello" to 1,
             "classeArmatura" to 0,
-            "campagna" to ""
-            // slot ??
+            "campagna" to "",
+            "slotTot" to slots,
+            "slotUsati" to slots,
+            "magie" to magie
         )
 
         personaggiRef.add(character)
@@ -428,9 +371,123 @@ class PersonaggioViewModel : ViewModel() {
         }
     }
 
+    fun addEquipaggiamentoToPersonaggio(nome: String, razza: String, classe: String, utenteId: String, nuovoOggetto: String) {
+        val db = FirebaseFirestore.getInstance()
+        val personaggioRef = db.collection("personaggi")
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("razza", razza)
+            .whereEqualTo("classe", classe)
+            .whereEqualTo("utenteId", utenteId)
+
+        personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot) {
+                val equipaggiamento = document.get("equipaggiamento") as? ArrayList<String>
+                equipaggiamento?.add(nuovoOggetto)
+                document.reference.update("equipaggiamento", equipaggiamento)
+            }
+        }
+    }
+
+    fun removeEquipaggiamentoFromPersonaggio(nome: String, razza: String, classe: String, utenteId: String, oggettoDaRimuovere: String): LiveData<Boolean> {
+        val removeResult = MutableLiveData<Boolean>()
+
+        val db = FirebaseFirestore.getInstance()
+        val personaggioRef = db.collection("personaggi")
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("razza", razza)
+            .whereEqualTo("classe", classe)
+            .whereEqualTo("utenteId", utenteId)
+
+        personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot) {
+                val equipaggiamento = document.get("equipaggiamento") as? ArrayList<String>
+                equipaggiamento?.remove(oggettoDaRimuovere)
+                document.reference.update("equipaggiamento", equipaggiamento)
+                    .addOnSuccessListener {
+                        // L'oggetto è stato rimosso correttamente
+                        removeResult.value = true
+                    }
+                    .addOnFailureListener {
+                        // Si è verificato un errore durante la rimozione dell'oggetto
+                        removeResult.value = false
+                    }
+            }
+        }
+
+        return removeResult
+    }
+
+    fun addIncantesimoToPersonaggio(nome: String, razza: String, classe: String, utenteId: String, nuovaMagia: String) {
+        val db = FirebaseFirestore.getInstance()
+        val personaggioRef = db.collection("personaggi")
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("razza", razza)
+            .whereEqualTo("classe", classe)
+            .whereEqualTo("utenteId", utenteId)
+
+        personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot) {
+                val magie = document.get("magie") as? ArrayList<String>
+                magie?.add(nuovaMagia)
+                document.reference.update("magie", magie)
+            }
+        }
+    }
+
+    fun removeIncantesimoFromPersonaggio(nome: String, razza: String, classe: String, utenteId: String, magiaDaRimuovere: String): LiveData<Boolean> {
+        val removeResult = MutableLiveData<Boolean>()
+
+        val db = FirebaseFirestore.getInstance()
+        val personaggioRef = db.collection("personaggi")
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("razza", razza)
+            .whereEqualTo("classe", classe)
+            .whereEqualTo("utenteId", utenteId)
+
+        personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot) {
+                val magie = document.get("magie") as? ArrayList<String>
+                magie?.remove(magiaDaRimuovere)
+                document.reference.update("magie", magie)
+                    .addOnSuccessListener {
+                        // L'oggetto è stato rimosso correttamente
+                        removeResult.value = true
+                    }
+                    .addOnFailureListener {
+                        // Si è verificato un errore durante la rimozione dell'oggetto
+                        removeResult.value = false
+                    }
+            }
+        }
+
+        return removeResult
+    }
+
+    fun getMagieFromFirestore(nomePersonaggio: String, utenteId: String): LiveData<List<String>> {
+        val mutableLiveData = MutableLiveData<List<String>>()
+
+        val collection = FirebaseFirestore.getInstance().collection("personaggi")
+        val query = collection.whereEqualTo("nome", nomePersonaggio)
+            .whereEqualTo("utenteId", utenteId)
+
+        query.get().addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val result = mutableListOf<String>()
+                for (document in task.result) {
+                    val magie = document["magie"] as? List<String>
+                    if (magie != null) {
+                        result.addAll(magie)
+                    }
+                }
+                mutableLiveData.value = result
+            }
+        }
+
+        return mutableLiveData
+    }
+
+
     companion object {
         const val TAG = "com.progetto_dd.view.characters.HomeCharacterFragment"
-        private const val TAG_RACE = "com.progetto_dd.view.characters.crea.RaceFragment"
-        private const val TAG_CLASS = "com.progetto_dd.view.characters.crea.ClassFragment"
     }
 }

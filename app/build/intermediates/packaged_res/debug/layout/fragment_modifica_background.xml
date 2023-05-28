@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/macaroon"
     tools:context=".view.characters.visualizza.ModificaBackgroundFragment"
     android:padding="16dp">
 
@@ -21,6 +22,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/descrizione" />
@@ -54,6 +56,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/storia" />
@@ -87,6 +90,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tratti_caratteriali" />
@@ -120,6 +124,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/difetti" />
@@ -152,6 +157,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ideali" />
@@ -184,6 +190,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/legami" />
@@ -216,6 +223,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/allineamento" />

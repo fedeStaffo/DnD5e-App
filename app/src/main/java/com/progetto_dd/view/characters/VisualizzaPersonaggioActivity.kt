@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.ActionBar
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -38,6 +39,7 @@ class VisualizzaPersonaggioActivity : AppCompatActivity() {
         // Aggiunge la bottombar e la configura con il NavController
         val bottomNavView = findViewById<BottomNavigationView>(R.id.view_char_bottombar)
         bottomNavView.setupWithNavController(navController)
+
     }
 
     // Aggiunge gli item del menu alla toolbar

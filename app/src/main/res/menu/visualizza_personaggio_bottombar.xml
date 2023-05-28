@@ -24,7 +24,7 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/statsClasseFragment"
+        android:id="@+id/statsClasseRazzaFragment"
         android:icon="@drawable/crusader"
         android:title="Classe e Razza"
         app:showAsAction="always"/>

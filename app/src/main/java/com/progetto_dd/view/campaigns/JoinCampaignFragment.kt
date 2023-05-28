@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.progetto_dd.MainActivity
@@ -48,13 +49,16 @@ class JoinCampaignFragment : Fragment() {
                 val nomeCampagna = binding.nomecampagnaEt.text.toString()
                 val passCampagna = binding.editTextPassword.text.toString()
 
-                // Chiamata alla funzione del view model per aggiungere la campagna al personaggio
-                viewModel.aggiungiCampagnaAPersonaggio(nomePersonaggioSelezionato,nomeCampagna)
-                // Chiamata alla funzione del view model per aggiungere il personaggio alla campagna
-                viewModel.aggiungiPersonaggioACampagna(requireContext(), nomeCampagna, passCampagna, nomePersonaggioSelezionato)
+                if(nomePersonaggioSelezionato != "" && nomeCampagna != "" && passCampagna != ""){
+                    // Chiamata alla funzione del view model per aggiungere la campagna al personaggio
+                    viewModel.aggiungiCampagnaAPersonaggio(nomePersonaggioSelezionato,nomeCampagna)
+                    // Chiamata alla funzione del view model per aggiungere il personaggio alla campagna
+                    viewModel.aggiungiPersonaggioACampagna(requireContext(), nomeCampagna, passCampagna, nomePersonaggioSelezionato)
 
-                // Riporta alla pagina principale
-                findNavController().navigate(R.id.action_joinCampaignFragment_to_homeCampaignsFragment)
+                    // Riporta alla pagina principale
+                    findNavController().navigate(R.id.action_joinCampaignFragment_to_homeCampaignsFragment)
+                }
+                else Toast.makeText(requireContext(), "Non sono ammessi campi vuoti!", Toast.LENGTH_SHORT).show()
             }
         }
     }

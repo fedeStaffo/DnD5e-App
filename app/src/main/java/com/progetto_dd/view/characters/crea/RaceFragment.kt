@@ -69,17 +69,17 @@ class RaceFragment : Fragment() {
 
         // Listener che definiscono il comportamento dei bottoni di info
         binding.infoElfo.setOnClickListener {
-            viewModel.setRazzaPersonaggio("elfo")
+            viewModel.setRazzaPersonaggio("Elfo")
             findNavController().navigate(R.id.action_raceFragment_to_raceInfoFragment)
         }
 
         binding.infoUmano.setOnClickListener {
-            viewModel.setRazzaPersonaggio("umano")
+            viewModel.setRazzaPersonaggio("Umano")
             findNavController().navigate(R.id.action_raceFragment_to_raceInfoFragment)
         }
 
         binding.infoNano.setOnClickListener {
-            viewModel.setRazzaPersonaggio("nano")
+            viewModel.setRazzaPersonaggio("Nano")
             findNavController().navigate(R.id.action_raceFragment_to_raceInfoFragment)
         }
 

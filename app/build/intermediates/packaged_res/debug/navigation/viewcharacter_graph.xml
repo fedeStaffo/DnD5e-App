@@ -15,9 +15,9 @@
             app:destination="@id/modificaStatsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/statsClasseFragment"
+        android:id="@+id/statsClasseRazzaFragment"
         android:name="com.progetto_dd.view.characters.visualizza.StatsClasseRazzaFragment"
-        android:label="Stats Classe"
+        android:label="Stats Classe e Razza"
         tools:layout="@layout/fragment_stats_classe_razza" />
     <fragment
         android:id="@+id/statsBackFragment"
@@ -32,7 +32,14 @@
         android:id="@+id/magieFragment"
         android:name="com.progetto_dd.view.characters.visualizza.MagieFragment"
         android:label="Magie"
-        tools:layout="@layout/fragment_magie" />
+        tools:layout="@layout/fragment_magie" >
+        <action
+            android:id="@+id/action_magieFragment_to_listaMagieFragment"
+            app:destination="@id/listaMagieFragment" />
+        <action
+            android:id="@+id/action_magieFragment_to_infoMagiaFragment"
+            app:destination="@id/infoMagiaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/zainoFragment"
         android:name="com.progetto_dd.view.characters.visualizza.ZainoFragment"
@@ -48,4 +55,18 @@
         android:name="com.progetto_dd.view.characters.visualizza.ModificaBackgroundFragment"
         android:label="Modifica background"
         tools:layout="@layout/fragment_modifica_background" />
+    <fragment
+        android:id="@+id/listaMagieFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.ListaMagieFragment"
+        android:label="Lista magie"
+        tools:layout="@layout/fragment_lista_magie" >
+        <action
+            android:id="@+id/action_listaMagieFragment_to_infoMagiaFragment"
+            app:destination="@id/infoMagiaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoMagiaFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.InfoMagiaFragment"
+        android:label="Info magia"
+        tools:layout="@layout/fragment_info_magia" />
 </navigation>

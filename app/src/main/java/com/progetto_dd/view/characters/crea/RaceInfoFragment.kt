@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentRaceInfoBinding
 import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
@@ -34,12 +35,12 @@ class RaceInfoFragment : Fragment() {
         // Inizializza la razza selezionata dall'utente dal viewmodel
         val razza = viewModel.razzaPersonaggio.value
 
-        // Chiama la funzione getInfoRazza del viewmodel per ottenere le informazioni sulla razza
         if (razza != null) {
-            viewModel.getInfoRazza(razza).observe(viewLifecycleOwner, Observer { infoRazza ->
-                // Aggiorna la TextView con le informazioni sulla razza
-                binding.raceInfoText.text = infoRazza ?: ""
-            })
+            when(razza){
+                "Elfo"-> binding.raceInfoText.text = getString(R.string.Elfo_info)
+                "Umano"-> binding.raceInfoText.text = getString(R.string.Umano_info)
+                "Nano"-> binding.raceInfoText.text = getString(R.string.Nano_info)
+            }
         }
     }
     override fun onDestroyView() {

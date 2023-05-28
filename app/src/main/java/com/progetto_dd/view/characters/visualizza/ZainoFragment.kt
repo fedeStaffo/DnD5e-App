@@ -5,56 +5,107 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.progetto_dd.R
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import com.progetto_dd.databinding.FragmentZainoBinding
+import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ZainoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ZainoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentZainoBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var viewModel: PersonaggioViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_zaino, container, false)
+        _binding = FragmentZainoBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ZainoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ZainoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Inizializza il view model
+        viewModel = ViewModelProvider(requireActivity()).get(PersonaggioViewModel::class.java)
+
+        val intent = requireActivity().intent
+
+        val nome = intent.getStringExtra("nome")
+        val razza = intent.getStringExtra("razza")
+        val classe = intent.getStringExtra("classe")
+        val utenteId = intent.getStringExtra("utente_id")
+        val equipaggiamento = intent.getStringArrayListExtra("equipaggiamento")
+
+        if (equipaggiamento != null) {
+            binding.textViewInventario.text = equipaggiamento.joinToString(separator = "\n")
+        }
+
+        binding.btnAggiungiOggetto.setOnClickListener {
+            val nuovoOggetto = binding.inputOggetto.text.toString()
+
+            if (nome != null && classe != null && razza != null && utenteId != null) {
+                viewModel.addEquipaggiamentoToPersonaggio(
+                    nome,
+                    razza,
+                    classe,
+                    utenteId,
+                    nuovoOggetto
+                )
+            }
+
+            // Mostra un toast per confermare l'aggiunta dell'oggetto
+            Toast.makeText(
+                requireContext(),
+                "Oggetto aggiunto all'equipaggiamento!",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        binding.btnEliminaOggetto.setOnClickListener {
+            val oggettoDaRimuovere = binding.inputOggetto.text.toString()
+
+            if (nome != null && classe != null && razza != null && utenteId != null && oggettoDaRimuovere != "") {
+                val oggettoRimossoLiveData = viewModel.removeEquipaggiamentoFromPersonaggio(
+                    nome,
+                    razza,
+                    classe,
+                    utenteId,
+                    oggettoDaRimuovere
+                )
+
+                oggettoRimossoLiveData.observe(viewLifecycleOwner) { oggettoRimosso ->
+                    if (oggettoRimosso == true) {
+                        // Mostra un toast per confermare la rimozione dell'oggetto
+                        Toast.makeText(
+                            requireContext(),
+                            "Oggetto rimosso dall'equipaggiamento!",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        // Mostra un toast per segnalare che l'oggetto da rimuovere non è stato trovato nell'equipaggiamento
+                        Toast.makeText(
+                            requireContext(),
+                            "L'oggetto da rimuovere non è presente nell'equipaggiamento!",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
             }
+            else  Toast.makeText(
+                requireContext(),
+                "Non lasciare campi vuoti!",
+                Toast.LENGTH_SHORT).show()
+        }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }

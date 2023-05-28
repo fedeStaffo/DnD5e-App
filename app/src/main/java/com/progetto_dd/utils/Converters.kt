@@ -20,7 +20,7 @@ class Converters {
      * @return la stringa risultante
      */
     @TypeConverter
-    fun toString(value: List<String>?): String? {
+    fun toStringFromList(value: List<String>?): String? {
         return value?.joinToString(", ")
     }
 }
