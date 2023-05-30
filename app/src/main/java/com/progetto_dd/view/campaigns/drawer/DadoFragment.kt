@@ -149,7 +149,7 @@ class DadoFragment : Fragment() {
             ).show()
             return
         } else if (currentTextModificatore.isNotEmpty() && currentTextDado.isEmpty()) {
-            showNumericResult(valutaEspressione(currentTextModificatore))
+            showNumericResult(valutaEspressione(currentTextModificatore), currentTextModificatore)
             return
         } else if (currentTextDado.isNotEmpty() && currentTextModificatore.isEmpty()) {
             showRollResultNoModificatore(rollDice(currentTextDado), currentTextDado)
@@ -215,12 +215,36 @@ class DadoFragment : Fragment() {
         return risultato
     }
 
-    private fun showNumericResult(result: Int) {
-        val message = "TOTALE: $result"
-        val alertDialogBuilder = AlertDialog.Builder(requireContext())
-        alertDialogBuilder.setMessage(message)
-        val alertDialog = alertDialogBuilder.create()
-        alertDialog.show()
+    private fun showNumericResult(result: Int, string: String) {
+        val sum = result
+        val stringa = string
+
+        val dialogBuilder = context?.let { AlertDialog.Builder(it) }
+        if (dialogBuilder != null) {
+            val titleTextView = TextView(context)
+            titleTextView.text = "$sum"
+            titleTextView.gravity = Gravity.CENTER // Centra il titolo
+            titleTextView.setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                80f
+            ) // Imposta la dimensione del testo del titolo a 80
+            titleTextView.setTextColor(Color.BLACK) // Imposta il colore del testo del titolo a nero
+
+            dialogBuilder.setCustomTitle(titleTextView)
+
+            val messageTextView = TextView(context)
+            messageTextView.text =
+                "$stringa"
+            messageTextView.gravity = Gravity.CENTER // Centra il messaggio
+            messageTextView.setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                30f
+            ) // Imposta la dimensione del testo del messaggio a 30
+
+            dialogBuilder.setView(messageTextView)
+            dialogBuilder.setPositiveButton("OK", null)
+            dialogBuilder.show()
+        }
     }
 
     fun showRollResultNoModificatore(results: List<Int>, string: String) {
@@ -238,7 +262,7 @@ class DadoFragment : Fragment() {
             titleTextView.setTextSize(
                 TypedValue.COMPLEX_UNIT_SP,
                 80f
-            ) // Imposta la dimensione del testo del titolo a 50
+            ) // Imposta la dimensione del testo del titolo a 80
             titleTextView.setTextColor(Color.BLACK) // Imposta il colore del testo del titolo a nero
 
             dialogBuilder.setCustomTitle(titleTextView)
@@ -250,7 +274,7 @@ class DadoFragment : Fragment() {
             messageTextView.setTextSize(
                 TypedValue.COMPLEX_UNIT_SP,
                 30f
-            ) // Imposta la dimensione del testo del messaggio a 20
+            ) // Imposta la dimensione del testo del messaggio a 30
 
             dialogBuilder.setView(messageTextView)
             dialogBuilder.setPositiveButton("OK", null)
@@ -275,7 +299,7 @@ class DadoFragment : Fragment() {
             titleTextView.setTextSize(
                 TypedValue.COMPLEX_UNIT_SP,
                 80f
-            ) // Imposta la dimensione del testo del titolo a 50
+            ) // Imposta la dimensione del testo del titolo a 80
             titleTextView.setTextColor(Color.BLACK) // Imposta il colore del testo del titolo a nero
 
             dialogBuilder.setCustomTitle(titleTextView)
@@ -287,7 +311,7 @@ class DadoFragment : Fragment() {
             messageTextView.setTextSize(
                 TypedValue.COMPLEX_UNIT_SP,
                 30f
-            ) // Imposta la dimensione del testo del messaggio a 20
+            ) // Imposta la dimensione del testo del messaggio a 30
 
             dialogBuilder.setView(messageTextView)
             dialogBuilder.setPositiveButton("OK", null)
