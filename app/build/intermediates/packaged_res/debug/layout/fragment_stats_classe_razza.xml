@@ -81,10 +81,10 @@
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
-            android:popupBackground="@color/white"
-            android:layout_height="wrap_content" />
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:popupBackground="@color/white" />
 
         <Button
             android:id="@+id/bottoneInfoSottoClasse"

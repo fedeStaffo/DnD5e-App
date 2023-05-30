@@ -16,11 +16,13 @@
 
         <Button
             android:id="@+id/btnAggiungiIncantesimo"
-            android:layout_width="match_parent"
-            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/verde"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="@string/aggiungi_incantesimo"
+            android:text="Lista\n incantesimi"
             android:textStyle="bold"
             android:textSize="30sp"/>
 
@@ -69,9 +71,10 @@
                 android:text="@string/livello_1"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:textColor="@color/black"
@@ -91,7 +94,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
@@ -150,9 +153,10 @@
                 android:text="@string/livello_2"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -172,7 +176,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
@@ -232,9 +236,10 @@
                 android:text="@string/livello_3"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -254,7 +259,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
@@ -314,9 +319,10 @@
                 android:text="@string/livello_4"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -336,7 +342,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
@@ -396,9 +402,10 @@
                 android:text="@string/livello_5"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -418,7 +425,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
@@ -477,9 +484,10 @@
                 android:text="@string/livello_6"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -499,7 +507,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
@@ -558,9 +566,10 @@
                 android:text="@string/livello_7"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -580,7 +589,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
@@ -639,9 +648,10 @@
                 android:text="@string/livello_8"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -661,7 +671,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView
@@ -720,9 +730,10 @@
                 android:text="@string/livello_9"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -742,7 +753,7 @@
                     android:textStyle="bold"/>
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"/>
 
                 <TextView

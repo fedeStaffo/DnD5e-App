@@ -17,12 +17,12 @@
     <fragment
         android:id="@+id/statsClasseRazzaFragment"
         android:name="com.progetto_dd.view.characters.visualizza.StatsClasseRazzaFragment"
-        android:label="Stats Classe e Razza"
+        android:label="Info Classe e Razza"
         tools:layout="@layout/fragment_stats_classe_razza" />
     <fragment
         android:id="@+id/statsBackFragment"
         android:name="com.progetto_dd.view.characters.visualizza.StatsBackFragment"
-        android:label="Stats Background"
+        android:label="Background"
         tools:layout="@layout/fragment_stats_back" >
         <action
             android:id="@+id/action_statsBackFragment_to_modificaBackgroundFragment"
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/magieFragment"
         android:name="com.progetto_dd.view.characters.visualizza.MagieFragment"
-        android:label="Magie"
+        android:label="Incantesimi"
         tools:layout="@layout/fragment_magie" >
         <action
             android:id="@+id/action_magieFragment_to_listaMagieFragment"

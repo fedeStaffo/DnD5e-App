@@ -26,6 +26,6 @@
     <item
         android:id="@+id/statsClasseRazzaFragment"
         android:icon="@drawable/crusader"
-        android:title="Classe e Razza"
+        android:title="Info C.R."
         app:showAsAction="always"/>
 </menu>

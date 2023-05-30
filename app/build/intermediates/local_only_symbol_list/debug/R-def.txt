@@ -39,6 +39,8 @@ color rosso
 color shortbread
 color teal_200
 color teal_700
+color tnt
+color verde
 color white
 color yellow
 dimen activity_horizontal_margin
@@ -158,6 +160,7 @@ id backgroundFragment
 id backspaceButton
 id benvenuto
 id bonusCompetenza
+id bonus_attacco_incantesimo
 id bottone0
 id bottone1
 id bottone2
@@ -222,6 +225,7 @@ id calcolatrice
 id camp_bottombar
 id camp_graph
 id campagneInCorso
+id cd_tiro_salvezza_magia
 id char_graph
 id classFragment
 id classInfoFragment
@@ -269,6 +273,8 @@ id editTextLegami
 id editTextLivello
 id editTextPassword
 id editTextSaggezza
+id editTextSlotTot
+id editTextSlotUsati
 id editTextStoria
 id editTextTratticaratteriali
 id editTextVitaAttuale
@@ -507,8 +513,12 @@ id textView3
 id textView4
 id textView53
 id textView7
+id textViewAllineamento
 id textViewCarisma
 id textViewCarismaDesc
+id textViewClasse
+id textViewClasseArmatura
+id textViewCompetenze
 id textViewCostituzione
 id textViewCostituzioneDesc
 id textViewDado1
@@ -526,14 +536,19 @@ id textViewIntelligenza
 id textViewIntelligenzaDesc
 id textViewInventario
 id textViewLivello
+id textViewNome
 id textViewPiu1
 id textViewPiu2
 id textViewPiu3
 id textViewPiu4
 id textViewPiu5
 id textViewPiu6
+id textViewPuntiFerita
+id textViewPuntiFeritaMax
+id textViewRazza
 id textViewSaggezza
 id textViewSaggezzaDesc
+id textViewStato
 id textViewTipo
 id textViewUguale1
 id textViewUguale2
@@ -574,6 +589,8 @@ layout activity_main_drawer_campagna
 layout activity_register
 layout activity_reset_password
 layout activity_visualizza_personaggio
+layout dialog_edit_slot
+layout dialog_personaggio_details
 layout fragment_add_campaign
 layout fragment_background
 layout fragment_class
@@ -665,6 +682,7 @@ string background
 string background_title
 string bardo
 string benvenuto
+string bonus_attacco_incantesimo
 string bonus_competenza
 string c_a
 string calcola_totali
@@ -676,6 +694,7 @@ string carisma2
 string carisma_stat
 string carisma_title
 string cavaliere_mistico
+string cd_tiro_salvezza
 string cerca
 string chierico
 string classe

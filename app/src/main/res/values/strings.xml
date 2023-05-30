@@ -549,5 +549,7 @@ disinvoltura in certi tipi di prove di Carisma.
         <item>Bardo</item>
         <item>Mago</item>
     </string-array>
+    <string name="cd_tiro_salvezza">CD tiro salvezza:</string>
+    <string name="bonus_attacco_incantesimo">Bonus attacco incantesimo:</string>
 </resources>
 

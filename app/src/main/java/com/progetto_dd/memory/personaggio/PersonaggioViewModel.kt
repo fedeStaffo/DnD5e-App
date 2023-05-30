@@ -1,6 +1,8 @@
 package com.progetto_dd.memory.personaggio
 
+import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -417,7 +419,7 @@ class PersonaggioViewModel : ViewModel() {
         return removeResult
     }
 
-    fun addIncantesimoToPersonaggio(nome: String, razza: String, classe: String, utenteId: String, nuovaMagia: String) {
+    fun addIncantesimoToPersonaggio(context: Context, nome: String, razza: String, classe: String, utenteId: String, nuovaMagia: String) {
         val db = FirebaseFirestore.getInstance()
         val personaggioRef = db.collection("personaggi")
             .whereEqualTo("nome", nome)
@@ -428,13 +430,20 @@ class PersonaggioViewModel : ViewModel() {
         personaggioRef.get().addOnSuccessListener { querySnapshot ->
             for (document in querySnapshot) {
                 val magie = document.get("magie") as? ArrayList<String>
-                magie?.add(nuovaMagia)
-                document.reference.update("magie", magie)
+
+                if (magie == null || !magie.contains(nuovaMagia)) {
+                    magie?.add(nuovaMagia)
+                    document.reference.update("magie", magie)
+
+                    Toast.makeText(context, "Magia aggiunta correttamente", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(context, "La magia esiste già", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
 
-    fun removeIncantesimoFromPersonaggio(nome: String, razza: String, classe: String, utenteId: String, magiaDaRimuovere: String): LiveData<Boolean> {
+    fun removeIncantesimoFromPersonaggio(context: Context, nome: String, razza: String, classe: String, utenteId: String, magiaDaRimuovere: String): LiveData<Boolean> {
         val removeResult = MutableLiveData<Boolean>()
 
         val db = FirebaseFirestore.getInstance()
@@ -447,16 +456,25 @@ class PersonaggioViewModel : ViewModel() {
         personaggioRef.get().addOnSuccessListener { querySnapshot ->
             for (document in querySnapshot) {
                 val magie = document.get("magie") as? ArrayList<String>
-                magie?.remove(magiaDaRimuovere)
-                document.reference.update("magie", magie)
-                    .addOnSuccessListener {
-                        // L'oggetto è stato rimosso correttamente
-                        removeResult.value = true
-                    }
-                    .addOnFailureListener {
-                        // Si è verificato un errore durante la rimozione dell'oggetto
-                        removeResult.value = false
-                    }
+
+                if (magie != null && magie.contains(magiaDaRimuovere)) {
+                    magie.remove(magiaDaRimuovere)
+                    document.reference.update("magie", magie)
+                        .addOnSuccessListener {
+                            // L'oggetto è stato rimosso correttamente
+                            removeResult.value = true
+
+                            Toast.makeText(context, "Magia rimossa correttamente", Toast.LENGTH_SHORT).show()
+                        }
+                        .addOnFailureListener {
+                            // Si è verificato un errore durante la rimozione dell'oggetto
+                            removeResult.value = false
+
+                            Toast.makeText(context, "Errore nella rimozione della magia", Toast.LENGTH_SHORT).show()
+                        }
+                } else {
+                    Toast.makeText(context, "La magia non è presente", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -474,17 +492,111 @@ class PersonaggioViewModel : ViewModel() {
             if (task.isSuccessful) {
                 val result = mutableListOf<String>()
                 for (document in task.result) {
-                    val magie = document["magie"] as? List<String>
+                    val magie = document.get("magie") as? List<String>
                     if (magie != null) {
                         result.addAll(magie)
                     }
                 }
                 mutableLiveData.value = result
+            } else {
+                // Handle error case
+                mutableLiveData.value = emptyList()
             }
         }
 
         return mutableLiveData
     }
+
+    fun getSlotTotArray(nomePersonaggio: String, utenteId: String): MutableLiveData<List<Int>> {
+        val slotTotLiveData = MutableLiveData<List<Int>>()
+
+        val db = FirebaseFirestore.getInstance()
+        val personaggiRef = db.collection("personaggi")
+            .whereEqualTo("nome", nomePersonaggio)
+            .whereEqualTo("utenteId", utenteId)
+
+        personaggiRef.get().addOnSuccessListener { querySnapshot ->
+            val documents = querySnapshot.documents
+            if (documents.isNotEmpty()) {
+                val document = documents[0]
+                val slotTot = document.get("slotTot") as? List<Long>
+                val slotTotInt = slotTot?.map { it.toInt() } ?: emptyList()
+                slotTotLiveData.value = slotTotInt
+            } else {
+                slotTotLiveData.value = emptyList()
+            }
+        }.addOnFailureListener {
+            slotTotLiveData.value = emptyList()
+        }
+
+        return slotTotLiveData
+    }
+
+    fun getSlotUsatiArray(nomePersonaggio: String, utenteId: String): MutableLiveData<List<Int>> {
+        val slotUsatiLiveData = MutableLiveData<List<Int>>()
+
+        val db = FirebaseFirestore.getInstance()
+        val personaggiRef = db.collection("personaggi")
+            .whereEqualTo("nome", nomePersonaggio)
+            .whereEqualTo("utenteId", utenteId)
+
+        personaggiRef.get().addOnSuccessListener { querySnapshot ->
+            val documents = querySnapshot.documents
+            if (documents.isNotEmpty()) {
+                val document = documents[0]
+                val slotUsati = document.get("slotUsati") as? List<Long>
+                val slotUsatiInt = slotUsati?.map { it.toInt() } ?: emptyList()
+                slotUsatiLiveData.value = slotUsatiInt
+            } else {
+                slotUsatiLiveData.value = emptyList()
+            }
+        }.addOnFailureListener {
+            slotUsatiLiveData.value = emptyList()
+        }
+
+        return slotUsatiLiveData
+    }
+
+    fun updateSlotTotUsati(context: Context, nomePersonaggio: String, utenteId: String, livello: Int, newSlotTot: Int, newSlotUsati: Int) {
+        val db = FirebaseFirestore.getInstance()
+        val personaggioRef = db.collection("personaggi")
+            .whereEqualTo("nome", nomePersonaggio)
+            .whereEqualTo("utenteId", utenteId)
+
+        personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot) {
+                val slotTotArray = document.get("slotTot") as? ArrayList<Long>
+                val slotUsatiArray = document.get("slotUsati") as? ArrayList<Long>
+
+                slotTotArray?.let {
+                    if (livello >= 1 && livello <= slotTotArray.size) {
+                        val slotTot = newSlotTot.coerceAtLeast(0)
+                        it[livello - 1] = slotTot.toLong()
+                    }
+                }
+
+                slotUsatiArray?.let {
+                    if (livello >= 1 && livello <= slotUsatiArray.size) {
+                        val slotTot = newSlotTot.coerceAtLeast(0)
+                        val slotUsati = newSlotUsati.coerceIn(0, slotTot)
+                        it[livello - 1] = slotUsati.toLong()
+                    }
+                }
+
+                document.reference.update("slotTot", slotTotArray)
+                document.reference.update("slotUsati", slotUsatiArray)
+                    .addOnSuccessListener {
+                        // Aggiornamento riuscito
+                        Toast.makeText(context, "Aggiornamento riuscito!", Toast.LENGTH_SHORT).show()
+                    }
+                    .addOnFailureListener {
+                        // Errore durante l'aggiornamento
+                        Toast.makeText(context, "Non fare il furbo, o il Master avrà il diritto di mangiarsi i tuoi dadi!", Toast.LENGTH_SHORT).show()
+                    }
+            }
+        }
+    }
+
 
 
     companion object {

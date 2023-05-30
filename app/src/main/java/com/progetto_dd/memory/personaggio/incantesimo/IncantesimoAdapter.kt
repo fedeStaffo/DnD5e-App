@@ -1,14 +1,18 @@
+package com.progetto_dd.memory.personaggio.incantesimo
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.progetto_dd.R
-import com.progetto_dd.memory.personaggio.incantesimo.Incantesimo
+import com.progetto_dd.view.characters.visualizza.ListaMagieFragment
+import com.progetto_dd.view.characters.visualizza.MagieFragment
 
-class IncantesimoAdapter(var magie: List<Incantesimo>) :
+class IncantesimoAdapter(var magie: List<Incantesimo>, private val currentFragment: Fragment) :
     RecyclerView.Adapter<IncantesimoAdapter.IncantesimoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IncantesimoViewHolder {
@@ -51,7 +55,16 @@ class IncantesimoAdapter(var magie: List<Incantesimo>) :
                     putString("infoIncantesimo", incantesimo.info)
                     putString("classiIncantesimo", incantesimo.classi)
                 }
-                itemView.findNavController().navigate(R.id.action_listaMagieFragment_to_infoMagiaFragment, args)
+
+                when (currentFragment) {
+                    is ListaMagieFragment -> {
+                        itemView.findNavController().navigate(R.id.action_listaMagieFragment_to_infoMagiaFragment, args)
+                    }
+                    is MagieFragment -> {
+                        itemView.findNavController().navigate(R.id.action_magieFragment_to_infoMagiaFragment, args)
+                    }
+                }
+
             }
         }
     }

@@ -340,21 +340,23 @@ class IncantesimoViewModel(private val dao: IncantesimoDao) : ViewModel() {
         }
     }
 
-    fun getIncantesimiByNomi(nomiIncantesimi: List<String>) {
-        viewModelScope.launch {
-            val risultati = withContext(Dispatchers.IO) {
-                val incantesimi = mutableListOf<Incantesimo>()
-                for (nomeIncantesimo in nomiIncantesimi) {
-                    val incantesimo = dao.getIncantesimoByNome(nomeIncantesimo)
-                    if (incantesimo != null) {
-                        incantesimi.add(incantesimo)
-                    }
+    fun getIncantesimiByNomi(nomiIncantesimi: List<String>): MutableLiveData<List<Incantesimo>> {
+        val risultati = MutableLiveData<List<Incantesimo>>()
+        val incantesimi = mutableListOf<Incantesimo>()
+
+        viewModelScope.launch(Dispatchers.IO) {
+            for (nomeIncantesimo in nomiIncantesimi) {
+                val incantesimo = dao.getIncantesimoByNome(nomeIncantesimo)
+                incantesimo?.let {
+                    incantesimi.add(incantesimo)
                 }
-                incantesimi
             }
-            incantesimi.value = risultati
+            risultati.postValue(incantesimi)
         }
+
+        return risultati
     }
+
 
 
 }

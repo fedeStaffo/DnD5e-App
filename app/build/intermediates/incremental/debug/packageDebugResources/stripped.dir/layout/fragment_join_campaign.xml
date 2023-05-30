@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.campaigns.JoinCampaignFragment"
+    android:orientation="vertical"
+    android:id="@+id/joinCampaignFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:text="@string/inserisci_il_nome_della_campagna"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/nomecampagnaEt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/nome"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@color/black"
+        android:maxLines="1"
+        android:padding="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:text="@string/inserisci_la_password"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@color/black"
+        android:maxLines="1"
+        android:padding="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:text="@string/inserisci_un_personaggio"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Spinner
+        android:id="@+id/spinnerPersonaggi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/buttonPartecipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/partecipa" />
+
+</LinearLayout>

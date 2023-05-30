@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.campaigns.drawer.CreaNpcFragment"
+    android:layout_marginStart="0dp"
+    android:background="@color/macaroon"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="41dp">
+        </Space>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nome_npc"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nome_npc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Legame"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerLegame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/legame_npc"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Descrizione"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descrizione_npc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </Space>
+
+        <Button
+            android:id="@+id/aggiungi_npc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/crea" />
+
+    </LinearLayout>
+
+</ScrollView>

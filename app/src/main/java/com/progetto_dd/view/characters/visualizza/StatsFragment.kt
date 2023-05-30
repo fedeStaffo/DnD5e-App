@@ -95,6 +95,48 @@ class StatsFragment : Fragment() {
                 "Mago" -> binding.tiriSalvezza.text = "Intelligenza, Saggezza"
             }
         }
+        
+        if(classe != null && livello != null){
+            when(classe){
+                "Bardo" -> if (carisma != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+                }
+                "Ladro" -> if (intelligenza != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+                }
+                "Guerriero" -> if (intelligenza != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+                }
+                "Mago" -> if (intelligenza != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+                }
+            }
+        }
+
+        if(classe != null && livello != null){
+            when(classe){
+                "Bardo" -> if (carisma != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+                }
+                "Ladro" -> if (intelligenza != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+                }
+                "Guerriero" -> if (intelligenza != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+                }
+                "Mago" -> if (intelligenza != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+                }
+            }
+        }
 
         binding.btnModifica.setOnClickListener {
             findNavController().navigate(R.id.action_statsFragment_to_modificaStatsFragment)
@@ -201,5 +243,13 @@ class StatsFragment : Fragment() {
             20 -> m = "6"
         }
         return m
+    }
+    
+    fun getCD(bonusComp: Int, bonusCaster: Int): Int{
+        return (8+bonusComp+bonusCaster)
+    }
+
+    fun getBonusAttacco(bonusComp: Int, bonusCaster: Int): Int{
+        return (bonusComp+bonusCaster)
     }
 }

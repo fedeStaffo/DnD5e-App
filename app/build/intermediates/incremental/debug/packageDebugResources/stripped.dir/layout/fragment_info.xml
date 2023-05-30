@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:text="Programmatori"
+        android:textColor="@color/rosso"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:text="Enrico Maria Sardellini"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Link GitHub: https://github.com/Ems01"
+        android:textColorLink="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:textIsSelectable="true"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Federico Staffolani"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Link GitHub: https://github.com/fedeStaffo "
+        android:textColorLink="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:textIsSelectable="true"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Alessandro Renzi"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Link GitHub: https://github.com/renzialex"
+        android:textColorLink="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:textIsSelectable="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="309dp"
+        android:src="@drawable/info_image" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Versione: 1.0.0"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"/>
+
+
+
+</LinearLayout>
