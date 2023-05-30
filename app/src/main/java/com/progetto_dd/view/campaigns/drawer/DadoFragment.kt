@@ -1,6 +1,9 @@
 package com.progetto_dd.view.campaigns.drawer
 
+import android.graphics.Color
 import android.os.Bundle
+import android.util.TypedValue
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,15 +13,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.progetto_dd.R
-import java.util.*
+
 
 class DadoFragment : Fragment() {
 
     private lateinit var rootView: View
-    private var totalModifier = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,7 +49,8 @@ class DadoFragment : Fragment() {
         val button0: Button = rootView.findViewById(R.id.bottone0)
         val buttonminus: Button = rootView.findViewById(R.id.bottone_meno)
         val buttonplus: Button = rootView.findViewById(R.id.bottone_piu)
-        val buttonBackspace: ImageButton = rootView.findViewById(R.id.backspaceButton)
+        val buttonBackspaceDado: ImageButton = rootView.findViewById(R.id.backspaceButtonDado)
+        val buttonBackspaceModificatore: ImageButton = rootView.findViewById(R.id.backspaceButtonModificatore)
         val buttonRoll: Button = rootView.findViewById(R.id.roll)
 
         buttonD100.setOnClickListener { onButtonClick("d100") }
@@ -60,19 +62,20 @@ class DadoFragment : Fragment() {
         buttonD4.setOnClickListener { onButtonClick("d4") }
         buttonD3.setOnClickListener { onButtonClick("d3") }
         buttonD2.setOnClickListener { onButtonClick("d2") }
-        button9.setOnClickListener { onButtonClick("9") }
-        button8.setOnClickListener { onButtonClick("8") }
-        button7.setOnClickListener { onButtonClick("7") }
-        button6.setOnClickListener { onButtonClick("6") }
-        button5.setOnClickListener { onButtonClick("5") }
-        button4.setOnClickListener { onButtonClick("4") }
-        button3.setOnClickListener { onButtonClick("3") }
-        button2.setOnClickListener { onButtonClick("2") }
-        button1.setOnClickListener { onButtonClick("1") }
-        button0.setOnClickListener { onButtonClick("0") }
-        buttonminus.setOnClickListener { onButtonClick("-") }
-        buttonplus.setOnClickListener { onButtonClick("+") }
-        buttonBackspace.setOnClickListener { onBackspaceClick() }
+        buttonBackspaceDado.setOnClickListener { onBackspaceClick() }
+        button9.setOnClickListener { onButtonClick2("9") }
+        button8.setOnClickListener { onButtonClick2("8") }
+        button7.setOnClickListener { onButtonClick2("7") }
+        button6.setOnClickListener { onButtonClick2("6") }
+        button5.setOnClickListener { onButtonClick2("5") }
+        button4.setOnClickListener { onButtonClick2("4") }
+        button3.setOnClickListener { onButtonClick2("3") }
+        button2.setOnClickListener { onButtonClick2("2") }
+        button1.setOnClickListener { onButtonClick2("1") }
+        button0.setOnClickListener { onButtonClick2("0") }
+        buttonminus.setOnClickListener { onButtonClick2("-") }
+        buttonplus.setOnClickListener { onButtonClick2("+") }
+        buttonBackspaceModificatore.setOnClickListener { onBackspaceClick2() }
         buttonRoll.setOnClickListener { onRollClick() }
 
         return rootView
@@ -81,7 +84,18 @@ class DadoFragment : Fragment() {
     private fun onButtonClick(buttonText: String) {
         val textDado: TextInputEditText = rootView.findViewById(R.id.textDado)
         val currentText = textDado.text.toString()
-        textDado.setText("$currentText$buttonText")
+        if (currentText.isEmpty()) {
+            textDado.setText("$currentText$buttonText")
+        } else {
+            textDado.setText("$currentText+$buttonText")
+        }
+    }
+
+
+    private fun onButtonClick2(buttonText: String) {
+        val textModificatore: TextInputEditText = rootView.findViewById(R.id.textModificatore)
+        val currentText = textModificatore.text.toString()
+        textModificatore.setText("$currentText$buttonText")
     }
 
     private fun onBackspaceClick() {
@@ -89,14 +103,12 @@ class DadoFragment : Fragment() {
         val currentText = textDado.text.toString()
         if (currentText.isNotEmpty()) {
             val newText = when {
-                currentText.endsWith("d") -> currentText.dropLast(1)
-                currentText.endsWith("+") || currentText.endsWith("-") -> currentText.dropLast(1)
+                currentText.endsWith("d") || currentText.endsWith("+") -> currentText.dropLast(1)
                 else -> {
                     val lastIndexOfPlus = currentText.lastIndexOf("+")
-                    val lastIndexOfMinus = currentText.lastIndexOf("-")
-                    val lastIndex = maxOf(lastIndexOfPlus, lastIndexOfMinus)
+                    val lastIndex = maxOf(lastIndexOfPlus)
                     if (lastIndex >= 0) {
-                        currentText.substring(0, lastIndex + 1)
+                        currentText.substring(0, lastIndex)
                     } else {
                         ""
                     }
@@ -107,131 +119,100 @@ class DadoFragment : Fragment() {
         }
     }
 
-    private fun countOccurrencesOfD(text: String): Int {
-        var count = 0
-        for (char in text) {
-            if (char == 'd') {
-                count++
-            }
+
+    private fun onBackspaceClick2() {
+        val textModificatore: TextInputEditText = rootView.findViewById(R.id.textModificatore)
+        val currentText = textModificatore.text.toString()
+        if (currentText.isNotEmpty()) {
+            val newText = currentText.substring(0, currentText.length - 1)
+            textModificatore.setText(newText)
+            textModificatore.setSelection(newText.length) // Imposta il cursore alla fine del testo
         }
-        return count
     }
 
     private fun onRollClick() {
         val textDado: TextInputEditText = rootView.findViewById(R.id.textDado)
-        val currentText = textDado.text?.toString()
+        val textModificatore: TextInputEditText = rootView.findViewById(R.id.textModificatore)
+        val currentTextDado = textDado.text.toString()
+        val currentTextModificatore = textModificatore.text.toString()
 
-        if (!currentText.isNullOrEmpty()) {
-            val diceList = mutableListOf<String>()
-            val modifierList = mutableListOf<Int>()
-            var currentDice = StringBuilder()
-            var currentModifier = StringBuilder()
+        if (currentTextDado.isEmpty() && currentTextModificatore.isEmpty()) {
+            return
+        } else if (currentTextModificatore.isNotEmpty() && currentTextModificatore.endsWith("+") || currentTextModificatore.endsWith(
+                "-"
+            )
+        ) {
+            Toast.makeText(
+                context,
+                "Il modificatore deve terminare con un numero",
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        } else if (currentTextModificatore.isNotEmpty() && currentTextDado.isEmpty()) {
+            showNumericResult(valutaEspressione(currentTextModificatore))
+            return
+        } else if (currentTextDado.isNotEmpty() && currentTextModificatore.isEmpty()) {
+            showRollResultNoModificatore(rollDice(currentTextDado), currentTextDado)
+        } else {
+            showRollResultWithModificatore(
+                rollDice(currentTextDado),
+                currentTextDado,
+                valutaEspressione(currentTextModificatore)
+            )
+        }
 
-            for (char in currentText) {
-                if (char.isDigit() || char == 'd') {
-                    currentDice.append(char)
-                    if (currentModifier.isNotEmpty()) {
-                        modifierList.add(currentModifier.toString().toInt())
-                        currentModifier = StringBuilder()
-                    }
-                } else if (char == '+' || char == '-') {
-                    if (currentDice.isNotEmpty()) {
-                        diceList.add(currentDice.toString())
-                        currentDice = StringBuilder()
-                    }
-                    currentModifier.append(char)
-                }
+
+    }
+
+    fun rollDice(diceString: String): List<Int> {
+        val diceRegex = Regex("(\\d+)?d(\\d+)")
+        val diceMatches = diceRegex.findAll(diceString)
+
+        val results = mutableListOf<Int>()
+
+        for (match in diceMatches) {
+            val numDice = match.groupValues[1]?.toIntOrNull() ?: 1
+            val numSides = match.groupValues[2].toInt()
+
+            repeat(numDice) {
+                val rollResult = (1..numSides).random()
+                results.add(rollResult)
             }
+        }
 
-            if (currentDice.isNotEmpty()) {
-                diceList.add(currentDice.toString())
-            }
+        return results
+    }
 
-            if (currentModifier.isNotEmpty()) {
-                modifierList.add(currentModifier.toString().toInt())
-            }
+    fun valutaEspressione(string: String): Int {
+        var risultato = 0
+        var operatore = '+'
+        var numero = ""
 
-            val modifiersSum = modifierList.sum()
-
-            val results = diceList.map { rollDice(it) }.flatten()
-
-            if (results.isNotEmpty()) {
-                showRollResult(results, diceList, modifiersSum)
+        for (char in string) {
+            if (char.isDigit() || char == '.') {
+                numero += char
             } else {
-                Toast.makeText(requireContext(), "Errore nell'input del dado", Toast.LENGTH_SHORT)
-                    .show()
-            }
-        }
-    }
-
-
-    private fun evaluateExpression(expression: String): Int {
-        try {
-            val operators = mutableListOf<Char>()
-            val operands = mutableListOf<Int>()
-
-            var currentOperand = StringBuilder()
-
-            for (char in expression) {
-                if (char.isDigit()) {
-                    currentOperand.append(char)
-                } else {
-                    if (currentOperand.isNotEmpty()) {
-                        operands.add(currentOperand.toString().toInt())
-                        currentOperand = StringBuilder()
-                    }
-
-                    if (char == '+' || char == '-') {
-                        while (operators.isNotEmpty() && operators.last() != '(' && operators.last() != '-') {
-                            evaluateTopOperator(operators, operands)
-                        }
-                        operators.add(char)
-                    } else if (char == '(') {
-                        operators.add(char)
-                    } else if (char == ')') {
-                        while (operators.isNotEmpty() && operators.last() != '(') {
-                            evaluateTopOperator(operators, operands)
-                        }
-                        if (operators.isNotEmpty() && operators.last() == '(') {
-                            operators.removeAt(operators.size - 1)
-                        } else {
-                            throw Exception("Invalid expression")
-                        }
+                val currentNumber = numero.toIntOrNull()
+                if (currentNumber != null) {
+                    when (operatore) {
+                        '+' -> risultato += currentNumber
+                        '-' -> risultato -= currentNumber
                     }
                 }
+                operatore = char
+                numero = ""
             }
-
-            if (currentOperand.isNotEmpty()) {
-                operands.add(currentOperand.toString().toInt())
-            }
-
-            while (operators.isNotEmpty()) {
-                evaluateTopOperator(operators, operands)
-            }
-
-            if (operands.size != 1 || operators.isNotEmpty()) {
-                throw Exception("Invalid expression")
-            }
-
-            return operands.first()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-        return 0
-    }
-
-    private fun evaluateTopOperator(operators: MutableList<Char>, operands: MutableList<Int>) {
-        val operator = operators.removeAt(operators.size - 1)
-        val operand2 = operands.removeAt(operands.size - 1)
-        val operand1 = operands.removeAt(operands.size - 1)
-
-        val result = when (operator) {
-            '+' -> operand1 + operand2
-            '-' -> operand1 - operand2
-            else -> throw Exception("Invalid operator")
         }
 
-        operands.add(result)
+        val lastNumber = numero.toIntOrNull()
+        if (lastNumber != null) {
+            when (operatore) {
+                '+' -> risultato += lastNumber
+                '-' -> risultato -= lastNumber
+            }
+        }
+
+        return risultato
     }
 
     private fun showNumericResult(result: Int) {
@@ -242,58 +223,75 @@ class DadoFragment : Fragment() {
         alertDialog.show()
     }
 
-    private fun rollDice(diceText: String): List<Int> {
-        val diceParts = diceText.split("d")
-        if (diceParts.size == 2) {
-            var numDice = diceParts[0].toIntOrNull()
-            val numSides = diceParts[1].toIntOrNull()
-            if (numDice == null) {
-                numDice = 1
-            }
-            if (numDice != null && numSides != null && numDice > 0 && numSides > 0) {
-                val diceRolls = List(numDice) {
-                    val random = Random()
-                    random.nextInt(numSides) + 1
-                }
-                return diceRolls
-            }
+    fun showRollResultNoModificatore(results: List<Int>, string: String) {
+        val sum = results.sum()
+        val formattedResults =
+            results.map { "[$it]" } // Aggiunge le parentesi quadre ai singoli lanci
+        val formattedResultsString =
+            formattedResults.joinToString("+") // Unisce i lanci separati da "+"
+
+        val dialogBuilder = context?.let { AlertDialog.Builder(it) }
+        if (dialogBuilder != null) {
+            val titleTextView = TextView(context)
+            titleTextView.text = "$sum"
+            titleTextView.gravity = Gravity.CENTER // Centra il titolo
+            titleTextView.setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                80f
+            ) // Imposta la dimensione del testo del titolo a 50
+            titleTextView.setTextColor(Color.BLACK) // Imposta il colore del testo del titolo a nero
+
+            dialogBuilder.setCustomTitle(titleTextView)
+
+            val messageTextView = TextView(context)
+            messageTextView.text =
+                "$string : $formattedResultsString" // Aggiorna il messaggio con i risultati formattati
+            messageTextView.gravity = Gravity.CENTER // Centra il messaggio
+            messageTextView.setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                30f
+            ) // Imposta la dimensione del testo del messaggio a 20
+
+            dialogBuilder.setView(messageTextView)
+            dialogBuilder.setPositiveButton("OK", null)
+            dialogBuilder.show()
         }
-        return emptyList()
     }
 
-    private fun showRollResult(results: List<Int>, diceList: List<String>, modifiersSum: Int) {
-        val diceRolls = results.joinToString(" + ")
+    fun showRollResultWithModificatore(results: List<Int>, string: String, int: Int) {
+        val sum = results.sum()
+        val modificatore = int
+        val sumModificatore = sum + modificatore
+        val formattedResults =
+            results.map { "[$it]" } // Aggiunge le parentesi quadre ai singoli lanci
+        val formattedResultsString =
+            formattedResults.joinToString("+") // Unisce i lanci separati da "+"
 
-        val total = results.sum()
-        val totalWithModifiers = total + modifiersSum
+        val dialogBuilder = context?.let { AlertDialog.Builder(it) }
+        if (dialogBuilder != null) {
+            val titleTextView = TextView(context)
+            titleTextView.text = "$sumModificatore"
+            titleTextView.gravity = Gravity.CENTER // Centra il titolo
+            titleTextView.setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                80f
+            ) // Imposta la dimensione del testo del titolo a 50
+            titleTextView.setTextColor(Color.BLACK) // Imposta il colore del testo del titolo a nero
 
-        val modifierString = if (modifiersSum != 0) {
-            if (modifiersSum >= 0) "+ $modifiersSum" else "- ${-modifiersSum}"
-        } else {
-            ""
+            dialogBuilder.setCustomTitle(titleTextView)
+
+            val messageTextView = TextView(context)
+            messageTextView.text =
+                "$string : $formattedResultsString\n Modificatore : $modificatore" // Aggiorna il messaggio con i risultati formattati
+            messageTextView.gravity = Gravity.CENTER // Centra il messaggio
+            messageTextView.setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                30f
+            ) // Imposta la dimensione del testo del messaggio a 20
+
+            dialogBuilder.setView(messageTextView)
+            dialogBuilder.setPositiveButton("OK", null)
+            dialogBuilder.show()
         }
-
-        val message = when {
-            diceList.size == 1 && modifiersSum == 0 -> {
-                "DADO: $total"
-            }
-            diceList.isNotEmpty() && modifiersSum != 0 -> {
-                "TOTALE: $totalWithModifiers\nTiri singoli: $diceRolls\nModificatore: $modifierString"
-            }
-            diceList.isNotEmpty() && modifiersSum == 0 -> {
-                "TOTALE: $totalWithModifiers\nTiri singoli: $diceRolls"
-            }
-            modifiersSum != 0 -> {
-                "Modificatore: $modifierString\nTOTALE: $totalWithModifiers"
-            }
-            else -> "ERRORE"
-        }
-
-        val alertDialogBuilder = AlertDialog.Builder(requireContext())
-        alertDialogBuilder.setMessage(message)
-        val alertDialog = alertDialogBuilder.create()
-        alertDialog.show()
     }
-
-
 }

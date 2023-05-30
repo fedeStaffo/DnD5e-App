@@ -146,6 +146,7 @@ id action_statsBackFragment_to_modificaBackgroundFragment
 id action_statsFragment_to_modificaStatsFragment
 id action_visualizzaNpcFragment_to_npcDetailsFragment
 id action_visualizzasessioniFragment_to_sessionDetailsFragment
+id activityRegister
 id addCampaignFragment
 id addanimaliCheckBox
 id addestrareanimali
@@ -157,7 +158,8 @@ id arcanoCheckBox
 id atletica
 id atleticaCheckBox
 id backgroundFragment
-id backspaceButton
+id backspaceButtonDado
+id backspaceButtonModificatore
 id benvenuto
 id bonusCompetenza
 id bonus_attacco_incantesimo
@@ -319,6 +321,7 @@ id inganno
 id ingannoCheckBox
 id inputOggetto
 id input_cancella
+id input_cancella2
 id instructionTextView
 id intimidazione
 id intimidazioneCheckBox
@@ -429,6 +432,7 @@ id religione
 id religioneCheckBox
 id resetPasswordFragment
 id reset_button
+id reset_password_activity_layout
 id reyclerViewCamp
 id reyclerViewMagie
 id reyclerViewNpc
@@ -504,6 +508,7 @@ id textDescrizione
 id textDifetti
 id textIdeali
 id textLegami
+id textModificatore
 id textStoria
 id textTratticaratteriali
 id textView
@@ -511,7 +516,6 @@ id textView1
 id textView2
 id textView3
 id textView4
-id textView53
 id textView7
 id textViewAllineamento
 id textViewCarisma

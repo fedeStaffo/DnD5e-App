@@ -4,26 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".view.campaigns.drawer.DadoFragment"
     android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/textView53"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/dado"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <RelativeLayout
             android:id="@+id/input_cancella"
@@ -32,26 +20,63 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView53" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textDado"
                 android:layout_width="305dp"
-                android:layout_height="64dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_marginEnd="1dp"
-                android:layout_toStartOf="@+id/backspaceButton"
-                android:gravity="right" />
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="-3dp"
+                android:layout_toStartOf="@+id/backspaceButtonDado"
+                android:gravity="center_horizontal"
+                android:hint="Dado" />
 
             <ImageButton
-                android:id="@+id/backspaceButton"
+                android:id="@+id/backspaceButtonDado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/backspace2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/input_cancella2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_cancella">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textModificatore"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:hint="Modificatore"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="1dp"
+                android:layout_toStartOf="@+id/backspaceButtonModificatore" />
+
+            <ImageButton
+                android:id="@+id/backspaceButtonModificatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/backspace2"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
 
         </RelativeLayout>
+
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint1"
@@ -60,7 +85,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_cancella">
+            app:layout_constraintTop_toBottomOf="@+id/input_cancella2">
 
             <Button
                 android:id="@+id/d100"
