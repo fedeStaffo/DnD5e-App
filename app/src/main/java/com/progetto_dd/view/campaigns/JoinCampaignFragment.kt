@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.core.view.isEmpty
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.progetto_dd.MainActivity
@@ -43,6 +44,12 @@ class JoinCampaignFragment : Fragment() {
             val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, listaNomi)
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             binding.spinnerPersonaggi.adapter = adapter
+
+            if(binding.spinnerPersonaggi.isEmpty()){
+                binding.spinnerPersonaggi.visibility = View.GONE
+                Toast.makeText(requireContext(), "Devi prima creare un personaggio prima di unirti ad una campagna", Toast.LENGTH_SHORT).show()
+                binding.buttonPartecipa.visibility = View.GONE
+            }
 
             binding.buttonPartecipa.setOnClickListener {
                 val nomePersonaggioSelezionato = binding.spinnerPersonaggi.selectedItem.toString()
