@@ -214,6 +214,8 @@ class StatsFragment : Fragment() {
             18 -> m = 4
             19 -> m = 4
             20 -> m= 5
+            21 -> m = 5
+            22 -> m = 6
         }
         return  m
     }
