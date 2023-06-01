@@ -41,31 +41,34 @@ class JoinCampaignFragment : Fragment() {
         val nomiPersonaggi = viewModel.getNomiPersonaggiUtente()
 
         nomiPersonaggi.observe(viewLifecycleOwner) { listaNomi ->
-            val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, listaNomi)
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            binding.spinnerPersonaggi.adapter = adapter
-
-            if(binding.spinnerPersonaggi.isEmpty()){
+            
+            if (listaNomi.isEmpty()) {
                 binding.spinnerPersonaggi.visibility = View.GONE
                 Toast.makeText(requireContext(), "Devi prima creare un personaggio prima di unirti ad una campagna", Toast.LENGTH_SHORT).show()
                 binding.buttonPartecipa.visibility = View.GONE
             }
+            else {
+                
+                val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, listaNomi)
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                binding.spinnerPersonaggi.adapter = adapter
 
-            binding.buttonPartecipa.setOnClickListener {
-                val nomePersonaggioSelezionato = binding.spinnerPersonaggi.selectedItem.toString()
-                val nomeCampagna = binding.nomecampagnaEt.text.toString()
-                val passCampagna = binding.editTextPassword.text.toString()
+                binding.buttonPartecipa.setOnClickListener {
+                    val nomePersonaggioSelezionato = binding.spinnerPersonaggi.selectedItem.toString()
+                    val nomeCampagna = binding.nomecampagnaEt.text.toString()
+                    val passCampagna = binding.editTextPassword.text.toString()
 
-                if(nomePersonaggioSelezionato != "" && nomeCampagna != "" && passCampagna != ""){
-                    // Chiamata alla funzione del view model per aggiungere la campagna al personaggio
-                    viewModel.aggiungiCampagnaAPersonaggio(nomePersonaggioSelezionato,nomeCampagna)
-                    // Chiamata alla funzione del view model per aggiungere il personaggio alla campagna
-                    viewModel.aggiungiPersonaggioACampagna(requireContext(), nomeCampagna, passCampagna, nomePersonaggioSelezionato)
+                    if(nomePersonaggioSelezionato != "" && nomeCampagna != "" && passCampagna != ""){
+                        // Chiamata alla funzione del view model per aggiungere la campagna al personaggio
+                        viewModel.aggiungiCampagnaAPersonaggio(nomePersonaggioSelezionato,nomeCampagna)
+                        // Chiamata alla funzione del view model per aggiungere il personaggio alla campagna
+                        viewModel.aggiungiPersonaggioACampagna(requireContext(), nomeCampagna, passCampagna, nomePersonaggioSelezionato)
 
-                    // Riporta alla pagina principale
-                    findNavController().navigate(R.id.action_joinCampaignFragment_to_homeCampaignsFragment)
+                        // Riporta alla pagina principale
+                        findNavController().navigate(R.id.action_joinCampaignFragment_to_homeCampaignsFragment)
+                    }
+                    else Toast.makeText(requireContext(), "Non sono ammessi campi vuoti!", Toast.LENGTH_SHORT).show()
                 }
-                else Toast.makeText(requireContext(), "Non sono ammessi campi vuoti!", Toast.LENGTH_SHORT).show()
             }
         }
     }
