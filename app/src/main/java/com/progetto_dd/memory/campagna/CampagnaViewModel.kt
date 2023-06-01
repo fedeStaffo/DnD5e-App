@@ -149,6 +149,12 @@ class CampagnaViewModel : ViewModel() {
                 }
             }
 
+            // Se non ci sono personaggi, restituisci una lista vuota direttamente
+            if (nomiPersonaggi.isEmpty()) {
+                mutableLiveData.postValue(emptyList())
+                return@addOnSuccessListener
+            }
+
             // Query per verificare se i personaggi fanno parte di una campagna
             val queryCampagne = campagneRef.whereArrayContainsAny("personaggi", nomiPersonaggi)
 
@@ -170,6 +176,7 @@ class CampagnaViewModel : ViewModel() {
 
         return mutableLiveData
     }
+    
     fun getPersonaggiByCampagna(nomeCampagna: String): LiveData<List<Personaggio>> {
         // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
         val mutableLiveData = MutableLiveData<List<Personaggio>>()
