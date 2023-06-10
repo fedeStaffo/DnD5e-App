@@ -22,7 +22,7 @@ class StatsClasseRazzaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Infla il layout per questo fragment utilizzando ViewBinding
         _binding =  FragmentStatsClasseRazzaBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -54,6 +54,7 @@ class StatsClasseRazzaFragment : Fragment() {
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, classArray)
         binding.spinner.adapter = adapter
 
+        // Gestione del click sul bottone "Info Razza"
         binding.bottoneInfoRazza.setOnClickListener{
             if(textViewRazzaNascosta.visibility == View.VISIBLE){
                 textViewRazzaNascosta.text = ""
@@ -75,6 +76,7 @@ class StatsClasseRazzaFragment : Fragment() {
 
         }
 
+        // Gestione del click sul bottone "Info Classe"
         binding.bottoneInfoClasse.setOnClickListener {
             if(textViewClasseNascosta.visibility == View.VISIBLE){
                 textViewClasseNascosta.text = ""
@@ -99,6 +101,7 @@ class StatsClasseRazzaFragment : Fragment() {
             }
         }
 
+        // Gestione del click sul bottone "Info SottoClasse"
         binding.bottoneInfoSottoClasse.setOnClickListener{
             if(textViewSottoClasseNascosta.visibility == View.VISIBLE){
                 textViewSottoClasseNascosta.text = ""
@@ -127,8 +130,6 @@ class StatsClasseRazzaFragment : Fragment() {
         }
 
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

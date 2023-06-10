@@ -35,9 +35,11 @@ class ProfileFragment : Fragment() {
 
         val user = firebaseAuth.currentUser
         if (user != null) {
+            // Ottiene l'indirizzo email dell'utente corrente e lo imposta nella vista
             val email = user.email
             binding.mailUtente.text = email
 
+            // Conta il numero di personaggi creati dall'utente corrente e imposta il valore nella vista
             getCountOfCharactersForCurrentUser(user.uid,
                 onSuccess = { count ->
                     binding.personaggiCreati.text = count.toString()
@@ -47,6 +49,7 @@ class ProfileFragment : Fragment() {
                 }
             )
 
+            // Conta la razza più frequente tra i personaggi dell'utente corrente e imposta il valore nella vista
             countMostFrequentRaceForUser(user.uid,
                 onSuccess = { race ->
                     binding.razzaPref.text = race
@@ -56,6 +59,7 @@ class ProfileFragment : Fragment() {
                 }
             )
 
+            // Conta la classe più frequente tra i personaggi dell'utente corrente e imposta il valore nella vista
             countMostFrequentClassForUser(user.uid,
                 onSuccess = { charClass ->
                     binding.classePref.text = charClass
@@ -65,6 +69,7 @@ class ProfileFragment : Fragment() {
                 }
             )
 
+            // Conta il numero di partecipazioni alle campagne dell'utente corrente e imposta il valore nella vista
             countOccurrencesOfUserId(user.uid,
                 onSuccess = { totalCount ->
                     binding.campagneInCorso.text = totalCount.toString()
@@ -76,36 +81,39 @@ class ProfileFragment : Fragment() {
         }
     }
 
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
     fun getCountOfCharactersForCurrentUser(userId: String, onSuccess: (Int) -> Unit, onFailure: (Exception) -> Unit) {
+        // Ottiene un'istanza di FirebaseFirestore
         val firestore = FirebaseFirestore.getInstance()
+        // Ottiene il riferimento alla collezione "personaggi"
         val collectionRef = firestore.collection("personaggi")
 
         collectionRef
-            .whereEqualTo("utenteId", userId)
+            .whereEqualTo("utenteId", userId) // Filtra i documenti con "utenteId" uguale a userId
             .get()
             .addOnSuccessListener { querySnapshot ->
-                val count = querySnapshot.size()
-                onSuccess(count)
+                val count = querySnapshot.size() // Ottiene il numero di documenti nel risultato della query
+                onSuccess(count) // Richiama la funzione onSuccess passando il numero di personaggi
             }
             .addOnFailureListener { exception ->
-                onFailure(exception)
+                onFailure(exception) // Richiama la funzione onFailure passando l'eccezione
             }
     }
 
 
+
     fun countMostFrequentRaceForUser(userId: String, onSuccess: (String) -> Unit, onFailure: (Exception) -> Unit) {
+        // Ottiene un'istanza di FirebaseFirestore
         val firestore = FirebaseFirestore.getInstance()
+        // Ottiene il riferimento alla collezione "personaggi"
         val collectionRef = firestore.collection("personaggi")
 
         collectionRef
-            .whereEqualTo("utenteId", userId)
+            .whereEqualTo("utenteId", userId) // Filtra i documenti con "utenteId" uguale a userId
             .get()
             .addOnSuccessListener { querySnapshot ->
                 val raceCountMap = mutableMapOf<String, Int>()
@@ -134,19 +142,22 @@ class ProfileFragment : Fragment() {
                 val frequentRaces = raceCountMap.filter { it.value == maxCount }.keys
                 mostFrequentRace = if (frequentRaces.size > 1) "Nessuna" else mostFrequentRace
 
-                onSuccess(mostFrequentRace)
+                onSuccess(mostFrequentRace) // Richiama la funzione onSuccess passando la razza più frequente
             }
             .addOnFailureListener { exception ->
-                onFailure(exception)
+                onFailure(exception) // Richiama la funzione onFailure passando l'eccezione
             }
     }
 
+
     fun countMostFrequentClassForUser(userId: String, onSuccess: (String) -> Unit, onFailure: (Exception) -> Unit) {
+        // Ottiene un'istanza di FirebaseFirestore
         val firestore = FirebaseFirestore.getInstance()
+        // Ottiene il riferimento alla collezione "personaggi"
         val collectionRef = firestore.collection("personaggi")
 
         collectionRef
-            .whereEqualTo("utenteId", userId)
+            .whereEqualTo("utenteId", userId) // Filtra i documenti con "utenteId" uguale a userId
             .get()
             .addOnSuccessListener { querySnapshot ->
                 val classCountMap = mutableMapOf<String, Int>()
@@ -175,39 +186,41 @@ class ProfileFragment : Fragment() {
                 val frequentClasses = classCountMap.filter { it.value == maxCount }.keys
                 mostFrequentClass = if (frequentClasses.size > 1) "Nessuna" else mostFrequentClass
 
-                onSuccess(mostFrequentClass)
+                onSuccess(mostFrequentClass) // Richiama la funzione onSuccess passando la classe più frequente
             }
             .addOnFailureListener { exception ->
-                onFailure(exception)
+                onFailure(exception) // Richiama la funzione onFailure passando l'eccezione
             }
     }
 
+
     fun countOccurrencesOfUserId(userId: String, onSuccess: (Int) -> Unit, onFailure: (Exception) -> Unit) {
+        // Ottiene un'istanza di FirebaseFirestore
         val firestore = FirebaseFirestore.getInstance()
+        // Ottiene il riferimento alla collezione "campagne"
         val collectionRef = firestore.collection("campagne")
 
         collectionRef
-            .whereArrayContains("partecipanti", userId)
+            .whereArrayContains("partecipanti", userId) // Filtra i documenti in cui "partecipanti" contiene userId
             .get()
             .addOnSuccessListener { querySnapshotPartecipanti ->
                 val countPartecipanti = querySnapshotPartecipanti.size()
 
                 collectionRef
-                    .whereEqualTo("masterId", userId)
+                    .whereEqualTo("masterId", userId) // Filtra i documenti con "masterId" uguale a userId
                     .get()
                     .addOnSuccessListener { querySnapshotMaster ->
                         val countMaster = querySnapshotMaster.size()
 
                         val totalCount = countPartecipanti + countMaster
-                        onSuccess(totalCount)
+                        onSuccess(totalCount) // Richiama la funzione onSuccess passando il conteggio totale
                     }
                     .addOnFailureListener { exception ->
-                        onFailure(exception)
+                        onFailure(exception) // Richiama la funzione onFailure passando l'eccezione
                     }
             }
             .addOnFailureListener { exception ->
-                onFailure(exception)
+                onFailure(exception) // Richiama la funzione onFailure passando l'eccezione
             }
     }
-
 }

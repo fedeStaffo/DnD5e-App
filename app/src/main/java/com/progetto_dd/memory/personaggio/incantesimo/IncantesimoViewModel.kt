@@ -305,11 +305,14 @@ class IncantesimoViewModel(private val dao: IncantesimoDao) : ViewModel() {
     }
 
     fun getIncantesimiByParams(livello: Int, tipo: String, classe: String) {
+        // Avvia una coroutine all'interno dello scope del ViewModel
         viewModelScope.launch {
             val classeConcatenata = "%$classe%"
             val result = withContext(Dispatchers.IO) {
+                // Ottiene gli incantesimi dai parametri specificati utilizzando il DAO all'interno dello scope IO
                 dao.getIncantesimiByParams(livello, tipo, classe, classeConcatenata)
             }
+            // Aggiorna il valore di incantesimi con il risultato ottenuto
             incantesimi.value = result
         }
     }
@@ -317,8 +320,10 @@ class IncantesimoViewModel(private val dao: IncantesimoDao) : ViewModel() {
     fun getIncantesimiByLevelAndClass(livello: Int, classi: String) {
         viewModelScope.launch {
             val result = withContext(Dispatchers.IO) {
+                // Ottiene gli incantesimi per un determinato livello e classe utilizzando il DAO all'interno dello scope IO
                 dao.getIncantesimiByLevelAndClass(livello, classi, "%$classi%")
             }
+            // Aggiorna il valore di incantesimi con il risultato ottenuto
             incantesimi.value = result
         }
     }
@@ -326,8 +331,10 @@ class IncantesimoViewModel(private val dao: IncantesimoDao) : ViewModel() {
     fun getIncantesimiByTypeAndClass(tipo: String, classi: String) {
         viewModelScope.launch {
             val result = withContext(Dispatchers.IO) {
+                // Ottiene gli incantesimi per un determinato tipo e classe utilizzando il DAO all'interno dello scope IO
                 dao.getIncantesimiByTypeAndClass(tipo, classi, "%$classi%")
             }
+            // Aggiorna il valore di incantesimi con il risultato ottenuto
             incantesimi.value = result
         }
     }
@@ -335,8 +342,10 @@ class IncantesimoViewModel(private val dao: IncantesimoDao) : ViewModel() {
     fun getIncantesimiByClass(classe: String) {
         viewModelScope.launch {
             val result = withContext(Dispatchers.IO) {
-                dao.getIncantesimiByClass(classe,"%$classe%")
+                // Ottiene gli incantesimi per una determinata classe utilizzando il DAO all'interno dello scope IO
+                dao.getIncantesimiByClass(classe, "%$classe%")
             }
+            // Aggiorna il valore di incantesimi con il risultato ottenuto
             incantesimi.value = result
         }
     }
@@ -352,12 +361,11 @@ class IncantesimoViewModel(private val dao: IncantesimoDao) : ViewModel() {
                     incantesimi.add(incantesimo)
                 }
             }
+            // Assegna i risultati ottenuti al MutableLiveData risultati
             risultati.postValue(incantesimi)
         }
 
         return risultati
     }
-
-
 
 }

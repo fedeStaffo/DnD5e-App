@@ -217,6 +217,11 @@ class CompetenzeFragment : Fragment() {
     }
 
 
+    /**
+     * Restituisce un listener per la checkbox delle competenze.
+     * @param competenza La competenza corrispondente alla checkbox.
+     * @return Il listener per la checkbox delle competenze.
+     */
     private fun createCompetenzaCheckBoxListener(
         competenza: String
     ): CompoundButton.OnCheckedChangeListener {
@@ -230,5 +235,6 @@ class CompetenzeFragment : Fragment() {
             }
         }
     }
+
 
 }

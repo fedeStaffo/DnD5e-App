@@ -1,20 +1,16 @@
 package com.progetto_dd.view.campaigns.drawer
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
-import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
 import com.progetto_dd.R
-import java.text.SimpleDateFormat
-import java.util.*
 
 class CreaSessioniFragment : Fragment() {
 
@@ -32,20 +28,24 @@ class CreaSessioniFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_crea_sessioni, container, false)
 
+        // Inizializzazione delle view
         numeroSessioneEditText = view.findViewById(R.id.numero_sessione)
         giornoSessioneEditText = view.findViewById(R.id.giorno_sessione)
         descrizioneSessioneEditText = view.findViewById(R.id.descrizione_sessione)
         aggiungiSessioneButton = view.findViewById(R.id.aggiungi_sessione)
 
+        // Recupera il nome della campagna e l'ID del master dalla Activity chiamante
         val campagnaNome = requireActivity().intent.getStringExtra("campagna_nome")
         val masterId = requireActivity().intent.getStringExtra("master_id")
 
+        // Definizione del comportamento del pulsante "Aggiungi Sessione"
         aggiungiSessioneButton.setOnClickListener {
             val numeroSessione = numeroSessioneEditText.text.toString().trim()
             val giornoSessione = giornoSessioneEditText.text.toString().trim()
             val descrizioneSessione = descrizioneSessioneEditText.text.toString().trim()
 
             if (numeroSessione.isEmpty() || giornoSessione.isEmpty() || descrizioneSessione.isEmpty()) {
+                // Verifica se il numero, il giorno e la descrizione della sessione sono vuoti
                 Toast.makeText(
                     requireContext(),
                     "Inserisci il numero, il giorno e la descrizione della Sessione",
@@ -72,6 +72,7 @@ class CreaSessioniFragment : Fragment() {
                             firestore.collection("sessioni")
                                 .add(sessione)
                                 .addOnSuccessListener {
+                                    // Aggiunta della sessione al database avvenuta con successo, naviga alla visualizzazione della campagna
                                     findNavController().navigate(R.id.action_creaSessioniFragment_to_visualizzaCampagnaFragment)
                                 }
                         } else {
@@ -85,7 +86,6 @@ class CreaSessioniFragment : Fragment() {
                     }
             }
         }
-
 
         return view
     }

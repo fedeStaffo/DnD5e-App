@@ -119,10 +119,12 @@ class RollFragment : Fragment() {
         return num
     }
 
+    // Verifica se un numero è valido per un lancio di dado (compreso tra 3 e 18)
     fun getNumValidoDado(num: Int): Boolean {
         return num in 3..18
     }
 
+    // Verifica se tutti i numeri totali sono diversi da zero
     fun getNumValidoTotale(num1: Int, num2: Int, num3: Int, num4: Int, num5: Int, num6: Int): Boolean{
         return num1 != 0 && num2 != 0 && num3 != 0 && num4 != 0 && num5 != 0 && num6 != 0
     }

@@ -40,6 +40,7 @@ class StatsFragment : Fragment() {
 
         val intent = requireActivity().intent
 
+        // Ottieni i dati passati dall'activity
         val nome = intent.getStringExtra("nome")
         val razza = intent.getStringExtra("razza")
         val classe = intent.getStringExtra("classe")
@@ -60,6 +61,7 @@ class StatsFragment : Fragment() {
 
         val competenze = intent.getStringArrayListExtra("competenze")
 
+        // Imposta i dati nei componenti dell'UI
         binding.nome.text = nome
         binding.razza.text = razza
         binding.classe.text = classe
@@ -69,8 +71,9 @@ class StatsFragment : Fragment() {
         binding.classeArmatura.text = classeArmatura
         binding.livello.text = livello
 
+        // Calcola e visualizza i modificatori per gli attributi
         if (forza != null && destrezza != null && carisma != null && saggezza != null &&
-                costituzione != null && intelligenza != null) {
+            costituzione != null && intelligenza != null) {
             binding.modificatoreForza.text = forza + "(" + getModificatore(forza.toInt()) + ")"
             binding.modificatoreDestrezza.text = destrezza + "(" + getModificatore(destrezza.toInt()) + ")"
             binding.modificatoreCarisma.text = carisma + "(" + getModificatore(carisma.toInt()) + ")"
@@ -79,14 +82,17 @@ class StatsFragment : Fragment() {
             binding.modificatoreIntelligenza.text = intelligenza + "(" + getModificatore(intelligenza.toInt()) + ")"
         }
 
+        // Visualizza la lista di competenze
         if (competenze != null) {
             binding.listaCompetenze.text = competenze.joinToString(separator = ", ")
         }
 
+        // Calcola e visualizza il bonus di competenza
         if(livello != null){
             binding.bonusCompetenza.text = getBonusComp(livello)
         }
 
+        // Imposta i tiri salvezza in base alla classe
         if(classe != null){
             when(classe){
                 "Bardo" -> binding.tiriSalvezza.text = "Destrezza, Carisma"
@@ -95,7 +101,8 @@ class StatsFragment : Fragment() {
                 "Mago" -> binding.tiriSalvezza.text = "Intelligenza, Saggezza"
             }
         }
-        
+
+        // Calcola e visualizza la classe di difficoltà dei tiri salvezza magici
         if(classe != null && livello != null){
             when(classe){
                 "Bardo" -> if (carisma != null) {
@@ -117,6 +124,7 @@ class StatsFragment : Fragment() {
             }
         }
 
+        // Calcola e visualizza il bonus di attacco/incantesimo
         if(classe != null && livello != null){
             when(classe){
                 "Bardo" -> if (carisma != null) {
@@ -138,10 +146,12 @@ class StatsFragment : Fragment() {
             }
         }
 
+        // Naviga alla schermata di modifica delle statistiche
         binding.btnModifica.setOnClickListener {
             findNavController().navigate(R.id.action_statsFragment_to_modificaStatsFragment)
         }
 
+        // Conferma l'eliminazione del personaggio
         binding.btnElimina.setOnClickListener {
             val alertDialog = AlertDialog.Builder(requireContext())
                 .setTitle("Conferma eliminazione")
@@ -187,13 +197,8 @@ class StatsFragment : Fragment() {
         }
     }
 
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    fun getModificatore(n: Int): Int {
+    // Calcola il modificatore di un attributo
+    private fun getModificatore(n: Int): Int {
         var m = 0
         when(n){
             3 -> m = -4
@@ -213,12 +218,15 @@ class StatsFragment : Fragment() {
             17 -> m = 3
             18 -> m = 4
             19 -> m = 4
-            20 -> m= 5
+            20 -> m = 5
+            21 -> m = 5
+            22 -> m = 6
         }
         return  m
     }
 
-    fun getBonusComp(livello: String): String{
+    // Calcola il bonus di competenza in base al livello
+    private fun getBonusComp(livello: String): String{
         var m = "0"
         when(livello.toInt()){
             1 -> m = "2"
@@ -244,12 +252,19 @@ class StatsFragment : Fragment() {
         }
         return m
     }
-    
-    fun getCD(bonusComp: Int, bonusCaster: Int): Int{
-        return (8+bonusComp+bonusCaster)
+
+    // Calcola la classe di difficoltà dei tiri salvezza magici
+    private fun getCD(bonusComp: Int, modificatore: Int): Int{
+        return 8 + bonusComp + modificatore
     }
 
-    fun getBonusAttacco(bonusComp: Int, bonusCaster: Int): Int{
-        return (bonusComp+bonusCaster)
+    // Calcola il bonus di attacco/incantesimo
+    private fun getBonusAttacco(bonusComp: Int, modificatore: Int): Int{
+        return bonusComp + modificatore
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

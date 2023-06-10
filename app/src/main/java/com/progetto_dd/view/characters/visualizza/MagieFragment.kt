@@ -219,15 +219,19 @@ class MagieFragment : Fragment() {
     }
 
     fun showSlotEditDialog(livello: Int) {
+        // Crea il builder per l'AlertDialog
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Modifica slot - Livello $livello")
 
+        // Infla il layout per il dialogo di modifica slot
         val view = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_edit_slot, null)
         builder.setView(view)
 
+        // Ottieni le reference agli EditText per gli slot totali e usati
         val slotTotEditText: EditText = view.findViewById(R.id.editTextSlotTot)
         val slotUsatiEditText: EditText = view.findViewById(R.id.editTextSlotUsati)
 
+        // Ottieni l'intent dell'activity corrente
         val intent = requireActivity().intent
         val nomePersonaggio = intent.getStringExtra("nome")
         val utenteId = intent.getStringExtra("utente_id")
@@ -237,16 +241,19 @@ class MagieFragment : Fragment() {
             val slotTotArray = viewModel.getSlotTotArray(nomePersonaggio, utenteId)
             val slotUsatiArray = viewModel.getSlotUsatiArray(nomePersonaggio, utenteId)
 
+            // Osserva le modifiche degli slot totali e aggiorna l'EditText corrispondente
             slotTotArray.observe(viewLifecycleOwner) { slotTotList ->
                 val slotTot = slotTotList.getOrNull(livello - 1) ?: 0
                 slotTotEditText.setText(slotTot.toString())
             }
 
+            // Osserva le modifiche degli slot usati e aggiorna l'EditText corrispondente
             slotUsatiArray.observe(viewLifecycleOwner) { slotUsatiList ->
                 val slotUsati = slotUsatiList.getOrNull(livello - 1) ?: 0
                 slotUsatiEditText.setText(slotUsati.toString())
             }
 
+            // Imposta il pulsante "Salva" per salvare le modifiche
             builder.setPositiveButton("Salva") { dialog, _ ->
                 val newSlotTot = slotTotEditText.text.toString().toIntOrNull() ?: 0
                 val newSlotUsati = slotUsatiEditText.text.toString().toIntOrNull() ?: 0
@@ -257,14 +264,14 @@ class MagieFragment : Fragment() {
                 dialog.dismiss()
             }
 
+            // Imposta il pulsante "Annulla" per chiudere il dialogo senza salvare le modifiche
             builder.setNegativeButton("Annulla") { dialog, _ ->
                 dialog.dismiss()
             }
 
+            // Crea e mostra il dialogo
             val dialog = builder.create()
             dialog.show()
         }
     }
-
-
 }

@@ -33,6 +33,7 @@ class ListaMagieFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Infla il layout per questo frammento
         val rootView = inflater.inflate(R.layout.fragment_lista_magie, container, false)
         spinnerIncantatore = rootView.findViewById(R.id.spinnerIncantatore)
         spinnerLivello = rootView.findViewById(R.id.spinnerLivello)
@@ -44,20 +45,23 @@ class ListaMagieFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = IncantesimoAdapter(emptyList(),this)
+        // Inizializza l'adapter e il layout manager per la RecyclerView
+        adapter = IncantesimoAdapter(emptyList(), this)
         recyclerViewMagie.adapter = adapter
         recyclerViewMagie.layoutManager = LinearLayoutManager(requireContext())
 
+        // Inizializza il view model
         val database = IncantesimoDatabase.getInstance(requireContext())
         val dao = database.incantesimoDao
-
         val viewModelFactory = IncantesimoViewModelFactory(dao)
         viewModel = ViewModelProvider(this, viewModelFactory).get(IncantesimoViewModel::class.java)
 
+        // Aggiorna la lista degli incantesimi nella RecyclerView
         viewModel.incantesimi.observe(viewLifecycleOwner, Observer { incantesimi ->
             adapter.updateMagie(incantesimi)
         })
 
+        // Gestisce il click sul pulsante "Cerca"
         buttonCerca.setOnClickListener {
             val incantatore = spinnerIncantatore.selectedItem.toString()
             val livello = spinnerLivello.selectedItem.toString()

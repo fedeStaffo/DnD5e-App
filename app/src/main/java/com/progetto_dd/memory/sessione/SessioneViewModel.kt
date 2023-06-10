@@ -1,13 +1,12 @@
 package com.progetto_dd.memory.sessione
 
-
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-
 class SessioneViewModel : ViewModel() {
 
+    // Ottieni le sessioni corrispondenti alla campagna e al master specificati
     fun getSessione(campagna: String, master: String): MutableLiveData<List<Sessione>> {
         val sessioneLiveData = MutableLiveData<List<Sessione>>()
         val db = FirebaseFirestore.getInstance()
@@ -20,24 +19,28 @@ class SessioneViewModel : ViewModel() {
             .addOnSuccessListener { documents ->
                 val sessioneList = mutableListOf<Sessione>()
                 for (document in documents) {
+                    // Recupera i dati della sessione dal documento Firestore
                     val numero = document.getString("numero")
                     val giorno = document.getString("giorno")
                     val descrizione = document.getString("descrizione") ?: ""
                     val masterNome = document.getString("master") ?: ""
                     val campagnaNome = document.getString("campagna") ?: ""
 
+                    // Crea un oggetto Sessione e aggiungilo alla lista
                     val sessione = Sessione(numero, giorno, descrizione, campagnaNome, masterNome)
                     sessioneList.add(sessione)
                 }
+                // Imposta il valore del MutableLiveData con la lista di sessioni
                 sessioneLiveData.value = sessioneList
             }
         return sessioneLiveData
     }
 
+    // Elimina una sessione specifica dalla campagna e dal master specificati
     fun eliminaSessione(campagnaNome: String, masterId: String, numeroSessione: String) {
         val db = FirebaseFirestore.getInstance()
-        val sessioniCollection = db
-            .collection("sessioni")
+        val sessioniCollection = db.collection("sessioni")
+
         sessioniCollection
             .whereEqualTo("campagna", campagnaNome)
             .whereEqualTo("master", masterId)
@@ -45,13 +48,13 @@ class SessioneViewModel : ViewModel() {
             .get()
             .addOnSuccessListener { querySnapshot ->
                 for (document in querySnapshot.documents) {
+                    // Elimina il documento della sessione
                     document.reference.delete()
                 }
             }
     }
 
-
-
+    // Elimina tutte le sessioni di una campagna specifica per il master specificato
     fun deleteSessionsFromCampaign(campaignName: String, masterId: String) {
         val db = FirebaseFirestore.getInstance()
         val sessionCollection = db.collection("sessioni")

@@ -39,6 +39,9 @@ class ModificaStatsFragment : Fragment() {
         val razza = intent.getStringExtra("razza")
         val classe = intent.getStringExtra("classe")
         val utenteId = intent.getStringExtra("utente_id")
+        val vitaMax = intent.getStringExtra("vitaMax")
+
+        val numMax = vitaMax?.toInt()
 
         binding.buttonSalvaLivello.setOnClickListener {
             val livello = binding.editTextLivello.text.toString()
@@ -66,12 +69,13 @@ class ModificaStatsFragment : Fragment() {
 
         binding.buttonSalvaVitaAttuale.setOnClickListener {
             val vita = binding.editTextVitaAttuale.text.toString()
-            if (nome != null && razza != null && classe != null && utenteId != null) {
+            val num = vita.toInt()
+            if (nome != null && razza != null && classe != null && utenteId != null && numMax != null && num <= numMax) {
                 viewModel.updateCampoNumerico(nome,razza,classe,utenteId, "vita",vita.toLong())
                 Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
             }
             else {
-                Toast.makeText(requireContext(),"Inserisci valori numerici!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),"Inserisci valori numerici inferiori ai punti ferita massimi!", Toast.LENGTH_SHORT).show()
             }
         }
 

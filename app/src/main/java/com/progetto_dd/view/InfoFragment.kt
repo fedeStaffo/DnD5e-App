@@ -10,8 +10,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.progetto_dd.R
 
-
-
 class InfoFragment : Fragment() {
 
     override fun onCreateView(
@@ -19,20 +17,24 @@ class InfoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Infla il layout del frammento
         val rootView = inflater.inflate(R.layout.fragment_info, container, false)
 
+        // Ottieni la TextView con id textView1 dal layout
         val textView1 = rootView.findViewById<TextView>(R.id.textView1)
         textView1.setOnClickListener {
             val url = "https://github.com/Ems01"
             openUrlInBrowser(url)
         }
 
+        // Ottieni la TextView con id textView2 dal layout
         val textView2 = rootView.findViewById<TextView>(R.id.textView2)
         textView2.setOnClickListener {
             val url = "https://github.com/fedeStaffo"
             openUrlInBrowser(url)
         }
 
+        // Ottieni la TextView con id textView3 dal layout
         val textView3 = rootView.findViewById<TextView>(R.id.textView3)
         textView3.setOnClickListener {
             val url = "https://github.com/renzialex"
@@ -42,6 +44,7 @@ class InfoFragment : Fragment() {
         return rootView
     }
 
+    // Apre l'URL fornito in un browser esterno
     private fun openUrlInBrowser(url: String) {
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse(url)

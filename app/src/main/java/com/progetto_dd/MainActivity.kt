@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
+    // Avvia l'activity MainActivity utilizzando l'intent creato
     fun openMainActivity(menuItem: MenuItem) {
         val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)

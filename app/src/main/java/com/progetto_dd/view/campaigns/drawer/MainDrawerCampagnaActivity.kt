@@ -71,9 +71,10 @@ class MainDrawerCampagnaActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_campagna)
         return item.onNavDestinationSelected(navController)
-                ||super.onOptionsItemSelected(item)
+                || super.onOptionsItemSelected(item)
     }
 
+    // Funzione per aprire la CampaignsActivity dalla vista del menu
     fun openCampaignActivityFromView(menuItem: MenuItem) {
         val intent = Intent(this, CampaignsActivity::class.java)
         startActivity(intent)

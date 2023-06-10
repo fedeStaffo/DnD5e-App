@@ -71,56 +71,76 @@ class CampagnaViewModel : ViewModel() {
     }
 
     fun checkExistingCampaign(campaignName: String): LiveData<Boolean> {
+        // Crea un'istanza di MutableLiveData<Boolean> per il risultato
         val resultLiveData = MutableLiveData<Boolean>()
 
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "campagne"
         val campaignsCollection = db.collection("campagne")
 
+        // Ottieni l'ID dell'utente corrente
         val userId = currentUser?.uid
 
+        // Esegui la query per verificare l'esistenza di una campagna con il nome specificato e il masterId corrispondente all'ID dell'utente corrente
         campaignsCollection
             .whereEqualTo("masterId", userId)
             .whereEqualTo("nome", campaignName)
             .get()
             .addOnSuccessListener { querySnapshot ->
-                resultLiveData.value = !querySnapshot.isEmpty
+                resultLiveData.value = !querySnapshot.isEmpty // Imposta il valore dell'oggetto LiveData in base al fatto che la query abbia restituito risultati o meno
             }
             .addOnFailureListener {
-                resultLiveData.value = false
+                resultLiveData.value = false             // In caso di errore, impostare il valore dell'oggetto LiveData su "false"
             }
-
+        // Restituisci l'oggetto LiveData che rappresenta il risultato della query
         return resultLiveData
     }
 
 
     fun getCampagne(): LiveData<List<Campagna>> {
+        // Crea un'istanza di MutableLiveData<List<Campagna>> per i risultati
         val mutableLiveData = MutableLiveData<List<Campagna>>()
 
-
+        // Ottieni l'ID dell'utente corrente
         val userId = currentUser?.uid
 
+        // Crea una query per ottenere le campagne gestite dall'utente corrente
         val campagneQueryMaster = campagneRef.whereEqualTo("masterId", userId)
+
+        // Crea una query per ottenere le campagne in cui l'utente corrente è un partecipante
         val campagneQueryPlayer = userId?.let { campagneRef.whereArrayContains("partecipanti", it) }
 
+        // Esegui le due query in parallelo
         val campagneMasterTask = campagneQueryMaster.get()
         val campagnePlayerTask = campagneQueryPlayer?.get()
 
+        // Attendi il completamento di entrambe le query
         Tasks.whenAllComplete(campagneMasterTask, campagnePlayerTask)
             .addOnSuccessListener { results ->
+                // Ottieni i risultati delle query come liste di oggetti Campagna
                 val campagneMaster = campagneMasterTask.result?.toObjects(Campagna::class.java)
                 val campagnePlayer = campagnePlayerTask?.result?.toObjects(Campagna::class.java)
 
+                // Crea una lista mutabile di oggetti Campagna
                 val campagne = mutableListOf<Campagna>()
 
+                // Aggiungi le campagne gestite dall'utente corrente alla lista
                 campagneMaster?.let { campagne.addAll(it) }
+
+                // Aggiungi le campagne in cui l'utente corrente è un partecipante alla lista
                 campagnePlayer?.let { campagne.addAll(it) }
 
+                // Aggiorna il valore dell'oggetto MutableLiveData con la lista di campagne
                 mutableLiveData.postValue(campagne)
             }
             .addOnFailureListener { exception ->
+                // In caso di errore, registra un messaggio di log
                 Log.e(TAG, "Errore nella lettura delle campagne da Firestore: ", exception)
             }
 
+        // Restituisci l'oggetto MutableLiveData che rappresenta i risultati della query
         return mutableLiveData
     }
 
@@ -176,7 +196,6 @@ class CampagnaViewModel : ViewModel() {
 
         return mutableLiveData
     }
-
 
     fun getPersonaggiByCampagna(nomeCampagna: String): LiveData<List<Personaggio>> {
         // Crea un oggetto MutableLiveData per poter aggiornare i dati in modo asincrono
@@ -331,24 +350,9 @@ class CampagnaViewModel : ViewModel() {
                                 it.remove(personaggio)
 
                                 campagnaDocumentRef.update("personaggi", it)
-                                    .addOnSuccessListener {
-                                        // Il personaggio è stato rimosso con successo dal campo "personaggi" della campagna
-                                    }
-                                    .addOnFailureListener { exception ->
-                                        // Si è verificato un errore durante l'aggiornamento
-                                        // Gestisci l'errore di conseguenza
-                                    }
                             }
                         }
-                        .addOnFailureListener { exception ->
-                            // Si è verificato un errore durante la lettura del documento
-                            // Gestisci l'errore di conseguenza
-                        }
                 }
-            }
-            .addOnFailureListener { exception ->
-                // Si è verificato un errore durante la lettura dei documenti
-                // Gestisci l'errore di conseguenza
             }
     }
 
@@ -367,14 +371,6 @@ class CampagnaViewModel : ViewModel() {
                     val personaggioDocumentRef = personaggiCollection.document(personaggioDocument.id)
 
                     personaggioDocumentRef.update("campagna", "")
-                        .addOnSuccessListener {
-                            // Campo "campagna" del personaggio aggiornato con successo
-                            // Puoi eseguire altre azioni o mostrare una notifica all'utente
-                        }
-                        .addOnFailureListener { exception ->
-                            // Si è verificato un errore durante l'aggiornamento
-                            // Gestisci l'errore di conseguenza
-                        }
 
                     val partecipantiList = campagneCollection
                         .whereEqualTo("nome", nomeCampagna)
@@ -388,32 +384,20 @@ class CampagnaViewModel : ViewModel() {
                                 partecipantiList.remove(personaggioDocument["utenteId"].toString())
 
                                 campagnaDocumentRef.update("partecipanti", partecipantiList)
-                                    .addOnSuccessListener {
-                                        // Campo "partecipanti" della campagna aggiornato con successo
-                                        // Puoi eseguire altre azioni o mostrare una notifica all'utente
-                                    }
-                                    .addOnFailureListener { exception ->
-                                        // Si è verificato un errore durante l'aggiornamento
-                                        // Gestisci l'errore di conseguenza
-                                    }
                             }
                         }
-                        .addOnFailureListener { exception ->
-                            // Si è verificato un errore durante la lettura dei documenti
-                            // Gestisci l'errore di conseguenza
-                        }
                 }
-            }
-            .addOnFailureListener { exception ->
-                // Si è verificato un errore durante la lettura dei documenti
-                // Gestisci l'errore di conseguenza
             }
     }
 
     fun eliminaGiocatoreDaCampagna(personaggio: String, nomeCampagna: String, masterId: String) {
+        // Rimuovi il personaggio dalla campagna specificata chiamando la funzione rimuoviPersonaggioDaCampagna
         rimuoviPersonaggioDaCampagna(personaggio, nomeCampagna, masterId)
+
+        // Aggiorna la campagna del personaggio chiamando la funzione aggiornaCampagnaPersonaggio
         aggiornaCampagnaPersonaggio(personaggio, nomeCampagna)
     }
+
 
 
     fun getPasswordByCampagna(nomeCampagna: String, masterId: String): MutableLiveData<String?> {
@@ -456,25 +440,30 @@ class CampagnaViewModel : ViewModel() {
 
 
     fun updateCampagnaPassword(nomeCampagna: String, masterId: String, password: String) {
-        val query =
-            campagneRef.whereEqualTo("nome", nomeCampagna).whereEqualTo("masterId", masterId)
+        // Crea una query per ottenere la campagna con il nome specificato e il masterId corrispondente
+        val query = campagneRef.whereEqualTo("nome", nomeCampagna).whereEqualTo("masterId", masterId)
 
+        // Esegue la query
         query.get().addOnSuccessListener { querySnapshot ->
             if (querySnapshot.isEmpty) {
                 // La campagna non esiste o il masterId non corrisponde
                 return@addOnSuccessListener
             }
 
+            // Ottiene il documento della campagna dalla prima riga dei risultati della query
             val campagnaDocument = querySnapshot.documents[0]
             val campagnaId = campagnaDocument.id
 
+            // Crea un HashMap per contenere gli aggiornamenti da applicare al documento
             val updates = hashMapOf<String, Any>(
                 "password" to password
             )
 
+            // Esegue l'aggiornamento del documento della campagna con la nuova password
             campagneRef.document(campagnaId).update(updates)
         }
     }
+
 
     fun eliminaCampagna(nomeCampagna: String, masterId: String) {
         // Query per ottenere la campagna con il nome e masterId specificati

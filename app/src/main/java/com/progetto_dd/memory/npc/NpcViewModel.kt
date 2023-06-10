@@ -37,40 +37,55 @@ class NpcViewModel: ViewModel() {
     }
 
     fun eliminaNpc(nome: String, master: String, campagna: String) {
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "npc"
         val npcCollection = db.collection("npc")
 
+        // Esegui una query per ottenere tutti i documenti npc che corrispondono ai criteri specificati
         npcCollection
             .whereEqualTo("nome", nome)
             .whereEqualTo("master", master)
             .whereEqualTo("campagna", campagna)
             .get()
             .addOnSuccessListener { documents ->
+                // Itera sui documenti restituiti dalla query
                 for (document in documents) {
+                    // Elimina il documento npc corrente utilizzando la sua ID
                     npcCollection.document(document.id).delete()
                 }
             }
     }
 
+
     fun deleteNPCsFromCampaign(campaignName: String, masterId: String) {
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "npc"
         val npcCollection = db.collection("npc")
 
+        // Esegui una query per ottenere tutti i documenti npc che corrispondono alla campagna e al masterId specificati
         npcCollection
             .whereEqualTo("campagna", campaignName)
             .whereEqualTo("master", masterId)
             .get()
             .addOnSuccessListener { querySnapshot ->
+                // Crea un batch di operazioni
                 val batch = db.batch()
 
+                // Itera sui documenti restituiti dalla query
                 for (document in querySnapshot.documents) {
+                    // Ottieni la referenza al documento npc corrente
                     val npcDocumentRef = npcCollection.document(document.id)
+
+                    // Aggiungi un'operazione di eliminazione al batch per il documento npc corrente
                     batch.delete(npcDocumentRef)
                 }
 
+                // Esegui il batch di operazioni di eliminazione
                 batch.commit()
             }
     }
-
-
 }

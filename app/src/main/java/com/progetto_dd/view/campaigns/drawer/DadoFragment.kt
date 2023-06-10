@@ -165,55 +165,57 @@ class DadoFragment : Fragment() {
     }
 
     fun rollDice(diceString: String): List<Int> {
-        val diceRegex = Regex("(\\d+)?d(\\d+)")
-        val diceMatches = diceRegex.findAll(diceString)
+        val diceRegex = Regex("(\\d+)?d(\\d+)") // Regex per cercare il formato "XdY"
+        val diceMatches = diceRegex.findAll(diceString) // Trova tutte le corrispondenze nella stringa
 
-        val results = mutableListOf<Int>()
+        val results = mutableListOf<Int>() // Lista dei risultati dei lanci dei dadi
 
         for (match in diceMatches) {
-            val numDice = match.groupValues[1]?.toIntOrNull() ?: 1
-            val numSides = match.groupValues[2].toInt()
+            val numDice = match.groupValues[1]?.toIntOrNull() ?: 1 // Numero di dadi (X), se non specificato assume 1
+            val numSides = match.groupValues[2].toInt() // Numero di facce del dado (Y)
 
             repeat(numDice) {
-                val rollResult = (1..numSides).random()
-                results.add(rollResult)
+                val rollResult = (1..numSides).random() // Risultato del lancio del dado
+                results.add(rollResult) // Aggiunge il risultato alla lista dei risultati
             }
         }
 
-        return results
+        return results // Restituisce la lista dei risultati
     }
 
+
     fun valutaEspressione(string: String): Int {
-        var risultato = 0
-        var operatore = '+'
-        var numero = ""
+        var risultato = 0 // Variabile per memorizzare il risultato dell'espressione
+        var operatore = '+' // Operatore corrente, inizia con '+' per il caso iniziale
+        var numero = "" // Stringa per memorizzare il numero corrente dell'espressione
 
         for (char in string) {
             if (char.isDigit() || char == '.') {
-                numero += char
+                numero += char // Aggiunge il carattere corrente alla stringa del numero
             } else {
-                val currentNumber = numero.toIntOrNull()
+                val currentNumber = numero.toIntOrNull() // Converte la stringa del numero in un intero, o null se non è un numero valido
                 if (currentNumber != null) {
                     when (operatore) {
-                        '+' -> risultato += currentNumber
-                        '-' -> risultato -= currentNumber
+                        '+' -> risultato += currentNumber // Aggiunge il numero al risultato se l'operatore è '+'
+                        '-' -> risultato -= currentNumber // Sottrae il numero dal risultato se l'operatore è '-'
                     }
                 }
-                operatore = char
-                numero = ""
+                operatore = char // Aggiorna l'operatore corrente con il nuovo operatore
+                numero = "" // Resetta la stringa del numero per iniziare a leggere un nuovo numero
             }
         }
 
-        val lastNumber = numero.toIntOrNull()
+        val lastNumber = numero.toIntOrNull() // Converte l'ultimo numero letto in un intero, o null se non è un numero valido
         if (lastNumber != null) {
             when (operatore) {
-                '+' -> risultato += lastNumber
-                '-' -> risultato -= lastNumber
+                '+' -> risultato += lastNumber // Aggiunge l'ultimo numero al risultato se l'operatore è '+'
+                '-' -> risultato -= lastNumber // Sottrae l'ultimo numero dal risultato se l'operatore è '-'
             }
         }
 
-        return risultato
+        return risultato // Restituisce il risultato finale dell'espressione
     }
+
 
     private fun showNumericResult(result: Int, string: String) {
         val sum = result

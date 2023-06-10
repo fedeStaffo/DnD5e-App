@@ -124,7 +124,7 @@ class PersonaggioViewModel : ViewModel() {
     // Getter e setter per tutti i modificatori
     private val _modForza = MutableLiveData<Int>()
     val modForza: LiveData<Int> get() = _modForza
-    
+
     fun setModForza(forza: Int){
         _modForza.value = forza
     }
@@ -249,12 +249,17 @@ class PersonaggioViewModel : ViewModel() {
     }
 
     fun aggiungiEquipaggiamento(nomePersonaggio: String, nomeCampagna: String, nuovoOggetto: String) {
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi"
         val personaggiRef = db.collection("personaggi")
 
+        // Ottieni la lista attuale di equipaggiamento dal MutableLiveData
         val equipaggiamentoList = _equipaggiamento.value?.toMutableList() ?: mutableListOf()
         equipaggiamentoList.add(nuovoOggetto)
 
+        // Esegui una query per ottenere il personaggio corrispondente al nome e alla campagna specificati
         val personaggioQuery = personaggiRef
             .whereEqualTo("nome", nomePersonaggio)
             .whereEqualTo("campagna", nomeCampagna)
@@ -264,41 +269,49 @@ class PersonaggioViewModel : ViewModel() {
                 val documentSnapshot = querySnapshot.documents[0]
                 val personaggioId = documentSnapshot.id
 
+                // Crea un HashMap con i dati da aggiornare nel documento del personaggio
                 val updateData = hashMapOf<String, Any>(
                     "equipaggiamento" to equipaggiamentoList
                 )
 
+                // Esegui l'aggiornamento del documento del personaggio con i nuovi dati
                 personaggiRef.document(personaggioId)
                     .update(updateData)
-
             }
         }
     }
 
-    fun updatePersonaggioStato(nomePersonaggio: String, nomeCampagna: String, nuovoStato: String) {
 
+    fun updatePersonaggioStato(nomePersonaggio: String, nomeCampagna: String, nuovoStato: String) {
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi"
         val personaggiRef = db.collection("personaggi")
 
+        // Esegui una query per ottenere i documenti dei personaggi corrispondenti al nome e alla campagna specificati
         val query = personaggiRef.whereEqualTo("nome", nomePersonaggio)
             .whereEqualTo("campagna", nomeCampagna)
 
         query.get().addOnSuccessListener { documents ->
             for (document in documents) {
-                // Modifica il campo "stato" del personaggio
+                // Modifica il campo "stato" del personaggio con il nuovo stato
                 document.reference.update("stato", nuovoStato)
             }
         }
     }
 
     fun deletePersonaggio(nome: String, razza: String, classe: String, utenteId: String, campagna: String): LiveData<Boolean> {
+        // Crea un oggetto MutableLiveData<Boolean> per indicare se la cancellazione è avvenuta con successo o meno
         val deletionLiveData = MutableLiveData<Boolean>()
 
+        // Controlla se la campagna è specificata, se sì restituisci immediatamente "false"
         if (campagna != "") {
             deletionLiveData.value = false
             return deletionLiveData
         }
 
+        // Esegui una query per ottenere i documenti dei personaggi corrispondenti ai parametri specificati
         val query = personaggiRef
             .whereEqualTo("nome", nome)
             .whereEqualTo("razza", razza)
@@ -309,21 +322,26 @@ class PersonaggioViewModel : ViewModel() {
         query.get()
             .addOnSuccessListener { querySnapshot ->
                 for (document in querySnapshot.documents) {
+                    // Elimina il documento del personaggio
                     personaggiRef.document(document.id).delete()
                         .addOnSuccessListener {
+                            // Imposta il valore di "deletionLiveData" su "true" per indicare la cancellazione avvenuta con successo
                             deletionLiveData.value = true
                         }
                         .addOnFailureListener { exception ->
+                            // Imposta il valore di "deletionLiveData" su "false" in caso di errore durante la cancellazione
                             deletionLiveData.value = false
                         }
                 }
             }
             .addOnFailureListener { exception ->
+                // Imposta il valore di "deletionLiveData" su "false" in caso di errore durante la query
                 deletionLiveData.value = false
             }
 
         return deletionLiveData
     }
+
 
     fun updateCampoNumerico(
         nome: String,
@@ -331,10 +349,15 @@ class PersonaggioViewModel : ViewModel() {
         classe: String,
         utenteId: String,
         nomeCampo: String,
-        nuovoValore: Number) {
+        nuovoValore: Number
+    ) {
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi"
         val personaggiRef = db.collection("personaggi")
 
+        // Esegui una query per ottenere i documenti dei personaggi corrispondenti ai parametri specificati
         personaggiRef
             .whereEqualTo("nome", nome)
             .whereEqualTo("razza", razza)
@@ -347,63 +370,113 @@ class PersonaggioViewModel : ViewModel() {
                     return@addOnSuccessListener
                 }
 
+                // Ottieni il primo documento trovato
                 val document = querySnapshot.documents.first()
                 val documentId = document.id
 
-                // Aggiorna il campo con il nuovo valore
+                // Crea un oggetto contenente il campo da aggiornare e il nuovo valore
                 val updateData = mapOf(nomeCampo to nuovoValore)
 
+                // Aggiorna il documento con i nuovi dati
                 personaggiRef.document(documentId)
                     .update(updateData)
             }
     }
 
-    fun updateCampoString(nome: String, razza: String, classe: String, utenteId: String, campo: String, nuovoValore: String) {
+    fun updateCampoString(
+        nome: String,
+        razza: String,
+        classe: String,
+        utenteId: String,
+        campo: String,
+        nuovoValore: String
+    ) {
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
         val personaggioRef = db.collection("personaggi")
             .whereEqualTo("nome", nome)
             .whereEqualTo("razza", razza)
             .whereEqualTo("classe", classe)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            // Itera sui documenti restituiti dalla query
             for (document in querySnapshot) {
+                // Aggiorna il campo specificato con il nuovo valore nel documento corrente
                 document.reference.update(campo, nuovoValore)
             }
         }
     }
 
-    fun addEquipaggiamentoToPersonaggio(nome: String, razza: String, classe: String, utenteId: String, nuovoOggetto: String) {
+
+    fun addEquipaggiamentoToPersonaggio(
+        nome: String,
+        razza: String,
+        classe: String,
+        utenteId: String,
+        nuovoOggetto: String
+    ) {
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
         val personaggioRef = db.collection("personaggi")
             .whereEqualTo("nome", nome)
             .whereEqualTo("razza", razza)
             .whereEqualTo("classe", classe)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            // Itera sui documenti restituiti dalla query
             for (document in querySnapshot) {
+                // Ottieni l'array di equipaggiamento dal documento corrente
                 val equipaggiamento = document.get("equipaggiamento") as? ArrayList<String>
+
+                // Aggiungi il nuovo oggetto all'array di equipaggiamento, se presente
                 equipaggiamento?.add(nuovoOggetto)
+
+                // Aggiorna il campo "equipaggiamento" con l'array aggiornato nel documento corrente
                 document.reference.update("equipaggiamento", equipaggiamento)
             }
         }
     }
 
-    fun removeEquipaggiamentoFromPersonaggio(nome: String, razza: String, classe: String, utenteId: String, oggettoDaRimuovere: String): LiveData<Boolean> {
+
+    fun removeEquipaggiamentoFromPersonaggio(
+        nome: String,
+        razza: String,
+        classe: String,
+        utenteId: String,
+        oggettoDaRimuovere: String
+    ): LiveData<Boolean> {
+        // Crea un oggetto LiveData per restituire il risultato della rimozione
         val removeResult = MutableLiveData<Boolean>()
 
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
         val personaggioRef = db.collection("personaggi")
             .whereEqualTo("nome", nome)
             .whereEqualTo("razza", razza)
             .whereEqualTo("classe", classe)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            // Itera sui documenti restituiti dalla query
             for (document in querySnapshot) {
+                // Ottieni l'array di equipaggiamento dal documento corrente
                 val equipaggiamento = document.get("equipaggiamento") as? ArrayList<String>
+
+                // Rimuovi l'oggetto specificato dall'array di equipaggiamento, se presente
                 equipaggiamento?.remove(oggettoDaRimuovere)
+
+                // Aggiorna il campo "equipaggiamento" con l'array aggiornato nel documento corrente
                 document.reference.update("equipaggiamento", equipaggiamento)
                     .addOnSuccessListener {
                         // L'oggetto è stato rimosso correttamente
@@ -416,49 +489,84 @@ class PersonaggioViewModel : ViewModel() {
             }
         }
 
+        // Restituisci l'oggetto LiveData che conterrà il risultato della rimozione
         return removeResult
     }
 
-    fun addIncantesimoToPersonaggio(context: Context, nome: String, razza: String, classe: String, utenteId: String, nuovaMagia: String) {
+    fun addIncantesimoToPersonaggio(
+        context: Context,
+        nome: String,
+        razza: String,
+        classe: String,
+        utenteId: String,
+        nuovaMagia: String
+    ) {
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
         val personaggioRef = db.collection("personaggi")
             .whereEqualTo("nome", nome)
             .whereEqualTo("razza", razza)
             .whereEqualTo("classe", classe)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            // Itera sui documenti restituiti dalla query
             for (document in querySnapshot) {
+                // Ottieni l'array di magie dal documento corrente
                 val magie = document.get("magie") as? ArrayList<String>
 
                 if (magie == null || !magie.contains(nuovaMagia)) {
+                    // Se l'array di magie è nullo o non contiene già la nuova magia, aggiungila all'array
                     magie?.add(nuovaMagia)
+
+                    // Aggiorna il campo "magie" con l'array aggiornato nel documento corrente
                     document.reference.update("magie", magie)
 
                     Toast.makeText(context, "Magia aggiunta correttamente", Toast.LENGTH_SHORT).show()
                 } else {
+                    // Se l'array di magie contiene già la nuova magia, mostra un messaggio di avviso
                     Toast.makeText(context, "La magia esiste già", Toast.LENGTH_SHORT).show()
                 }
             }
         }
     }
 
-    fun removeIncantesimoFromPersonaggio(context: Context, nome: String, razza: String, classe: String, utenteId: String, magiaDaRimuovere: String): LiveData<Boolean> {
+
+    fun removeIncantesimoFromPersonaggio(
+        context: Context,
+        nome: String,
+        razza: String,
+        classe: String,
+        utenteId: String,
+        magiaDaRimuovere: String
+    ): LiveData<Boolean> {
         val removeResult = MutableLiveData<Boolean>()
 
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
         val personaggioRef = db.collection("personaggi")
             .whereEqualTo("nome", nome)
             .whereEqualTo("razza", razza)
             .whereEqualTo("classe", classe)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         personaggioRef.get().addOnSuccessListener { querySnapshot ->
+            // Itera sui documenti restituiti dalla query
             for (document in querySnapshot) {
+                // Ottieni l'array di magie dal documento corrente
                 val magie = document.get("magie") as? ArrayList<String>
 
                 if (magie != null && magie.contains(magiaDaRimuovere)) {
+                    // Se l'array di magie non è nullo e contiene la magia da rimuovere, rimuovila dall'array
                     magie.remove(magiaDaRimuovere)
+
+                    // Aggiorna il campo "magie" con l'array aggiornato nel documento corrente
                     document.reference.update("magie", magie)
                         .addOnSuccessListener {
                             // L'oggetto è stato rimosso correttamente
@@ -473,6 +581,7 @@ class PersonaggioViewModel : ViewModel() {
                             Toast.makeText(context, "Errore nella rimozione della magia", Toast.LENGTH_SHORT).show()
                         }
                 } else {
+                    // Se l'array di magie è nullo o non contiene la magia da rimuovere, mostra un messaggio di avviso
                     Toast.makeText(context, "La magia non è presente", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -481,25 +590,33 @@ class PersonaggioViewModel : ViewModel() {
         return removeResult
     }
 
+
     fun getMagieFromFirestore(nomePersonaggio: String, utenteId: String): LiveData<List<String>> {
         val mutableLiveData = MutableLiveData<List<String>>()
 
-        val collection = FirebaseFirestore.getInstance().collection("personaggi")
+        // Ottieni un'istanza del database di Firestore
+        val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
+        val collection = db.collection("personaggi")
         val query = collection.whereEqualTo("nome", nomePersonaggio)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         query.get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 val result = mutableListOf<String>()
                 for (document in task.result) {
+                    // Ottieni l'array di magie dal documento corrente
                     val magie = document.get("magie") as? List<String>
                     if (magie != null) {
+                        // Aggiungi le magie all'elenco dei risultati
                         result.addAll(magie)
                     }
                 }
                 mutableLiveData.value = result
             } else {
-                // Handle error case
+                // Gestisci il caso di errore
                 mutableLiveData.value = emptyList()
             }
         }
@@ -507,62 +624,84 @@ class PersonaggioViewModel : ViewModel() {
         return mutableLiveData
     }
 
+
     fun getSlotTotArray(nomePersonaggio: String, utenteId: String): MutableLiveData<List<Int>> {
         val slotTotLiveData = MutableLiveData<List<Int>>()
 
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
         val personaggiRef = db.collection("personaggi")
             .whereEqualTo("nome", nomePersonaggio)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         personaggiRef.get().addOnSuccessListener { querySnapshot ->
             val documents = querySnapshot.documents
             if (documents.isNotEmpty()) {
                 val document = documents[0]
+                // Ottieni l'array di slotTot dal documento corrente
                 val slotTot = document.get("slotTot") as? List<Long>
+                // Converte gli elementi dell'array in Int e restituisce una lista di Int
                 val slotTotInt = slotTot?.map { it.toInt() } ?: emptyList()
                 slotTotLiveData.value = slotTotInt
             } else {
+                // Nessun documento trovato con i criteri di filtro
                 slotTotLiveData.value = emptyList()
             }
         }.addOnFailureListener {
+            // Si è verificato un errore durante l'accesso ai dati
             slotTotLiveData.value = emptyList()
         }
 
         return slotTotLiveData
     }
 
+
     fun getSlotUsatiArray(nomePersonaggio: String, utenteId: String): MutableLiveData<List<Int>> {
         val slotUsatiLiveData = MutableLiveData<List<Int>>()
 
+        // Ottieni un'istanza del database di Firestore
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
         val personaggiRef = db.collection("personaggi")
             .whereEqualTo("nome", nomePersonaggio)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         personaggiRef.get().addOnSuccessListener { querySnapshot ->
             val documents = querySnapshot.documents
             if (documents.isNotEmpty()) {
                 val document = documents[0]
+                // Ottieni l'array di slotUsati dal documento corrente
                 val slotUsati = document.get("slotUsati") as? List<Long>
+                // Converte gli elementi dell'array in Int e restituisce una lista di Int
                 val slotUsatiInt = slotUsati?.map { it.toInt() } ?: emptyList()
                 slotUsatiLiveData.value = slotUsatiInt
             } else {
+                // Nessun documento trovato con i criteri di filtro
                 slotUsatiLiveData.value = emptyList()
             }
         }.addOnFailureListener {
+            // Si è verificato un errore durante l'accesso ai dati
             slotUsatiLiveData.value = emptyList()
         }
 
         return slotUsatiLiveData
     }
 
+
     fun updateSlotTotUsati(context: Context, nomePersonaggio: String, utenteId: String, livello: Int, newSlotTot: Int, newSlotUsati: Int) {
         val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "personaggi" e applica i criteri di filtro
         val personaggioRef = db.collection("personaggi")
             .whereEqualTo("nome", nomePersonaggio)
             .whereEqualTo("utenteId", utenteId)
 
+        // Esegui la query per ottenere i documenti dei personaggi corrispondenti ai criteri di filtro
         personaggioRef.get().addOnSuccessListener { querySnapshot ->
             for (document in querySnapshot) {
                 val slotTotArray = document.get("slotTot") as? ArrayList<Long>
@@ -583,6 +722,7 @@ class PersonaggioViewModel : ViewModel() {
                     }
                 }
 
+                // Aggiorna i valori degli array "slotTot" e "slotUsati" nel documento corrente
                 document.reference.update("slotTot", slotTotArray)
                 document.reference.update("slotUsati", slotUsatiArray)
                     .addOnSuccessListener {
@@ -596,6 +736,7 @@ class PersonaggioViewModel : ViewModel() {
             }
         }
     }
+
 
 
 

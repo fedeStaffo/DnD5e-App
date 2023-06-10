@@ -1,15 +1,13 @@
 package com.progetto_dd.view.characters.visualizza
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentInfoMagiaBinding
-import com.progetto_dd.databinding.FragmentMagieBinding
 import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
 class InfoMagiaFragment : Fragment() {
@@ -23,7 +21,7 @@ class InfoMagiaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Infla il layout per questo frammento
         _binding = FragmentInfoMagiaBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -34,7 +32,7 @@ class InfoMagiaFragment : Fragment() {
         // Inizializza il view model
         viewModel = ViewModelProvider(requireActivity()).get(PersonaggioViewModel::class.java)
 
-        // Info ottenute dall'adapter degli incantesimi
+        // Ottiene le informazioni dall'adapter degli incantesimi
         val nomeInc = arguments?.getString("nomeIncantesimo")
         val infoInc = arguments?.getString("infoIncantesimo")
 
@@ -48,10 +46,11 @@ class InfoMagiaFragment : Fragment() {
         val utenteId = intent.getStringExtra("utente_id")
 
         binding.btnAggiungiIncantesimo.setOnClickListener {
-            if(classe!= "Bardo" && classe != "Mago" && classe != "Guerriero" && classe != "Ladro"){
+            // Verifica se la classe supporta gli incantesimi
+            if (classe != "Bardo" && classe != "Mago" && classe != "Guerriero" && classe != "Ladro") {
                 Toast.makeText(requireContext(), "Incantesimi non previsti per questa classe!", Toast.LENGTH_SHORT).show()
-            }
-            else {
+            } else {
+                // Aggiungi l'incantesimo al personaggio utilizzando il view model
                 if (nome != null && razza != null && utenteId != null && nomeInc != null) {
                     viewModel.addIncantesimoToPersonaggio(requireContext(), nome, razza, classe, utenteId, nomeInc)
                 }
@@ -59,10 +58,11 @@ class InfoMagiaFragment : Fragment() {
         }
 
         binding.btnEliminaIncantesimo.setOnClickListener {
-            if(classe!= "Bardo" && classe != "Mago" && classe != "Guerriero" && classe != "Ladro"){
+            // Verifica se la classe supporta gli incantesimi
+            if (classe != "Bardo" && classe != "Mago" && classe != "Guerriero" && classe != "Ladro") {
                 Toast.makeText(requireContext(), "Incantesimi non previsti per questa classe!", Toast.LENGTH_SHORT).show()
-            }
-            else {
+            } else {
+                // Rimuovi l'incantesimo dal personaggio utilizzando il view model
                 if (nome != null && razza != null && utenteId != null && nomeInc != null) {
                     viewModel.removeIncantesimoFromPersonaggio(requireContext(), nome, razza, classe, utenteId, nomeInc)
                 }
@@ -74,5 +74,4 @@ class InfoMagiaFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

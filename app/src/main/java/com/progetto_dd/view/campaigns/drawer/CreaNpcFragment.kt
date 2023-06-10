@@ -30,20 +30,24 @@ class CreaNpcFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_crea_npc, container, false)
 
+        // Inizializzazione delle view
         nomeNpcEditText = view.findViewById(R.id.nome_npc)
         descrizioneNpcEditText = view.findViewById(R.id.descrizione_npc)
         spinnerLegame = view.findViewById(R.id.spinnerLegame)
         aggiungiNpcButton = view.findViewById(R.id.aggiungi_npc)
 
+        // Recupera il nome della campagna e l'ID del master dalla Activity chiamante
         val campagnaNome = requireActivity().intent.getStringExtra("campagna_nome")
         val masterId = requireActivity().intent.getStringExtra("master_id")
 
+        // Definizione del comportamento del pulsante "Aggiungi NPC"
         aggiungiNpcButton.setOnClickListener {
             val nomeNpc = nomeNpcEditText.text.toString().trim()
             val descrizioneNpc = descrizioneNpcEditText.text.toString().trim()
             val legameNpc = spinnerLegame.selectedItem.toString()
 
             if (nomeNpc.isEmpty() || descrizioneNpc.isEmpty()) {
+                // Verifica se il nome e la descrizione dell'NPC sono vuoti
                 Toast.makeText(requireContext(), "Inserisci il nome e la descrizione dell'NPC", Toast.LENGTH_SHORT).show()
             } else {
                 val npcQuery = firestore.collection("npc")
@@ -65,6 +69,7 @@ class CreaNpcFragment : Fragment() {
                             firestore.collection("npc")
                                 .add(npc)
                                 .addOnSuccessListener {
+                                    // Aggiunta dell'NPC al database avvenuta con successo, naviga alla visualizzazione della campagna
                                     findNavController().navigate(R.id.action_creaNpcFragment_to_visualizzaCampagnaFragment)
                                 }
                         } else {
@@ -79,7 +84,6 @@ class CreaNpcFragment : Fragment() {
                     }
             }
         }
-
 
         return view
     }
