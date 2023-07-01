@@ -67,14 +67,14 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editTextVitaAttuale"
+                android:id="@+id/editTextVitaMassima"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number" />
 
             <Button
-                android:id="@+id/buttonSalvaVitaAttuale"
+                android:id="@+id/buttonSalvaVitaMassima"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/salva_bottone" />
@@ -101,14 +101,14 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editTextVitaMassima"
+                android:id="@+id/editTextVitaAttuale"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number" />
 
             <Button
-                android:id="@+id/buttonSalvaVitaMassima"
+                android:id="@+id/buttonSalvaVitaAttuale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/salva_bottone" />

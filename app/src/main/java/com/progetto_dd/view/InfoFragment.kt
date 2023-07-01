@@ -34,13 +34,6 @@ class InfoFragment : Fragment() {
             openUrlInBrowser(url)
         }
 
-        // Ottieni la TextView con id textView3 dal layout
-        val textView3 = rootView.findViewById<TextView>(R.id.textView3)
-        textView3.setOnClickListener {
-            val url = "https://github.com/renzialex"
-            openUrlInBrowser(url)
-        }
-
         return rootView
     }
 

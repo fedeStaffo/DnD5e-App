@@ -70,7 +70,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/scelta2" />
 
             <Spinner
-                android:id="@+id/spinner_scelta_guerriero"
+                android:id="@+id/spinner_scelta_extra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"

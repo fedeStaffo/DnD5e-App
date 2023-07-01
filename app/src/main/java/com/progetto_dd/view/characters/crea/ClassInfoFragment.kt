@@ -41,6 +41,14 @@ class ClassInfoFragment : Fragment() {
                 "Guerriero"-> binding.classInfoText.text = getString(R.string.Guerriero_info)
                 "Ladro"-> binding.classInfoText.text = getString(R.string.Ladro_info)
                 "Mago"-> binding.classInfoText.text = getString(R.string.Mago_info)
+                "Barbaro"-> binding.classInfoText.text = getString(R.string.barbaro_info)
+                "Chierico"-> binding.classInfoText.text = getString(R.string.chierico_info)
+                "Druido"-> binding.classInfoText.text = getString(R.string.druido_info)
+                "Monaco"-> binding.classInfoText.text = getString(R.string.monaco_info)
+                "Paladino"-> binding.classInfoText.text = getString(R.string.paladino_info)
+                "Ranger"-> binding.classInfoText.text = getString(R.string.ranger_info)
+                "Stregone"-> binding.classInfoText.text = getString(R.string.stregone_info)
+                "Warlock"-> binding.classInfoText.text = getString(R.string.warlock_info)
             }
         }
     }

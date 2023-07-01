@@ -355,6 +355,386 @@ disinvoltura in certi tipi di prove di Carisma.
         <item>Una dotazione da esploratore</item>
     </string-array>
 
+    <string-array name="scelta_barbaro_1">
+        <item>-</item>
+        <item>Alabarda</item>
+        <item>Ascia bipenne</item>
+        <item>Ascia da battaglia</item>
+        <item>Falcione</item>
+        <item>Frusta</item>
+        <item>Lancia da cavaliere</item>
+        <item>Maglio</item>
+        <item>Martello da guerra</item>
+        <item>Mazzafusto</item>
+        <item>Morning star</item>
+        <item>Picca</item>
+        <item>Piccone da guerra</item>
+        <item>Scimitarra</item>
+        <item>Spada corta</item>
+        <item>Spada lunga</item>
+        <item>Spadone</item>
+        <item>Stocco</item>
+        <item>Tridente</item>
+    </string-array>
+
+    <string-array name="scelta_barbaro_2">
+        <item>-</item>
+        <item>2 asce</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string-array name="scelta_barbaro_3">
+        <item>-</item>
+        <item>4 giavellotti</item>
+    </string-array>
+
+    <string-array name="scelta_barbaro_4">
+        <item>-</item>
+        <item>Una dotazione da esploratore </item>
+    </string-array>
+
+    <string-array name="scelta_chierico_1">
+        <item>-</item>
+        <item>Mazza</item>
+        <item>Martello da guerra</item>
+    </string-array>
+
+    <string-array name="scelta_chierico_2">
+        <item>-</item>
+        <item>Corazza di scaglie</item>
+        <item>Armatura di cuoio</item>
+        <item>Cotta di maglia</item>
+    </string-array>
+
+    <string-array name="scelta_chierico_3">
+        <item>-</item>
+        <item>Una balestra leggera e 20 quadrelli</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string-array name="scelta_chierico_4">
+        <item>-</item>
+        <item>Una dotazione da sacerdote</item>
+        <item>Una dotazione da esploratore</item>
+    </string-array>
+
+    <string-array name="scelta_druido_1">
+        <item>-</item>
+        <item>Scudo di legno</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string-array name="scelta_druido_2">
+        <item>-</item>
+        <item>Scimitarra</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+    </string-array>
+
+    <string-array name="scelta_druido_3">
+        <item>-</item>
+        <item>Armatura di cuoio</item>
+    </string-array>
+
+    <string-array name="scelta_druido_4">
+        <item>-</item>
+        <item>Una dotazione da esploratore</item>
+    </string-array>
+    
+    <string-array name="scelta_monaco_1">
+        <item>-</item>
+        <item>Spada corta</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string-array name="scelta_monaco_2">
+        <item>-</item>
+        <item>10 dardi</item>
+    </string-array>
+
+    <string-array name="scelta_monaco_3">
+        <item>Vuoto</item>
+    </string-array>
+
+    <string-array name="scelta_monaco_4">
+        <item>-</item>
+        <item>Una dotazione da avventuriero</item>
+        <item>Una dotazione da esploratore</item>
+    </string-array>
+
+    <string-array name="scelta_paladino_1">
+        <item>-</item>
+        <item>5 giavellotti</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+    </string-array>
+
+    <string-array name="scelta_paladino_2">
+        <item>-</item>
+        <item>Alabarda</item>
+        <item>Ascia bipenne</item>
+        <item>Ascia da battaglia</item>
+        <item>Falcione</item>
+        <item>Frusta</item>
+        <item>Lancia da cavaliere</item>
+        <item>Maglio</item>
+        <item>Martello da guerra</item>
+        <item>Mazzafusto</item>
+        <item>Morning star</item>
+        <item>Picca</item>
+        <item>Piccone da guerra</item>
+        <item>Scimitarra</item>
+        <item>Spada corta</item>
+        <item>Spada lunga</item>
+        <item>Spadone</item>
+        <item>Stocco</item>
+        <item>Tridente</item>
+        <item>Arco lungo</item>
+        <item>Balestra a mano</item>
+        <item>Balestra Pesante</item>
+        <item>Cerbottana</item>
+        <item>Rete</item>
+        <item>Scudo</item>
+    </string-array>
+
+    <string-array name="scelta_paladino_G">
+        <item>-</item>
+        <item>Alabarda</item>
+        <item>Ascia bipenne</item>
+        <item>Ascia da battaglia</item>
+        <item>Falcione</item>
+        <item>Frusta</item>
+        <item>Lancia da cavaliere</item>
+        <item>Maglio</item>
+        <item>Martello da guerra</item>
+        <item>Mazzafusto</item>
+        <item>Morning star</item>
+        <item>Picca</item>
+        <item>Piccone da guerra</item>
+        <item>Scimitarra</item>
+        <item>Spada corta</item>
+        <item>Spada lunga</item>
+        <item>Spadone</item>
+        <item>Stocco</item>
+        <item>Tridente</item>
+        <item>Arco lungo</item>
+        <item>Balestra a mano</item>
+        <item>Balestra Pesante</item>
+        <item>Cerbottana</item>
+        <item>Rete</item>
+    </string-array>
+
+    <string-array name="scelta_paladino_3">
+        <item>-</item>
+        <item>Una cotta di maglia</item>
+    </string-array>
+
+    <string-array name="scelta_paladino_4">
+        <item>-</item>
+        <item>Una dotazione da sacerdote</item>
+        <item>Una dotazione da esploratore</item>
+    </string-array>
+
+    <string-array name="scelta_ranger_1">
+        <item>-</item>
+        <item>Corazza di scaglie</item>
+        <item>Armatura di cuoio</item>
+    </string-array>
+
+    <string-array name="scelta_ranger_2">
+        <item>-</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Spada corta</item>
+    </string-array>
+
+    <string-array name="scelta_ranger_G">
+        <item>-</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Spada corta</item>
+    </string-array>
+
+    <string-array name="scelta_ranger_3">
+        <item>-</item>
+        <item>Arco lungo e faretra con 20 frecce</item>
+    </string-array>
+
+    <string-array name="scelta_ranger_4">
+        <item>-</item>
+        <item>Una dotazione da avventuriero</item>
+        <item>Una dotazione da esploratore</item>
+    </string-array>
+
+    <string-array name="scelta_stregone_1">
+        <item>-</item>
+        <item>Una balestra leggera e 20 quadrelli</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string-array name="scelta_stregone_2">
+        <item>-</item>
+        <item>Una borsa per componenti</item>
+        <item>Un focus arcano</item>
+    </string-array>
+
+    <string-array name="scelta_stregone_3">
+        <item>-</item>
+        <item>2 pugnali</item>
+    </string-array>
+
+    <string-array name="scelta_stregone_4">
+        <item>-</item>
+        <item>Una dotazione da avventuriero</item>
+        <item>Una dotazione da esploratore</item>
+    </string-array>
+
+    <string-array name="scelta_warlock_1">
+        <item>-</item>
+        <item>Una balestra leggera e 20 quadrelli</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string-array name="scelta_warlock_2">
+        <item>-</item>
+        <item>Una borsa per componenti</item>
+        <item>Un focus arcano</item>
+    </string-array>
+
+    <string-array name="scelta_warlock_3">
+        <item>-</item>
+        <item>Ascia</item>
+        <item>Bastone ferrato</item>
+        <item>Falcetto</item>
+        <item>Giavellotto</item>
+        <item>Lancia</item>
+        <item>Martello leggero</item>
+        <item>Mazza</item>
+        <item>Pugnale</item>
+        <item>Randello</item>
+        <item>Randello pesante</item>
+        <item>Arco corto</item>
+        <item>Balestra</item>
+        <item>Dardo</item>
+        <item>Fionda</item>
+    </string-array>
+
+    <string-array name="scelta_warlock_4">
+        <item>-</item>
+        <item>Una dotazione da avventuriero</item>
+        <item>Una dotazione da studioso</item>
+    </string-array>
+
     <!-- Tabbed Visualizzazione -->
     <string name="title_activity_visualizza_pers">VisualizzaPersActivity</string>
     <string name="tab_text_1">Stats</string>
@@ -471,6 +851,27 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="sottoclasse">Sottoclasse</string>
     <string name="testo_di_prova">TESTO DI PROVA</string>
     <string name="tipo">Tipo: </string>
+
+    <string-array name="sottoclassi_barbaro">
+        <item>Cammino del berserker</item>
+        <item>Cammino del combattente totemico</item>
+    </string-array>
+
+    <string-array name="sottoclassi_chierico">
+        <item>Dominio della conoscenza</item>
+        <item>Dominio della guerra</item>
+        <item>Dominio della luce</item>
+        <item>Dominio della natura</item>
+        <item>Dominio della tempesta</item>
+        <item>Dominio della vita</item>
+        <item>Dominio dell\'inganno</item>
+    </string-array>
+
+    <string-array name="sottoclassi_druido">
+        <item>Circolo della luna</item>
+        <item>Circolo della terra</item>
+    </string-array>
+
     <string-array name="sottoclassi_bardo">
         <item>Collegio della sapienza</item>
         <item>Collegio del valore</item>
@@ -486,6 +887,34 @@ disinvoltura in certi tipi di prove di Carisma.
         <item>Furfante</item>
         <item>Assassino</item>
         <item>Mistificatore arcano</item>
+    </string-array>
+
+    <string-array name="sottoclassi_monaco">
+        <item>Via dei 4 elementi</item>
+        <item>Via della mano aperta</item>
+        <item>Via dell\'ombra</item>
+    </string-array>
+
+    <string-array name="sottoclassi_paladino">
+        <item>Giuramento degli antichi</item>
+        <item>Giuramento di devozione</item>
+        <item>Giuramento della vendetta</item>
+    </string-array>
+
+    <string-array name="sottoclassi_ranger">
+        <item>Cacciatore</item>
+        <item>Signore delle bestie</item>
+    </string-array>
+
+    <string-array name="sottoclassi_stregone">
+        <item>Discendenza draconica</item>
+        <item>Magia selvaggia</item>
+    </string-array>
+
+    <string-array name="sottoclassi_warlock">
+        <item>Il grande antico</item>
+        <item>Il signore fatato</item>
+        <item>L\'immondo</item>
     </string-array>
 
     <string-array name="sottoclassi_mago">
@@ -548,8 +977,29 @@ disinvoltura in certi tipi di prove di Carisma.
         <item>-</item>
         <item>Bardo</item>
         <item>Mago</item>
+        <item>Chierico</item>
+        <item>Druido</item>
+        <item>Paladino</item>
+        <item>Ranger</item>
+        <item>Stregone</item>
+        <item>Warlock</item>
     </string-array>
+
     <string name="cd_tiro_salvezza">CD tiro salvezza:</string>
     <string name="bonus_attacco_incantesimo">Bonus attacco incantesimo:</string>
+    <string name="dragonide">Dragonide</string>
+    <string name="gnomo">Gnomo</string>
+    <string name="halfling">Halfling</string>
+    <string name="tiefling">Tiefling</string>
+    <string name="mezzorco">Mezzorco</string>
+    <string name="mezzelfo">Mezzelfo</string>
+    <string name="barbaro">Barbaro</string>
+    <string name="chierico01">Chierico</string>
+    <string name="druido">Druido</string>
+    <string name="monaco">Monaco</string>
+    <string name="paladino01">Paladino</string>
+    <string name="ranger">Ranger</string>
+    <string name="stregone">Stregone</string>
+    <string name="warlock">Warlock</string>
 </resources>
 

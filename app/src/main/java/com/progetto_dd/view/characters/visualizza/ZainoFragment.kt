@@ -48,22 +48,31 @@ class ZainoFragment : Fragment() {
         binding.btnAggiungiOggetto.setOnClickListener {
             val nuovoOggetto = binding.inputOggetto.text.toString()
 
-            if (nome != null && classe != null && razza != null && utenteId != null) {
-                viewModel.addEquipaggiamentoToPersonaggio(
-                    nome,
-                    razza,
-                    classe,
-                    utenteId,
-                    nuovoOggetto
-                )
-            }
+            if (nuovoOggetto.isNotEmpty()) {
+                if (nome != null && classe != null && razza != null && utenteId != null) {
+                    viewModel.addEquipaggiamentoToPersonaggio(
+                        nome,
+                        razza,
+                        classe,
+                        utenteId,
+                        nuovoOggetto
+                    )
+                }
 
-            // Mostra un toast per confermare l'aggiunta dell'oggetto
-            Toast.makeText(
-                requireContext(),
-                "Oggetto aggiunto all'equipaggiamento!",
-                Toast.LENGTH_SHORT
-            ).show()
+                // Mostra un toast per confermare l'aggiunta dell'oggetto
+                Toast.makeText(
+                    requireContext(),
+                    "Oggetto aggiunto all'equipaggiamento!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                // Mostra un toast per avvisare che il campo è vuoto
+                Toast.makeText(
+                    requireContext(),
+                    "Non lasciare il campo vuoto!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
 
         binding.btnEliminaOggetto.setOnClickListener {
@@ -98,7 +107,7 @@ class ZainoFragment : Fragment() {
             }
             else  Toast.makeText(
                 requireContext(),
-                "Non lasciare campi vuoti!",
+                "Non lasciare il campo vuoto!",
                 Toast.LENGTH_SHORT).show()
         }
     }

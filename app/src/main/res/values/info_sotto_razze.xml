@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="elfo_alto_info">
+Elfo alto\n
+\n
+INCREMENTO DEI PUNTEGGI CARATTERISTICA\n
+Il punteggio di Intelligenza aumenta di 1.\n
+\n
+ADDESTRAMENTO NELLE ARMI ELFICHE\n
+Avete competenza con spada lunga, spada corta, arco corto e arco lungo.\n
+\n
+TRUCCHETTO\n
+Conoscete un trucchetto a vostra scelta dalla lista degli incantesimi da mago.\n
+L\'Intelligenza è la caratteristica chiave per lanciare questo incantesimo.\n
+\n
+LINGUAGGI EXTRA\n
+Potete parlare, leggere e scrivere un linguaggio extra a vostra scelta.\n
+    </string>
+
+    <string name="elfo_dei_boschi_info">
+Elfo dei boschi\n
+\n
+INCREMENTO DEI PUNTEGGI CARATTERISTICA\n
+Il punteggio di saggezza di un elfo dei boschi aumenta di 1.\n
+\n
+ADDESTRAMENTO NELLE ARMI ELFICHE\n
+Un elfo dei boschi ha competenza nelle spade corte, nelle spade lunghe, negli archi corti e negli archi lunghi.\n
+\n
+PIEDE LESTO\n
+La velocità base sul terreno di un elfo dei boschi aumenta a 10,5 metri.\n
+\n
+MASCHERA DELLA SELVA\n
+Un elfo dei boschi può tentare di nascondersi alla vista altrui anche quando è leggermente oscurato da fogliamo, pioggia fitta, neve, foschia e altri fenomeni naturali\n
+    </string>
+
+    <string name="elfo_oscuro_info">
+Elfo oscuro\n
+\n
+INCREMENTO DEI PUNTEGGI CARATTERISTICA\n
+Il punteggio di carisma di un elfo oscuro aumenta di 1.\n
+\n
+SCUROVISIONE SUPERIORE\n
+La scurovisione di un elfo oscuro arriva fino a 36 metri.\n
+\n
+SENSIBILITà ALL LUCE DEL SOLE\n
+Un elfo oscuro dispone di svantaggio ai tiri per colpire e alle prove di saggezza(Percezione) basate sulla vista quando l\'elfo in questione, il bersaglio del suo attacco o l\'oggetto da percepire si trovano in piena luce del sole.\n
+\n
+MAGIA DROW\n
+Un elfo oscuro conosce il trucchetto "luci danzanti".\n
+Quando raggiunge il 3° livello, può lanciare l\'incantesimo "luminescenza" una volta con questo tratto e recuperare la capacità di farlo quando completa un riposo lungo.\n
+Quando raggiunge il 5° livello, può lanciare l\'incantesimo "oscurità" una volta con questo tratto e recuperà la capacità di farlo quando completa un riposo lungo.\n
+La caratteristica da incantatore per questi incantesimi è carisma.\n
+    </string>
+
+    <string name="gnomo_delle_foreste_info">
+Gnomo delle foreste\n
+\n
+INCREMENTO DEI PUNTEGGI DI CARATTERISTICA\n
+Il punteggio di Destrezza di uno gnomo delle foreste aumenta di 1.\n
+\n
+ILLUSIONISTA NATO\n
+Uno gnomo delle foreste conosce il trucchetto illusione minore.\n
+La caratteristica da incantatore usata per questo trucchetto è Intelligenza.\n
+\n
+PARLARE CON LE PICCOLE BESTIE\n
+Uno gnomo delle foreste può usare suoni e gesti per comunicare i concetti più semplici alle bestie di taglia Piccola o inferiore.\n
+Gli gnomi delle foreste amano gli animali e spesso tengono presso di loro scoiattoli, tassi, conigli, talpe, picchi e altre creature simili come animali da compagnia.\n
+    </string>
+
+    <string name="gnomo_delle_rocce_info">
+Gnomo delle rocce\n
+\n
+INCREMENTO DEI PUNTEGGI DI CARATTERISTICA\n
+Il punteggio di Costituzione aumenta di 2.\n
+\n
+SAPERE DA ARTEFICE\n
+Ogni volta che fate una prova di Intelligenza (Storia) relativa ad oggetti magici, oggetti alchemici o dispositivi tecnologici, potete aggiungere il doppio del bonus di competenza, invece di qualsiasi bonus di competenza applichiate normalmente.\n
+\n
+INVENTORE\n
+Avete competenza con strumenti da artigiano (strumenti da inventore).\n
+Usando questi strumenti, potete spendere 1 ora e materiali del valore di 10 mo per costruire un congegno ad orologeria Minuscolo (CA 5, 1 pf).\n
+Il congegno cessa di funzionare dopo 24 ore (a meno che spendiate 1 ora a ripararlo per mantenerlo in funzione) o quando usate un\'azione per smantellarlo; in quel caso potete recuperare i materiali usati per crearlo.\n
+Potete avere fino a tre di tali congegni attivi nello stesso momento.\n
+\n
+Quando create un congegno, scegliete una delle seguenti opzioni:\n
+-Giocattolo ad orologeria: Questo giocattolo è un animale, mostro o persona ad orologeria, come una rana, un topo, un uccello, un drago o un soldato.\n
+ Una volta posizionato sul terreno, il giocattolo si muove di 1,5 m sul terreno in ognuno dei vostri turni in una direzione casuale.\n
+ Fa rumore come appropriato per la creatura che rappresenta.\n
+-Accendino: Il dispositivo produce una fiamma in miniatura, che potete usare per accendere una candela, una torcia o un fuoco da campo.\n
+ Usare il congegno richiede un\'azione.\n
+-Scatola Musicale: Una volta aperta, questa scatola musicale suona una singola canzone ad un volume moderato.\n
+ La scatola finisce di suonare quando raggiunge la fine della canzone o quando viene chiusa.\n
+    </string>
+    
+    <string name="halfling_piedelesto_info">
+Halfling piedelesto\n
+\n
+INCREMENTO DEI PUNTEGGI DI CARATTERISTICA\n
+Il punteggio di Carisma di un halfling piedelesto aumenta di 1.\n
+\n
+FURTIVITÀ INNATA\n
+Un halfting piedelesto può tentare di nascondersi anche se è oscurato solo da una singola creatura, purché questa sia più grande di lui di almeno una taglia.\n        
+    </string>
+    
+    <string name="halfling_tozzo_info">
+Halfling tozzo\n
+\n
+INCREMENTO DEI PUNTEGGI DI CARATTERISTICA\n
+Il punteggio di Costituzione di un halfting tozzo aumenta di 1.\n
+\n
+RESILIENZA DEI TOZZI\n
+Un halfting tozzo dispone di vantaggio ai tiri salvezza contro il veleno e di resistenza ai danni da veleno.\n
+    </string>
+
+    <string name="nano_delle_colline_info">
+Nani delle colline\n
+\n
+INCREMENTO DEI PUNTEGGI CARATTERISTICA\n
+Il punteggio di Saggezza aumenta di 1.\n
+\n
+ROBUSTEZZA NANICA\n
+Il massimo dei punti ferita aumenta di 1 ed aumenta di 1 ogni volta che guadagnate un livello.\n
+    </string>
+
+    <string name="nano_delle_montagne_info">
+Nani delle montagne\n
+\n
+INCREMENTO DEI PUNTEGGI CARATTERISTICA\n
+Il punteggio di forza di un nano delle montagne aumenta di 2.\n
+\n
+ADDESTRAMENTO NELLE ARMATURE NANICHE\n
+Un nano delle montagne ha competenza nelle armature leggere e medie.\n
+    </string>
+    
+</resources>

@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Atletica"
+                    android:text="Atletica (For)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Acrobazia"
+                    android:text="Acrobazia (Des)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Furtività"
+                    android:text="Furtività (Des)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -108,7 +108,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Rapidità di mano"
+                    android:text="Rapidità di mano (Des)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -129,7 +129,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Arcano"
+                    android:text="Arcano (Int)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Storia"
+                    android:text="Storia (Int)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -171,7 +171,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Indagare"
+                    android:text="Indagare (Int)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -192,7 +192,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Natura"
+                    android:text="Natura (Int)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -213,7 +213,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Religione"
+                    android:text="Religione (Int)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -234,7 +234,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Addestrare Animali"
+                    android:text="Addestrare Animali (Sag)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -255,7 +255,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Intuizione"
+                    android:text="Intuizione (Sag)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -276,7 +276,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Medicina"
+                    android:text="Medicina (Sag)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -297,7 +297,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Percezione"
+                    android:text="Percezione (Sag)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -318,7 +318,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Sopravvivenza"
+                    android:text="Sopravvivenza (Sag)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -339,7 +339,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Inganno"
+                    android:text="Inganno (Car)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -360,7 +360,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Intimidire"
+                    android:text="Intimidire (Car)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -381,7 +381,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Intrattenere"
+                    android:text="Intrattenere (Car)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -402,7 +402,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Persuasione"
+                    android:text="Persuasione (Car)"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -40,6 +40,12 @@ class RaceInfoFragment : Fragment() {
                 "Elfo"-> binding.raceInfoText.text = getString(R.string.Elfo_info)
                 "Umano"-> binding.raceInfoText.text = getString(R.string.Umano_info)
                 "Nano"-> binding.raceInfoText.text = getString(R.string.Nano_info)
+                "Dragonide"-> binding.raceInfoText.text = getString(R.string.dragonide_info)
+                "Gnomo"-> binding.raceInfoText.text = getString(R.string.gnomo_info)
+                "Halfling"-> binding.raceInfoText.text = getString(R.string.halfling_info)
+                "Tiefling"-> binding.raceInfoText.text = getString(R.string.tiefling_info)
+                "Mezzelfo"-> binding.raceInfoText.text = getString(R.string.mezzelfo_info)
+                "Mezzorco"-> binding.raceInfoText.text = getString(R.string.mezzorco_info)
             }
         }
     }

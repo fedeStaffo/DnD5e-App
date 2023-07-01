@@ -47,6 +47,50 @@ class CompetenzeFragment : Fragment() {
 
             // Setta le competenze per ogni classe
             when (classe) {
+                "Barbaro" -> {
+                    binding.acrobazia.visibility = View.GONE
+                    binding.intuizione.visibility = View.GONE
+                    binding.furtivita.visibility = View.GONE
+                    binding.rapiditadimano.visibility = View.GONE
+                    binding.arcano.visibility = View.GONE
+                    binding.indagare.visibility = View.GONE
+                    binding.religione.visibility = View.GONE
+                    binding.storia.visibility = View.GONE
+                    binding.medicina.visibility = View.GONE
+                    binding.inganno.visibility = View.GONE
+                    binding.intrattenere.visibility = View.GONE
+                    binding.persuasione.visibility = View.GONE
+                }
+
+                "Chierico" -> {
+                    binding.acrobazia.visibility = View.GONE
+                    binding.atletica.visibility = View.GONE
+                    binding.intimidazione.visibility = View.GONE
+                    binding.percezione.visibility = View.GONE
+                    binding.sopravvivenza.visibility = View.GONE
+                    binding.furtivita.visibility = View.GONE
+                    binding.rapiditadimano.visibility = View.GONE
+                    binding.arcano.visibility = View.GONE
+                    binding.indagare.visibility = View.GONE
+                    binding.natura.visibility = View.GONE
+                    binding.addestrareanimali.visibility = View.GONE
+                    binding.inganno.visibility = View.GONE
+                    binding.intrattenere.visibility = View.GONE
+                }
+
+                "Druido" -> {
+                    binding.acrobazia.visibility = View.GONE
+                    binding.atletica.visibility = View.GONE
+                    binding.intimidazione.visibility = View.GONE
+                    binding.furtivita.visibility = View.GONE
+                    binding.rapiditadimano.visibility = View.GONE
+                    binding.indagare.visibility = View.GONE
+                    binding.storia.visibility = View.GONE
+                    binding.inganno.visibility = View.GONE
+                    binding.intrattenere.visibility = View.GONE
+                    binding.persuasione.visibility = View.GONE
+                }
+
                 "Guerriero" -> {
                     binding.furtivita.visibility = View.GONE
                     binding.rapiditadimano.visibility = View.GONE
@@ -54,8 +98,6 @@ class CompetenzeFragment : Fragment() {
                     binding.indagare.visibility = View.GONE
                     binding.natura.visibility = View.GONE
                     binding.religione.visibility = View.GONE
-                    binding.storia.visibility = View.GONE
-                    binding.addestrareanimali.visibility = View.GONE
                     binding.medicina.visibility = View.GONE
                     binding.inganno.visibility = View.GONE
                     binding.intrattenere.visibility = View.GONE
@@ -80,6 +122,78 @@ class CompetenzeFragment : Fragment() {
                     binding.sopravvivenza.visibility = View.GONE
                     binding.intimidazione.visibility = View.GONE
                     binding.inganno.visibility = View.GONE
+                    binding.intrattenere.visibility = View.GONE
+                    binding.persuasione.visibility = View.GONE
+                }
+
+                "Monaco" ->{
+                    binding.intimidazione.visibility = View.GONE
+                    binding.percezione.visibility = View.GONE
+                    binding.sopravvivenza.visibility = View.GONE
+                    binding.rapiditadimano.visibility = View.GONE
+                    binding.arcano.visibility = View.GONE
+                    binding.indagare.visibility = View.GONE
+                    binding.natura.visibility = View.GONE
+                    binding.addestrareanimali.visibility = View.GONE
+                    binding.medicina.visibility = View.GONE
+                    binding.inganno.visibility = View.GONE
+                    binding.intrattenere.visibility = View.GONE
+                    binding.persuasione.visibility = View.GONE
+                }
+
+                "Paladino" -> {
+                    binding.acrobazia.visibility = View.GONE
+                    binding.percezione.visibility = View.GONE
+                    binding.sopravvivenza.visibility = View.GONE
+                    binding.furtivita.visibility = View.GONE
+                    binding.rapiditadimano.visibility = View.GONE
+                    binding.arcano.visibility = View.GONE
+                    binding.indagare.visibility = View.GONE
+                    binding.natura.visibility = View.GONE
+                    binding.storia.visibility = View.GONE
+                    binding.addestrareanimali.visibility = View.GONE
+                    binding.inganno.visibility = View.GONE
+                    binding.intrattenere.visibility = View.GONE
+                }
+
+                "Ranger" -> {
+                    binding.acrobazia.visibility = View.GONE
+                    binding.intimidazione.visibility = View.GONE
+                    binding.rapiditadimano.visibility = View.GONE
+                    binding.arcano.visibility = View.GONE
+                    binding.religione.visibility = View.GONE
+                    binding.storia.visibility = View.GONE
+                    binding.medicina.visibility = View.GONE
+                    binding.inganno.visibility = View.GONE
+                    binding.intrattenere.visibility = View.GONE
+                    binding.persuasione.visibility = View.GONE
+                }
+
+                "Stregone" -> {
+                    binding.acrobazia.visibility = View.GONE
+                    binding.atletica.visibility = View.GONE
+                    binding.percezione.visibility = View.GONE
+                    binding.sopravvivenza.visibility = View.GONE
+                    binding.furtivita.visibility = View.GONE
+                    binding.rapiditadimano.visibility = View.GONE
+                    binding.indagare.visibility = View.GONE
+                    binding.natura.visibility = View.GONE
+                    binding.storia.visibility = View.GONE
+                    binding.addestrareanimali.visibility = View.GONE
+                    binding.medicina.visibility = View.GONE
+                    binding.intrattenere.visibility = View.GONE
+                }
+
+                "Warlock" ->{
+                    binding.acrobazia.visibility = View.GONE
+                    binding.atletica.visibility = View.GONE
+                    binding.intuizione.visibility = View.GONE
+                    binding.percezione.visibility = View.GONE
+                    binding.sopravvivenza.visibility = View.GONE
+                    binding.furtivita.visibility = View.GONE
+                    binding.rapiditadimano.visibility = View.GONE
+                    binding.addestrareanimali.visibility = View.GONE
+                    binding.medicina.visibility = View.GONE
                     binding.intrattenere.visibility = View.GONE
                     binding.persuasione.visibility = View.GONE
                 }
@@ -181,10 +295,18 @@ class CompetenzeFragment : Fragment() {
     // Prende il numero massimo di competenze selezionabili per la classe scelta
     private fun getNumCompetenzeByClasse(classe: String): Int {
         return when (classe) {
+            "Barbaro" -> 2
             "Bardo" -> 3
+            "Chierico" -> 2
+            "Druido" -> 2
             "Guerriero" -> 2
             "Ladro" -> 4
             "Mago" -> 2
+            "Monaco" -> 2
+            "Paladino" -> 2
+            "Ranger" -> 3
+            "Stregone" -> 2
+            "Warlock" -> 2
             else -> throw IllegalArgumentException("Classe sconosciuta!")
         }
     }

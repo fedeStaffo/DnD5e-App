@@ -24,6 +24,15 @@ class ClassFragment : Fragment() {
     private var ladroSelected = false
     private var guerrieroSelected = false
     private var magoSelected = false
+    private var barbaroSelected = false
+    private var chiericoSelected = false
+    private var druidoSelected = false
+    private var monacoSelected = false
+    private var paladinoSelected = false
+    private var rangerSelected = false
+    private var stregoneSelected = false
+    private var warlockSelected = false
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,45 +55,253 @@ class ClassFragment : Fragment() {
         // metodo updateButtonState della classe ButtonUtils
         val buttonUtils = ButtonUtils(requireContext())
 
+        binding.scegliBarbaro.setOnClickListener {
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
+            buttonUtils.updateButtonState(binding.scegliBarbaro, unclickedButtons)
+            bardoSelected = false
+            ladroSelected = false
+            guerrieroSelected = false
+            magoSelected = false
+            barbaroSelected = true
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
+        }
+
         binding.scegliBardo.setOnClickListener {
-            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago)
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock)
             buttonUtils.updateButtonState(binding.scegliBardo, unclickedButtons)
             bardoSelected = true
             ladroSelected = false
             guerrieroSelected = false
             magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
+        }
+
+        binding.scegliChierico.setOnClickListener {
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
+            buttonUtils.updateButtonState(binding.scegliChierico, unclickedButtons)
+            bardoSelected = false
+            ladroSelected = false
+            guerrieroSelected = false
+            magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = true
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
+        }
+
+        binding.scegliDruido.setOnClickListener {
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
+            buttonUtils.updateButtonState(binding.scegliDruido, unclickedButtons)
+            bardoSelected = false
+            ladroSelected = false
+            guerrieroSelected = false
+            magoSelected = false
+            barbaroSelected = false
+            druidoSelected = true
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
         }
 
         binding.scegliLadro.setOnClickListener {
-            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliBardo, binding.scegliMago)
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
             buttonUtils.updateButtonState(binding.scegliLadro, unclickedButtons)
             bardoSelected = false
             ladroSelected = true
             guerrieroSelected = false
             magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
         }
 
         binding.scegliGuerriero.setOnClickListener {
-            val unclickedButtons = listOf(binding.scegliBardo, binding.scegliLadro, binding.scegliMago)
+            val unclickedButtons = listOf(binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
             buttonUtils.updateButtonState(binding.scegliGuerriero, unclickedButtons)
             bardoSelected = false
             ladroSelected = false
             guerrieroSelected = true
             magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
         }
 
         binding.scegliMago.setOnClickListener {
-            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliBardo)
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
             buttonUtils.updateButtonState(binding.scegliMago, unclickedButtons)
             bardoSelected = false
             ladroSelected = false
             guerrieroSelected = false
             magoSelected = true
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
         }
 
+        binding.scegliMonaco.setOnClickListener {
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
+            buttonUtils.updateButtonState(binding.scegliMonaco, unclickedButtons)
+            bardoSelected = false
+            ladroSelected = false
+            guerrieroSelected = false
+            magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = true
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
+        }
+
+        binding.scegliPaladino.setOnClickListener {
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
+            buttonUtils.updateButtonState(binding.scegliPaladino, unclickedButtons)
+            bardoSelected = false
+            ladroSelected = false
+            guerrieroSelected = false
+            magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = true
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = false
+        }
+
+        binding.scegliRanger.setOnClickListener {
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliStregone, binding.scegliWarlock, binding.scegliBardo)
+            buttonUtils.updateButtonState(binding.scegliRanger, unclickedButtons)
+            bardoSelected = false
+            ladroSelected = false
+            guerrieroSelected = false
+            magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = true
+            stregoneSelected = false
+            warlockSelected = false
+        }
+
+        binding.scegliStregone.setOnClickListener {
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliWarlock, binding.scegliBardo)
+            buttonUtils.updateButtonState(binding.scegliStregone, unclickedButtons)
+            bardoSelected = false
+            ladroSelected = false
+            guerrieroSelected = false
+            magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = true
+            warlockSelected = false
+        }
+
+        binding.scegliWarlock.setOnClickListener {
+            val unclickedButtons = listOf(binding.scegliGuerriero, binding.scegliLadro, binding.scegliMago, binding.scegliBarbaro,
+                binding.scegliChierico, binding.scegliDruido, binding.scegliMonaco, binding.scegliPaladino,
+                binding.scegliRanger, binding.scegliStregone, binding.scegliBardo)
+            buttonUtils.updateButtonState(binding.scegliWarlock, unclickedButtons)
+            bardoSelected = false
+            ladroSelected = false
+            guerrieroSelected = false
+            magoSelected = false
+            barbaroSelected = false
+            druidoSelected = false
+            chiericoSelected = false
+            monacoSelected = false
+            paladinoSelected = false
+            rangerSelected = false
+            stregoneSelected = false
+            warlockSelected = true
+        }
+
+
         // Listener che definiscono il comportamento dei bottoni di info
+        binding.infoBarbaro.setOnClickListener {
+            viewModel.setClassePersonaggio("Barbaro")
+            findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
+        }
+
         binding.infoBardo.setOnClickListener {
             viewModel.setClassePersonaggio("Bardo")
+            findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
+        }
+
+        binding.infoChierico.setOnClickListener {
+            viewModel.setClassePersonaggio("Chierico")
+            findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
+        }
+
+        binding.infoDruido.setOnClickListener {
+            viewModel.setClassePersonaggio("Druido")
             findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
         }
 
@@ -103,13 +320,46 @@ class ClassFragment : Fragment() {
             findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
         }
 
+        binding.infoMonaco.setOnClickListener {
+            viewModel.setClassePersonaggio("Monaco")
+            findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
+        }
+
+        binding.infoPaladino.setOnClickListener {
+            viewModel.setClassePersonaggio("Paladino")
+            findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
+        }
+
+        binding.infoRanger.setOnClickListener {
+            viewModel.setClassePersonaggio("Ranger")
+            findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
+        }
+
+        binding.infoStregone.setOnClickListener {
+            viewModel.setClassePersonaggio("Stregone")
+            findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
+        }
+
+        binding.infoWarlock.setOnClickListener {
+            viewModel.setClassePersonaggio("Warlock")
+            findNavController().navigate(R.id.action_classFragment_to_classInfoFragment)
+        }
+
         // Definisce il comportamento del tasto avanti
         binding.btnAvanti.setOnClickListener {
             val classeSelezionata = when {
+                barbaroSelected -> "Barbaro"
                 bardoSelected -> "Bardo"
+                chiericoSelected -> "Chierico"
+                druidoSelected -> "Druido"
                 ladroSelected -> "Ladro"
                 guerrieroSelected -> "Guerriero"
                 magoSelected -> "Mago"
+                monacoSelected -> "Monaco"
+                paladinoSelected -> "Paladino"
+                rangerSelected -> "Ranger"
+                stregoneSelected -> "Stregone"
+                warlockSelected -> "Warlock"
                 else -> null
             }
 
@@ -125,10 +375,18 @@ class ClassFragment : Fragment() {
     // Resetta i booleani se si torna indietro
     override fun onResume() {
         super.onResume()
-        magoSelected = false
         bardoSelected = false
-        guerrieroSelected = false
         ladroSelected = false
+        guerrieroSelected = false
+        magoSelected = false
+        barbaroSelected = false
+        druidoSelected = false
+        chiericoSelected = false
+        monacoSelected = false
+        paladinoSelected = false
+        rangerSelected = false
+        stregoneSelected = false
+        warlockSelected = false
     }
 
     override fun onDestroyView() {

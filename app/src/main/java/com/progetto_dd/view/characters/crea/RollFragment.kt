@@ -115,7 +115,16 @@ class RollFragment : Fragment() {
         var num = 0
         if(razza == "Umano") num = 1
         if(razza == "Elfo" && caratteristica == "Destrezza") num = 2
+        if(razza == "Dragonide" && caratteristica == "Forza") num = 2
+        if(razza == "Dragonide" && caratteristica == "Carisma") num = 1
+        if(razza == "Halfling" && caratteristica == "Destrezza") num = 2
+        if(razza == "Gnomo" && caratteristica == "Intelligenza") num = 2
         if(razza == "Nano" && caratteristica == "Costituzione") num = 2
+        if(razza == "Mezzelfo" && caratteristica == "Carisma") num = 2
+        if(razza == "Mezzorco" && caratteristica == "Forza") num = 2
+        if(razza == "Mezzorco" && caratteristica == "Costituzione") num = 1
+        if(razza == "Tiefling" && caratteristica == "Carisma") num = 2
+        if(razza == "Tiefling" && caratteristica == "Intelligenza") num = 1
         return num
     }
 

@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
 class PersonaggioViewModel : ViewModel() {
@@ -255,10 +256,6 @@ class PersonaggioViewModel : ViewModel() {
         // Ottieni una referenza alla collezione "personaggi"
         val personaggiRef = db.collection("personaggi")
 
-        // Ottieni la lista attuale di equipaggiamento dal MutableLiveData
-        val equipaggiamentoList = _equipaggiamento.value?.toMutableList() ?: mutableListOf()
-        equipaggiamentoList.add(nuovoOggetto)
-
         // Esegui una query per ottenere il personaggio corrispondente al nome e alla campagna specificati
         val personaggioQuery = personaggiRef
             .whereEqualTo("nome", nomePersonaggio)
@@ -269,9 +266,9 @@ class PersonaggioViewModel : ViewModel() {
                 val documentSnapshot = querySnapshot.documents[0]
                 val personaggioId = documentSnapshot.id
 
-                // Crea un HashMap con i dati da aggiornare nel documento del personaggio
+                // Aggiungi il nuovo oggetto alla lista attuale di equipaggiamento
                 val updateData = hashMapOf<String, Any>(
-                    "equipaggiamento" to equipaggiamentoList
+                    "equipaggiamento" to FieldValue.arrayUnion(nuovoOggetto)
                 )
 
                 // Esegui l'aggiornamento del documento del personaggio con i nuovi dati
