@@ -13,7 +13,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" android:tag="layout/fragment_competenze_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context=".view.characters.crea.CompetenzeFragment">
+        android:layout_height="match_parent"
+        android:padding="16dp" android:tag="layout/fragment_competenze_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context=".view.characters.crea.CompetenzeFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,20 +25,19 @@
                 android:id="@+id/numCompetenzeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:padding="16dp"
+                android:gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 android:tag="binding_1"                                  
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="22sp"/>
+                android:textSize="25sp"/>
 
             <LinearLayout
+                android:layout_marginTop="30dp"
                 android:id="@+id/atletica"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/atleticaCheckBox"
@@ -45,11 +45,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Atletica"
+                    android:text="@string/atletica_for"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -57,8 +59,7 @@
                 android:id="@+id/acrobazia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/acrobaziaCheckBox"
@@ -66,11 +67,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Acrobazia"
+                    android:text="@string/acrobazia_des"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -78,8 +81,7 @@
                 android:id="@+id/furtivita"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/furtivitaCheckBox"
@@ -87,11 +89,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Furtività"
+                    android:text="@string/furtivit_des"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -99,8 +103,7 @@
                 android:id="@+id/rapiditadimano"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/rapiditamanoCheckBox"
@@ -108,11 +111,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Rapidità di mano"
+                    android:text="@string/rapidit_di_mano_des"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -120,8 +125,7 @@
                 android:id="@+id/arcano"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/arcanoCheckBox"
@@ -129,11 +133,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Arcano"
+                    android:text="@string/arcano_int"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -141,8 +147,7 @@
                 android:id="@+id/storia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/storiaCheckBox"
@@ -150,11 +155,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Storia"
+                    android:text="@string/storia_int"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -162,8 +169,7 @@
                 android:id="@+id/indagare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/indagareCheckBox"
@@ -171,11 +177,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Indagare"
+                    android:text="@string/indagare_int"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -183,8 +191,7 @@
                 android:id="@+id/natura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/naturaCheckBox"
@@ -192,11 +199,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Natura"
+                    android:text="@string/natura_int"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -204,8 +213,7 @@
                 android:id="@+id/religione"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/religioneCheckBox"
@@ -213,11 +221,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Religione"
+                    android:text="@string/religione_int"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -225,8 +235,7 @@
                 android:id="@+id/addestrareanimali"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/addanimaliCheckBox"
@@ -234,11 +243,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Addestrare Animali"
+                    android:text="@string/addestrare_animali_sag"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -246,8 +257,7 @@
                 android:id="@+id/intuizione"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/intuizioneCheckBox"
@@ -255,11 +265,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Intuizione"
+                    android:text="@string/intuizione_sag"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -267,8 +279,7 @@
                 android:id="@+id/medicina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/medicinaCheckBox"
@@ -276,11 +287,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Medicina"
+                    android:text="@string/medicina_sag"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -288,8 +301,7 @@
                 android:id="@+id/percezione"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/percezioneCheckBox"
@@ -297,11 +309,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Percezione"
+                    android:text="@string/percezione_sag"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -309,8 +323,7 @@
                 android:id="@+id/sopravvivenza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/sopravvivenzaCheckBox"
@@ -318,11 +331,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Sopravvivenza"
+                    android:text="@string/sopravvivenza_sag"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -330,8 +345,7 @@
                 android:id="@+id/inganno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/ingannoCheckBox"
@@ -339,11 +353,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Inganno"
+                    android:text="@string/inganno_car"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -351,8 +367,7 @@
                 android:id="@+id/intimidazione"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/intimidazioneCheckBox"
@@ -360,11 +375,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Intimidire"
+                    android:text="@string/intimidire_car"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -372,8 +389,7 @@
                 android:id="@+id/intrattenere"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/intrattenereCheckBox"
@@ -381,11 +397,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Intrattenere"
+                    android:text="@string/intrattenere_car"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
@@ -393,8 +411,7 @@
                 android:id="@+id/persuasione"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/persuasioneCheckBox"
@@ -402,17 +419,20 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="Persuasione"
+                    android:text="@string/persuasione_car"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp">
 
                 <Button
                     android:id="@+id/btn_avanti"

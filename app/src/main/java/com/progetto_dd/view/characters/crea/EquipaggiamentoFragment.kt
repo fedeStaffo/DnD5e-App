@@ -41,7 +41,7 @@ class EquipaggiamentoFragment : Fragment() {
         // Inizializza il view model del Personaggio
         viewModel = ViewModelProvider(requireActivity()).get(PersonaggioViewModel::class.java)
 
-        val scelta = binding.scelta3
+        val scelta = binding.scelta4
 
         spinner1 = binding.spinnerScelta1
         val arrayList1Bardo = resources.getStringArray(R.array.scelta_bardo_1)
@@ -79,7 +79,7 @@ class EquipaggiamentoFragment : Fragment() {
         val arrayList3Barbaro = resources.getStringArray(R.array.scelta_barbaro_3)
         val arrayList3Chierico = resources.getStringArray(R.array.scelta_chierico_3)
         val arrayList3Druido = resources.getStringArray(R.array.scelta_druido_3)
-        val arrayList3Monaco = resources.getStringArray(R.array.scelta_monaco_3)
+        val arrayList3Monaco = resources.getStringArray(R.array.scelta_monaco_4)
         val arrayList3Paladino = resources.getStringArray(R.array.scelta_paladino_3)
         val arrayList3Ranger = resources.getStringArray(R.array.scelta_ranger_3)
         val arrayList3Stregone = resources.getStringArray(R.array.scelta_stregone_3)
@@ -93,7 +93,7 @@ class EquipaggiamentoFragment : Fragment() {
         val arrayList4Barbaro = resources.getStringArray(R.array.scelta_barbaro_4)
         val arrayList4Chierico = resources.getStringArray(R.array.scelta_chierico_4)
         val arrayList4Druido = resources.getStringArray(R.array.scelta_druido_4)
-        val arrayList4Monaco = resources.getStringArray(R.array.scelta_monaco_4)
+        val arrayList4Monaco = resources.getStringArray(R.array.scelta_monaco_3)
         val arrayList4Paladino = resources.getStringArray(R.array.scelta_paladino_4)
         val arrayList4Ranger = resources.getStringArray(R.array.scelta_ranger_4)
         val arrayList4Stregone = resources.getStringArray(R.array.scelta_stregone_4)
@@ -318,20 +318,20 @@ class EquipaggiamentoFragment : Fragment() {
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                 spinner2.adapter = adapter
 
-                spinner3.visibility = View.GONE
-                scelta.visibility = View.GONE
+                spinner4.visibility = View.INVISIBLE
+                scelta.visibility = View.INVISIBLE
 
-                adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, arrayList4Monaco)
+                adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, arrayList3Monaco)
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                spinner4.adapter = adapter
+                spinner3.adapter = adapter
             }
         }
 
         binding.btnAvanti.setOnClickListener {
             val selezione1 = binding.spinnerScelta1.selectedItem as String
             val selezione2 = binding.spinnerScelta2.selectedItem as String
-            val selezione3 = binding.spinnerScelta3.selectedItem as? String
-            val selezione4 = binding.spinnerScelta4.selectedItem as String
+            val selezione3 = binding.spinnerScelta3.selectedItem as String
+            val selezione4 = binding.spinnerScelta4.selectedItem as? String
             val selezioneG = binding.spinnerSceltaExtra.selectedItem as? String
 
             if(classe == "Guerriero" && selezioneG == "-")
@@ -450,7 +450,7 @@ class EquipaggiamentoFragment : Fragment() {
                         }
                     }
                     if(classe == "Monaco"){
-                        when(selezione4){
+                        when(selezione3){
                             "Una dotazione da avventuriero" -> {
                                 val nuovoEquipaggiamento = listOf(selezione1,selezione2,
                                     "zaino","piede di porco","martello","10 chiodi da rocciatore",

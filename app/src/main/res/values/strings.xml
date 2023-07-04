@@ -47,7 +47,7 @@
 
     <!-- Razze-->
     <string name="scegli_la_razza">Scegli la razza</string>
-    <string name="scegli_la_sottorazza">Scegli una sottorazza</string>
+    <string name="scegli_la_sottorazza">Scegli la sottorazza</string>
     <string name="umano">Umano</string>
     <string name="elfo">Elfo</string>
     <string name="elfo_alto">Elfo alto</string>
@@ -70,11 +70,7 @@
     <!-- Background -->
     <string name="background_title">BACKGROUND</string>
     <string name="background">
-Ogni storia ha un inizio.
-La storia del tuo personaggio rivela da dove provieni, come sei diventato un avventuriero, e il tuo posto nel mondo.
-Il tuo guerriero può essere stato un coraggioso cavaliere o un vecchio soldato.
-Il tuo mago può essere stato un saggio o un artigiano.
-Il tuo ladro potrebbe essersi guadagnato da vivere lavorando per una gilda o intrattenendo il pubblico come un giullare.
+Ogni storia ha un inizio.\nLa storia del tuo personaggio rivela da dove provieni, come sei diventato un avventuriero, e il tuo posto nel mondo.\nIl tuo guerriero può essere stato un coraggioso cavaliere o un vecchio soldato.\nIl tuo mago può essere stato un saggio o un artigiano.\nIl tuo ladro potrebbe essersi guadagnato da vivere lavorando per una gilda o intrattenendo il pubblico come un giullare.
 </string>
 
     <string name="descrizione">Descrizione fisica:</string>
@@ -99,58 +95,32 @@ Il tuo ladro potrebbe essersi guadagnato da vivere lavorando per una gilda o int
 
     <string name="forza_title">FORZA</string>
     <string name="forza">
-La Forza misura la potenza del proprio corpo, l\'addestramento fisico e l\'efficacia
-con cui un personaggio è in grado di esercitare la propria potenza fisica.
-Una prova di forza può rappresentareogni tentativo di sollevare, spingere, tirareo spezzare qualcosa,
-di farsi strada atraverso uno spazio, o di applicare in altri modi la forza bruta a una situazione.
-L\'abilità atletica rappresenta una maggiore prestanza in certi tipi di prove di forza.
+La Forza misura la potenza del proprio corpo, l\'addestramento fisico e l\'efficaciacon cui un personaggio è in grado di esercitare la propria potenza fisica.\nUna prova di forza può rappresentareogni tentativo di sollevare, spingere, tirareo spezzare qualcosa,di farsi strada atraverso uno spazio, o di applicare in altri modi la forza bruta a una situazione.\nL\'abilità atletica rappresenta una maggiore prestanza in certi tipi di prove di forza.
     </string>
 
     <string name="destrezza_title">DESTREZZA</string>
     <string name="destrezza">
-La Destrezza misura l\'agilità, i riflessi e l\'equilibrio.
-Una prova di destrezza può rappresentar ogni tentativo di muoversi agilmente, rapidamente o silenziosamente,
-o di evitare di cadere quando ci si muove su una superficie precaria.
-Le abilità acrobazia, furtività e rapidità di mano rappresentano una maggiore bravura in certi tipi di prove di destrezza.
+La Destrezza misura l\'agilità, i riflessi e l\'equilibrio.\nUna prova di destrezza può rappresentar ogni tentativo di muoversi agilmente, rapidamente o silenziosamente, o di evitare di cadere quando ci si muove su una superficie precaria.\nLe abilità acrobazia, furtività e rapidità di mano rappresentano una maggiore bravura in certi tipi di prove di destrezza.
     </string>
 
     <string name="costituzione_title">COSTITUZIONE</string>
     <string name="costituzione">
-La Costituzione misura la salute, la resistenza fisica e l\'energia vitale del personaggio.
-Le prove di costituzione sono rare: nessuna abilità viene applicata alle prove di costituzione, in
-quanto la resistenza fisica rappresenta da questa caratteristica è principalmente una dote passiva
-e non richiede uno sforzo specifico da parte di un personaggio o di un mostro.
-Una prova di costituzione può tuttavia rappresentare il tentativo di un personaggio di spingersi
-oltre i propri limiti.
+La Costituzione misura la salute, la resistenza fisica e l\'energia vitale del personaggio.\nLe prove di costituzione sono rare: nessuna abilità viene applicata alle prove di costituzione, in quanto la resistenza fisica rappresenta da questa caratteristica è principalmente una dote passiva e non richiede uno sforzo specifico da parte di un personaggio o di un mostro.\nUna prova di costituzione può tuttavia rappresentare il tentativo di un personaggio di spingersi oltre i propri limiti.
     </string>
 
     <string name="intelligenza_title">INTELLIGENZA</string>
     <string name="intelligenza">
-L\'Intelligenza misura l\'acume mentale, la precisione della memoria e le capacità logiche.
-Una prova di Intelligenza entra in gioco quando un personaggio ricorre alla logica,
-all\'istruzione, alla memoria o al ragionamento deduttivo.
-Le abilità arcano, indagare, natura, religione e storia rappresentano una preparazione
-superiore in certi tipi di prove di intelligenza.
+L\'Intelligenza misura l\'acume mentale, la precisione della memoria e le capacità logiche.\nUna prova di Intelligenza entra in gioco quando un personaggio ricorre alla logica, all\'istruzione, alla memoria o al ragionamento deduttivo.\nLe abilità arcano, indagare, natura, religione e storia rappresentano una preparazione superiore in certi tipi di prove di intelligenza.
     </string>
 
     <string name="saggezza_title">SAGGEZZA</string>
     <string name="saggezza">
-La Saggezza rappresenta la percezione, l\'intuizione e il grado di sintonia del personaggio con il mondo circostante.
-Una prova di saggezza rappresenta un tentativo di interpretare il linguaggio corporeo
-o le emozioni di qualcuno, notare qualcosa nell\'ambiente o prendersi cura di una persona ferita.
-Le abilità addestrare animali, intuizione, medicina, percezione e sopravvivenza rappresentano una
-maggiore sensibilità in certi tipi di prove di saggezza.
+La Saggezza rappresenta la percezione, l\'intuizione e il grado di sintonia del personaggio con il mondo circostante.\nUna prova di saggezza rappresenta un tentativo di interpretare il linguaggio corporeo o le emozioni di qualcuno, notare qualcosa nell\'ambiente o prendersi cura di una persona ferita.\nLe abilità addestrare animali, intuizione, medicina, percezione e sopravvivenza rappresentano una maggiore sensibilità in certi tipi di prove di saggezza.
     </string>
 
     <string name="carisma_title">CARISMA</string>
     <string name="carisma">
-Il Carisma misura la capacità del personaggio di interagire con successo con gli altri.
-Include fattori come la sua sicurezza e la sua eloquenza e può rappresentare una personalità accattivante o imperiosa.
-Un personaggio può effettuare una prova di carisma quando cerca di influenzare o di intrattenere gli altri,
-quando tenta di impressionare qualcuno o di raccontare una bugia convincente,
-o quando deve destreggiarsi in una situazione sociale spinosa.
-Le abilità Inganno, Intimidire, Intrattenere e Persuasione rappresentano una maggiore
-disinvoltura in certi tipi di prove di Carisma.
+Il Carisma misura la capacità del personaggio di interagire con successo con gli altri.\nInclude fattori come la sua sicurezza e la sua eloquenza e può rappresentare una personalità accattivante o imperiosa.\nUn personaggio può effettuare una prova di carisma quando cerca di influenzare o di intrattenere gli altri, quando tenta di impressionare qualcuno o di raccontare una bugia convincente, o quando deve destreggiarsi in una situazione sociale spinosa.\nLe abilità Inganno, Intimidire, Intrattenere e Persuasione rappresentano una maggiore disinvoltura in certi tipi di prove di Carisma.
     </string>
     <string name="partecipa">Partecipa</string>
     <string name="crea_personaggio">Crea Personaggio</string>
@@ -487,7 +457,7 @@ disinvoltura in certi tipi di prove di Carisma.
         <item>-</item>
         <item>Una dotazione da esploratore</item>
     </string-array>
-    
+
     <string-array name="scelta_monaco_1">
         <item>-</item>
         <item>Spada corta</item>
@@ -1001,5 +971,75 @@ disinvoltura in certi tipi di prove di Carisma.
     <string name="ranger">Ranger</string>
     <string name="stregone">Stregone</string>
     <string name="warlock">Warlock</string>
+    <string name="competenze_umano">Competenze: umano</string>
+    <string name="liguaggio_extra_a_scelta">Liguaggio extra a scelta:</string>
+    <string name="halfling_npiedelesto">Halfling\nPiedelesto</string>
+    <string name="halfling_ntozzo">Halfling\nTozzo</string>
+    <string name="gnomo_ndelle_foreste">Gnomo\ndelle foreste</string>
+    <string name="gnomo_ndelle_rocce">Gnomo\ndelle rocce</string>
+    <string name="drago_d_argento">Drago d\'argento</string>
+    <string name="drago_bianco">Drago bianco</string>
+    <string name="drago_blu">Drago blu</string>
+    <string name="drago_di_bronzo">Drago di bronzo</string>
+    <string name="drago_nero">Drago nero</string>
+    <string name="drago_d_oro">Drago d\'oro</string>
+    <string name="drago_d_ottone">Drago d\'ottone</string>
+    <string name="drago_di_rame">Drago di rame</string>
+    <string name="drago_rosso">Drago rosso</string>
+    <string name="drago_verde">Drago verde</string>
+    <string name="atletica_for">Atletica (For)</string>
+    <string name="acrobazia_des">Acrobazia (Des)</string>
+    <string name="furtivit_des">Furtività (Des)</string>
+    <string name="rapidit_di_mano_des">Rapidità di mano (Des)</string>
+    <string name="arcano_int">Arcano (Int)</string>
+    <string name="storia_int">Storia (Int)</string>
+    <string name="indagare_int">Indagare (Int)</string>
+    <string name="natura_int">Natura (Int)</string>
+    <string name="religione_int">Religione (Int)</string>
+    <string name="addestrare_animali_sag">Addestrare Animali (Sag)</string>
+    <string name="intuizione_sag">Intuizione (Sag)</string>
+    <string name="medicina_sag">Medicina (Sag)</string>
+    <string name="percezione_sag">Percezione (Sag)</string>
+    <string name="sopravvivenza_sag">Sopravvivenza (Sag)</string>
+    <string name="inganno_car">Inganno (Car)</string>
+    <string name="intimidire_car">Intimidire (Car)</string>
+    <string name="intrattenere_car">Intrattenere (Car)</string>
+    <string name="persuasione_car">Persuasione (Car)</string>
+    <string name="_1_scelta">1° scelta</string>
+    <string name="_2_scelta">2° scelta</string>
+    <string name="_3_scelta">3° scelta</string>
+    <string name="_4_scelta">4° scelta</string>
+    <string name="nano_ndelle_colline">Nano\ndelle colline</string>
+    <string name="nano_ndelle_montagne">Nano\ndelle montagne</string>
+    <string name="competenza_negli_strumenti">Competenza negli strumenti</string>
+    <string name="strumenti_da_fabbro">Strumenti da fabbro</string>
+    <string name="strumenti_da_costruttore">Strumenti da costruttore</string>
+    <string name="strumenti_da_mescitore">Strumenti da mescitore</string>
+    <string name="competenze_mezzelfo">Competenze: mezzelfo</string>
+    <string name="incremento_punteggi_caratteristica_n_scegli_2_caratteristiche_a_cui_dare_un_1">Incremento punteggi caratteristica\n(scegli 2 caratteristiche a cui dare un +1)</string>
+    <string name="carisma3">Carisma</string>
+    <string name="saggezza3">Saggezza</string>
+    <string name="intelligenza3">Intelligenza</string>
+    <string name="costituzione3">Costituzione</string>
+    <string name="destrezza3">Destrezza</string>
+    <string name="forza3">Forza</string>
+    <string name="scegli_2_tra_le_seguenti_competenze">Scegli 2 tra le seguenti competenze</string>
+
+    <string-array name="lingua_extra">
+        <item>Gigante</item>
+        <item>Gnomesco</item>
+        <item>Goblin</item>
+        <item>Halfling</item>
+        <item>Nanico</item>
+        <item>Orchesco</item>
+        <item>Abissale</item>
+        <item>Celestiale</item>
+        <item>Draconico</item>
+        <item>Gergo delle profondità</item>
+        <item>Infernale</item>
+        <item>Primordiale</item>
+        <item>Silvano</item>
+        <item>Sottocomune</item>
+    </string-array>
 </resources>
 

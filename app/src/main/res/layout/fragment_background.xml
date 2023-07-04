@@ -20,8 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -36,8 +35,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:layout_marginTop="4dp"
                 android:text="@string/background"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -46,6 +43,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="6dp"
                 android:text="@string/descrizione"
                 android:textColor="@color/black"
@@ -56,12 +54,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/descrizioneEt"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="6dp"
                 android:text="@string/storia"
                 android:textColor="@color/black"
@@ -72,12 +71,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/storiaEt"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/tratti_caratteriali"
                 android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -87,12 +87,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/trattiEt"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/difetti"
                 android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -102,12 +103,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/difettiEt"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/ideali"
                 android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -117,12 +119,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idealiEt"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/legami"
                 android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -132,12 +135,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/legamiEt"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/allineamento"
                 android:textColor="@color/black"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -148,8 +152,9 @@
             <Spinner
                 android:id="@+id/allineamentoSpinner"
                 android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:entries="@array/allineamento_spinner"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
