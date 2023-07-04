@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -44,6 +45,12 @@ public abstract class FragmentCompetenzeBinding extends ViewDataBinding {
 
   @NonNull
   public final Button btnAvanti;
+
+  @NonNull
+  public final LinearLayout competenzeBardo;
+
+  @NonNull
+  public final LinearLayout competenzeMonaco;
 
   @NonNull
   public final LinearLayout furtivita;
@@ -127,6 +134,21 @@ public abstract class FragmentCompetenzeBinding extends ViewDataBinding {
   public final CheckBox sopravvivenzaCheckBox;
 
   @NonNull
+  public final Spinner spinner1;
+
+  @NonNull
+  public final Spinner spinner2;
+
+  @NonNull
+  public final Spinner spinner3;
+
+  @NonNull
+  public final Spinner spinnerArtigiano;
+
+  @NonNull
+  public final Spinner spinnerMusicale;
+
+  @NonNull
   public final LinearLayout storia;
 
   @NonNull
@@ -138,7 +160,8 @@ public abstract class FragmentCompetenzeBinding extends ViewDataBinding {
   protected FragmentCompetenzeBinding(Object _bindingComponent, View _root, int _localFieldCount,
       LinearLayout acrobazia, CheckBox acrobaziaCheckBox, CheckBox addanimaliCheckBox,
       LinearLayout addestrareanimali, LinearLayout arcano, CheckBox arcanoCheckBox,
-      LinearLayout atletica, CheckBox atleticaCheckBox, Button btnAvanti, LinearLayout furtivita,
+      LinearLayout atletica, CheckBox atleticaCheckBox, Button btnAvanti,
+      LinearLayout competenzeBardo, LinearLayout competenzeMonaco, LinearLayout furtivita,
       CheckBox furtivitaCheckBox, LinearLayout indagare, CheckBox indagareCheckBox,
       LinearLayout inganno, CheckBox ingannoCheckBox, LinearLayout intimidazione,
       CheckBox intimidazioneCheckBox, LinearLayout intrattenere, CheckBox intrattenereCheckBox,
@@ -147,8 +170,9 @@ public abstract class FragmentCompetenzeBinding extends ViewDataBinding {
       TextView numCompetenzeText, LinearLayout percezione, CheckBox percezioneCheckBox,
       LinearLayout persuasione, CheckBox persuasioneCheckBox, LinearLayout rapiditadimano,
       CheckBox rapiditamanoCheckBox, LinearLayout religione, CheckBox religioneCheckBox,
-      LinearLayout sopravvivenza, CheckBox sopravvivenzaCheckBox, LinearLayout storia,
-      CheckBox storiaCheckBox) {
+      LinearLayout sopravvivenza, CheckBox sopravvivenzaCheckBox, Spinner spinner1,
+      Spinner spinner2, Spinner spinner3, Spinner spinnerArtigiano, Spinner spinnerMusicale,
+      LinearLayout storia, CheckBox storiaCheckBox) {
     super(_bindingComponent, _root, _localFieldCount);
     this.acrobazia = acrobazia;
     this.acrobaziaCheckBox = acrobaziaCheckBox;
@@ -159,6 +183,8 @@ public abstract class FragmentCompetenzeBinding extends ViewDataBinding {
     this.atletica = atletica;
     this.atleticaCheckBox = atleticaCheckBox;
     this.btnAvanti = btnAvanti;
+    this.competenzeBardo = competenzeBardo;
+    this.competenzeMonaco = competenzeMonaco;
     this.furtivita = furtivita;
     this.furtivitaCheckBox = furtivitaCheckBox;
     this.indagare = indagare;
@@ -186,6 +212,11 @@ public abstract class FragmentCompetenzeBinding extends ViewDataBinding {
     this.religioneCheckBox = religioneCheckBox;
     this.sopravvivenza = sopravvivenza;
     this.sopravvivenzaCheckBox = sopravvivenzaCheckBox;
+    this.spinner1 = spinner1;
+    this.spinner2 = spinner2;
+    this.spinner3 = spinner3;
+    this.spinnerArtigiano = spinnerArtigiano;
+    this.spinnerMusicale = spinnerMusicale;
     this.storia = storia;
     this.storiaCheckBox = storiaCheckBox;
   }

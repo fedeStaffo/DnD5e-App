@@ -30,14 +30,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginStart="20dp"
-            android:text="@string/gnomo_ndelle_foreste"
+            android:layout_marginStart="4dp"
             android:gravity="center_horizontal"
-            android:textStyle="bold"
+            android:text="@string/gnomo_delle_nforeste"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/scegli_foreste"
@@ -73,14 +74,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginStart="20dp"
-            android:text="@string/gnomo_ndelle_rocce"
+            android:layout_marginStart="4dp"
             android:gravity="center_horizontal"
-            android:textStyle="bold"
+            android:text="@string/gnomo_delle_nrocce"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/scegli_rocce"

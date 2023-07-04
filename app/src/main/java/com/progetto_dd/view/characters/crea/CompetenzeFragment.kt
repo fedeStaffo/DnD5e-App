@@ -39,6 +39,7 @@ class CompetenzeFragment : Fragment() {
         // Ottieni le competenze per una specifica classe (esempio: "Guerriero")
         val classe = viewModelPersonaggio.classePersonaggio.value
 
+
         if (classe != null) {
 
             // Prende il numero di competenze in base alla classe passata
@@ -47,7 +48,12 @@ class CompetenzeFragment : Fragment() {
 
             // Setta le competenze per ogni classe
             when (classe) {
+                "Bardo" -> {
+                    binding.competenzeMonaco.visibility = View.GONE
+                }
                 "Barbaro" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.acrobazia.visibility = View.GONE
                     binding.intuizione.visibility = View.GONE
                     binding.furtivita.visibility = View.GONE
@@ -63,6 +69,8 @@ class CompetenzeFragment : Fragment() {
                 }
 
                 "Chierico" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.acrobazia.visibility = View.GONE
                     binding.atletica.visibility = View.GONE
                     binding.intimidazione.visibility = View.GONE
@@ -79,6 +87,8 @@ class CompetenzeFragment : Fragment() {
                 }
 
                 "Druido" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.acrobazia.visibility = View.GONE
                     binding.atletica.visibility = View.GONE
                     binding.intimidazione.visibility = View.GONE
@@ -92,6 +102,8 @@ class CompetenzeFragment : Fragment() {
                 }
 
                 "Guerriero" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.furtivita.visibility = View.GONE
                     binding.rapiditadimano.visibility = View.GONE
                     binding.arcano.visibility = View.GONE
@@ -104,6 +116,8 @@ class CompetenzeFragment : Fragment() {
                     binding.persuasione.visibility = View.GONE
                 }
                 "Ladro" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.arcano.visibility = View.GONE
                     binding.natura.visibility = View.GONE
                     binding.religione.visibility = View.GONE
@@ -112,6 +126,8 @@ class CompetenzeFragment : Fragment() {
                     binding.intrattenere.visibility = View.GONE
                 }
                 "Mago" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.atletica.visibility = View.GONE
                     binding.acrobazia.visibility = View.GONE
                     binding.furtivita.visibility = View.GONE
@@ -127,6 +143,7 @@ class CompetenzeFragment : Fragment() {
                 }
 
                 "Monaco" ->{
+                    binding.competenzeBardo.visibility = View.GONE
                     binding.intimidazione.visibility = View.GONE
                     binding.percezione.visibility = View.GONE
                     binding.sopravvivenza.visibility = View.GONE
@@ -142,6 +159,8 @@ class CompetenzeFragment : Fragment() {
                 }
 
                 "Paladino" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.acrobazia.visibility = View.GONE
                     binding.percezione.visibility = View.GONE
                     binding.sopravvivenza.visibility = View.GONE
@@ -157,6 +176,8 @@ class CompetenzeFragment : Fragment() {
                 }
 
                 "Ranger" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.acrobazia.visibility = View.GONE
                     binding.intimidazione.visibility = View.GONE
                     binding.rapiditadimano.visibility = View.GONE
@@ -170,6 +191,8 @@ class CompetenzeFragment : Fragment() {
                 }
 
                 "Stregone" -> {
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.acrobazia.visibility = View.GONE
                     binding.atletica.visibility = View.GONE
                     binding.percezione.visibility = View.GONE
@@ -185,6 +208,8 @@ class CompetenzeFragment : Fragment() {
                 }
 
                 "Warlock" ->{
+                    binding.competenzeBardo.visibility = View.GONE
+                    binding.competenzeMonaco.visibility = View.GONE
                     binding.acrobazia.visibility = View.GONE
                     binding.atletica.visibility = View.GONE
                     binding.intuizione.visibility = View.GONE
@@ -272,7 +297,77 @@ class CompetenzeFragment : Fragment() {
             )
 
             binding.btnAvanti.setOnClickListener {
-                if (myList.size == numCompetenze) {
+                val selezione1 = binding.spinner1.selectedItem as? String
+                val selezione2 = binding.spinner2.selectedItem as? String
+                val selezione3 = binding.spinner3.selectedItem as? String
+                val selezioneMus = binding.spinnerMusicale.selectedItem as? String
+                val selezioneArt = binding.spinnerArtigiano.selectedItem as? String
+                val list = viewModelPersonaggio.competenzePersonaggio.value
+
+                if (classe == "Bardo") {
+                    if(myList.size != numCompetenze){
+                        Toast.makeText(
+                            context,
+                            "Seleziona il numero richiesto di competenze!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }else if (selezione1 == selezione2 || selezione2 == selezione3 || selezione1 == selezione3){
+                        Toast.makeText(
+                            context,
+                            "Le competenze musicali devono essere diverse tra di loro",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }else if (selezione1 == "Scegli una competenza musicale" || selezione2 == "Scegli una competenza musicale" || selezione3 == "Scegli una competenza musicale"){
+                        Toast.makeText(
+                            context,
+                            "Non hai selezionato tutte le competenze musicali",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }else{
+                        if (selezione1 != null && selezione2 != null && selezione3 != null) {
+                            myList.add(selezione1)
+                            myList.add(selezione2)
+                            myList.add(selezione3)
+                            if (list != null) myList.add(list.toString())
+                        }
+                        viewModelPersonaggio.setCompetenzePersonaggio(myList)
+                        findNavController().navigate(R.id.action_competenzeFragment_to_backgroundFragment)
+                    }
+                }else if (classe == "Monaco"){
+                    if(myList.size != numCompetenze){
+                        Toast.makeText(
+                            context,
+                            "Seleziona il numero richiesto di competenze!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }else if (selezioneMus == "Scegli una competenza musicale" && selezioneArt == "Scegli una competenza da artigiano"){
+                        Toast.makeText(
+                            context,
+                            "Devi selezionare una competenza aggiuntiva",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }else if (selezioneMus != "Scegli una competenza musicale" && selezioneArt != "Scegli una competenza da artigiano"){
+                        Toast.makeText(
+                            context,
+                            "Devi selezionare solo una competenza. Rimetti (Scegli una competenza musicale) o (Scegli una competenza da artigiano) per andare avanti",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }else {
+                        if (selezioneMus != null && selezioneArt != null) {
+                            if(selezioneMus != "Scegli una competenza musicale") {
+                                myList.add(selezioneMus)
+                                if (list != null) myList.add(list.toString())
+                            }
+                            else {
+                                myList.add(selezioneArt)
+                                if (list != null) myList.add(list.toString())
+                            }
+                        }
+                        viewModelPersonaggio.setCompetenzePersonaggio(myList)
+                        findNavController().navigate(R.id.action_competenzeFragment_to_backgroundFragment)
+                    }
+                }else if (myList.size == numCompetenze) {
+                    if (list != null) myList.add(list.toString())
                     viewModelPersonaggio.setCompetenzePersonaggio(myList)
                     findNavController().navigate(R.id.action_competenzeFragment_to_backgroundFragment)
                 } else {
@@ -338,12 +433,6 @@ class CompetenzeFragment : Fragment() {
         myList.clear()
     }
 
-
-    /**
-     * Restituisce un listener per la checkbox delle competenze.
-     * @param competenza La competenza corrispondente alla checkbox.
-     * @return Il listener per la checkbox delle competenze.
-     */
     private fun createCompetenzaCheckBoxListener(
         competenza: String
     ): CompoundButton.OnCheckedChangeListener {

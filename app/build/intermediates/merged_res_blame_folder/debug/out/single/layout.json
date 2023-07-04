@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_caratteristiche_mezzelfo.xml",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_caratteristiche_mezzelfo.xml"
+    },
+    {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\nav_immagine_campagna.xml",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\nav_immagine_campagna.xml"
     },
@@ -80,6 +84,10 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_background.xml"
     },
     {
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_sottorazza_nano.xml",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_sottorazza_nano.xml"
+    },
+    {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_modifica_background.xml",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_modifica_background.xml"
     },
@@ -92,8 +100,8 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_info_magia.xml"
     },
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-64:/layout/fragment_race_info.xml",
-        "source": "com.progetto_dd.app-main-67:/layout/fragment_race_info.xml"
+        "merged": "com.progetto_dd.app-mergeDebugResources-64:/layout/fragment_sottorazza_elfo.xml",
+        "source": "com.progetto_dd.app-main-67:/layout/fragment_sottorazza_elfo.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_zaino.xml",
@@ -108,12 +116,16 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\activity_campaigns.xml"
     },
     {
-        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_stats.xml",
-        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_stats.xml"
+        "merged": "com.progetto_dd.app-mergeDebugResources-64:/layout/fragment_sottorazza_nano.xml",
+        "source": "com.progetto_dd.app-main-67:/layout/fragment_sottorazza_nano.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_caratteristica_umano.xml",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_caratteristica_umano.xml"
+    },
+    {
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_stats.xml",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_stats.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_info.xml",
@@ -140,8 +152,8 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\item_personaggio.xml"
     },
     {
-        "merged": "com.progetto_dd.app-mergeDebugResources-64:/layout/fragment_class_info.xml",
-        "source": "com.progetto_dd.app-main-67:/layout/fragment_class_info.xml"
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_sottorazza_elfo.xml",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_sottorazza_elfo.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\dialog_edit_slot.xml",
@@ -178,6 +190,10 @@
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_home_character.xml",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_home_character.xml"
+    },
+    {
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_sottorazza_info.xml",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_sottorazza_info.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_crea_sessioni.xml",
@@ -244,12 +260,12 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_stats_classe_razza.xml"
     },
     {
-        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_name_character.xml",
-        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_name_character.xml"
-    },
-    {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_tipo_dragonide.xml",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_tipo_dragonide.xml"
+    },
+    {
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_name_character.xml",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_name_character.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-mergeDebugResources-64:\\layout\\fragment_race.xml",

@@ -38,7 +38,7 @@
         <item>Nemico</item>
         <item>Patrono</item>
     </string-array>
-    <string-array name="lingue_umano">
+    <string-array name="lingua_extra">
         <item>Gigante</item>
         <item>Gnomesco</item>
         <item>Goblin</item>
@@ -515,6 +515,38 @@
         <item>-</item>
         <item>Una dotazione da avventuriero</item>
         <item>Una dotazione da esploratore</item>
+    </string-array>
+    <string-array name="scelta_strumento">
+        <item>Scegli una competenza musicale</item>
+        <item>Ciaramella</item>
+        <item>Cornamusa</item>
+        <item>Corno</item>
+        <item>Dulcimer</item>
+        <item>Flauto</item>
+        <item>Flauto di Pan</item>
+        <item>Lira</item>
+        <item>Liuto</item>
+        <item>Tamburo</item>
+        <item>Viola</item>
+    </string-array>
+    <string-array name="scelta_strumento_artigiano">
+        <item>Scegli una competenza da artigiano</item>
+        <item>Scorte da alchimista</item>
+        <item>Scorte da calligrafo</item>
+        <item>Scorte da mescitore</item>
+        <item>Strumenti da calzolaio</item>
+        <item>Strumenti da cartografo</item>
+        <item>Strumenti da conciatore</item>
+        <item>Strumenti da fabbro</item>
+        <item>Strumenti da falegname</item>
+        <item>Strumenti da gioielliere</item>
+        <item>Strumenti da intagliatore</item>
+        <item>Strumenti da inventore</item>
+        <item>Strumenti da pittore</item>
+        <item>Strumenti da soffiatore</item>
+        <item>Strumenti da tessitore</item>
+        <item>Strumenti da vasaio</item>
+        <item>Utensili da cuoco</item>
     </string-array>
     <string-array name="scelta_warlock_1">
         <item>-</item>
@@ -2594,15 +2626,10 @@ CAMMINO DEL COMBATTENTE TOTEMICO\n\nCERCATORE DI SPIRITI\nIl cammino del barbaro
 CAMPIONE\n\nCRITICO MIGLIORATO\nA partire da quando il guerriero sceglie questo archetipo al 3° livello, i suoi attacchi con un\'arma mettono a segno un colpo critico con un risultato di 19-20 al tiro.\n\nATLETA STRAORDINARIO\nA partire dal 7° livello, il guerriero può aggiungere metà del suo bonus di competenza (arrotondalo per eccesso) a qualsiasi prova di Forza, Destrezza o Costituzione che effettua e che non utilizzi già il suo bonus di competenza.\nInoltre, quando il guerriero effettua un salto in lungo con rincorsa, la distanza che copre aumenta di 30 cm per ogni punto del suo modificatore di Forza.\n\nSTILE DI COMBATTIMENTO AGGIUNTIVO\nAl 10° livello, il guerriero può scegliere una seconda opzione dal privilegio di classe Stile di Combattimento.\n\nCRITICO SUPERIORE\nA partire dal 15° livello, gli attacchi con un\'arma del guerriero mettono a segno un colpo critico con un risultato di 18-20 al tiro.\n\nSOPRAVVISSUTO\nAl 18° livello, il guerriero giunge all\'apice della sua resilienza in battaglia.\nAll\'inizio di ogni suo turno, recupera un ammontare di punti ferita pari a 5 + il suo modificatore di Costituzione, se non gli rimane più della metà dei suoi punti ferita.\nNon ottiene questo beneficio se ha 0 punti ferita.\n
     </string>
     <string name="carisma">
-Il Carisma misura la capacità del personaggio di interagire con successo con gli altri.
-Include fattori come la sua sicurezza e la sua eloquenza e può rappresentare una personalità accattivante o imperiosa.
-Un personaggio può effettuare una prova di carisma quando cerca di influenzare o di intrattenere gli altri,
-quando tenta di impressionare qualcuno o di raccontare una bugia convincente,
-o quando deve destreggiarsi in una situazione sociale spinosa.
-Le abilità Inganno, Intimidire, Intrattenere e Persuasione rappresentano una maggiore
-disinvoltura in certi tipi di prove di Carisma.
+Il Carisma misura la capacità del personaggio di interagire con successo con gli altri.\nInclude fattori come la sua sicurezza e la sua eloquenza e può rappresentare una personalità accattivante o imperiosa.\nUn personaggio può effettuare una prova di carisma quando cerca di influenzare o di intrattenere gli altri, quando tenta di impressionare qualcuno o di raccontare una bugia convincente, o quando deve destreggiarsi in una situazione sociale spinosa.\nLe abilità Inganno, Intimidire, Intrattenere e Persuasione rappresentano una maggiore disinvoltura in certi tipi di prove di Carisma.
     </string>
     <string name="carisma2">Carisma:</string>
+    <string name="carisma3">Carisma</string>
     <string name="carisma_stat">Carisma = </string>
     <string name="carisma_title">CARISMA</string>
     <string name="cavaliere_mistico">
@@ -2618,6 +2645,7 @@ CAVALIERE MISTICO\n\nINCANTESIMI\nQuando arriva al 3° livello, il guerriero pot
     <string name="chierico_info">
 CHIERICO\n\nUn Chierico ottiene i seguenti privilegi di classe:\n\nPUNTI FERITA\nDadi Vita: 1d8 per ogni livello da chierico.\nPunti ferita al 1° livello: 8 + il modificatore di Costituzione del chierico.\nPunti ferita ai livelli successivi: 1d8 (o 5) + il modificatore di Costituzione del chierico per ogni livello da chierico dopo il 1°.\n\nCOMPETENZE\nArmatura: armatura leggera, armatura media, scudi\nArmi: armi semplici\nStrumenti: Nessuno\nTiri salvezza: Saggezza, Carisma\nAbilità: Due a scelta tra Medicina, Persuasione, Intuizione, Religione e Storia\n\nEQUIPAGGIAMENTO\nUn Chierico inizia con l\'equipaggiamento seguente, in aggiunta all\'equipaggiamento conferito dal suo background:\n(a) una mazza o (b) un martello da guerra (se ha competenza)\n(a) una corazza di scaglie, (b) un\'armatura di cuoio o (c) una cotta di maglia (Se ha competenza)\n(a) una balestra leggera e 20 quadrelli o (b) una qualsiasi arma semplice\n(a) una dotazione da sacerdote o (b) una dotazione da esploratore\nUno scudo e un simbolo sacro\n\nINCANTESIMI\nUn chierico è un tramite del potere divino, e come tale è in grado di lanciare incantesimi da chierico.\n\nTRUCCHETTI\nAl 1° livello, un chierico conosce tre trucchetti a sua scelta tratti dalla lista degli incantesimi da chierico.\nApprende ulteriori trucchetti da chierico a sua scelta ai livelli successivi, come indicato nella colonna "Trucchetti Conosciuti" nella tabella "Chierico".\n\nPREPARARE E LANCIARE INCANTESIMI\nLa tabella "Chierico" indica quanti slot incantesimo possiede un chierico per lanciare i suoi incantesimi di 1 ° livello e di livello superiore.\nPer Lanciare uno di questi incantesimi, è necessario spendere uno slot incantesimo di livello pari o superiore al livello dell\'incantesimo.\nIl chierico recupera tutti gli slot incantesimo spesi quando completa un riposo lungo.\nIl chierico prepara la lista degli incantesimi da chierico disponibili da lanciare scegliendoli dalla lista degli incantesimi da chierico.\nQuando lo fa, deve scegliere un numero di incantesimi da chierico pari al suo modificatore di Saggezza + il suo livello da chierico (fino a un minimo di un incantesimo).\nGli incantesimi devono essere di un livello di cui il chierico possiede degli slot incantesimo.\nAd esempio, un chierico di 3 ° livello, possiede quattro slot incantesimo di 1 ° livello e due slot incantesimo di 2 ° livello.\nCon Saggezza pari a 16, la lista dei suoi incantesimi preparati può includere sei incantesimi di 1° o 2° livello, in qualsiasi combinazione.\nSe prepara l\'incantesimo di 1° livello cura ferite , potrà lanciarlo usando uno slot incantesimo di 1° livello o di 2° livello.\nIl lancio di quell\'incantesimo non rimuove quell\'incantesimo dalla lista di incantesimi preparati.\nIl chierico può cambiare la tua lista dei suoi incantesimi preparati quando completa un lungo riposo.\nPer preparare una nuova lista di incantesimi da chierico è necessario un certo ammontare di tempo da trascorrere in preghiera e meditazione: almeno 1 minuto per livello di incantesimo per ogni incantesimo nella sua lista.\n\nCARATTERISTICA DA INCANTATORE\nSaggezza è la caratteristica da incantatore usata per gli incantesimi da chierico.\nIl potere degli incantesimi di un chierico deriva dalla sua devozione nei confronti della divinità.\nUn chierico usa saggezza ogni volta che un incantesimo fa riferimento alla sua caratteristica da incantatore.\nUsa inoltre il suo modificatore di Saggezza per definire la CD del tiro salvezza di un incantesimo da chierico da lui lanciato e quando effettua un tiro per colpire con un incantesimo.\n\nCD del tiro salvezza dell\'incantesimo = 8 + il bonus di competenza del chierico + il modificatore di saggezza del chierico.\nModificatore di attacco dell\'incantesimo = il bonus di competenza del chierico + il tuo modificatore di saggezza del chierico.\n\nCELEBRARE RITUALI\nUn chierico può lanciare un incantesimo da chierico come rituale se quell\'incantesimo possiede il descrittore rituale e se il chierico ha preparato l\'incantesimo.\n\nFOCUS DA INCANTATORE\nUn chierico può usare un simbolo sacro (vedi "Equipaggiamento") come focus da incantatore per i suoi incantesimi da chierico.\n\nDOMINIO DIVINO\nIl chierico sceglie un dominio correlato alla sua divinità: Conoscenza, Guerra, Inganno, Luce, Natura, Tempesta o Vita.\nOgni dominio è descritto in dettagliato alla fine della sezione di questa classe e fornisce esempi di varie divinità a esso associate.\nQuesta scelta conferisce al chierico alcuni incantesimi di dominio e altri privilegi al 1° livello.\nConferisce inoltre ulteriori modi di utilizzare incanalare Divinità quando il chierico ottiene quel privilegio al 2° livello e ulteriori benefici al 6°, 8° e 17° livello.\n\nINCANTESIMI DI DOMINIO\nA ogni dominio corrisponde una lista di incantesimi (gli incantesimi di dominio) che il chierico ottiene ai livelli da chierico indicati nella descrizione del dominio.\nQuando il chierico ottiene un incantesimo di dominio, quell\'incantesimo è sempre considerato preparato e non conta al fine di determinare il numero di incantesimi che il chierico può preparare ogni giorno.\nSe il chierico possiede un incantesimo di dominio che non compare sulla lista degli incantesimi da chierico, quell\'incantesimo è comunque considerato un incantesimo da chierico per lui.\n\nINCANALARE DIVINITÀ\nAl 2° livello, un chierico ottiene la capacità di incanalare energia divina direttamente dalla sua divinità e usa quell\'energia per alimentare gli effetti magici.\nUn chierico parte con due effetti di questo tipo: Scacciare Non Morti e un effetto determinato dal suo dominio.\nAlcuni domini conferiscono al chierico degli effetti aggiuntivi man mano che avanza di livello, come indicato nella descrizione del dominio.\nQuando un chierico utilizza Incanalare Divinità, può scegliere quale effetto creare.\nDeve poi completare un breve o lungo riposo per utilizzare di nuovo Incanalare Divinità.\nAlcuni effetti di Incanalare Divinità richiedono dei tiri salvezza.\nQuando un chierico utilizza un tale effetto, la CD è pari alla CD del tiro salvezza dei suoi incantesimi da chierico.\nA partire dal 6° livello, un chierico può utilizzare Incanalare Divinità due volte tra un riposo e l\'altro, e a partire dal 18° livello, può utilizzarlo tre volte tra un riposo e l\'altro.\nQuando completa un breve o lungo riposo, recupera gli utilizzi spesi.\n\nINCANALARE DIVINITÀ: SCACCIARE NON MORTOCon un\'azione, il chierico brandisce il suo simbolo sacro e pronuncia una preghiera di condanna nei confronti dei non morti.\nOgni non morto che è in grado di vedere o sentire il chierico e si trova entro 9 metri da lui deve effettuare un tiro salvezza su Saggezza.\nSe lo fallisce, la creatura è scacciata per 1 minuto o finché non subisce danni.\nUna creatura scacciata deve spendere i suoi turni tentando di allontanarsi il più lontano possibile dal chierico e non può volontariamente muoversi in uno spazio entro 9 metri dal chierico.\nInoltre, non può effettuare reazioni.\nCome sua azione, può usare solo l\'azione di scatto o tentare di fuggire da un effetto che gli impedisce di muoversi.\nSe non può muoversi in alcun luogo, la creatura può usare l\'azione di Schivata.\n\nINCREMENTO DEI PUNTEGGI CARATTERISTICA\nQuando arriva al 4° livello, e poi di nuovo all\'8°, 12°, 16° e 19° livello, un chierico può aumentare di 2 un punteggio di caratteristica a sua scelta, oppure può aumentare di 1 due punteggi di caratteristica a sua scelta.\nCome di consueto, non è consentito aumentare un punteggio di caratteristica superiore a 20 utilizzando questo privilegio.\n\nDISTRUGGERE NON MORTI\nA partire dal 5° livello, quando un non morto fallisce il suo tiro salvezza contro il privilegio Scacciare Non Morti del chierico, quella creatura viene immediatamente distrutta se il suo grado di sfida è pari o inferiore a una certa soglia.\n\nLIVELLO DA CHIERICO       DISTRUGGERE I NON MORTI DI GS...\n         5°                        1/2 o inferiore\n         8°                        1 o inferiore\n         11°                       2 o inferiore\n         14°                       3 o inferiore\n         17°                       4 o inferiore\n\nINTERVENTO DIVINO\nA partire dal 10° livello, un chierico può appellarsi alla propria divinità affinché intervenga a suo beneficio nel momento del bisogno.\nPer implorare l\'aiuto della sua divinità, il chierico deve usare un\'azione.\nDeve descrivere l\'assistenza che desidera ottenere e tirare un dado percentuale.\nSe ottiene con il tiro un numero pari o inferiore al suo livello da chierico, la divinità interviene.\nÈ Il DM a scegliere la natura dell\'intervento; l\'effetto di qualsiasi incantesimo da chierico o incantesimo da dominio clericale è appropriato.\nSe la divinità interviene, il chierico non può più utilizzare questo privilegio per 7 giorni.\nAltrimenti può utilizzarlo di nuovo dopo aver completato un lungo riposo.\nAl 20° livello, la richiesta di intervento del chierico ha successo automaticamente, senza che sia richiesto alcun tiro.\n
     </string>
+    <string name="ciaramella">Ciaramella</string>
     <string name="circolo_della_luna_info">
 CIRCOLO DELLA LUNA\n\nFORMA SELVATICA DA COMBATTIMENTO\nQuando il druido sceglie questo circolo al 2° livello, ottiene la capacità di utilizzare Forma Selvatica nel proprio turno come azione bonus anziché con un\'azione.\nInoltre, finché mantiene la sua Forma Selvatica, può usare un\'azione bonus per spendere uno slot incantesimo e recuperare un ammontare di punti ferita pari a 1d8 per ogni livello dello slot incantesimo speso.\n\nFORME DEL CIRCOLO\nI riti del circolo conferiscono al druido la capacità di assumere forme bestiali più pericolose.\nA partire dal 2° livello, il druido può utilizzare Forma Selvatica per trasformarsi in una bestia con un grado di sfida massimo pari a 1 (deve ignorare la colonna "GS Max" nella tabella "Forme Bestiali" ma deve rispettare le altre limitazioni riportate in quella tabella).\nA partire dal 6° livello, può trasformarsi in una bestia con un grado di sfida pari al proprio livello da druido diviso 3, arrotondato per difetto.\n\nCOLPO PRIMORDIALE\nA partire dal 6° livello, gli attacchi del druido in forma bestiale sono considerati magici al fine di oltrepassare la resistenza e l\'immunità agli attacchi e ai danni non magici.\n\nFORMA SELVATICA ELEMENTALE\nAl 10° livello, il druido può spendere due utilizzi di Forma Selvatica simultaneamente per trasformarsi in un elementale dell\'acqua, un elementale dell\'aria, un elementale del fuoco o un elementale della terra.\n\nMILLE FORME\nAl 14° livello, il druido ha imparato a usare la magia per alterare la sua forma fisica in modo più sottile e può lanciare l\'incantesimo alterare se stesso a volontà.    </string>
     <string name="circolo_della_terra_info">
@@ -2654,20 +2682,20 @@ COLLEGIO DEL VALORE\n\nCOMPETENZE BONUS\nQuando un bardo si unisce al Collegio d
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="competenza_negli_strumenti">Competenza negli strumenti</string>
     <string name="competenze">Competenze</string>
+    <string name="competenze_mezzelfo">Competenze: mezzelfo</string>
     <string name="competenze_personaggio">Competenze: </string>
     <string name="competenze_umano">Competenze: umano</string>
     <string name="conferma_passw">Conferma password</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
+    <string name="cornamusa">Cornamusa</string>
+    <string name="corno">Corno</string>
     <string name="costituzione">
-La Costituzione misura la salute, la resistenza fisica e l\'energia vitale del personaggio.
-Le prove di costituzione sono rare: nessuna abilità viene applicata alle prove di costituzione, in
-quanto la resistenza fisica rappresenta da questa caratteristica è principalmente una dote passiva
-e non richiede uno sforzo specifico da parte di un personaggio o di un mostro.
-Una prova di costituzione può tuttavia rappresentare il tentativo di un personaggio di spingersi
-oltre i propri limiti.
+La Costituzione misura la salute, la resistenza fisica e l\'energia vitale del personaggio.\nLe prove di costituzione sono rare: nessuna abilità viene applicata alle prove di costituzione, in quanto la resistenza fisica rappresenta da questa caratteristica è principalmente una dote passiva e non richiede uno sforzo specifico da parte di un personaggio o di un mostro.\nUna prova di costituzione può tuttavia rappresentare il tentativo di un personaggio di spingersi oltre i propri limiti.
     </string>
     <string name="costituzione2">Costituzione:</string>
+    <string name="costituzione3">Costituzione</string>
     <string name="costituzione_stat2">Costituzione = </string>
     <string name="costituzione_title">COSTITUZIONE</string>
     <string name="crea">Crea</string>
@@ -2677,12 +2705,10 @@ oltre i propri limiti.
     <string name="descrizione">Descrizione fisica:</string>
     <string name="descrizione1">Descrizione:</string>
     <string name="destrezza">
-La Destrezza misura l\'agilità, i riflessi e l\'equilibrio.
-Una prova di destrezza può rappresentar ogni tentativo di muoversi agilmente, rapidamente o silenziosamente,
-o di evitare di cadere quando ci si muove su una superficie precaria.
-Le abilità acrobazia, furtività e rapidità di mano rappresentano una maggiore bravura in certi tipi di prove di destrezza.
+La Destrezza misura l\'agilità, i riflessi e l\'equilibrio.\nUna prova di destrezza può rappresentar ogni tentativo di muoversi agilmente, rapidamente o silenziosamente, o di evitare di cadere quando ci si muove su una superficie precaria.\nLe abilità acrobazia, furtività e rapidità di mano rappresentano una maggiore bravura in certi tipi di prove di destrezza.
     </string>
     <string name="destrezza2">Destrezza:</string>
+    <string name="destrezza3">Destrezza</string>
     <string name="destrezza_stat">Destrezza = </string>
     <string name="destrezza_title">DESTREZZA</string>
     <string name="difetti">Difetti:</string>
@@ -2731,6 +2757,7 @@ DRAGONIDE\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Forza au
     <string name="druido_info">
 DRUIDO\n\nUn druido ottiene i seguenti privilegi di classe:\n\nPUNTI FERITA\nDadi Vita: 1d8 per livello da druido.\nPunti ferita al 1° livello: 8 + il tuo modificatore di Costituzione del druido.\nPunti ferita ai livelli successivi: 1d8 (o 5) + il modificatore di Costituzione del druido per ogni livello da druido dopo il 1°.\n\nCOMPETENZE\nArmature: Armature leggere, Armature medie, Scudi (i druidi non indossano armature e scudi fatti di metallo).\nArmi: mazza, pugnale, dardo, giavellotto, bastone ferrato, scimitarra, falcetto, fionda, lancia, randello.\nStrumenti: Borsa da Erborista.\nTiri Salvezza: Intelligenza e Saggezza.\nAbilità: Due a scelta tra Addestrare Animali, Arcano, Intuizione, Medicina, Natura, Percezione, Religione e Sopravvivenza.\n\nEQUIPAGGIAMENTO\nUn druido inizia con il seguente equipaggiamento, in aggiunta all’ equipaggiamento fornito dal suo background:\n(a) uno scudo di legno o (b) una qualsiasi arma semplice.\n(a) una scimitarra o (b) una qualsiasi arma semplice da mischia.\nUn\'armatura di cuoio, una dotazione da esploratore e un focus druidico.\n\nDRUIDICO\nUn druido conosce il Druidico, il linguaggio segreto del suo ordine: può parlare in quel linguaggio e usarlo per lasciare messaggi segreti.\nIl druido e coloro che conoscono questo linguaggio sono in grado di avvistare questi messaggi automaticamente.\nAltri possono notare la presenza di un messaggio in Druidico superando la prova Saggezza (Percezione) con CD 15, ma non possono decifrarlo senza l\'aiuto della magia.\n\nINCANTESIMI\nUn druido attinge all\'essenza divina della natura stessa e può lanciare incantesimi che modellano tale essenza in base alla sua volontà.\nVedi il capitolo 10 per le regole generali relative alla magia e il capitolo 11 per la lista degli incantesimi da druido.\n\nTRUCCHETTI\nAl 1° livello, un druido conosce due trucchetti a sua scelta dalla lista degli incantesimi da druido.\nApprende ulteriori trucchetti da druido a sua scelta ai livelli successivi, come indicato dalla colonna "Trucchetti Conosciuti" nella tabella.\n\nPREPARARE E LANCIARE INCANTESIMI\nLa tabella indica quanti slot incantesimo possiede un druido per lanciare i suoi incantesimi di 1° livello e di livello superiore.\nPer lanciare uno di questi incantesimi, il druido deve spendere uno slot incantesimo di livello pari o superiore al livello dell\'incantesimo.\nIl druido recupera tutti gli slot incantesimo spesi quando completa un riposo lungo.\nIl druido prepara la lista degli incantesimi da druido disponibili da lanciare scegliendoli dalla lista degli incantesimi da druido.\nQuando lo fa, deve scegliere un numero di incantesimi da druido pari al suo modificatore di Saggezza + il suo livello da druido (fino a un minimo di un incantesimo).\nGli incantesimi devono essere di un livello di cui il druido possiede degli slot incantesimo.\nPer esempio, un druido di 3° livello possiede quattro slot incantesimo di 1° livello e due slot incantesimo di 2° livello.\nCon Saggezza pari a 16, la lista dei suoi incantesimi preparati può includere sei incantesimi di 1° o 2° livello, in qualsiasi combinazione.\nSe prepara l\'incantesimo di 1° livello cura ferite, potrà lanciarlo usando uno slot incantesimo di 1° livello o di 2° livello.\nIl lancio di quell\'incantesimo non rimuove quell\'incantesimo dalla lista di incantesimi preparati.\nIl druido può cambiare la lista dei suoi incantesimi preparati quando completa un riposo lungo.\nPer preparare una nuova lista di incantesimi da druido è necessario un certo ammontare di tempo da trascorrere in preghiera e meditazione: almeno 1 minuto per livello di incantesimo per ogni incantesimo nella sua lista.\n\nCARATTERISTICA DA INCANTATORE\nSaggezza è la caratteristica da incantatore usata per gli incantesimi da druido.\nIl potere dei suoi incantesimi deriva dalla sua devozione e dalla sua sintonia con la natura.\nUn druido usa Saggezza ogni volta che un incantesimo fa riferimento alla sua caratteristica da incantatore.\nUsa inoltre il suo modificatore di Saggezza per definire la CD del tiro salvezza di un incantesimo da druido da lui lanciato e quando effettua un tiro per colpire con un incantesimo.\n\nCD del tiro salvezza dell’incantesimo = 8 + il bonus di competenza del druido + il modificatore di Saggezza del druido.\nModificatore di attacco dell’incantesimo = il bonus di competenza del druido + il modificatore di Saggezza del druido.\n\nCELEBRARE RITUALI\nUn druido può lanciare un incantesimo da druido come rituale se quell\'incantesimo possiede il descrittore rituale e il druido lo ha preparato.\n\nFOCUS DA INCANTATORE\nUn druido può usare un focus druidico come focus da incantatore per i suoi incantesimi da druido.\n\nFORMA SELVATICA\nA partire dal 2° livello, un druido può usare la sua azione per assumere magicamente la forma di una bestia che ha già visto in precedenza.\nPuò utilizzare questo privilegio due volte e recupera gli utilizzi spesi quando completa un riposo breve o lungo.\nIl livello da druido determina le bestie in cui egli può trasformarsi, come indicalo nella tabella "Forme Bestiali".\nAl 2° livello, per esempio, può trasformarsi in qualsiasi bestia che abbia un grado di sfida pari o inferiore a 1/4 che non abbia una velocità di nuotare o di volare.\nUn druido può rimanere in forma bestiale per un numero di ore pari alla metà del suo livello da druido (arrotondato per difetto), poi torna alla sua forma normale, a meno che non spenda un altro utilizzo di questo privilegio.\nPuò tornare alla sua forma normale anticipatamente usando un\'azione bonus nel suo turno.\nTorna automaticamente alla sua forma normale se cade privo di sensi, scende a 0 punti ferita o muore.\nFinché il druido è trasformato, si applicano le regole seguenti:- Le statistiche di gioco del druido vengono sostituite dalle statistiche della bestia, ma il druido conserva il proprio allineamento, personalità e punteggi di Intelligenza, Saggezza e Carisma.\nConserva inoltre tutte le sue abilità e competenze nei tiri salvezza, oltre a ottenere quelle della creatura.\nSe la creatura possiede una competenza che anche il druido possiede e il bonus nella sua scheda delle statistiche è superiore a quello del druido, egli usa il bonus della creatura anziché il proprio.\nSe la creatura possiede delle azioni leggendarie o di tana, il druido non può usarle.\n- Quando si trasforma, il druido assume i punti ferita e i Dadi Vita della bestia.\nQuando torna alla sua forma normale, torna al numero di punti ferita che possedeva prima della trasformazione.\nTuttavia, se torna alla sua forma normale per essere sceso a 0 punti ferita, gli eventuali danni in eccesso si trasmettono alla sua forma normale.\nPer esempio, se un druido in forma bestiale possiede 1 solo punto ferita e subisce 10 danni, egli torna alla sua forma normale e subisce 9 danni.\nFintanto che i danni in eccesso non portano la forma normale del druido a 0 punti ferita, il druido non cade privo di sensi.\n- Il druido non può lanciare incantesimi e la sua capacità di parlare o di intraprendere qualsiasi azione che richieda le mani è limitata alle capacità della sua forma bestiale.\nLa trasformazione non interrompe la concentrazione del druido su un incantesimo che egli ha già lanciato e non gli impedisce di effettuare azioni che fanno parte di un incantesimo già lanciato, come per esempio Invocare il Fulmine.\n- Un druido mantiene i benefici di tutti i privilegi forniti dalla sua classe, dalla sua razza e da qualsiasi altra fonte e può usarli se nella nuova forma è fisicamente in grado di farlo.\nTuttavia, non può usare nessuno dei suoi sensi speciali, come per esempio la scurovisione, a meno che non li possieda anche nella sua nuova forma.\n- Un druido può scegliere se lasciare cadere il suo equipaggiamento nel suo spazio, se tale equipaggiamento si fonde nella sua nuova forma o se indossarlo.\nL\'equipaggiamento indossato funziona normalmente, ma spetta al DM decidere se è pratico o meno che la nuova forma indossi ogni determinato oggetto di equipaggiamento, in base alla forma e alla taglia della creatura.\nL\'equipaggiamento del druido non cambia taglia o forma per adattarsi alla nuova forma, e ogni oggetto di equipaggiamento che la nuova forma non può indossare deve  cadere a terra o fondersi nella nuova forma del druido.\nL\'equipaggiamento fuso alla nuova forma non ha alcun effetto finché il druido non abbandona quella forma.\n\nFORME BESTIALI\nLIVELLO   GS MAX   LIMITAZIONI         ESEMPIO\n2°       1/4    nessuna velocità    Lupo\n         di nuotare o\n         di volare\n4°       1/2    nessuna velocità    Coccodrillo\n         di volare\n8°        1     ----------------    Aquila gigante\n\nCIRCOLO DRUIDICO\nAl 2° livello, un druido sceglie di aderire a un circolo druidico, come quello della Terra.\nQuesta scelta gli conferisce alcuni privilegi al 2° livello e poi di nuovo al 6°, 10° e 14° livello.\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nQuando arriva al 4° livello, e poi di nuovo all\'8°,12°,16° e 19° livello, un druido può aumentare di 2 un punteggio di caratteristica a sua scelta, oppure può aumentare di 1 due punteggi di caratteristica a sua scelta.\nCome di consueto, non è consentito aumentare un punteggio di caratteristica a più di 20 utilizzando questo privilegio.\n\nCORPO SENZA TEMPO\nA partire dal 18° livello, la magia primordiale che fluisce nel druido rallenta il suo invecchiamento.\nPer ogni 10 anni trascorsi, il corpo del druido invecchia soltanto di 1 anno.\n\nINCANTESIMI BESTIALI\nA partire dal 18° livello, un druido può lanciare molti dei suoi incantesimi da druido in qualsiasi forma assunta utilizzando Forma Selvatica.\nPuò fornire le componenti somatiche e verbali di un incantesimo da druido anche quando è in forma bestiale, ma non è in grado di fornire componenti materiali.\n\nARCIDRUIDO\nAl 20° livello, un druido può utilizzare Forma Selvatica un numero illimitato di volte.\nPuò inoltre ignorare le componenti verbali e somatiche dei suoi incantesimi da druido, nonché le eventuali componenti materiali prive di un costo e quelle che non sono consumate da un incantesimo.\nUn druido ottiene questo beneficio sia nella sua forma normale che nella forma bestiale assunta grazie a Forma Selvatica.\n
     </string>
+    <string name="dulcimer">Dulcimer</string>
     <string name="effetti">Effetti</string>
     <string name="elfo">Elfo</string>
     <string name="elfo_alto">Elfo alto</string>
@@ -2741,6 +2768,7 @@ ELFO ALTO\n\nINCREMENTO DEI PUNTEGGI CARATTERISTICA\nIl punteggio di Intelligenz
     <string name="elfo_dei_boschi_info">
 ELFO DEI BOSCHI\n\nINCREMENTO DEI PUNTEGGI CARATTERISTICA\nIl punteggio di saggezza di un elfo dei boschi aumenta di 1.\n\nADDESTRAMENTO NELLE ARMI ELFICHE\nUn elfo dei boschi ha competenza nelle spade corte, nelle spade lunghe, negli archi corti e negli archi lunghi.\n\nPIEDE LESTO\nLa velocità base sul terreno di un elfo dei boschi aumenta a 10,5 metri.\n\nMASCHERA DELLA SELVA\nUn elfo dei boschi può tentare di nascondersi alla vista altrui anche quando è leggermente oscurato da fogliamo, pioggia fitta, neve, foschia e altri fenomeni naturali\n
     </string>
+    <string name="elfo_dei_nboschi">Elfo dei\nboschi</string>
     <string name="elfo_oscuro">Elfo oscuro</string>
     <string name="elfo_oscuro_info">
 ELFO OSCURO\n\nINCREMENTO DEI PUNTEGGI CARATTERISTICA\nIl punteggio di carisma di un elfo oscuro aumenta di 1.\n\nSCUROVISIONE SUPERIORE\nLa scurovisione di un elfo oscuro arriva fino a 36 metri.\n\nSENSIBILITà ALL LUCE DEL SOLE\nUn elfo oscuro dispone di svantaggio ai tiri per colpire e alle prove di saggezza(Percezione) basate sulla vista quando l\'elfo in questione, il bersaglio del suo attacco o l\'oggetto da percepire si trovano in piena luce del sole.\n\nMAGIA DROW\nUn elfo oscuro conosce il trucchetto "luci danzanti".\nQuando raggiunge il 3° livello, può lanciare l\'incantesimo "luminescenza" una volta con questo tratto e recuperare la capacità di farlo quando completa un riposo lungo.\nQuando raggiunge il 5° livello, può lanciare l\'incantesimo "oscurità" una volta con questo tratto e recuperà la capacità di farlo quando completa un riposo lungo.\nLa caratteristica da incantatore per questi incantesimi è carisma.\n
@@ -2764,14 +2792,13 @@ SCUOLA DI EVOCAZIONE\n\nEVOCATORE SAPIENTE\nA partire da quando il mago sceglie 
     <string name="fallback_menu_item_open_in_browser">Open in browser</string>
     <string name="fallback_menu_item_share_link">Share link</string>
     <string name="first_fragment_label">First Fragment</string>
+    <string name="flauto">Flauto</string>
+    <string name="flauto_di_pan">Flauto di Pan</string>
     <string name="forza">
-La Forza misura la potenza del proprio corpo, l\'addestramento fisico e l\'efficacia
-con cui un personaggio è in grado di esercitare la propria potenza fisica.
-Una prova di forza può rappresentareogni tentativo di sollevare, spingere, tirareo spezzare qualcosa,
-di farsi strada atraverso uno spazio, o di applicare in altri modi la forza bruta a una situazione.
-L\'abilità atletica rappresenta una maggiore prestanza in certi tipi di prove di forza.
+La Forza misura la potenza del proprio corpo, l\'addestramento fisico e l\'efficaciacon cui un personaggio è in grado di esercitare la propria potenza fisica.\nUna prova di forza può rappresentareogni tentativo di sollevare, spingere, tirareo spezzare qualcosa,di farsi strada atraverso uno spazio, o di applicare in altri modi la forza bruta a una situazione.\nL\'abilità atletica rappresenta una maggiore prestanza in certi tipi di prove di forza.
     </string>
     <string name="forza2">Forza:</string>
+    <string name="forza3">Forza</string>
     <string name="forza_stat">Forza = </string>
     <string name="forza_title">FORZA</string>
     <string name="furfante">
@@ -2793,10 +2820,12 @@ GIURAMENTO DI DEVOZIONE\n \n DETTAMI DI DEVOZIONE\n Sebbene le parole e gli obbl
     </string>
     <string name="gnomo">Gnomo</string>
     <string name="gnomo_delle_foreste_info">
-GNOMO DELLE FORESTE\N\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Destrezza di uno gnomo delle foreste aumenta di 1.\n\nILLUSIONISTA NATO\nUno gnomo delle foreste conosce il trucchetto illusione minore.\nLa caratteristica da incantatore usata per questo trucchetto è Intelligenza.\n\nPARLARE CON LE PICCOLE BESTIE\nUno gnomo delle foreste può usare suoni e gesti per comunicare i concetti più semplici alle bestie di taglia Piccola o inferiore.\nGli gnomi delle foreste amano gli animali e spesso tengono presso di loro scoiattoli, tassi, conigli, talpe, picchi e altre creature simili come animali da compagnia.\n
+GNOMO DELLE FORESTE\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Destrezza di uno gnomo delle foreste aumenta di 1.\n\nILLUSIONISTA NATO\nUno gnomo delle foreste conosce il trucchetto illusione minore.\nLa caratteristica da incantatore usata per questo trucchetto è Intelligenza.\n\nPARLARE CON LE PICCOLE BESTIE\nUno gnomo delle foreste può usare suoni e gesti per comunicare i concetti più semplici alle bestie di taglia Piccola o inferiore.\nGli gnomi delle foreste amano gli animali e spesso tengono presso di loro scoiattoli, tassi, conigli, talpe, picchi e altre creature simili come animali da compagnia.\n
     </string>
+    <string name="gnomo_delle_nforeste">Gnomo delle\nforeste</string>
+    <string name="gnomo_delle_nrocce">Gnomo delle\nrocce</string>
     <string name="gnomo_delle_rocce_info">
-GNOMO DELLE ROCCE\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Costituzione aumenta di 2.\n\nSAPERE DA ARTEFICE\nOgni volta che fate una prova di Intelligenza (Storia) relativa ad oggetti magici, oggetti alchemici o dispositivi tecnologici, potete aggiungere il doppio del bonus di competenza, invece di qualsiasi bonus di competenza applichiate normalmente.\n\nINVENTORE\nAvete competenza con strumenti da artigiano (strumenti da inventore).\nUsando questi strumenti, potete spendere 1 ora e materiali del valore di 10 mo per costruire un congegno ad orologeria Minuscolo (CA 5, 1 pf).\nIl congegno cessa di funzionare dopo 24 ore (a meno che spendiate 1 ora a ripararlo per mantenerlo in funzione) o quando usate un\'azione per smantellarlo; in quel caso potete recuperare i materiali usati per crearlo.\nPotete avere fino a tre di tali congegni attivi nello stesso momento.\n\nQuando create un congegno, scegliete una delle seguenti opzioni:\n-Giocattolo ad orologeria: Questo giocattolo è un animale, mostro o persona ad orologeria, come una rana, un topo, un uccello, un drago o un soldato.\nUna volta posizionato sul terreno, il giocattolo si muove di 1,5 m sul terreno in ognuno dei vostri turni in una direzione casuale.\nFa rumore come appropriato per la creatura che rappresenta.\n-Accendino: Il dispositivo produce una fiamma in miniatura, che potete usare per accendere una candela, una torcia o un fuoco da campo.\nUsare il congegno richiede un\'azione.\n-Scatola Musicale: Una volta aperta, questa scatola musicale suona una singola canzone ad un volume moderato.\nLa scatola finisce di suonare quando raggiunge la fine della canzone o quando viene chiusa.\n
+GNOMO DELLE ROCCE\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Costituzione aumenta di 2.\n\nSAPERE DA ARTEFICE\nOgni volta che fate una prova di Intelligenza (Storia) relativa ad oggetti magici, oggetti alchemici o dispositivi tecnologici, potete aggiungere il doppio del bonus di competenza, invece di qualsiasi bonus di competenza applichiate normalmente.\n\nINVENTORE\nAvete competenza con strumenti da artigiano (strumenti da inventore).\nUsando questi strumenti, potete spendere 1 ora e materiali del valore di 10 mo per costruire un congegno ad orologeria Minuscolo (CA 5, 1 pf).\nIl congegno cessa di funzionare dopo 24 ore (a meno che spendiate 1 ora a ripararlo per mantenerlo in funzione) o quando usate un\'azione per smantellarlo; in quel caso potete recuperare i materiali usati per crearlo.\nPotete avere fino a tre di tali congegni attivi nello stesso momento.\nQuando create un congegno, scegliete una delle seguenti opzioni:\n-Giocattolo ad orologeria: Questo giocattolo è un animale, mostro o persona ad orologeria, come una rana, un topo, un uccello, un drago o un soldato.\nUna volta posizionato sul terreno, il giocattolo si muove di 1,5 m sul terreno in ognuno dei vostri turni in una direzione casuale.\nFa rumore come appropriato per la creatura che rappresenta.\n-Accendino: Il dispositivo produce una fiamma in miniatura, che potete usare per accendere una candela, una torcia o un fuoco da campo.\nUsare il congegno richiede un\'azione.\n-Scatola Musicale: Una volta aperta, questa scatola musicale suona una singola canzone ad un volume moderato.\nLa scatola finisce di suonare quando raggiunge la fine della canzone o quando viene chiusa.\n
     </string>
     <string name="gnomo_info">
 GNOMO\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Intelligenza aumenta di 2.\n\nETÀ\nGli gnomi maturano alla stessa velocità degli umani e ci si aspetta che molti si accingano alla vita adulta attorno ai 40 anni.\nPossono vivere da 350 a quasi 500 anni.\n\nALLINEAMENTO\nGli gnomi sono più spesso buoni.\nQuelli che tendono verso la legge sono saggi, ingegneri, ricercatori, studiosi, investigatori o inventori.\nQuelli che tendono verso il caos sono menestrelli, imbroglioni, vagabondi o fantasiosi gioiellieri.\nGli gnomi sono di buon cuore e persino gli imbroglioni tra loro sono più scherzosi che maligni.\n\nTAGLIA\nGli gnomi sono alti tra 90 e 120 cm e pesano in media 18 kg.\nLa taglia è Piccola.\n\nVELOCITÀ\nLa velocità base sul terreno è 7,5 metri.\n\nSCUROVISIONE\nAbituati alla vita sotterranea, avete una vista superiore in condizioni di buio o luce debole.\nPotete vedere con luce debole entro 18 metri come se fosse luce intensa e nell\'oscurità come fosse luce debole.\nNon potete discernere i colori nell\'oscurità, solo sfumature di grigio.\n\nASTUZIA GNOMESCA\nAvete vantaggio in tutti i tiri salvezza su Intelligenza, Saggezza e Carisma contro la magia.\n\nLINGUAGGI\nPotete parlare, leggere e scrivere in Comune e Gnomesco.\nIl linguaggio Gnomesco, che usa l\'alfabeto Nanico, è rinomato per i suoi trattati tecnici e i suoi cataloghi di conoscenza sul mondo naturale.\n\nSOTTORAZZA\nSi trovano due sottorazze di gnomi tra i mondi di D&amp;D: gnomi delle foreste e gnomi delle rocce.\nScegliete una di queste sottorazze.\n
@@ -2815,10 +2844,10 @@ HALFLING\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Destrezza
     <string name="halfling_npiedelesto">Halfling\nPiedelesto</string>
     <string name="halfling_ntozzo">Halfling\nTozzo</string>
     <string name="halfling_piedelesto_info">
-HALFLING PIEDELESTO\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Carisma di un halfling piedelesto aumenta di 1.\n\nFURTIVITÀ INNATA\nUn halfting piedelesto può tentare di nascondersi anche se è oscurato solo da una singola creatura, purché questa sia più grande di lui di almeno una taglia.\n
+HALFLING PIEDELESTO\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Carisma di un halfling piedelesto aumenta di 1.\n\nFURTIVITÀ INNATA\nUn halfling piedelesto può tentare di nascondersi anche se è oscurato solo da una singola creatura, purché questa sia più grande di lui di almeno una taglia.\n
     </string>
     <string name="halfling_tozzo_info">
-HALFLING TOZZO\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Costituzione di un halfting tozzo aumenta di 1.\n\nRESILIENZA DEI TOZZI\nUn halfting tozzo dispone di vantaggio ai tiri salvezza contro il veleno e di resistenza ai danni da veleno.\n
+HALFLING TOZZO\n\nINCREMENTO DEI PUNTEGGI DI CARATTERISTICA\nIl punteggio di Costituzione di un halfling tozzo aumenta di 1.\n\nRESILIENZA DEI TOZZI\nUn halfling tozzo dispone di vantaggio ai tiri salvezza contro il veleno e di resistenza ai danni da veleno.\n
     </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_first_fragment">Hello first fragment</string>
@@ -2836,6 +2865,7 @@ IL SIGNORE FATATO\n\nLISTA AMPLIATA DEGLI INCANTESIMI\nIl Signore Fatato consent
     <string name="illusione_info">
 SCUOLA DI ILLUSIONE\n\nILLUSIONISTA SAPIENTE\nA partire da quando il mago sceglie questa scuola al 2° livello, il tempo e il denaro che egli deve spendere per copiare un incantesimo di illusione nel suo libro degli incantesimi sono dimezzati.\n\nILLUSIONE MINORE MIGLIORATA\nA partire da quando sceglie questa scuola al 2° livello, il mago apprende il trucchetto illusione minore.\nSe già conosceva questo trucchetto, apprende un diverso trucchetto da mago a sua scelta.\nIl trucchetto non conta al fine di determinare il numero di trucchetti conosciuti dal mago.\nQuando il mago lancia illusione minare, può creare sia un suono che un\'immagine con un singolo lancio dell\'incantesimo.\n\nILLUSIONI DUTTILI\nA partire dal 6° livello, quando lancia un incantesimo con una durata pari o superiore a 1 minuto, il mago può usare la propria azione per cambiare la natura dell\'illusione creata (rispettando i limiti dei normali parametri dell\'incantesimo), purché sia in grado di vedere l\'illusione.\n\nSOSIA ILLUSORIO\nA partire dal 10° livello, il mago può creare un duplicato illusorio di se stesso come reazione istantanea al pericolo.\nQuando una creatura effettua un attacco contro di lui, il mago può usare la sua reazione per frapporre il sosia illusorio tra sé e l\'attaccante.\nL\'attacco manca il mago automaticamente e l\'illusione svanisce.\nUna volta utilizzato questo privilegio, il mago non può più utilizzarlo finché non completa un riposo breve o lungo.\n\nREALTÀ ILLUSORIA\nGiunto al 14° livello, il mago ha imparato a intessere la magia dell\'ombra per impartire alle sue illusioni una parvenza di realtà.\nQuando lancia un incantesimo di illusione di livello pari o superiore al 1°, può scegliere un oggetto inanimato non magico che sia parte dell\'illusione e rendere quell\'oggetto reale.\nPuò farlo nel suo turno con un\'azione bonus finché l\'incantesimo è attivo.\nL\'oggetto resta reale per 1 minuto.\nPer esempio, il mago può creare l\'illusione di un ponte che attraversa un baratro e renderla reale quanto basta da consentire ai suoi alleati di attraversarlo.\nL\'oggetto non può infliggere danni o ferire in modo diretto.\n
     </string>
+    <string name="incremento_punteggi_caratteristica_n_scegli_2_caratteristiche_a_cui_dare_un_1">Incremento punteggi caratteristica\n(scegli 2 caratteristiche a cui dare un +1)</string>
     <string name="indagare_int">Indagare (Int)</string>
     <string name="indietro">INDIETRO</string>
     <string name="info">Info</string>
@@ -2846,13 +2876,10 @@ SCUOLA DI ILLUSIONE\n\nILLUSIONISTA SAPIENTE\nA partire da quando il mago scegli
     <string name="inserisci_nome_e_password">Inserisci nome e password</string>
     <string name="inserisci_un_personaggio">Inserisci un personaggio:</string>
     <string name="intelligenza">
-L\'Intelligenza misura l\'acume mentale, la precisione della memoria e le capacità logiche.
-Una prova di Intelligenza entra in gioco quando un personaggio ricorre alla logica,
-all\'istruzione, alla memoria o al ragionamento deduttivo.
-Le abilità arcano, indagare, natura, religione e storia rappresentano una preparazione
-superiore in certi tipi di prove di intelligenza.
+L\'Intelligenza misura l\'acume mentale, la precisione della memoria e le capacità logiche.\nUna prova di Intelligenza entra in gioco quando un personaggio ricorre alla logica, all\'istruzione, alla memoria o al ragionamento deduttivo.\nLe abilità arcano, indagare, natura, religione e storia rappresentano una preparazione superiore in certi tipi di prove di intelligenza.
     </string>
     <string name="intelligenza2">Intelligenza:</string>
+    <string name="intelligenza3">Intelligenza</string>
     <string name="intelligenza_stat">Intelligenza = </string>
     <string name="intelligenza_title">INTELLIGENZA</string>
     <string name="intimidire_car">Intimidire (Car)</string>
@@ -2872,6 +2899,8 @@ L\'IMMONDO\n\nLISTA AMPLIATA DEGLI INCANTESIMI\nL\'Immondo consente al warlock d
     <string name="legami">Legami:</string>
     <string name="liguaggio_extra_a_scelta">Liguaggio extra a scelta:</string>
     <string name="linguaggi_2">2 linguaggi</string>
+    <string name="lira">Lira</string>
+    <string name="liuto">Liuto</string>
     <string name="livello">Livello:</string>
     <string name="livello2">Livello:</string>
     <string name="livello_1">Livello 1</string>
@@ -3021,6 +3050,10 @@ NANO DELLE COLLINE\n\nINCREMENTO DEI PUNTEGGI CARATTERISTICA\nIl punteggio di Sa
     <string name="nano_delle_montagne_info">
 NANO DELLE MONTAGNE\n\nINCREMENTO DEI PUNTEGGI CARATTERISTICA\nIl punteggio di forza di un nano delle montagne aumenta di 2.\n\nADDESTRAMENTO NELLE ARMATURE NANICHE\nUn nano delle montagne ha competenza nelle armature leggere e medie.\n
     </string>
+    <string name="nano_delle_ncolline">Nano delle\ncolline</string>
+    <string name="nano_delle_nmontagne">Nano delle\nmontagne</string>
+    <string name="nano_ndelle_colline">Nano\ndelle colline</string>
+    <string name="nano_ndelle_montagne">Nano\ndelle montagne</string>
     <string name="natura_int">Natura (Int)</string>
     <string name="nav_app_bar_navigate_up_description">Navigate up</string>
     <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
@@ -3084,18 +3117,17 @@ RANGER\n\nCome ranger, ottieni i seguenti privilegi di classe.\n\nPUNTI FERITA\n
     <string name="reset">Inserisci la mail per effettuare il reset</string>
     <string name="reset_button">Reset Password</string>
     <string name="saggezza">
-La Saggezza rappresenta la percezione, l\'intuizione e il grado di sintonia del personaggio con il mondo circostante.
-Una prova di saggezza rappresenta un tentativo di interpretare il linguaggio corporeo
-o le emozioni di qualcuno, notare qualcosa nell\'ambiente o prendersi cura di una persona ferita.
-Le abilità addestrare animali, intuizione, medicina, percezione e sopravvivenza rappresentano una
-maggiore sensibilità in certi tipi di prove di saggezza.
+La Saggezza rappresenta la percezione, l\'intuizione e il grado di sintonia del personaggio con il mondo circostante.\nUna prova di saggezza rappresenta un tentativo di interpretare il linguaggio corporeo o le emozioni di qualcuno, notare qualcosa nell\'ambiente o prendersi cura di una persona ferita.\nLe abilità addestrare animali, intuizione, medicina, percezione e sopravvivenza rappresentano una maggiore sensibilità in certi tipi di prove di saggezza.
     </string>
     <string name="saggezza2">Saggezza:</string>
+    <string name="saggezza3">Saggezza</string>
     <string name="saggezza_stat">Saggezza = </string>
     <string name="saggezza_title">SAGGEZZA</string>
     <string name="salva">Salva</string>
     <string name="salva_bottone">Salva</string>
     <string name="scegli">Scegli</string>
+    <string name="scegli_2_tra_le_seguenti_competenze">Scegli 2 tra le seguenti competenze</string>
+    <string name="scegli_3_strumenti_musicali">Scegli 3 strumenti musicali</string>
     <string name="scegli_classe">Scegli una classe</string>
     <string name="scegli_il_tuo_equipaggiamento">Scegli il tuo equipaggiamento</string>
     <string name="scegli_la_razza">Scegli la razza</string>
@@ -3104,7 +3136,10 @@ maggiore sensibilità in certi tipi di prove di saggezza.
     <string name="scegli_linguaggi">Linguaggi scelti:</string>
     <string name="scegli_strumenti">Strumenti scelti:</string>
     <string name="scegli_un_personaggio">Scegli un personaggio</string>
+    <string name="scegli_uno_strumento_nda_artigiano_o_musicale">Scegli uno strumento\nda artigiano o musicale</string>
     <string name="scelto">scelto</string>
+    <string name="scorte_da_alchimista">Scorte da alchimista</string>
+    <string name="scorte_da_calligrafo">Scorte da calligrafo</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
@@ -3138,12 +3173,16 @@ STREGONE\n\nUno stregone ottiene i seguenti privilegi di classe.\n\nPUNTI FERITA
     </string>
     <string name="strumenti_1_linguaggi_1">1 linguaggio, 1 strumento</string>
     <string name="strumenti_2">2 strumenti</string>
+    <string name="strumenti_da_costruttore">Strumenti da costruttore</string>
+    <string name="strumenti_da_fabbro">Strumenti da fabbro</string>
+    <string name="strumenti_da_mescitore">Strumenti da mescitore</string>
     <string name="supporto">Supporto</string>
     <string name="tab_text_1">Stats</string>
     <string name="tab_text_2">Zaino</string>
     <string name="tab_text_3">Magie</string>
     <string name="tab_text_4">Razza</string>
     <string name="tab_text_5">Class</string>
+    <string name="tamburo">Tamburo</string>
     <string name="testo_attuale">(Testo attuale)</string>
     <string name="testo_di_prova">TESTO DI PROVA</string>
     <string name="tiefling">Tiefling</string>
@@ -3175,6 +3214,7 @@ VIA DELL\'OMBRA\n\nARTI DELL\'OMBRA\nA partire da quando sceglie questa tradizio
     <string name="via_della_mano_aperta_info">
 VIA DELLA MANO APERTA\n\nTECNICA DELLA MANO APERTA\nA partire da quando sceglie questa tradizione al 3° livello, il monaco può manipolare il ki del suo nemico quando imbriglia il proprio.\nOgni volta che il monaco colpisce una creatura con un attacco concessogli dalla sua Raffica di Colpi, può imporre a quel bersaglio uno degli effetti seguenti:\n- Deve superare un tiro salvezza su Destrezza, altrimenti cade a terra prono.\n- Deve superare un tiro salvezza su Forza.\nSe lo fallisce, il monaco può spingerlo di 4,5 metri allontanandolo da sé.\n- Non può effettuare reazioni fino alla fine del turno successivo del monaco.\n\nINTEGRITÀ DEL CORPO\nAl 6° livello, il monaco ottiene la capacità di curarsi.\nUsando un\'azione, recupera un ammontare di punti ferita pari a tre volte il suo livello da monaco.\nDeve completare un riposo lungo prima di poter utilizzare di nuovo questo privilegio.\n\nTRANQUILLITÀ\nA partire dall\'11° livello, il monaco può entrare in una speciale forma di meditazione, immergendosi in un\'aura di pace.\nAlla fine di un riposo lungo ottiene l\'effetto di un incantesimo santuario che dura fino all\'inizio del suo riposo lungo successivo (l\'incantesimo può terminare anticipatamente come di consueto).\nLa CD del tiro salvezza dell\'incantesimo è pari a 8 + il modificatore di Saggezza del monaco + il bonus di competenza del monaco.\n\nPALMO TREMANTE\nAl 17° livello, il monaco ottiene la capacità di scatenare vibrazioni letali nel corpo di un altro.\nQuando il monaco colpisce una creatura con un colpo senz\'armi, può spendere 3 punti ki per dare il via a queste vibrazioni impercettibili, che durano un numero di giorni pari al suo livello da monaco.\nLe vibrazioni sono innocue, a meno che il monaco non usi la sua azione per interromperle.\nPer farlo, il monaco e il bersaglio devono trovarsi sullo stesso piano di esistenza.\nQuando il monaco usa questa azione, la creatura deve effettuare un tiro salvezza su Costituzione.\nSe lo fallisce, scende a 0 punti ferita, mentre se lo supera, subisce 10d10 danni necrotici.\nIl monaco può tenere soltanto una creatura alla volta sotto l\'effetto di questo privilegio.\nPuò scegliere di porre fine alle vibrazioni in modo innocuo senza usare un\'azione.
     </string>
+    <string name="viola">Viola</string>
     <string name="vuoi_rimuovere_no_aggiungere_qualcosa">Vuoi rimuovere\no aggiungere qualcosa?</string>
     <string name="warlock">Warlock</string>
     <string name="warlock_info">

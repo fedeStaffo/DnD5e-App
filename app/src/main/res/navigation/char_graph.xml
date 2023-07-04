@@ -34,6 +34,27 @@
         <action
             android:id="@+id/action_raceFragment_to_classFragment"
             app:destination="@id/classFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_caratteristicaUmanoFragment"
+            app:destination="@id/caratteristicaUmanoFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_caratteristicheMezzelfoFragment"
+            app:destination="@id/caratteristicheMezzelfoFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_sottorazzaElfoFragment"
+            app:destination="@id/sottorazzaElfoFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_sottorazzaGnomoFragment"
+            app:destination="@id/sottorazzaGnomoFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_sottorazzaHalflingFragment"
+            app:destination="@id/sottorazzaHalflingFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_sottorazzaNanoFragment"
+            app:destination="@id/sottorazzaNanoFragment" />
+        <action
+            android:id="@+id/action_raceFragment_to_tipoDragonideFragment"
+            app:destination="@id/tipoDragonideFragment" />
     </fragment>
     <fragment
         android:id="@+id/raceInfoFragment"
@@ -101,6 +122,86 @@
         <action
             android:id="@+id/action_salvaPersonaggioFragment_to_homeCharacterFragment"
             app:destination="@id/homeCharacterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caratteristicaUmanoFragment"
+        android:name="com.progetto_dd.view.characters.crea.CaratteristicaUmanoFragment"
+        android:label="Sottorazza"
+        tools:layout="@layout/fragment_caratteristica_umano" >
+        <action
+            android:id="@+id/action_caratteristicaUmanoFragment_to_classFragment"
+            app:destination="@id/classFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caratteristicheMezzelfoFragment"
+        android:name="com.progetto_dd.view.characters.crea.CaratteristicheMezzelfoFragment"
+        android:label="Sottorazza"
+        tools:layout="@layout/fragment_caratteristiche_mezzelfo" >
+        <action
+            android:id="@+id/action_caratteristicheMezzelfoFragment_to_classFragment"
+            app:destination="@id/classFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sottorazzaElfoFragment"
+        android:name="com.progetto_dd.view.characters.crea.SottorazzaElfoFragment"
+        android:label="Sottorazza"
+        tools:layout="@layout/fragment_sottorazza_elfo" >
+        <action
+            android:id="@+id/action_sottorazzaElfoFragment_to_sottorazzaInfoFragment"
+            app:destination="@id/sottorazzaInfoFragment" />
+        <action
+            android:id="@+id/action_sottorazzaElfoFragment_to_classFragment"
+            app:destination="@id/classFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sottorazzaInfoFragment"
+        android:name="com.progetto_dd.view.characters.crea.SottorazzaInfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_sottorazza_info" />
+    <fragment
+        android:id="@+id/sottorazzaGnomoFragment"
+        android:name="com.progetto_dd.view.characters.crea.SottorazzaGnomoFragment"
+        android:label="Sottorazza"
+        tools:layout="@layout/fragment_sottorazza_gnomo" >
+        <action
+            android:id="@+id/action_sottorazzaGnomoFragment_to_classFragment"
+            app:destination="@id/classFragment" />
+        <action
+            android:id="@+id/action_sottorazzaGnomoFragment_to_sottorazzaInfoFragment"
+            app:destination="@id/sottorazzaInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sottorazzaHalflingFragment"
+        android:name="com.progetto_dd.view.characters.crea.SottorazzaHalflingFragment"
+        android:label="Sottorazza"
+        tools:layout="@layout/fragment_sottorazza_halfling" >
+        <action
+            android:id="@+id/action_sottorazzaHalflingFragment_to_classFragment"
+            app:destination="@id/classFragment" />
+        <action
+            android:id="@+id/action_sottorazzaHalflingFragment_to_sottorazzaInfoFragment"
+            app:destination="@id/sottorazzaInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sottorazzaNanoFragment"
+        android:name="com.progetto_dd.view.characters.crea.SottorazzaNanoFragment"
+        android:label="Sottorazza"
+        tools:layout="@layout/fragment_sottorazza_nano" >
+        <action
+            android:id="@+id/action_sottorazzaNanoFragment_to_classFragment"
+            app:destination="@id/classFragment" />
+        <action
+            android:id="@+id/action_sottorazzaNanoFragment_to_sottorazzaInfoFragment"
+            app:destination="@id/sottorazzaInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipoDragonideFragment"
+        android:name="com.progetto_dd.view.characters.crea.TipoDragonideFragment"
+        android:label="Sottorazza"
+        tools:layout="@layout/fragment_tipo_dragonide" >
+        <action
+            android:id="@+id/action_tipoDragonideFragment_to_classFragment"
+            app:destination="@id/classFragment" />
     </fragment>
 
 </navigation>

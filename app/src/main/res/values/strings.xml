@@ -1024,6 +1024,25 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
     <string name="destrezza3">Destrezza</string>
     <string name="forza3">Forza</string>
     <string name="scegli_2_tra_le_seguenti_competenze">Scegli 2 tra le seguenti competenze</string>
+    <string name="scegli_3_strumenti_musicali">Scegli 3 strumenti musicali</string>
+    <string name="lira">Lira</string>
+    <string name="flauto_di_pan">Flauto di Pan</string>
+    <string name="flauto">Flauto</string>
+    <string name="liuto">Liuto</string>
+    <string name="tamburo">Tamburo</string>
+    <string name="viola">Viola</string>
+    <string name="dulcimer">Dulcimer</string>
+    <string name="corno">Corno</string>
+    <string name="cornamusa">Cornamusa</string>
+    <string name="ciaramella">Ciaramella</string>
+    <string name="scorte_da_calligrafo">Scorte da calligrafo</string>
+    <string name="scorte_da_alchimista">Scorte da alchimista</string>
+    <string name="scegli_uno_strumento_nda_artigiano_o_musicale">Scegli uno strumento\nda artigiano o musicale</string>
+    <string name="nano_delle_ncolline">Nano delle\ncolline</string>
+    <string name="nano_delle_nmontagne">Nano delle\nmontagne</string>
+    <string name="gnomo_delle_nrocce">Gnomo delle\nrocce</string>
+    <string name="gnomo_delle_nforeste">Gnomo delle\nforeste</string>
+    <string name="elfo_dei_nboschi">Elfo dei\nboschi</string>
 
     <string-array name="lingua_extra">
         <item>Gigante</item>
@@ -1040,6 +1059,40 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Primordiale</item>
         <item>Silvano</item>
         <item>Sottocomune</item>
+    </string-array>
+
+    <string-array name="scelta_strumento">
+        <item>Scegli una competenza musicale</item>
+        <item>Ciaramella</item>
+        <item>Cornamusa</item>
+        <item>Corno</item>
+        <item>Dulcimer</item>
+        <item>Flauto</item>
+        <item>Flauto di Pan</item>
+        <item>Lira</item>
+        <item>Liuto</item>
+        <item>Tamburo</item>
+        <item>Viola</item>
+    </string-array>
+
+    <string-array name="scelta_strumento_artigiano">
+        <item>Scegli una competenza da artigiano</item>
+        <item>Scorte da alchimista</item>
+        <item>Scorte da calligrafo</item>
+        <item>Scorte da mescitore</item>
+        <item>Strumenti da calzolaio</item>
+        <item>Strumenti da cartografo</item>
+        <item>Strumenti da conciatore</item>
+        <item>Strumenti da fabbro</item>
+        <item>Strumenti da falegname</item>
+        <item>Strumenti da gioielliere</item>
+        <item>Strumenti da intagliatore</item>
+        <item>Strumenti da inventore</item>
+        <item>Strumenti da pittore</item>
+        <item>Strumenti da soffiatore</item>
+        <item>Strumenti da tessitore</item>
+        <item>Strumenti da vasaio</item>
+        <item>Utensili da cuoco</item>
     </string-array>
 </resources>
 

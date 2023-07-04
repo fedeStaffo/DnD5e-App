@@ -117,9 +117,22 @@ class RollFragment : Fragment() {
         if(razza == "Elfo" && caratteristica == "Destrezza") num = 2
         if(razza == "Dragonide" && caratteristica == "Forza") num = 2
         if(razza == "Dragonide" && caratteristica == "Carisma") num = 1
-        if(razza == "Halfling" && caratteristica == "Destrezza") num = 2
-        if(razza == "Gnomo" && caratteristica == "Intelligenza") num = 2
-        if(razza == "Nano" && caratteristica == "Costituzione") num = 2
+
+        if(razza == "Halfling piedelesto" && caratteristica == "Destrezza") num = 2
+        if(razza == "Halfling piedelesto" && caratteristica == "Carisma") num = 1
+        if(razza == "Halfling tozzo" && caratteristica == "Destrezza") num = 2
+        if(razza == "Halfling tozzo" && caratteristica == "Costituzione") num = 1
+
+        if(razza == "Gnomo delle foreste" && caratteristica == "Intelligenza") num = 2
+        if(razza == "Gnomo delle foreste" && caratteristica == "Destrezza") num = 1
+        if(razza == "Gnomo delle rocce" && caratteristica == "Intelligenza") num = 2
+        if(razza == "Gnomo delle rocce" && caratteristica == "Costituzione") num = 1
+
+        if(razza == "Nano delle colline" && caratteristica == "Costituzione") num = 2
+        if(razza == "Nano delle colline" && caratteristica == "Saggezza") num = 1
+        if(razza == "Nano delle montagne" && caratteristica == "Costituzione") num = 2
+        if(razza == "Nano delle montagne" && caratteristica == "Forza") num = 2
+
         if(razza == "Mezzelfo" && caratteristica == "Carisma") num = 2
         if(razza == "Mezzorco" && caratteristica == "Forza") num = 2
         if(razza == "Mezzorco" && caratteristica == "Costituzione") num = 1

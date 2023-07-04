@@ -45,7 +45,6 @@ class BackgroundFragment : Fragment() {
 
             findNavController().navigate(R.id.action_backgroundFragment_to_rollFragment)
         }
-
     }
 
     override fun onDestroyView() {

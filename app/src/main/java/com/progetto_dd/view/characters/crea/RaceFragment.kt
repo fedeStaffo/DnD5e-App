@@ -250,7 +250,18 @@ class RaceFragment : Fragment() {
                 Toast.makeText(requireContext(), "Selezionare una razza!", Toast.LENGTH_SHORT).show()
             } else {
                 viewModel.setRazzaPersonaggio(razzaSelezionata)
-                findNavController().navigate(R.id.action_raceFragment_to_classFragment)
+                when(razzaSelezionata){
+                    "Elfo" -> findNavController().navigate(R.id.action_raceFragment_to_sottorazzaElfoFragment)
+                    "Umano" -> findNavController().navigate(R.id.action_raceFragment_to_caratteristicaUmanoFragment)
+                    "Nano" -> findNavController().navigate(R.id.action_raceFragment_to_sottorazzaNanoFragment)
+                    "Dragonide" -> findNavController().navigate(R.id.action_raceFragment_to_tipoDragonideFragment)
+                    "Gnomo" -> findNavController().navigate(R.id.action_raceFragment_to_sottorazzaGnomoFragment)
+                    "Halfling" -> findNavController().navigate(R.id.action_raceFragment_to_sottorazzaHalflingFragment)
+                    "Tiefling" -> findNavController().navigate(R.id.action_raceFragment_to_classFragment)
+                    "Mezzorco" -> findNavController().navigate(R.id.action_raceFragment_to_classFragment)
+                    "Mezzelfo" -> findNavController().navigate(R.id.action_raceFragment_to_caratteristicheMezzelfoFragment)
+                }
+
             }
         }
     }

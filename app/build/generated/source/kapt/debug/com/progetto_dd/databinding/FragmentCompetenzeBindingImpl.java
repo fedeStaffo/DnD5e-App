@@ -50,7 +50,14 @@ public class FragmentCompetenzeBindingImpl extends FragmentCompetenzeBinding  {
         sViewsWithIds.put(R.id.intrattenereCheckBox, 35);
         sViewsWithIds.put(R.id.persuasione, 36);
         sViewsWithIds.put(R.id.persuasioneCheckBox, 37);
-        sViewsWithIds.put(R.id.btn_avanti, 38);
+        sViewsWithIds.put(R.id.competenze_bardo, 38);
+        sViewsWithIds.put(R.id.spinner1, 39);
+        sViewsWithIds.put(R.id.spinner2, 40);
+        sViewsWithIds.put(R.id.spinner3, 41);
+        sViewsWithIds.put(R.id.competenze_monaco, 42);
+        sViewsWithIds.put(R.id.spinnerArtigiano, 43);
+        sViewsWithIds.put(R.id.spinnerMusicale, 44);
+        sViewsWithIds.put(R.id.btn_avanti, 45);
     }
     // views
     @NonNull
@@ -61,7 +68,7 @@ public class FragmentCompetenzeBindingImpl extends FragmentCompetenzeBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentCompetenzeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 39, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 46, sIncludes, sViewsWithIds));
     }
     private FragmentCompetenzeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
@@ -73,7 +80,9 @@ public class FragmentCompetenzeBindingImpl extends FragmentCompetenzeBinding  {
             , (android.widget.CheckBox) bindings[11]
             , (android.widget.LinearLayout) bindings[2]
             , (android.widget.CheckBox) bindings[3]
-            , (android.widget.Button) bindings[38]
+            , (android.widget.Button) bindings[45]
+            , (android.widget.LinearLayout) bindings[38]
+            , (android.widget.LinearLayout) bindings[42]
             , (android.widget.LinearLayout) bindings[6]
             , (android.widget.CheckBox) bindings[7]
             , (android.widget.LinearLayout) bindings[14]
@@ -101,6 +110,11 @@ public class FragmentCompetenzeBindingImpl extends FragmentCompetenzeBinding  {
             , (android.widget.CheckBox) bindings[19]
             , (android.widget.LinearLayout) bindings[28]
             , (android.widget.CheckBox) bindings[29]
+            , (android.widget.Spinner) bindings[39]
+            , (android.widget.Spinner) bindings[40]
+            , (android.widget.Spinner) bindings[41]
+            , (android.widget.Spinner) bindings[43]
+            , (android.widget.Spinner) bindings[44]
             , (android.widget.LinearLayout) bindings[12]
             , (android.widget.CheckBox) bindings[13]
             );

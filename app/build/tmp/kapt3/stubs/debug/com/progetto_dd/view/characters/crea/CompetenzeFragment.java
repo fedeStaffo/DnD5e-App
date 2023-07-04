@@ -43,11 +43,6 @@ public final class CompetenzeFragment extends androidx.fragment.app.Fragment {
     public void onResume() {
     }
     
-    /**
-     * Restituisce un listener per la checkbox delle competenze.
-     * @param competenza La competenza corrispondente alla checkbox.
-     * @return Il listener per la checkbox delle competenze.
-     */
     private final android.widget.CompoundButton.OnCheckedChangeListener createCompetenzaCheckBoxListener(java.lang.String competenza) {
         return null;
     }

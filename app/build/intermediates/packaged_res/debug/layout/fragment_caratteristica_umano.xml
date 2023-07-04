@@ -7,12 +7,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:context=".view.characters.crea.CaratteristicaUmanoFragment"
     android:padding="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.characters.crea.CaratteristicaUmanoFragment">
+            android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/competenze_umano_text"
@@ -45,7 +45,7 @@
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:entries="@array/lingue_umano"
+            android:entries="@array/lingua_extra"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linguaggio_extra_text" />
