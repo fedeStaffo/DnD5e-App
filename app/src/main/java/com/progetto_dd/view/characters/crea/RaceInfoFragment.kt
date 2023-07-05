@@ -36,9 +36,9 @@ class RaceInfoFragment : Fragment() {
 
         if (razza != null) {
             when(razza){
-                "Elfo"-> binding.raceInfoText.text = getString(R.string.Elfo_info)
-                "Umano"-> binding.raceInfoText.text = getString(R.string.Umano_info)
-                "Nano"-> binding.raceInfoText.text = getString(R.string.Nano_info)
+                "Elfo"-> binding.raceInfoText.text = getString(R.string.elfo_info)
+                "Umano"-> binding.raceInfoText.text = getString(R.string.umano_info)
+                "Nano"-> binding.raceInfoText.text = getString(R.string.nano_info)
                 "Dragonide"-> binding.raceInfoText.text = getString(R.string.dragonide_info)
                 "Gnomo"-> binding.raceInfoText.text = getString(R.string.gnomo_info)
                 "Halfling"-> binding.raceInfoText.text = getString(R.string.halfling_info)

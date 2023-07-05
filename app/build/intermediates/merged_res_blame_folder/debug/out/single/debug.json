@@ -48,10 +48,6 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\icon.png"
     },
     {
-        "merged": "com.progetto_dd.app-merged_res-65:/layout_fragment_caratteristiche_mezzelfo.xml.flat",
-        "source": "com.progetto_dd.app-main-67:/layout/fragment_caratteristiche_mezzelfo.xml"
-    },
-    {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\drawable_classi_sfondo.jpg.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\classi_sfondo.jpg"
     },
@@ -270,6 +266,10 @@
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\navigation_viewcharacter_graph.xml.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\navigation\\viewcharacter_graph.xml"
+    },
+    {
+        "merged": "com.progetto_dd.app-merged_res-65:/layout_fragment_stats_classe_razza.xml.flat",
+        "source": "com.progetto_dd.app-main-67:/layout/fragment_stats_classe_razza.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_home.xml.flat",

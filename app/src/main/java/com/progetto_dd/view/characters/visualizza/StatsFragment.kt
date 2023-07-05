@@ -84,7 +84,7 @@ class StatsFragment : Fragment() {
 
         // Visualizza la lista di competenze
         if (competenze != null) {
-            binding.listaCompetenze.text = competenze.joinToString(separator = ", ")
+            binding.listaCompetenze.text = competenze.joinToString(separator = ",\n")
         }
 
         // Calcola e visualizza il bonus di competenza
@@ -99,6 +99,14 @@ class StatsFragment : Fragment() {
                 "Ladro" -> binding.tiriSalvezza.text = "Destrezza, Intelligenza"
                 "Guerriero" -> binding.tiriSalvezza.text = "Forza, Costituzione"
                 "Mago" -> binding.tiriSalvezza.text = "Intelligenza, Saggezza"
+                "Barbaro" -> binding.tiriSalvezza.text = "Forza, Costituzione"
+                "Chierico" -> binding.tiriSalvezza.text = "Saggezza, Carisma"
+                "Druido" -> binding.tiriSalvezza.text = "Intelligenza, Saggezza"
+                "Monaco" -> binding.tiriSalvezza.text = "Forza, Destrezza"
+                "Paladino" -> binding.tiriSalvezza.text = "Saggezza, Carisma"
+                "Ranger" -> binding.tiriSalvezza.text = "Forza, Destrezza"
+                "Stregone" -> binding.tiriSalvezza.text = "Costituzione, Carisma"
+                "Warlock" -> binding.tiriSalvezza.text = "Saggezza, Carisma"
             }
         }
 
@@ -108,6 +116,30 @@ class StatsFragment : Fragment() {
                 "Bardo" -> if (carisma != null) {
                     binding.cdTiroSalvezzaMagia.text =
                         getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+                }
+                "Warlock" -> if (carisma != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+                }
+                "Stregone" -> if (carisma != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+                }
+                "Barbaro" -> if (saggezza != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+                }
+                "Chierico" -> if (saggezza != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+                }
+                "Ranger" -> if (saggezza != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+                }
+                "Druido" -> if (saggezza != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
                 }
                 "Ladro" -> if (intelligenza != null) {
                     binding.cdTiroSalvezzaMagia.text =
@@ -120,6 +152,14 @@ class StatsFragment : Fragment() {
                 "Mago" -> if (intelligenza != null) {
                     binding.cdTiroSalvezzaMagia.text =
                         getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+                }
+                "Monaco" -> if (saggezza != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+                }
+                "Paladino" -> if (carisma != null) {
+                    binding.cdTiroSalvezzaMagia.text =
+                        getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
                 }
             }
         }
@@ -131,6 +171,34 @@ class StatsFragment : Fragment() {
                     binding.bonusAttaccoIncantesimo.text =
                         getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
                 }
+                "Warlock" -> if (carisma != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+                }
+                "Stregone" -> if (carisma != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+                }
+                "Paladino" -> if (carisma != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+                }
+                "Barbaro" -> if (saggezza != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+                }
+                "Chierico" -> if (saggezza != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+                }
+                "Ranger" -> if (saggezza != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+                }
+                "Druido" -> if (saggezza != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+                }
                 "Ladro" -> if (intelligenza != null) {
                     binding.bonusAttaccoIncantesimo.text =
                         getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
@@ -142,6 +210,10 @@ class StatsFragment : Fragment() {
                 "Mago" -> if (intelligenza != null) {
                     binding.bonusAttaccoIncantesimo.text =
                         getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+                }
+                "Monaco" -> if (saggezza != null) {
+                    binding.bonusAttaccoIncantesimo.text =
+                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
                 }
             }
         }

@@ -1032,6 +1032,7 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
     <string name="gnomo_delle_nrocce">Gnomo delle\nrocce</string>
     <string name="gnomo_delle_nforeste">Gnomo delle\nforeste</string>
     <string name="elfo_dei_nboschi">Elfo dei\nboschi</string>
+    <string name="trattino">-</string>
 
     <string-array name="lingua_extra">
         <item>Scegli una lingua</item>

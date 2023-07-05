@@ -81,10 +81,13 @@
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_height="50dp"
             android:layout_marginTop="8dp"
-            android:popupBackground="@color/white" />
+            android:background="@color/ocra"
+            android:popupBackground="@color/white"/>
 
         <Button
             android:id="@+id/bottoneInfoSottoClasse"

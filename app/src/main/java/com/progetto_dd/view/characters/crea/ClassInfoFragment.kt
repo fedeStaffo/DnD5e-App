@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.progetto_dd.R
 import com.progetto_dd.databinding.FragmentClassInfoBinding
@@ -37,10 +36,10 @@ class ClassInfoFragment : Fragment() {
 
         if (classe != null) {
             when(classe){
-                "Bardo"-> binding.classInfoText.text = getString(R.string.Bardo_info)
-                "Guerriero"-> binding.classInfoText.text = getString(R.string.Guerriero_info)
-                "Ladro"-> binding.classInfoText.text = getString(R.string.Ladro_info)
-                "Mago"-> binding.classInfoText.text = getString(R.string.Mago_info)
+                "Bardo"-> binding.classInfoText.text = getString(R.string.bardo_info)
+                "Guerriero"-> binding.classInfoText.text = getString(R.string.guerriero_info)
+                "Ladro"-> binding.classInfoText.text = getString(R.string.ladro_info)
+                "Mago"-> binding.classInfoText.text = getString(R.string.mago_info)
                 "Barbaro"-> binding.classInfoText.text = getString(R.string.barbaro_info)
                 "Chierico"-> binding.classInfoText.text = getString(R.string.chierico_info)
                 "Druido"-> binding.classInfoText.text = getString(R.string.druido_info)
