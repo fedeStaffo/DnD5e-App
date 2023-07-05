@@ -38,12 +38,13 @@ class CompetenzeFragment : Fragment() {
 
         // Ottieni le competenze per una specifica classe (esempio: "Guerriero")
         val classe = viewModelPersonaggio.classePersonaggio.value
+        val mezzelfo = viewModelPersonaggio.competenzeMezzelfoPersonaggio.value
 
 
         if (classe != null) {
 
             // Prende il numero di competenze in base alla classe passata
-            val numCompetenze = getNumCompetenzeByClasse(classe)
+            var numCompetenze = getNumCompetenzeByClasse(classe)
             binding.numCompetenze = numCompetenze
 
             // Setta le competenze per ogni classe
@@ -304,6 +305,13 @@ class CompetenzeFragment : Fragment() {
                 val selezioneArt = binding.spinnerArtigiano.selectedItem as? String
                 val list = viewModelPersonaggio.competenzePersonaggio.value
 
+                if (mezzelfo != null) {
+                    if(mezzelfo.size != 0){
+                        myList.addAll(mezzelfo)
+                        numCompetenze += 2
+                    }
+                }
+
                 if (classe == "Bardo") {
                     if(myList.size != numCompetenze){
                         Toast.makeText(
@@ -328,7 +336,7 @@ class CompetenzeFragment : Fragment() {
                             myList.add(selezione1)
                             myList.add(selezione2)
                             myList.add(selezione3)
-                            if (list != null) myList.add(list.toString())
+                            if (list != null) myList.addAll(list)
                         }
                         viewModelPersonaggio.setCompetenzePersonaggio(myList)
                         findNavController().navigate(R.id.action_competenzeFragment_to_backgroundFragment)
@@ -356,18 +364,18 @@ class CompetenzeFragment : Fragment() {
                         if (selezioneMus != null && selezioneArt != null) {
                             if(selezioneMus != "Scegli una competenza musicale") {
                                 myList.add(selezioneMus)
-                                if (list != null) myList.add(list.toString())
+                                if (list != null) myList.addAll(list)
                             }
                             else {
                                 myList.add(selezioneArt)
-                                if (list != null) myList.add(list.toString())
+                                if (list != null) myList.addAll(list)
                             }
                         }
                         viewModelPersonaggio.setCompetenzePersonaggio(myList)
                         findNavController().navigate(R.id.action_competenzeFragment_to_backgroundFragment)
                     }
                 }else if (myList.size == numCompetenze) {
-                    if (list != null) myList.add(list.toString())
+                    if (list != null) myList.addAll(list)
                     viewModelPersonaggio.setCompetenzePersonaggio(myList)
                     findNavController().navigate(R.id.action_competenzeFragment_to_backgroundFragment)
                 } else {

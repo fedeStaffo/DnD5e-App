@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -176,6 +177,9 @@ public final class FragmentCaratteristicheMezzelfoBinding implements ViewBinding
   public final CheckBox sopravvivenzaCheckBox;
 
   @NonNull
+  public final Spinner spinnerLingua;
+
+  @NonNull
   public final LinearLayout storia;
 
   @NonNull
@@ -207,7 +211,8 @@ public final class FragmentCaratteristicheMezzelfoBinding implements ViewBinding
       @NonNull LinearLayout religione, @NonNull CheckBox religioneCheckBox,
       @NonNull LinearLayout saggezza, @NonNull CheckBox saggezzaCheckBox,
       @NonNull LinearLayout sopravvivenza, @NonNull CheckBox sopravvivenzaCheckBox,
-      @NonNull LinearLayout storia, @NonNull CheckBox storiaCheckBox) {
+      @NonNull Spinner spinnerLingua, @NonNull LinearLayout storia,
+      @NonNull CheckBox storiaCheckBox) {
     this.rootView = rootView;
     this.acrobazia = acrobazia;
     this.acrobaziaCheckBox = acrobaziaCheckBox;
@@ -260,6 +265,7 @@ public final class FragmentCaratteristicheMezzelfoBinding implements ViewBinding
     this.saggezzaCheckBox = saggezzaCheckBox;
     this.sopravvivenza = sopravvivenza;
     this.sopravvivenzaCheckBox = sopravvivenzaCheckBox;
+    this.spinnerLingua = spinnerLingua;
     this.storia = storia;
     this.storiaCheckBox = storiaCheckBox;
   }
@@ -597,6 +603,12 @@ public final class FragmentCaratteristicheMezzelfoBinding implements ViewBinding
         break missingId;
       }
 
+      id = R.id.spinner_lingua;
+      Spinner spinnerLingua = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerLingua == null) {
+        break missingId;
+      }
+
       id = R.id.storia;
       LinearLayout storia = ViewBindings.findChildViewById(rootView, id);
       if (storia == null) {
@@ -619,7 +631,8 @@ public final class FragmentCaratteristicheMezzelfoBinding implements ViewBinding
           medicinaCheckBox, natura, naturaCheckBox, numCompetenzeText, percezione,
           percezioneCheckBox, persuasione, persuasioneCheckBox, punteggiCaratteristica,
           rapiditadimano, rapiditamanoCheckBox, religione, religioneCheckBox, saggezza,
-          saggezzaCheckBox, sopravvivenza, sopravvivenzaCheckBox, storia, storiaCheckBox);
+          saggezzaCheckBox, sopravvivenza, sopravvivenzaCheckBox, spinnerLingua, storia,
+          storiaCheckBox);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -11422,7 +11422,6 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Tamburo</item>
         <item>Viola</item>
     </string-array><string-array name="scelta_bardo_3">
-        <item>-</item>
         <item>Un\'armatura di cuoio e un pugnale</item>
     </string-array><string-array name="scelta_bardo_4">
         <item>-</item>
@@ -11500,7 +11499,6 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Un arco corto e 20 frecce</item>
         <item>Una spada corta</item>
     </string-array><string-array name="scelta_ladro_3">
-        <item>-</item>
         <item>Un\'armatura di cuoio, 2 pugnali e arnesi da scasso</item>
     </string-array><string-array name="scelta_ladro_4">
         <item>-</item>
@@ -11516,7 +11514,6 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Una borsa per componenti</item>
         <item>Un focus arcano</item>
     </string-array><string-array name="scelta_mago_3">
-        <item>-</item>
         <item>Un libro degli incantesimi</item>
     </string-array><string-array name="scelta_mago_4">
         <item>-</item>
@@ -11560,10 +11557,8 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Dardo</item>
         <item>Fionda</item>
     </string-array><string-array name="scelta_barbaro_3">
-        <item>-</item>
         <item>4 giavellotti</item>
     </string-array><string-array name="scelta_barbaro_4">
-        <item>-</item>
         <item>Una dotazione da esploratore </item>
     </string-array><string-array name="scelta_chierico_1">
         <item>-</item>
@@ -11626,10 +11621,8 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Randello</item>
         <item>Randello pesante</item>
     </string-array><string-array name="scelta_druido_3">
-        <item>-</item>
         <item>Armatura di cuoio</item>
     </string-array><string-array name="scelta_druido_4">
-        <item>-</item>
         <item>Una dotazione da esploratore</item>
     </string-array><string-array name="scelta_monaco_1">
         <item>-</item>
@@ -11649,7 +11642,6 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Dardo</item>
         <item>Fionda</item>
     </string-array><string-array name="scelta_monaco_2">
-        <item>-</item>
         <item>10 dardi</item>
     </string-array><string-array name="scelta_monaco_3">
         <item>Vuoto</item>
@@ -11722,7 +11714,6 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Cerbottana</item>
         <item>Rete</item>
     </string-array><string-array name="scelta_paladino_3">
-        <item>-</item>
         <item>Una cotta di maglia</item>
     </string-array><string-array name="scelta_paladino_4">
         <item>-</item>
@@ -11759,7 +11750,6 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Randello pesante</item>
         <item>Spada corta</item>
     </string-array><string-array name="scelta_ranger_3">
-        <item>-</item>
         <item>Arco lungo e faretra con 20 frecce</item>
     </string-array><string-array name="scelta_ranger_4">
         <item>-</item>
@@ -11787,7 +11777,6 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Una borsa per componenti</item>
         <item>Un focus arcano</item>
     </string-array><string-array name="scelta_stregone_3">
-        <item>-</item>
         <item>2 pugnali</item>
     </string-array><string-array name="scelta_stregone_4">
         <item>-</item>
@@ -11979,6 +11968,7 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
         <item>Tamburo</item>
         <item>Viola</item>
     </string-array><string name="scegli_2_tra_le_seguenti_competenze">Scegli 2 tra le seguenti competenze</string><string name="scorte_da_calligrafo">Scorte da calligrafo</string><string name="scorte_da_alchimista">Scorte da alchimista</string><string-array name="lingua_extra">
+        <item>Scegli una lingua</item>
         <item>Gigante</item>
         <item>Gnomesco</item>
         <item>Goblin</item>

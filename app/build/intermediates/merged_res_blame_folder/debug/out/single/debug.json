@@ -48,6 +48,10 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\icon.png"
     },
     {
+        "merged": "com.progetto_dd.app-merged_res-65:/layout_fragment_caratteristiche_mezzelfo.xml.flat",
+        "source": "com.progetto_dd.app-main-67:/layout/fragment_caratteristiche_mezzelfo.xml"
+    },
+    {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\drawable_classi_sfondo.jpg.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\classi_sfondo.jpg"
     },
@@ -60,24 +64,24 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\navigation\\camp_graph.xml"
     },
     {
-        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\drawable_open_book.png.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\open_book.png"
     },
     {
-        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_dado.xml.flat",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_dado.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_item_campagna.xml.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\item_campagna.xml"
     },
     {
-        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_dado.xml.flat",
-        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_dado.xml"
+        "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_join_campaign.xml.flat",
@@ -226,10 +230,6 @@
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\drawable_fabbro.png.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\fabbro.png"
-    },
-    {
-        "merged": "com.progetto_dd.app-merged_res-65:/layout_fragment_sottorazza_nano.xml.flat",
-        "source": "com.progetto_dd.app-main-67:/layout/fragment_sottorazza_nano.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\drawable_bombetta.png.flat",
@@ -410,10 +410,6 @@
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_competenze.xml.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_competenze.xml"
-    },
-    {
-        "merged": "com.progetto_dd.app-merged_res-65:/layout_fragment_sottorazza_elfo.xml.flat",
-        "source": "com.progetto_dd.app-main-67:/layout/fragment_sottorazza_elfo.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\navigation_nav_visualizza_campagna.xml.flat",

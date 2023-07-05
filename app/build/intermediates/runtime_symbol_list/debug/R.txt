@@ -3974,6 +3974,7 @@ int id spinnerMusicale 0x7f090441
 int id spinnerPersonaggi 0x7f09035d
 int id spinnerStatus 0x7f09035e
 int id spinnerTipo 0x7f09035f
+int id spinner_lingua 0x7f09045d
 int id spinner_scelta1 0x7f090360
 int id spinner_scelta2 0x7f090361
 int id spinner_scelta3 0x7f090362
@@ -4022,6 +4023,7 @@ int id tag_transition_group 0x7f09038b
 int id tag_unhandled_key_event_manager 0x7f09038c
 int id tag_unhandled_key_listeners 0x7f09038d
 int id tag_window_insets_animation_callback 0x7f09038e
+int id testo_alto 0x7f09045e
 int id text 0x7f09038f
 int id text2 0x7f090390
 int id textAllineamento 0x7f090391

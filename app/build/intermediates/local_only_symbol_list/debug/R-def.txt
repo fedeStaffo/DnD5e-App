@@ -655,6 +655,7 @@ id spinnerMusicale
 id spinnerPersonaggi
 id spinnerStatus
 id spinnerTipo
+id spinner_lingua
 id spinner_scelta1
 id spinner_scelta2
 id spinner_scelta3
@@ -668,6 +669,7 @@ id storia
 id storiaCheckBox
 id storiaEt
 id subrace_info_text
+id testo_alto
 id textAllineamento
 id textDado
 id textDescrizione

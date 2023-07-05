@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,13 +30,17 @@ public final class FragmentCaratteristicaUmanoBinding implements ViewBinding {
   @NonNull
   public final TextView linguaggioExtraText;
 
+  @NonNull
+  public final Spinner spinnerLingua;
+
   private FragmentCaratteristicaUmanoBinding(@NonNull LinearLayout rootView,
       @NonNull Button btnAvanti, @NonNull TextView competenzeUmanoText,
-      @NonNull TextView linguaggioExtraText) {
+      @NonNull TextView linguaggioExtraText, @NonNull Spinner spinnerLingua) {
     this.rootView = rootView;
     this.btnAvanti = btnAvanti;
     this.competenzeUmanoText = competenzeUmanoText;
     this.linguaggioExtraText = linguaggioExtraText;
+    this.spinnerLingua = spinnerLingua;
   }
 
   @Override
@@ -83,8 +88,14 @@ public final class FragmentCaratteristicaUmanoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.spinner_lingua;
+      Spinner spinnerLingua = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerLingua == null) {
+        break missingId;
+      }
+
       return new FragmentCaratteristicaUmanoBinding((LinearLayout) rootView, btnAvanti,
-          competenzeUmanoText, linguaggioExtraText);
+          competenzeUmanoText, linguaggioExtraText, spinnerLingua);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

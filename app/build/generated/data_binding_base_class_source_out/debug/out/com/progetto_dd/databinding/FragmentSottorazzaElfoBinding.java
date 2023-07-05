@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.progetto_dd.R;
@@ -44,10 +46,17 @@ public final class FragmentSottorazzaElfoBinding implements ViewBinding {
   @NonNull
   public final Button scegliOscuro;
 
+  @NonNull
+  public final Spinner spinnerLingua;
+
+  @NonNull
+  public final ConstraintLayout testoAlto;
+
   private FragmentSottorazzaElfoBinding(@NonNull LinearLayout rootView, @NonNull Button btnAvanti,
       @NonNull Button infoAlto, @NonNull Button infoBoschi, @NonNull Button infoOscuro,
       @NonNull TextView linguaggioExtraText, @NonNull Button scegliAlto,
-      @NonNull Button scegliBoschi, @NonNull Button scegliOscuro) {
+      @NonNull Button scegliBoschi, @NonNull Button scegliOscuro, @NonNull Spinner spinnerLingua,
+      @NonNull ConstraintLayout testoAlto) {
     this.rootView = rootView;
     this.btnAvanti = btnAvanti;
     this.infoAlto = infoAlto;
@@ -57,6 +66,8 @@ public final class FragmentSottorazzaElfoBinding implements ViewBinding {
     this.scegliAlto = scegliAlto;
     this.scegliBoschi = scegliBoschi;
     this.scegliOscuro = scegliOscuro;
+    this.spinnerLingua = spinnerLingua;
+    this.testoAlto = testoAlto;
   }
 
   @Override
@@ -134,8 +145,21 @@ public final class FragmentSottorazzaElfoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.spinner_lingua;
+      Spinner spinnerLingua = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerLingua == null) {
+        break missingId;
+      }
+
+      id = R.id.testo_alto;
+      ConstraintLayout testoAlto = ViewBindings.findChildViewById(rootView, id);
+      if (testoAlto == null) {
+        break missingId;
+      }
+
       return new FragmentSottorazzaElfoBinding((LinearLayout) rootView, btnAvanti, infoAlto,
-          infoBoschi, infoOscuro, linguaggioExtraText, scegliAlto, scegliBoschi, scegliOscuro);
+          infoBoschi, infoOscuro, linguaggioExtraText, scegliAlto, scegliBoschi, scegliOscuro,
+          spinnerLingua, testoAlto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

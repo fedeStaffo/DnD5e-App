@@ -39,6 +39,7 @@
         <item>Patrono</item>
     </string-array>
     <string-array name="lingua_extra">
+        <item>Scegli una lingua</item>
         <item>Gigante</item>
         <item>Gnomesco</item>
         <item>Goblin</item>
@@ -107,11 +108,9 @@
         <item>Fionda</item>
     </string-array>
     <string-array name="scelta_barbaro_3">
-        <item>-</item>
         <item>4 giavellotti</item>
     </string-array>
     <string-array name="scelta_barbaro_4">
-        <item>-</item>
         <item>Una dotazione da esploratore </item>
     </string-array>
     <string-array name="scelta_bardo_1">
@@ -147,7 +146,6 @@
         <item>Viola</item>
     </string-array>
     <string-array name="scelta_bardo_3">
-        <item>-</item>
         <item>Un\'armatura di cuoio e un pugnale</item>
     </string-array>
     <string-array name="scelta_bardo_4">
@@ -222,11 +220,9 @@
         <item>Randello pesante</item>
     </string-array>
     <string-array name="scelta_druido_3">
-        <item>-</item>
         <item>Armatura di cuoio</item>
     </string-array>
     <string-array name="scelta_druido_4">
-        <item>-</item>
         <item>Una dotazione da esploratore</item>
     </string-array>
     <string-array name="scelta_guerriero_1">
@@ -308,7 +304,6 @@
         <item>Una spada corta</item>
     </string-array>
     <string-array name="scelta_ladro_3">
-        <item>-</item>
         <item>Un\'armatura di cuoio, 2 pugnali e arnesi da scasso</item>
     </string-array>
     <string-array name="scelta_ladro_4">
@@ -328,7 +323,6 @@
         <item>Un focus arcano</item>
     </string-array>
     <string-array name="scelta_mago_3">
-        <item>-</item>
         <item>Un libro degli incantesimi</item>
     </string-array>
     <string-array name="scelta_mago_4">
@@ -355,7 +349,6 @@
         <item>Fionda</item>
     </string-array>
     <string-array name="scelta_monaco_2">
-        <item>-</item>
         <item>10 dardi</item>
     </string-array>
     <string-array name="scelta_monaco_3">
@@ -408,7 +401,6 @@
         <item>Scudo</item>
     </string-array>
     <string-array name="scelta_paladino_3">
-        <item>-</item>
         <item>Una cotta di maglia</item>
     </string-array>
     <string-array name="scelta_paladino_4">
@@ -462,7 +454,6 @@
         <item>Spada corta</item>
     </string-array>
     <string-array name="scelta_ranger_3">
-        <item>-</item>
         <item>Arco lungo e faretra con 20 frecce</item>
     </string-array>
     <string-array name="scelta_ranger_4">
@@ -508,7 +499,6 @@
         <item>Un focus arcano</item>
     </string-array>
     <string-array name="scelta_stregone_3">
-        <item>-</item>
         <item>2 pugnali</item>
     </string-array>
     <string-array name="scelta_stregone_4">

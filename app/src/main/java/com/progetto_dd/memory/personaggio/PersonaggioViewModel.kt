@@ -59,6 +59,33 @@ class PersonaggioViewModel : ViewModel() {
         _competenzePersonaggio.value = competenze
     }
 
+    //Variabile per le competenze del mezzelfo
+    private val _competenzeMezzelfoPersonaggio = MutableLiveData<List<String>>()
+    val competenzeMezzelfoPersonaggio: LiveData<List<String>> get() = _competenzeMezzelfoPersonaggio
+
+    // Funzione per salvare le competenzeMezzelfo
+    fun setCompetenzeMezzelfoPersonaggio(competenzeMezzelfo: List<String>) {
+        _competenzeMezzelfoPersonaggio.value = competenzeMezzelfo
+    }
+
+    //Variabile per le caratteristiche del mezzelfo
+    private val _caratteristicaMezzelfoPersonaggio = MutableLiveData<List<String>>()
+    val caratteristicaMezzelfoPersonaggio: LiveData<List<String>> get() = _caratteristicaMezzelfoPersonaggio
+
+    // Funzione per salvare le caratteristicaMezzelfo
+    fun setcaratteristicaMezzelfoPersonaggio(caratteristicaMezzelfo: List<String>) {
+        _caratteristicaMezzelfoPersonaggio.value = caratteristicaMezzelfo
+    }
+
+    //Variabile per i liunguaggi
+    private val _linguaggiPersonaggio = MutableLiveData<List<String>>()
+    val linguaggiPersonaggio: LiveData<List<String>> get() = _linguaggiPersonaggio
+
+    // Funzione per salvare i linguaggi
+    fun setLinguaggiPersonaggio(linguaggi: List<String>) {
+        _linguaggiPersonaggio.value = linguaggi
+    }
+
     // Stringa per la descrizione
     private val _backgroundDescrizione = MutableLiveData<String>()
     val backgroundDescrizione: LiveData<String> get() = _backgroundDescrizione
@@ -220,6 +247,7 @@ class PersonaggioViewModel : ViewModel() {
             "razza" to this.razzaPersonaggio.value,
             "utenteId" to this.currentUser?.uid,
             "competenze" to this.competenzePersonaggio.value,
+            "linguaggi" to this.linguaggiPersonaggio.value,
             "descrizione" to this.backgroundDescrizione.value,
             "storia" to this.backgroundStoria.value,
             "tratti" to this.backgroundTratti.value,

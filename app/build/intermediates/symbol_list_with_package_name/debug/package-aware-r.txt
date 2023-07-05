@@ -3975,6 +3975,7 @@ id spinnerMusicale
 id spinnerPersonaggi
 id spinnerStatus
 id spinnerTipo
+id spinner_lingua
 id spinner_scelta1
 id spinner_scelta2
 id spinner_scelta3
@@ -4023,6 +4024,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id testo_alto
 id text
 id text2
 id textAllineamento
