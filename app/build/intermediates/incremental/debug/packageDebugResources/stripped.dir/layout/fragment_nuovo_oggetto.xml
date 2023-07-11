@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@color/macaroon"
+    tools:context=".view.campaigns.drawer.NuovoOggettoFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/nuovo_oggetto"
+        android:textStyle="bold"
+        android:textColor="@color/rosso"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/scegli_un_personaggio"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerGiocatore"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:popupBackground="@color/white"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/oggetto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/nome_oggetto"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btnAggiungiOggetto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/aggiungi"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

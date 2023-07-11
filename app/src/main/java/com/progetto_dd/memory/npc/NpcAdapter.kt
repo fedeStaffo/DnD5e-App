@@ -19,11 +19,8 @@ class NpcAdapter(private val npc: List<Npc>) :
         return NpcViewHolder(view)
     }
 
-    // Associa i dati di un personaggio alla relativa view
     override fun onBindViewHolder(holder: NpcViewHolder, position: Int) {
-        // Ottiene il personaggio alla posizione specificata
         val npc_singolo = npc[position]
-        // Chiama il metodo bind di PersonaggioViewHolder per associare i dati alla view
         holder.bind(npc_singolo)
     }
 

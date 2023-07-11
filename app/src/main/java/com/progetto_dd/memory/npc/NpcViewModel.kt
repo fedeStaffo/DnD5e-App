@@ -31,10 +31,13 @@ class NpcViewModel: ViewModel() {
                     val npc = Npc(nome, legame, descrizione, campagna, master)
                     npcList.add(npc)
                 }
-                npcLiveData.value = npcList
+
+                val sortedNpc = npcList.sortedWith(compareBy { it.nome?.lowercase() }) // Ordina la lista degli npc per nome senza differenziare maiuscole e minuscole
+                npcLiveData.value = sortedNpc
             }
         return npcLiveData
     }
+
 
     fun eliminaNpc(nome: String, master: String, campagna: String) {
         // Ottieni un'istanza del database di Firestore

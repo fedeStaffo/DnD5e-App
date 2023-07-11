@@ -30,8 +30,9 @@ class SessioneViewModel : ViewModel() {
                     val sessione = Sessione(numero, giorno, descrizione, campagnaNome, masterNome)
                     sessioneList.add(sessione)
                 }
-                // Imposta il valore del MutableLiveData con la lista di sessioni
-                sessioneLiveData.value = sessioneList
+
+                val sortedSessione = sessioneList.sortedBy { it.numero?.toInt() } // Ordina la lista delle sessioni per numero
+                sessioneLiveData.value = sortedSessione
             }
         return sessioneLiveData
     }
