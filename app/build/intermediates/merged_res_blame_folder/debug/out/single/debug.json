@@ -88,12 +88,12 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\personaggio.png"
     },
     {
-        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_join_campaign.xml.flat",
-        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_join_campaign.xml"
-    },
-    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_activity_reset_password.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\activity_reset_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_join_campaign.xml.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_join_campaign.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\drawable_tnt.jpg.flat",
@@ -220,6 +220,10 @@
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\update_new_password_icon.png"
     },
     {
+        "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\drawable_logo_new.jpg.flat",
+        "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\logo_new.jpg"
+    },
+    {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_race_info.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_race_info.xml"
     },
@@ -254,10 +258,6 @@
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_name_character.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_name_character.xml"
-    },
-    {
-        "merged": "com.progetto_dd.app-merged_res-65:/layout_fragment_sottorazza_gnomo.xml.flat",
-        "source": "com.progetto_dd.app-main-67:/layout/fragment_sottorazza_gnomo.xml"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_dialog_personaggio_details.xml.flat",
@@ -494,6 +494,10 @@
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_salva_personaggio.xml.flat",
         "source": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_salva_personaggio.xml"
+    },
+    {
+        "merged": "com.progetto_dd.app-merged_res-65:/drawable_logo_new_rounded.png.flat",
+        "source": "com.progetto_dd.app-main-67:/drawable/logo_new_rounded.png"
     },
     {
         "merged": "C:\\Users\\fede0\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\navigation_char_graph.xml.flat",

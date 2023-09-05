@@ -2946,6 +2946,8 @@ drawable lavoratore
 drawable left
 drawable libro_aperto
 drawable logo
+drawable logo_new
+drawable logo_new_rounded
 drawable logout
 drawable logout_112
 drawable logout_cloud

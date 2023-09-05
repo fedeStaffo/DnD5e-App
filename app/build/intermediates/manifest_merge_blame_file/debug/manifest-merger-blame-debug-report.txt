@@ -52,8 +52,8 @@
 29        android:extractNativeLibs="false"
 30        android:fullBackupContent="@xml/backup_rules"
 30-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:8:9-54
-31        android:icon="@drawable/logo"
-31-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:9:9-38
+31        android:icon="@drawable/logo_new_rounded"
+31-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:9:9-50
 32        android:label="Scheda\nD&amp;D 5e"
 32-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\src\main\AndroidManifest.xml:10:9-43
 33        android:supportsRtl="true"

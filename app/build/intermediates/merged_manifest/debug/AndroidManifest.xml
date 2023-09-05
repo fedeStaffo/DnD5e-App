@@ -28,7 +28,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/logo_new_rounded"
         android:label="Scheda\nD&amp;D 5e"
         android:supportsRtl="true"
         android:testOnly="true"
