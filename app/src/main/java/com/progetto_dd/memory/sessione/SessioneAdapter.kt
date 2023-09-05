@@ -60,7 +60,12 @@ class SessioneAdapter(private val sessione: List<Sessione>) :
                 val navController = itemView.findNavController()
                 navController.navigate(R.id.action_visualizzasessioniFragment_to_sessionDetailsFragment, args)
             }
-
         }
+    }
+
+    // Aggiungi questo metodo per ordinare le sessioni in base al numero
+    fun sortSessionsByNumber() {
+        sessione.sortedBy { it.numero }
+        notifyDataSetChanged()
     }
 }
