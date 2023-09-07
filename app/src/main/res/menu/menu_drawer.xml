@@ -17,6 +17,21 @@
             android:title="@string/logout"/>
     </group>
 
+    <item android:title="@string/strumenti">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/dadoFragment2"
+                    android:icon="@drawable/dado"
+                    android:title="@string/dado"/>
+                <item
+                    android:id="@+id/listaMagieFragment"
+                    android:icon="@drawable/libro_aperto"
+                    android:title="@string/incantesimi"/>
+            </group>
+        </menu>
+    </item>
+
     <item android:title="@string/supporto">
         <menu>
             <group android:checkableBehavior="single">

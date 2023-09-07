@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.progetto_dd.MainActivity
 import com.progetto_dd.databinding.FragmentInfoMagiaBinding
 import com.progetto_dd.memory.personaggio.PersonaggioViewModel
 
@@ -44,6 +45,18 @@ class InfoMagiaFragment : Fragment() {
         val razza = intent.getStringExtra("razza")
         val classe = intent.getStringExtra("classe")
         val utenteId = intent.getStringExtra("utente_id")
+
+
+        // Controlla se l'activity corrente è la MainActivity
+        if (requireActivity() is MainActivity) {
+            // Se la condizione è vera, nascondi i bottoni "elimina" e "aggiungi"
+            binding.btnAggiungiIncantesimo.visibility = View.GONE
+            binding.btnEliminaIncantesimo.visibility = View.GONE
+        } else {
+            // Altrimenti, mantieni i bottoni visibili
+            binding.btnAggiungiIncantesimo.visibility = View.VISIBLE
+            binding.btnEliminaIncantesimo.visibility = View.VISIBLE
+        }
 
         binding.btnAggiungiIncantesimo.setOnClickListener {
             // Verifica se la classe supporta gli incantesimi
