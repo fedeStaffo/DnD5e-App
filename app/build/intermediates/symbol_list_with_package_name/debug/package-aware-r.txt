@@ -2974,6 +2974,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable menu_filter
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3376,6 +3377,7 @@ id d4
 id d6
 id d8
 id dadoFragment
+id dadoFragment2
 id dark
 id dataBinding
 id date_picker_actions
@@ -3477,6 +3479,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filtro
 id fitCenter
 id fitEnd
 id fitStart
@@ -3593,6 +3596,7 @@ id left
 id leftToRight
 id legacy
 id legamiEt
+id lente
 id light
 id line1
 id line3
@@ -3722,6 +3726,7 @@ id noState
 id no_reg
 id nome
 id nomeCampagna
+id nomeIncantesimo
 id nomeMaster
 id nome_npc
 id nome_oggetto
@@ -4035,12 +4040,15 @@ id textDescrizione
 id textDifetti
 id textEnd
 id textIdeali
+id textIncantatore
 id textLegami
+id textLivello
 id textModificatore
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textStoria
+id textTipo
 id textTop
 id textTratticaratteriali
 id textView
@@ -4695,6 +4703,7 @@ string ideali
 string il_grande_antico_info
 string il_signore_fatato_info
 string illusione_info
+string incantesimi
 string incremento_punteggi_caratteristica_n_scegli_2_caratteristiche_a_cui_dare_un_1
 string indagare_int
 string indietro
@@ -4965,6 +4974,7 @@ string storia
 string storia_int
 string stregone
 string stregone_info
+string strumenti
 string strumenti_1_linguaggi_1
 string strumenti_2
 string strumenti_da_costruttore

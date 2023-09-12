@@ -1,10 +1,11 @@
 package com.progetto_dd.memory.personaggio.incantesimo
 
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.launch
-import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class IncantesimoViewModel(private val dao: IncantesimoDao) : ViewModel() {
@@ -477,11 +478,36 @@ class IncantesimoViewModel(private val dao: IncantesimoDao) : ViewModel() {
                     incantesimi.add(incantesimo)
                 }
             }
+            // Aggiungi questo log per verificare quanti risultati sono stati trovati
+            Log.d("ViewModel", "Numero di incantesimi trovati: ${incantesimi.size}")
+
             // Assegna i risultati ottenuti al MutableLiveData risultati
             risultati.postValue(incantesimi)
         }
 
         return risultati
+    }
+
+    // Funzione per ottenere un incantesimo in base al nome
+    fun getIncantesimoByNome(nomeIncantesimo: String): List<Incantesimo> {
+        val incantesimi = mutableListOf<Incantesimo>()
+        viewModelScope.launch(Dispatchers.IO) {
+            val incantesimo = dao.getIncantesimoByNome(nomeIncantesimo)
+            incantesimo?.let {
+                incantesimi.add(incantesimo)
+            }
+        }
+        return incantesimi
+    }
+
+    // Restituisce tutti gli incantesimi che contengono una parola nel nome
+    fun searchIncantesimiByKeyword(keyword: String): List<Incantesimo> {
+        val incantesimi = mutableListOf<Incantesimo>()
+        viewModelScope.launch(Dispatchers.IO) {
+            val result = dao.searchIncantesimiByKeyword("%$keyword%")
+            incantesimi.addAll(result)
+        }
+        return incantesimi
     }
 
 }

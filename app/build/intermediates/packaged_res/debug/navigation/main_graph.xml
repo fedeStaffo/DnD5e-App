@@ -25,4 +25,23 @@
         android:name="com.progetto_dd.view.ProfileFragment"
         android:label="Profilo Personale"
         tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/dadoFragment2"
+        android:name="com.progetto_dd.view.campaigns.drawer.DadoFragment"
+        android:label="Dado"
+        tools:layout="@layout/fragment_dado" />
+    <fragment
+        android:id="@+id/listaMagieFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.ListaMagieFragment"
+        android:label="Lista Incantesimi"
+        tools:layout="@layout/fragment_lista_magie" >
+        <action
+            android:id="@+id/action_listaMagieFragment_to_infoMagiaFragment"
+            app:destination="@id/infoMagiaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoMagiaFragment"
+        android:name="com.progetto_dd.view.characters.visualizza.InfoMagiaFragment"
+        android:label="Info Incantesimo"
+        tools:layout="@layout/fragment_info_magia" />
 </navigation>

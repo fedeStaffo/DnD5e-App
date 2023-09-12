@@ -523,6 +523,69 @@ public final class IncantesimoDao_Impl implements IncantesimoDao {
     }, continuation);
   }
 
+  @Override
+  public Object searchIncantesimiByKeyword(final String keyword,
+      final Continuation<? super List<Incantesimo>> continuation) {
+    final String _sql = "SELECT * FROM tabella_incantesimi WHERE nome LIKE '%' || ? || '%'";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (keyword == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, keyword);
+    }
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<Incantesimo>>() {
+      @Override
+      public List<Incantesimo> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
+          final int _cursorIndexOfLivello = CursorUtil.getColumnIndexOrThrow(_cursor, "livello");
+          final int _cursorIndexOfTipo = CursorUtil.getColumnIndexOrThrow(_cursor, "tipo");
+          final int _cursorIndexOfClassi = CursorUtil.getColumnIndexOrThrow(_cursor, "classi");
+          final int _cursorIndexOfInfo = CursorUtil.getColumnIndexOrThrow(_cursor, "info");
+          final List<Incantesimo> _result = new ArrayList<Incantesimo>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final Incantesimo _item;
+            final String _tmpNome;
+            if (_cursor.isNull(_cursorIndexOfNome)) {
+              _tmpNome = null;
+            } else {
+              _tmpNome = _cursor.getString(_cursorIndexOfNome);
+            }
+            final int _tmpLivello;
+            _tmpLivello = _cursor.getInt(_cursorIndexOfLivello);
+            final String _tmpTipo;
+            if (_cursor.isNull(_cursorIndexOfTipo)) {
+              _tmpTipo = null;
+            } else {
+              _tmpTipo = _cursor.getString(_cursorIndexOfTipo);
+            }
+            final String _tmpClassi;
+            if (_cursor.isNull(_cursorIndexOfClassi)) {
+              _tmpClassi = null;
+            } else {
+              _tmpClassi = _cursor.getString(_cursorIndexOfClassi);
+            }
+            final String _tmpInfo;
+            if (_cursor.isNull(_cursorIndexOfInfo)) {
+              _tmpInfo = null;
+            } else {
+              _tmpInfo = _cursor.getString(_cursorIndexOfInfo);
+            }
+            _item = new Incantesimo(_tmpNome,_tmpLivello,_tmpTipo,_tmpClassi,_tmpInfo);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, continuation);
+  }
+
   public static List<Class<?>> getRequiredConverters() {
     return Collections.emptyList();
   }

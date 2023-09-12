@@ -36,4 +36,8 @@ interface IncantesimoDao {
     // Ottiene un incantesimo in base al suo nome
     @Query("SELECT * FROM tabella_incantesimi WHERE nome = :nomeIncantesimo")
     suspend fun getIncantesimoByNome(nomeIncantesimo: String): Incantesimo?
+
+    @Query("SELECT * FROM tabella_incantesimi WHERE nome LIKE '%' || :keyword || '%'")
+    suspend fun searchIncantesimiByKeyword(keyword: String): List<Incantesimo>
+
 }

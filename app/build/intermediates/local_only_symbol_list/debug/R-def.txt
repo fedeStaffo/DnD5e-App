@@ -131,6 +131,7 @@ drawable logout_112
 drawable logout_cloud
 drawable mage_staff
 drawable mail
+drawable menu_filter
 drawable npc
 drawable npc_goblin
 drawable open_book
@@ -335,6 +336,7 @@ id d4
 id d6
 id d8
 id dadoFragment
+id dadoFragment2
 id descrizioneEt
 id descrizione_npc
 id descrizione_sessione
@@ -386,6 +388,7 @@ id equipaggiamentoFragment
 id fab
 id fabbro
 id fabbroCheckBox
+id filtro
 id forget_password_back_btn
 id forget_password_description
 id forget_password_icon
@@ -453,6 +456,7 @@ id intuizione
 id intuizioneCheckBox
 id joinCampaignFragment
 id legamiEt
+id lente
 id linguaggio_extra_text
 id linguaggio_mezzelfo
 id listaCompetenze
@@ -500,6 +504,7 @@ id neroCheckBox
 id no_reg
 id nome
 id nomeCampagna
+id nomeIncantesimo
 id nomeMaster
 id nome_npc
 id nome_oggetto
@@ -677,9 +682,12 @@ id textDado
 id textDescrizione
 id textDifetti
 id textIdeali
+id textIncantatore
 id textLegami
+id textLivello
 id textModificatore
 id textStoria
+id textTipo
 id textTratticaratteriali
 id textView
 id textView1
@@ -1019,6 +1027,7 @@ string ideali
 string il_grande_antico_info
 string il_signore_fatato_info
 string illusione_info
+string incantesimi
 string incremento_punteggi_caratteristica_n_scegli_2_caratteristiche_a_cui_dare_un_1
 string indagare_int
 string indietro
@@ -1179,6 +1188,7 @@ string storia
 string storia_int
 string stregone
 string stregone_info
+string strumenti
 string strumenti_1_linguaggi_1
 string strumenti_2
 string strumenti_da_costruttore

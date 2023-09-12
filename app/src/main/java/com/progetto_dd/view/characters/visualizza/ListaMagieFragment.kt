@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -27,6 +25,14 @@ class ListaMagieFragment : Fragment() {
     private lateinit var recyclerViewMagie: RecyclerView
     private lateinit var adapter: IncantesimoAdapter
     private lateinit var viewModel: IncantesimoViewModel
+    private lateinit var editTextNomeIncantesimo: EditText
+    private lateinit var imageViewLente: ImageView
+    private lateinit var imageViewFiltro: ImageView
+    private lateinit var textIncantatore: TextView
+    private lateinit var textLivello: TextView
+    private lateinit var textTipo: TextView
+
+    private var isFilterVisible = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,6 +46,12 @@ class ListaMagieFragment : Fragment() {
         spinnerTipo = rootView.findViewById(R.id.spinnerTipo)
         buttonCerca = rootView.findViewById(R.id.buttonCerca)
         recyclerViewMagie = rootView.findViewById(R.id.reyclerViewMagie)
+        editTextNomeIncantesimo = rootView.findViewById(R.id.nomeIncantesimo)
+        imageViewLente = rootView.findViewById(R.id.lente)
+        imageViewFiltro = rootView.findViewById(R.id.filtro)
+        textIncantatore = rootView.findViewById(R.id.textIncantatore)
+        textLivello = rootView.findViewById(R.id.textLivello)
+        textTipo = rootView.findViewById(R.id.textTipo)
         return rootView
     }
 
@@ -60,6 +72,24 @@ class ListaMagieFragment : Fragment() {
         viewModel.incantesimi.observe(viewLifecycleOwner, Observer { incantesimi ->
             adapter.updateMagie(incantesimi)
         })
+
+        //
+        imageViewLente.setOnClickListener {
+            val nomeIncantesimo = editTextNomeIncantesimo.text.toString().trim()
+            if (nomeIncantesimo.isNotEmpty()) {
+                val incantesimi = viewModel.searchIncantesimiByKeyword(nomeIncantesimo)
+                adapter.updateMagie(incantesimi)
+            } else {
+                Toast.makeText(requireContext(), "Inserisci un nome per la ricerca.", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+        // Gestisce il click sull'immagine del filtro (Mostra/Nascondi filtri)
+        imageViewFiltro.setOnClickListener {
+            isFilterVisible = !isFilterVisible
+            toggleFilterVisibility()
+        }
 
         // Gestisce il click sul pulsante "Cerca"
         buttonCerca.setOnClickListener {
@@ -84,6 +114,30 @@ class ListaMagieFragment : Fragment() {
             if(incantatore != "-" && livello != "-" && tipo != "-"){
                 viewModel.getIncantesimiByParams(livello.toInt(),tipo, incantatore)
             }
+        }
+
+        // Inizialmente nascondi gli spinner e il pulsante
+        toggleFilterVisibility()
+    }
+
+    private fun toggleFilterVisibility() {
+        if (isFilterVisible) {
+            spinnerIncantatore.visibility = View.VISIBLE
+            spinnerLivello.visibility = View.VISIBLE
+            spinnerTipo.visibility = View.VISIBLE
+            buttonCerca.visibility = View.VISIBLE
+            textTipo.visibility = View.VISIBLE
+            textIncantatore.visibility = View.VISIBLE
+            textLivello.visibility = View.VISIBLE
+
+        } else {
+            spinnerIncantatore.visibility = View.GONE
+            spinnerLivello.visibility = View.GONE
+            spinnerTipo.visibility = View.GONE
+            buttonCerca.visibility = View.GONE
+            textTipo.visibility = View.GONE
+            textIncantatore.visibility = View.GONE
+            textLivello.visibility = View.GONE
         }
     }
 
