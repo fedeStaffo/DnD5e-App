@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.gms.tasks.Task
 import com.google.android.gms.tasks.Tasks
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -479,20 +480,31 @@ class CampagnaViewModel : ViewModel() {
                 // Ottieni il campo "personaggi" della campagna
                 val personaggi = campagnaDocument.get("personaggi") as? List<String>
 
-                // Setta a vuoto il campo "campagna" di tutti i personaggi che hanno come valore del campo "campagna" il nomeCampagna specificato
-                personaggi?.let {
-                    val personaggiQuery = personaggiRef.whereIn("nome", it).whereEqualTo("campagna", nomeCampagna)
+                // Verifica se l'elenco personaggi è vuoto o non esiste
+                if (personaggi.isNullOrEmpty()) {
+                    // Elimina il documento della campagna direttamente
+                    campagneRef.document(campagnaId).delete()
+                } else {
+                    // Setta a vuoto il campo "campagna" di tutti i personaggi che hanno come valore del campo "campagna" il nomeCampagna specificato
+                    val personaggiQuery = personaggiRef.whereIn("nome", personaggi).whereEqualTo("campagna", nomeCampagna)
                     personaggiQuery.get().addOnSuccessListener { personaggiSnapshot ->
+                        val updateTasks = mutableListOf<Task<Void>>()
                         for (personaggioDocument in personaggiSnapshot.documents) {
-                            personaggioDocument.reference.update("campagna", "")
+                            val updateTask = personaggioDocument.reference.update("campagna", "")
+                            updateTasks.add(updateTask)
                         }
+
+                        // Quando tutte le operazioni di aggiornamento sono completate, elimina la campagna
+                        Tasks.whenAll(updateTasks)
+                            .addOnSuccessListener {
+                                campagneRef.document(campagnaId).delete()
+                            }
                     }
                 }
-                // Elimina il documento della campagna
-                campagneRef.document(campagnaId).delete()
             }
         }
     }
+
 
     // Confronta l'id del giocatore attuale con quello del master
     fun isCurrentPlayerMaster(masterId: String): Boolean {
