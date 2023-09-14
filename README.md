@@ -16,5 +16,5 @@ Ovviamente se un utente è il master di una campagna, avrà delle funzionalità 
 All’interno dell’app verranno inoltre gestite delle statistiche riguardanti il profilo di ogni giocatore.
 
 ## Sviluppatori
-Federico Staffolani
+Federico Staffolani,
 Enrico Maria Sardellini
