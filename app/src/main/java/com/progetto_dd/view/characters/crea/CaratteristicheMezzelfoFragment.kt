@@ -22,21 +22,32 @@ class CaratteristicheMezzelfoFragment: Fragment() {
     private val myListCar: MutableList<String> = mutableListOf()
     private lateinit var viewModelPersonaggio: PersonaggioViewModel
 
+    // Variabili temporanee per salvare le competenze originali
+    private var competenzeOriginaliCom: List<String> = emptyList()
+    private var competenzeOriginaliCar: List<String> = emptyList()
+    private var competenzeOriginaliLin: List<String> = emptyList()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCaratteristicheMezzelfoBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        onResume()
-
         // Inizializza il view model del Personaggio
         viewModelPersonaggio = ViewModelProvider(requireActivity())[PersonaggioViewModel::class.java]
+
+        onResume()
+
+        // Salva le competenze originali quando si crea la vista
+        competenzeOriginaliCom = viewModelPersonaggio.competenzeMezzelfoPersonaggio.value ?: emptyList()
+        competenzeOriginaliCar = viewModelPersonaggio.caratteristicaMezzelfoPersonaggio.value ?: emptyList()
+        competenzeOriginaliLin = viewModelPersonaggio.linguaggiPersonaggio.value ?: emptyList()
 
         binding.atleticaCheckBox.setOnCheckedChangeListener(
             createCompetenzaCheckBoxListener("Atletica")
@@ -219,5 +230,10 @@ class CaratteristicheMezzelfoFragment: Fragment() {
         myListCom.clear()
         myListCar.clear()
         myListLin.clear()
+
+        // Ripristina le competenze originali nel ViewModel
+        viewModelPersonaggio.setCompetenzeMezzelfoPersonaggio(competenzeOriginaliCom.toMutableList())
+        viewModelPersonaggio.setcaratteristicaMezzelfoPersonaggio(competenzeOriginaliCar.toMutableList())
+        viewModelPersonaggio.setLinguaggiPersonaggio(competenzeOriginaliLin.toMutableList())
     }
 }

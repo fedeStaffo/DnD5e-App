@@ -235,18 +235,22 @@ class PersonaggioViewModel : ViewModel() {
     }
 
     fun saveCharacterToFirestore() {
+        // Inizializza Firestore
         val db = FirebaseFirestore.getInstance()
         val personaggiRef = db.collection("personaggi")
 
+        // Inizializza liste di default per gli slot e le magie
         val slots: List<Int> = listOf(0, 0, 0, 0, 0, 0, 0, 0, 0)
         val magie: List<String> = emptyList()
 
+        // Crea un oggetto per il personaggio con i dati del form
         val character = hashMapOf<String, Any?>(
             "classe" to this.classePersonaggio.value,
             "nome" to this.nomePersonaggio.value,
             "razza" to this.razzaPersonaggio.value,
             "utenteId" to this.currentUser?.uid,
-            "competenze" to this.competenzePersonaggio.value,
+            "competenze" to emptyList<String>(), // Inizializza competenze come una lista vuota
+            "maestrie" to emptyList<String>(),   // Inizializza maestrie come una lista vuota
             "linguaggi" to this.linguaggiPersonaggio.value,
             "descrizione" to this.backgroundDescrizione.value,
             "storia" to this.backgroundStoria.value,
@@ -274,8 +278,34 @@ class PersonaggioViewModel : ViewModel() {
             "magie" to magie
         )
 
+        // Rimuovi duplicati dalle competenze e inserisci nelle maestrie
+        val competenze = this.competenzePersonaggio.value ?: emptyList<String>()
+        val maestrie = mutableListOf<String>()
+
+        val competenzeSet = mutableSetOf<String>() // Usato per rimuovere duplicati
+        for (competenza in competenze) {
+            if (!competenzeSet.contains(competenza)) {
+                competenzeSet.add(competenza)
+            } else {
+                // Competenza duplicata, sposta in maestrie solo se non è già presente
+                if (!maestrie.contains(competenza)) {
+                    maestrie.add(competenza)
+                }
+            }
+        }
+
+        // Rimuovi le competenze duplicate dall'array delle competenze
+        competenzeSet.removeAll(maestrie)
+
+        // Aggiorna l'oggetto del personaggio
+        character["competenze"] = competenzeSet.toList()
+        character["maestrie"] = maestrie
+
+        // Salva l'oggetto del personaggio in Firestore
         personaggiRef.add(character)
     }
+
+
 
     fun aggiungiEquipaggiamento(nomePersonaggio: String, nomeCampagna: String, nuovoOggetto: String) {
         // Ottieni un'istanza del database di Firestore

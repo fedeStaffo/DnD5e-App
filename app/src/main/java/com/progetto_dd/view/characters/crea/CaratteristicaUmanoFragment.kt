@@ -19,21 +19,28 @@ class CaratteristicaUmanoFragment : Fragment() {
     private val myList: MutableList<String> = mutableListOf()
     private lateinit var viewModelPersonaggio: PersonaggioViewModel
 
+    // Variabile temporanea per salvare le lingue originali
+    private var lingueOriginali: List<String> = emptyList()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCaratteristicaUmanoBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        onResume()
-
         // Inizializza il view model del Personaggio
         viewModelPersonaggio = ViewModelProvider(requireActivity())[PersonaggioViewModel::class.java]
+
+        onResume()
+
+        // Salva le lingue originali quando si crea la vista
+        lingueOriginali = viewModelPersonaggio.linguaggiPersonaggio.value ?: emptyList()
 
         binding.btnAvanti.setOnClickListener {
             val scelta = binding.spinnerLingua.selectedItem as String
@@ -46,6 +53,15 @@ class CaratteristicaUmanoFragment : Fragment() {
                 Toast.makeText(activity, "Devi scegliere un linguaggio", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        // ...
+
+        // Ripristina le lingue originali nel ViewModel
+        viewModelPersonaggio.setLinguaggiPersonaggio(lingueOriginali.toMutableList())
     }
 
     override fun onDestroyView() {

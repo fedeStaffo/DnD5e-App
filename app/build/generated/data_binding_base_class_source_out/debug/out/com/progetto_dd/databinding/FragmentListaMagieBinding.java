@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
@@ -25,6 +28,15 @@ public final class FragmentListaMagieBinding implements ViewBinding {
   public final Button buttonCerca;
 
   @NonNull
+  public final ImageView filtro;
+
+  @NonNull
+  public final ImageView lente;
+
+  @NonNull
+  public final EditText nomeIncantesimo;
+
+  @NonNull
   public final RecyclerView reyclerViewMagie;
 
   @NonNull
@@ -36,15 +48,33 @@ public final class FragmentListaMagieBinding implements ViewBinding {
   @NonNull
   public final Spinner spinnerTipo;
 
+  @NonNull
+  public final TextView textIncantatore;
+
+  @NonNull
+  public final TextView textLivello;
+
+  @NonNull
+  public final TextView textTipo;
+
   private FragmentListaMagieBinding(@NonNull NestedScrollView rootView, @NonNull Button buttonCerca,
+      @NonNull ImageView filtro, @NonNull ImageView lente, @NonNull EditText nomeIncantesimo,
       @NonNull RecyclerView reyclerViewMagie, @NonNull Spinner spinnerIncantatore,
-      @NonNull Spinner spinnerLivello, @NonNull Spinner spinnerTipo) {
+      @NonNull Spinner spinnerLivello, @NonNull Spinner spinnerTipo,
+      @NonNull TextView textIncantatore, @NonNull TextView textLivello,
+      @NonNull TextView textTipo) {
     this.rootView = rootView;
     this.buttonCerca = buttonCerca;
+    this.filtro = filtro;
+    this.lente = lente;
+    this.nomeIncantesimo = nomeIncantesimo;
     this.reyclerViewMagie = reyclerViewMagie;
     this.spinnerIncantatore = spinnerIncantatore;
     this.spinnerLivello = spinnerLivello;
     this.spinnerTipo = spinnerTipo;
+    this.textIncantatore = textIncantatore;
+    this.textLivello = textLivello;
+    this.textTipo = textTipo;
   }
 
   @Override
@@ -80,6 +110,24 @@ public final class FragmentListaMagieBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.filtro;
+      ImageView filtro = ViewBindings.findChildViewById(rootView, id);
+      if (filtro == null) {
+        break missingId;
+      }
+
+      id = R.id.lente;
+      ImageView lente = ViewBindings.findChildViewById(rootView, id);
+      if (lente == null) {
+        break missingId;
+      }
+
+      id = R.id.nomeIncantesimo;
+      EditText nomeIncantesimo = ViewBindings.findChildViewById(rootView, id);
+      if (nomeIncantesimo == null) {
+        break missingId;
+      }
+
       id = R.id.reyclerViewMagie;
       RecyclerView reyclerViewMagie = ViewBindings.findChildViewById(rootView, id);
       if (reyclerViewMagie == null) {
@@ -104,8 +152,27 @@ public final class FragmentListaMagieBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentListaMagieBinding((NestedScrollView) rootView, buttonCerca,
-          reyclerViewMagie, spinnerIncantatore, spinnerLivello, spinnerTipo);
+      id = R.id.textIncantatore;
+      TextView textIncantatore = ViewBindings.findChildViewById(rootView, id);
+      if (textIncantatore == null) {
+        break missingId;
+      }
+
+      id = R.id.textLivello;
+      TextView textLivello = ViewBindings.findChildViewById(rootView, id);
+      if (textLivello == null) {
+        break missingId;
+      }
+
+      id = R.id.textTipo;
+      TextView textTipo = ViewBindings.findChildViewById(rootView, id);
+      if (textTipo == null) {
+        break missingId;
+      }
+
+      return new FragmentListaMagieBinding((NestedScrollView) rootView, buttonCerca, filtro, lente,
+          nomeIncantesimo, reyclerViewMagie, spinnerIncantatore, spinnerLivello, spinnerTipo,
+          textIncantatore, textLivello, textTipo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

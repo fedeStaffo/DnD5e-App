@@ -115,6 +115,9 @@ class SottorazzaNanoFragment : Fragment() {
         montagneSelected = false
 
         myList.clear()
+
+        // Ripulisci il ViewModel
+        viewModelPersonaggio.setCompetenzePersonaggio(emptyList())
     }
 
     override fun onDestroyView() {

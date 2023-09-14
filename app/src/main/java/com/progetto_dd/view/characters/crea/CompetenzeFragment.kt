@@ -20,21 +20,28 @@ class CompetenzeFragment : Fragment() {
     private val myList: MutableList<String> = mutableListOf()
     private lateinit var viewModelPersonaggio: PersonaggioViewModel
 
+    // Variabile temporanea per salvare le competenze originali
+    private var competenzeOriginali: List<String> = emptyList()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCompetenzeBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        onResume()
-
         // Inizializza il view model del Personaggio
         viewModelPersonaggio = ViewModelProvider(requireActivity())[PersonaggioViewModel::class.java]
+
+        onResume()
+
+        // Salva le competenze originali quando si crea la vista
+        competenzeOriginali = viewModelPersonaggio.competenzePersonaggio.value ?: emptyList()
 
         // Ottieni le competenze per una specifica classe (esempio: "Guerriero")
         val classe = viewModelPersonaggio.classePersonaggio.value
@@ -445,7 +452,12 @@ class CompetenzeFragment : Fragment() {
 
         // Rimuovi tutti gli elementi dalla lista myList
         myList.clear()
+
+        // Ripristina le competenze originali nel ViewModel
+        viewModelPersonaggio.setCompetenzePersonaggio(competenzeOriginali.toMutableList())
     }
+
+
 
     private fun createCompetenzaCheckBoxListener(
         competenza: String

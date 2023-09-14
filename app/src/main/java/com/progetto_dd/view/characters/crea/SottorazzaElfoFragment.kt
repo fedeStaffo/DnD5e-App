@@ -124,15 +124,20 @@ class SottorazzaElfoFragment : Fragment() {
     }
 
 
-    // Resetta i booleani se si torna indietro
+    // Resetta i booleani e pulisci le competenze se si torna indietro
     override fun onResume() {
         super.onResume()
+
         altoSelected = false
         drowSelected = false
         boschiSelected = false
 
         myList.clear()
+
+        // Pulisci le competenze nel ViewModel
+        viewModelPersonaggio.setCompetenzePersonaggio(emptyList())
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
