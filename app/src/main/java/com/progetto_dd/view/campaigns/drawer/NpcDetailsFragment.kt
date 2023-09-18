@@ -21,6 +21,8 @@ class NpcDetailsFragment : Fragment(R.layout.fragment_npc_details) {
     private lateinit var binding: FragmentNpcDetailsBinding
     private lateinit var viewModelCampagna: CampagnaViewModel
     private lateinit var npcViewModel: NpcViewModel
+    private var isEditingLegame = false
+    private var isEditingDescrizione = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -50,6 +52,42 @@ class NpcDetailsFragment : Fragment(R.layout.fragment_npc_details) {
 
         if (isMaster == false) {
             binding.eliminaNpc.isVisible = false
+            binding.modificaLegameButton.isVisible = false
+            binding.modificaDescrizioneButton.isVisible = false
+        } else {
+            // Abilita la modifica del legame
+            binding.modificaLegameButton.setOnClickListener {
+                isEditingLegame = !isEditingLegame
+                updateUI()
+            }
+
+            // Abilita la modifica della descrizione
+            binding.modificaDescrizioneButton.setOnClickListener {
+                isEditingDescrizione = !isEditingDescrizione
+                updateUI()
+            }
+
+            // Salva le modifiche del legame
+            binding.salvaLegameButton.setOnClickListener {
+                val newLegame = binding.spinnerLegame.selectedItem.toString()
+                if (npcNome != null && npcMaster != null && campagna != null) {
+                    npcViewModel.modificaLegameNpc(npcNome, npcMaster, campagna, newLegame)
+                    isEditingLegame = false
+                    updateUI()
+                    showSuccessDialog("Legame modificato con successo!")
+                }
+            }
+
+            // Salva le modifiche della descrizione
+            binding.salvaDescrizioneButton.setOnClickListener {
+                val newDescrizione = binding.modificaDescrizioneEdittext.text.toString()
+                if (npcNome != null && npcMaster != null && campagna != null) {
+                    npcViewModel.modificaDescrizioneNpc(npcNome, npcMaster, campagna, newDescrizione)
+                    isEditingDescrizione = false
+                    updateUI()
+                    showSuccessDialog("Descrizione modificata con successo!")
+                }
+            }
         }
 
         binding.eliminaNpc.setOnClickListener {
@@ -68,10 +106,35 @@ class NpcDetailsFragment : Fragment(R.layout.fragment_npc_details) {
                 // Chiamata alla funzione eliminaNpc nel ViewModel
                 npcViewModel.eliminaNpc(npcNome, npcMaster, campagna)
                 findNavController().navigate(R.id.action_npcDetailsFragment_to_visualizzaNpcFragment)
+                showSuccessDialog("NPC eliminato con successo!")
             }
             .setNegativeButton("Annulla", null)
 
         val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
+    }
+
+    // Dialog che mostra un messaggio di successo
+    private fun showSuccessDialog(message: String) {
+        val alertDialogBuilder = AlertDialog.Builder(requireContext())
+            .setTitle("Operazione Completata")
+            .setMessage(message)
+            .setPositiveButton("OK", null)
+
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
+
+    private fun updateUI() {
+        binding.Legame.visibility = if (isEditingLegame) View.GONE else View.VISIBLE
+        binding.spinnerLegame.visibility = if (isEditingLegame) View.VISIBLE else View.GONE
+        binding.modificaLegameButton.text = if (isEditingLegame) "Annulla Modifica" else "Modifica Legame"
+
+        binding.Descrizione.visibility = if (isEditingDescrizione) View.GONE else View.VISIBLE
+        binding.modificaDescrizioneEdittext.visibility = if (isEditingDescrizione) View.VISIBLE else View.GONE
+        binding.modificaDescrizioneButton.text = if (isEditingDescrizione) "Annulla Modifica" else "Modifica Descrizione"
+
+        binding.salvaLegameButton.visibility = if (isEditingLegame) View.VISIBLE else View.GONE
+        binding.salvaDescrizioneButton.visibility = if (isEditingDescrizione) View.VISIBLE else View.GONE
     }
 }

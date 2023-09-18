@@ -91,4 +91,60 @@ class NpcViewModel: ViewModel() {
                 batch.commit()
             }
     }
+
+    fun modificaLegameNpc(nome: String, master: String, campagna: String, nuovoLegame: String) {
+        // Ottieni un'istanza del database di Firestore
+        val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "npc"
+        val npcCollection = db.collection("npc")
+
+        // Esegui una query per ottenere il documento NPC corrispondente ai criteri specificati
+        npcCollection
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("master", master)
+            .whereEqualTo("campagna", campagna)
+            .get()
+            .addOnSuccessListener { documents ->
+                // Verifica se è stato trovato almeno un documento
+                if (documents.isEmpty) {
+                    // Documento non trovato, puoi gestire l'errore qui
+                    return@addOnSuccessListener
+                }
+
+                // Ottieni il documento NPC
+                val npcDocument = documents.first()
+
+                // Aggiorna il campo "legame" con il nuovo valore
+                npcDocument.reference.update("legame", nuovoLegame)
+            }
+    }
+
+    fun modificaDescrizioneNpc(nome: String, master: String, campagna: String, nuovaDescrizione: String) {
+        // Ottieni un'istanza del database di Firestore
+        val db = FirebaseFirestore.getInstance()
+
+        // Ottieni una referenza alla collezione "npc"
+        val npcCollection = db.collection("npc")
+
+        // Esegui una query per ottenere il documento NPC corrispondente ai criteri specificati
+        npcCollection
+            .whereEqualTo("nome", nome)
+            .whereEqualTo("master", master)
+            .whereEqualTo("campagna", campagna)
+            .get()
+            .addOnSuccessListener { documents ->
+                // Verifica se è stato trovato almeno un documento
+                if (documents.isEmpty) {
+                    // Documento non trovato, puoi gestire l'errore qui
+                    return@addOnSuccessListener
+                }
+
+                // Ottieni il documento NPC
+                val npcDocument = documents.first()
+
+                // Aggiorna il campo "descrizione" con il nuovo valore
+                npcDocument.reference.update("descrizione", nuovaDescrizione)
+            }
+    }
 }

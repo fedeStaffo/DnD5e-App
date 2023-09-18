@@ -75,4 +75,51 @@ class SessioneViewModel : ViewModel() {
                 batch.commit()
             }
     }
+
+    // Modifica la descrizione di una sessione specifica
+    fun modificaDescrizioneSessione(
+        campagnaNome: String,
+        masterId: String,
+        numeroSessione: String,
+        nuovaDescrizione: String
+    ) {
+        val db = FirebaseFirestore.getInstance()
+        val sessioniCollection = db.collection("sessioni")
+
+        sessioniCollection
+            .whereEqualTo("campagna", campagnaNome)
+            .whereEqualTo("master", masterId)
+            .whereEqualTo("numero", numeroSessione)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                for (document in querySnapshot.documents) {
+                    // Modifica il campo "descrizione" del documento della sessione
+                    document.reference.update("descrizione", nuovaDescrizione)
+                }
+            }
+    }
+
+    // Modifica il campo "giorno" di una sessione specifica
+    fun modificaGiornoSessione(
+        campagnaNome: String,
+        masterId: String,
+        numeroSessione: String,
+        nuovoGiorno: String
+    ) {
+        val db = FirebaseFirestore.getInstance()
+        val sessioniCollection = db.collection("sessioni")
+
+        sessioniCollection
+            .whereEqualTo("campagna", campagnaNome)
+            .whereEqualTo("master", masterId)
+            .whereEqualTo("numero", numeroSessione)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                for (document in querySnapshot.documents) {
+                    // Modifica il campo "giorno" del documento della sessione
+                    document.reference.update("giorno", nuovoGiorno)
+                }
+            }
+    }
 }
+
