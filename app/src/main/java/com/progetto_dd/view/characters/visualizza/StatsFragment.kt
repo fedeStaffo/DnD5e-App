@@ -65,8 +65,7 @@ class StatsFragment : Fragment() {
         binding.nome.text = nome
         binding.razza.text = razza
         binding.classe.text = classe
-        binding.saluteMassima.text = vitaMax
-        binding.saluteAttuale.text = vita
+        binding.puntiFerita.text = vita
         binding.stato.text = stato
         binding.classeArmatura.text = classeArmatura
         binding.livello.text = livello
@@ -74,12 +73,18 @@ class StatsFragment : Fragment() {
         // Calcola e visualizza i modificatori per gli attributi
         if (forza != null && destrezza != null && carisma != null && saggezza != null &&
             costituzione != null && intelligenza != null) {
-            binding.modificatoreForza.text = forza + "(" + getModificatore(forza.toInt()) + ")"
-            binding.modificatoreDestrezza.text = destrezza + "(" + getModificatore(destrezza.toInt()) + ")"
-            binding.modificatoreCarisma.text = carisma + "(" + getModificatore(carisma.toInt()) + ")"
-            binding.modificatoreSaggezza.text = saggezza + "(" + getModificatore(saggezza.toInt()) + ")"
-            binding.modificatoreCostituzione.text = costituzione + "(" + getModificatore(costituzione.toInt()) + ")"
-            binding.modificatoreIntelligenza.text = intelligenza + "(" + getModificatore(intelligenza.toInt()) + ")"
+            binding.statForza.text = forza
+            binding.statDestrezza.text = destrezza
+            binding.statCostituzione.text = costituzione
+            binding.statIntelligenza.text = intelligenza
+            binding.statSaggezza.text = saggezza
+            binding.statCarisma.text = carisma
+            binding.modificatoreForza.text = getModificatore(forza.toInt()).toString()
+            binding.modificatoreDestrezza.text = getModificatore(destrezza.toInt()).toString()
+            binding.modificatoreCarisma.text = getModificatore(carisma.toInt()).toString()
+            binding.modificatoreSaggezza.text = getModificatore(saggezza.toInt()).toString()
+            binding.modificatoreCostituzione.text = getModificatore(costituzione.toInt()).toString()
+            binding.modificatoreIntelligenza.text = getModificatore(intelligenza.toInt()).toString()
         }
 
         // Visualizza la lista di competenze
@@ -282,17 +287,17 @@ class StatsFragment : Fragment() {
             9 -> m = -1
             10 -> m = 0
             11 -> m = 0
-            12 -> m = 1
-            13 -> m = 1
-            14 -> m = 2
-            15 -> m = 2
-            16 -> m = 3
-            17 -> m = 3
-            18 -> m = 4
-            19 -> m = 4
-            20 -> m = 5
-            21 -> m = 5
-            22 -> m = 6
+            12 -> m = +1
+            13 -> m = +1
+            14 -> m = +2
+            15 -> m = +2
+            16 -> m = +3
+            17 -> m = +3
+            18 -> m = +4
+            19 -> m = +4
+            20 -> m = +5
+            21 -> m = +5
+            22 -> m = +6
         }
         return  m
     }
@@ -301,26 +306,26 @@ class StatsFragment : Fragment() {
     private fun getBonusComp(livello: String): String{
         var m = "0"
         when(livello.toInt()){
-            1 -> m = "2"
-            2 -> m = "2"
-            3 -> m = "2"
-            4 -> m = "2"
-            5 -> m = "3"
-            6 -> m = "3"
-            7 -> m = "3"
-            8 -> m = "3"
-            9 -> m = "4"
-            10 -> m = "4"
-            11 -> m = "4"
-            12 -> m = "4"
-            13 -> m = "5"
-            14 -> m = "5"
-            15 -> m = "5"
-            16 -> m = "5"
-            17 -> m = "6"
-            18 -> m = "6"
-            19 -> m = "6"
-            20 -> m = "6"
+            1 -> m = "+2"
+            2 -> m = "+2"
+            3 -> m = "+2"
+            4 -> m = "+2"
+            5 -> m = "+3"
+            6 -> m = "+3"
+            7 -> m = "+3"
+            8 -> m = "+3"
+            9 -> m = "+4"
+            10 -> m = "+4"
+            11 -> m = "+4"
+            12 -> m = "+4"
+            13 -> m = "+5"
+            14 -> m = "+5"
+            15 -> m = "+5"
+            16 -> m = "+5"
+            17 -> m = "+6"
+            18 -> m = "+6"
+            19 -> m = "+6"
+            20 -> m = "+6"
         }
         return m
     }
