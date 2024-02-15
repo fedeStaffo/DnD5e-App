@@ -13,6 +13,7 @@
         android:orientation="vertical"
         tools:context=".view.characters.visualizza.StatsFragment"
         android:padding="16dp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -192,7 +193,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginEnd="1dp"
+                android:layout_marginEnd="0dp"
                 android:backgroundTint="@color/black"
                 android:text="-"
                 android:textColor="@color/white"
@@ -434,20 +435,20 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <TextView
-            android:id="@+id/CAcrobaziafalse"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/oval"
-            android:padding="8dp"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                android:id="@+id/CAcrobaziafalse"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/oval"
+                android:padding="8dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <TextView
                 android:id="@+id/MAcrobaziafalse"
@@ -2118,6 +2119,81 @@
                 android:textSize="15sp"
                 app:layout_constraintStart_toEndOf="@+id/MPersuasionetrue"
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
+                <ImageView
+                    android:id="@+id/btnDormire"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/sonno_zzz" />
+                <View
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bordo_nero" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
+                <ImageView
+                    android:id="@+id/btnModifica"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/modifiche" />
+                <View
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bordo_nero" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue" >
+                <ImageView
+                    android:id="@+id/btnDado"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/d20"/>
+                <View
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bordo_nero" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue" >
+                <ImageView
+                    android:id="@+id/btnElimina"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/croce_rossa"/>
+                <View
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bordo_nero" />
+            </FrameLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

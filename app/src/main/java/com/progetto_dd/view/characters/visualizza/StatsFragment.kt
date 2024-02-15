@@ -46,7 +46,6 @@ class StatsFragment : Fragment() {
         val classe = intent.getStringExtra("classe")
         val vitaMax = intent.getStringExtra("vitaMax")
         val vita = intent.getStringExtra("vita")
-        val stato = intent.getStringExtra("stato")
         val classeArmatura = intent.getStringExtra("classeArmatura")
         val campagna = intent.getStringExtra("campagna")
         val utenteId = intent.getStringExtra("utente_id")
@@ -58,7 +57,6 @@ class StatsFragment : Fragment() {
         val intelligenza = intent.getStringExtra("intelligenza")
         val carisma = intent.getStringExtra("carisma")
         val saggezza = intent.getStringExtra("saggezza")
-
         val competenze = intent.getStringArrayListExtra("competenze")
 
         // Imposta i dati nei componenti dell'UI
@@ -66,7 +64,6 @@ class StatsFragment : Fragment() {
         binding.razza.text = razza
         binding.classe.text = classe
         binding.puntiFerita.text = vita
-        binding.stato.text = stato
         binding.classeArmatura.text = classeArmatura
         binding.livello.text = livello
 
@@ -88,9 +85,9 @@ class StatsFragment : Fragment() {
         }
 
         // Visualizza la lista di competenze
-        if (competenze != null) {
+        /*if (competenze != null) {
             binding.listaCompetenze.text = competenze.joinToString(separator = ",\n")
-        }
+        }*/
 
         // Calcola e visualizza il bonus di competenza
         if(livello != null){
@@ -100,23 +97,107 @@ class StatsFragment : Fragment() {
         // Imposta i tiri salvezza in base alla classe
         if(classe != null){
             when(classe){
-                "Bardo" -> binding.tiriSalvezza.text = "Destrezza, Carisma"
-                "Ladro" -> binding.tiriSalvezza.text = "Destrezza, Intelligenza"
-                "Guerriero" -> binding.tiriSalvezza.text = "Forza, Costituzione"
-                "Mago" -> binding.tiriSalvezza.text = "Intelligenza, Saggezza"
-                "Barbaro" -> binding.tiriSalvezza.text = "Forza, Costituzione"
-                "Chierico" -> binding.tiriSalvezza.text = "Saggezza, Carisma"
-                "Druido" -> binding.tiriSalvezza.text = "Intelligenza, Saggezza"
-                "Monaco" -> binding.tiriSalvezza.text = "Forza, Destrezza"
-                "Paladino" -> binding.tiriSalvezza.text = "Saggezza, Carisma"
-                "Ranger" -> binding.tiriSalvezza.text = "Forza, Destrezza"
-                "Stregone" -> binding.tiriSalvezza.text = "Costituzione, Carisma"
-                "Warlock" -> binding.tiriSalvezza.text = "Saggezza, Carisma"
+                "Bardo" -> {
+                    binding.TSforzatrue.visibility = View.INVISIBLE
+                    binding.TSdestrezzafalse.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzatrue.visibility = View.INVISIBLE
+                    binding.TScarismafalse.visibility = View.INVISIBLE
+                }
+                "Ladro" -> {
+                    binding.TSforzatrue.visibility = View.INVISIBLE
+                    binding.TSdestrezzafalse.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzafalse.visibility = View.INVISIBLE
+                    binding.TSsaggezzatrue.visibility = View.INVISIBLE
+                    binding.TScarismatrue.visibility = View.INVISIBLE
+                }
+                "Guerriero" -> {
+                    binding.TSforzafalse.visibility = View.INVISIBLE
+                    binding.TSdestrezzatrue.visibility = View.INVISIBLE
+                    binding.TScostituzionefalse.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzatrue.visibility = View.INVISIBLE
+                    binding.TScarismatrue.visibility = View.INVISIBLE
+                }
+                "Mago" -> {
+                    binding.TSforzatrue.visibility = View.INVISIBLE
+                    binding.TSdestrezzatrue.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzafalse.visibility = View.INVISIBLE
+                    binding.TSsaggezzafalse.visibility = View.INVISIBLE
+                    binding.TScarismatrue.visibility = View.INVISIBLE
+                }
+                "Barbaro" -> {
+                    binding.TSforzafalse.visibility = View.INVISIBLE
+                    binding.TSdestrezzatrue.visibility = View.INVISIBLE
+                    binding.TScostituzionefalse.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzatrue.visibility = View.INVISIBLE
+                    binding.TScarismatrue.visibility = View.INVISIBLE
+                }
+                "Chierico" -> {
+                    binding.TSforzatrue.visibility = View.INVISIBLE
+                    binding.TSdestrezzatrue.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzafalse.visibility = View.INVISIBLE
+                    binding.TScarismafalse.visibility = View.INVISIBLE
+                }
+                "Druido" -> {
+                    binding.TSforzatrue.visibility = View.INVISIBLE
+                    binding.TSdestrezzatrue.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzafalse.visibility = View.INVISIBLE
+                    binding.TSsaggezzafalse.visibility = View.INVISIBLE
+                    binding.TScarismatrue.visibility = View.INVISIBLE
+                }
+                "Monaco" -> {
+                    binding.TSforzafalse.visibility = View.INVISIBLE
+                    binding.TSdestrezzafalse.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzatrue.visibility = View.INVISIBLE
+                    binding.TScarismatrue.visibility = View.INVISIBLE
+                }
+                "Paladino" -> {
+                    binding.TSforzatrue.visibility = View.INVISIBLE
+                    binding.TSdestrezzatrue.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzafalse.visibility = View.INVISIBLE
+                    binding.TScarismafalse.visibility = View.INVISIBLE
+                }
+                "Ranger" -> {
+                    binding.TSforzafalse.visibility = View.INVISIBLE
+                    binding.TSdestrezzafalse.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzatrue.visibility = View.INVISIBLE
+                    binding.TScarismatrue.visibility = View.INVISIBLE
+                }
+                "Stregone" -> {
+                    binding.TSforzatrue.visibility = View.INVISIBLE
+                    binding.TSdestrezzatrue.visibility = View.INVISIBLE
+                    binding.TScostituzionefalse.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzatrue.visibility = View.INVISIBLE
+                    binding.TScarismafalse.visibility = View.INVISIBLE
+                }
+                "Warlock" -> {
+                    binding.TSforzatrue.visibility = View.INVISIBLE
+                    binding.TSdestrezzatrue.visibility = View.INVISIBLE
+                    binding.TScostituzionetrue.visibility = View.INVISIBLE
+                    binding.TSintelligenzatrue.visibility = View.INVISIBLE
+                    binding.TSsaggezzafalse.visibility = View.INVISIBLE
+                    binding.TScarismafalse.visibility = View.INVISIBLE
+                }
             }
         }
 
         // Calcola e visualizza la classe di difficoltà dei tiri salvezza magici
-        if(classe != null && livello != null){
+        /*if(classe != null && livello != null){
             when(classe){
                 "Bardo" -> if (carisma != null) {
                     binding.cdTiroSalvezzaMagia.text =
@@ -167,10 +248,10 @@ class StatsFragment : Fragment() {
                         getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
                 }
             }
-        }
+        }*/
 
         // Calcola e visualizza il bonus di attacco/incantesimo
-        if(classe != null && livello != null){
+        /*if(classe != null && livello != null){
             when(classe){
                 "Bardo" -> if (carisma != null) {
                     binding.bonusAttaccoIncantesimo.text =
@@ -221,7 +302,7 @@ class StatsFragment : Fragment() {
                         getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
                 }
             }
-        }
+        }*/
 
         // Naviga alla schermata di modifica delle statistiche
         binding.btnModifica.setOnClickListener {
