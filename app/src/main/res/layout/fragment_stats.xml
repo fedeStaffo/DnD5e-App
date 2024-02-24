@@ -6,2196 +6,2193 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/macaroon">
-    <LinearLayout
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".view.characters.visualizza.StatsFragment"
-        android:padding="16dp">
+        android:background="@color/white">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/macaroon">
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/nome"
+            android:textAlignment="center"
+            android:textColor="@color/rosso"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/nome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="@string/nome"
-                android:textAlignment="center"
-                android:textColor="@color/rosso"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/razza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/razza"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome" />
 
-            <TextView
-                android:id="@+id/razza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/razza"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/nome" />
+        <TextView
+            android:id="@+id/classe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/classe"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/razza" />
 
-            <TextView
-                android:id="@+id/classe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="116dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/classe"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/razza" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/lvl"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/livello"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/classe"
+            app:layout_constraintTop_toBottomOf="@+id/razza" />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/livello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="100dp"
+            android:text="@string/_1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/razza" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:text="@string/bonus_ncompetenza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/razza" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/punti_nferita"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/razza" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:text="@string/classe_narmatura"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/razza" />
+
+        <TextView
+            android:id="@+id/bonusCompetenza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/esagono"
+            android:padding="8dp"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/puntiFerita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/classeArmatura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="69dp"
+            android:background="@drawable/pentagono"
+            android:padding="8dp"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <Button
+            android:id="@+id/bottone_meno_vita"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="0dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/minus"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/cambiaVita"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cambiaVita"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/quadrato"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
+
+        <Button
+            android:id="@+id/bottone_piu_vita"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/plus"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cambiaVita"
+            app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
+
+        <TextView
+            android:id="@+id/modificatoreForza"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cambiaVita" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rettangolo_blu"
+            android:padding="8dp"
+            android:text="@string/forza_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
+            app:layout_constraintTop_toBottomOf="@+id/cambiaVita" />
+
+        <TextView
+            android:id="@+id/TSforzafalse"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/TSforzatrue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/TSforza"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/TSforzafalse"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/statForza"
+            android:layout_width="51dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modificatoreForza" />
+
+        <TextView
+            android:id="@+id/modificatoreDestrezza"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statForza" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rettangolo_blu"
+            android:padding="8dp"
+            android:text="@string/destrezza_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/statForza" />
+
+        <TextView
+            android:id="@+id/TSdestrezzafalse"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/TSdestrezzatrue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/TSdestrezza"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/TSdestrezzafalse"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/statDestrezza"
+            android:layout_width="51dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.221"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modificatoreDestrezza" />
+
+        <TextView
+            android:id="@+id/CAcrobaziatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/CAcrobaziafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/MAcrobaziafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/MAcrobaziatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/AcrobaziaText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:text="@string/acrobazia"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MAcrobaziatrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/CFurtivitàtrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/CFuritvitàfalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/MFurtivitàfalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/MFurtivitàtrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/FurtivitàText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="53dp"
+            android:layout_weight="1"
+            android:text="@string/furtivit"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MFurtivitàtrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/CRapiditàtrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/CRapiditàfalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/MRapiditàfalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/MRapiditàtrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/RapiditàText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="78dp"
+            android:layout_weight="1"
+            android:text="@string/rapidit_di_mano"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MRapiditàtrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/modificatoreCostituzione"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rettangolo_blu"
+            android:padding="8dp"
+            android:text="@string/costituzione_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
+            app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
+
+        <TextView
+            android:id="@+id/TScostituzionefalse"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/TScostituzionetrue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/TScostituzione"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/TScostituzionefalse"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/statCostituzione"
+            android:layout_width="51dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modificatoreCostituzione" />
+
+        <TextView
+            android:id="@+id/modificatoreIntelligenza"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statCostituzione" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rettangolo_blu"
+            android:padding="8dp"
+            android:text="@string/intelligenza_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/statCostituzione" />
+
+        <TextView
+            android:id="@+id/TSintelligenzafalse"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/TSintelligenzatrue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/TSintelligenza"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/TSintelligenzafalse"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/statIntelligenza"
+            android:layout_width="51dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modificatoreIntelligenza" />
+
+        <TextView
+            android:id="@+id/CArcanotrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CArcanofalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MArcanofalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MArcanotrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/ArcanoText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:text="@string/arcano"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MArcanotrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CIndagaretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CIndagarefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MIndagarefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MIndagaretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/IndagareText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="53dp"
+            android:layout_weight="1"
+            android:text="@string/indagare"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MIndagaretrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CNaturatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CNaturafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MNaturafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MNaturatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/NaturaText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="78dp"
+            android:layout_weight="1"
+            android:text="@string/natura"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MNaturatrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CReligionetrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CReligionefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MReligionefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MReligionetrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/ReligioneText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="103dp"
+            android:layout_weight="1"
+            android:text="@string/religione"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MReligionetrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CStroriatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/CStoriafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MStoriafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/MStoriatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/StoriaText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="128dp"
+            android:layout_weight="1"
+            android:text="@string/storia2"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MStoriatrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/modificatoreSaggezza"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StoriaText" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rettangolo_blu"
+            android:padding="8dp"
+            android:text="@string/saggezza_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/StoriaText" />
+
+        <TextView
+            android:id="@+id/TSsaggezzafalse"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/TSsaggezzatrue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/TSsaggezza"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/TSsaggezzafalse"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/statSaggezza"
+            android:layout_width="51dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modificatoreSaggezza" />
+
+        <TextView
+            android:id="@+id/CAddestraretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CAddestrarefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MAddestrarefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MAddestraretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/AddestrareText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:text="@string/addestrare_animali"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MAddestraretrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CIntuizionetrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CIntuizionefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MIntuizionefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MIntuizionetrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/IntuizioneText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="53dp"
+            android:layout_weight="1"
+            android:text="@string/intuizione"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MIntuizionetrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CMedicinatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CMedicinafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MMedicinafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MMedicinatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MedicinaText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="78dp"
+            android:layout_weight="1"
+            android:text="@string/medicina"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MMedicinatrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CPercepiretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CPercepirefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MPercepirefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MPercepiretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/PercepireText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="103dp"
+            android:layout_weight="1"
+            android:text="@string/percepire"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MPercepiretrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CSopravvivenzatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/CSopravvivenzafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MSopravvivenzafalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/MSopravvivenzatrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/SopravvivenzaText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="128dp"
+            android:layout_weight="1"
+            android:text="@string/sopravvivenza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MSopravvivenzatrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/modificatoreCarisma"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SopravvivenzaText" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rettangolo_blu"
+            android:padding="8dp"
+            android:text="@string/carisma_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/SopravvivenzaText" />
+
+        <TextView
+            android:id="@+id/TScarismafalse"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/TScarismatrue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/TScarisma"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/TScarismafalse"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/statCarisma"
+            android:layout_width="51dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modificatoreCarisma" />
+
+        <TextView
+            android:id="@+id/CIntimidiretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/CIntimidirefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/MIntimidirefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/MIntimidiretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/IntimidireText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:text="@string/intimidire"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MIntimidiretrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/CIngannotrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/CIngannofalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/MIngannofalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/MIngannotrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/IngannoText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="53dp"
+            android:layout_weight="1"
+            android:text="@string/inganno"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MIngannotrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/CIntratteneretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/CIntrattenerefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/MIntrattenerefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/MIntratteneretrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/IntrattenereText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="78dp"
+            android:layout_weight="1"
+            android:text="@string/intrattenere"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MIntratteneretrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/CPersuasionetrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/oval_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/CPersuasionefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/MPersuasionefalse"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/quadrato"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/MPersuasionetrue"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/quadrato_nero"
+            android:padding="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/statCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/PersuasioneText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="103dp"
+            android:layout_weight="1"
+            android:text="@string/persuasione"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/MPersuasionetrue"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
+
+            <ImageView
+                android:id="@+id/btnDormire"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="4dp"
-                android:text=" lvl: "
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/livello"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/classe"
-                app:layout_constraintTop_toBottomOf="@+id/razza" />
-
-            <TextView
-                android:id="@+id/livello"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="100dp"
-                android:text="1"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/razza" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:text="Bonus\ncompetenza:"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/razza" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:text="Punti\nferita:"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/razza" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:text="Classe\narmatura:"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/textView5"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/razza" />
-
-            <TextView
-                android:id="@+id/bonusCompetenza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/esagono"
-                android:padding="8dp"
-                android:text="+3"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.2"
-                app:layout_constraintStart_toEndOf="@+id/puntiFerita"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-            <TextView
-                android:id="@+id/puntiFerita"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text="56"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-            <TextView
-                android:id="@+id/classeArmatura"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="80dp"
-                android:background="@drawable/pentagono"
-                android:padding="8dp"
-                android:text="14"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/puntiFerita"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            <Button
-                android:id="@+id/bottone_meno_vita"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="0dp"
-                android:backgroundTint="@color/black"
-                android:text="-"
-                android:textColor="@color/white"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/cambiaVita"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/cambiaVita"
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/quadrato"
-                android:inputType="number"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
-
-            <Button
-                android:id="@+id/bottone_piu_vita"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="@color/black"
-                android:text="+"
-                android:textColor="@color/white"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/cambiaVita"
-                app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
-
-            <TextView
-                android:id="@+id/modificatoreForza"
-                android:layout_width="51dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cambiaVita" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rettangolo_blu"
-                android:padding="8dp"
-                android:text="FORZA"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
-                app:layout_constraintTop_toBottomOf="@+id/cambiaVita" />
-
-            <TextView
-                android:id="@+id/TSforzafalse"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-            <TextView
-                android:id="@+id/TSforzatrue"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-            <TextView
-                android:id="@+id/TSforza"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:text="Tiro salvezza"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/TSforzafalse"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-            <TextView
-                android:id="@+id/statForza"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="-2dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.243"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/modificatoreForza" />
-
-            <TextView
-                android:id="@+id/modificatoreDestrezza"
-                android:layout_width="51dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/statForza" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rettangolo_blu"
-                android:padding="8dp"
-                android:text="DESTREZZA"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/statForza" />
-
-            <TextView
-                android:id="@+id/TSdestrezzafalse"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/TSdestrezzatrue"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/TSdestrezza"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:text="Tiro salvezza"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/TSdestrezzafalse"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/statDestrezza"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="-2dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.243"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/modificatoreDestrezza" />
-
-            <TextView
-                android:id="@+id/CAcrobaziatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/CAcrobaziafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/MAcrobaziafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/MAcrobaziatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/AcrobaziaText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
-                android:layout_weight="1"
-                android:text="Acrobazia"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MAcrobaziatrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/CFurtivitàtrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/CFuritvitàfalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/MFurtivitàfalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/MFurtivitàtrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/FurtivitàText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="53dp"
-                android:layout_weight="1"
-                android:text="Furtività"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MFurtivitàtrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/CRapiditàtrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/CRapiditàfalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/MRapiditàfalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/MRapiditàtrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statDestrezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/RapiditàText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="78dp"
-                android:layout_weight="1"
-                android:text="Rapidità di mano"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MRapiditàtrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/modificatoreCostituzione"
-                android:layout_width="51dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rettangolo_blu"
-                android:padding="8dp"
-                android:text="COSTITUZIONE"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
-                app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
-
-            <TextView
-                android:id="@+id/TScostituzionefalse"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-            <TextView
-                android:id="@+id/TScostituzionetrue"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-            <TextView
-                android:id="@+id/TScostituzione"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:text="Tiro salvezza"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/TScostituzionefalse"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-            <TextView
-                android:id="@+id/statCostituzione"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="-2dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.243"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/modificatoreCostituzione" />
-
-            <TextView
-                android:id="@+id/modificatoreIntelligenza"
-                android:layout_width="51dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/statCostituzione" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rettangolo_blu"
-                android:padding="8dp"
-                android:text="INTELLIGENZA"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/statCostituzione" />
-
-            <TextView
-                android:id="@+id/TSintelligenzafalse"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/TSintelligenzatrue"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/TSintelligenza"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:text="Tiro salvezza"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/TSintelligenzafalse"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/statIntelligenza"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="-2dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.243"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/modificatoreIntelligenza" />
-
-            <TextView
-                android:id="@+id/CArcanotrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CArcanofalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MArcanofalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MArcanotrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/ArcanoText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
-                android:layout_weight="1"
-                android:text="Arcano"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MArcanotrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CIndagaretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CIndagarefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MIndagarefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MIndagaretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/IndagareText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="53dp"
-                android:layout_weight="1"
-                android:text="Indagare"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MIndagaretrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CNaturatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CNaturafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MNaturafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MNaturatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/NaturaText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="78dp"
-                android:layout_weight="1"
-                android:text="Natura"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MNaturatrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CReligionetrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CReligionefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MReligionefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MReligionetrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/ReligioneText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="103dp"
-                android:layout_weight="1"
-                android:text="Religione"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MIndagaretrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CStroriatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/CStoriafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MStoriafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/MStoriatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/StoriaText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="128dp"
-                android:layout_weight="1"
-                android:text="Storia"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MStoriatrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
-                android:id="@+id/modificatoreSaggezza"
-                android:layout_width="51dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/StoriaText" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rettangolo_blu"
-                android:padding="8dp"
-                android:text="SAGGEZZA"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/StoriaText" />
-
-            <TextView
-                android:id="@+id/TSsaggezzafalse"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/TSsaggezzatrue"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/TSsaggezza"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:text="Tiro salvezza"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/TSsaggezzafalse"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/statSaggezza"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="-2dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.243"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/modificatoreSaggezza" />
-
-            <TextView
-                android:id="@+id/CAddestraretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CAddestrarefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MAddestrarefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MAddestraretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/AddestrareText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
-                android:layout_weight="1"
-                android:text="Addestrare animali"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MAddestraretrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CIntuizionetrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CIntuizionefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MIntuizionefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MIntuizionetrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/IntuizioneText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="53dp"
-                android:layout_weight="1"
-                android:text="Intuizione"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MIntuizionetrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CMedicinatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CMedicinafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MMedicinafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MMedicinatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MedicinaText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="78dp"
-                android:layout_weight="1"
-                android:text="Medicina"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MMedicinatrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CPercepiretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CPercepirefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MPercepirefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MPercepiretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/PercepireText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="103dp"
-                android:layout_weight="1"
-                android:text="Percepire"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MPercepiretrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CSopravvivenzatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/CSopravvivenzafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MSopravvivenzafalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/MSopravvivenzatrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="130dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statSaggezza"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/SopravvivenzaText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="128dp"
-                android:layout_weight="1"
-                android:text="Sopravvivenza"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MNaturatrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-            <TextView
-                android:id="@+id/modificatoreCarisma"
-                android:layout_width="51dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/SopravvivenzaText" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rettangolo_blu"
-                android:padding="8dp"
-                android:text="CARISMA"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/SopravvivenzaText" />
-
-            <TextView
-                android:id="@+id/TScarismafalse"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/TScarismatrue"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/TScarisma"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:text="Tiro salvezza"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/TScarismafalse"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/statCarisma"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="-2dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.243"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/modificatoreCarisma" />
-
-            <TextView
-                android:id="@+id/CIntimidiretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/CIntimidirefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/MIntimidirefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/MIntimidiretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/IntimidireText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
-                android:layout_weight="1"
-                android:text="Intimidire"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MIntimidiretrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/CIngannotrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/CIngannofalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/MIngannofalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/MIngannotrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/IngannoText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="53dp"
-                android:layout_weight="1"
-                android:text="Inganno"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MIngannotrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/CIntratteneretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/CIntrattenerefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/MIntrattenerefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/MIntratteneretrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/IntrattenereText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="78dp"
-                android:layout_weight="1"
-                android:text="Intrattenere"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MIntratteneretrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/CPersuasionetrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/oval_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/CPersuasionefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/oval"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/MPersuasionefalse"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/quadrato"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/MPersuasionetrue"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="105dp"
-                android:background="@drawable/quadrato_nero"
-                android:padding="8dp"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/statCarisma"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/PersuasioneText"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="103dp"
-                android:layout_weight="1"
-                android:text="Persuasione"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/MPersuasionetrue"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="40dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
-                <ImageView
-                    android:id="@+id/btnDormire"
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/sonno_zzz" />
-                <View
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/bordo_nero" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="40dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
-                <ImageView
-                    android:id="@+id/btnModifica"
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/modifiche" />
-                <View
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/bordo_nero" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="100dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue" >
-                <ImageView
-                    android:id="@+id/btnDado"
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/d20"/>
-                <View
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/bordo_nero" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue" >
-                <ImageView
-                    android:id="@+id/btnElimina"
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/croce_rossa"/>
-                <View
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/bordo_nero" />
-            </FrameLayout>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+                android:background="@drawable/sonno_zzz" />
+
+            <View
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo_nero" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
+
+            <ImageView
+                android:id="@+id/btnModifica"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/modifiche" />
+
+            <View
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo_nero" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="110dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
+
+            <ImageView
+                android:id="@+id/btnDado"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/d20" />
+
+            <View
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo_nero" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
+
+            <ImageView
+                android:id="@+id/btnElimina"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/croce_rossa" />
+            <View
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo_nero" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

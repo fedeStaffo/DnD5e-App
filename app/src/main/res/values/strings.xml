@@ -1035,6 +1035,36 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
     <string name="trattino">-</string>
     <string name="incantesimi">Incantesimi</string>
     <string name="strumenti">Strumenti</string>
+    <string name="persuasione">Persuasione</string>
+    <string name="salva_nmodifiche">Salva\nmodifiche</string>
+    <string name="intrattenere">Intrattenere</string>
+    <string name="inganno">Inganno</string>
+    <string name="intimidire">Intimidire</string>
+    <string name="tiro_salvezza">Tiro salvezza</string>
+    <string name="sopravvivenza">Sopravvivenza</string>
+    <string name="percepire">Percepire</string>
+    <string name="medicina">Medicina</string>
+    <string name="intuizione">Intuizione</string>
+    <string name="addestrare_animali">Addestrare animali</string>
+    <string name="storia2">Storia</string>
+    <string name="religione">Religione</string>
+    <string name="natura">Natura</string>
+    <string name="indagare">Indagare</string>
+    <string name="arcano">Arcano</string>
+    <string name="rapidit_di_mano">Rapidità di mano</string>
+    <string name="furtivit">Furtività</string>
+    <string name="acrobazia">Acrobazia</string>
+    <string name="livello_">Livello:</string>
+    <string name="classe_narmatura">Classe\narmatura:</string>
+    <string name="_0">0</string>
+    <string name="punti_nferita_max">Punti\nferita max</string>
+    <string name="modifica_le_caratteristiche">Modifica le caratteristiche</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="punti_nferita">Punti\nferita:</string>
+    <string name="bonus_ncompetenza">Bonus\ncompetenza:</string>
+    <string name="_1">1</string>
+    <string name="lvl">lvl:</string>
 
     <string-array name="lingua_extra">
         <item>Scegli una lingua</item>
