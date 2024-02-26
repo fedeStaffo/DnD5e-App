@@ -1065,6 +1065,7 @@ Il Carisma misura la capacità del personaggio di interagire con successo con gl
     <string name="bonus_ncompetenza">Bonus\ncompetenza:</string>
     <string name="_1">1</string>
     <string name="lvl">lvl:</string>
+    <string name="atletica">Atletica</string>
 
     <string-array name="lingua_extra">
         <item>Scegli una lingua</item>
