@@ -548,7 +548,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/CFurtivitàtrue"
+            android:id="@+id/CFurtivittrue"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="20dp"
@@ -563,7 +563,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/CFuritvitàfalse"
+            android:id="@+id/CFurtivitfalse"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="20dp"
@@ -578,7 +578,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/MFurtivitàfalse"
+            android:id="@+id/MFurtivitfalse"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="40dp"
@@ -593,7 +593,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/MFurtivitàtrue"
+            android:id="@+id/MFurtivittrue"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="40dp"
@@ -608,7 +608,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/FurtivitàText"
+            android:id="@+id/FurtivitText"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginStart="20dp"
@@ -618,11 +618,11 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/MFurtivitàtrue"
+            app:layout_constraintStart_toEndOf="@+id/MFurtivittrue"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/CRapiditàtrue"
+            android:id="@+id/CRapidittrue"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="20dp"
@@ -637,7 +637,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/CRapiditàfalse"
+            android:id="@+id/CRapiditfalse"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="20dp"
@@ -652,7 +652,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/MRapiditàfalse"
+            android:id="@+id/MRapiditfalse"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="40dp"
@@ -667,7 +667,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/MRapiditàtrue"
+            android:id="@+id/MRapidittrue"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="40dp"
@@ -682,7 +682,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/RapiditàText"
+            android:id="@+id/RapiditText"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginStart="20dp"
@@ -692,7 +692,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/MRapiditàtrue"
+            app:layout_constraintStart_toEndOf="@+id/MRapidittrue"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
@@ -708,7 +708,7 @@
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
+            app:layout_constraintTop_toBottomOf="@+id/RapiditText" />
 
         <TextView
             android:id="@+id/textView12"
@@ -721,7 +721,7 @@
             android:textSize="11sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
-            app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
+            app:layout_constraintTop_toBottomOf="@+id/RapiditText" />
 
         <TextView
             android:id="@+id/TScostituzionefalse"
@@ -1170,7 +1170,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
         <TextView
-            android:id="@+id/CStroriatrue"
+            android:id="@+id/CStoriatrue"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="20dp"

@@ -57,7 +57,7 @@ class StatsFragment : Fragment() {
         val intelligenza = intent.getStringExtra("intelligenza")
         val carisma = intent.getStringExtra("carisma")
         val saggezza = intent.getStringExtra("saggezza")
-        val competenze = intent.getStringArrayListExtra("competenze")
+        val maestrie = intent.getStringArrayListExtra("maestrie")
 
         // Imposta i dati nei componenti dell'UI
         binding.nome.text = nome
@@ -69,7 +69,8 @@ class StatsFragment : Fragment() {
 
         // Calcola e visualizza i modificatori per gli attributi
         if (forza != null && destrezza != null && carisma != null && saggezza != null &&
-            costituzione != null && intelligenza != null) {
+            costituzione != null && intelligenza != null
+        ) {
             binding.statForza.text = forza
             binding.statDestrezza.text = destrezza
             binding.statCostituzione.text = costituzione
@@ -90,13 +91,125 @@ class StatsFragment : Fragment() {
         }*/
 
         // Calcola e visualizza il bonus di competenza
-        if(livello != null){
+        if (livello != null) {
             binding.bonusCompetenza.text = getBonusComp(livello)
         }
 
+        intent.getStringArrayListExtra("competenze")?.let {competenzeList ->
+            if (competenzeList.contains("Atletica")) { binding.CAtleticafalse.visibility = View.INVISIBLE
+            } else { binding.CAtleticatrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Acrobazia")) { binding.CAcrobaziafalse.visibility = View.INVISIBLE
+            } else { binding.CAcrobaziatrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Rapidità di mano")) { binding.CRapiditfalse.visibility = View.INVISIBLE
+            } else { binding.CRapidittrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Furtività")) { binding.CFurtivitfalse.visibility = View.INVISIBLE
+            } else { binding.CFurtivittrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Arcano")) { binding.CArcanofalse.visibility = View.INVISIBLE
+            } else { binding.CArcanotrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Indagare")) { binding.CIndagarefalse.visibility = View.INVISIBLE
+            } else { binding.CIndagaretrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Natura")) { binding.CNaturafalse.visibility = View.INVISIBLE
+            } else { binding.CNaturatrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Religione")) { binding.CReligionefalse.visibility = View.INVISIBLE
+            } else { binding.CReligionetrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Storia")) { binding.CStoriafalse.visibility = View.INVISIBLE
+            } else { binding.CStoriatrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Addestrare Animali")) { binding.CAddestrarefalse.visibility = View.INVISIBLE
+            } else { binding.CAddestraretrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Intuizione")) { binding.CIntuizionefalse.visibility = View.INVISIBLE
+            } else { binding.CIntuizionetrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Medicina")) { binding.CMedicinafalse.visibility = View.INVISIBLE
+            } else { binding.CMedicinatrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Percezione")) { binding.CPercepirefalse.visibility = View.INVISIBLE
+            } else { binding.CPercepiretrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Sopravvivenza")) { binding.CSopravvivenzafalse.visibility = View.INVISIBLE
+            } else { binding.CSopravvivenzatrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Intimidire")) { binding.CIntimidirefalse.visibility = View.INVISIBLE
+            } else { binding.CIntimidiretrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Inganno")) { binding.CIngannofalse.visibility = View.INVISIBLE
+            } else { binding.CIngannotrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Intrattenere")) { binding.CIntrattenerefalse.visibility = View.INVISIBLE
+            } else { binding.CIntratteneretrue.visibility = View.INVISIBLE }
+
+            if (competenzeList.contains("Persuasione")) { binding.CPersuasionefalse.visibility = View.INVISIBLE
+            } else { binding.CPersuasionetrue.visibility = View.INVISIBLE }
+        }
+
+        intent.getStringArrayListExtra("maestrie")?.let {maestrieList ->
+            if (maestrieList.contains("Atletica")) { binding.MAtleticafalse.visibility = View.INVISIBLE
+            } else { binding.MAtleticatrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Acrobazia")) { binding.MAcrobaziafalse.visibility = View.INVISIBLE
+            } else { binding.MAcrobaziatrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Rapidità di mano")) { binding.MRapiditfalse.visibility = View.INVISIBLE
+            } else { binding.MRapidittrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Furtività")) { binding.MFurtivitfalse.visibility = View.INVISIBLE
+            } else { binding.MFurtivittrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Arcano")) { binding.MArcanofalse.visibility = View.INVISIBLE
+            } else { binding.MArcanotrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Indagare")) { binding.MIndagarefalse.visibility = View.INVISIBLE
+            } else { binding.MIndagaretrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Natura")) { binding.MNaturafalse.visibility = View.INVISIBLE
+            } else { binding.MNaturatrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Religione")) { binding.MReligionefalse.visibility = View.INVISIBLE
+            } else { binding.MReligionetrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Storia")) { binding.MStoriafalse.visibility = View.INVISIBLE
+            } else { binding.MStoriatrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Addestrare Animali")) { binding.MAddestrarefalse.visibility = View.INVISIBLE
+            } else { binding.MAddestraretrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Intuizione")) { binding.MIntuizionefalse.visibility = View.INVISIBLE
+            } else { binding.MIntuizionetrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Medicina")) { binding.MMedicinafalse.visibility = View.INVISIBLE
+            } else { binding.MMedicinatrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Percezione")) { binding.MPercepirefalse.visibility = View.INVISIBLE
+            } else { binding.MPercepiretrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Sopravvivenza")) { binding.MSopravvivenzafalse.visibility = View.INVISIBLE
+            } else { binding.MSopravvivenzatrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Intimidire")) { binding.MIntimidirefalse.visibility = View.INVISIBLE
+            } else { binding.MIntimidiretrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Inganno")) { binding.MIngannofalse.visibility = View.INVISIBLE
+            } else { binding.MIngannotrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Intrattenere")) { binding.MIntrattenerefalse.visibility = View.INVISIBLE
+            } else { binding.MIntratteneretrue.visibility = View.INVISIBLE }
+
+            if (maestrieList.contains("Persuasione")) { binding.MPersuasionefalse.visibility = View.INVISIBLE
+            } else { binding.MPersuasionetrue.visibility = View.INVISIBLE }
+        }
+
         // Imposta i tiri salvezza in base alla classe
-        if(classe != null){
-            when(classe){
+        if (classe != null) {
+            when (classe) {
                 "Bardo" -> {
                     binding.TSforzatrue.visibility = View.INVISIBLE
                     binding.TSdestrezzafalse.visibility = View.INVISIBLE
@@ -105,6 +218,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzatrue.visibility = View.INVISIBLE
                     binding.TScarismafalse.visibility = View.INVISIBLE
                 }
+
                 "Ladro" -> {
                     binding.TSforzatrue.visibility = View.INVISIBLE
                     binding.TSdestrezzafalse.visibility = View.INVISIBLE
@@ -113,6 +227,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzatrue.visibility = View.INVISIBLE
                     binding.TScarismatrue.visibility = View.INVISIBLE
                 }
+
                 "Guerriero" -> {
                     binding.TSforzafalse.visibility = View.INVISIBLE
                     binding.TSdestrezzatrue.visibility = View.INVISIBLE
@@ -121,6 +236,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzatrue.visibility = View.INVISIBLE
                     binding.TScarismatrue.visibility = View.INVISIBLE
                 }
+
                 "Mago" -> {
                     binding.TSforzatrue.visibility = View.INVISIBLE
                     binding.TSdestrezzatrue.visibility = View.INVISIBLE
@@ -129,6 +245,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzafalse.visibility = View.INVISIBLE
                     binding.TScarismatrue.visibility = View.INVISIBLE
                 }
+
                 "Barbaro" -> {
                     binding.TSforzafalse.visibility = View.INVISIBLE
                     binding.TSdestrezzatrue.visibility = View.INVISIBLE
@@ -137,6 +254,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzatrue.visibility = View.INVISIBLE
                     binding.TScarismatrue.visibility = View.INVISIBLE
                 }
+
                 "Chierico" -> {
                     binding.TSforzatrue.visibility = View.INVISIBLE
                     binding.TSdestrezzatrue.visibility = View.INVISIBLE
@@ -145,6 +263,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzafalse.visibility = View.INVISIBLE
                     binding.TScarismafalse.visibility = View.INVISIBLE
                 }
+
                 "Druido" -> {
                     binding.TSforzatrue.visibility = View.INVISIBLE
                     binding.TSdestrezzatrue.visibility = View.INVISIBLE
@@ -153,6 +272,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzafalse.visibility = View.INVISIBLE
                     binding.TScarismatrue.visibility = View.INVISIBLE
                 }
+
                 "Monaco" -> {
                     binding.TSforzafalse.visibility = View.INVISIBLE
                     binding.TSdestrezzafalse.visibility = View.INVISIBLE
@@ -161,6 +281,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzatrue.visibility = View.INVISIBLE
                     binding.TScarismatrue.visibility = View.INVISIBLE
                 }
+
                 "Paladino" -> {
                     binding.TSforzatrue.visibility = View.INVISIBLE
                     binding.TSdestrezzatrue.visibility = View.INVISIBLE
@@ -169,6 +290,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzafalse.visibility = View.INVISIBLE
                     binding.TScarismafalse.visibility = View.INVISIBLE
                 }
+
                 "Ranger" -> {
                     binding.TSforzafalse.visibility = View.INVISIBLE
                     binding.TSdestrezzafalse.visibility = View.INVISIBLE
@@ -177,6 +299,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzatrue.visibility = View.INVISIBLE
                     binding.TScarismatrue.visibility = View.INVISIBLE
                 }
+
                 "Stregone" -> {
                     binding.TSforzatrue.visibility = View.INVISIBLE
                     binding.TSdestrezzatrue.visibility = View.INVISIBLE
@@ -185,6 +308,7 @@ class StatsFragment : Fragment() {
                     binding.TSsaggezzatrue.visibility = View.INVISIBLE
                     binding.TScarismafalse.visibility = View.INVISIBLE
                 }
+
                 "Warlock" -> {
                     binding.TSforzatrue.visibility = View.INVISIBLE
                     binding.TSdestrezzatrue.visibility = View.INVISIBLE
@@ -195,118 +319,34 @@ class StatsFragment : Fragment() {
                 }
             }
         }
-
-        // Calcola e visualizza la classe di difficoltà dei tiri salvezza magici
-        /*if(classe != null && livello != null){
-            when(classe){
-                "Bardo" -> if (carisma != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
-                }
-                "Warlock" -> if (carisma != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
-                }
-                "Stregone" -> if (carisma != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
-                }
-                "Barbaro" -> if (saggezza != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Chierico" -> if (saggezza != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Ranger" -> if (saggezza != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Druido" -> if (saggezza != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Ladro" -> if (intelligenza != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
-                }
-                "Guerriero" -> if (intelligenza != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
-                }
-                "Mago" -> if (intelligenza != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
-                }
-                "Monaco" -> if (saggezza != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Paladino" -> if (carisma != null) {
-                    binding.cdTiroSalvezzaMagia.text =
-                        getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
-                }
+        /*
+        //Rimette la vita al valore massimo dopo che si è riposati
+        binding.btnDormire.setOnClickListener {
+            binding.puntiFerita.text = vitaMax
+            Toast.makeText(
+                context,
+                "Hai riposato. La tua vita è tornata al massimo.",
+                Toast.LENGTH_LONG
+            ).show()
+            val max = binding.editTextVitaMassima.text.toString()
+            val num = max.toInt()
+            if (nome != null && razza != null && classe != null && utenteId != null && num >= 1) {
+                viewModel.updateCampoNumerico(nome,razza,classe,utenteId, "vitaMax",max.toLong())
+                Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
             }
-        }*/
-
-        // Calcola e visualizza il bonus di attacco/incantesimo
-        /*if(classe != null && livello != null){
-            when(classe){
-                "Bardo" -> if (carisma != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
-                }
-                "Warlock" -> if (carisma != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
-                }
-                "Stregone" -> if (carisma != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
-                }
-                "Paladino" -> if (carisma != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
-                }
-                "Barbaro" -> if (saggezza != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Chierico" -> if (saggezza != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Ranger" -> if (saggezza != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Druido" -> if (saggezza != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
-                "Ladro" -> if (intelligenza != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
-                }
-                "Guerriero" -> if (intelligenza != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
-                }
-                "Mago" -> if (intelligenza != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
-                }
-                "Monaco" -> if (saggezza != null) {
-                    binding.bonusAttaccoIncantesimo.text =
-                        getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
-                }
+            else {
+                Toast.makeText(requireContext(),"Inserisci valori maggiori di 0!", Toast.LENGTH_SHORT).show()
             }
-        }*/
-
+        }
+*/
         // Naviga alla schermata di modifica delle statistiche
         binding.btnModifica.setOnClickListener {
             findNavController().navigate(R.id.action_statsFragment_to_modificaStatsFragment)
+        }
+
+        //Naviga alla schermata del dado
+        binding.btnDado.setOnClickListener {
+            findNavController().navigate(R.id.action_statsBackFragment_to_dadoFragment3)
         }
 
         // Conferma l'eliminazione del personaggio
@@ -316,7 +356,7 @@ class StatsFragment : Fragment() {
                 .setMessage("Sei sicuro di voler eliminare il personaggio?")
                 .setPositiveButton("Elimina") { dialog, _ ->
                     if (campagna == "") {
-                        if (nome != null && razza!= null && classe != null && utenteId != null) {
+                        if (nome != null && razza != null && classe != null && utenteId != null) {
                             viewModel.deletePersonaggio(nome, razza, classe, utenteId, campagna)
                                 .observe(viewLifecycleOwner) { isDeleted ->
                                     if (isDeleted) {
@@ -326,7 +366,8 @@ class StatsFragment : Fragment() {
                                             Toast.LENGTH_SHORT
                                         ).show()
                                         // Aggiungi qui altre azioni da eseguire dopo l'eliminazione
-                                        val intentEnd = Intent(requireContext(), CharacterActivity::class.java)
+                                        val intentEnd =
+                                            Intent(requireContext(), CharacterActivity::class.java)
                                         startActivity(intentEnd)
                                     } else {
                                         Toast.makeText(
@@ -411,6 +452,115 @@ class StatsFragment : Fragment() {
         return m
     }
 
+    // Calcola e visualizza la classe di difficoltà dei tiri salvezza magici
+    /*if(classe != null && livello != null){
+        when(classe){
+            "Bardo" -> if (carisma != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+            }
+            "Warlock" -> if (carisma != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+            }
+            "Stregone" -> if (carisma != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+            }
+            "Barbaro" -> if (saggezza != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Chierico" -> if (saggezza != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Ranger" -> if (saggezza != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Druido" -> if (saggezza != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Ladro" -> if (intelligenza != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+            }
+            "Guerriero" -> if (intelligenza != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+            }
+            "Mago" -> if (intelligenza != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+            }
+            "Monaco" -> if (saggezza != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Paladino" -> if (carisma != null) {
+                binding.cdTiroSalvezzaMagia.text =
+                    getCD(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+            }
+        }
+    }*/
+
+    // Calcola e visualizza il bonus di attacco/incantesimo
+    /*if(classe != null && livello != null){
+        when(classe){
+            "Bardo" -> if (carisma != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+            }
+            "Warlock" -> if (carisma != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+            }
+            "Stregone" -> if (carisma != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+            }
+            "Paladino" -> if (carisma != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(carisma.toInt())).toString()
+            }
+            "Barbaro" -> if (saggezza != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Chierico" -> if (saggezza != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Ranger" -> if (saggezza != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Druido" -> if (saggezza != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+            "Ladro" -> if (intelligenza != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+            }
+            "Guerriero" -> if (intelligenza != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+            }
+            "Mago" -> if (intelligenza != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(intelligenza.toInt())).toString()
+            }
+            "Monaco" -> if (saggezza != null) {
+                binding.bonusAttaccoIncantesimo.text =
+                    getBonusAttacco(getBonusComp(livello).toInt(),getModificatore(saggezza.toInt())).toString()
+            }
+        }
+    }*/
+
+    /*
     // Calcola la classe di difficoltà dei tiri salvezza magici
     private fun getCD(bonusComp: Int, modificatore: Int): Int{
         return 8 + bonusComp + modificatore
@@ -420,7 +570,7 @@ class StatsFragment : Fragment() {
     private fun getBonusAttacco(bonusComp: Int, modificatore: Int): Int{
         return bonusComp + modificatore
     }
-
+*/
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
