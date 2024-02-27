@@ -42,7 +42,7 @@ class ModificaStatsFragment : Fragment() {
         val vitaMax = intent.getStringExtra("vitaMax")
 
         val numMax = vitaMax?.toInt()
-
+/*
         binding.buttonSalvaLivello.setOnClickListener {
             val livello = binding.editTextLivello.text.toString()
             val numLivello = livello.toInt()
@@ -170,6 +170,7 @@ class ModificaStatsFragment : Fragment() {
                 Toast.makeText(requireContext(),"Modifica effettuata!", Toast.LENGTH_SHORT).show()
             }
         }
+        */
     }
 
     override fun onDestroyView() {

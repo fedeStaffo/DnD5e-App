@@ -2089,6 +2089,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <FrameLayout
+            android:id="@+id/A1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
@@ -2110,11 +2111,12 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/A2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
             android:layout_marginTop="40dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/A1"
+            app:layout_constraintEnd_toStartOf="@+id/A3"
             app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
 
             <ImageView
@@ -2131,11 +2133,12 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/A3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="110dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
 
             <ImageView
@@ -2152,6 +2155,28 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/A4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toEndOf="@+id/A3"
+            app:layout_constraintEnd_toStartOf="@+id/A5"
+            app:layout_constraintTop_toBottomOf="@+id/CPersuasionetrue">
+
+            <ImageView
+                android:id="@+id/btnCompetenzeExtra"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/spada_e_scudo" />
+            <View
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo_nero" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/A5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"

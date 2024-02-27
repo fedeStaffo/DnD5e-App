@@ -57,7 +57,12 @@ class StatsFragment : Fragment() {
         val intelligenza = intent.getStringExtra("intelligenza")
         val carisma = intent.getStringExtra("carisma")
         val saggezza = intent.getStringExtra("saggezza")
+        val competenze = intent.getStringArrayListExtra("competenze")
+        val linguaggi = intent.getStringArrayListExtra("linguaggi")
         val maestrie = intent.getStringArrayListExtra("maestrie")
+        val competenzeEscluse = setOf("Atletica", "Acrobazia", "Rapidità di mano", "Furtività", "Arcano", "Indagare", "Natura", "Religione", "Storia",
+                                      "Addestrare Animali", "Intuizione", "Medicina", "Percezione", "Sopravvivenza", "Intimidire", "Inganno", "Intrattenere", "Persuasione")
+        val competenzeMostrate = competenze?.filter { !competenzeEscluse.contains(it) } ?: emptyList()
 
         // Imposta i dati nei componenti dell'UI
         binding.nome.text = nome
@@ -95,7 +100,7 @@ class StatsFragment : Fragment() {
             binding.bonusCompetenza.text = getBonusComp(livello)
         }
 
-        intent.getStringArrayListExtra("competenze")?.let {competenzeList ->
+        competenze?.let {competenzeList ->
             if (competenzeList.contains("Atletica")) { binding.CAtleticafalse.visibility = View.INVISIBLE
             } else { binding.CAtleticatrue.visibility = View.INVISIBLE }
 
@@ -151,7 +156,7 @@ class StatsFragment : Fragment() {
             } else { binding.CPersuasionetrue.visibility = View.INVISIBLE }
         }
 
-        intent.getStringArrayListExtra("maestrie")?.let {maestrieList ->
+        maestrie?.let {maestrieList ->
             if (maestrieList.contains("Atletica")) { binding.MAtleticafalse.visibility = View.INVISIBLE
             } else { binding.MAtleticatrue.visibility = View.INVISIBLE }
 
@@ -319,6 +324,8 @@ class StatsFragment : Fragment() {
                 }
             }
         }
+
+
         /*
         //Rimette la vita al valore massimo dopo che si è riposati
         binding.btnDormire.setOnClickListener {
@@ -347,6 +354,41 @@ class StatsFragment : Fragment() {
         //Naviga alla schermata del dado
         binding.btnDado.setOnClickListener {
             findNavController().navigate(R.id.action_statsBackFragment_to_dadoFragment3)
+        }
+
+        binding.btnCompetenzeExtra.setOnClickListener {
+            var n = 1
+            val competenzeExtraMessage = buildString {
+                append("Le mie competenze extra sono:\n\n")
+                competenzeMostrate.forEachIndexed { index, competenza ->
+                    append("$n - $competenza")
+                    if (index < competenzeMostrate.size - 1) {
+                        append("\n")
+                        n += 1
+                    }
+                }
+                if (linguaggi != null) {
+                    n = 1
+                    append("\n")
+                    append("I miei linguaggi sono:")
+
+                    linguaggi.forEachIndexed { index, linguaggi ->
+                        append("$n - $linguaggi")
+                        if (index < competenzeMostrate.size - 1) {
+                            append("\n")
+                            n += 1
+                        }
+                    }
+                }
+            }
+                // Creazione dell'AlertDialog
+                val builder = AlertDialog.Builder(requireContext())
+                builder.setTitle("Competenze Extra")
+                builder.setMessage(competenzeExtraMessage)
+
+                // Visualizzazione dell'AlertDialog
+                val dialog = builder.create()
+                dialog.show()
         }
 
         // Conferma l'eliminazione del personaggio
