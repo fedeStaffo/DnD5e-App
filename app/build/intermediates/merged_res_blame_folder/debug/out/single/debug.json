@@ -344,6 +344,10 @@
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_visualizza_npc.xml"
     },
     {
+        "merged": "com.progetto_dd.app-merged_res-65:/layout_fragment_stats.xml.flat",
+        "source": "com.progetto_dd.app-main-67:/layout/fragment_stats.xml"
+    },
+    {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\layout_fragment_caratteristica_umano.xml.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\layout\\fragment_caratteristica_umano.xml"
     },
@@ -590,10 +594,6 @@
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\drawable_bordo_nero.xml.flat",
         "source": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-main-67:\\drawable\\bordo_nero.xml"
-    },
-    {
-        "merged": "com.progetto_dd.app-merged_res-65:/navigation_viewcharacter_graph.xml.flat",
-        "source": "com.progetto_dd.app-main-67:/navigation/viewcharacter_graph.xml"
     },
     {
         "merged": "C:\\Users\\emsar\\.gradle\\daemon\\7.5\\com.progetto_dd.app-merged_res-65:\\menu_visualizza_personaggio_bottombar.xml.flat",

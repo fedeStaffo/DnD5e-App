@@ -5,13 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RadioButton;
+import android.widget.CheckBox;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.textfield.TextInputEditText;
 import com.progetto_dd.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -32,6 +33,132 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
 
   @NonNull
   public final TextView AtleticaText;
+
+  @NonNull
+  public final CheckBox BoxCAcrobazia;
+
+  @NonNull
+  public final CheckBox BoxCAddestrare;
+
+  @NonNull
+  public final CheckBox BoxCArcano;
+
+  @NonNull
+  public final CheckBox BoxCAtletica;
+
+  @NonNull
+  public final CheckBox BoxCFurtivit;
+
+  @NonNull
+  public final CheckBox BoxCIndagare;
+
+  @NonNull
+  public final CheckBox BoxCInganno;
+
+  @NonNull
+  public final CheckBox BoxCIntimidire;
+
+  @NonNull
+  public final CheckBox BoxCIntrattenere;
+
+  @NonNull
+  public final CheckBox BoxCIntuizione;
+
+  @NonNull
+  public final CheckBox BoxCMedicina;
+
+  @NonNull
+  public final CheckBox BoxCNatura;
+
+  @NonNull
+  public final CheckBox BoxCPercepire;
+
+  @NonNull
+  public final CheckBox BoxCPersuasione;
+
+  @NonNull
+  public final CheckBox BoxCRapidit;
+
+  @NonNull
+  public final CheckBox BoxCReligione;
+
+  @NonNull
+  public final CheckBox BoxCSopravvivenza;
+
+  @NonNull
+  public final CheckBox BoxCStoria;
+
+  @NonNull
+  public final CheckBox BoxMAcrobazia;
+
+  @NonNull
+  public final CheckBox BoxMAddestrare;
+
+  @NonNull
+  public final CheckBox BoxMArcano;
+
+  @NonNull
+  public final CheckBox BoxMAtletica;
+
+  @NonNull
+  public final CheckBox BoxMFurtivit;
+
+  @NonNull
+  public final CheckBox BoxMIndagare;
+
+  @NonNull
+  public final CheckBox BoxMInganno;
+
+  @NonNull
+  public final CheckBox BoxMIntimidire;
+
+  @NonNull
+  public final CheckBox BoxMIntrattenere;
+
+  @NonNull
+  public final CheckBox BoxMIntuizione;
+
+  @NonNull
+  public final CheckBox BoxMMedicina;
+
+  @NonNull
+  public final CheckBox BoxMNatura;
+
+  @NonNull
+  public final CheckBox BoxMPercepire;
+
+  @NonNull
+  public final CheckBox BoxMPersuasione;
+
+  @NonNull
+  public final CheckBox BoxMRapidit;
+
+  @NonNull
+  public final CheckBox BoxMReligione;
+
+  @NonNull
+  public final CheckBox BoxMSopravvivenza;
+
+  @NonNull
+  public final CheckBox BoxMStoria;
+
+  @NonNull
+  public final CheckBox BoxTScarisma;
+
+  @NonNull
+  public final CheckBox BoxTScostituzione;
+
+  @NonNull
+  public final CheckBox BoxTSdestrezza;
+
+  @NonNull
+  public final CheckBox BoxTSforza;
+
+  @NonNull
+  public final CheckBox BoxTSintelligenza;
+
+  @NonNull
+  public final CheckBox BoxTSsaggezza;
 
   @NonNull
   public final TextView FurtivitText;
@@ -64,132 +191,6 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
   public final TextView PersuasioneText;
 
   @NonNull
-  public final RadioButton RadioCAcrobazia;
-
-  @NonNull
-  public final RadioButton RadioCAddestrare;
-
-  @NonNull
-  public final RadioButton RadioCArcano;
-
-  @NonNull
-  public final RadioButton RadioCAtletica;
-
-  @NonNull
-  public final RadioButton RadioCFurtivit;
-
-  @NonNull
-  public final RadioButton RadioCIndagare;
-
-  @NonNull
-  public final RadioButton RadioCInganno;
-
-  @NonNull
-  public final RadioButton RadioCIntimidire;
-
-  @NonNull
-  public final RadioButton RadioCIntrattenere;
-
-  @NonNull
-  public final RadioButton RadioCIntuizione;
-
-  @NonNull
-  public final RadioButton RadioCMedicina;
-
-  @NonNull
-  public final RadioButton RadioCNatura;
-
-  @NonNull
-  public final RadioButton RadioCPercepire;
-
-  @NonNull
-  public final RadioButton RadioCPersuasione;
-
-  @NonNull
-  public final RadioButton RadioCRapidit;
-
-  @NonNull
-  public final RadioButton RadioCReligione;
-
-  @NonNull
-  public final RadioButton RadioCSopravvivenza;
-
-  @NonNull
-  public final RadioButton RadioCStoria;
-
-  @NonNull
-  public final RadioButton RadioMAcrobazia;
-
-  @NonNull
-  public final RadioButton RadioMAddestrare;
-
-  @NonNull
-  public final RadioButton RadioMArcano;
-
-  @NonNull
-  public final RadioButton RadioMAtletica;
-
-  @NonNull
-  public final RadioButton RadioMFurtivit;
-
-  @NonNull
-  public final RadioButton RadioMIndagare;
-
-  @NonNull
-  public final RadioButton RadioMInganno;
-
-  @NonNull
-  public final RadioButton RadioMIntimidire;
-
-  @NonNull
-  public final RadioButton RadioMIntrattenere;
-
-  @NonNull
-  public final RadioButton RadioMIntuizione;
-
-  @NonNull
-  public final RadioButton RadioMMedicina;
-
-  @NonNull
-  public final RadioButton RadioMNatura;
-
-  @NonNull
-  public final RadioButton RadioMPercepire;
-
-  @NonNull
-  public final RadioButton RadioMPersuasione;
-
-  @NonNull
-  public final RadioButton RadioMRapidit;
-
-  @NonNull
-  public final RadioButton RadioMReligione;
-
-  @NonNull
-  public final RadioButton RadioMSopravvivenza;
-
-  @NonNull
-  public final RadioButton RadioMStoria;
-
-  @NonNull
-  public final RadioButton RadioTScarisma;
-
-  @NonNull
-  public final RadioButton RadioTScostituzione;
-
-  @NonNull
-  public final RadioButton RadioTSdestrezza;
-
-  @NonNull
-  public final RadioButton RadioTSforza;
-
-  @NonNull
-  public final RadioButton RadioTSintelligenza;
-
-  @NonNull
-  public final RadioButton RadioTSsaggezza;
-
-  @NonNull
   public final TextView RapiditText;
 
   @NonNull
@@ -220,37 +221,37 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
   public final TextView TSsaggezza;
 
   @NonNull
-  public final TextView bonusCompetenza;
-
-  @NonNull
   public final Button btnSalvaModifiche;
 
   @NonNull
   public final TextView caratteritiche;
 
   @NonNull
-  public final TextView classeArmatura;
+  public final TextInputEditText classeArmatura;
 
   @NonNull
-  public final TextView modificatoreCarisma;
+  public final TextInputEditText livello;
 
   @NonNull
-  public final TextView modificatoreCostituzione;
+  public final TextInputEditText modificatoreCarisma;
 
   @NonNull
-  public final TextView modificatoreDestrezza;
+  public final TextInputEditText modificatoreCostituzione;
 
   @NonNull
-  public final TextView modificatoreForza;
+  public final TextInputEditText modificatoreDestrezza;
 
   @NonNull
-  public final TextView modificatoreIntelligenza;
+  public final TextInputEditText modificatoreForza;
 
   @NonNull
-  public final TextView modificatoreSaggezza;
+  public final TextInputEditText modificatoreIntelligenza;
 
   @NonNull
-  public final TextView puntiFerita;
+  public final TextInputEditText modificatoreSaggezza;
+
+  @NonNull
+  public final TextInputEditText puntiFerita;
 
   @NonNull
   public final TextView textView10;
@@ -281,42 +282,44 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
 
   private FragmentModificaStatsBinding(@NonNull ScrollView rootView,
       @NonNull TextView AcrobaziaText, @NonNull TextView AddestrareText,
-      @NonNull TextView ArcanoText, @NonNull TextView AtleticaText, @NonNull TextView FurtivitText,
+      @NonNull TextView ArcanoText, @NonNull TextView AtleticaText, @NonNull CheckBox BoxCAcrobazia,
+      @NonNull CheckBox BoxCAddestrare, @NonNull CheckBox BoxCArcano,
+      @NonNull CheckBox BoxCAtletica, @NonNull CheckBox BoxCFurtivit,
+      @NonNull CheckBox BoxCIndagare, @NonNull CheckBox BoxCInganno,
+      @NonNull CheckBox BoxCIntimidire, @NonNull CheckBox BoxCIntrattenere,
+      @NonNull CheckBox BoxCIntuizione, @NonNull CheckBox BoxCMedicina,
+      @NonNull CheckBox BoxCNatura, @NonNull CheckBox BoxCPercepire,
+      @NonNull CheckBox BoxCPersuasione, @NonNull CheckBox BoxCRapidit,
+      @NonNull CheckBox BoxCReligione, @NonNull CheckBox BoxCSopravvivenza,
+      @NonNull CheckBox BoxCStoria, @NonNull CheckBox BoxMAcrobazia,
+      @NonNull CheckBox BoxMAddestrare, @NonNull CheckBox BoxMArcano,
+      @NonNull CheckBox BoxMAtletica, @NonNull CheckBox BoxMFurtivit,
+      @NonNull CheckBox BoxMIndagare, @NonNull CheckBox BoxMInganno,
+      @NonNull CheckBox BoxMIntimidire, @NonNull CheckBox BoxMIntrattenere,
+      @NonNull CheckBox BoxMIntuizione, @NonNull CheckBox BoxMMedicina,
+      @NonNull CheckBox BoxMNatura, @NonNull CheckBox BoxMPercepire,
+      @NonNull CheckBox BoxMPersuasione, @NonNull CheckBox BoxMRapidit,
+      @NonNull CheckBox BoxMReligione, @NonNull CheckBox BoxMSopravvivenza,
+      @NonNull CheckBox BoxMStoria, @NonNull CheckBox BoxTScarisma,
+      @NonNull CheckBox BoxTScostituzione, @NonNull CheckBox BoxTSdestrezza,
+      @NonNull CheckBox BoxTSforza, @NonNull CheckBox BoxTSintelligenza,
+      @NonNull CheckBox BoxTSsaggezza, @NonNull TextView FurtivitText,
       @NonNull TextView IndagareText, @NonNull TextView IngannoText,
       @NonNull TextView IntimidireText, @NonNull TextView IntrattenereText,
       @NonNull TextView IntuizioneText, @NonNull TextView MedicinaText,
       @NonNull TextView NaturaText, @NonNull TextView PercepireText,
-      @NonNull TextView PersuasioneText, @NonNull RadioButton RadioCAcrobazia,
-      @NonNull RadioButton RadioCAddestrare, @NonNull RadioButton RadioCArcano,
-      @NonNull RadioButton RadioCAtletica, @NonNull RadioButton RadioCFurtivit,
-      @NonNull RadioButton RadioCIndagare, @NonNull RadioButton RadioCInganno,
-      @NonNull RadioButton RadioCIntimidire, @NonNull RadioButton RadioCIntrattenere,
-      @NonNull RadioButton RadioCIntuizione, @NonNull RadioButton RadioCMedicina,
-      @NonNull RadioButton RadioCNatura, @NonNull RadioButton RadioCPercepire,
-      @NonNull RadioButton RadioCPersuasione, @NonNull RadioButton RadioCRapidit,
-      @NonNull RadioButton RadioCReligione, @NonNull RadioButton RadioCSopravvivenza,
-      @NonNull RadioButton RadioCStoria, @NonNull RadioButton RadioMAcrobazia,
-      @NonNull RadioButton RadioMAddestrare, @NonNull RadioButton RadioMArcano,
-      @NonNull RadioButton RadioMAtletica, @NonNull RadioButton RadioMFurtivit,
-      @NonNull RadioButton RadioMIndagare, @NonNull RadioButton RadioMInganno,
-      @NonNull RadioButton RadioMIntimidire, @NonNull RadioButton RadioMIntrattenere,
-      @NonNull RadioButton RadioMIntuizione, @NonNull RadioButton RadioMMedicina,
-      @NonNull RadioButton RadioMNatura, @NonNull RadioButton RadioMPercepire,
-      @NonNull RadioButton RadioMPersuasione, @NonNull RadioButton RadioMRapidit,
-      @NonNull RadioButton RadioMReligione, @NonNull RadioButton RadioMSopravvivenza,
-      @NonNull RadioButton RadioMStoria, @NonNull RadioButton RadioTScarisma,
-      @NonNull RadioButton RadioTScostituzione, @NonNull RadioButton RadioTSdestrezza,
-      @NonNull RadioButton RadioTSforza, @NonNull RadioButton RadioTSintelligenza,
-      @NonNull RadioButton RadioTSsaggezza, @NonNull TextView RapiditText,
+      @NonNull TextView PersuasioneText, @NonNull TextView RapiditText,
       @NonNull TextView ReligioneText, @NonNull TextView SopravvivenzaText,
       @NonNull TextView StoriaText, @NonNull TextView TScarisma, @NonNull TextView TScostituzione,
       @NonNull TextView TSdestrezza, @NonNull TextView TSforza, @NonNull TextView TSintelligenza,
-      @NonNull TextView TSsaggezza, @NonNull TextView bonusCompetenza,
-      @NonNull Button btnSalvaModifiche, @NonNull TextView caratteritiche,
-      @NonNull TextView classeArmatura, @NonNull TextView modificatoreCarisma,
-      @NonNull TextView modificatoreCostituzione, @NonNull TextView modificatoreDestrezza,
-      @NonNull TextView modificatoreForza, @NonNull TextView modificatoreIntelligenza,
-      @NonNull TextView modificatoreSaggezza, @NonNull TextView puntiFerita,
+      @NonNull TextView TSsaggezza, @NonNull Button btnSalvaModifiche,
+      @NonNull TextView caratteritiche, @NonNull TextInputEditText classeArmatura,
+      @NonNull TextInputEditText livello, @NonNull TextInputEditText modificatoreCarisma,
+      @NonNull TextInputEditText modificatoreCostituzione,
+      @NonNull TextInputEditText modificatoreDestrezza,
+      @NonNull TextInputEditText modificatoreForza,
+      @NonNull TextInputEditText modificatoreIntelligenza,
+      @NonNull TextInputEditText modificatoreSaggezza, @NonNull TextInputEditText puntiFerita,
       @NonNull TextView textView10, @NonNull TextView textView11, @NonNull TextView textView12,
       @NonNull TextView textView13, @NonNull TextView textView14, @NonNull TextView textView15,
       @NonNull TextView textView5, @NonNull TextView textView8, @NonNull TextView textView9) {
@@ -325,6 +328,48 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
     this.AddestrareText = AddestrareText;
     this.ArcanoText = ArcanoText;
     this.AtleticaText = AtleticaText;
+    this.BoxCAcrobazia = BoxCAcrobazia;
+    this.BoxCAddestrare = BoxCAddestrare;
+    this.BoxCArcano = BoxCArcano;
+    this.BoxCAtletica = BoxCAtletica;
+    this.BoxCFurtivit = BoxCFurtivit;
+    this.BoxCIndagare = BoxCIndagare;
+    this.BoxCInganno = BoxCInganno;
+    this.BoxCIntimidire = BoxCIntimidire;
+    this.BoxCIntrattenere = BoxCIntrattenere;
+    this.BoxCIntuizione = BoxCIntuizione;
+    this.BoxCMedicina = BoxCMedicina;
+    this.BoxCNatura = BoxCNatura;
+    this.BoxCPercepire = BoxCPercepire;
+    this.BoxCPersuasione = BoxCPersuasione;
+    this.BoxCRapidit = BoxCRapidit;
+    this.BoxCReligione = BoxCReligione;
+    this.BoxCSopravvivenza = BoxCSopravvivenza;
+    this.BoxCStoria = BoxCStoria;
+    this.BoxMAcrobazia = BoxMAcrobazia;
+    this.BoxMAddestrare = BoxMAddestrare;
+    this.BoxMArcano = BoxMArcano;
+    this.BoxMAtletica = BoxMAtletica;
+    this.BoxMFurtivit = BoxMFurtivit;
+    this.BoxMIndagare = BoxMIndagare;
+    this.BoxMInganno = BoxMInganno;
+    this.BoxMIntimidire = BoxMIntimidire;
+    this.BoxMIntrattenere = BoxMIntrattenere;
+    this.BoxMIntuizione = BoxMIntuizione;
+    this.BoxMMedicina = BoxMMedicina;
+    this.BoxMNatura = BoxMNatura;
+    this.BoxMPercepire = BoxMPercepire;
+    this.BoxMPersuasione = BoxMPersuasione;
+    this.BoxMRapidit = BoxMRapidit;
+    this.BoxMReligione = BoxMReligione;
+    this.BoxMSopravvivenza = BoxMSopravvivenza;
+    this.BoxMStoria = BoxMStoria;
+    this.BoxTScarisma = BoxTScarisma;
+    this.BoxTScostituzione = BoxTScostituzione;
+    this.BoxTSdestrezza = BoxTSdestrezza;
+    this.BoxTSforza = BoxTSforza;
+    this.BoxTSintelligenza = BoxTSintelligenza;
+    this.BoxTSsaggezza = BoxTSsaggezza;
     this.FurtivitText = FurtivitText;
     this.IndagareText = IndagareText;
     this.IngannoText = IngannoText;
@@ -335,48 +380,6 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
     this.NaturaText = NaturaText;
     this.PercepireText = PercepireText;
     this.PersuasioneText = PersuasioneText;
-    this.RadioCAcrobazia = RadioCAcrobazia;
-    this.RadioCAddestrare = RadioCAddestrare;
-    this.RadioCArcano = RadioCArcano;
-    this.RadioCAtletica = RadioCAtletica;
-    this.RadioCFurtivit = RadioCFurtivit;
-    this.RadioCIndagare = RadioCIndagare;
-    this.RadioCInganno = RadioCInganno;
-    this.RadioCIntimidire = RadioCIntimidire;
-    this.RadioCIntrattenere = RadioCIntrattenere;
-    this.RadioCIntuizione = RadioCIntuizione;
-    this.RadioCMedicina = RadioCMedicina;
-    this.RadioCNatura = RadioCNatura;
-    this.RadioCPercepire = RadioCPercepire;
-    this.RadioCPersuasione = RadioCPersuasione;
-    this.RadioCRapidit = RadioCRapidit;
-    this.RadioCReligione = RadioCReligione;
-    this.RadioCSopravvivenza = RadioCSopravvivenza;
-    this.RadioCStoria = RadioCStoria;
-    this.RadioMAcrobazia = RadioMAcrobazia;
-    this.RadioMAddestrare = RadioMAddestrare;
-    this.RadioMArcano = RadioMArcano;
-    this.RadioMAtletica = RadioMAtletica;
-    this.RadioMFurtivit = RadioMFurtivit;
-    this.RadioMIndagare = RadioMIndagare;
-    this.RadioMInganno = RadioMInganno;
-    this.RadioMIntimidire = RadioMIntimidire;
-    this.RadioMIntrattenere = RadioMIntrattenere;
-    this.RadioMIntuizione = RadioMIntuizione;
-    this.RadioMMedicina = RadioMMedicina;
-    this.RadioMNatura = RadioMNatura;
-    this.RadioMPercepire = RadioMPercepire;
-    this.RadioMPersuasione = RadioMPersuasione;
-    this.RadioMRapidit = RadioMRapidit;
-    this.RadioMReligione = RadioMReligione;
-    this.RadioMSopravvivenza = RadioMSopravvivenza;
-    this.RadioMStoria = RadioMStoria;
-    this.RadioTScarisma = RadioTScarisma;
-    this.RadioTScostituzione = RadioTScostituzione;
-    this.RadioTSdestrezza = RadioTSdestrezza;
-    this.RadioTSforza = RadioTSforza;
-    this.RadioTSintelligenza = RadioTSintelligenza;
-    this.RadioTSsaggezza = RadioTSsaggezza;
     this.RapiditText = RapiditText;
     this.ReligioneText = ReligioneText;
     this.SopravvivenzaText = SopravvivenzaText;
@@ -387,10 +390,10 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
     this.TSforza = TSforza;
     this.TSintelligenza = TSintelligenza;
     this.TSsaggezza = TSsaggezza;
-    this.bonusCompetenza = bonusCompetenza;
     this.btnSalvaModifiche = btnSalvaModifiche;
     this.caratteritiche = caratteritiche;
     this.classeArmatura = classeArmatura;
+    this.livello = livello;
     this.modificatoreCarisma = modificatoreCarisma;
     this.modificatoreCostituzione = modificatoreCostituzione;
     this.modificatoreDestrezza = modificatoreDestrezza;
@@ -460,6 +463,258 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.BoxCAcrobazia;
+      CheckBox BoxCAcrobazia = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCAcrobazia == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCAddestrare;
+      CheckBox BoxCAddestrare = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCAddestrare == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCArcano;
+      CheckBox BoxCArcano = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCArcano == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCAtletica;
+      CheckBox BoxCAtletica = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCAtletica == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCFurtività;
+      CheckBox BoxCFurtivit = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCFurtivit == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCIndagare;
+      CheckBox BoxCIndagare = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCIndagare == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCInganno;
+      CheckBox BoxCInganno = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCInganno == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCIntimidire;
+      CheckBox BoxCIntimidire = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCIntimidire == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCIntrattenere;
+      CheckBox BoxCIntrattenere = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCIntrattenere == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCIntuizione;
+      CheckBox BoxCIntuizione = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCIntuizione == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCMedicina;
+      CheckBox BoxCMedicina = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCMedicina == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCNatura;
+      CheckBox BoxCNatura = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCNatura == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCPercepire;
+      CheckBox BoxCPercepire = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCPercepire == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCPersuasione;
+      CheckBox BoxCPersuasione = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCPersuasione == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCRapidità;
+      CheckBox BoxCRapidit = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCRapidit == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCReligione;
+      CheckBox BoxCReligione = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCReligione == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCSopravvivenza;
+      CheckBox BoxCSopravvivenza = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCSopravvivenza == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxCStoria;
+      CheckBox BoxCStoria = ViewBindings.findChildViewById(rootView, id);
+      if (BoxCStoria == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMAcrobazia;
+      CheckBox BoxMAcrobazia = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMAcrobazia == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMAddestrare;
+      CheckBox BoxMAddestrare = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMAddestrare == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMArcano;
+      CheckBox BoxMArcano = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMArcano == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMAtletica;
+      CheckBox BoxMAtletica = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMAtletica == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMFurtività;
+      CheckBox BoxMFurtivit = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMFurtivit == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMIndagare;
+      CheckBox BoxMIndagare = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMIndagare == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMInganno;
+      CheckBox BoxMInganno = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMInganno == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMIntimidire;
+      CheckBox BoxMIntimidire = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMIntimidire == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMIntrattenere;
+      CheckBox BoxMIntrattenere = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMIntrattenere == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMIntuizione;
+      CheckBox BoxMIntuizione = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMIntuizione == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMMedicina;
+      CheckBox BoxMMedicina = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMMedicina == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMNatura;
+      CheckBox BoxMNatura = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMNatura == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMPercepire;
+      CheckBox BoxMPercepire = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMPercepire == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMPersuasione;
+      CheckBox BoxMPersuasione = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMPersuasione == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMRapidità;
+      CheckBox BoxMRapidit = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMRapidit == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMReligione;
+      CheckBox BoxMReligione = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMReligione == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMSopravvivenza;
+      CheckBox BoxMSopravvivenza = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMSopravvivenza == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxMStoria;
+      CheckBox BoxMStoria = ViewBindings.findChildViewById(rootView, id);
+      if (BoxMStoria == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxTScarisma;
+      CheckBox BoxTScarisma = ViewBindings.findChildViewById(rootView, id);
+      if (BoxTScarisma == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxTScostituzione;
+      CheckBox BoxTScostituzione = ViewBindings.findChildViewById(rootView, id);
+      if (BoxTScostituzione == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxTSdestrezza;
+      CheckBox BoxTSdestrezza = ViewBindings.findChildViewById(rootView, id);
+      if (BoxTSdestrezza == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxTSforza;
+      CheckBox BoxTSforza = ViewBindings.findChildViewById(rootView, id);
+      if (BoxTSforza == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxTSintelligenza;
+      CheckBox BoxTSintelligenza = ViewBindings.findChildViewById(rootView, id);
+      if (BoxTSintelligenza == null) {
+        break missingId;
+      }
+
+      id = R.id.BoxTSsaggezza;
+      CheckBox BoxTSsaggezza = ViewBindings.findChildViewById(rootView, id);
+      if (BoxTSsaggezza == null) {
+        break missingId;
+      }
+
       id = R.id.FurtivitàText;
       TextView FurtivitText = ViewBindings.findChildViewById(rootView, id);
       if (FurtivitText == null) {
@@ -517,258 +772,6 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
       id = R.id.PersuasioneText;
       TextView PersuasioneText = ViewBindings.findChildViewById(rootView, id);
       if (PersuasioneText == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCAcrobazia;
-      RadioButton RadioCAcrobazia = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCAcrobazia == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCAddestrare;
-      RadioButton RadioCAddestrare = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCAddestrare == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCArcano;
-      RadioButton RadioCArcano = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCArcano == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCAtletica;
-      RadioButton RadioCAtletica = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCAtletica == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCFurtività;
-      RadioButton RadioCFurtivit = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCFurtivit == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCIndagare;
-      RadioButton RadioCIndagare = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCIndagare == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCInganno;
-      RadioButton RadioCInganno = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCInganno == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCIntimidire;
-      RadioButton RadioCIntimidire = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCIntimidire == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCIntrattenere;
-      RadioButton RadioCIntrattenere = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCIntrattenere == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCIntuizione;
-      RadioButton RadioCIntuizione = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCIntuizione == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCMedicina;
-      RadioButton RadioCMedicina = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCMedicina == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCNatura;
-      RadioButton RadioCNatura = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCNatura == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCPercepire;
-      RadioButton RadioCPercepire = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCPercepire == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCPersuasione;
-      RadioButton RadioCPersuasione = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCPersuasione == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCRapidità;
-      RadioButton RadioCRapidit = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCRapidit == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCReligione;
-      RadioButton RadioCReligione = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCReligione == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCSopravvivenza;
-      RadioButton RadioCSopravvivenza = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCSopravvivenza == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioCStoria;
-      RadioButton RadioCStoria = ViewBindings.findChildViewById(rootView, id);
-      if (RadioCStoria == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMAcrobazia;
-      RadioButton RadioMAcrobazia = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMAcrobazia == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMAddestrare;
-      RadioButton RadioMAddestrare = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMAddestrare == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMArcano;
-      RadioButton RadioMArcano = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMArcano == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMAtletica;
-      RadioButton RadioMAtletica = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMAtletica == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMFurtività;
-      RadioButton RadioMFurtivit = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMFurtivit == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMIndagare;
-      RadioButton RadioMIndagare = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMIndagare == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMInganno;
-      RadioButton RadioMInganno = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMInganno == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMIntimidire;
-      RadioButton RadioMIntimidire = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMIntimidire == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMIntrattenere;
-      RadioButton RadioMIntrattenere = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMIntrattenere == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMIntuizione;
-      RadioButton RadioMIntuizione = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMIntuizione == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMMedicina;
-      RadioButton RadioMMedicina = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMMedicina == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMNatura;
-      RadioButton RadioMNatura = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMNatura == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMPercepire;
-      RadioButton RadioMPercepire = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMPercepire == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMPersuasione;
-      RadioButton RadioMPersuasione = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMPersuasione == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMRapidità;
-      RadioButton RadioMRapidit = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMRapidit == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMReligione;
-      RadioButton RadioMReligione = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMReligione == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMSopravvivenza;
-      RadioButton RadioMSopravvivenza = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMSopravvivenza == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioMStoria;
-      RadioButton RadioMStoria = ViewBindings.findChildViewById(rootView, id);
-      if (RadioMStoria == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioTScarisma;
-      RadioButton RadioTScarisma = ViewBindings.findChildViewById(rootView, id);
-      if (RadioTScarisma == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioTScostituzione;
-      RadioButton RadioTScostituzione = ViewBindings.findChildViewById(rootView, id);
-      if (RadioTScostituzione == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioTSdestrezza;
-      RadioButton RadioTSdestrezza = ViewBindings.findChildViewById(rootView, id);
-      if (RadioTSdestrezza == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioTSforza;
-      RadioButton RadioTSforza = ViewBindings.findChildViewById(rootView, id);
-      if (RadioTSforza == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioTSintelligenza;
-      RadioButton RadioTSintelligenza = ViewBindings.findChildViewById(rootView, id);
-      if (RadioTSintelligenza == null) {
-        break missingId;
-      }
-
-      id = R.id.RadioTSsaggezza;
-      RadioButton RadioTSsaggezza = ViewBindings.findChildViewById(rootView, id);
-      if (RadioTSsaggezza == null) {
         break missingId;
       }
 
@@ -832,12 +835,6 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.bonusCompetenza;
-      TextView bonusCompetenza = ViewBindings.findChildViewById(rootView, id);
-      if (bonusCompetenza == null) {
-        break missingId;
-      }
-
       id = R.id.btn_salva_modifiche;
       Button btnSalvaModifiche = ViewBindings.findChildViewById(rootView, id);
       if (btnSalvaModifiche == null) {
@@ -851,49 +848,55 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
       }
 
       id = R.id.classeArmatura;
-      TextView classeArmatura = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText classeArmatura = ViewBindings.findChildViewById(rootView, id);
       if (classeArmatura == null) {
         break missingId;
       }
 
+      id = R.id.livello;
+      TextInputEditText livello = ViewBindings.findChildViewById(rootView, id);
+      if (livello == null) {
+        break missingId;
+      }
+
       id = R.id.modificatoreCarisma;
-      TextView modificatoreCarisma = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText modificatoreCarisma = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreCarisma == null) {
         break missingId;
       }
 
       id = R.id.modificatoreCostituzione;
-      TextView modificatoreCostituzione = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText modificatoreCostituzione = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreCostituzione == null) {
         break missingId;
       }
 
       id = R.id.modificatoreDestrezza;
-      TextView modificatoreDestrezza = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText modificatoreDestrezza = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreDestrezza == null) {
         break missingId;
       }
 
       id = R.id.modificatoreForza;
-      TextView modificatoreForza = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText modificatoreForza = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreForza == null) {
         break missingId;
       }
 
       id = R.id.modificatoreIntelligenza;
-      TextView modificatoreIntelligenza = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText modificatoreIntelligenza = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreIntelligenza == null) {
         break missingId;
       }
 
       id = R.id.modificatoreSaggezza;
-      TextView modificatoreSaggezza = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText modificatoreSaggezza = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreSaggezza == null) {
         break missingId;
       }
 
       id = R.id.puntiFerita;
-      TextView puntiFerita = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText puntiFerita = ViewBindings.findChildViewById(rootView, id);
       if (puntiFerita == null) {
         break missingId;
       }
@@ -953,23 +956,21 @@ public final class FragmentModificaStatsBinding implements ViewBinding {
       }
 
       return new FragmentModificaStatsBinding((ScrollView) rootView, AcrobaziaText, AddestrareText,
-          ArcanoText, AtleticaText, FurtivitText, IndagareText, IngannoText, IntimidireText,
-          IntrattenereText, IntuizioneText, MedicinaText, NaturaText, PercepireText,
-          PersuasioneText, RadioCAcrobazia, RadioCAddestrare, RadioCArcano, RadioCAtletica,
-          RadioCFurtivit, RadioCIndagare, RadioCInganno, RadioCIntimidire, RadioCIntrattenere,
-          RadioCIntuizione, RadioCMedicina, RadioCNatura, RadioCPercepire, RadioCPersuasione,
-          RadioCRapidit, RadioCReligione, RadioCSopravvivenza, RadioCStoria, RadioMAcrobazia,
-          RadioMAddestrare, RadioMArcano, RadioMAtletica, RadioMFurtivit, RadioMIndagare,
-          RadioMInganno, RadioMIntimidire, RadioMIntrattenere, RadioMIntuizione, RadioMMedicina,
-          RadioMNatura, RadioMPercepire, RadioMPersuasione, RadioMRapidit, RadioMReligione,
-          RadioMSopravvivenza, RadioMStoria, RadioTScarisma, RadioTScostituzione, RadioTSdestrezza,
-          RadioTSforza, RadioTSintelligenza, RadioTSsaggezza, RapiditText, ReligioneText,
-          SopravvivenzaText, StoriaText, TScarisma, TScostituzione, TSdestrezza, TSforza,
-          TSintelligenza, TSsaggezza, bonusCompetenza, btnSalvaModifiche, caratteritiche,
-          classeArmatura, modificatoreCarisma, modificatoreCostituzione, modificatoreDestrezza,
-          modificatoreForza, modificatoreIntelligenza, modificatoreSaggezza, puntiFerita,
-          textView10, textView11, textView12, textView13, textView14, textView15, textView5,
-          textView8, textView9);
+          ArcanoText, AtleticaText, BoxCAcrobazia, BoxCAddestrare, BoxCArcano, BoxCAtletica,
+          BoxCFurtivit, BoxCIndagare, BoxCInganno, BoxCIntimidire, BoxCIntrattenere, BoxCIntuizione,
+          BoxCMedicina, BoxCNatura, BoxCPercepire, BoxCPersuasione, BoxCRapidit, BoxCReligione,
+          BoxCSopravvivenza, BoxCStoria, BoxMAcrobazia, BoxMAddestrare, BoxMArcano, BoxMAtletica,
+          BoxMFurtivit, BoxMIndagare, BoxMInganno, BoxMIntimidire, BoxMIntrattenere, BoxMIntuizione,
+          BoxMMedicina, BoxMNatura, BoxMPercepire, BoxMPersuasione, BoxMRapidit, BoxMReligione,
+          BoxMSopravvivenza, BoxMStoria, BoxTScarisma, BoxTScostituzione, BoxTSdestrezza,
+          BoxTSforza, BoxTSintelligenza, BoxTSsaggezza, FurtivitText, IndagareText, IngannoText,
+          IntimidireText, IntrattenereText, IntuizioneText, MedicinaText, NaturaText, PercepireText,
+          PersuasioneText, RapiditText, ReligioneText, SopravvivenzaText, StoriaText, TScarisma,
+          TScostituzione, TSdestrezza, TSforza, TSintelligenza, TSsaggezza, btnSalvaModifiche,
+          caratteritiche, classeArmatura, livello, modificatoreCarisma, modificatoreCostituzione,
+          modificatoreDestrezza, modificatoreForza, modificatoreIntelligenza, modificatoreSaggezza,
+          puntiFerita, textView10, textView11, textView12, textView13, textView14, textView15,
+          textView5, textView8, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

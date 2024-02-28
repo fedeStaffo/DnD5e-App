@@ -77,64 +77,73 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/caratteritiche" />
 
-        <TextView
-            android:id="@+id/bonusCompetenza"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/puntiFerita"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@drawable/oval"
-            android:text="@string/_0"
-            android:textAlignment="center"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-        <TextView
-            android:id="@+id/puntiFerita"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/livello"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
+            android:layout_height="50dp"
             android:background="@drawable/esagono"
-            android:text="@string/_0"
-            android:textAlignment="center"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/classeArmatura"
-            android:layout_width="65dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@drawable/pentagono"
-            android:text="@string/_0"
-            android:textAlignment="center"
+            android:text=""
+            android:inputType="number"
+            android:gravity="center"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/modificatoreForza"
             android:layout_width="51dp"
             android:layout_height="51dp"
-            android:layout_marginStart="65dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/quadrato"
+            android:inputType="number"
+            android:gravity="center"
             android:text=""
-            android:textAlignment="center"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
+            app:layout_constraintTop_toBottomOf="@+id/livello" />
 
         <TextView
             android:id="@+id/textView10"
@@ -144,16 +153,17 @@
             android:background="@drawable/rettangolo_blu"
             android:text="@string/forza_title"
             android:textColor="@color/white"
+            android:gravity="center"
             android:textSize="11sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
-            app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
+            app:layout_constraintTop_toBottomOf="@+id/livello" />
 
-        <RadioButton
-            android:id="@+id/RadioTSforza"
+        <CheckBox
+            android:id="@+id/BoxTSforza"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="27dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -169,11 +179,11 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioTSforza"
+            app:layout_constraintStart_toEndOf="@+id/BoxTSforza"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        <RadioButton
-            android:id="@+id/RadioCAtletica"
+        <CheckBox
+            android:id="@+id/BoxCAtletica"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
@@ -181,14 +191,14 @@
             app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        <RadioButton
-            android:id="@+id/RadioMAtletica"
+        <CheckBox
+            android:id="@+id/BoxMAtletica"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCAtletica"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTSforza"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCAtletica"
+            app:layout_constraintTop_toBottomOf="@+id/BoxTSforza"/>
 
         <TextView
             android:id="@+id/AtleticaText"
@@ -201,19 +211,21 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMAtletica"
+            app:layout_constraintStart_toEndOf="@+id/BoxMAtletica"
             app:layout_constraintTop_toBottomOf="@+id/TSforza" />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/modificatoreDestrezza"
             android:layout_width="51dp"
             android:layout_height="51dp"
-            android:layout_marginStart="65dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/quadrato"
             android:text=""
-            android:textAlignment="center"
+            android:inputType="number"
+            android:gravity="center"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -225,6 +237,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:background="@drawable/rettangolo_blu"
+            android:gravity="center"
             android:text="@string/destrezza_title"
             android:textColor="@color/white"
             android:textSize="11sp"
@@ -232,8 +245,8 @@
             app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
             app:layout_constraintTop_toBottomOf="@+id/AtleticaText" />
 
-        <RadioButton
-            android:id="@+id/RadioTSdestrezza"
+        <CheckBox
+            android:id="@+id/BoxTSdestrezza"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="25dp"
@@ -252,26 +265,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioTSdestrezza"
+            app:layout_constraintStart_toEndOf="@+id/BoxTSdestrezza"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-        <RadioButton
-            android:id="@+id/RadioCAcrobazia"
+        <CheckBox
+            android:id="@+id/BoxCAcrobazia"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTSdestrezza" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxTSdestrezza" />
 
-        <RadioButton
-            android:id="@+id/RadioMAcrobazia"
+        <CheckBox
+            android:id="@+id/BoxMAcrobazia"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCAcrobazia"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTSdestrezza"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCAcrobazia"
+            app:layout_constraintTop_toBottomOf="@+id/BoxTSdestrezza"/>
 
         <TextView
             android:id="@+id/AcrobaziaText"
@@ -284,26 +297,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMAcrobazia"
+            app:layout_constraintStart_toEndOf="@+id/BoxMAcrobazia"
             app:layout_constraintTop_toBottomOf="@+id/TSdestrezza" />
 
-        <RadioButton
-            android:id="@+id/RadioCFurtività"
+        <CheckBox
+            android:id="@+id/BoxCFurtività"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCAcrobazia" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCAcrobazia" />
 
-        <RadioButton
-            android:id="@+id/RadioMFurtività"
+        <CheckBox
+            android:id="@+id/BoxMFurtività"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCFurtività"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMAcrobazia"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCFurtività"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMAcrobazia"/>
 
         <TextView
             android:id="@+id/FurtivitàText"
@@ -316,26 +329,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMFurtività"
+            app:layout_constraintStart_toEndOf="@+id/BoxMFurtività"
             app:layout_constraintTop_toBottomOf="@+id/AcrobaziaText" />
 
-        <RadioButton
-            android:id="@+id/RadioCRapidità"
+        <CheckBox
+            android:id="@+id/BoxCRapidità"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCFurtività" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCFurtività" />
 
-        <RadioButton
-            android:id="@+id/RadioMRapidità"
+        <CheckBox
+            android:id="@+id/BoxMRapidità"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCRapidità"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMFurtività"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCRapidità"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMFurtività"/>
 
         <TextView
             android:id="@+id/RapiditàText"
@@ -348,19 +361,21 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMRapidità"
+            app:layout_constraintStart_toEndOf="@+id/BoxMRapidità"
             app:layout_constraintTop_toBottomOf="@+id/FurtivitàText" />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/modificatoreCostituzione"
             android:layout_width="51dp"
             android:layout_height="51dp"
-            android:layout_marginStart="65dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/quadrato"
             android:text=""
-            android:textAlignment="center"
+            android:inputType="number"
+            android:gravity="center"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -374,16 +389,17 @@
             android:background="@drawable/rettangolo_blu"
             android:text="@string/costituzione_title"
             android:textColor="@color/white"
+            android:gravity="center"
             android:textSize="11sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
             app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
 
-        <RadioButton
-            android:id="@+id/RadioTScostituzione"
+        <CheckBox
+            android:id="@+id/BoxTScostituzione"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="27dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -399,19 +415,21 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioTScostituzione"
+            app:layout_constraintStart_toEndOf="@+id/BoxTScostituzione"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/modificatoreIntelligenza"
             android:layout_width="51dp"
             android:layout_height="51dp"
-            android:layout_marginStart="65dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/quadrato"
             android:text=""
-            android:textAlignment="center"
+            android:inputType="number"
+            android:gravity="center"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -425,16 +443,17 @@
             android:background="@drawable/rettangolo_blu"
             android:text="@string/intelligenza_title"
             android:textColor="@color/white"
+            android:gravity="center"
             android:textSize="11sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
             app:layout_constraintTop_toBottomOf="@+id/modificatoreCostituzione" />
 
-        <RadioButton
-            android:id="@+id/RadioTSintelligenza"
+        <CheckBox
+            android:id="@+id/BoxTSintelligenza"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="27dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -450,26 +469,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioTSintelligenza"
+            app:layout_constraintStart_toEndOf="@+id/BoxTSintelligenza"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-        <RadioButton
-            android:id="@+id/RadioCArcano"
+        <CheckBox
+            android:id="@+id/BoxCArcano"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTSintelligenza" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxTSintelligenza" />
 
-        <RadioButton
-            android:id="@+id/RadioMArcano"
+        <CheckBox
+            android:id="@+id/BoxMArcano"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCArcano"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTSintelligenza"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCArcano"
+            app:layout_constraintTop_toBottomOf="@+id/BoxTSintelligenza"/>
 
         <TextView
             android:id="@+id/ArcanoText"
@@ -482,26 +501,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMArcano"
+            app:layout_constraintStart_toEndOf="@+id/BoxMArcano"
             app:layout_constraintTop_toBottomOf="@+id/TSintelligenza" />
 
-        <RadioButton
-            android:id="@+id/RadioCIndagare"
+        <CheckBox
+            android:id="@+id/BoxCIndagare"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCArcano" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCArcano" />
 
-        <RadioButton
-            android:id="@+id/RadioMIndagare"
+        <CheckBox
+            android:id="@+id/BoxMIndagare"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCIndagare"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMArcano"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCIndagare"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMArcano"/>
 
         <TextView
             android:id="@+id/IndagareText"
@@ -514,26 +533,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMIndagare"
+            app:layout_constraintStart_toEndOf="@+id/BoxMIndagare"
             app:layout_constraintTop_toBottomOf="@+id/ArcanoText" />
 
-        <RadioButton
-            android:id="@+id/RadioCNatura"
+        <CheckBox
+            android:id="@+id/BoxCNatura"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCIndagare" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCIndagare" />
 
-        <RadioButton
-            android:id="@+id/RadioMNatura"
+        <CheckBox
+            android:id="@+id/BoxMNatura"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCNatura"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMIndagare"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCNatura"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMIndagare"/>
 
         <TextView
             android:id="@+id/NaturaText"
@@ -546,26 +565,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMNatura"
+            app:layout_constraintStart_toEndOf="@+id/BoxMNatura"
             app:layout_constraintTop_toBottomOf="@+id/IndagareText" />
 
-        <RadioButton
-            android:id="@+id/RadioCReligione"
+        <CheckBox
+            android:id="@+id/BoxCReligione"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCNatura" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCNatura" />
 
-        <RadioButton
-            android:id="@+id/RadioMReligione"
+        <CheckBox
+            android:id="@+id/BoxMReligione"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCReligione"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMNatura"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCReligione"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMNatura"/>
 
         <TextView
             android:id="@+id/ReligioneText"
@@ -578,26 +597,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMReligione"
+            app:layout_constraintStart_toEndOf="@+id/BoxMReligione"
             app:layout_constraintTop_toBottomOf="@+id/NaturaText" />
 
-        <RadioButton
-            android:id="@+id/RadioCStoria"
+        <CheckBox
+            android:id="@+id/BoxCStoria"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCReligione" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCReligione" />
 
-        <RadioButton
-            android:id="@+id/RadioMStoria"
+        <CheckBox
+            android:id="@+id/BoxMStoria"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCStoria"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMReligione"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCStoria"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMReligione"/>
 
         <TextView
             android:id="@+id/StoriaText"
@@ -610,19 +629,21 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMStoria"
+            app:layout_constraintStart_toEndOf="@+id/BoxMStoria"
             app:layout_constraintTop_toBottomOf="@+id/ReligioneText" />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/modificatoreSaggezza"
             android:layout_width="51dp"
             android:layout_height="51dp"
-            android:layout_marginStart="65dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/quadrato"
             android:text=""
-            android:textAlignment="center"
+            android:inputType="number"
+            android:gravity="center"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -632,20 +653,21 @@
             android:id="@+id/textView14"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/rettangolo_blu"
             android:text="@string/saggezza_title"
             android:textColor="@color/white"
             android:textSize="11sp"
             android:textStyle="bold"
+            android:gravity="center"
             app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
             app:layout_constraintTop_toBottomOf="@+id/StoriaText" />
 
-        <RadioButton
-            android:id="@+id/RadioTSsaggezza"
+        <CheckBox
+            android:id="@+id/BoxTSsaggezza"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="27dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -661,26 +683,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioTSsaggezza"
+            app:layout_constraintStart_toEndOf="@+id/BoxTSsaggezza"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-        <RadioButton
-            android:id="@+id/RadioCAddestrare"
+        <CheckBox
+            android:id="@+id/BoxCAddestrare"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTSsaggezza" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxTSsaggezza" />
 
-        <RadioButton
-            android:id="@+id/RadioMAddestrare"
+        <CheckBox
+            android:id="@+id/BoxMAddestrare"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCAddestrare"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTSsaggezza"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCAddestrare"
+            app:layout_constraintTop_toBottomOf="@+id/BoxTSsaggezza"/>
 
         <TextView
             android:id="@+id/AddestrareText"
@@ -693,26 +715,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMAddestrare"
+            app:layout_constraintStart_toEndOf="@+id/BoxMAddestrare"
             app:layout_constraintTop_toBottomOf="@+id/TSsaggezza" />
 
-        <RadioButton
-            android:id="@+id/RadioCIntuizione"
+        <CheckBox
+            android:id="@+id/BoxCIntuizione"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCAddestrare" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCAddestrare" />
 
-        <RadioButton
-            android:id="@+id/RadioMIntuizione"
+        <CheckBox
+            android:id="@+id/BoxMIntuizione"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCIntuizione"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMAddestrare"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCIntuizione"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMAddestrare"/>
 
         <TextView
             android:id="@+id/IntuizioneText"
@@ -725,26 +747,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMIntuizione"
+            app:layout_constraintStart_toEndOf="@+id/BoxMIntuizione"
             app:layout_constraintTop_toBottomOf="@+id/AddestrareText" />
 
-        <RadioButton
-            android:id="@+id/RadioCMedicina"
+        <CheckBox
+            android:id="@+id/BoxCMedicina"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCIntuizione" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCIntuizione" />
 
-        <RadioButton
-            android:id="@+id/RadioMMedicina"
+        <CheckBox
+            android:id="@+id/BoxMMedicina"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCMedicina"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMIntuizione"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCMedicina"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMIntuizione"/>
 
         <TextView
             android:id="@+id/MedicinaText"
@@ -757,26 +779,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMMedicina"
+            app:layout_constraintStart_toEndOf="@+id/BoxMMedicina"
             app:layout_constraintTop_toBottomOf="@+id/IntuizioneText" />
 
-        <RadioButton
-            android:id="@+id/RadioCPercepire"
+        <CheckBox
+            android:id="@+id/BoxCPercepire"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCMedicina" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCMedicina" />
 
-        <RadioButton
-            android:id="@+id/RadioMPercepire"
+        <CheckBox
+            android:id="@+id/BoxMPercepire"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCPercepire"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMMedicina"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCPercepire"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMMedicina"/>
 
         <TextView
             android:id="@+id/PercepireText"
@@ -789,26 +811,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMPercepire"
+            app:layout_constraintStart_toEndOf="@+id/BoxMPercepire"
             app:layout_constraintTop_toBottomOf="@+id/MedicinaText" />
 
-        <RadioButton
-            android:id="@+id/RadioCSopravvivenza"
+        <CheckBox
+            android:id="@+id/BoxCSopravvivenza"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCPercepire" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCPercepire" />
 
-        <RadioButton
-            android:id="@+id/RadioMSopravvivenza"
+        <CheckBox
+            android:id="@+id/BoxMSopravvivenza"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCSopravvivenza"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMPercepire"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCSopravvivenza"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMPercepire"/>
 
         <TextView
             android:id="@+id/SopravvivenzaText"
@@ -821,19 +843,21 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMSopravvivenza"
+            app:layout_constraintStart_toEndOf="@+id/BoxMSopravvivenza"
             app:layout_constraintTop_toBottomOf="@+id/PercepireText" />
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/modificatoreCarisma"
             android:layout_width="51dp"
             android:layout_height="51dp"
-            android:layout_marginStart="65dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/quadrato"
             android:text=""
-            android:textAlignment="center"
+            android:inputType="number"
+            android:gravity="center"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -846,17 +870,18 @@
             android:layout_marginTop="25dp"
             android:background="@drawable/rettangolo_blu"
             android:text="@string/carisma_title"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="11sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
             app:layout_constraintTop_toBottomOf="@+id/SopravvivenzaText" />
 
-        <RadioButton
-            android:id="@+id/RadioTScarisma"
+        <CheckBox
+            android:id="@+id/BoxTScarisma"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="27dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -872,26 +897,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioTScarisma"
+            app:layout_constraintStart_toEndOf="@+id/BoxTScarisma"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-        <RadioButton
-            android:id="@+id/RadioCIntimidire"
+        <CheckBox
+            android:id="@+id/BoxCIntimidire"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTScarisma" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxTScarisma" />
 
-        <RadioButton
-            android:id="@+id/RadioMIntimidire"
+        <CheckBox
+            android:id="@+id/BoxMIntimidire"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCIntimidire"
-            app:layout_constraintTop_toBottomOf="@+id/RadioTScarisma"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCIntimidire"
+            app:layout_constraintTop_toBottomOf="@+id/BoxTScarisma"/>
 
         <TextView
             android:id="@+id/IntimidireText"
@@ -904,26 +929,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMIntimidire"
+            app:layout_constraintStart_toEndOf="@+id/BoxMIntimidire"
             app:layout_constraintTop_toBottomOf="@+id/TScarisma" />
 
-        <RadioButton
-            android:id="@+id/RadioCInganno"
+        <CheckBox
+            android:id="@+id/BoxCInganno"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCIntimidire" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCIntimidire" />
 
-        <RadioButton
-            android:id="@+id/RadioMInganno"
+        <CheckBox
+            android:id="@+id/BoxMInganno"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCInganno"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMIntimidire"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCInganno"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMIntimidire"/>
 
         <TextView
             android:id="@+id/IngannoText"
@@ -936,26 +961,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMInganno"
+            app:layout_constraintStart_toEndOf="@+id/BoxMInganno"
             app:layout_constraintTop_toBottomOf="@+id/IntimidireText" />
 
-        <RadioButton
-            android:id="@+id/RadioCIntrattenere"
+        <CheckBox
+            android:id="@+id/BoxCIntrattenere"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCInganno" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCInganno" />
 
-        <RadioButton
-            android:id="@+id/RadioMIntrattenere"
+        <CheckBox
+            android:id="@+id/BoxMIntrattenere"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCIntrattenere"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMInganno"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCIntrattenere"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMInganno"/>
 
         <TextView
             android:id="@+id/IntrattenereText"
@@ -968,26 +993,26 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMIntrattenere"
+            app:layout_constraintStart_toEndOf="@+id/BoxMIntrattenere"
             app:layout_constraintTop_toBottomOf="@+id/IngannoText" />
 
-        <RadioButton
-            android:id="@+id/RadioCPersuasione"
+        <CheckBox
+            android:id="@+id/BoxCPersuasione"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
-            app:layout_constraintTop_toBottomOf="@+id/RadioCIntrattenere" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxCIntrattenere" />
 
-        <RadioButton
-            android:id="@+id/RadioMPersuasione"
+        <CheckBox
+            android:id="@+id/BoxMPersuasione"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:layout_constraintStart_toEndOf="@+id/RadioCPersuasione"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMIntrattenere"/>
+            app:layout_constraintStart_toEndOf="@+id/BoxCPersuasione"
+            app:layout_constraintTop_toBottomOf="@+id/BoxMIntrattenere"/>
 
         <TextView
             android:id="@+id/PersuasioneText"
@@ -1000,7 +1025,7 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/RadioMPersuasione"
+            app:layout_constraintStart_toEndOf="@+id/BoxMPersuasione"
             app:layout_constraintTop_toBottomOf="@+id/IntrattenereText" />
 
 
@@ -1013,6 +1038,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/RadioMPersuasione" />
+            app:layout_constraintTop_toBottomOf="@+id/BoxMPersuasione" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

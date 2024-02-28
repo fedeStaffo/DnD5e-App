@@ -40,9 +40,103 @@ class ModificaStatsFragment : Fragment() {
         val classe = intent.getStringExtra("classe")
         val utenteId = intent.getStringExtra("utente_id")
         val vitaMax = intent.getStringExtra("vitaMax")
+        val livello = intent.getStringExtra("livello")
+        val forza = intent.getStringExtra("forza")
+        val destrezza = intent.getStringExtra("destrezza")
+        val costituzione = intent.getStringExtra("costituzione")
+        val intelligenza = intent.getStringExtra("intelligenza")
+        val carisma = intent.getStringExtra("carisma")
+        val saggezza = intent.getStringExtra("saggezza")
+        val classeArmatura = intent.getStringExtra("classeArmatura")
+        val competenze = intent.getStringArrayListExtra("competenze")
+        val maestrie = intent.getStringArrayListExtra("maestrie")
 
-        val numMax = vitaMax?.toInt()
-/*
+        binding.classeArmatura.hint = classeArmatura
+        binding.puntiFerita.hint = vitaMax
+        binding.livello.hint = livello
+        binding.modificatoreForza.hint = forza
+        binding.modificatoreDestrezza.hint = destrezza
+        binding.modificatoreIntelligenza.hint = intelligenza
+        binding.modificatoreCostituzione.hint = costituzione
+        binding.modificatoreSaggezza.hint = saggezza
+        binding.modificatoreCarisma.hint = carisma
+
+        competenze?.let {competenzeList ->
+            if (competenzeList.contains("Atletica")) binding.BoxCAtletica.isChecked = true
+
+            if (competenzeList.contains("Acrobazia")) binding.BoxCAcrobazia.isChecked = true
+
+            if (competenzeList.contains("Rapidità di mano")) binding.BoxCFurtivit.isChecked = true
+
+            if (competenzeList.contains("Furtività")) binding.BoxCRapidit.isChecked = true
+
+            if (competenzeList.contains("Arcano")) binding.BoxCArcano.isChecked = true
+
+            if (competenzeList.contains("Indagare")) binding.BoxCIndagare.isChecked = true
+
+            if (competenzeList.contains("Natura")) binding.BoxCNatura.isChecked = true
+
+            if (competenzeList.contains("Religione")) binding.BoxCReligione.isChecked = true
+
+            if (competenzeList.contains("Storia")) binding.BoxCStoria.isChecked = true
+
+            if (competenzeList.contains("Addestrare Animali")) binding.BoxCAddestrare.isChecked = true
+
+            if (competenzeList.contains("Intuizione")) binding.BoxCIntuizione.isChecked = true
+
+            if (competenzeList.contains("Medicina")) binding.BoxCMedicina.isChecked = true
+
+            if (competenzeList.contains("Percezione")) binding.BoxCPercepire.isChecked = true
+
+            if (competenzeList.contains("Sopravvivenza")) binding.BoxCSopravvivenza.isChecked = true
+
+            if (competenzeList.contains("Intimidire")) binding.BoxCIntimidire.isChecked = true
+
+            if (competenzeList.contains("Inganno")) binding.BoxCInganno.isChecked = true
+
+            if (competenzeList.contains("Intrattenere")) binding.BoxCIntrattenere.isChecked = true
+
+            if (competenzeList.contains("Persuasione")) binding.BoxCPersuasione.isChecked = true
+        }
+
+        maestrie?.let {maestrieList ->
+            if (maestrieList.contains("Atletica")) binding.BoxMAtletica.isChecked = true
+
+            if (maestrieList.contains("Acrobazia")) binding.BoxMAcrobazia.isChecked = true
+
+            if (maestrieList.contains("Rapidità di mano")) binding.BoxMFurtivit.isChecked = true
+
+            if (maestrieList.contains("Furtività")) binding.BoxMRapidit.isChecked = true
+
+            if (maestrieList.contains("Arcano")) binding.BoxMArcano.isChecked = true
+
+            if (maestrieList.contains("Indagare")) binding.BoxMIndagare.isChecked = true
+
+            if (maestrieList.contains("Natura")) binding.BoxMNatura.isChecked = true
+
+            if (maestrieList.contains("Religione")) binding.BoxMReligione.isChecked = true
+
+            if (maestrieList.contains("Storia")) binding.BoxMStoria.isChecked = true
+
+            if (maestrieList.contains("Addestrare Animali")) binding.BoxMAddestrare.isChecked = true
+
+            if (maestrieList.contains("Intuizione")) binding.BoxMIntuizione.isChecked = true
+
+            if (maestrieList.contains("Medicina")) binding.BoxMMedicina.isChecked = true
+
+            if (maestrieList.contains("Percezione")) binding.BoxMPercepire.isChecked = true
+
+            if (maestrieList.contains("Sopravvivenza")) binding.BoxMSopravvivenza.isChecked = true
+
+            if (maestrieList.contains("Intimidire")) binding.BoxMIntimidire.isChecked = true
+
+            if (maestrieList.contains("Inganno")) binding.BoxMInganno.isChecked = true
+
+            if (maestrieList.contains("Intrattenere")) binding.BoxMIntrattenere.isChecked = true
+
+            if (maestrieList.contains("Persuasione")) binding.BoxMPersuasione.isChecked = true
+        }
+        /*
         binding.buttonSalvaLivello.setOnClickListener {
             val livello = binding.editTextLivello.text.toString()
             val numLivello = livello.toInt()
