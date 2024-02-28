@@ -4,7 +4,7 @@
             "outputFile": "com.progetto_dd.test.app-mergeDebugAndroidTestResources-4:/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\fede0\\.gradle\\caches\\transforms-3\\21490f9ab13ecce77f3811c6980755ab\\transformed\\core-1.5.0\\res\\values\\values.xml",
+                    "source": "C:\\Users\\emsar\\.gradle\\caches\\transforms-3\\21490f9ab13ecce77f3811c6980755ab\\transformed\\core-1.5.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,11",
                         "startColumns": "0,0",

@@ -29,142 +29,142 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     private final androidx.lifecycle.MutableLiveData<java.lang.Integer> _modSaggezza = null;
     private final androidx.lifecycle.MutableLiveData<java.lang.Integer> _modCarisma = null;
     private final androidx.lifecycle.MutableLiveData<java.util.List<java.lang.String>> _equipaggiamento = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public static final com.progetto_dd.memory.personaggio.PersonaggioViewModel.Companion Companion = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public static final java.lang.String TAG = "com.progetto_dd.view.characters.HomeCharacterFragment";
     
     public PersonaggioViewModel() {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getNomePersonaggio() {
         return null;
     }
     
-    public final void setNomePersonaggio(@org.jetbrains.annotations.NotNull()
+    public final void setNomePersonaggio(@org.jetbrains.annotations.NotNull
     java.lang.String nome) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getRazzaPersonaggio() {
         return null;
     }
     
-    public final void setRazzaPersonaggio(@org.jetbrains.annotations.NotNull()
+    public final void setRazzaPersonaggio(@org.jetbrains.annotations.NotNull
     java.lang.String razza) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getClassePersonaggio() {
         return null;
     }
     
-    public final void setClassePersonaggio(@org.jetbrains.annotations.NotNull()
+    public final void setClassePersonaggio(@org.jetbrains.annotations.NotNull
     java.lang.String classe) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<java.lang.String>> getCompetenzePersonaggio() {
         return null;
     }
     
-    public final void setCompetenzePersonaggio(@org.jetbrains.annotations.NotNull()
+    public final void setCompetenzePersonaggio(@org.jetbrains.annotations.NotNull
     java.util.List<java.lang.String> competenze) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<java.lang.String>> getCompetenzeMezzelfoPersonaggio() {
         return null;
     }
     
-    public final void setCompetenzeMezzelfoPersonaggio(@org.jetbrains.annotations.NotNull()
+    public final void setCompetenzeMezzelfoPersonaggio(@org.jetbrains.annotations.NotNull
     java.util.List<java.lang.String> competenzeMezzelfo) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<java.lang.String>> getCaratteristicaMezzelfoPersonaggio() {
         return null;
     }
     
-    public final void setcaratteristicaMezzelfoPersonaggio(@org.jetbrains.annotations.NotNull()
+    public final void setcaratteristicaMezzelfoPersonaggio(@org.jetbrains.annotations.NotNull
     java.util.List<java.lang.String> caratteristicaMezzelfo) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<java.lang.String>> getLinguaggiPersonaggio() {
         return null;
     }
     
-    public final void setLinguaggiPersonaggio(@org.jetbrains.annotations.NotNull()
+    public final void setLinguaggiPersonaggio(@org.jetbrains.annotations.NotNull
     java.util.List<java.lang.String> linguaggi) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getBackgroundDescrizione() {
         return null;
     }
     
-    public final void setBackgroundDescrizione(@org.jetbrains.annotations.NotNull()
+    public final void setBackgroundDescrizione(@org.jetbrains.annotations.NotNull
     java.lang.String descrizione) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getBackgroundStoria() {
         return null;
     }
     
-    public final void setBackgroundStoria(@org.jetbrains.annotations.NotNull()
+    public final void setBackgroundStoria(@org.jetbrains.annotations.NotNull
     java.lang.String storia) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getBackgroundTratti() {
         return null;
     }
     
-    public final void setBackgroundTratti(@org.jetbrains.annotations.NotNull()
+    public final void setBackgroundTratti(@org.jetbrains.annotations.NotNull
     java.lang.String tratti) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getBackgroundDifetti() {
         return null;
     }
     
-    public final void setBackgroundDifetti(@org.jetbrains.annotations.NotNull()
+    public final void setBackgroundDifetti(@org.jetbrains.annotations.NotNull
     java.lang.String difetti) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getBackgroundIdeali() {
         return null;
     }
     
-    public final void setBackgroundIdeali(@org.jetbrains.annotations.NotNull()
+    public final void setBackgroundIdeali(@org.jetbrains.annotations.NotNull
     java.lang.String ideali) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getBackgroundLegami() {
         return null;
     }
     
-    public final void setBackgroundLegami(@org.jetbrains.annotations.NotNull()
+    public final void setBackgroundLegami(@org.jetbrains.annotations.NotNull
     java.lang.String legami) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getBackgroundAllineamento() {
         return null;
     }
     
-    public final void setBackgroundAllineamento(@org.jetbrains.annotations.NotNull()
+    public final void setBackgroundAllineamento(@org.jetbrains.annotations.NotNull
     java.lang.String allineamento) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.Integer> getModForza() {
         return null;
     }
@@ -172,7 +172,7 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     public final void setModForza(int forza) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.Integer> getModDestrezza() {
         return null;
     }
@@ -180,7 +180,7 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     public final void setModDestrezza(int destrezza) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.Integer> getModCostituzione() {
         return null;
     }
@@ -188,7 +188,7 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     public final void setModCostituzione(int costituzione) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.Integer> getModIntelligenza() {
         return null;
     }
@@ -196,7 +196,7 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     public final void setModIntelligenza(int intelligenza) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.Integer> getModSaggezza() {
         return null;
     }
@@ -204,7 +204,7 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     public final void setModSaggezza(int saggezza) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.Integer> getModCarisma() {
         return null;
     }
@@ -212,16 +212,16 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     public final void setModCarisma(int carisma) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<java.lang.String>> getEquipaggiamento() {
         return null;
     }
     
-    public final void setEquipaggiamento(@org.jetbrains.annotations.Nullable()
+    public final void setEquipaggiamento(@org.jetbrains.annotations.Nullable
     java.util.List<java.lang.String> equipaggiamentoList) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<com.progetto_dd.memory.personaggio.Personaggio>> getPersonaggi() {
         return null;
     }
@@ -229,108 +229,108 @@ public final class PersonaggioViewModel extends androidx.lifecycle.ViewModel {
     public final void saveCharacterToFirestore() {
     }
     
-    public final void aggiungiEquipaggiamento(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull()
+    public final void aggiungiEquipaggiamento(@org.jetbrains.annotations.NotNull
+    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull
     java.lang.String nuovoOggetto) {
     }
     
-    public final void updatePersonaggioStato(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull()
+    public final void updatePersonaggioStato(@org.jetbrains.annotations.NotNull
+    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull
     java.lang.String nuovoStato) {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.lang.Boolean> deletePersonaggio(@org.jetbrains.annotations.NotNull()
-    java.lang.String nome, @org.jetbrains.annotations.NotNull()
-    java.lang.String razza, @org.jetbrains.annotations.NotNull()
-    java.lang.String classe, @org.jetbrains.annotations.NotNull()
-    java.lang.String utenteId, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.LiveData<java.lang.Boolean> deletePersonaggio(@org.jetbrains.annotations.NotNull
+    java.lang.String nome, @org.jetbrains.annotations.NotNull
+    java.lang.String razza, @org.jetbrains.annotations.NotNull
+    java.lang.String classe, @org.jetbrains.annotations.NotNull
+    java.lang.String utenteId, @org.jetbrains.annotations.NotNull
     java.lang.String campagna) {
         return null;
     }
     
-    public final void updateCampoNumerico(@org.jetbrains.annotations.NotNull()
-    java.lang.String nome, @org.jetbrains.annotations.NotNull()
-    java.lang.String razza, @org.jetbrains.annotations.NotNull()
-    java.lang.String classe, @org.jetbrains.annotations.NotNull()
-    java.lang.String utenteId, @org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampo, @org.jetbrains.annotations.NotNull()
+    public final void updateCampoNumerico(@org.jetbrains.annotations.NotNull
+    java.lang.String nome, @org.jetbrains.annotations.NotNull
+    java.lang.String razza, @org.jetbrains.annotations.NotNull
+    java.lang.String classe, @org.jetbrains.annotations.NotNull
+    java.lang.String utenteId, @org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampo, @org.jetbrains.annotations.NotNull
     java.lang.Number nuovoValore) {
     }
     
-    public final void updateCampoString(@org.jetbrains.annotations.NotNull()
-    java.lang.String nome, @org.jetbrains.annotations.NotNull()
-    java.lang.String razza, @org.jetbrains.annotations.NotNull()
-    java.lang.String classe, @org.jetbrains.annotations.NotNull()
-    java.lang.String utenteId, @org.jetbrains.annotations.NotNull()
-    java.lang.String campo, @org.jetbrains.annotations.NotNull()
+    public final void updateCampoString(@org.jetbrains.annotations.NotNull
+    java.lang.String nome, @org.jetbrains.annotations.NotNull
+    java.lang.String razza, @org.jetbrains.annotations.NotNull
+    java.lang.String classe, @org.jetbrains.annotations.NotNull
+    java.lang.String utenteId, @org.jetbrains.annotations.NotNull
+    java.lang.String campo, @org.jetbrains.annotations.NotNull
     java.lang.String nuovoValore) {
     }
     
-    public final void addEquipaggiamentoToPersonaggio(@org.jetbrains.annotations.NotNull()
-    java.lang.String nome, @org.jetbrains.annotations.NotNull()
-    java.lang.String razza, @org.jetbrains.annotations.NotNull()
-    java.lang.String classe, @org.jetbrains.annotations.NotNull()
-    java.lang.String utenteId, @org.jetbrains.annotations.NotNull()
+    public final void addEquipaggiamentoToPersonaggio(@org.jetbrains.annotations.NotNull
+    java.lang.String nome, @org.jetbrains.annotations.NotNull
+    java.lang.String razza, @org.jetbrains.annotations.NotNull
+    java.lang.String classe, @org.jetbrains.annotations.NotNull
+    java.lang.String utenteId, @org.jetbrains.annotations.NotNull
     java.lang.String nuovoOggetto) {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.lang.Boolean> removeEquipaggiamentoFromPersonaggio(@org.jetbrains.annotations.NotNull()
-    java.lang.String nome, @org.jetbrains.annotations.NotNull()
-    java.lang.String razza, @org.jetbrains.annotations.NotNull()
-    java.lang.String classe, @org.jetbrains.annotations.NotNull()
-    java.lang.String utenteId, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.LiveData<java.lang.Boolean> removeEquipaggiamentoFromPersonaggio(@org.jetbrains.annotations.NotNull
+    java.lang.String nome, @org.jetbrains.annotations.NotNull
+    java.lang.String razza, @org.jetbrains.annotations.NotNull
+    java.lang.String classe, @org.jetbrains.annotations.NotNull
+    java.lang.String utenteId, @org.jetbrains.annotations.NotNull
     java.lang.String oggettoDaRimuovere) {
         return null;
     }
     
-    public final void addIncantesimoToPersonaggio(@org.jetbrains.annotations.NotNull()
-    android.content.Context context, @org.jetbrains.annotations.NotNull()
-    java.lang.String nome, @org.jetbrains.annotations.NotNull()
-    java.lang.String razza, @org.jetbrains.annotations.NotNull()
-    java.lang.String classe, @org.jetbrains.annotations.NotNull()
-    java.lang.String utenteId, @org.jetbrains.annotations.NotNull()
+    public final void addIncantesimoToPersonaggio(@org.jetbrains.annotations.NotNull
+    android.content.Context context, @org.jetbrains.annotations.NotNull
+    java.lang.String nome, @org.jetbrains.annotations.NotNull
+    java.lang.String razza, @org.jetbrains.annotations.NotNull
+    java.lang.String classe, @org.jetbrains.annotations.NotNull
+    java.lang.String utenteId, @org.jetbrains.annotations.NotNull
     java.lang.String nuovaMagia) {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.lang.Boolean> removeIncantesimoFromPersonaggio(@org.jetbrains.annotations.NotNull()
-    android.content.Context context, @org.jetbrains.annotations.NotNull()
-    java.lang.String nome, @org.jetbrains.annotations.NotNull()
-    java.lang.String razza, @org.jetbrains.annotations.NotNull()
-    java.lang.String classe, @org.jetbrains.annotations.NotNull()
-    java.lang.String utenteId, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.LiveData<java.lang.Boolean> removeIncantesimoFromPersonaggio(@org.jetbrains.annotations.NotNull
+    android.content.Context context, @org.jetbrains.annotations.NotNull
+    java.lang.String nome, @org.jetbrains.annotations.NotNull
+    java.lang.String razza, @org.jetbrains.annotations.NotNull
+    java.lang.String classe, @org.jetbrains.annotations.NotNull
+    java.lang.String utenteId, @org.jetbrains.annotations.NotNull
     java.lang.String magiaDaRimuovere) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.util.List<java.lang.String>> getMagieFromFirestore(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.LiveData<java.util.List<java.lang.String>> getMagieFromFirestore(@org.jetbrains.annotations.NotNull
+    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull
     java.lang.String utenteId) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.MutableLiveData<java.util.List<java.lang.Integer>> getSlotTotArray(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.MutableLiveData<java.util.List<java.lang.Integer>> getSlotTotArray(@org.jetbrains.annotations.NotNull
+    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull
     java.lang.String utenteId) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.MutableLiveData<java.util.List<java.lang.Integer>> getSlotUsatiArray(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.MutableLiveData<java.util.List<java.lang.Integer>> getSlotUsatiArray(@org.jetbrains.annotations.NotNull
+    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull
     java.lang.String utenteId) {
         return null;
     }
     
-    public final void updateSlotTotUsati(@org.jetbrains.annotations.NotNull()
-    android.content.Context context, @org.jetbrains.annotations.NotNull()
-    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull()
+    public final void updateSlotTotUsati(@org.jetbrains.annotations.NotNull
+    android.content.Context context, @org.jetbrains.annotations.NotNull
+    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull
     java.lang.String utenteId, int livello, int newSlotTot, int newSlotUsati) {
     }
     

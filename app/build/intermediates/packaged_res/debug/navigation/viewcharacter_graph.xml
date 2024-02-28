@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_statsFragment_to_modificaStatsFragment"
             app:destination="@id/modificaStatsFragment" />
+        <action
+            android:id="@+id/action_statsFragment_to_dadoFragment3"
+            app:destination="@id/dadoFragment3" />
     </fragment>
     <fragment
         android:id="@+id/statsClasseRazzaFragment"
@@ -69,4 +72,9 @@
         android:name="com.progetto_dd.view.characters.visualizza.InfoMagiaFragment"
         android:label="Info magia"
         tools:layout="@layout/fragment_info_magia" />
+    <fragment
+        android:id="@+id/dadoFragment3"
+        android:name="com.progetto_dd.view.campaigns.drawer.DadoFragment"
+        android:label="fragment_dado"
+        tools:layout="@layout/fragment_dado" />
 </navigation>

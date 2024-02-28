@@ -15,34 +15,34 @@ public final class RollFragment extends androidx.fragment.app.Fragment {
         return null;
     }
     
-    @org.jetbrains.annotations.Nullable()
-    @java.lang.Override()
-    public android.view.View onCreateView(@org.jetbrains.annotations.NotNull()
-    android.view.LayoutInflater inflater, @org.jetbrains.annotations.Nullable()
-    android.view.ViewGroup container, @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
+    @java.lang.Override
+    public android.view.View onCreateView(@org.jetbrains.annotations.NotNull
+    android.view.LayoutInflater inflater, @org.jetbrains.annotations.Nullable
+    android.view.ViewGroup container, @org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
         return null;
     }
     
-    @java.lang.Override()
-    public void onViewCreated(@org.jetbrains.annotations.NotNull()
-    android.view.View view, @org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    public void onViewCreated(@org.jetbrains.annotations.NotNull
+    android.view.View view, @org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public void onDestroyView() {
     }
     
-    public final int getModificatoreRazza(@org.jetbrains.annotations.NotNull()
-    java.lang.String razza, @org.jetbrains.annotations.NotNull()
+    public final int getModificatoreRazza(@org.jetbrains.annotations.NotNull
+    java.lang.String razza, @org.jetbrains.annotations.NotNull
     java.lang.String caratteristica) {
         return 0;
     }
     
-    public final int getModificatoreRazzaMezzelfo(@org.jetbrains.annotations.NotNull()
-    java.lang.String caratteristica, @org.jetbrains.annotations.NotNull()
-    java.lang.String car1, @org.jetbrains.annotations.NotNull()
+    public final int getModificatoreRazzaMezzelfo(@org.jetbrains.annotations.NotNull
+    java.lang.String caratteristica, @org.jetbrains.annotations.NotNull
+    java.lang.String car1, @org.jetbrains.annotations.NotNull
     java.lang.String car2) {
         return 0;
     }

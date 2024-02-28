@@ -10,7 +10,7 @@ public final class CampagnaViewModel extends androidx.lifecycle.ViewModel {
     private final androidx.lifecycle.MutableLiveData<java.lang.String> _nomeCampagna = null;
     private final androidx.lifecycle.MutableLiveData<java.lang.String> _nomeMaster = null;
     private final androidx.lifecycle.MutableLiveData<java.lang.String> _nomeMasterId = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public static final com.progetto_dd.memory.campagna.CampagnaViewModel.Companion Companion = null;
     private static final java.lang.String TAG = "com.progetto_dd.view.campaigns.HomeCampaignsFragment";
     
@@ -18,109 +18,109 @@ public final class CampagnaViewModel extends androidx.lifecycle.ViewModel {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getNomeCampagna() {
         return null;
     }
     
-    public final void setNomeCampagna(@org.jetbrains.annotations.NotNull()
+    public final void setNomeCampagna(@org.jetbrains.annotations.NotNull
     java.lang.String nome) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getNomeMaster() {
         return null;
     }
     
-    public final void setNomeMaster(@org.jetbrains.annotations.NotNull()
+    public final void setNomeMaster(@org.jetbrains.annotations.NotNull
     java.lang.String nome) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.lang.String> getNomeMasterId() {
         return null;
     }
     
-    public final void setNomeMasterId(@org.jetbrains.annotations.NotNull()
+    public final void setNomeMasterId(@org.jetbrains.annotations.NotNull
     java.lang.String nome) {
     }
     
-    public final void creaCampagna(@org.jetbrains.annotations.NotNull()
-    java.lang.String nome, @org.jetbrains.annotations.NotNull()
-    java.lang.String password, @org.jetbrains.annotations.NotNull()
+    public final void creaCampagna(@org.jetbrains.annotations.NotNull
+    java.lang.String nome, @org.jetbrains.annotations.NotNull
+    java.lang.String password, @org.jetbrains.annotations.NotNull
     java.lang.String master) {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.lang.Boolean> checkExistingCampaign(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.LiveData<java.lang.Boolean> checkExistingCampaign(@org.jetbrains.annotations.NotNull
     java.lang.String campaignName) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<com.progetto_dd.memory.campagna.Campagna>> getCampagne() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<java.lang.String>> getNomiPersonaggiUtente() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<java.util.List<com.progetto_dd.memory.personaggio.Personaggio>> getPersonaggiByCampagna(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.LiveData<java.util.List<com.progetto_dd.memory.personaggio.Personaggio>> getPersonaggiByCampagna(@org.jetbrains.annotations.NotNull
     java.lang.String nomeCampagna) {
         return null;
     }
     
-    public final void aggiungiPersonaggioACampagna(@org.jetbrains.annotations.NotNull()
-    android.content.Context context, @org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull()
-    java.lang.String passwordCampagna, @org.jetbrains.annotations.NotNull()
+    public final void aggiungiPersonaggioACampagna(@org.jetbrains.annotations.NotNull
+    android.content.Context context, @org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull
+    java.lang.String passwordCampagna, @org.jetbrains.annotations.NotNull
     java.lang.String nomePersonaggioSelezionato) {
     }
     
-    public final void aggiungiCampagnaAPersonaggio(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull()
+    public final void aggiungiCampagnaAPersonaggio(@org.jetbrains.annotations.NotNull
+    java.lang.String nomePersonaggio, @org.jetbrains.annotations.NotNull
     java.lang.String nomeCampagna) {
     }
     
-    public final void rimuoviPersonaggioDaCampagna(@org.jetbrains.annotations.NotNull()
-    java.lang.String personaggio, @org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull()
+    public final void rimuoviPersonaggioDaCampagna(@org.jetbrains.annotations.NotNull
+    java.lang.String personaggio, @org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull
     java.lang.String masterId) {
     }
     
-    public final void aggiornaCampagnaPersonaggio(@org.jetbrains.annotations.NotNull()
-    java.lang.String personaggio, @org.jetbrains.annotations.NotNull()
+    public final void aggiornaCampagnaPersonaggio(@org.jetbrains.annotations.NotNull
+    java.lang.String personaggio, @org.jetbrains.annotations.NotNull
     java.lang.String nomeCampagna) {
     }
     
-    public final void eliminaGiocatoreDaCampagna(@org.jetbrains.annotations.NotNull()
-    java.lang.String personaggio, @org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull()
+    public final void eliminaGiocatoreDaCampagna(@org.jetbrains.annotations.NotNull
+    java.lang.String personaggio, @org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull
     java.lang.String masterId) {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.MutableLiveData<java.lang.String> getPasswordByCampagna(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final androidx.lifecycle.MutableLiveData<java.lang.String> getPasswordByCampagna(@org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull
     java.lang.String masterId) {
         return null;
     }
     
-    public final void updateCampagnaPassword(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull()
-    java.lang.String masterId, @org.jetbrains.annotations.NotNull()
+    public final void updateCampagnaPassword(@org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull
+    java.lang.String masterId, @org.jetbrains.annotations.NotNull
     java.lang.String password) {
     }
     
-    public final void eliminaCampagna(@org.jetbrains.annotations.NotNull()
-    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull()
+    public final void eliminaCampagna(@org.jetbrains.annotations.NotNull
+    java.lang.String nomeCampagna, @org.jetbrains.annotations.NotNull
     java.lang.String masterId) {
     }
     
-    public final boolean isCurrentPlayerMaster(@org.jetbrains.annotations.NotNull()
+    public final boolean isCurrentPlayerMaster(@org.jetbrains.annotations.NotNull
     java.lang.String masterId) {
         return false;
     }

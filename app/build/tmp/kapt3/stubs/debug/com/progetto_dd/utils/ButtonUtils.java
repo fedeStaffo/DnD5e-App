@@ -6,13 +6,13 @@ import java.lang.System;
 public final class ButtonUtils {
     private final android.content.Context context = null;
     
-    public ButtonUtils(@org.jetbrains.annotations.NotNull()
+    public ButtonUtils(@org.jetbrains.annotations.NotNull
     android.content.Context context) {
         super();
     }
     
-    public final void updateButtonState(@org.jetbrains.annotations.NotNull()
-    android.widget.Button clickedButton, @org.jetbrains.annotations.NotNull()
+    public final void updateButtonState(@org.jetbrains.annotations.NotNull
+    android.widget.Button clickedButton, @org.jetbrains.annotations.NotNull
     java.util.List<? extends android.widget.Button> unclickedButtons) {
     }
 }

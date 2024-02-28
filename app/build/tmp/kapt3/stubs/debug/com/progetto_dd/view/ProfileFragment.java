@@ -15,46 +15,46 @@ public final class ProfileFragment extends androidx.fragment.app.Fragment {
         return null;
     }
     
-    @org.jetbrains.annotations.Nullable()
-    @java.lang.Override()
-    public android.view.View onCreateView(@org.jetbrains.annotations.NotNull()
-    android.view.LayoutInflater inflater, @org.jetbrains.annotations.Nullable()
-    android.view.ViewGroup container, @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
+    @java.lang.Override
+    public android.view.View onCreateView(@org.jetbrains.annotations.NotNull
+    android.view.LayoutInflater inflater, @org.jetbrains.annotations.Nullable
+    android.view.ViewGroup container, @org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
         return null;
     }
     
-    @java.lang.Override()
-    public void onViewCreated(@org.jetbrains.annotations.NotNull()
-    android.view.View view, @org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    public void onViewCreated(@org.jetbrains.annotations.NotNull
+    android.view.View view, @org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public void onDestroyView() {
     }
     
-    public final void getCountOfCharactersForCurrentUser(@org.jetbrains.annotations.NotNull()
-    java.lang.String userId, @org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function1<? super java.lang.Integer, kotlin.Unit> onSuccess, @org.jetbrains.annotations.NotNull()
+    public final void getCountOfCharactersForCurrentUser(@org.jetbrains.annotations.NotNull
+    java.lang.String userId, @org.jetbrains.annotations.NotNull
+    kotlin.jvm.functions.Function1<? super java.lang.Integer, kotlin.Unit> onSuccess, @org.jetbrains.annotations.NotNull
     kotlin.jvm.functions.Function1<? super java.lang.Exception, kotlin.Unit> onFailure) {
     }
     
-    public final void countMostFrequentRaceForUser(@org.jetbrains.annotations.NotNull()
-    java.lang.String userId, @org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function1<? super java.lang.String, kotlin.Unit> onSuccess, @org.jetbrains.annotations.NotNull()
+    public final void countMostFrequentRaceForUser(@org.jetbrains.annotations.NotNull
+    java.lang.String userId, @org.jetbrains.annotations.NotNull
+    kotlin.jvm.functions.Function1<? super java.lang.String, kotlin.Unit> onSuccess, @org.jetbrains.annotations.NotNull
     kotlin.jvm.functions.Function1<? super java.lang.Exception, kotlin.Unit> onFailure) {
     }
     
-    public final void countMostFrequentClassForUser(@org.jetbrains.annotations.NotNull()
-    java.lang.String userId, @org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function1<? super java.lang.String, kotlin.Unit> onSuccess, @org.jetbrains.annotations.NotNull()
+    public final void countMostFrequentClassForUser(@org.jetbrains.annotations.NotNull
+    java.lang.String userId, @org.jetbrains.annotations.NotNull
+    kotlin.jvm.functions.Function1<? super java.lang.String, kotlin.Unit> onSuccess, @org.jetbrains.annotations.NotNull
     kotlin.jvm.functions.Function1<? super java.lang.Exception, kotlin.Unit> onFailure) {
     }
     
-    public final void countOccurrencesOfUserId(@org.jetbrains.annotations.NotNull()
-    java.lang.String userId, @org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function1<? super java.lang.Integer, kotlin.Unit> onSuccess, @org.jetbrains.annotations.NotNull()
+    public final void countOccurrencesOfUserId(@org.jetbrains.annotations.NotNull
+    java.lang.String userId, @org.jetbrains.annotations.NotNull
+    kotlin.jvm.functions.Function1<? super java.lang.Integer, kotlin.Unit> onSuccess, @org.jetbrains.annotations.NotNull
     kotlin.jvm.functions.Function1<? super java.lang.Exception, kotlin.Unit> onFailure) {
     }
 }

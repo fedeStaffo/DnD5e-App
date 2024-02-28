@@ -7,24 +7,24 @@ public final class PersonaggioAdapter extends androidx.recyclerview.widget.Recyc
     private final java.util.List<com.progetto_dd.memory.personaggio.Personaggio> personaggi = null;
     private final com.google.firebase.auth.FirebaseUser currentUser = null;
     
-    public PersonaggioAdapter(@org.jetbrains.annotations.NotNull()
+    public PersonaggioAdapter(@org.jetbrains.annotations.NotNull
     java.util.List<com.progetto_dd.memory.personaggio.Personaggio> personaggi) {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
-    public com.progetto_dd.memory.personaggio.PersonaggioAdapter.PersonaggioViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
+    public com.progetto_dd.memory.personaggio.PersonaggioAdapter.PersonaggioViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull
     android.view.ViewGroup parent, int viewType) {
         return null;
     }
     
-    @java.lang.Override()
-    public void onBindViewHolder(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onBindViewHolder(@org.jetbrains.annotations.NotNull
     com.progetto_dd.memory.personaggio.PersonaggioAdapter.PersonaggioViewHolder holder, int position) {
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public int getItemCount() {
         return 0;
     }
@@ -35,12 +35,12 @@ public final class PersonaggioAdapter extends androidx.recyclerview.widget.Recyc
         private final android.widget.TextView raceTextView = null;
         private final android.widget.TextView classTextView = null;
         
-        public PersonaggioViewHolder(@org.jetbrains.annotations.NotNull()
+        public PersonaggioViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
             super(null);
         }
         
-        public final void bind(@org.jetbrains.annotations.NotNull()
+        public final void bind(@org.jetbrains.annotations.NotNull
         com.progetto_dd.memory.personaggio.Personaggio personaggio) {
         }
     }

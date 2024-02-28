@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -32,13 +33,40 @@ public final class FragmentSessionDetailsBinding implements ViewBinding {
   @NonNull
   public final Button eliminaSessione;
 
+  @NonNull
+  public final Button modificaDescrizioneButton;
+
+  @NonNull
+  public final EditText modificaDescrizioneEdittext;
+
+  @NonNull
+  public final Button modificaGiornoButton;
+
+  @NonNull
+  public final EditText modificaGiornoEdittext;
+
+  @NonNull
+  public final Button salvaDescrizioneButton;
+
+  @NonNull
+  public final Button salvaGiornoButton;
+
   private FragmentSessionDetailsBinding(@NonNull ScrollView rootView, @NonNull TextView Descrizione,
-      @NonNull TextView Giorno, @NonNull TextView Numero, @NonNull Button eliminaSessione) {
+      @NonNull TextView Giorno, @NonNull TextView Numero, @NonNull Button eliminaSessione,
+      @NonNull Button modificaDescrizioneButton, @NonNull EditText modificaDescrizioneEdittext,
+      @NonNull Button modificaGiornoButton, @NonNull EditText modificaGiornoEdittext,
+      @NonNull Button salvaDescrizioneButton, @NonNull Button salvaGiornoButton) {
     this.rootView = rootView;
     this.Descrizione = Descrizione;
     this.Giorno = Giorno;
     this.Numero = Numero;
     this.eliminaSessione = eliminaSessione;
+    this.modificaDescrizioneButton = modificaDescrizioneButton;
+    this.modificaDescrizioneEdittext = modificaDescrizioneEdittext;
+    this.modificaGiornoButton = modificaGiornoButton;
+    this.modificaGiornoEdittext = modificaGiornoEdittext;
+    this.salvaDescrizioneButton = salvaDescrizioneButton;
+    this.salvaGiornoButton = salvaGiornoButton;
   }
 
   @Override
@@ -92,8 +120,45 @@ public final class FragmentSessionDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.modifica_descrizione_button;
+      Button modificaDescrizioneButton = ViewBindings.findChildViewById(rootView, id);
+      if (modificaDescrizioneButton == null) {
+        break missingId;
+      }
+
+      id = R.id.modifica_descrizione_edittext;
+      EditText modificaDescrizioneEdittext = ViewBindings.findChildViewById(rootView, id);
+      if (modificaDescrizioneEdittext == null) {
+        break missingId;
+      }
+
+      id = R.id.modifica_giorno_button;
+      Button modificaGiornoButton = ViewBindings.findChildViewById(rootView, id);
+      if (modificaGiornoButton == null) {
+        break missingId;
+      }
+
+      id = R.id.modifica_giorno_edittext;
+      EditText modificaGiornoEdittext = ViewBindings.findChildViewById(rootView, id);
+      if (modificaGiornoEdittext == null) {
+        break missingId;
+      }
+
+      id = R.id.salva_descrizione_button;
+      Button salvaDescrizioneButton = ViewBindings.findChildViewById(rootView, id);
+      if (salvaDescrizioneButton == null) {
+        break missingId;
+      }
+
+      id = R.id.salva_giorno_button;
+      Button salvaGiornoButton = ViewBindings.findChildViewById(rootView, id);
+      if (salvaGiornoButton == null) {
+        break missingId;
+      }
+
       return new FragmentSessionDetailsBinding((ScrollView) rootView, Descrizione, Giorno, Numero,
-          eliminaSessione);
+          eliminaSessione, modificaDescrizioneButton, modificaDescrizioneEdittext,
+          modificaGiornoButton, modificaGiornoEdittext, salvaDescrizioneButton, salvaGiornoButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

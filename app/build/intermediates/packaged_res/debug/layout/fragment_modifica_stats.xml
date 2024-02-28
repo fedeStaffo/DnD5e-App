@@ -3,383 +3,1016 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/macaroon"
-    tools:context=".view.characters.visualizza.ModificaStatsFragment"
-    android:padding="16dp">
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".view.characters.visualizza.ModificaStatsFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@color/white">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/caratteritiche"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="0dp"
+            android:text="@string/modifica_le_caratteristiche"
+            android:textAlignment="center"
+            android:textColor="@color/rosso"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/livello2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:text="@string/punti_nferita_max"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/caratteritiche" />
 
-            <EditText
-                android:id="@+id/editTextLivello"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/buttonSalvaLivello"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-
-        </LinearLayout>
-
-        <!--Punti ferita massimi-->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/livello_"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/caratteritiche" />
 
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/punti_ferita_massimi" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:text="@string/classe_narmatura"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/caratteritiche" />
 
-            <EditText
-                android:id="@+id/editTextVitaMassima"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/buttonSalvaVitaMassima"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-
-        </LinearLayout>
-
-        <!--Punti ferita attuali-->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/bonusCompetenza"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@drawable/oval"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/punti_ferita_attuali" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/puntiFerita"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="0dp"
+            android:background="@drawable/esagono"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <EditText
-                android:id="@+id/editTextVitaAttuale"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/buttonSalvaVitaAttuale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-
-        </LinearLayout>
-
-        <!-- Classe Armatura -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/classeArmatura"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="0dp"
+            android:background="@drawable/pentagono"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/classe_armatura_punti" />
+        <TextView
+            android:id="@+id/modificatoreForza"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/quadrato"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rettangolo_blu"
+            android:text="@string/forza_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
+            app:layout_constraintTop_toBottomOf="@+id/puntiFerita" />
 
-            <EditText
-                android:id="@+id/editTextClasseArmatura"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
+        <RadioButton
+            android:id="@+id/RadioTSforza"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-            <Button
-                android:id="@+id/buttonSalvaClasseArmatura"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
+        <TextView
+            android:id="@+id/TSforza"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioTSforza"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        </LinearLayout>
+        <RadioButton
+            android:id="@+id/RadioCAtletica"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreForza"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        <!--Forza-->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/RadioMAtletica"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCAtletica"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTSforza"/>
+
+        <TextView
+            android:id="@+id/AtleticaText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/atletica"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMAtletica"
+            app:layout_constraintTop_toBottomOf="@+id/TSforza" />
+
+        <TextView
+            android:id="@+id/modificatoreDestrezza"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/quadrato"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AtleticaText" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rettangolo_blu"
+            android:text="@string/destrezza_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/AtleticaText" />
 
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/forza2" />
+        <RadioButton
+            android:id="@+id/RadioTSdestrezza"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/TSdestrezza"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioTSdestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/RadioCAcrobazia"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTSdestrezza" />
+
+        <RadioButton
+            android:id="@+id/RadioMAcrobazia"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCAcrobazia"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTSdestrezza"/>
+
+        <TextView
+            android:id="@+id/AcrobaziaText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/acrobazia"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMAcrobazia"
+            app:layout_constraintTop_toBottomOf="@+id/TSdestrezza" />
+
+        <RadioButton
+            android:id="@+id/RadioCFurtività"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCAcrobazia" />
+
+        <RadioButton
+            android:id="@+id/RadioMFurtività"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCFurtività"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMAcrobazia"/>
+
+        <TextView
+            android:id="@+id/FurtivitàText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/furtivit"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMFurtività"
+            app:layout_constraintTop_toBottomOf="@+id/AcrobaziaText" />
+
+        <RadioButton
+            android:id="@+id/RadioCRapidità"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreDestrezza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCFurtività" />
+
+        <RadioButton
+            android:id="@+id/RadioMRapidità"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCRapidità"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMFurtività"/>
+
+        <TextView
+            android:id="@+id/RapiditàText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/rapidit_di_mano"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMRapidità"
+            app:layout_constraintTop_toBottomOf="@+id/FurtivitàText" />
+
+        <TextView
+            android:id="@+id/modificatoreCostituzione"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/quadrato"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rettangolo_blu"
+            android:text="@string/costituzione_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
+            app:layout_constraintTop_toBottomOf="@+id/RapiditàText" />
 
-            <EditText
-                android:id="@+id/editTextForza"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
+        <RadioButton
+            android:id="@+id/RadioTScostituzione"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCostituzione"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-            <Button
-                android:id="@+id/buttonSalvaForza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/TScostituzione"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioTScostituzione"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-        <!--Destrezza-->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/modificatoreIntelligenza"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/quadrato"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modificatoreCostituzione" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rettangolo_blu"
+            android:text="@string/intelligenza_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/modificatoreCostituzione" />
 
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/destrezza2" />
+        <RadioButton
+            android:id="@+id/RadioTSintelligenza"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/TSintelligenza"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioTSintelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/RadioCArcano"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTSintelligenza" />
+
+        <RadioButton
+            android:id="@+id/RadioMArcano"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCArcano"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTSintelligenza"/>
+
+        <TextView
+            android:id="@+id/ArcanoText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/arcano"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMArcano"
+            app:layout_constraintTop_toBottomOf="@+id/TSintelligenza" />
+
+        <RadioButton
+            android:id="@+id/RadioCIndagare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCArcano" />
+
+        <RadioButton
+            android:id="@+id/RadioMIndagare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCIndagare"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMArcano"/>
+
+        <TextView
+            android:id="@+id/IndagareText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/indagare"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMIndagare"
+            app:layout_constraintTop_toBottomOf="@+id/ArcanoText" />
+
+        <RadioButton
+            android:id="@+id/RadioCNatura"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCIndagare" />
+
+        <RadioButton
+            android:id="@+id/RadioMNatura"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCNatura"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMIndagare"/>
+
+        <TextView
+            android:id="@+id/NaturaText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/natura"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMNatura"
+            app:layout_constraintTop_toBottomOf="@+id/IndagareText" />
+
+        <RadioButton
+            android:id="@+id/RadioCReligione"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCNatura" />
+
+        <RadioButton
+            android:id="@+id/RadioMReligione"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCReligione"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMNatura"/>
+
+        <TextView
+            android:id="@+id/ReligioneText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/religione"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMReligione"
+            app:layout_constraintTop_toBottomOf="@+id/NaturaText" />
+
+        <RadioButton
+            android:id="@+id/RadioCStoria"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreIntelligenza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCReligione" />
+
+        <RadioButton
+            android:id="@+id/RadioMStoria"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCStoria"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMReligione"/>
+
+        <TextView
+            android:id="@+id/StoriaText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/storia2"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMStoria"
+            app:layout_constraintTop_toBottomOf="@+id/ReligioneText" />
+
+        <TextView
+            android:id="@+id/modificatoreSaggezza"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/quadrato"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StoriaText" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rettangolo_blu"
+            android:text="@string/saggezza_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/StoriaText" />
 
-            <EditText
-                android:id="@+id/editTextDestrezza"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
+        <RadioButton
+            android:id="@+id/RadioTSsaggezza"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-            <Button
-                android:id="@+id/buttonSalvaDestrezza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/TSsaggezza"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioTSsaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-        <!--Costituzione-->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/RadioCAddestrare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTSsaggezza" />
+
+        <RadioButton
+            android:id="@+id/RadioMAddestrare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCAddestrare"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTSsaggezza"/>
+
+        <TextView
+            android:id="@+id/AddestrareText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/addestrare_animali"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMAddestrare"
+            app:layout_constraintTop_toBottomOf="@+id/TSsaggezza" />
+
+        <RadioButton
+            android:id="@+id/RadioCIntuizione"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCAddestrare" />
+
+        <RadioButton
+            android:id="@+id/RadioMIntuizione"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCIntuizione"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMAddestrare"/>
+
+        <TextView
+            android:id="@+id/IntuizioneText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/intuizione"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMIntuizione"
+            app:layout_constraintTop_toBottomOf="@+id/AddestrareText" />
+
+        <RadioButton
+            android:id="@+id/RadioCMedicina"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCIntuizione" />
+
+        <RadioButton
+            android:id="@+id/RadioMMedicina"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCMedicina"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMIntuizione"/>
+
+        <TextView
+            android:id="@+id/MedicinaText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/medicina"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMMedicina"
+            app:layout_constraintTop_toBottomOf="@+id/IntuizioneText" />
+
+        <RadioButton
+            android:id="@+id/RadioCPercepire"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCMedicina" />
+
+        <RadioButton
+            android:id="@+id/RadioMPercepire"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCPercepire"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMMedicina"/>
+
+        <TextView
+            android:id="@+id/PercepireText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/percepire"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMPercepire"
+            app:layout_constraintTop_toBottomOf="@+id/MedicinaText" />
+
+        <RadioButton
+            android:id="@+id/RadioCSopravvivenza"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreSaggezza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCPercepire" />
+
+        <RadioButton
+            android:id="@+id/RadioMSopravvivenza"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCSopravvivenza"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMPercepire"/>
+
+        <TextView
+            android:id="@+id/SopravvivenzaText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/sopravvivenza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMSopravvivenza"
+            app:layout_constraintTop_toBottomOf="@+id/PercepireText" />
+
+        <TextView
+            android:id="@+id/modificatoreCarisma"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/quadrato"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SopravvivenzaText" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rettangolo_blu"
+            android:text="@string/carisma_title"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/SopravvivenzaText" />
 
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/costituzione2" />
+        <RadioButton
+            android:id="@+id/RadioTScarisma"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/TScarisma"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:text="@string/tiro_salvezza"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioTScarisma"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/RadioCIntimidire"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTScarisma" />
+
+        <RadioButton
+            android:id="@+id/RadioMIntimidire"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCIntimidire"
+            app:layout_constraintTop_toBottomOf="@+id/RadioTScarisma"/>
+
+        <TextView
+            android:id="@+id/IntimidireText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/intimidire"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMIntimidire"
+            app:layout_constraintTop_toBottomOf="@+id/TScarisma" />
+
+        <RadioButton
+            android:id="@+id/RadioCInganno"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCIntimidire" />
+
+        <RadioButton
+            android:id="@+id/RadioMInganno"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCInganno"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMIntimidire"/>
+
+        <TextView
+            android:id="@+id/IngannoText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/inganno"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMInganno"
+            app:layout_constraintTop_toBottomOf="@+id/IntimidireText" />
+
+        <RadioButton
+            android:id="@+id/RadioCIntrattenere"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCInganno" />
+
+        <RadioButton
+            android:id="@+id/RadioMIntrattenere"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCIntrattenere"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMInganno"/>
+
+        <TextView
+            android:id="@+id/IntrattenereText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/intrattenere"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMIntrattenere"
+            app:layout_constraintTop_toBottomOf="@+id/IngannoText" />
+
+        <RadioButton
+            android:id="@+id/RadioCPersuasione"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/modificatoreCarisma"
+            app:layout_constraintTop_toBottomOf="@+id/RadioCIntrattenere" />
+
+        <RadioButton
+            android:id="@+id/RadioMPersuasione"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toEndOf="@+id/RadioCPersuasione"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMIntrattenere"/>
+
+        <TextView
+            android:id="@+id/PersuasioneText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/persuasione"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RadioMPersuasione"
+            app:layout_constraintTop_toBottomOf="@+id/IntrattenereText" />
+
+
+        <Button
+            android:id="@+id/btn_salva_modifiche"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editTextCostituzione"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/buttonSalvaCostituzione"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-        </LinearLayout>
-
-        <!--Intelligenza-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/intelligenza2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editTextIntelligenza"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/buttonSalvaIntelligenza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-        </LinearLayout>
-
-        <!--Saggezza-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/saggezza2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editTextSaggezza"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/buttonSalvaSaggezza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-        </LinearLayout>
-
-        <!--Carisma-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/carisma2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editTextCarisma"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <Button
-                android:id="@+id/buttonSalvaCarisma"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-        </LinearLayout>
-
-        <!-- Status -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/status2" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Spinner
-                android:id="@+id/spinnerStatus"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/status"/>
-
-            <Button
-                android:id="@+id/buttonSalvaStatus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salva_bottone" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+            android:layout_marginTop="30dp"
+            android:text="@string/salva_nmodifiche"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RadioMPersuasione" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

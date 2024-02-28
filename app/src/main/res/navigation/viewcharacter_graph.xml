@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_statsFragment_to_modificaStatsFragment"
             app:destination="@id/modificaStatsFragment" />
+        <action
+            android:id="@+id/action_statsFragment_to_dadoFragment3"
+            app:destination="@id/dadoFragment3" />
     </fragment>
     <fragment
         android:id="@+id/statsClasseRazzaFragment"
@@ -27,9 +30,6 @@
         <action
             android:id="@+id/action_statsBackFragment_to_modificaBackgroundFragment"
             app:destination="@id/modificaBackgroundFragment" />
-        <action
-            android:id="@+id/action_statsBackFragment_to_dadoFragment3"
-            app:destination="@id/dadoFragment3" />
     </fragment>
     <fragment
         android:id="@+id/magieFragment"

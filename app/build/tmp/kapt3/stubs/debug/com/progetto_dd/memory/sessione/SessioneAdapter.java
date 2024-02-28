@@ -6,24 +6,24 @@ import java.lang.System;
 public final class SessioneAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<com.progetto_dd.memory.sessione.SessioneAdapter.SessioneViewHolder> {
     private final java.util.List<com.progetto_dd.memory.sessione.Sessione> sessione = null;
     
-    public SessioneAdapter(@org.jetbrains.annotations.NotNull()
+    public SessioneAdapter(@org.jetbrains.annotations.NotNull
     java.util.List<com.progetto_dd.memory.sessione.Sessione> sessione) {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
-    public com.progetto_dd.memory.sessione.SessioneAdapter.SessioneViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
+    public com.progetto_dd.memory.sessione.SessioneAdapter.SessioneViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull
     android.view.ViewGroup parent, int viewType) {
         return null;
     }
     
-    @java.lang.Override()
-    public void onBindViewHolder(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onBindViewHolder(@org.jetbrains.annotations.NotNull
     com.progetto_dd.memory.sessione.SessioneAdapter.SessioneViewHolder holder, int position) {
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public int getItemCount() {
         return 0;
     }
@@ -36,12 +36,12 @@ public final class SessioneAdapter extends androidx.recyclerview.widget.Recycler
         private final android.widget.TextView numeroTextView = null;
         private final android.widget.TextView giornoTextView = null;
         
-        public SessioneViewHolder(@org.jetbrains.annotations.NotNull()
+        public SessioneViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
             super(null);
         }
         
-        public final void bind(@org.jetbrains.annotations.NotNull()
+        public final void bind(@org.jetbrains.annotations.NotNull
         com.progetto_dd.memory.sessione.Sessione sessione) {
         }
     }

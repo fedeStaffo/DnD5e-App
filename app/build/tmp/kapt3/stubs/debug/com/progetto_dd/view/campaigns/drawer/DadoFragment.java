@@ -10,11 +10,11 @@ public final class DadoFragment extends androidx.fragment.app.Fragment {
         super();
     }
     
-    @org.jetbrains.annotations.Nullable()
-    @java.lang.Override()
-    public android.view.View onCreateView(@org.jetbrains.annotations.NotNull()
-    android.view.LayoutInflater inflater, @org.jetbrains.annotations.Nullable()
-    android.view.ViewGroup container, @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
+    @java.lang.Override
+    public android.view.View onCreateView(@org.jetbrains.annotations.NotNull
+    android.view.LayoutInflater inflater, @org.jetbrains.annotations.Nullable
+    android.view.ViewGroup container, @org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
         return null;
     }
@@ -34,13 +34,13 @@ public final class DadoFragment extends androidx.fragment.app.Fragment {
     private final void onRollClick() {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<java.lang.Integer> rollDice(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<java.lang.Integer> rollDice(@org.jetbrains.annotations.NotNull
     java.lang.String diceString) {
         return null;
     }
     
-    public final int valutaEspressione(@org.jetbrains.annotations.NotNull()
+    public final int valutaEspressione(@org.jetbrains.annotations.NotNull
     java.lang.String string) {
         return 0;
     }
@@ -48,13 +48,13 @@ public final class DadoFragment extends androidx.fragment.app.Fragment {
     private final void showNumericResult(int result, java.lang.String string) {
     }
     
-    public final void showRollResultNoModificatore(@org.jetbrains.annotations.NotNull()
-    java.util.List<java.lang.Integer> results, @org.jetbrains.annotations.NotNull()
+    public final void showRollResultNoModificatore(@org.jetbrains.annotations.NotNull
+    java.util.List<java.lang.Integer> results, @org.jetbrains.annotations.NotNull
     java.lang.String string) {
     }
     
-    public final void showRollResultWithModificatore(@org.jetbrains.annotations.NotNull()
-    java.util.List<java.lang.Integer> results, @org.jetbrains.annotations.NotNull()
+    public final void showRollResultWithModificatore(@org.jetbrains.annotations.NotNull
+    java.util.List<java.lang.Integer> results, @org.jetbrains.annotations.NotNull
     java.lang.String string, int p2_52215) {
     }
 }

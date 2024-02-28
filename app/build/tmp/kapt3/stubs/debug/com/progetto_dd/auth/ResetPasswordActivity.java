@@ -10,8 +10,8 @@ public final class ResetPasswordActivity extends androidx.appcompat.app.AppCompa
         super();
     }
     
-    @java.lang.Override()
-    protected void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
 }

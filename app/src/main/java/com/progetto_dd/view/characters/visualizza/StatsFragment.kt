@@ -57,8 +57,8 @@ class StatsFragment : Fragment() {
         val intelligenza = intent.getStringExtra("intelligenza")
         val carisma = intent.getStringExtra("carisma")
         val saggezza = intent.getStringExtra("saggezza")
+        val linguaggi = intent.getStringArrayListExtra("linguaggi") ?: ArrayList()
         val competenze = intent.getStringArrayListExtra("competenze")
-        val linguaggi = intent.getStringArrayListExtra("linguaggi")
         val maestrie = intent.getStringArrayListExtra("maestrie")
         val competenzeEscluse = setOf("Atletica", "Acrobazia", "Rapidità di mano", "Furtività", "Arcano", "Indagare", "Natura", "Religione", "Storia",
                                       "Addestrare Animali", "Intuizione", "Medicina", "Percezione", "Sopravvivenza", "Intimidire", "Inganno", "Intrattenere", "Persuasione")
@@ -90,10 +90,6 @@ class StatsFragment : Fragment() {
             binding.modificatoreIntelligenza.text = getModificatore(intelligenza.toInt()).toString()
         }
 
-        // Visualizza la lista di competenze
-        /*if (competenze != null) {
-            binding.listaCompetenze.text = competenze.joinToString(separator = ",\n")
-        }*/
 
         // Calcola e visualizza il bonus di competenza
         if (livello != null) {
@@ -155,61 +151,135 @@ class StatsFragment : Fragment() {
             if (competenzeList.contains("Persuasione")) { binding.CPersuasionefalse.visibility = View.INVISIBLE
             } else { binding.CPersuasionetrue.visibility = View.INVISIBLE }
         }
+        if (maestrie != null) {
+            maestrie?.let { maestrieList ->
+                if (maestrieList.contains("Atletica")) {
+                    binding.MAtleticafalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MAtleticatrue.visibility = View.INVISIBLE
+                }
 
-        maestrie?.let {maestrieList ->
-            if (maestrieList.contains("Atletica")) { binding.MAtleticafalse.visibility = View.INVISIBLE
-            } else { binding.MAtleticatrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Acrobazia")) {
+                    binding.MAcrobaziafalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MAcrobaziatrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Acrobazia")) { binding.MAcrobaziafalse.visibility = View.INVISIBLE
-            } else { binding.MAcrobaziatrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Rapidità di mano")) {
+                    binding.MRapiditfalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MRapidittrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Rapidità di mano")) { binding.MRapiditfalse.visibility = View.INVISIBLE
-            } else { binding.MRapidittrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Furtività")) {
+                    binding.MFurtivitfalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MFurtivittrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Furtività")) { binding.MFurtivitfalse.visibility = View.INVISIBLE
-            } else { binding.MFurtivittrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Arcano")) {
+                    binding.MArcanofalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MArcanotrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Arcano")) { binding.MArcanofalse.visibility = View.INVISIBLE
-            } else { binding.MArcanotrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Indagare")) {
+                    binding.MIndagarefalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MIndagaretrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Indagare")) { binding.MIndagarefalse.visibility = View.INVISIBLE
-            } else { binding.MIndagaretrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Natura")) {
+                    binding.MNaturafalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MNaturatrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Natura")) { binding.MNaturafalse.visibility = View.INVISIBLE
-            } else { binding.MNaturatrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Religione")) {
+                    binding.MReligionefalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MReligionetrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Religione")) { binding.MReligionefalse.visibility = View.INVISIBLE
-            } else { binding.MReligionetrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Storia")) {
+                    binding.MStoriafalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MStoriatrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Storia")) { binding.MStoriafalse.visibility = View.INVISIBLE
-            } else { binding.MStoriatrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Addestrare Animali")) {
+                    binding.MAddestrarefalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MAddestraretrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Addestrare Animali")) { binding.MAddestrarefalse.visibility = View.INVISIBLE
-            } else { binding.MAddestraretrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Intuizione")) {
+                    binding.MIntuizionefalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MIntuizionetrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Intuizione")) { binding.MIntuizionefalse.visibility = View.INVISIBLE
-            } else { binding.MIntuizionetrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Medicina")) {
+                    binding.MMedicinafalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MMedicinatrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Medicina")) { binding.MMedicinafalse.visibility = View.INVISIBLE
-            } else { binding.MMedicinatrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Percezione")) {
+                    binding.MPercepirefalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MPercepiretrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Percezione")) { binding.MPercepirefalse.visibility = View.INVISIBLE
-            } else { binding.MPercepiretrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Sopravvivenza")) {
+                    binding.MSopravvivenzafalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MSopravvivenzatrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Sopravvivenza")) { binding.MSopravvivenzafalse.visibility = View.INVISIBLE
-            } else { binding.MSopravvivenzatrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Intimidire")) {
+                    binding.MIntimidirefalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MIntimidiretrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Intimidire")) { binding.MIntimidirefalse.visibility = View.INVISIBLE
-            } else { binding.MIntimidiretrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Inganno")) {
+                    binding.MIngannofalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MIngannotrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Inganno")) { binding.MIngannofalse.visibility = View.INVISIBLE
-            } else { binding.MIngannotrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Intrattenere")) {
+                    binding.MIntrattenerefalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MIntratteneretrue.visibility = View.INVISIBLE
+                }
 
-            if (maestrieList.contains("Intrattenere")) { binding.MIntrattenerefalse.visibility = View.INVISIBLE
-            } else { binding.MIntratteneretrue.visibility = View.INVISIBLE }
-
-            if (maestrieList.contains("Persuasione")) { binding.MPersuasionefalse.visibility = View.INVISIBLE
-            } else { binding.MPersuasionetrue.visibility = View.INVISIBLE }
+                if (maestrieList.contains("Persuasione")) {
+                    binding.MPersuasionefalse.visibility = View.INVISIBLE
+                } else {
+                    binding.MPersuasionetrue.visibility = View.INVISIBLE
+                }
+            }
+        }else{
+            binding.MAtleticatrue.visibility = View.INVISIBLE
+            binding.MAcrobaziatrue.visibility = View.INVISIBLE
+            binding.MRapidittrue.visibility = View.INVISIBLE
+            binding.MFurtivittrue.visibility = View.INVISIBLE
+            binding.MArcanotrue.visibility = View.INVISIBLE
+            binding.MIndagaretrue.visibility = View.INVISIBLE
+            binding.MNaturatrue.visibility = View.INVISIBLE
+            binding.MReligionetrue.visibility = View.INVISIBLE
+            binding.MStoriatrue.visibility = View.INVISIBLE
+            binding.MAddestraretrue.visibility = View.INVISIBLE
+            binding.MIntuizionetrue.visibility = View.INVISIBLE
+            binding.MMedicinatrue.visibility = View.INVISIBLE
+            binding.MPercepiretrue.visibility = View.INVISIBLE
+            binding.MSopravvivenzatrue.visibility = View.INVISIBLE
+            binding.MIntimidiretrue.visibility = View.INVISIBLE
+            binding.MIngannotrue.visibility = View.INVISIBLE
+            binding.MIntratteneretrue.visibility = View.INVISIBLE
+            binding.MPersuasionetrue.visibility = View.INVISIBLE
         }
 
         // Imposta i tiri salvezza in base alla classe
@@ -353,33 +423,32 @@ class StatsFragment : Fragment() {
 
         //Naviga alla schermata del dado
         binding.btnDado.setOnClickListener {
-            findNavController().navigate(R.id.action_statsBackFragment_to_dadoFragment3)
+            findNavController().navigate(R.id.action_statsFragment_to_dadoFragment3)
         }
 
         binding.btnCompetenzeExtra.setOnClickListener {
             var n = 1
             val competenzeExtraMessage = buildString {
-                append("Le mie competenze extra sono:\n\n")
-                competenzeMostrate.forEachIndexed { index, competenza ->
-                    append("$n - $competenza")
-                    if (index < competenzeMostrate.size - 1) {
-                        append("\n")
-                        n += 1
-                    }
-                }
-                if (linguaggi != null) {
-                    n = 1
-                    append("\n")
-                    append("I miei linguaggi sono:")
-
-                    linguaggi.forEachIndexed { index, linguaggi ->
-                        append("$n - $linguaggi")
+                if(linguaggi.size ==0){
+                    append("Le mie competenze extra sono:\n\n")
+                    competenzeMostrate.forEachIndexed { index, competenza ->
+                        append("$n - $competenza")
                         if (index < competenzeMostrate.size - 1) {
                             append("\n")
                             n += 1
                         }
                     }
-                }
+                    n = 1
+                    append("\n\n")
+                    append("I miei linguaggi sono:\n\n")
+                    linguaggi.forEachIndexed { index, linguaggio ->
+                        append("$n - $linguaggio")
+                        if (index < linguaggi.size - 1) {
+                            append("\n")
+                            n += 1
+                        }
+                    }
+                }else append(".......")
             }
                 // Creazione dell'AlertDialog
                 val builder = AlertDialog.Builder(requireContext())

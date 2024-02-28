@@ -9,24 +9,24 @@ public final class CharacterActivity extends androidx.appcompat.app.AppCompatAct
         super();
     }
     
-    @java.lang.Override()
-    protected void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
-    @java.lang.Override()
-    public boolean onCreateOptionsMenu(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    public boolean onCreateOptionsMenu(@org.jetbrains.annotations.Nullable
     android.view.Menu menu) {
         return false;
     }
     
-    @java.lang.Override()
-    public boolean onOptionsItemSelected(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public boolean onOptionsItemSelected(@org.jetbrains.annotations.NotNull
     android.view.MenuItem item) {
         return false;
     }
     
-    public final void openMainActivityFromChar(@org.jetbrains.annotations.NotNull()
+    public final void openMainActivityFromChar(@org.jetbrains.annotations.NotNull
     android.view.MenuItem menuItem) {
     }
 }

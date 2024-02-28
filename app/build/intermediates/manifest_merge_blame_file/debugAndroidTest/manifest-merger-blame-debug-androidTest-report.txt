@@ -3,45 +3,45 @@
 3    package="com.progetto_dd.test" >
 4
 5    <uses-sdk
-5-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:5:5-74
+5-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:5:5-74
 6        android:minSdkVersion="24"
-6-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:5:15-41
+6-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:5:15-41
 7        android:targetSdkVersion="33" />
-7-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:5:42-71
+7-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:5:42-71
 8
 9    <instrumentation
-9-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:11:5-15:65
+9-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:11:5-15:65
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:11:22-76
+10-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:11:22-76
 11        android:functionalTest="false"
-11-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:14:22-52
+11-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:14:22-52
 12        android:handleProfiling="false"
-12-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:13:22-53
+12-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:13:22-53
 13        android:label="Tests for com.progetto_dd"
-13-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:15:22-63
+13-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:15:22-63
 14        android:targetPackage="com.progetto_dd" />
-14-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:12:22-61
+14-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:12:22-61
 15
 16    <queries>
-16-->[androidx.test:runner:1.5.2] C:\Users\fede0\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:24:5-28:15
+16-->[androidx.test:runner:1.5.2] C:\Users\emsar\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:24:5-28:15
 17        <package android:name="androidx.test.orchestrator" />
-17-->[androidx.test:runner:1.5.2] C:\Users\fede0\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:25:9-62
-17-->[androidx.test:runner:1.5.2] C:\Users\fede0\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:25:18-59
+17-->[androidx.test:runner:1.5.2] C:\Users\emsar\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:25:9-62
+17-->[androidx.test:runner:1.5.2] C:\Users\emsar\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:25:18-59
 18        <package android:name="androidx.test.services" />
-18-->[androidx.test:runner:1.5.2] C:\Users\fede0\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:26:9-58
-18-->[androidx.test:runner:1.5.2] C:\Users\fede0\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:26:18-55
+18-->[androidx.test:runner:1.5.2] C:\Users\emsar\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:26:9-58
+18-->[androidx.test:runner:1.5.2] C:\Users\emsar\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:26:18-55
 19        <package android:name="com.google.android.apps.common.testing.services" />
-19-->[androidx.test:runner:1.5.2] C:\Users\fede0\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:27:9-83
-19-->[androidx.test:runner:1.5.2] C:\Users\fede0\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:27:18-80
+19-->[androidx.test:runner:1.5.2] C:\Users\emsar\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:27:9-83
+19-->[androidx.test:runner:1.5.2] C:\Users\emsar\.gradle\caches\transforms-3\e108442bf31de0ad53dd40e380502047\transformed\runner-1.5.2\AndroidManifest.xml:27:18-80
 20    </queries>
 21
 22    <application
-22-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:7:5-9:19
+22-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:7:5-9:19
 23        android:debuggable="true"
 24        android:extractNativeLibs="false" >
 25        <uses-library android:name="android.test.runner" />
-25-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:8:9-60
-25-->C:\Users\fede0\OneDrive\Desktop\esercizi e materiali\3 anno\programmazione mobile\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest15043392037299444281.xml:8:23-57
+25-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:8:9-60
+25-->C:\Users\emsar\OneDrive\Documenti\GitHub\Progetto-DnD\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest4787187425300509245.xml:8:23-57
 26    </application>
 27
 28</manifest>

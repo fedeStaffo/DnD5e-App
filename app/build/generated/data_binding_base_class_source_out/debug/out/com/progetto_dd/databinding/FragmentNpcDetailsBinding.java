@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,13 +34,40 @@ public final class FragmentNpcDetailsBinding implements ViewBinding {
   @NonNull
   public final Button eliminaNpc;
 
+  @NonNull
+  public final Button modificaDescrizioneButton;
+
+  @NonNull
+  public final EditText modificaDescrizioneEdittext;
+
+  @NonNull
+  public final Button modificaLegameButton;
+
+  @NonNull
+  public final Button salvaDescrizioneButton;
+
+  @NonNull
+  public final Button salvaLegameButton;
+
+  @NonNull
+  public final Spinner spinnerLegame;
+
   private FragmentNpcDetailsBinding(@NonNull ScrollView rootView, @NonNull TextView Descrizione,
-      @NonNull TextView Legame, @NonNull TextView Nome, @NonNull Button eliminaNpc) {
+      @NonNull TextView Legame, @NonNull TextView Nome, @NonNull Button eliminaNpc,
+      @NonNull Button modificaDescrizioneButton, @NonNull EditText modificaDescrizioneEdittext,
+      @NonNull Button modificaLegameButton, @NonNull Button salvaDescrizioneButton,
+      @NonNull Button salvaLegameButton, @NonNull Spinner spinnerLegame) {
     this.rootView = rootView;
     this.Descrizione = Descrizione;
     this.Legame = Legame;
     this.Nome = Nome;
     this.eliminaNpc = eliminaNpc;
+    this.modificaDescrizioneButton = modificaDescrizioneButton;
+    this.modificaDescrizioneEdittext = modificaDescrizioneEdittext;
+    this.modificaLegameButton = modificaLegameButton;
+    this.salvaDescrizioneButton = salvaDescrizioneButton;
+    this.salvaLegameButton = salvaLegameButton;
+    this.spinnerLegame = spinnerLegame;
   }
 
   @Override
@@ -92,8 +121,45 @@ public final class FragmentNpcDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.modificaDescrizioneButton;
+      Button modificaDescrizioneButton = ViewBindings.findChildViewById(rootView, id);
+      if (modificaDescrizioneButton == null) {
+        break missingId;
+      }
+
+      id = R.id.modificaDescrizioneEdittext;
+      EditText modificaDescrizioneEdittext = ViewBindings.findChildViewById(rootView, id);
+      if (modificaDescrizioneEdittext == null) {
+        break missingId;
+      }
+
+      id = R.id.modificaLegameButton;
+      Button modificaLegameButton = ViewBindings.findChildViewById(rootView, id);
+      if (modificaLegameButton == null) {
+        break missingId;
+      }
+
+      id = R.id.salvaDescrizioneButton;
+      Button salvaDescrizioneButton = ViewBindings.findChildViewById(rootView, id);
+      if (salvaDescrizioneButton == null) {
+        break missingId;
+      }
+
+      id = R.id.salvaLegameButton;
+      Button salvaLegameButton = ViewBindings.findChildViewById(rootView, id);
+      if (salvaLegameButton == null) {
+        break missingId;
+      }
+
+      id = R.id.spinnerLegame;
+      Spinner spinnerLegame = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerLegame == null) {
+        break missingId;
+      }
+
       return new FragmentNpcDetailsBinding((ScrollView) rootView, Descrizione, Legame, Nome,
-          eliminaNpc);
+          eliminaNpc, modificaDescrizioneButton, modificaDescrizioneEdittext, modificaLegameButton,
+          salvaDescrizioneButton, salvaLegameButton, spinnerLegame);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

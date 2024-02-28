@@ -5,12 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.textfield.TextInputEditText;
 import com.progetto_dd.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,28 +24,376 @@ public final class FragmentStatsBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final TextView bonusAttaccoIncantesimo;
+  public final FrameLayout A1;
+
+  @NonNull
+  public final FrameLayout A2;
+
+  @NonNull
+  public final FrameLayout A3;
+
+  @NonNull
+  public final FrameLayout A4;
+
+  @NonNull
+  public final FrameLayout A5;
+
+  @NonNull
+  public final TextView AcrobaziaText;
+
+  @NonNull
+  public final TextView AddestrareText;
+
+  @NonNull
+  public final TextView ArcanoText;
+
+  @NonNull
+  public final TextView AtleticaText;
+
+  @NonNull
+  public final TextView CAcrobaziafalse;
+
+  @NonNull
+  public final TextView CAcrobaziatrue;
+
+  @NonNull
+  public final TextView CAddestrarefalse;
+
+  @NonNull
+  public final TextView CAddestraretrue;
+
+  @NonNull
+  public final TextView CArcanofalse;
+
+  @NonNull
+  public final TextView CArcanotrue;
+
+  @NonNull
+  public final TextView CAtleticafalse;
+
+  @NonNull
+  public final TextView CAtleticatrue;
+
+  @NonNull
+  public final TextView CFurtivitfalse;
+
+  @NonNull
+  public final TextView CFurtivittrue;
+
+  @NonNull
+  public final TextView CIndagarefalse;
+
+  @NonNull
+  public final TextView CIndagaretrue;
+
+  @NonNull
+  public final TextView CIngannofalse;
+
+  @NonNull
+  public final TextView CIngannotrue;
+
+  @NonNull
+  public final TextView CIntimidirefalse;
+
+  @NonNull
+  public final TextView CIntimidiretrue;
+
+  @NonNull
+  public final TextView CIntrattenerefalse;
+
+  @NonNull
+  public final TextView CIntratteneretrue;
+
+  @NonNull
+  public final TextView CIntuizionefalse;
+
+  @NonNull
+  public final TextView CIntuizionetrue;
+
+  @NonNull
+  public final TextView CMedicinafalse;
+
+  @NonNull
+  public final TextView CMedicinatrue;
+
+  @NonNull
+  public final TextView CNaturafalse;
+
+  @NonNull
+  public final TextView CNaturatrue;
+
+  @NonNull
+  public final TextView CPercepirefalse;
+
+  @NonNull
+  public final TextView CPercepiretrue;
+
+  @NonNull
+  public final TextView CPersuasionefalse;
+
+  @NonNull
+  public final TextView CPersuasionetrue;
+
+  @NonNull
+  public final TextView CRapiditfalse;
+
+  @NonNull
+  public final TextView CRapidittrue;
+
+  @NonNull
+  public final TextView CReligionefalse;
+
+  @NonNull
+  public final TextView CReligionetrue;
+
+  @NonNull
+  public final TextView CSopravvivenzafalse;
+
+  @NonNull
+  public final TextView CSopravvivenzatrue;
+
+  @NonNull
+  public final TextView CStoriafalse;
+
+  @NonNull
+  public final TextView CStoriatrue;
+
+  @NonNull
+  public final TextView FurtivitText;
+
+  @NonNull
+  public final TextView IndagareText;
+
+  @NonNull
+  public final TextView IngannoText;
+
+  @NonNull
+  public final TextView IntimidireText;
+
+  @NonNull
+  public final TextView IntrattenereText;
+
+  @NonNull
+  public final TextView IntuizioneText;
+
+  @NonNull
+  public final TextView MAcrobaziafalse;
+
+  @NonNull
+  public final TextView MAcrobaziatrue;
+
+  @NonNull
+  public final TextView MAddestrarefalse;
+
+  @NonNull
+  public final TextView MAddestraretrue;
+
+  @NonNull
+  public final TextView MArcanofalse;
+
+  @NonNull
+  public final TextView MArcanotrue;
+
+  @NonNull
+  public final TextView MAtleticafalse;
+
+  @NonNull
+  public final TextView MAtleticatrue;
+
+  @NonNull
+  public final TextView MFurtivitfalse;
+
+  @NonNull
+  public final TextView MFurtivittrue;
+
+  @NonNull
+  public final TextView MIndagarefalse;
+
+  @NonNull
+  public final TextView MIndagaretrue;
+
+  @NonNull
+  public final TextView MIngannofalse;
+
+  @NonNull
+  public final TextView MIngannotrue;
+
+  @NonNull
+  public final TextView MIntimidirefalse;
+
+  @NonNull
+  public final TextView MIntimidiretrue;
+
+  @NonNull
+  public final TextView MIntrattenerefalse;
+
+  @NonNull
+  public final TextView MIntratteneretrue;
+
+  @NonNull
+  public final TextView MIntuizionefalse;
+
+  @NonNull
+  public final TextView MIntuizionetrue;
+
+  @NonNull
+  public final TextView MMedicinafalse;
+
+  @NonNull
+  public final TextView MMedicinatrue;
+
+  @NonNull
+  public final TextView MNaturafalse;
+
+  @NonNull
+  public final TextView MNaturatrue;
+
+  @NonNull
+  public final TextView MPercepirefalse;
+
+  @NonNull
+  public final TextView MPercepiretrue;
+
+  @NonNull
+  public final TextView MPersuasionefalse;
+
+  @NonNull
+  public final TextView MPersuasionetrue;
+
+  @NonNull
+  public final TextView MRapiditfalse;
+
+  @NonNull
+  public final TextView MRapidittrue;
+
+  @NonNull
+  public final TextView MReligionefalse;
+
+  @NonNull
+  public final TextView MReligionetrue;
+
+  @NonNull
+  public final TextView MSopravvivenzafalse;
+
+  @NonNull
+  public final TextView MSopravvivenzatrue;
+
+  @NonNull
+  public final TextView MStoriafalse;
+
+  @NonNull
+  public final TextView MStoriatrue;
+
+  @NonNull
+  public final TextView MedicinaText;
+
+  @NonNull
+  public final TextView NaturaText;
+
+  @NonNull
+  public final TextView PercepireText;
+
+  @NonNull
+  public final TextView PersuasioneText;
+
+  @NonNull
+  public final TextView RapiditText;
+
+  @NonNull
+  public final TextView ReligioneText;
+
+  @NonNull
+  public final TextView SopravvivenzaText;
+
+  @NonNull
+  public final TextView StoriaText;
+
+  @NonNull
+  public final TextView TScarisma;
+
+  @NonNull
+  public final TextView TScarismafalse;
+
+  @NonNull
+  public final TextView TScarismatrue;
+
+  @NonNull
+  public final TextView TScostituzione;
+
+  @NonNull
+  public final TextView TScostituzionefalse;
+
+  @NonNull
+  public final TextView TScostituzionetrue;
+
+  @NonNull
+  public final TextView TSdestrezza;
+
+  @NonNull
+  public final TextView TSdestrezzafalse;
+
+  @NonNull
+  public final TextView TSdestrezzatrue;
+
+  @NonNull
+  public final TextView TSforza;
+
+  @NonNull
+  public final TextView TSforzafalse;
+
+  @NonNull
+  public final TextView TSforzatrue;
+
+  @NonNull
+  public final TextView TSintelligenza;
+
+  @NonNull
+  public final TextView TSintelligenzafalse;
+
+  @NonNull
+  public final TextView TSintelligenzatrue;
+
+  @NonNull
+  public final TextView TSsaggezza;
+
+  @NonNull
+  public final TextView TSsaggezzafalse;
+
+  @NonNull
+  public final TextView TSsaggezzatrue;
 
   @NonNull
   public final TextView bonusCompetenza;
 
   @NonNull
-  public final Button btnElimina;
+  public final Button bottoneMenoVita;
 
   @NonNull
-  public final Button btnModifica;
+  public final Button bottonePiuVita;
 
   @NonNull
-  public final TextView cdTiroSalvezzaMagia;
+  public final ImageView btnCompetenzeExtra;
+
+  @NonNull
+  public final ImageView btnDado;
+
+  @NonNull
+  public final ImageView btnDormire;
+
+  @NonNull
+  public final ImageView btnElimina;
+
+  @NonNull
+  public final ImageView btnModifica;
+
+  @NonNull
+  public final TextInputEditText cambiaVita;
 
   @NonNull
   public final TextView classe;
 
   @NonNull
   public final TextView classeArmatura;
-
-  @NonNull
-  public final TextView listaCompetenze;
 
   @NonNull
   public final TextView livello;
@@ -69,40 +420,255 @@ public final class FragmentStatsBinding implements ViewBinding {
   public final TextView nome;
 
   @NonNull
+  public final TextView puntiFerita;
+
+  @NonNull
   public final TextView razza;
 
   @NonNull
-  public final TextView saluteAttuale;
+  public final TextView statCarisma;
 
   @NonNull
-  public final TextView saluteMassima;
+  public final TextView statCostituzione;
 
   @NonNull
-  public final TextView stato;
+  public final TextView statDestrezza;
 
   @NonNull
-  public final TextView tiriSalvezza;
+  public final TextView statForza;
 
-  private FragmentStatsBinding(@NonNull ScrollView rootView,
-      @NonNull TextView bonusAttaccoIncantesimo, @NonNull TextView bonusCompetenza,
-      @NonNull Button btnElimina, @NonNull Button btnModifica,
-      @NonNull TextView cdTiroSalvezzaMagia, @NonNull TextView classe,
-      @NonNull TextView classeArmatura, @NonNull TextView listaCompetenze,
-      @NonNull TextView livello, @NonNull TextView modificatoreCarisma,
-      @NonNull TextView modificatoreCostituzione, @NonNull TextView modificatoreDestrezza,
-      @NonNull TextView modificatoreForza, @NonNull TextView modificatoreIntelligenza,
-      @NonNull TextView modificatoreSaggezza, @NonNull TextView nome, @NonNull TextView razza,
-      @NonNull TextView saluteAttuale, @NonNull TextView saluteMassima, @NonNull TextView stato,
-      @NonNull TextView tiriSalvezza) {
+  @NonNull
+  public final TextView statIntelligenza;
+
+  @NonNull
+  public final TextView statSaggezza;
+
+  @NonNull
+  public final TextView textView10;
+
+  @NonNull
+  public final TextView textView11;
+
+  @NonNull
+  public final TextView textView12;
+
+  @NonNull
+  public final TextView textView13;
+
+  @NonNull
+  public final TextView textView14;
+
+  @NonNull
+  public final TextView textView15;
+
+  @NonNull
+  public final TextView textView5;
+
+  @NonNull
+  public final TextView textView6;
+
+  @NonNull
+  public final TextView textView8;
+
+  @NonNull
+  public final TextView textView9;
+
+  private FragmentStatsBinding(@NonNull ScrollView rootView, @NonNull FrameLayout A1,
+      @NonNull FrameLayout A2, @NonNull FrameLayout A3, @NonNull FrameLayout A4,
+      @NonNull FrameLayout A5, @NonNull TextView AcrobaziaText, @NonNull TextView AddestrareText,
+      @NonNull TextView ArcanoText, @NonNull TextView AtleticaText,
+      @NonNull TextView CAcrobaziafalse, @NonNull TextView CAcrobaziatrue,
+      @NonNull TextView CAddestrarefalse, @NonNull TextView CAddestraretrue,
+      @NonNull TextView CArcanofalse, @NonNull TextView CArcanotrue,
+      @NonNull TextView CAtleticafalse, @NonNull TextView CAtleticatrue,
+      @NonNull TextView CFurtivitfalse, @NonNull TextView CFurtivittrue,
+      @NonNull TextView CIndagarefalse, @NonNull TextView CIndagaretrue,
+      @NonNull TextView CIngannofalse, @NonNull TextView CIngannotrue,
+      @NonNull TextView CIntimidirefalse, @NonNull TextView CIntimidiretrue,
+      @NonNull TextView CIntrattenerefalse, @NonNull TextView CIntratteneretrue,
+      @NonNull TextView CIntuizionefalse, @NonNull TextView CIntuizionetrue,
+      @NonNull TextView CMedicinafalse, @NonNull TextView CMedicinatrue,
+      @NonNull TextView CNaturafalse, @NonNull TextView CNaturatrue,
+      @NonNull TextView CPercepirefalse, @NonNull TextView CPercepiretrue,
+      @NonNull TextView CPersuasionefalse, @NonNull TextView CPersuasionetrue,
+      @NonNull TextView CRapiditfalse, @NonNull TextView CRapidittrue,
+      @NonNull TextView CReligionefalse, @NonNull TextView CReligionetrue,
+      @NonNull TextView CSopravvivenzafalse, @NonNull TextView CSopravvivenzatrue,
+      @NonNull TextView CStoriafalse, @NonNull TextView CStoriatrue, @NonNull TextView FurtivitText,
+      @NonNull TextView IndagareText, @NonNull TextView IngannoText,
+      @NonNull TextView IntimidireText, @NonNull TextView IntrattenereText,
+      @NonNull TextView IntuizioneText, @NonNull TextView MAcrobaziafalse,
+      @NonNull TextView MAcrobaziatrue, @NonNull TextView MAddestrarefalse,
+      @NonNull TextView MAddestraretrue, @NonNull TextView MArcanofalse,
+      @NonNull TextView MArcanotrue, @NonNull TextView MAtleticafalse,
+      @NonNull TextView MAtleticatrue, @NonNull TextView MFurtivitfalse,
+      @NonNull TextView MFurtivittrue, @NonNull TextView MIndagarefalse,
+      @NonNull TextView MIndagaretrue, @NonNull TextView MIngannofalse,
+      @NonNull TextView MIngannotrue, @NonNull TextView MIntimidirefalse,
+      @NonNull TextView MIntimidiretrue, @NonNull TextView MIntrattenerefalse,
+      @NonNull TextView MIntratteneretrue, @NonNull TextView MIntuizionefalse,
+      @NonNull TextView MIntuizionetrue, @NonNull TextView MMedicinafalse,
+      @NonNull TextView MMedicinatrue, @NonNull TextView MNaturafalse,
+      @NonNull TextView MNaturatrue, @NonNull TextView MPercepirefalse,
+      @NonNull TextView MPercepiretrue, @NonNull TextView MPersuasionefalse,
+      @NonNull TextView MPersuasionetrue, @NonNull TextView MRapiditfalse,
+      @NonNull TextView MRapidittrue, @NonNull TextView MReligionefalse,
+      @NonNull TextView MReligionetrue, @NonNull TextView MSopravvivenzafalse,
+      @NonNull TextView MSopravvivenzatrue, @NonNull TextView MStoriafalse,
+      @NonNull TextView MStoriatrue, @NonNull TextView MedicinaText, @NonNull TextView NaturaText,
+      @NonNull TextView PercepireText, @NonNull TextView PersuasioneText,
+      @NonNull TextView RapiditText, @NonNull TextView ReligioneText,
+      @NonNull TextView SopravvivenzaText, @NonNull TextView StoriaText,
+      @NonNull TextView TScarisma, @NonNull TextView TScarismafalse,
+      @NonNull TextView TScarismatrue, @NonNull TextView TScostituzione,
+      @NonNull TextView TScostituzionefalse, @NonNull TextView TScostituzionetrue,
+      @NonNull TextView TSdestrezza, @NonNull TextView TSdestrezzafalse,
+      @NonNull TextView TSdestrezzatrue, @NonNull TextView TSforza, @NonNull TextView TSforzafalse,
+      @NonNull TextView TSforzatrue, @NonNull TextView TSintelligenza,
+      @NonNull TextView TSintelligenzafalse, @NonNull TextView TSintelligenzatrue,
+      @NonNull TextView TSsaggezza, @NonNull TextView TSsaggezzafalse,
+      @NonNull TextView TSsaggezzatrue, @NonNull TextView bonusCompetenza,
+      @NonNull Button bottoneMenoVita, @NonNull Button bottonePiuVita,
+      @NonNull ImageView btnCompetenzeExtra, @NonNull ImageView btnDado,
+      @NonNull ImageView btnDormire, @NonNull ImageView btnElimina, @NonNull ImageView btnModifica,
+      @NonNull TextInputEditText cambiaVita, @NonNull TextView classe,
+      @NonNull TextView classeArmatura, @NonNull TextView livello,
+      @NonNull TextView modificatoreCarisma, @NonNull TextView modificatoreCostituzione,
+      @NonNull TextView modificatoreDestrezza, @NonNull TextView modificatoreForza,
+      @NonNull TextView modificatoreIntelligenza, @NonNull TextView modificatoreSaggezza,
+      @NonNull TextView nome, @NonNull TextView puntiFerita, @NonNull TextView razza,
+      @NonNull TextView statCarisma, @NonNull TextView statCostituzione,
+      @NonNull TextView statDestrezza, @NonNull TextView statForza,
+      @NonNull TextView statIntelligenza, @NonNull TextView statSaggezza,
+      @NonNull TextView textView10, @NonNull TextView textView11, @NonNull TextView textView12,
+      @NonNull TextView textView13, @NonNull TextView textView14, @NonNull TextView textView15,
+      @NonNull TextView textView5, @NonNull TextView textView6, @NonNull TextView textView8,
+      @NonNull TextView textView9) {
     this.rootView = rootView;
-    this.bonusAttaccoIncantesimo = bonusAttaccoIncantesimo;
+    this.A1 = A1;
+    this.A2 = A2;
+    this.A3 = A3;
+    this.A4 = A4;
+    this.A5 = A5;
+    this.AcrobaziaText = AcrobaziaText;
+    this.AddestrareText = AddestrareText;
+    this.ArcanoText = ArcanoText;
+    this.AtleticaText = AtleticaText;
+    this.CAcrobaziafalse = CAcrobaziafalse;
+    this.CAcrobaziatrue = CAcrobaziatrue;
+    this.CAddestrarefalse = CAddestrarefalse;
+    this.CAddestraretrue = CAddestraretrue;
+    this.CArcanofalse = CArcanofalse;
+    this.CArcanotrue = CArcanotrue;
+    this.CAtleticafalse = CAtleticafalse;
+    this.CAtleticatrue = CAtleticatrue;
+    this.CFurtivitfalse = CFurtivitfalse;
+    this.CFurtivittrue = CFurtivittrue;
+    this.CIndagarefalse = CIndagarefalse;
+    this.CIndagaretrue = CIndagaretrue;
+    this.CIngannofalse = CIngannofalse;
+    this.CIngannotrue = CIngannotrue;
+    this.CIntimidirefalse = CIntimidirefalse;
+    this.CIntimidiretrue = CIntimidiretrue;
+    this.CIntrattenerefalse = CIntrattenerefalse;
+    this.CIntratteneretrue = CIntratteneretrue;
+    this.CIntuizionefalse = CIntuizionefalse;
+    this.CIntuizionetrue = CIntuizionetrue;
+    this.CMedicinafalse = CMedicinafalse;
+    this.CMedicinatrue = CMedicinatrue;
+    this.CNaturafalse = CNaturafalse;
+    this.CNaturatrue = CNaturatrue;
+    this.CPercepirefalse = CPercepirefalse;
+    this.CPercepiretrue = CPercepiretrue;
+    this.CPersuasionefalse = CPersuasionefalse;
+    this.CPersuasionetrue = CPersuasionetrue;
+    this.CRapiditfalse = CRapiditfalse;
+    this.CRapidittrue = CRapidittrue;
+    this.CReligionefalse = CReligionefalse;
+    this.CReligionetrue = CReligionetrue;
+    this.CSopravvivenzafalse = CSopravvivenzafalse;
+    this.CSopravvivenzatrue = CSopravvivenzatrue;
+    this.CStoriafalse = CStoriafalse;
+    this.CStoriatrue = CStoriatrue;
+    this.FurtivitText = FurtivitText;
+    this.IndagareText = IndagareText;
+    this.IngannoText = IngannoText;
+    this.IntimidireText = IntimidireText;
+    this.IntrattenereText = IntrattenereText;
+    this.IntuizioneText = IntuizioneText;
+    this.MAcrobaziafalse = MAcrobaziafalse;
+    this.MAcrobaziatrue = MAcrobaziatrue;
+    this.MAddestrarefalse = MAddestrarefalse;
+    this.MAddestraretrue = MAddestraretrue;
+    this.MArcanofalse = MArcanofalse;
+    this.MArcanotrue = MArcanotrue;
+    this.MAtleticafalse = MAtleticafalse;
+    this.MAtleticatrue = MAtleticatrue;
+    this.MFurtivitfalse = MFurtivitfalse;
+    this.MFurtivittrue = MFurtivittrue;
+    this.MIndagarefalse = MIndagarefalse;
+    this.MIndagaretrue = MIndagaretrue;
+    this.MIngannofalse = MIngannofalse;
+    this.MIngannotrue = MIngannotrue;
+    this.MIntimidirefalse = MIntimidirefalse;
+    this.MIntimidiretrue = MIntimidiretrue;
+    this.MIntrattenerefalse = MIntrattenerefalse;
+    this.MIntratteneretrue = MIntratteneretrue;
+    this.MIntuizionefalse = MIntuizionefalse;
+    this.MIntuizionetrue = MIntuizionetrue;
+    this.MMedicinafalse = MMedicinafalse;
+    this.MMedicinatrue = MMedicinatrue;
+    this.MNaturafalse = MNaturafalse;
+    this.MNaturatrue = MNaturatrue;
+    this.MPercepirefalse = MPercepirefalse;
+    this.MPercepiretrue = MPercepiretrue;
+    this.MPersuasionefalse = MPersuasionefalse;
+    this.MPersuasionetrue = MPersuasionetrue;
+    this.MRapiditfalse = MRapiditfalse;
+    this.MRapidittrue = MRapidittrue;
+    this.MReligionefalse = MReligionefalse;
+    this.MReligionetrue = MReligionetrue;
+    this.MSopravvivenzafalse = MSopravvivenzafalse;
+    this.MSopravvivenzatrue = MSopravvivenzatrue;
+    this.MStoriafalse = MStoriafalse;
+    this.MStoriatrue = MStoriatrue;
+    this.MedicinaText = MedicinaText;
+    this.NaturaText = NaturaText;
+    this.PercepireText = PercepireText;
+    this.PersuasioneText = PersuasioneText;
+    this.RapiditText = RapiditText;
+    this.ReligioneText = ReligioneText;
+    this.SopravvivenzaText = SopravvivenzaText;
+    this.StoriaText = StoriaText;
+    this.TScarisma = TScarisma;
+    this.TScarismafalse = TScarismafalse;
+    this.TScarismatrue = TScarismatrue;
+    this.TScostituzione = TScostituzione;
+    this.TScostituzionefalse = TScostituzionefalse;
+    this.TScostituzionetrue = TScostituzionetrue;
+    this.TSdestrezza = TSdestrezza;
+    this.TSdestrezzafalse = TSdestrezzafalse;
+    this.TSdestrezzatrue = TSdestrezzatrue;
+    this.TSforza = TSforza;
+    this.TSforzafalse = TSforzafalse;
+    this.TSforzatrue = TSforzatrue;
+    this.TSintelligenza = TSintelligenza;
+    this.TSintelligenzafalse = TSintelligenzafalse;
+    this.TSintelligenzatrue = TSintelligenzatrue;
+    this.TSsaggezza = TSsaggezza;
+    this.TSsaggezzafalse = TSsaggezzafalse;
+    this.TSsaggezzatrue = TSsaggezzatrue;
     this.bonusCompetenza = bonusCompetenza;
+    this.bottoneMenoVita = bottoneMenoVita;
+    this.bottonePiuVita = bottonePiuVita;
+    this.btnCompetenzeExtra = btnCompetenzeExtra;
+    this.btnDado = btnDado;
+    this.btnDormire = btnDormire;
     this.btnElimina = btnElimina;
     this.btnModifica = btnModifica;
-    this.cdTiroSalvezzaMagia = cdTiroSalvezzaMagia;
+    this.cambiaVita = cambiaVita;
     this.classe = classe;
     this.classeArmatura = classeArmatura;
-    this.listaCompetenze = listaCompetenze;
     this.livello = livello;
     this.modificatoreCarisma = modificatoreCarisma;
     this.modificatoreCostituzione = modificatoreCostituzione;
@@ -111,11 +677,24 @@ public final class FragmentStatsBinding implements ViewBinding {
     this.modificatoreIntelligenza = modificatoreIntelligenza;
     this.modificatoreSaggezza = modificatoreSaggezza;
     this.nome = nome;
+    this.puntiFerita = puntiFerita;
     this.razza = razza;
-    this.saluteAttuale = saluteAttuale;
-    this.saluteMassima = saluteMassima;
-    this.stato = stato;
-    this.tiriSalvezza = tiriSalvezza;
+    this.statCarisma = statCarisma;
+    this.statCostituzione = statCostituzione;
+    this.statDestrezza = statDestrezza;
+    this.statForza = statForza;
+    this.statIntelligenza = statIntelligenza;
+    this.statSaggezza = statSaggezza;
+    this.textView10 = textView10;
+    this.textView11 = textView11;
+    this.textView12 = textView12;
+    this.textView13 = textView13;
+    this.textView14 = textView14;
+    this.textView15 = textView15;
+    this.textView5 = textView5;
+    this.textView6 = textView6;
+    this.textView8 = textView8;
+    this.textView9 = textView9;
   }
 
   @Override
@@ -145,9 +724,681 @@ public final class FragmentStatsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bonus_attacco_incantesimo;
-      TextView bonusAttaccoIncantesimo = ViewBindings.findChildViewById(rootView, id);
-      if (bonusAttaccoIncantesimo == null) {
+      id = R.id.A1;
+      FrameLayout A1 = ViewBindings.findChildViewById(rootView, id);
+      if (A1 == null) {
+        break missingId;
+      }
+
+      id = R.id.A2;
+      FrameLayout A2 = ViewBindings.findChildViewById(rootView, id);
+      if (A2 == null) {
+        break missingId;
+      }
+
+      id = R.id.A3;
+      FrameLayout A3 = ViewBindings.findChildViewById(rootView, id);
+      if (A3 == null) {
+        break missingId;
+      }
+
+      id = R.id.A4;
+      FrameLayout A4 = ViewBindings.findChildViewById(rootView, id);
+      if (A4 == null) {
+        break missingId;
+      }
+
+      id = R.id.A5;
+      FrameLayout A5 = ViewBindings.findChildViewById(rootView, id);
+      if (A5 == null) {
+        break missingId;
+      }
+
+      id = R.id.AcrobaziaText;
+      TextView AcrobaziaText = ViewBindings.findChildViewById(rootView, id);
+      if (AcrobaziaText == null) {
+        break missingId;
+      }
+
+      id = R.id.AddestrareText;
+      TextView AddestrareText = ViewBindings.findChildViewById(rootView, id);
+      if (AddestrareText == null) {
+        break missingId;
+      }
+
+      id = R.id.ArcanoText;
+      TextView ArcanoText = ViewBindings.findChildViewById(rootView, id);
+      if (ArcanoText == null) {
+        break missingId;
+      }
+
+      id = R.id.AtleticaText;
+      TextView AtleticaText = ViewBindings.findChildViewById(rootView, id);
+      if (AtleticaText == null) {
+        break missingId;
+      }
+
+      id = R.id.CAcrobaziafalse;
+      TextView CAcrobaziafalse = ViewBindings.findChildViewById(rootView, id);
+      if (CAcrobaziafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CAcrobaziatrue;
+      TextView CAcrobaziatrue = ViewBindings.findChildViewById(rootView, id);
+      if (CAcrobaziatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CAddestrarefalse;
+      TextView CAddestrarefalse = ViewBindings.findChildViewById(rootView, id);
+      if (CAddestrarefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CAddestraretrue;
+      TextView CAddestraretrue = ViewBindings.findChildViewById(rootView, id);
+      if (CAddestraretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CArcanofalse;
+      TextView CArcanofalse = ViewBindings.findChildViewById(rootView, id);
+      if (CArcanofalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CArcanotrue;
+      TextView CArcanotrue = ViewBindings.findChildViewById(rootView, id);
+      if (CArcanotrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CAtleticafalse;
+      TextView CAtleticafalse = ViewBindings.findChildViewById(rootView, id);
+      if (CAtleticafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CAtleticatrue;
+      TextView CAtleticatrue = ViewBindings.findChildViewById(rootView, id);
+      if (CAtleticatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CFurtivitfalse;
+      TextView CFurtivitfalse = ViewBindings.findChildViewById(rootView, id);
+      if (CFurtivitfalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CFurtivittrue;
+      TextView CFurtivittrue = ViewBindings.findChildViewById(rootView, id);
+      if (CFurtivittrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CIndagarefalse;
+      TextView CIndagarefalse = ViewBindings.findChildViewById(rootView, id);
+      if (CIndagarefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CIndagaretrue;
+      TextView CIndagaretrue = ViewBindings.findChildViewById(rootView, id);
+      if (CIndagaretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CIngannofalse;
+      TextView CIngannofalse = ViewBindings.findChildViewById(rootView, id);
+      if (CIngannofalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CIngannotrue;
+      TextView CIngannotrue = ViewBindings.findChildViewById(rootView, id);
+      if (CIngannotrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CIntimidirefalse;
+      TextView CIntimidirefalse = ViewBindings.findChildViewById(rootView, id);
+      if (CIntimidirefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CIntimidiretrue;
+      TextView CIntimidiretrue = ViewBindings.findChildViewById(rootView, id);
+      if (CIntimidiretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CIntrattenerefalse;
+      TextView CIntrattenerefalse = ViewBindings.findChildViewById(rootView, id);
+      if (CIntrattenerefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CIntratteneretrue;
+      TextView CIntratteneretrue = ViewBindings.findChildViewById(rootView, id);
+      if (CIntratteneretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CIntuizionefalse;
+      TextView CIntuizionefalse = ViewBindings.findChildViewById(rootView, id);
+      if (CIntuizionefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CIntuizionetrue;
+      TextView CIntuizionetrue = ViewBindings.findChildViewById(rootView, id);
+      if (CIntuizionetrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CMedicinafalse;
+      TextView CMedicinafalse = ViewBindings.findChildViewById(rootView, id);
+      if (CMedicinafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CMedicinatrue;
+      TextView CMedicinatrue = ViewBindings.findChildViewById(rootView, id);
+      if (CMedicinatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CNaturafalse;
+      TextView CNaturafalse = ViewBindings.findChildViewById(rootView, id);
+      if (CNaturafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CNaturatrue;
+      TextView CNaturatrue = ViewBindings.findChildViewById(rootView, id);
+      if (CNaturatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CPercepirefalse;
+      TextView CPercepirefalse = ViewBindings.findChildViewById(rootView, id);
+      if (CPercepirefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CPercepiretrue;
+      TextView CPercepiretrue = ViewBindings.findChildViewById(rootView, id);
+      if (CPercepiretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CPersuasionefalse;
+      TextView CPersuasionefalse = ViewBindings.findChildViewById(rootView, id);
+      if (CPersuasionefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CPersuasionetrue;
+      TextView CPersuasionetrue = ViewBindings.findChildViewById(rootView, id);
+      if (CPersuasionetrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CRapiditfalse;
+      TextView CRapiditfalse = ViewBindings.findChildViewById(rootView, id);
+      if (CRapiditfalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CRapidittrue;
+      TextView CRapidittrue = ViewBindings.findChildViewById(rootView, id);
+      if (CRapidittrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CReligionefalse;
+      TextView CReligionefalse = ViewBindings.findChildViewById(rootView, id);
+      if (CReligionefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CReligionetrue;
+      TextView CReligionetrue = ViewBindings.findChildViewById(rootView, id);
+      if (CReligionetrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CSopravvivenzafalse;
+      TextView CSopravvivenzafalse = ViewBindings.findChildViewById(rootView, id);
+      if (CSopravvivenzafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CSopravvivenzatrue;
+      TextView CSopravvivenzatrue = ViewBindings.findChildViewById(rootView, id);
+      if (CSopravvivenzatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.CStoriafalse;
+      TextView CStoriafalse = ViewBindings.findChildViewById(rootView, id);
+      if (CStoriafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.CStoriatrue;
+      TextView CStoriatrue = ViewBindings.findChildViewById(rootView, id);
+      if (CStoriatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.FurtivitText;
+      TextView FurtivitText = ViewBindings.findChildViewById(rootView, id);
+      if (FurtivitText == null) {
+        break missingId;
+      }
+
+      id = R.id.IndagareText;
+      TextView IndagareText = ViewBindings.findChildViewById(rootView, id);
+      if (IndagareText == null) {
+        break missingId;
+      }
+
+      id = R.id.IngannoText;
+      TextView IngannoText = ViewBindings.findChildViewById(rootView, id);
+      if (IngannoText == null) {
+        break missingId;
+      }
+
+      id = R.id.IntimidireText;
+      TextView IntimidireText = ViewBindings.findChildViewById(rootView, id);
+      if (IntimidireText == null) {
+        break missingId;
+      }
+
+      id = R.id.IntrattenereText;
+      TextView IntrattenereText = ViewBindings.findChildViewById(rootView, id);
+      if (IntrattenereText == null) {
+        break missingId;
+      }
+
+      id = R.id.IntuizioneText;
+      TextView IntuizioneText = ViewBindings.findChildViewById(rootView, id);
+      if (IntuizioneText == null) {
+        break missingId;
+      }
+
+      id = R.id.MAcrobaziafalse;
+      TextView MAcrobaziafalse = ViewBindings.findChildViewById(rootView, id);
+      if (MAcrobaziafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MAcrobaziatrue;
+      TextView MAcrobaziatrue = ViewBindings.findChildViewById(rootView, id);
+      if (MAcrobaziatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MAddestrarefalse;
+      TextView MAddestrarefalse = ViewBindings.findChildViewById(rootView, id);
+      if (MAddestrarefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MAddestraretrue;
+      TextView MAddestraretrue = ViewBindings.findChildViewById(rootView, id);
+      if (MAddestraretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MArcanofalse;
+      TextView MArcanofalse = ViewBindings.findChildViewById(rootView, id);
+      if (MArcanofalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MArcanotrue;
+      TextView MArcanotrue = ViewBindings.findChildViewById(rootView, id);
+      if (MArcanotrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MAtleticafalse;
+      TextView MAtleticafalse = ViewBindings.findChildViewById(rootView, id);
+      if (MAtleticafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MAtleticatrue;
+      TextView MAtleticatrue = ViewBindings.findChildViewById(rootView, id);
+      if (MAtleticatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MFurtivitfalse;
+      TextView MFurtivitfalse = ViewBindings.findChildViewById(rootView, id);
+      if (MFurtivitfalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MFurtivittrue;
+      TextView MFurtivittrue = ViewBindings.findChildViewById(rootView, id);
+      if (MFurtivittrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MIndagarefalse;
+      TextView MIndagarefalse = ViewBindings.findChildViewById(rootView, id);
+      if (MIndagarefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MIndagaretrue;
+      TextView MIndagaretrue = ViewBindings.findChildViewById(rootView, id);
+      if (MIndagaretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MIngannofalse;
+      TextView MIngannofalse = ViewBindings.findChildViewById(rootView, id);
+      if (MIngannofalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MIngannotrue;
+      TextView MIngannotrue = ViewBindings.findChildViewById(rootView, id);
+      if (MIngannotrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MIntimidirefalse;
+      TextView MIntimidirefalse = ViewBindings.findChildViewById(rootView, id);
+      if (MIntimidirefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MIntimidiretrue;
+      TextView MIntimidiretrue = ViewBindings.findChildViewById(rootView, id);
+      if (MIntimidiretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MIntrattenerefalse;
+      TextView MIntrattenerefalse = ViewBindings.findChildViewById(rootView, id);
+      if (MIntrattenerefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MIntratteneretrue;
+      TextView MIntratteneretrue = ViewBindings.findChildViewById(rootView, id);
+      if (MIntratteneretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MIntuizionefalse;
+      TextView MIntuizionefalse = ViewBindings.findChildViewById(rootView, id);
+      if (MIntuizionefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MIntuizionetrue;
+      TextView MIntuizionetrue = ViewBindings.findChildViewById(rootView, id);
+      if (MIntuizionetrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MMedicinafalse;
+      TextView MMedicinafalse = ViewBindings.findChildViewById(rootView, id);
+      if (MMedicinafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MMedicinatrue;
+      TextView MMedicinatrue = ViewBindings.findChildViewById(rootView, id);
+      if (MMedicinatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MNaturafalse;
+      TextView MNaturafalse = ViewBindings.findChildViewById(rootView, id);
+      if (MNaturafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MNaturatrue;
+      TextView MNaturatrue = ViewBindings.findChildViewById(rootView, id);
+      if (MNaturatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MPercepirefalse;
+      TextView MPercepirefalse = ViewBindings.findChildViewById(rootView, id);
+      if (MPercepirefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MPercepiretrue;
+      TextView MPercepiretrue = ViewBindings.findChildViewById(rootView, id);
+      if (MPercepiretrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MPersuasionefalse;
+      TextView MPersuasionefalse = ViewBindings.findChildViewById(rootView, id);
+      if (MPersuasionefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MPersuasionetrue;
+      TextView MPersuasionetrue = ViewBindings.findChildViewById(rootView, id);
+      if (MPersuasionetrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MRapiditfalse;
+      TextView MRapiditfalse = ViewBindings.findChildViewById(rootView, id);
+      if (MRapiditfalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MRapidittrue;
+      TextView MRapidittrue = ViewBindings.findChildViewById(rootView, id);
+      if (MRapidittrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MReligionefalse;
+      TextView MReligionefalse = ViewBindings.findChildViewById(rootView, id);
+      if (MReligionefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MReligionetrue;
+      TextView MReligionetrue = ViewBindings.findChildViewById(rootView, id);
+      if (MReligionetrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MSopravvivenzafalse;
+      TextView MSopravvivenzafalse = ViewBindings.findChildViewById(rootView, id);
+      if (MSopravvivenzafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MSopravvivenzatrue;
+      TextView MSopravvivenzatrue = ViewBindings.findChildViewById(rootView, id);
+      if (MSopravvivenzatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MStoriafalse;
+      TextView MStoriafalse = ViewBindings.findChildViewById(rootView, id);
+      if (MStoriafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.MStoriatrue;
+      TextView MStoriatrue = ViewBindings.findChildViewById(rootView, id);
+      if (MStoriatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.MedicinaText;
+      TextView MedicinaText = ViewBindings.findChildViewById(rootView, id);
+      if (MedicinaText == null) {
+        break missingId;
+      }
+
+      id = R.id.NaturaText;
+      TextView NaturaText = ViewBindings.findChildViewById(rootView, id);
+      if (NaturaText == null) {
+        break missingId;
+      }
+
+      id = R.id.PercepireText;
+      TextView PercepireText = ViewBindings.findChildViewById(rootView, id);
+      if (PercepireText == null) {
+        break missingId;
+      }
+
+      id = R.id.PersuasioneText;
+      TextView PersuasioneText = ViewBindings.findChildViewById(rootView, id);
+      if (PersuasioneText == null) {
+        break missingId;
+      }
+
+      id = R.id.RapiditText;
+      TextView RapiditText = ViewBindings.findChildViewById(rootView, id);
+      if (RapiditText == null) {
+        break missingId;
+      }
+
+      id = R.id.ReligioneText;
+      TextView ReligioneText = ViewBindings.findChildViewById(rootView, id);
+      if (ReligioneText == null) {
+        break missingId;
+      }
+
+      id = R.id.SopravvivenzaText;
+      TextView SopravvivenzaText = ViewBindings.findChildViewById(rootView, id);
+      if (SopravvivenzaText == null) {
+        break missingId;
+      }
+
+      id = R.id.StoriaText;
+      TextView StoriaText = ViewBindings.findChildViewById(rootView, id);
+      if (StoriaText == null) {
+        break missingId;
+      }
+
+      id = R.id.TScarisma;
+      TextView TScarisma = ViewBindings.findChildViewById(rootView, id);
+      if (TScarisma == null) {
+        break missingId;
+      }
+
+      id = R.id.TScarismafalse;
+      TextView TScarismafalse = ViewBindings.findChildViewById(rootView, id);
+      if (TScarismafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.TScarismatrue;
+      TextView TScarismatrue = ViewBindings.findChildViewById(rootView, id);
+      if (TScarismatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.TScostituzione;
+      TextView TScostituzione = ViewBindings.findChildViewById(rootView, id);
+      if (TScostituzione == null) {
+        break missingId;
+      }
+
+      id = R.id.TScostituzionefalse;
+      TextView TScostituzionefalse = ViewBindings.findChildViewById(rootView, id);
+      if (TScostituzionefalse == null) {
+        break missingId;
+      }
+
+      id = R.id.TScostituzionetrue;
+      TextView TScostituzionetrue = ViewBindings.findChildViewById(rootView, id);
+      if (TScostituzionetrue == null) {
+        break missingId;
+      }
+
+      id = R.id.TSdestrezza;
+      TextView TSdestrezza = ViewBindings.findChildViewById(rootView, id);
+      if (TSdestrezza == null) {
+        break missingId;
+      }
+
+      id = R.id.TSdestrezzafalse;
+      TextView TSdestrezzafalse = ViewBindings.findChildViewById(rootView, id);
+      if (TSdestrezzafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.TSdestrezzatrue;
+      TextView TSdestrezzatrue = ViewBindings.findChildViewById(rootView, id);
+      if (TSdestrezzatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.TSforza;
+      TextView TSforza = ViewBindings.findChildViewById(rootView, id);
+      if (TSforza == null) {
+        break missingId;
+      }
+
+      id = R.id.TSforzafalse;
+      TextView TSforzafalse = ViewBindings.findChildViewById(rootView, id);
+      if (TSforzafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.TSforzatrue;
+      TextView TSforzatrue = ViewBindings.findChildViewById(rootView, id);
+      if (TSforzatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.TSintelligenza;
+      TextView TSintelligenza = ViewBindings.findChildViewById(rootView, id);
+      if (TSintelligenza == null) {
+        break missingId;
+      }
+
+      id = R.id.TSintelligenzafalse;
+      TextView TSintelligenzafalse = ViewBindings.findChildViewById(rootView, id);
+      if (TSintelligenzafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.TSintelligenzatrue;
+      TextView TSintelligenzatrue = ViewBindings.findChildViewById(rootView, id);
+      if (TSintelligenzatrue == null) {
+        break missingId;
+      }
+
+      id = R.id.TSsaggezza;
+      TextView TSsaggezza = ViewBindings.findChildViewById(rootView, id);
+      if (TSsaggezza == null) {
+        break missingId;
+      }
+
+      id = R.id.TSsaggezzafalse;
+      TextView TSsaggezzafalse = ViewBindings.findChildViewById(rootView, id);
+      if (TSsaggezzafalse == null) {
+        break missingId;
+      }
+
+      id = R.id.TSsaggezzatrue;
+      TextView TSsaggezzatrue = ViewBindings.findChildViewById(rootView, id);
+      if (TSsaggezzatrue == null) {
         break missingId;
       }
 
@@ -157,21 +1408,51 @@ public final class FragmentStatsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bottone_meno_vita;
+      Button bottoneMenoVita = ViewBindings.findChildViewById(rootView, id);
+      if (bottoneMenoVita == null) {
+        break missingId;
+      }
+
+      id = R.id.bottone_piu_vita;
+      Button bottonePiuVita = ViewBindings.findChildViewById(rootView, id);
+      if (bottonePiuVita == null) {
+        break missingId;
+      }
+
+      id = R.id.btnCompetenzeExtra;
+      ImageView btnCompetenzeExtra = ViewBindings.findChildViewById(rootView, id);
+      if (btnCompetenzeExtra == null) {
+        break missingId;
+      }
+
+      id = R.id.btnDado;
+      ImageView btnDado = ViewBindings.findChildViewById(rootView, id);
+      if (btnDado == null) {
+        break missingId;
+      }
+
+      id = R.id.btnDormire;
+      ImageView btnDormire = ViewBindings.findChildViewById(rootView, id);
+      if (btnDormire == null) {
+        break missingId;
+      }
+
       id = R.id.btnElimina;
-      Button btnElimina = ViewBindings.findChildViewById(rootView, id);
+      ImageView btnElimina = ViewBindings.findChildViewById(rootView, id);
       if (btnElimina == null) {
         break missingId;
       }
 
       id = R.id.btnModifica;
-      Button btnModifica = ViewBindings.findChildViewById(rootView, id);
+      ImageView btnModifica = ViewBindings.findChildViewById(rootView, id);
       if (btnModifica == null) {
         break missingId;
       }
 
-      id = R.id.cd_tiro_salvezza_magia;
-      TextView cdTiroSalvezzaMagia = ViewBindings.findChildViewById(rootView, id);
-      if (cdTiroSalvezzaMagia == null) {
+      id = R.id.cambiaVita;
+      TextInputEditText cambiaVita = ViewBindings.findChildViewById(rootView, id);
+      if (cambiaVita == null) {
         break missingId;
       }
 
@@ -187,49 +1468,43 @@ public final class FragmentStatsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.listaCompetenze;
-      TextView listaCompetenze = ViewBindings.findChildViewById(rootView, id);
-      if (listaCompetenze == null) {
-        break missingId;
-      }
-
       id = R.id.livello;
       TextView livello = ViewBindings.findChildViewById(rootView, id);
       if (livello == null) {
         break missingId;
       }
 
-      id = R.id.modificatore_carisma;
+      id = R.id.modificatoreCarisma;
       TextView modificatoreCarisma = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreCarisma == null) {
         break missingId;
       }
 
-      id = R.id.modificatore_costituzione;
+      id = R.id.modificatoreCostituzione;
       TextView modificatoreCostituzione = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreCostituzione == null) {
         break missingId;
       }
 
-      id = R.id.modificatore_destrezza;
+      id = R.id.modificatoreDestrezza;
       TextView modificatoreDestrezza = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreDestrezza == null) {
         break missingId;
       }
 
-      id = R.id.modificatore_forza;
+      id = R.id.modificatoreForza;
       TextView modificatoreForza = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreForza == null) {
         break missingId;
       }
 
-      id = R.id.modificatore_intelligenza;
+      id = R.id.modificatoreIntelligenza;
       TextView modificatoreIntelligenza = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreIntelligenza == null) {
         break missingId;
       }
 
-      id = R.id.modificatore_saggezza;
+      id = R.id.modificatoreSaggezza;
       TextView modificatoreSaggezza = ViewBindings.findChildViewById(rootView, id);
       if (modificatoreSaggezza == null) {
         break missingId;
@@ -241,41 +1516,143 @@ public final class FragmentStatsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.puntiFerita;
+      TextView puntiFerita = ViewBindings.findChildViewById(rootView, id);
+      if (puntiFerita == null) {
+        break missingId;
+      }
+
       id = R.id.razza;
       TextView razza = ViewBindings.findChildViewById(rootView, id);
       if (razza == null) {
         break missingId;
       }
 
-      id = R.id.salute_attuale;
-      TextView saluteAttuale = ViewBindings.findChildViewById(rootView, id);
-      if (saluteAttuale == null) {
+      id = R.id.statCarisma;
+      TextView statCarisma = ViewBindings.findChildViewById(rootView, id);
+      if (statCarisma == null) {
         break missingId;
       }
 
-      id = R.id.salute_massima;
-      TextView saluteMassima = ViewBindings.findChildViewById(rootView, id);
-      if (saluteMassima == null) {
+      id = R.id.statCostituzione;
+      TextView statCostituzione = ViewBindings.findChildViewById(rootView, id);
+      if (statCostituzione == null) {
         break missingId;
       }
 
-      id = R.id.stato;
-      TextView stato = ViewBindings.findChildViewById(rootView, id);
-      if (stato == null) {
+      id = R.id.statDestrezza;
+      TextView statDestrezza = ViewBindings.findChildViewById(rootView, id);
+      if (statDestrezza == null) {
         break missingId;
       }
 
-      id = R.id.tiriSalvezza;
-      TextView tiriSalvezza = ViewBindings.findChildViewById(rootView, id);
-      if (tiriSalvezza == null) {
+      id = R.id.statForza;
+      TextView statForza = ViewBindings.findChildViewById(rootView, id);
+      if (statForza == null) {
         break missingId;
       }
 
-      return new FragmentStatsBinding((ScrollView) rootView, bonusAttaccoIncantesimo,
-          bonusCompetenza, btnElimina, btnModifica, cdTiroSalvezzaMagia, classe, classeArmatura,
-          listaCompetenze, livello, modificatoreCarisma, modificatoreCostituzione,
-          modificatoreDestrezza, modificatoreForza, modificatoreIntelligenza, modificatoreSaggezza,
-          nome, razza, saluteAttuale, saluteMassima, stato, tiriSalvezza);
+      id = R.id.statIntelligenza;
+      TextView statIntelligenza = ViewBindings.findChildViewById(rootView, id);
+      if (statIntelligenza == null) {
+        break missingId;
+      }
+
+      id = R.id.statSaggezza;
+      TextView statSaggezza = ViewBindings.findChildViewById(rootView, id);
+      if (statSaggezza == null) {
+        break missingId;
+      }
+
+      id = R.id.textView10;
+      TextView textView10 = ViewBindings.findChildViewById(rootView, id);
+      if (textView10 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView11;
+      TextView textView11 = ViewBindings.findChildViewById(rootView, id);
+      if (textView11 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView12;
+      TextView textView12 = ViewBindings.findChildViewById(rootView, id);
+      if (textView12 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView13;
+      TextView textView13 = ViewBindings.findChildViewById(rootView, id);
+      if (textView13 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView14;
+      TextView textView14 = ViewBindings.findChildViewById(rootView, id);
+      if (textView14 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView15;
+      TextView textView15 = ViewBindings.findChildViewById(rootView, id);
+      if (textView15 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView5;
+      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
+      if (textView5 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView6;
+      TextView textView6 = ViewBindings.findChildViewById(rootView, id);
+      if (textView6 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView8;
+      TextView textView8 = ViewBindings.findChildViewById(rootView, id);
+      if (textView8 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView9;
+      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
+      if (textView9 == null) {
+        break missingId;
+      }
+
+      return new FragmentStatsBinding((ScrollView) rootView, A1, A2, A3, A4, A5, AcrobaziaText,
+          AddestrareText, ArcanoText, AtleticaText, CAcrobaziafalse, CAcrobaziatrue,
+          CAddestrarefalse, CAddestraretrue, CArcanofalse, CArcanotrue, CAtleticafalse,
+          CAtleticatrue, CFurtivitfalse, CFurtivittrue, CIndagarefalse, CIndagaretrue,
+          CIngannofalse, CIngannotrue, CIntimidirefalse, CIntimidiretrue, CIntrattenerefalse,
+          CIntratteneretrue, CIntuizionefalse, CIntuizionetrue, CMedicinafalse, CMedicinatrue,
+          CNaturafalse, CNaturatrue, CPercepirefalse, CPercepiretrue, CPersuasionefalse,
+          CPersuasionetrue, CRapiditfalse, CRapidittrue, CReligionefalse, CReligionetrue,
+          CSopravvivenzafalse, CSopravvivenzatrue, CStoriafalse, CStoriatrue, FurtivitText,
+          IndagareText, IngannoText, IntimidireText, IntrattenereText, IntuizioneText,
+          MAcrobaziafalse, MAcrobaziatrue, MAddestrarefalse, MAddestraretrue, MArcanofalse,
+          MArcanotrue, MAtleticafalse, MAtleticatrue, MFurtivitfalse, MFurtivittrue, MIndagarefalse,
+          MIndagaretrue, MIngannofalse, MIngannotrue, MIntimidirefalse, MIntimidiretrue,
+          MIntrattenerefalse, MIntratteneretrue, MIntuizionefalse, MIntuizionetrue, MMedicinafalse,
+          MMedicinatrue, MNaturafalse, MNaturatrue, MPercepirefalse, MPercepiretrue,
+          MPersuasionefalse, MPersuasionetrue, MRapiditfalse, MRapidittrue, MReligionefalse,
+          MReligionetrue, MSopravvivenzafalse, MSopravvivenzatrue, MStoriafalse, MStoriatrue,
+          MedicinaText, NaturaText, PercepireText, PersuasioneText, RapiditText, ReligioneText,
+          SopravvivenzaText, StoriaText, TScarisma, TScarismafalse, TScarismatrue, TScostituzione,
+          TScostituzionefalse, TScostituzionetrue, TSdestrezza, TSdestrezzafalse, TSdestrezzatrue,
+          TSforza, TSforzafalse, TSforzatrue, TSintelligenza, TSintelligenzafalse,
+          TSintelligenzatrue, TSsaggezza, TSsaggezzafalse, TSsaggezzatrue, bonusCompetenza,
+          bottoneMenoVita, bottonePiuVita, btnCompetenzeExtra, btnDado, btnDormire, btnElimina,
+          btnModifica, cambiaVita, classe, classeArmatura, livello, modificatoreCarisma,
+          modificatoreCostituzione, modificatoreDestrezza, modificatoreForza,
+          modificatoreIntelligenza, modificatoreSaggezza, nome, puntiFerita, razza, statCarisma,
+          statCostituzione, statDestrezza, statForza, statIntelligenza, statSaggezza, textView10,
+          textView11, textView12, textView13, textView14, textView15, textView5, textView6,
+          textView8, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

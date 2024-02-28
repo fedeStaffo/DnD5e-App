@@ -6,24 +6,24 @@ import java.lang.System;
 public final class CampagnaAdapter extends androidx.recyclerview.widget.RecyclerView.Adapter<com.progetto_dd.memory.campagna.CampagnaAdapter.CampagnaViewHolder> {
     private final java.util.List<com.progetto_dd.memory.campagna.Campagna> campagne = null;
     
-    public CampagnaAdapter(@org.jetbrains.annotations.NotNull()
+    public CampagnaAdapter(@org.jetbrains.annotations.NotNull
     java.util.List<com.progetto_dd.memory.campagna.Campagna> campagne) {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
-    public com.progetto_dd.memory.campagna.CampagnaAdapter.CampagnaViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
+    public com.progetto_dd.memory.campagna.CampagnaAdapter.CampagnaViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull
     android.view.ViewGroup parent, int viewType) {
         return null;
     }
     
-    @java.lang.Override()
-    public void onBindViewHolder(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onBindViewHolder(@org.jetbrains.annotations.NotNull
     com.progetto_dd.memory.campagna.CampagnaAdapter.CampagnaViewHolder holder, int position) {
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public int getItemCount() {
         return 0;
     }
@@ -33,12 +33,12 @@ public final class CampagnaAdapter extends androidx.recyclerview.widget.Recycler
         private final android.widget.TextView nameTextView = null;
         private final android.widget.TextView masterTextView = null;
         
-        public CampagnaViewHolder(@org.jetbrains.annotations.NotNull()
+        public CampagnaViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
             super(null);
         }
         
-        public final void bind(@org.jetbrains.annotations.NotNull()
+        public final void bind(@org.jetbrains.annotations.NotNull
         com.progetto_dd.memory.campagna.Campagna campagna) {
         }
     }
