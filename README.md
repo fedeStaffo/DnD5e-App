@@ -1,20 +1,57 @@
-# Progetto-DnD
+# D&D 5e Character Sheet App
 
-## Introduzione
-"Scheda D&D 5e" è un’applicazione che consente a tutti i giocatori di Dungeons
-& Dragons di gestire i propri personaggi e le proprie campagne. Grazie alla
-nostra app si potranno creare e gestire i personaggi e le campagne
-condividendole con i propri gruppi di amici!
+In this repository, you will find the code for the D&D 5e Character Sheet application designed for the Dungeons & Dragons 5th Edition.
 
-## Analisi degli obiettivi
-L’obiettivo di Scheda D&D 5e è quello di permettere a tutti i giocatori di Dungeons & Dragons di avere un’applicazione che semplifichi l'organizzazione del gioco nelle sue varie fasi.
-Per poter accedere a tutte le funzionalità della nostra applicazione, basterà registrarsi creando un account in maniera completamente gratuita. Una volta creato l’account ed effettuato il login, sarà possibile accedere alle due principali sezioni dell’app: quella relativa ai personaggi e quella relativa alle campagne.
-Per quanto riguarda la parte relativa ai personaggi, l’utente loggato potrà visualizzare la lista dei propri personaggi creati e potrà, seguendo tutti i passaggi richiesti (attraversando diverse schermate dell’app), aggiungerne di nuovi. 
-Similmente, aprendo la sezione delle campagne, sarà possibile visualizzare le varie campagne e aprendo la scheda di una specifica campagna, si potranno vedere le varie sessioni di gioco e un resoconto di ciò che è accaduto in ognuna di esse.
-Per accedere ad una campagna ci sono due possibilità: la prima è quella di crearne una e condividerla (in quel caso l’utente sarà il master della campagna), mentre nell’altro modo si potrà inserire il codice di una campagna già presente per poter entrare all’interno di essa.
-Ovviamente se un utente è il master di una campagna, avrà delle funzionalità aggiuntive e diverse rispetto ai giocatori “normali”. Difatti, per esempio, il master si occuperà di inserire i resoconti delle varie sessioni, gestire gli npc (non-playable-character), i giocatori all’interno della campagna e così via.
-All’interno dell’app verranno inoltre gestite delle statistiche riguardanti il profilo di ogni giocatore.
+## Abstract
+This project presents a mobile application aimed at facilitating the management of Dungeons & Dragons characters and campaigns. Users can create and manage their characters and campaigns, share them with friends, and access statistical insights for gameplay. The application enhances the gaming experience by providing essential tools for both players and Game Masters.
 
-## Sviluppatori
-Federico Staffolani,
-Enrico Maria Sardellini
+**Keywords**: Dungeons & Dragons, character management, campaign management, Android app, Firebase
+
+---
+
+<a name="index"></a>
+
+## 📘 Table of Contents
+
+* [🎯 Project Goal](#statement)
+* [⚙️ Methodology](#methodology)
+* [📈 Features](#features)
+* [👨🏻‍💻 Authors](#Authors)
+
+<a name="statement"/></a>
+
+## 🎯 Project Goal
+
+The primary goal of the D&D 5e Character Sheet App is to simplify game organization for players of Dungeons & Dragons. Users can create free accounts to access two main sections: Characters and Campaigns, thereby enhancing their gameplay experience.
+
+<a name="methodology"/></a>
+
+## ⚙️ Methodology
+
+### Architecture
+
+The application follows a hybrid development approach, integrating both top-down and bottom-up strategies. Navigation is managed through Android activities and fragments, while Firebase is employed for authentication and database storage to ensure data persistence and security. Local data management for spells is handled through the Room database.
+
+### User Account and Functionality
+
+Users can create accounts to access the main functionalities of the app:
+- **Characters**: View and manage a list of characters, including guided setup for new characters.
+- **Campaigns**: Create or join campaigns, manage sessions, and utilize Game Master functionalities for better game management.
+
+<a name="features"/></a>
+
+## 📈 Features
+
+- **Firebase Authentication**: User login and registration are managed via Firebase Authentication.
+- **Persistent Data**: Firestore Database stores character, campaign, and session data.
+- **Modular Design**: A clear separation of character, campaign, and utility components within the codebase.
+- **Statistical Tracking**: Tracks player progress and gameplay statistics, providing insights for character profiles.
+
+<a name="Authors"/></a>
+
+## 👨🏻‍💻 Authors
+
+| Name                    | Email                       | GitHub                                          |
+|-------------------------|-----------------------------|-------------------------------------------------|
+| Federico Staffolani     | s1114954@studenti.univpm.it | [fedeStaffo](https://github.com/fedeStaffo)    |
+| Enrico Maria Sardellini | s1120355@studenti.univpm.it | [Ems01](https://github.com/Ems01)              |
